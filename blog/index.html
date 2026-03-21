@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The PBN Blog | Pale Blue Nexus</title>
+  <meta name="description" content="Deep reads on the technologies reshaping our world. From AI and space tech to investing and the future of work." />
+  <link rel="canonical" href="https://palebluenexus.com/blog/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="The PBN Blog | Pale Blue Nexus" />
+  <meta property="og:description" content="Deep reads on the technologies reshaping our world." />
+  <meta property="og:url" content="https://palebluenexus.com/blog/" />
+  <meta property="og:site_name" content="Pale Blue Nexus" />
+  <meta property="og:image" content="https://palebluenexus.com/images/og-blog.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@palebluenexus" />
+  <meta name="twitter:title" content="The PBN Blog | Pale Blue Nexus" />
+  <meta name="twitter:description" content="Deep reads on the technologies reshaping our world." />
+  <meta name="twitter:image" content="https://palebluenexus.com/images/og-blog.jpg" />
+
+  <link rel="stylesheet" href="/_astro/blog.css" />
+
+  <!-- FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Pale Blue Nexus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pale Blue Nexus is a podcast hosted by Yohann Calpu that explores the technologies reshaping our world and what they mean for us as humans. Topics include AI, space tech, investing, and the future of work."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where can I listen to Pale Blue Nexus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can listen to Pale Blue Nexus on Spotify, Apple Podcasts, and YouTube. Search 'Pale Blue Nexus' on any major podcast platform."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does the PBN blog cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The PBN blog publishes in-depth articles across four categories: Episodes (recaps and key takeaways from interviews), Technology (AI, frontier tech), Investing (emerging sector analysis), and Future of Work (founder perspectives on how work is changing)."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Organization JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Pale Blue Nexus",
+    "url": "https://palebluenexus.com",
+    "logo": "https://palebluenexus.com/images/logo.png",
+    "sameAs": [
+      "https://open.spotify.com/show/6xY4m0p3646gZGMCb33Z3d",
+      "https://podcasts.apple.com/ca/podcast/pale-blue-nexus/id1529530113",
+      "https://www.youtube.com/@palebluenexus",
+      "https://twitter.com/palebluenexus",
+      "https://www.tiktok.com/@palebluenexus",
+      "https://www.instagram.com/palebluenexus"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Pale <span>Blue</span> Nexus</a>
+    <div class="nav-links">
+      <a href="https://podcasts.apple.com/ca/podcast/pale-blue-nexus/id1529530113" target="_blank" rel="noopener">Episodes</a>
+      <a href="/blog/">Blog</a>
+      <a href="/#about">About</a>
+      <a href="https://open.spotify.com/show/6xY4m0p3646gZGMCb33Z3d" target="_blank" rel="noopener" class="nav-spotify">Listen on Spotify</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <a href="https://podcasts.apple.com/ca/podcast/pale-blue-nexus/id1529530113" target="_blank">Episodes</a>
+  <a href="/blog/">Blog</a>
+  <a href="/#about">About</a>
+  <a href="https://open.spotify.com/show/6xY4m0p3646gZGMCb33Z3d" target="_blank">Listen on Spotify</a>
+</div>
+
+<!-- HERO -->
+<section class="blog-hero">
+  <div class="blog-hero-inner">
+    <h1>The <em>PBN</em> Blog</h1>
+    <p>Deep reads on the technologies reshaping our world.</p>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+  <div class="filter-bar-inner">
+    <button class="filter-btn active" onclick="filterPosts('all', this)">All</button>
+    <button class="filter-btn" onclick="filterPosts('episodes', this)">Episodes</button>
+    <button class="filter-btn" onclick="filterPosts('technology', this)">Technology</button>
+    <button class="filter-btn" onclick="filterPosts('investing', this)">Investing</button>
+    <button class="filter-btn" onclick="filterPosts('work', this)">Future of Work</button>
+  </div>
+</div>
+
+<!-- BLOG CONTENT -->
+<main class="blog-content">
+  <div class="blog-content-inner">
+
+    <!-- FEATURED -->
+    <a href="/blog/jim-rogers-interview-global-markets-2026/" class="featured-card" data-cat="episodes">
+      <div class="featured-img">
+        <div class="featured-img-inner">
+          <div class="featured-img-icon">🌐</div>
+          <div class="featured-img-label">Featured Episode</div>
+        </div>
+      </div>
+      <div class="featured-body">
+        <div class="featured-tag"><span class="pill pill-episodes">Episodes</span></div>
+        <h2 class="featured-title">Jim Rogers on What Comes After the Dollar: Key Takeaways from Pale Blue Nexus</h2>
+        <p class="featured-excerpt">The legendary investor shares his unfiltered view on dollar dominance, the coming commodities supercycle, China's rise, and where he would put $1 million to work today.</p>
+        <div class="featured-meta">
+          <span>Yohann Calpu</span>
+          <span>&middot;</span>
+          <span>March 1, 2026</span>
+          <span>&middot;</span>
+          <span>8 min read</span>
+        </div>
+        <span class="featured-read-more">Read the recap &rarr;</span>
+      </div>
+    </a>
+
+    <!-- GRID -->
+    <p class="section-label">All Posts</p>
+    <div class="post-grid">
+
+      <a href="/blog/ai-and-the-future-of-work-what-founders-need-to-know/" class="post-card" data-cat="technology">
+        <div class="post-card-img">&#129302;</div>
+        <div class="post-card-body">
+          <div class="post-card-tag"><span class="pill pill-technology">Technology</span></div>
+          <h3 class="post-card-title">AI and the Future of Work: What Every Founder Needs to Know Before 2027</h3>
+          <p class="post-card-excerpt">Agentic AI is no longer theoretical. Here is what the shift from copilots to autonomous agent teams means for your business right now.</p>
+          <div class="post-card-meta">
+            <span>Mar 15, 2026</span>
+            <span>&middot;</span>
+            <span>9 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/blog/space-tech-investment-thesis-2026/" class="post-card" data-cat="investing">
+        <div class="post-card-img">&#128640;</div>
+        <div class="post-card-body">
+          <div class="post-card-tag"><span class="pill pill-investing">Investing</span></div>
+          <h3 class="post-card-title">The Space Tech Investment Thesis Attracting $5M+ Rounds in 2026</h3>
+          <p class="post-card-excerpt">Dual-use infrastructure, satellite connectivity, and autonomous ground vehicles are pulling serious capital. Here is the thesis.</p>
+          <div class="post-card-meta">
+            <span>Mar 21, 2026</span>
+            <span>&middot;</span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/blog/why-b2b-founders-launch-podcast-2026/" class="post-card" data-cat="work">
+        <div class="post-card-img">&#127897;&#65039;</div>
+        <div class="post-card-body">
+          <div class="post-card-tag"><span class="pill pill-work">Future of Work</span></div>
+          <h3 class="post-card-title">Why Every B2B Founder Should Launch a Podcast in 2026 (And What's Actually Stopping Them)</h3>
+          <p class="post-card-excerpt">Cold outreach is dead. The podcast is the new trust engine. Here is why you need one and how to remove every blocker.</p>
+          <div class="post-card-meta">
+            <span>Mar 20, 2026</span>
+            <span>&middot;</span>
+            <span>7 min read</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="/blog/jim-rogers-interview-global-markets-2026/" class="post-card" data-cat="episodes">
+        <div class="post-card-img">&#127760;</div>
+        <div class="post-card-body">
+          <div class="post-card-tag"><span class="pill pill-episodes">Episodes</span></div>
+          <h3 class="post-card-title">Jim Rogers on What Comes After the Dollar</h3>
+          <p class="post-card-excerpt">The legendary investor breaks down dollar dominance, commodities, and what he would do with $1M today.</p>
+          <div class="post-card-meta">
+            <span>Mar 1, 2026</span>
+            <span>&middot;</span>
+            <span>8 min read</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>&copy; 2026 Pale Blue Nexus. All rights reserved. Hosted by <a href="https://palebluenexus.com">palebluenexus.com</a></p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('navMobile').classList.toggle('open');
+}
+function filterPosts(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('[data-cat]').forEach(el => {
+    if (cat === 'all' || el.dataset.cat === cat) {
+      el.classList.remove('hidden');
+    } else {
+      el.classList.add('hidden');
+    }
+  });
+}
+// Active TOC link on scroll
+(function() {
+  const links = document.querySelectorAll('.toc-list a');
+  if (!links.length) return;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector('.toc-list a[href="#' + e.target.id + '"]');
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  document.querySelectorAll('h2[id], h3[id]').forEach(h => observer.observe(h));
+})();
+</script>
+</body>
+</html>
