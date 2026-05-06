@@ -300,6 +300,8 @@
     .section-container {
       max-width: 1100px;
       margin: 0 auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
     .section-label {
       font-size: 0.9rem;
@@ -1040,6 +1042,8 @@
       /* Footer */
       .footer-inner { flex-direction: column; align-items: flex-start; gap: 1rem; }
       .footer-links { gap: 1rem; }
+      /* Section container mobile padding */
+      .section-container { padding-left: 1.25rem; padding-right: 1.25rem; }
     }
     /* ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ AMBIENT GLOW EFFECTS ‚îÄ‚îÄ‚îÄ‚îÄ‚îÄ */
     .glow-orb {
@@ -1101,6 +1105,7 @@
     .recent-episodes {
       padding: 5rem 0;
       background: var(--bg-deep);
+      overflow-x: hidden;
     }
     .recent-episodes-grid {
       display: grid;
@@ -1169,6 +1174,8 @@
       gap: 1.5rem;
       margin-top: 2.5rem;
       flex-wrap: wrap;
+      max-width: 100%;
+      overflow-x: hidden;
     }
     .subscribe-row p {
       font-family: 'Inter', sans-serif;
@@ -1179,6 +1186,7 @@
       display: flex;
       gap: 1.25rem;
       align-items: center;
+      flex-wrap: wrap;
     }
     .subscribe-logos a {
       opacity: 0.55;
@@ -1200,13 +1208,20 @@
     .about-host {
       padding: 5rem 0;
       background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(10,14,28,1) 50%, var(--bg-deep) 100%);
+      overflow-x: hidden;
     }
     .about-host-grid {
       display: grid;
       grid-template-columns: 1fr 1.3fr;
-      gap: 4rem;
+      gap: 3rem;
       align-items: start;
       margin-top: 3rem;
+    }
+    @media (max-width: 900px) {
+      .about-host-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
     }
     @media (max-width: 768px) {
       .about-host-grid {
@@ -1260,22 +1275,35 @@
     .coming-up {
       padding: 5rem 0;
       background: var(--bg-deep);
+      overflow-x: hidden;
     }
     .coming-up-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 1.5rem;
+      gap: 1.25rem;
       margin-top: 3rem;
     }
-    @media (max-width: 1100px) {
+    @media (max-width: 1200px) {
       .coming-up-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 960px) {
+      .coming-up-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+    }
+    @media (max-width: 700px) {
+      .coming-up-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    }
+    @media (max-width: 480px) {
       .coming-up-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.25rem;
       }
     }
     .guest-card {
