@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jack Couch — Pale Blue Nexus Episode 02</title>
+  <meta name="description" content="Jack Couch on building the open financial internet, why sales is dead, and how podcasts build trust faster than cold outreach ever could." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../../images/favicon.png" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg-deep: #04060e;
+      --bg-card: rgba(255,255,255,0.03);
+      --bg-card-hover: rgba(255,255,255,0.06);
+      --border-subtle: rgba(255,255,255,0.06);
+      --border-accent: rgba(212,168,75,0.5);
+      --text-primary: #FFFFFF;
+      --text-secondary: rgba(166,210,230,1);
+      --text-muted: rgba(146,196,222,0.7);
+      --accent-blue: #7EB8DA;
+      --accent-warm: #D4A84B;
+      --accent-warm-light: #F4EFBA;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1.25rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    nav.scrolled {
+      background: rgba(4,6,14,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 40px; }
+    .section-container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 7rem 2rem; }
+    .section-eyebrow {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent-warm); display: block; margin-bottom: 1rem;
+    }
+    .section-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600;
+      line-height: 1.15; margin-bottom: 1rem;
+    }
+    .episode-hero {
+      min-height: 60vh; display: flex; align-items: flex-end;
+      padding: 8rem 0 4rem; position: relative;
+    }
+    .episode-hero-bg {
+      position: absolute; inset: 0; z-index: -1;
+      background: radial-gradient(ellipse 80% 60% at 30% 30%, rgba(27,38,59,0.8) 0%, transparent 70%), var(--bg-deep);
+    }
+    .episode-meta {
+      display: flex; align-items: center; gap: 1.5rem;
+      color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.5rem;
+    }
+    .episode-meta span { display: flex; align-items: center; gap: 0.4rem; }
+    .guest-photo {
+      width: 120px; height: 120px; border-radius: 50%;
+      object-fit: cover; border: 2px solid var(--border-accent);
+      margin-bottom: 1.5rem;
+    }
+    .quote-card {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: 16px; padding: 2rem; margin: 2rem 0;
+      position: relative;
+    }
+    .quote-card::before {
+      content: '"'; font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem; color: var(--accent-warm); opacity: 0.3;
+      position: absolute; top: 0.5rem; left: 1rem; line-height: 1;
+    }
+    .quote-text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.35rem; font-style: italic; line-height: 1.45;
+      color: var(--text-primary); padding-left: 1rem;
+    }
+    .quote-attr {
+      margin-top: 1rem; font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+    .share-row {
+      display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap;
+    }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.5rem 1rem; border-radius: 100px;
+      font-size: 0.8rem; font-weight: 500; text-decoration: none;
+      border: 1px solid var(--border-subtle); color: var(--text-secondary);
+      background: var(--bg-card); transition: all 0.3s;
+      cursor: pointer;
+    }
+    .share-btn:hover {
+      background: var(--bg-card-hover); border-color: var(--border-accent);
+      color: var(--text-primary);
+    }
+    .clip-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem;
+    }
+    @media (max-width: 768px) { .clip-grid { grid-template-columns: 1fr; } }
+    .clip-card {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: 12px; overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .clip-card:hover { transform: translateY(-4px); border-color: var(--border-accent); }
+    .clip-thumb { aspect-ratio: 16/9; background: linear-gradient(135deg, rgba(30,50,90,0.5), rgba(20,30,60,0.3)); display: flex; align-items: center; justify-content: center; position: relative; }
+    .clip-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .clip-play { position: absolute; width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.9); display: flex; align-items: center; justify-content: center; }
+    .clip-info { padding: 1rem; }
+    .clip-quote { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1rem; line-height: 1.4; color: var(--text-primary); margin-bottom: 0.5rem; }
+    .clip-time { font-size: 0.75rem; color: var(--text-muted); }
+    .guest-bio { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; max-width: 640px; margin-bottom: 2rem; }
+    .transcript-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--accent-warm); text-decoration: none; font-size: 0.9rem; font-weight: 500;
+    }
+    .transcript-link:hover { text-decoration: underline; }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    footer { padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--border-subtle); }
+    footer p { color: var(--text-muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <nav id="nav">
+    <a href="/" class="nav-logo"><img src="../../images/pbn-logo.png" alt="Pale Blue Nexus" /></a>
+  </nav>
+
+  <!-- Episode Hero -->
+  <section class="episode-hero">
+    <div class="episode-hero-bg"></div>
+    <div class="section-container">
+      <div class="fade-up">
+        <span class="section-eyebrow">Episode 02</span>
+        <!-- Placeholder until guest photo exists -->
+        <div class="guest-photo" style="background: linear-gradient(135deg, rgba(126,184,218,0.2), rgba(212,168,75,0.15)); display:flex;align-items:center;justify-content:center;"><span style="font-size:2rem;">&#128736;</span></div>
+        <h1 class="section-heading">Jack Couch</h1>
+        <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem; max-width: 600px;">Founder of Sophtron. The man building the open financial internet. On why sales is dead and podcasts are the new trust machine.</p>
+        <div class="episode-meta">
+          <span>Episode 02</span>
+          <span>&middot;</span>
+          <span>Pale Blue Nexus</span>
+        </div>
+        <div class="share-row">
+          <a href="https://www.youtube.com/watch?v=4wwUJRkLB90" target="_blank" rel="noopener noreferrer" class="share-btn">Watch on YouTube</a>
+          <a href="../../transcripts/jack-couch.srt.en.srt" download class="share-btn">Download Transcript</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Quotes -->
+  <section style="background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(10,14,28,1) 100%);">
+    <div class="section-container">
+      <span class="section-eyebrow fade-up">Key Moments</span>
+      <h2 class="section-heading fade-up">What he said.</h2>
+
+      <div class="quote-card fade-up">
+        <p class="quote-text">Sales is dead. Podcasts are how trust gets built now.</p>
+        <p class="quote-attr">Jack Couch, on the death of cold outreach</p>
+        <div class="share-row">
+          <a href="https://twitter.com/intent/tweet?text=Sales%20is%20dead.%20Podcasts%20are%20how%20trust%20gets%20built%20now.%20%40palebluenexus" target="_blank" rel="noopener noreferrer" class="share-btn">Share on X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://palebluenexus.com/episodes/jack-couch/" target="_blank" rel="noopener noreferrer" class="share-btn">Share on LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clip Highlights -->
+  <section>
+    <div class="section-container">
+      <span class="section-eyebrow fade-up">Clip Highlights</span>
+      <h2 class="section-heading fade-up">The moments that travelled.</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 2rem;">Shareable clips from the episode. Click to watch on YouTube.</p>
+
+      <div class="clip-grid">
+        <a href="https://www.youtube.com/watch?v=4wwUJRkLB90" target="_blank" rel="noopener noreferrer" class="clip-card fade-up" style="text-decoration:none;color:inherit;">
+          <div class="clip-thumb">
+            <img src="https://img.youtube.com/vi/4wwUJRkLB90/mqdefault.jpg" alt="Jack Couch clip thumbnail" />
+            <div class="clip-play">&#9654;</div>
+          </div>
+          <div class="clip-info">
+            <p class="clip-quote">"Sales is dead. Podcasts are how trust gets built now."</p>
+            <p class="clip-time">Jack Couch</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guest Bio -->
+  <section style="background: linear-gradient(180deg, rgba(10,14,28,1) 0%, var(--bg-deep) 100%);">
+    <div class="section-container">
+      <span class="section-eyebrow fade-up">About the Guest</span>
+      <h2 class="section-heading fade-up">Jack Couch.</h2>
+      <p class="guest-bio fade-up">Founder of Sophtron, building the open financial internet to connect millions of people to smaller banks and credit unions. Former Global VP of Payments at Xero. Founded Monchilla (acquired by Xero), DeepIntel Solutions, and held security roles at Microsoft. A distribution operator who believes podcasts are the last channel where trust compounds.</p>
+    </div>
+  </section>
+
+  <!-- Full Transcript -->
+  <section>
+    <div class="section-container">
+      <span class="section-eyebrow fade-up">Full Transcript</span>
+      <h2 class="section-heading fade-up">Every word.</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+        <a href="../../transcripts/jack-couch.srt.en.srt" download class="transcript-link">Download SRT (auto-generated) &darr;</a>
+      </p>
+      <p style="color: var(--text-muted); font-size: 0.85rem;">Transcript is auto-generated by YouTube. For a cleaned version, contact <a href="mailto:hello@palebluenexus.com" style="color: var(--accent-warm);">hello@palebluenexus.com</a>.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Pale Blue Nexus. Making sense of the future, from right here.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>

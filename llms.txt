@@ -1,0 +1,43 @@
+# Pale Blue Nexus
+
+Making sense of the future, from right here.
+
+## About
+
+Pale Blue Nexus is a podcast by Yohann Calpu, co-founder of Aloomii. It features conversations with operators, founders, and investors at the frontier of AI, space, and emerging tech.
+
+## Host
+
+Yohann Calpu — Host of Pale Blue Nexus, Co-founder of Aloomii.
+
+## Episodes
+
+### Episode 01: Jim Rogers
+Legendary investor and co-founder of the Quantum Fund.
+
+- **Title:** What a Legendary Investor Told Me After 17 Years
+- **Date:** 2026-02-24
+- **Duration:** 36:07
+- **YouTube:** https://www.youtube.com/watch?v=t3dDHRRZyHk
+- **Episode page:** https://palebluenexus.com/episodes/jim-rogers/
+- **Markdown:** https://palebluenexus.com/episodes/jim-rogers/index.md
+- **Guest website:** https://www.jimrogers.com
+
+### Episode 02: Jack Couch
+Founder of Sophtron, building the open financial internet.
+
+- **Title:** Why Sales Is Dead and Podcasts Build Trust
+- **Date:** 2026-03-10
+- **YouTube:** https://www.youtube.com/watch?v=4wwUJRkLB90
+- **Episode page:** https://palebluenexus.com/episodes/jack-couch/
+- **Markdown:** https://palebluenexus.com/episodes/jack-couch/index.md
+
+## Transcripts
+
+Auto-generated transcripts (SRT format):
+- Jim Rogers: https://palebluenexus.com/transcripts/jim-rogers.srt.en.srt
+- Jack Couch: https://palebluenexus.com/transcripts/jack-couch.srt.en.srt
+
+## Brand
+
+Pale Blue Nexus is a podcast brand under Aloomii.
