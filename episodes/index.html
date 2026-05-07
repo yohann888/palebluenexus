@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Episodes — Pale Blue Nexus</title>
+  <meta name="description" content="Every episode of Pale Blue Nexus. Conversations with operators, founders, and investors at the frontier of AI, space, and emerging tech." />
+  <meta property="og:title" content="Episodes — Pale Blue Nexus" />
+  <meta property="og:description" content="Every episode of Pale Blue Nexus. Conversations with operators, founders, and investors at the frontier of AI, space, and emerging tech." />
+  <meta property="og:image" content="https://img.youtube.com/vi/t3dDHRRZyHk/maxresdefault.jpg" />
+  <meta property="og:url" content="https://palebluenexus.com/episodes/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://img.youtube.com/vi/t3dDHRRZyHk/maxresdefault.jpg" />
+  <link rel="canonical" href="https://palebluenexus.com/episodes/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg-deep: #04060e;
+      --bg-card: rgba(255,255,255,0.03);
+      --bg-card-hover: rgba(255,255,255,0.06);
+      --border-subtle: rgba(255,255,255,0.06);
+      --border-accent: rgba(212,168,75,0.5);
+      --text-primary: #FFFFFF;
+      --text-secondary: rgba(166,210,230,1);
+      --text-muted: rgba(146,196,222,0.7);
+      --accent-blue: #7EB8DA;
+      --accent-warm: #D4A84B;
+      --accent-warm-light: #F4EFBA;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1.25rem 2.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    nav.scrolled {
+      background: rgba(4,6,14,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 40px; }
+    .nav-links {
+      display: flex; align-items: center; gap: 2.25rem; list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-secondary); text-decoration: none;
+      font-size: 0.85rem; font-weight: 400; letter-spacing: 0.04em;
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--text-primary); }
+    .section-container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 7rem 2rem; }
+    .section-eyebrow {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--accent-warm); display: block; margin-bottom: 1rem;
+    }
+    .section-heading {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600;
+      line-height: 1.15; margin-bottom: 1rem;
+    }
+    .page-hero {
+      min-height: 40vh; display: flex; align-items: flex-end;
+      padding: 8rem 0 3rem;
+    }
+    .episode-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;
+    }
+    @media (max-width: 768px) { .episode-grid { grid-template-columns: 1fr; } }
+    .episode-card {
+      background: var(--bg-card); border: 1px solid var(--border-subtle);
+      border-radius: 16px; overflow: hidden;
+      transition: transform 0.3s, border-color 0.3s;
+      text-decoration: none; color: inherit; display: block;
+    }
+    .episode-card:hover { transform: translateY(-4px); border-color: var(--border-accent); }
+    .episode-thumb { aspect-ratio: 16/9; background: #0a0f1e; position: relative; }
+    .episode-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .episode-info { padding: 1.5rem; }
+    .episode-number { font-size: 0.75rem; color: var(--accent-warm); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .episode-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; line-height: 1.2; margin-bottom: 0.75rem; }
+    .episode-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem; }
+    .episode-meta-row { display: flex; gap: 1rem; font-size: 0.8rem; color: var(--text-muted); }
+    .fade-up { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s ease forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    footer { padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--border-subtle); }
+    footer p { color: var(--text-muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <nav id="nav">
+    <a href="/" class="nav-logo"><img src="../images/pbn-logo.png" alt="Pale Blue Nexus" /></a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/episodes/">Episodes</a></li>
+      <li><a href="/#about-host">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="section-container">
+      <div class="fade-up">
+        <span class="section-eyebrow">All Episodes</span>
+        <h1 class="section-heading">Conversations that travelled.</h1>
+        <p style="color: var(--text-secondary); max-width: 560px;">Every episode of Pale Blue Nexus. With transcripts, quotes, and the moments that mattered.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Episode Grid -->
+  <section style="background: linear-gradient(180deg, var(--bg-deep) 0%, rgba(10,14,28,1) 100%); padding-top: 2rem;">
+    <div class="section-container">
+      <div class="episode-grid">
+        <a href="jim-rogers/" class="episode-card fade-up">
+          <div class="episode-thumb">
+            <img src="https://img.youtube.com/vi/t3dDHRRZyHk/maxresdefault.jpg" alt="Jim Rogers — Pale Blue Nexus Episode 1" loading="lazy" />
+          </div>
+          <div class="episode-info">
+            <p class="episode-number">Episode 01</p>
+            <h3 class="episode-title">Jim Rogers</h3>
+            <p class="episode-desc">Legendary investor. Co-founder of the Quantum Fund. 17 years of correspondence, one cold email at a time.</p>
+            <div class="episode-meta-row">
+              <span>36:07</span>
+              <span>&middot;</span>
+              <span>22K+ views</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="jack-couch/" class="episode-card fade-up">
+          <div class="episode-thumb">
+            <img src="https://img.youtube.com/vi/4wwUJRkLB90/maxresdefault.jpg" alt="Jack Couch — Pale Blue Nexus Episode 2" loading="lazy" />
+          </div>
+          <div class="episode-info">
+            <p class="episode-number">Episode 02</p>
+            <h3 class="episode-title">Jack Couch</h3>
+            <p class="episode-desc">Founder of Sophtron. Building the open financial internet. On why sales is dead and podcasts build trust.</p>
+            <div class="episode-meta-row">
+              <span>46:25</span>
+              <span>&middot;</span>
+              <span>YouTube</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Pale Blue Nexus. Making sense of the future, from right here.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
