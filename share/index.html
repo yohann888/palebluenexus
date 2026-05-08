@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quote Gallery — Pale Blue Nexus</title>
+  <meta name="description" content="Shareable quote cards from Pale Blue Nexus conversations." />
+  <meta property="og:title" content="Quote Gallery — Pale Blue Nexus" />
+  <meta property="og:description" content="Shareable quote cards from Pale Blue Nexus conversations." />
+  <meta property="og:url" content="https://palebluenexus.com/share/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://palebluenexus.com/share/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg-deep: #04060e;
+      --accent-warm: #D4A84B;
+      --accent-blue: #7EB8DA;
+      --border-subtle: rgba(255,255,255,0.06);
+      --text-secondary: rgba(166,210,230,1);
+    }
+    body { font-family: 'Montserrat', sans-serif; background: var(--bg-deep); color: #fff; min-height: 100vh; }
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 1.5rem 2.5rem; border-bottom: 1px solid var(--border-subtle); }
+    nav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+    nav a:hover { color: #fff; }
+    nav .nav-links { display: flex; gap: 2rem; }
+    .hero { text-align: center; padding: 5rem 2rem 3rem; }
+    .eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-warm); margin-bottom: 1rem; }
+    h1 { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 600; font-style: italic; line-height: 1.1; margin-bottom: 1rem; }
+    .subheading { color: var(--text-secondary); font-size: 1rem; max-width: 500px; margin: 0 auto; line-height: 1.6; }
+    .gallery { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+    .guest-section { margin-bottom: 4rem; }
+    .guest-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-blue); margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-subtle); }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+    .quote-preview { background: rgba(255,255,255,0.03); border: 1px solid rgba(212,168,75,0.2); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+    .quote-preview blockquote { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 1.15rem; line-height: 1.5; color: #fff; }
+    .quote-preview cite { font-size: 0.8rem; color: var(--accent-warm); font-style: normal; font-weight: 500; }
+    .card-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: auto; }
+    .btn-view { display: inline-block; padding: 0.5rem 1.1rem; border: 1px solid rgba(212,168,75,0.4); border-radius: 8px; color: var(--accent-warm); text-decoration: none; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.05em; transition: all 0.2s; }
+    .btn-view:hover { background: rgba(212,168,75,0.1); }
+    .btn-copy { display: inline-block; padding: 0.5rem 1.1rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: rgba(255,255,255,0.6); font-size: 0.78rem; font-weight: 500; cursor: pointer; background: none; font-family: inherit; transition: all 0.2s; }
+    .btn-copy:hover { border-color: rgba(255,255,255,0.3); color: #fff; }
+    .btn-copy.copied { border-color: rgba(126,184,218,0.4); color: var(--accent-blue); }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" style="font-weight:600; color:#fff;">Pale Blue Nexus</a>
+    <div class="nav-links">
+      <a href="/episodes/">Episodes</a>
+      <a href="/share/" style="color: var(--accent-warm);">Quotes</a>
+      <a href="/partner/">For Brands</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <p class="eyebrow">Quote Gallery</p>
+    <h1>Words worth sharing.</h1>
+    <p class="subheading">Shareable cards from every Pale Blue Nexus conversation. One click to post on X or LinkedIn.</p>
+  </div>
+
+  <div class="gallery">
+    <!-- Jim Rogers -->
+    <div class="guest-section">
+      <p class="guest-label">Jim Rogers — Episode 01</p>
+      <div class="cards-grid">
+        <div class="quote-preview">
+          <blockquote>"Do what you love. Success follows the work, not the other way around."</blockquote>
+          <cite>— Jim Rogers, Ep. 01</cite>
+          <div class="card-actions">
+            <a href="/share/jim-rogers-quote-1.html" class="btn-view">View Card</a>
+            <button class="btn-copy" onclick="copyLink('/share/jim-rogers-quote-1.html', this)">Copy Link</button>
+          </div>
+        </div>
+        <div class="quote-preview">
+          <blockquote>"I've made most of my money doing nothing. The discipline is in knowing when to wait."</blockquote>
+          <cite>— Jim Rogers, Ep. 01</cite>
+          <div class="card-actions">
+            <a href="/share/jim-rogers-quote-2.html" class="btn-view">View Card</a>
+            <button class="btn-copy" onclick="copyLink('/share/jim-rogers-quote-2.html', this)">Copy Link</button>
+          </div>
+        </div>
+        <div class="quote-preview">
+          <blockquote>"Every great investor I know has been wrong more than right. They just know how to cut the losses."</blockquote>
+          <cite>— Jim Rogers, Ep. 01</cite>
+          <div class="card-actions">
+            <a href="/share/jim-rogers-quote-3.html" class="btn-view">View Card</a>
+            <button class="btn-copy" onclick="copyLink('/share/jim-rogers-quote-3.html', this)">Copy Link</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jack Couch -->
+    <div class="guest-section">
+      <p class="guest-label">Jack Couch — Episode 02</p>
+      <div class="cards-grid">
+        <div class="quote-preview">
+          <blockquote>"Sales is dead. Podcasts are how trust gets built now."</blockquote>
+          <cite>— Jack Couch, Ep. 02</cite>
+          <div class="card-actions">
+            <a href="/share/jack-couch-quote-1.html" class="btn-view">View Card</a>
+            <button class="btn-copy" onclick="copyLink('/share/jack-couch-quote-1.html', this)">Copy Link</button>
+          </div>
+        </div>
+        <div class="quote-preview">
+          <blockquote>"Nobody's going to a conference to fall in love with a sales guy. They're listening to podcasts at 6am."</blockquote>
+          <cite>— Jack Couch, Ep. 02</cite>
+          <div class="card-actions">
+            <a href="/share/jack-couch-quote-2.html" class="btn-view">View Card</a>
+            <button class="btn-copy" onclick="copyLink('/share/jack-couch-quote-2.html', this)">Copy Link</button>
+          </div>
+        </div>
+        <div class="quote-preview">
+          <blockquote>"Podcasting has longer legs than knocking on doors. Always will."</blockquote>
+          <cite>— Jack Couch, Ep. 02</cite>
+          <div class="card-actions">
+            <a href="/share/jack-couch-quote-3.html" class="btn-view">View Card</a>
+            <button class="btn-copy" onclick="copyLink('/share/jack-couch-quote-3.html', this)">Copy Link</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function copyLink(path, btn) {
+      const url = 'https://palebluenexus.com' + path;
+      navigator.clipboard.writeText(url).then(() => {
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.textContent = 'Copy Link'; btn.classList.remove('copied'); }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

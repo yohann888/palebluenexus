@@ -38,6 +38,22 @@ Auto-generated transcripts (SRT format):
 - Jim Rogers: https://palebluenexus.com/transcripts/jim-rogers.srt.en.srt
 - Jack Couch: https://palebluenexus.com/transcripts/jack-couch.srt.en.srt
 
+## Quote Share Cards
+
+Shareable quote cards for social media (each page includes OG meta for rich previews):
+
+- Gallery: https://palebluenexus.com/share/
+- Jim Rogers Quote 1: https://palebluenexus.com/share/jim-rogers-quote-1.html
+- Jim Rogers Quote 2: https://palebluenexus.com/share/jim-rogers-quote-2.html
+- Jim Rogers Quote 3: https://palebluenexus.com/share/jim-rogers-quote-3.html
+- Jack Couch Quote 1: https://palebluenexus.com/share/jack-couch-quote-1.html
+- Jack Couch Quote 2: https://palebluenexus.com/share/jack-couch-quote-2.html
+- Jack Couch Quote 3: https://palebluenexus.com/share/jack-couch-quote-3.html
+
+## Sitemap
+
+https://palebluenexus.com/sitemap.xml
+
 ## Brand
 
 Pale Blue Nexus is a podcast brand under Aloomii.
