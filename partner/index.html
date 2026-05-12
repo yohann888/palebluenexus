@@ -339,42 +339,38 @@
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
+  .clip-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #0a1622;
+  }
+  .clip-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
   .clip-card {
     position: relative;
-    aspect-ratio: 4/5;
     border-radius: 4px;
     overflow: hidden;
     background: linear-gradient(135deg, #1a2a3d 0%, #0a1622 100%);
     border: 1px solid var(--border);
     cursor: pointer;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
   }
   .clip-card:hover { transform: translateY(-6px); }
-  .clip-card:hover .play-button {
-    transform: translate(-50%, -50%) scale(1.08);
-    background: var(--warm-gold);
-    color: var(--deep-space);
-  }
-  .clip-bg {
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse at 30% 20%, rgba(126, 184, 218, 0.25), transparent 60%),
-      radial-gradient(ellipse at 80% 80%, rgba(201, 162, 39, 0.12), transparent 60%);
-  }
-  .clip-card:nth-child(2) .clip-bg {
-    background:
-      radial-gradient(ellipse at 70% 30%, rgba(201, 162, 39, 0.22), transparent 60%),
-      radial-gradient(ellipse at 20% 70%, rgba(126, 184, 218, 0.18), transparent 60%);
-  }
   .clip-content {
-    position: absolute;
-    inset: 0;
-    padding: 48px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    z-index: 2;
+    flex: 1;
+    min-height: 0;
   }
   .clip-meta {
     display: flex;
@@ -390,22 +386,7 @@
     background: var(--warm-gold);
     border-radius: 50%;
   }
-  .play-button {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 76px; height: 76px;
-    border-radius: 50%;
-    background: rgba(244, 239, 230, 0.95);
-    color: var(--deep-space);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-    transition: all 0.4s ease;
-    box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-  }
-  .play-button svg { margin-left: 4px; }
+
   .clip-quote {
     font-family: var(--display);
     font-size: clamp(28px, 2.6vw, 38px);
@@ -1053,7 +1034,7 @@
     .hero-stats { gap: 36px; }
     .stat-block .stat-num { font-size: 44px; }
     .clips-grid { grid-template-columns: 1fr; gap: 24px; }
-    .clip-card { aspect-ratio: 4/3; }
+    .clip-card { aspect-ratio: auto; }
     .roster-grid { grid-template-columns: 1fr; }
     .roster-item { border-right: none; padding-left: 0 !important; padding-right: 0 !important; }
     .audience-grid { grid-template-columns: 1fr; gap: 48px; }
@@ -1145,9 +1126,14 @@
     <div class="clips-grid">
       <!-- Clip 1: Jim Rogers -->
       <div class="clip-card" data-clip="jim-rogers">
-        <div class="clip-bg"></div>
-        <div class="play-button" aria-label="Play Jim Rogers clip">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        <div class="clip-video">
+          <iframe
+            src="https://www.youtube.com/embed/t3dDHRRZyHk?start=2167"
+            title="Jim Rogers clip — Do what you love"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
         </div>
         <div class="clip-content">
           <div class="clip-meta">
@@ -1163,9 +1149,14 @@
 
       <!-- Clip 2: Jack Couch -->
       <div class="clip-card" data-clip="jack-couch">
-        <div class="clip-bg"></div>
-        <div class="play-button" aria-label="Play Jack Couch clip">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        <div class="clip-video">
+          <iframe
+            src="https://www.youtube.com/embed/4wwUJRkLB90?start=1950"
+            title="Jack Couch clip — Sales is dead"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
         </div>
         <div class="clip-content">
           <div class="clip-meta">
