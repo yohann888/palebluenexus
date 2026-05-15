@@ -1157,6 +1157,347 @@
     letter-spacing: 0.06em;
   }
 
+  /* ===== JIM ROGERS STORY ===== */
+  .jim-rogers-story {
+    background: var(--deep-space);
+    padding: 120px 0 80px;
+    position: relative;
+  }
+  @media (max-width: 640px) { .jim-rogers-story { padding: 80px 0; } }
+  .jrs-eyebrow {
+    font-family: var(--body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+    margin-bottom: 24px;
+  }
+  .jrs-heading {
+    font-family: var(--display);
+    font-size: clamp(32px, 4.5vw, 52px);
+    font-weight: 400;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 40px;
+  }
+  .jrs-body {
+    max-width: 720px;
+  }
+  .jrs-body p {
+    font-family: var(--body);
+    font-size: 19px;
+    color: var(--cream);
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+  .jrs-body p:last-of-type { margin-bottom: 36px; }
+  .jrs-pull {
+    font-family: var(--display);
+    font-size: clamp(22px, 2.5vw, 30px);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--warm-gold);
+    line-height: 1.25;
+    margin-top: 16px;
+  }
+
+  /* ===== NEXT ON PBN (updated) ===== */
+  .next-pbn {
+    background: var(--deep-space-2);
+    padding: 120px 0;
+  }
+  @media (max-width: 640px) { .next-pbn { padding: 80px 0; } }
+  .next-pbn .eyebrow { color: var(--warm-gold); }
+  .next-pbn h2 {
+    font-family: var(--display);
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 400;
+    color: var(--cream);
+    margin: 18px 0 4px;
+    line-height: 1.05;
+  }
+  .next-pbn .subhead {
+    font-family: var(--body);
+    font-size: 17px;
+    font-style: italic;
+    color: rgba(244, 239, 230, 0.65);
+    margin-bottom: 56px;
+  }
+  .next-guests {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .next-guest-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .next-guest-img {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .next-guest-card:hover .next-guest-img {
+    transform: scale(1.02);
+  }
+  .next-guest-name {
+    font-family: var(--display);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-top: 16px;
+    line-height: 1.15;
+  }
+  .next-guest-role {
+    font-family: var(--body);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(244, 239, 230, 0.6);
+    margin-top: 4px;
+  }
+  .next-guest-teaser {
+    font-family: var(--body);
+    font-size: 14px;
+    font-style: italic;
+    color: rgba(244, 239, 230, 0.7);
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+
+  /* ===== NINE YEARS, FIVE SHOWS ===== */
+  .nine-years {
+    background: var(--cream);
+    color: var(--ink);
+    padding: 120px 0;
+  }
+  @media (max-width: 640px) { .nine-years { padding: 80px 0; } }
+  .ny-eyebrow {
+    font-family: var(--body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+    margin-bottom: 20px;
+  }
+  .ny-heading {
+    font-family: var(--display);
+    font-size: clamp(36px, 4.5vw, 52px);
+    font-weight: 400;
+    color: var(--deep-space);
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+  .ny-intro {
+    font-family: var(--body);
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(13, 27, 42, 0.7);
+    margin-bottom: 64px;
+  }
+  .ny-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  .ny-card {
+    padding: 0 32px 0 0;
+    border-right: 1px solid var(--border-cream);
+    position: relative;
+  }
+  .ny-card:first-child { padding-left: 0; }
+  .ny-card:last-child { border-right: none; padding-right: 0; }
+  .ny-card:not(:first-child) { padding-left: 28px; }
+  .ny-year {
+    font-family: var(--body);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(13, 27, 42, 0.5);
+    margin-bottom: 12px;
+  }
+  .ny-show {
+    font-family: var(--display);
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+  .ny-desc {
+    font-family: var(--body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+    margin-bottom: 16px;
+  }
+  .ny-stat {
+    font-family: var(--body);
+    font-size: 15px;
+    color: rgba(13, 27, 42, 0.7);
+    line-height: 1.55;
+  }
+  .ny-closing {
+    font-family: var(--display);
+    font-size: clamp(20px, 2vw, 26px);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--deep-space);
+    text-align: center;
+    margin-top: 64px;
+    line-height: 1.3;
+  }
+
+  /* ===== MEDIA IS INFRASTRUCTURE ===== */
+  .media-infra {
+    background: var(--deep-space);
+    padding: 120px 0;
+  }
+  @media (max-width: 640px) { .media-infra { padding: 80px 0; } }
+  .mi-eyebrow {
+    font-family: var(--body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .mi-heading {
+    font-family: var(--display);
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    color: var(--cream);
+    text-align: center;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .mi-quote {
+    font-family: var(--display);
+    font-size: clamp(24px, 2.5vw, 32px);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--cream);
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 16px;
+    line-height: 1.3;
+  }
+  .mi-attribution {
+    font-family: var(--body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .mi-body {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .mi-body p {
+    font-family: var(--body);
+    font-size: 18px;
+    color: var(--cream);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .mi-body p:last-child { margin-bottom: 0; }
+
+  /* ===== VELOCITY ===== */
+  .velocity {
+    background: var(--cream);
+    color: var(--ink);
+    padding: 120px 0;
+  }
+  @media (max-width: 640px) { .velocity { padding: 80px 0; } }
+  .vel-eyebrow {
+    font-family: var(--body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+    margin-bottom: 20px;
+  }
+  .vel-heading {
+    font-family: var(--display);
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    color: var(--deep-space);
+    line-height: 1.05;
+    margin-bottom: 16px;
+    max-width: 720px;
+  }
+  .vel-intro {
+    font-family: var(--body);
+    font-size: 18px;
+    color: var(--deep-space);
+    line-height: 1.6;
+    max-width: 720px;
+    margin-bottom: 56px;
+  }
+  .vel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 40px;
+  }
+  .vel-card {
+    padding: 32px 0 0;
+    border-top: 1px solid var(--border-cream);
+    position: relative;
+  }
+  .vel-num {
+    font-family: var(--display);
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--warm-gold);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .vel-card-heading {
+    font-family: var(--display);
+    font-size: 26px;
+    font-weight: 500;
+    color: var(--deep-space);
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .vel-card-body {
+    font-family: var(--body);
+    font-size: 16px;
+    color: rgba(13, 27, 42, 0.8);
+    line-height: 1.6;
+  }
+  .vel-footer {
+    font-family: var(--body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(13, 27, 42, 0.6);
+    text-align: center;
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border-cream);
+  }
+
   /* ===== RESPONSIVE ===== */
   @media (max-width: 880px) {
     section { padding: 80px 0; }
@@ -1189,6 +1530,13 @@
     .nav-logo .nav-mark { font-size: 16px; }
     .closing { padding: 100px 0; }
     .closing-logo { width: 96px; height: 96px; }
+    /* New sections */
+    .next-guests { grid-template-columns: 1fr; gap: 40px; }
+    .next-guest-img { max-width: 100%; }
+    .ny-grid { grid-template-columns: 1fr; gap: 0; }
+    .ny-card { border-right: none; border-bottom: 1px solid var(--border-cream); padding: 36px 0 !important; }
+    .ny-card:last-child { border-bottom: none; }
+    .vel-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -1253,17 +1601,47 @@
   </div>
 </section>
 
-<!-- ===== NEXT EPISODE ===== -->
-<section style="background: var(--deep-space); padding: 80px 0;">
-  <div class="container" style="max-width: 860px;">
-    <div class="section-head" style="margin-bottom: 2rem;">
-      <span class="eyebrow">Next on Pale Blue Nexus</span>
-      <h2 class="display">EP 04 is <em>incoming</em>.</h2>
+<!-- ===== THE JIM ROGERS STORY ===== -->
+<section class="jim-rogers-story">
+  <div class="narrow">
+    <div class="jrs-eyebrow">HOW THIS SHOW GETS ITS GUESTS</div>
+    <h2 class="jrs-heading">A cold email in 2009. A guest in 2026.</h2>
+    <div class="jrs-body">
+      <p>In 2009, Yohann sent a cold email to Jim Rogers. Co-founder of the Quantum Fund with George Soros. 4,200% returns in a single decade. One of the most sought-after investors alive.</p>
+      <p>Rogers replied. Most people would have asked for something immediately. Yohann didn't. He kept the conversation going. Year after year. No pitch. No ask. Just genuine connection maintained over time.</p>
+      <p>Seventeen years later, Jim sat down as the first guest on Pale Blue Nexus. The episode is live.</p>
+      <p>No agency would have kept that thread alive for 17 years. Most wouldn't last 17 weeks. This is the difference between transactional media and relationship-driven media. Pale Blue Nexus is the second kind.</p>
     </div>
-    <a href="https://palebluenexus.com" target="_blank" rel="noopener noreferrer" style="display:block; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.4); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 60px rgba(0,0,0,0.5)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 8px 40px rgba(0,0,0,0.4)'">
-      <img src="/images/ep04-nikola-borisov-promo.png" alt="EP 04 — Nikola Borisov, Co-Founder &amp; CEO of DeepInfra. $107M Series B." style="width:100%; height:auto; display:block;" loading="lazy" />
-    </a>
-    <p style="margin-top: 1.25rem; color: var(--text-muted); font-size: 0.9rem; text-align: center;">Nikola Borisov · Co-Founder &amp; CEO, DeepInfra · $107M Series B · Backed by NVIDIA, Felicis, Samsung Next</p>
+    <div class="jrs-pull">The relationship is the asset. The show is the excuse to have it.</div>
+  </div>
+</section>
+
+<!-- ===== NEXT ON PALE BLUE NEXUS ===== -->
+<section class="next-pbn">
+  <div class="container">
+    <span class="eyebrow">Next on Pale Blue Nexus</span>
+    <h2>Next on Pale Blue Nexus.</h2>
+    <p class="subhead">Three guests coming. The momentum is real.</p>
+    <div class="next-guests">
+      <div class="next-guest-card">
+        <img src="/images/guest-nikola-borisov.jpg" alt="Nikola Borisov" class="next-guest-img" loading="lazy" />
+        <div class="next-guest-name">Nikola Borisov</div>
+        <div class="next-guest-role">CO-FOUNDER &middot; CEO, DEEPINFRA</div>
+        <div class="next-guest-teaser">Why inference, not training, will define the AI economy.</div>
+      </div>
+      <div class="next-guest-card">
+        <img src="/images/guest-nectarios-economakis.jpg" alt="Nectarios Economakis" class="next-guest-img" loading="lazy" />
+        <div class="next-guest-name">Nectarios Economakis</div>
+        <div class="next-guest-role">PARTNER &middot; AMIRAL VENTURES</div>
+        <div class="next-guest-teaser">Building Canada's next technology flagships.</div>
+      </div>
+      <div class="next-guest-card">
+        <img src="/images/guest-eliza-blank.jpg" alt="Eliza Blank" class="next-guest-img" loading="lazy" />
+        <div class="next-guest-name">Eliza Blank</div>
+        <div class="next-guest-role">CEO &middot; THE FARMLINK PROJECT</div>
+        <div class="next-guest-teaser">No good food goes to waste. Five hundred million pounds rescued, fifty states.</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1348,6 +1726,42 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== NINE YEARS, FIVE SHOWS ===== -->
+<section class="nine-years">
+  <div class="container">
+    <div class="ny-eyebrow">THIS IS NOT A FIRST ATTEMPT</div>
+    <h2 class="ny-heading">Nine years in the room.</h2>
+    <p class="ny-intro">Five shows. Three eras. One through line. PBN is where it all converges.</p>
+    <div class="ny-grid">
+      <div class="ny-card">
+        <div class="ny-year">2017 &mdash; 2018</div>
+        <div class="ny-show">EOS Go</div>
+        <div class="ny-desc">PODCAST + LIVE STREAMS</div>
+        <div class="ny-stat">16K live viewers on launch. Interview with Dan Larimer at Block.one HQ (now Bullish, BLSH on NYSE).</div>
+      </div>
+      <div class="ny-card">
+        <div class="ny-year">2020 &mdash; 2023</div>
+        <div class="ny-show">NFT Hype</div>
+        <div class="ny-desc">FIRST NFT PODCAST EVER</div>
+        <div class="ny-stat">56K all-time downloads. Interviewed Yat Siu, who went on to lead CryptoSlam's $9M seed round.</div>
+      </div>
+      <div class="ny-card">
+        <div class="ny-year">2021 &mdash; 2022</div>
+        <div class="ny-show">CryptoSlam Clubhouse</div>
+        <div class="ny-desc">LIVE PANELS, MARK CUBAN BACKED</div>
+        <div class="ny-stat">Ran live rooms for CryptoSlam during the NFT boom. $2M in deals closed in the process.</div>
+      </div>
+      <div class="ny-card">
+        <div class="ny-year">2026 &mdash; Present</div>
+        <div class="ny-show">Pale Blue Nexus</div>
+        <div class="ny-desc">FLAGSHIP, AI + SPACE + PHYSICS</div>
+        <div class="ny-stat">Jim Rogers as first guest. ~5K subscribers and 20K+ views in the first 30 days.</div>
+      </div>
+    </div>
+    <div class="ny-closing">We showed up early to every major media wave. PBN is where all of it lands.</div>
   </div>
 </section>
 
@@ -1479,6 +1893,62 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== POSITIONING PULL-QUOTE ===== -->
+<section style="background: var(--deep-space); padding: 110px 0;">
+  <div class="narrow" style="text-align: center;">
+    <div style="width: 24px; height: 1px; background: var(--warm-gold); margin: 0 auto 32px;"></div>
+    <p style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(26px, 3vw, 38px); font-style: italic; font-weight: 400; line-height: 1.25; color: var(--cream);">&ldquo;We don&rsquo;t sell you access to an industry. We sell you association with a host whose audience trusts him across industries.&rdquo;</p>
+    <div style="width: 24px; height: 1px; background: var(--warm-gold); margin: 32px auto 0;"></div>
+  </div>
+</section>
+
+<!-- ===== MEDIA IS INFRASTRUCTURE ===== -->
+<section class="media-infra">
+  <div class="narrow">
+    <div class="mi-eyebrow">WHY THE PRICE IS WHAT IT IS</div>
+    <h2 class="mi-heading">Media isn't content. Media is infrastructure.</h2>
+    <div class="mi-quote">&ldquo;TBPN is my favorite tech show. We want them to keep that going and for them to do what they do so well.&rdquo;</div>
+    <div class="mi-attribution">SAM ALTMAN &middot; ON OPENAI ACQUIRING TBPN, APRIL 2026</div>
+    <div class="mi-body">
+      <p>OpenAI did not buy TBPN for the audience size. They bought it for the relationships every episode created. Zuckerberg. Nadella. Altman. They came on the show because the hosts had built genuine connections over years.</p>
+      <p>TBPN started from a text message. Eighteen months later, $30M in annual revenue and an acquisition by the most valuable AI company in the world.</p>
+      <p>The show is the excuse to have the conversation. The conversation builds the relationship. The relationship is the asset. That is what a Pale Blue Nexus sponsorship buys.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== VELOCITY ===== -->
+<section class="velocity">
+  <div class="container">
+    <div class="vel-eyebrow">HOW YOUR SPONSORSHIP COMPOUNDS</div>
+    <h2 class="vel-heading">One conversation. Thirty pieces of content.</h2>
+    <p class="vel-intro">Velocity is the AI multiplication engine that runs inside every PBN episode. Your integration does not air once and disappear. It compounds across every clip, every platform, every week.</p>
+    <div class="vel-grid">
+      <div class="vel-card">
+        <div class="vel-num">01</div>
+        <div class="vel-card-heading">Clip discovery.</div>
+        <div class="vel-card-body">Agents watch every recording and identify high-engagement moments using audio energy, chat signal, and topic shifts. The best ten seconds in your episode get found before any human edit.</div>
+      </div>
+      <div class="vel-card">
+        <div class="vel-num">02</div>
+        <div class="vel-card-heading">Hook engineering.</div>
+        <div class="vel-card-body">Platform-specific opening lines, captions, and titles, tuned to TikTok, Shorts, Reels, X, and LinkedIn. Your category gets its own voice on every platform.</div>
+      </div>
+      <div class="vel-card">
+        <div class="vel-num">03</div>
+        <div class="vel-card-heading">Distribution and scheduling.</div>
+        <div class="vel-card-body">Posts sequenced over weeks, scheduled at optimal times per platform, killed if they underperform. Your association keeps working long after the episode drops.</div>
+      </div>
+      <div class="vel-card">
+        <div class="vel-num">04</div>
+        <div class="vel-card-heading">Performance loop.</div>
+        <div class="vel-card-body">Underperformers get killed. Hits get amplified. Weekly intel brief on what is working and why. You see exactly where your brand is compounding.</div>
+      </div>
+    </div>
+    <div class="vel-footer">SHIPS TO &middot; TIKTOK &middot; YOUTUBE SHORTS &middot; INSTAGRAM REELS &middot; X &middot; LINKEDIN &middot; SPOTIFY CLIPS &middot; APPLE PODCASTS &middot; YOUTUBE LONG</div>
   </div>
 </section>
 
@@ -1703,15 +2173,6 @@
     <div class="availability">
       <strong>Season 2 partner conversations are open.</strong> Pitch deck and references available on request.
     </div>
-  </div>
-</section>
-
-<!-- ===== POSITIONING PULL-QUOTE ===== -->
-<section style="background: var(--deep-space); padding: 110px 0;">
-  <div class="narrow" style="text-align: center;">
-    <div style="width: 24px; height: 1px; background: var(--warm-gold); margin: 0 auto 32px;"></div>
-    <p style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(26px, 3vw, 38px); font-style: italic; font-weight: 400; line-height: 1.25; color: var(--cream);">&ldquo;We don&rsquo;t sell you access to an industry. We sell you association with a host whose audience trusts him across industries.&rdquo;</p>
-    <div style="width: 24px; height: 1px; background: var(--warm-gold); margin: 32px auto 0;"></div>
   </div>
 </section>
 
