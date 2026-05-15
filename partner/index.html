@@ -406,6 +406,146 @@
     font-weight: 600;
   }
 
+  /* ===== WHERE THIS GOES ===== */
+  .where-goes {
+    background: var(--deep-space);
+    padding: 120px 0;
+  }
+  @media (max-width: 640px) { .where-goes { padding: 80px 0; } }
+  .where-eyebrow {
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .where-heading {
+    font-family: var(--display);
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 400;
+    color: var(--cream);
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .where-intro {
+    font-family: var(--body);
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(244, 239, 230, 0.7);
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .where-block {
+    max-width: 720px;
+    margin: 0 auto;
+    margin-bottom: 48px;
+  }
+  .where-year {
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+    margin-bottom: 12px;
+  }
+  .where-body {
+    font-family: var(--body);
+    font-size: clamp(18px, 1.6vw, 21px);
+    color: var(--cream);
+    line-height: 1.55;
+  }
+  .where-closing {
+    font-family: var(--display);
+    font-size: clamp(22px, 2vw, 26px);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--cream);
+    text-align: center;
+    max-width: 640px;
+    margin: 80px auto 0;
+  }
+
+  /* ===== AMPLIFICATION ===== */
+  .amplification {
+    background: var(--cream);
+    color: var(--ink);
+    padding: 100px 0;
+  }
+  .amp-eyebrow {
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .amp-heading {
+    font-family: var(--display);
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+    color: var(--deep-space);
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .amp-body {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .amp-body p {
+    font-family: var(--body);
+    font-size: clamp(17px, 1.4vw, 19px);
+    color: var(--deep-space);
+    line-height: 1.65;
+    margin-bottom: 1.2em;
+  }
+  .amp-body p:last-child { margin-bottom: 0; }
+  .amp-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media (max-width: 768px) {
+    .amp-cards {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+  }
+  .amp-card {
+    background: white;
+    border: 1px solid rgba(13, 27, 42, 0.1);
+    border-radius: 4px;
+    padding: 24px;
+    transition: box-shadow 0.3s ease;
+  }
+  .amp-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+  .amp-placeholder {
+    background: #e8e4dc;
+    aspect-ratio: 1 / 1;
+    border-radius: 2px;
+    margin-bottom: 16px;
+  }
+  .amp-caption {
+    font-family: var(--body);
+    font-size: 13px;
+    color: rgba(13, 27, 42, 0.6);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
   /* ===== ROSTER ===== */
   .roster {
     background: var(--cream);
@@ -1073,13 +1213,11 @@
         <span class="eyebrow">2026 Founding Sponsorship</span>
       </div>
       <h1 class="display">
-        A rare window<br/>
-        to <em>partner early</em><br/>
-        with a show that's<br/>
-        starting to break through.
+        What this could become,<br/>
+        <span style="font-weight: 300; opacity: 0.85;">and who we'd build it with.</span>
       </h1>
       <p class="hero-sub">
-        Pale Blue Nexus is a long-form interview show at the intersection of AI, space, physics, and the future of work, hosted by Yohann Calpu. Three founding sponsor seats are open for 2026. After this season, founding rates won't return.
+        Pale Blue Nexus is a long-form interview show at the intersection of AI, space, physics, and the future of work, hosted by Yohann Calpu. We are choosing three partners for Season 2.
       </p>
       <div class="hero-stats">
         <div class="stat-block">
@@ -1126,6 +1264,32 @@
       <img src="/images/ep04-nikola-borisov-promo.png" alt="EP 04 — Nikola Borisov, Co-Founder &amp; CEO of DeepInfra. $107M Series B." style="width:100%; height:auto; display:block;" loading="lazy" />
     </a>
     <p style="margin-top: 1.25rem; color: var(--text-muted); font-size: 0.9rem; text-align: center;">Nikola Borisov · Co-Founder &amp; CEO, DeepInfra · $107M Series B · Backed by NVIDIA, Felicis, Samsung Next</p>
+  </div>
+</section>
+
+<!-- ===== WHERE THIS GOES ===== -->
+<section class="where-goes">
+  <div class="narrow">
+    <div class="where-eyebrow">WHERE THIS GOES</div>
+    <h2 class="where-heading">A three-year arc.</h2>
+    <p class="where-intro">What founding partners are actually buying into.</p>
+    
+    <div class="where-block">
+      <div class="where-year">YEAR ONE.</div>
+      <p class="where-body">We prove the format. Three founding partners build alongside the show while it is still finding its sharpest edge. Episodes shape themselves around real conversations, not performance. Audience compounds because nothing about it is engineered.</p>
+    </div>
+    
+    <div class="where-block">
+      <div class="where-year">YEAR TWO.</div>
+      <p class="where-body">Series formats live inside the show. "The [Brand] Conversations" stops being a sponsor perk and becomes how PBN is structured. Founding partners hold their name on the segment that fits their world. The show stops being one show and starts being a network of seasons.</p>
+    </div>
+    
+    <div class="where-block">
+      <div class="where-year">YEAR THREE.</div>
+      <p class="where-body">PBN becomes the place enterprise founders in AI infrastructure, biotech, and capital markets reach for first when they have something to say. Founding partners are the names on the masthead of that.</p>
+    </div>
+    
+    <p class="where-closing">The partners who shape this with us in Year One get the easiest seat at every table that comes after.</p>
   </div>
 </section>
 
@@ -1182,6 +1346,37 @@
             <div class="clip-attribution"><strong>Jack Couch</strong> · Founder · Distribution operator</div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AMPLIFICATION PROOF ===== -->
+<section class="amplification">
+  <div class="narrow">
+    <div class="amp-eyebrow">THE SECOND SHOW</div>
+    <h2 class="amp-heading">What happens after the episode airs.</h2>
+    <div class="amp-body">
+      <p>Most podcasts measure success at the moment the episode drops. We pay attention to what happens twenty-four hours later.</p>
+      <p>When a CEO and their team share the episode across their own LinkedIn and X channels, on company accounts and personal accounts, the show does not just reach our audience. It reaches into theirs.</p>
+      <p>That is the metric sponsors should care about. Not the size of the room when we recorded. The number of rooms the episode walks into after.</p>
+    </div>
+    
+    <div class="amp-cards">
+      <div class="amp-card">
+        <!-- replace with: amplification-deepinfra-linkedin.jpg -->
+        <div class="amp-placeholder"></div>
+        <p class="amp-caption">DEEPINFRA TEAM, LINKEDIN</p>
+      </div>
+      <div class="amp-card">
+        <!-- replace with: amplification-deepinfra-x.jpg -->
+        <div class="amp-placeholder"></div>
+        <p class="amp-caption">DEEPINFRA, X</p>
+      </div>
+      <div class="amp-card">
+        <!-- replace with: amplification-jim-rogers.jpg -->
+        <div class="amp-placeholder"></div>
+        <p class="amp-caption">JIM ROGERS COMMUNITY SHARE</p>
       </div>
     </div>
   </div>
@@ -1334,8 +1529,8 @@
           <span class="pulse"></span>
           1 Slot Only
         </div>
-        <div class="tier-name">Founding <em>Title Sponsor</em></div>
-        <p class="tier-tagline">"Pale Blue Nexus, presented by [Your Brand]." Strategic partnership across the season: your name on the show, your pipeline on autopilot, your prospects on the guest list.</p>
+        <div class="tier-name">The partner whose name lives inside the show.</div>
+        <p class="tier-tagline">Title is one seat per season. The brand that holds it is not a sponsor in the traditional sense. They are the voice that runs alongside the show across every episode, every clip, every newsletter. Their categories of conversation become a recurring series. Their CEO joins the host seat once a year. Their network gets warm introductions from Yohann. The show is unmistakably their company's home in long-form.</p>
 
         <div class="tier-price">
           <span class="amount">$24,000</span>
@@ -1432,13 +1627,13 @@
             </li>
             <li>
               <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              <span><strong>Founding rate locked for Season 3.</strong> Right of first refusal, no price increase.</span>
+              <span><strong>Founding partners shape Season 2 with us. Pricing held for Season 3 renewal, right of first refusal.</strong></span>
             </li>
           </ul>
         </div>
 
         <a href="mailto:partnerships@palebluenexus.com?subject=Founding%20Title%20Sponsor%20Inquiry" class="tier-cta">
-          Claim the Title Seat
+          Start a conversation.
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -1449,8 +1644,8 @@
           <span class="pulse" style="background: var(--ink);"></span>
           2 Slots Available
         </div>
-        <div class="tier-name">Founding <em>Main Sponsor</em></div>
-        <p class="tier-tagline">"Brought to you in part by [Your Brand]." Real, integrated presence with full access to the BD engine and the network. At a founding rate.</p>
+        <div class="tier-name">The partners building the audience with us.</div>
+        <p class="tier-tagline">Two seats per season. Main partners are not background advertisers. They sit alongside the show as it scales, with their own midroll voice, episode pages, and clip credits. The earlier they join, the more their name compounds with the audience.</p>
 
         <div class="tier-price">
           <span class="amount">$10,000</span>
@@ -1524,20 +1719,20 @@
             </li>
             <li>
               <svg class="check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-              <span><strong>Founding rate locked for Season 3.</strong> Right of first refusal.</span>
+              <span><strong>Founding partners shape Season 2 with us. Pricing held for Season 3 renewal, right of first refusal.</strong></span>
             </li>
           </ul>
         </div>
 
         <a href="mailto:partnerships@palebluenexus.com?subject=Founding%20Main%20Sponsor%20Inquiry" class="tier-cta">
-          Claim a Main Seat
+          Talk to us.
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
     </div>
 
     <div class="availability">
-      <strong>Three founding seats. Once filled, this rate sheet retires.</strong> Pitch deck and references available on request.
+      <strong>Season 2 partner conversations are open.</strong> Pitch deck and references available on request.
     </div>
   </div>
 </section>
