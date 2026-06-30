@@ -179,9 +179,14 @@ function cardHtml(item, { rank } = {}) {
   const badge = PLATFORM_LABEL[item.platform] || item.platform;
   const rankHtml = rank ? `<span class="feed-rank">#${rank}</span>` : "";
   const thumb = item.thumb || `https://i.ytimg.com/vi/${item.id}/hqdefault.jpg`;
+  const portrait = item.platform === "tiktok";
+  const thumbInner = portrait
+    ? `<span class="feed-thumb-bg" style="background-image:url('${esc(thumb)}')"></span>
+            <img class="feed-thumb-portrait" src="${esc(thumb)}" alt="${esc(item.title)}" loading="lazy" />`
+    : `<img src="${esc(thumb)}" alt="${esc(item.title)}" loading="lazy" />`;
   return `        <a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer" class="feed-card fade-up">
-          <div class="feed-thumb">
-            <img src="${esc(thumb)}" alt="${esc(item.title)}" loading="lazy" />
+          <div class="feed-thumb${portrait ? " feed-thumb-vertical" : ""}">
+            ${thumbInner}
             ${rankHtml}
             <span class="feed-badge feed-badge-${item.platform}">${badge}</span>
           </div>
