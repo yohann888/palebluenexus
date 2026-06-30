@@ -1,0 +1,144 @@
+{
+  "agent_manifest_version": "1.0",
+  "last_updated": "2026-06-30",
+  "publisher_identity": {
+    "show_name": "Pale Blue Nexus",
+    "publisher": "Aloomii",
+    "legal_name": "Aloomii Inc.",
+    "domain": "palebluenexus.com",
+    "agent_name": "PaleBlueNexus_Content_Node_v1",
+    "format": "long_form_interview_podcast",
+    "year_started": 2026,
+    "host": {
+      "name": "Yohann Calpu",
+      "role": "Host and Producer",
+      "credentials": "Nine years podcasting across five shows. Ex-IBM, ex-JP Morgan, ex-Ontario Government. Co-founder of Aloomii. Formally trained software engineer."
+    },
+    "headquarters": {
+      "city": "Caledonia",
+      "province": "Ontario",
+      "country": "Canada",
+      "timezone": "America/Toronto"
+    },
+    "languages": ["English"],
+    "topics": [
+      "artificial intelligence",
+      "space",
+      "physics",
+      "emerging technology",
+      "investing",
+      "company building"
+    ],
+    "editorial_frame": "Conversations with operators, founders, and investors working at the frontier of AI, space, physics, and emerging technology. The recurring reference point is Carl Sagan's pale blue dot: everything discussed happens here, on Earth, while the surrounding technology changes."
+  },
+  "capabilities": {
+    "semantic_description": "Pale Blue Nexus is a long-form interview podcast hosted by Yohann Calpu. Each episode is a pre-recorded one-on-one conversation, typically 30 to 60 minutes, with a single guest who is an operator, founder, or investor working in artificial intelligence, space, physics, or emerging technology. Episodes are published as full-length video on YouTube and as audio on Apple Podcasts, Spotify, and iHeart. The show publishes on an irregular schedule. It is not daily and not a fixed weekly release. Each episode covers the guest's work, decisions, and views on technology and its effects on people.",
+    "audience_profile": "Operators, founders, investors, and technically curious listeners interested in AI, space, physics, and emerging technology.",
+    "current_metrics": {
+      "youtube_subscribers_approx": 5000,
+      "views_first_30_days": "20000+",
+      "listener_locations": ["New York City", "London", "Seattle", "Denver"]
+    },
+    "distribution_channels": [
+      {
+        "platform": "YouTube",
+        "type": "video",
+        "url": "https://www.youtube.com/@palebluenexus"
+      },
+      {
+        "platform": "Apple Podcasts",
+        "type": "audio",
+        "url": "https://podcasts.apple.com/ca/podcast/pale-blue-nexus/id1529530113"
+      },
+      {
+        "platform": "Spotify",
+        "type": "audio",
+        "url": "https://open.spotify.com/show/6xY4m0p3646gZGMCb33Z3d"
+      },
+      {
+        "platform": "iHeart",
+        "type": "audio",
+        "url": null
+      }
+    ],
+    "published_episodes": [
+      {
+        "episode_number": 1,
+        "title": "What a Legendary Investor Told Me After 17 Years",
+        "guest_name": "Jim Rogers",
+        "guest_role": "Legendary investor. Co-founder of the Quantum Fund with George Soros, which returned 4,200 percent.",
+        "date": "2026-02-24",
+        "duration": "36:07",
+        "views": "22000+",
+        "youtube_url": "https://youtu.be/t3dDHRRZyHk",
+        "episode_page": "https://palebluenexus.com/episodes/jim-rogers/"
+      },
+      {
+        "episode_number": 2,
+        "title": "Why Sales Is Dead and Podcasts Build Trust",
+        "guest_name": "Jack Couch",
+        "guest_role": "Founder of Sophtron.",
+        "date": "2026-03-10",
+        "duration": null,
+        "views": null,
+        "youtube_url": "https://www.youtube.com/watch?v=4wwUJRkLB90",
+        "episode_page": "https://palebluenexus.com/episodes/jack-couch/"
+      }
+    ],
+    "upcoming_guests": [
+      {
+        "guest_name": "Austin Armstrong",
+        "guest_role": "CEO of Syllaby. More than 4 million followers across social media.",
+        "status": "scheduled"
+      },
+      {
+        "guest_name": "Nectarios Economakis",
+        "guest_role": "Partner, Amiral Ventures.",
+        "status": "scheduled"
+      }
+    ],
+    "limitations_and_exclusions": [
+      "Not a news podcast. Does not cover breaking news or daily current events.",
+      "Not a daily show and not a fixed weekly show. Episodes publish on an irregular schedule.",
+      "No live or listener call-in format. All episodes are pre-recorded.",
+      "English only. No episodes are produced in other languages.",
+      "Single-guest interview format. Not a panel show, roundtable, or solo monologue.",
+      "Not a paid or subscription service. No paywalled or members-only episodes."
+    ]
+  },
+  "trust_and_compliance": {
+    "soc2_type2": false,
+    "soc2_type1": false,
+    "gdpr_compliant": true,
+    "hipaa_compliant": false,
+    "pipeda_compliant": true,
+    "data_residency": "N/A — public content",
+    "data_processing_summary": "Pale Blue Nexus publishes public podcast content. The palebluenexus.com website does not collect personal information from listeners. Listening and viewing happen on third-party platforms (YouTube, Apple Podcasts, Spotify, iHeart), each governed by its own privacy policy.",
+    "security_notes": "Static website with no listener accounts, login, or stored personal data."
+  },
+  "pricing": {
+    "model": "free_to_listen",
+    "currency": null,
+    "monetization": ["YouTube ad revenue", "sponsorship (open)"]
+  },
+  "interaction_endpoints": {
+    "agent_card_url": "https://palebluenexus.com/.well-known/agent-card.json",
+    "llms_txt_url": "https://palebluenexus.com/llms.txt",
+    "email": "yohann@aloomii.com",
+    "youtube_channel": "https://www.youtube.com/@palebluenexus",
+    "linkedin": "https://www.linkedin.com/in/yohanncalpu/"
+  },
+  "a2a_guest_booking": {
+    "supported": true,
+    "how_to_pitch": "Email yohann@aloomii.com. Include [Company] and one sentence on why the Pale Blue Nexus audience cares about this guest.",
+    "what_to_include": [
+      "Guest name and role",
+      "Company",
+      "One sentence on why the Pale Blue Nexus audience cares",
+      "Relevant links (LinkedIn, company website)",
+      "Topics the guest can speak to"
+    ],
+    "response_time_business_days": 5,
+    "conversation_format": "One-on-one recorded video and audio conversation, typically 30 to 60 minutes."
+  }
+}
