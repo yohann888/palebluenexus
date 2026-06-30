@@ -1,0 +1,40 @@
+name: Update content feed
+
+on:
+  schedule:
+    - cron: "0 */6 * * *" # every 6 hours
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-content
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Refresh feed (YouTube + TikTok) and regenerate sections
+        env:
+          ENSEMBLE_API_KEY: ${{ secrets.ENSEMBLE_API_KEY }}
+        run: node scripts/update-feed.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "pbn-content-bot"
+          git config user.email "bot@palebluenexus.com"
+          git add data/feed.json index.html images/feed share/guest
+          if git diff --cached --quiet; then
+            echo "No content changes."
+          else
+            git commit -m "chore(content): auto-update feed, guests showcase & promo pages"
+            git push
+          fi
