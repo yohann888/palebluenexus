@@ -57,3 +57,11 @@ https://palebluenexus.com/sitemap.xml
 ## Brand
 
 Pale Blue Nexus is a podcast brand under Aloomii.
+
+## Machine-readable
+
+- Agent Card: https://palebluenexus.com/.well-known/agent-card.json — Structured JSON manifest (A2A Agent Card spec) for AI agents. Contains show identity, episodes, upcoming guests, distribution channels, limitations, compliance, and interaction endpoints.
+
+## Contact
+
+- Email: yohann@aloomii.com — Guest pitches, sponsorship inquiries, and general contact.
