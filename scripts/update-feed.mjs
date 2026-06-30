@@ -195,12 +195,11 @@ function cardHtml(item, { rank } = {}) {
         </a>`;
 }
 
-function feedSectionsHtml(items) {
+function latestDropsHtml(items) {
   const withDate = items.filter((i) => i.publishedAt);
   const latest = [...(withDate.length ? withDate : items)]
     .sort((a, b) => new Date(b.publishedAt || 0) - new Date(a.publishedAt || 0))
     .slice(0, LATEST_COUNT);
-  const top = [...items].sort((a, b) => b.score - a.score).slice(0, TOP_COUNT);
 
   return `
   <!-- ════════ LATEST DROPS (auto-generated) ════════ -->
@@ -216,7 +215,13 @@ ${latest.map((i) => cardHtml(i)).join("\n")}
       </div>
     </div>
   </section>
+`;
+}
 
+function topPerformingHtml(items) {
+  const top = [...items].sort((a, b) => b.score - a.score).slice(0, TOP_COUNT);
+
+  return `
   <!-- ════════ TOP PERFORMING (auto-generated) ════════ -->
   <section class="feed-section feed-section-top" id="top-performing">
     <div class="section-container">
@@ -485,7 +490,8 @@ async function main() {
 
   // inject homepage sections
   let html = readFileSync(join(ROOT, "index.html"), "utf8");
-  html = injectBetween(html, "AUTO-FEED", feedSectionsHtml(items));
+  html = injectBetween(html, "AUTO-LATEST", latestDropsHtml(items));
+  html = injectBetween(html, "AUTO-TOP", topPerformingHtml(items));
   html = injectBetween(html, "AUTO-GUESTS", guestsSectionHtml(guests, byGuest));
   writeFileSync(join(ROOT, "index.html"), html);
   log("updated index.html sections");

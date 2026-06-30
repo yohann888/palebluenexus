@@ -865,6 +865,30 @@
     100% { box-shadow: 0 0 0 0 rgba(201, 162, 39, 0); }
   }
 
+  .tier-sponsor-lockup {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .tier-sponsor-logo {
+    display: inline-flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 14px 20px;
+  }
+  .tier-sponsor-logo img {
+    height: 28px;
+    width: auto;
+    display: block;
+  }
+  .tier-sponsor-caption {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--warm-gold);
+  }
   .tier-name {
     font-family: var(--display);
     font-size: 42px;
@@ -945,21 +969,6 @@
     letter-spacing: 0.04em;
     text-decoration: none;
     margin-top: 36px;
-    transition: all 0.3s ease;
-    text-align: center;
-  }
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 18px 32px;
-    border-radius: 999px;
-    font-family: var(--body);
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-decoration: none;
-    margin-top: 32px;
     transition: all 0.3s ease;
     text-align: center;
   }
@@ -1967,7 +1976,13 @@
       <div class="tier-card title-tier">
         <div class="tier-badge">
           <span class="pulse"></span>
-          1 Slot Only
+          1 Slot · Held by Huckabuy
+        </div>
+        <div class="tier-sponsor-lockup">
+          <a href="https://www.huckabuy.com/" target="_blank" rel="noopener noreferrer" class="tier-sponsor-logo" aria-label="Huckabuy, Title Partner">
+            <img src="/images/sponsor-huckabuy.png" alt="Huckabuy" />
+          </a>
+          <span class="tier-sponsor-caption">Current Title Partner</span>
         </div>
         <div class="tier-name">The partner whose name lives inside the show.</div>
         <p class="tier-tagline">Title is one seat per season. The brand that holds it is not a sponsor in the traditional sense. They are the voice that runs alongside the show across every episode, every clip, every newsletter. Their categories of conversation become a recurring series. Their CEO joins the host seat once a year. Their network gets warm introductions from Yohann. The show is unmistakably their company's home in long-form.</p>
