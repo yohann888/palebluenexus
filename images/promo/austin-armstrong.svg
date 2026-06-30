@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+<rect width="1200" height="630" fill="#04060e"/>
+<rect x="40" y="40" width="1120" height="550" rx="16" fill="none" stroke="#D4A84B" stroke-width="1" stroke-opacity="0.35"/>
+<text x="600" y="120" font-family="Inter,Arial,sans-serif" font-size="20" letter-spacing="4" fill="#7EB8DA" text-anchor="middle">PALE BLUE NEXUS</text>
+<text x="600" y="280" font-family="Georgia,serif" font-size="44" font-style="italic" fill="#ffffff" text-anchor="middle"><tspan x="600" dy="0">“The 40-hour work week is kind of</tspan><tspan x="600" dy="58">BS.”</tspan></text>
+<text x="600" y="480" font-family="Montserrat,Arial,sans-serif" font-size="30" fill="#D4A84B" text-anchor="middle">Austin Armstrong</text>
+<text x="600" y="520" font-family="Inter,Arial,sans-serif" font-size="20" fill="#A6D2E6" text-anchor="middle">CEO, Syllaby. Managing Partner, Bullhouse Ventures.</text>
+<text x="600" y="565" font-family="Inter,Arial,sans-serif" font-size="18" fill="#7EB8DA" text-anchor="middle">palebluenexus.com</text>
+</svg>

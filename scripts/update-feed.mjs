@@ -17,7 +17,7 @@
  * Usage: node scripts/update-feed.mjs
  */
 
-import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -138,14 +138,15 @@ async function fetchTikTok(imagesDir) {
     if (!p?.aweme_id) continue;
     const st = p.statistics || {};
     const coverUrl = p?.video?.cover?.url_list?.[0] || p?.video?.origin_cover?.url_list?.[0];
-    let thumb = "";
-    if (coverUrl) {
-      const local = `images/feed/tt-${p.aweme_id}.jpg`;
+    const local = `images/feed/tt-${p.aweme_id}.jpg`;
+    const localPath = join(imagesDir, `tt-${p.aweme_id}.jpg`);
+    let thumb = existsSync(localPath) ? local : "";
+    if (!thumb && coverUrl) {
       try {
         const res = await fetch(coverUrl);
         if (res.ok) {
           const buf = Buffer.from(await res.arrayBuffer());
-          writeFileSync(join(imagesDir, `tt-${p.aweme_id}.jpg`), buf);
+          writeFileSync(localPath, buf);
           thumb = local;
         }
       } catch (e) {
@@ -300,6 +301,7 @@ function promoSvg(g) {
 
 function promoPageHtml(g, item) {
   const ogImg = "data:image/svg+xml," + encodeURIComponent(promoSvg(g));
+  const ogUrl = `https://palebluenexus.com/images/promo/${g.slug}.svg`;
   const isPub = g.status === "published";
   const epUrl = isPub && g.episodeSlug ? `https://palebluenexus.com/episodes/${g.episodeSlug}/` : "https://palebluenexus.com/";
   const watchUrl = item ? item.url : (g.youtubeId ? `https://www.youtube.com/watch?v=${g.youtubeId}` : epUrl);
@@ -320,11 +322,11 @@ function promoPageHtml(g, item) {
   <meta name="description" content="${esc(g.name)}, ${esc(g.role)}. On the Pale Blue Nexus podcast. Share kit and promo card." />
   <meta property="og:title" content="${esc(title)}" />
   <meta property="og:description" content="${esc(g.quote || g.bio)}" />
-  <meta property="og:image" content="${ogImg}" />
+  <meta property="og:image" content="${ogUrl}" />
   <meta property="og:url" content="https://palebluenexus.com/share/guest/${esc(g.slug)}.html" />
   <meta property="og:type" content="article" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="${ogImg}" />
+  <meta name="twitter:image" content="${ogUrl}" />
   <link rel="canonical" href="https://palebluenexus.com/share/guest/${esc(g.slug)}.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -412,7 +414,7 @@ function injectBetween(html, marker, replacement) {
   const re = new RegExp(`${start}[\\s\\S]*?${end}`);
   const block = `${start}${replacement}\n  ${end}`;
   if (!re.test(html)) throw new Error(`marker ${marker} not found in index.html`);
-  return html.replace(re, block);
+  return html.replace(re, () => block);
 }
 
 /* -------------------------------------------------------------------- main */
@@ -424,7 +426,6 @@ async function main() {
   const guests = guestsCfg.guests;
 
   const imagesDir = join(ROOT, "images/feed");
-  rmSync(imagesDir, { recursive: true, force: true });
   mkdirSync(imagesDir, { recursive: true });
   writeFileSync(join(imagesDir, ".gitkeep"), "");
 
@@ -446,11 +447,15 @@ async function main() {
   let items = [...yt, ...tt];
   if (!items.length) throw new Error("no items fetched from any platform; aborting without rewriting");
 
-  // map youtube videos -> guests; compute scores
+  // map youtube + tiktok posts -> guests; compute scores
   const ytIdToGuest = {};
-  for (const g of guests) if (g.youtubeId) ytIdToGuest[g.youtubeId] = g.slug;
+  const ttIdToGuest = {};
+  for (const g of guests) {
+    if (g.youtubeId) ytIdToGuest[g.youtubeId] = g.slug;
+    for (const id of g.tiktokIds || []) ttIdToGuest[String(id)] = g.slug;
+  }
   for (const it of items) {
-    it.guestSlug = it.platform === "youtube" ? ytIdToGuest[it.id] || null : null;
+    it.guestSlug = (it.platform === "youtube" ? ytIdToGuest[it.id] : ttIdToGuest[it.id]) || null;
     it.score = Math.round(performanceScore(it));
   }
   items.sort((a, b) => b.score - a.score);
@@ -479,6 +484,13 @@ async function main() {
   html = injectBetween(html, "AUTO-GUESTS", guestsSectionHtml(guests, byGuest));
   writeFileSync(join(ROOT, "index.html"), html);
   log("updated index.html sections");
+
+  // per-guest promo og:image cards (hosted SVG, fetchable by social crawlers)
+  const promoImgDir = join(ROOT, "images/promo");
+  mkdirSync(promoImgDir, { recursive: true });
+  for (const g of guests) {
+    writeFileSync(join(promoImgDir, `${g.slug}.svg`), promoSvg(g));
+  }
 
   // per-guest promo pages
   const promoDir = join(ROOT, "share/guest");

@@ -20,7 +20,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Refresh feed (YouTube + TikTok) and regenerate sections
         env:
@@ -31,7 +31,7 @@ jobs:
         run: |
           git config user.name "pbn-content-bot"
           git config user.email "bot@palebluenexus.com"
-          git add data/feed.json index.html images/feed share/guest
+          git add data/feed.json index.html images/feed images/promo share/guest
           if git diff --cached --quiet; then
             echo "No content changes."
           else
