@@ -170,6 +170,42 @@ async function fetchTikTok(imagesDir) {
   return items;
 }
 
+// The channel hosts an audio-only re-upload alongside each real video episode
+// (same title, near-identical duration, but almost no views). Keep only the
+// real video: dedupe by normalized title, preferring the higher-viewed (then
+// longer) upload. Full episodes and Shorts survive; audio-only twins drop out.
+function normalizeTitle(t = "") {
+  return String(t)
+    .toLowerCase()
+    .replace(/\s*\|\s*pbn\s*ep\s*\d+\s*$/i, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function durationSeconds(label = "") {
+  const parts = String(label).split(":").map(Number);
+  if (!parts.length || parts.some(Number.isNaN)) return 0;
+  return parts.reduce((acc, n) => acc * 60 + n, 0);
+}
+
+function dedupeYouTube(items) {
+  const byTitle = new Map();
+  for (const it of items) {
+    const key = normalizeTitle(it.title);
+    const existing = byTitle.get(key);
+    if (!existing) {
+      byTitle.set(key, it);
+      continue;
+    }
+    const better =
+      (it.views || 0) !== (existing.views || 0)
+        ? (it.views || 0) > (existing.views || 0)
+        : durationSeconds(it.duration) > durationSeconds(existing.duration);
+    if (better) byTitle.set(key, it);
+  }
+  return [...byTitle.values()];
+}
+
 /* ----------------------------------------------------------- html rendering */
 
 const PLATFORM_LABEL = { youtube: "YouTube", tiktok: "TikTok" };
@@ -443,7 +479,9 @@ async function main() {
   let tt = [];
   try {
     yt = await fetchYouTube();
-    log(`youtube: ${yt.length} videos`);
+    const beforeDedupe = yt.length;
+    yt = dedupeYouTube(yt);
+    log(`youtube: ${yt.length} videos (deduped from ${beforeDedupe}, dropped audio-only re-uploads)`);
   } catch (e) {
     log("youtube fetch failed:", e.message);
   }
