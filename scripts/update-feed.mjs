@@ -284,7 +284,7 @@ function topPerformingItems(items, count) {
 }
 
 function bookTopHtml(items) {
-  const top = topPerformingItems(items, 4);
+  const top = topPerformingItems(items, 10);
   return `
   <!-- ════════ BOOKING PAGE TOP CLIPS (auto-generated) ════════ -->
   <section class="feed-section" id="best-clips">
