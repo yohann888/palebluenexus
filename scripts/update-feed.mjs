@@ -255,7 +255,7 @@ ${latest.map((i) => cardHtml(i)).join("\n")}
 }
 
 function topPerformingHtml(items) {
-  const top = [...items].sort((a, b) => b.score - a.score).slice(0, TOP_COUNT);
+  const top = topPerformingItems(items, TOP_COUNT);
 
   return `
   <!-- ════════ TOP PERFORMING (auto-generated) ════════ -->
@@ -265,6 +265,29 @@ function topPerformingHtml(items) {
         <span class="section-eyebrow">Top Performing</span>
         <h2 class="section-heading">The clips that travelled.</h2>
         <p class="section-subheading">Ranked by reach over time across platforms. The moments resonating most right now.</p>
+      </div>
+      <div class="feed-grid">
+${top.map((i, idx) => cardHtml(i, { rank: idx + 1 })).join("\n")}
+      </div>
+    </div>
+  </section>
+`;
+}
+
+function topPerformingItems(items, count) {
+  return [...items].sort((a, b) => b.score - a.score).slice(0, count);
+}
+
+function bookTopHtml(items) {
+  const top = topPerformingItems(items, 4);
+  return `
+  <!-- ════════ BOOKING PAGE TOP CLIPS (auto-generated) ════════ -->
+  <section class="feed-section" id="best-clips">
+    <div class="section-container">
+      <div class="fade-up" style="text-align:center;max-width:680px;margin:0 auto;">
+        <span class="section-eyebrow">Best Moments</span>
+        <h2 class="section-heading">The clips that travelled.</h2>
+        <p class="section-subheading">A few conversations that found their audience across the feed.</p>
       </div>
       <div class="feed-grid">
 ${top.map((i, idx) => cardHtml(i, { rank: idx + 1 })).join("\n")}
@@ -466,34 +489,39 @@ function injectBetween(html, marker, replacement) {
 /* -------------------------------------------------------------------- main */
 
 async function main() {
-  if (!ED_TOKEN) throw new Error("ENSEMBLE_API_KEY is not set");
-
   const guestsCfg = JSON.parse(readFileSync(join(ROOT, "data/guests.json"), "utf8"));
   const guests = guestsCfg.guests;
+  const feedPath = join(ROOT, "data/feed.json");
+  const existingFeed = JSON.parse(readFileSync(feedPath, "utf8"));
 
   const imagesDir = join(ROOT, "images/feed");
   mkdirSync(imagesDir, { recursive: true });
   writeFileSync(join(imagesDir, ".gitkeep"), "");
 
-  let yt = [];
-  let tt = [];
-  try {
-    yt = await fetchYouTube();
-    const beforeDedupe = yt.length;
-    yt = dedupeYouTube(yt);
-    log(`youtube: ${yt.length} videos (deduped from ${beforeDedupe}, dropped audio-only re-uploads)`);
-  } catch (e) {
-    log("youtube fetch failed:", e.message);
+  let items = existingFeed.items || [];
+  if (ED_TOKEN) {
+    let yt = [];
+    let tt = [];
+    try {
+      yt = await fetchYouTube();
+      const beforeDedupe = yt.length;
+      yt = dedupeYouTube(yt);
+      log(`youtube: ${yt.length} videos (deduped from ${beforeDedupe}, dropped audio-only re-uploads)`);
+    } catch (e) {
+      log("youtube fetch failed:", e.message);
+    }
+    try {
+      tt = await fetchTikTok(imagesDir);
+      log(`tiktok: ${tt.length} clips`);
+    } catch (e) {
+      log("tiktok fetch failed:", e.message);
+    }
+    if (yt.length || tt.length) items = [...yt, ...tt];
+    else log("no fresh items fetched; reusing existing data/feed.json");
+  } else {
+    log("ENSEMBLE_API_KEY is not set; reusing existing data/feed.json");
   }
-  try {
-    tt = await fetchTikTok(imagesDir);
-    log(`tiktok: ${tt.length} clips`);
-  } catch (e) {
-    log("tiktok fetch failed:", e.message);
-  }
-
-  let items = [...yt, ...tt];
-  if (!items.length) throw new Error("no items fetched from any platform; aborting without rewriting");
+  if (!items.length) throw new Error("no feed items available; aborting without rewriting");
 
   // map youtube + tiktok posts -> guests; compute scores
   const ytIdToGuest = {};
@@ -523,8 +551,10 @@ async function main() {
     count: items.length,
     items,
   };
-  writeFileSync(join(ROOT, "data/feed.json"), JSON.stringify(feed, null, 2) + "\n");
-  log(`wrote data/feed.json (${items.length} items)`);
+  if (ED_TOKEN) {
+    writeFileSync(feedPath, JSON.stringify(feed, null, 2) + "\n");
+    log(`wrote data/feed.json (${items.length} items)`);
+  }
 
   // inject homepage sections
   let html = readFileSync(join(ROOT, "index.html"), "utf8");
@@ -533,6 +563,12 @@ async function main() {
   html = injectBetween(html, "AUTO-GUESTS", guestsSectionHtml(guests, byGuest));
   writeFileSync(join(ROOT, "index.html"), html);
   log("updated index.html sections");
+
+  const bookPath = join(ROOT, "book/index.html");
+  let bookHtml = readFileSync(bookPath, "utf8");
+  bookHtml = injectBetween(bookHtml, "AUTO-BOOK-TOP", bookTopHtml(items));
+  writeFileSync(bookPath, bookHtml);
+  log("updated book/index.html clips section");
 
   // per-guest promo og:image cards (hosted SVG, fetchable by social crawlers)
   const promoImgDir = join(ROOT, "images/promo");
