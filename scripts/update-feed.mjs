@@ -278,7 +278,9 @@ ${top.map((i, idx) => cardHtml(i, { rank: idx + 1 })).join("\n")}
 }
 
 function topPerformingItems(items, count) {
-  return [...items].sort((a, b) => b.score - a.score).slice(0, count);
+  return [...items]
+    .sort((a, b) => (b.views || 0) - (a.views || 0) || b.score - a.score)
+    .slice(0, count);
 }
 
 function bookTopHtml(items) {
