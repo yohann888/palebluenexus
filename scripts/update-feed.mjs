@@ -215,11 +215,14 @@ function cardHtml(item, { rank } = {}) {
   const badge = PLATFORM_LABEL[item.platform] || item.platform;
   const rankHtml = rank ? `<span class="feed-rank">#${rank}</span>` : "";
   const thumb = item.thumb || `https://i.ytimg.com/vi/${item.id}/hqdefault.jpg`;
+  const thumbUrl = /^https?:\/\//i.test(thumb) || thumb.startsWith("/")
+    ? thumb
+    : `/${thumb.replace(/^\.?\//, "")}`;
   const portrait = item.platform === "tiktok";
   const thumbInner = portrait
-    ? `<span class="feed-thumb-bg" style="background-image:url('${esc(thumb)}')"></span>
-            <img class="feed-thumb-portrait" src="${esc(thumb)}" alt="${esc(item.title)}" loading="lazy" />`
-    : `<img src="${esc(thumb)}" alt="${esc(item.title)}" loading="lazy" />`;
+    ? `<span class="feed-thumb-bg" style="background-image:url('${esc(thumbUrl)}')"></span>
+            <img class="feed-thumb-portrait" src="${esc(thumbUrl)}" alt="${esc(item.title)}" loading="lazy" />`
+    : `<img src="${esc(thumbUrl)}" alt="${esc(item.title)}" loading="lazy" />`;
   return `        <a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer" class="feed-card fade-up">
           <div class="feed-thumb${portrait ? " feed-thumb-vertical" : ""}">
             ${thumbInner}
@@ -284,7 +287,7 @@ function bookTopHtml(items) {
   <!-- ════════ BOOKING PAGE TOP CLIPS (auto-generated) ════════ -->
   <section class="feed-section" id="best-clips">
     <div class="section-container">
-      <div class="fade-up" style="text-align:center;max-width:680px;margin:0 auto;">
+      <div class="section-head fade-up">
         <span class="section-eyebrow">Best Moments</span>
         <h2 class="section-heading">The clips that travelled.</h2>
         <p class="section-subheading">A few conversations that found their audience across the feed.</p>
