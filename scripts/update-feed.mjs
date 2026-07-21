@@ -30,7 +30,7 @@ const YT_CHANNEL_ID = "UCl4ECGuuMtmVdvtZr7duAIw"; // youtube.com/@palebluenexus
 const TT_USERNAME = "palebluenexus";
 
 const LATEST_COUNT = 6;
-const TOP_COUNT = 6;
+const TOP_COUNT = 10;
 
 const log = (...a) => console.log("[update-feed]", ...a);
 
