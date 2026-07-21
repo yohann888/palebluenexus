@@ -284,7 +284,7 @@ function topPerformingItems(items, count) {
 }
 
 function bookTopHtml(items) {
-  const top = topPerformingItems(items, 4);
+  const top = topPerformingItems(items, 10);
   return `
   <!-- ════════ BOOKING PAGE TOP CLIPS (auto-generated) ════════ -->
   <section class="feed-section" id="best-clips">
@@ -294,7 +294,7 @@ function bookTopHtml(items) {
         <h2 class="section-heading">The clips that travelled.</h2>
         <p class="section-subheading">A few conversations that found their audience across the feed.</p>
       </div>
-      <div class="feed-grid">
+      <div class="book-feed-strip">
 ${top.map((i, idx) => cardHtml(i, { rank: idx + 1 })).join("\n")}
       </div>
     </div>
