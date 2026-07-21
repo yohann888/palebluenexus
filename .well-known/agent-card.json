@@ -32,7 +32,7 @@
     "editorial_frame": "Conversations with operators, founders, and investors working at the frontier of AI, space, physics, and emerging technology. The recurring reference point is Carl Sagan's pale blue dot: everything discussed happens here, on Earth, while the surrounding technology changes."
   },
   "capabilities": {
-    "semantic_description": "Pale Blue Nexus is a long-form interview podcast hosted by Yohann Calpu. Each episode is a pre-recorded one-on-one conversation, typically 30 to 60 minutes, with a single guest who is an operator, founder, or investor working in artificial intelligence, space, physics, or emerging technology. Episodes are published as full-length video on YouTube and as audio on Apple Podcasts, Spotify, and iHeart. The show publishes on an irregular schedule. It is not daily and not a fixed weekly release. Each episode covers the guest's work, decisions, and views on technology and its effects on people.",
+    "semantic_description": "Pale Blue Nexus is a long-form interview podcast hosted by Yohann Calpu. Each episode is a pre-recorded one-on-one conversation, typically 30 to 60 minutes, with a single guest who is an operator, founder, or investor working in artificial intelligence, space, physics, or emerging technology. Episodes are published as full-length video on YouTube, short-form clips on TikTok, and as audio on Apple Podcasts and Spotify. The show publishes on an irregular schedule. It is not daily and not a fixed weekly release. Each episode covers the guest's work, decisions, and views on technology and its effects on people.",
     "audience_profile": "Operators, founders, investors, and technically curious listeners interested in AI, space, physics, and emerging technology.",
     "current_metrics": {
       "youtube_subscribers_approx": 6240,
@@ -56,9 +56,9 @@
         "url": "https://open.spotify.com/show/6xY4m0p3646gZGMCb33Z3d"
       },
       {
-        "platform": "iHeart",
-        "type": "audio",
-        "url": null
+        "platform": "TikTok",
+        "type": "video",
+        "url": "https://www.tiktok.com/@palebluenexus"
       }
     ],
     "published_episodes": [
@@ -113,7 +113,7 @@
     "hipaa_compliant": false,
     "pipeda_compliant": true,
     "data_residency": "N/A — public content",
-    "data_processing_summary": "Pale Blue Nexus publishes public podcast content. The palebluenexus.com website does not collect personal information from listeners. Listening and viewing happen on third-party platforms (YouTube, Apple Podcasts, Spotify, iHeart), each governed by its own privacy policy.",
+    "data_processing_summary": "Pale Blue Nexus publishes public podcast content. The palebluenexus.com website does not collect personal information from listeners. Listening and viewing happen on third-party platforms (YouTube, Apple Podcasts, Spotify, TikTok), each governed by its own privacy policy.",
     "security_notes": "Static website with no listener accounts, login, or stored personal data."
   },
   "pricing": {
