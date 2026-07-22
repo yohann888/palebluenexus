@@ -78,7 +78,9 @@
         radial-gradient(ellipse 65% 60% at 75% 35%, rgba(126,184,218,.16), transparent 70%),
         radial-gradient(ellipse 55% 55% at 20% 75%, rgba(212,168,75,.1), transparent 70%);
     }
-    .hero-inner { max-width: 800px; }
+    .hero-inner { max-width: 1040px; display: grid; grid-template-columns: 1.15fr .85fr; gap: 3.5rem; align-items: center; }
+    .hero-visual { border-radius: 18px; overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: 0 30px 70px rgba(0,0,0,.5); }
+    .hero-visual img { display: block; width: 100%; height: 100%; max-height: 440px; object-fit: cover; object-position: center top; }
     .eyebrow, .section-eyebrow {
       color: var(--accent-warm);
       font-size: .72rem;
@@ -221,7 +223,9 @@
       .nav-links a:not(.nav-cta) { display: none; }
       .section-container { width: min(100% - 2rem, 1120px); }
       section { padding: 4rem 0; }
-      .hero { min-height: 70vh; padding-top: 8rem; }
+      .hero { min-height: auto; padding-top: 8rem; }
+      .hero-inner { grid-template-columns: 1fr; gap: 2.25rem; }
+      .hero-visual { order: -1; }
       h1 { font-size: clamp(3.6rem, 18vw, 6rem); }
       .steps, .social-proof, .footer-content { grid-template-columns: 1fr; }
       .book-linkedin-layout { grid-template-columns: 1fr; gap: 2rem; }
@@ -253,10 +257,22 @@
     <section class="hero">
       <div class="section-container">
         <div class="hero-inner fade-up">
-          <span class="eyebrow">Be a Guest</span>
-          <h1>Come on <em>Pale Blue Nexus.</em></h1>
-          <p class="hero-copy">A long-form conversation for operators, founders, and investors working at the frontier of AI, space, physics, and emerging technology — optimized for clips, the best hooks, and shareability so your strongest moments travel.</p>
+          <div class="hero-text">
+            <span class="eyebrow">Be a Guest</span>
+            <h1>Come on <em>Pale Blue Nexus.</em></h1>
+            <p class="hero-copy">A long-form conversation for operators, founders, and investors working at the frontier of AI, space, physics, and emerging technology, optimized for clips, the best hooks, and shareability so your strongest moments travel.</p>
+          </div>
+          <div class="hero-visual">
+            <img src="/images/yohann-calpu-host.jpg" alt="Yohann Calpu, host of Pale Blue Nexus" />
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="sponsor-strip">
+      <div class="section-container fade-up">
+        <span class="section-eyebrow">Presented with our Title Sponsor</span>
+        <a href="https://huckabuy.com/" target="_blank" rel="noopener"><img src="/images/sponsor-huckabuy.png" alt="Huckabuy" /></a>
       </div>
     </section>
 
@@ -268,7 +284,7 @@
           <div class="proof-item fade-up"><div class="proof-number">Global</div><div class="proof-label">Guests and listeners around the world</div></div>
           <div class="proof-item fade-up"><div class="proof-number">4 channels</div><div class="proof-label">YouTube, Apple, Spotify, TikTok</div></div>
         </div>
-        <p class="section-subheading">Our clips and Shorts are the best-performing format - short moments that travel. <a href="https://www.tiktok.com/@palebluenexus" target="_blank" rel="noopener">Watch them on TikTok</a> or <a href="https://www.youtube.com/@palebluenexus/shorts" target="_blank" rel="noopener">YouTube Shorts</a>.</p>
+        <p class="section-subheading">Our clips and Shorts are the best-performing format - short moments made to spread. <a href="https://www.tiktok.com/@palebluenexus" target="_blank" rel="noopener">Watch them on TikTok</a> or <a href="https://www.youtube.com/@palebluenexus/shorts" target="_blank" rel="noopener">YouTube Shorts</a>.</p>
       </div>
     </section>
 
@@ -404,7 +420,7 @@
         <div class="book-linkedin-layout">
           <div class="book-linkedin-copy fade-up">
             <span class="section-eyebrow">On LinkedIn</span>
-            <h2 class="section-heading">The conversation travels.</h2>
+            <h2 class="section-heading">The conversation spreads.</h2>
             <p class="section-subheading">Guests share their episodes with their networks. Here is DeepInfra CEO Nikola Borisov on his.</p>
             <div class="book-linkedin-stats" aria-label="LinkedIn engagement">
               <span>39 reactions</span>
@@ -460,13 +476,6 @@
           <a class="roster-card fade-up" href="https://www.linkedin.com/in/steve-gullans-biotech-cognitivetraining/" target="_blank" rel="noopener noreferrer"><img src="/images/guest-steve-gullans.png" alt="Steve Gullans" loading="lazy" /><div><strong>Steve Gullans</strong><span>CEO, Thynk Inc.</span></div></a>
           <a class="roster-card fade-up" href="https://www.linkedin.com/in/harenbhakta/" target="_blank" rel="noopener noreferrer"><img src="/images/guest-haren-bhakta.jpg" alt="Haren Bhakta" loading="lazy" /><div><strong>Haren Bhakta</strong><span>Co-founder, Vault AI</span></div></a>
         </div>
-      </div>
-    </section>
-
-    <section class="sponsor-strip">
-      <div class="section-container fade-up">
-        <span class="section-eyebrow">Presented with our Title Sponsor</span>
-        <a href="/partner/"><img src="/images/sponsor-huckabuy.png" alt="Huckabuy" /></a>
       </div>
     </section>
 
