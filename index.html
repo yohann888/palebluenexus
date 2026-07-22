@@ -1295,15 +1295,29 @@
     }
     .sponsors-foot a { color: var(--accent-warm); text-decoration: none; }
     .sponsors-foot a:hover { text-decoration: underline; }
-    .linkedin-proof { padding: 3.5rem 0; }
+    .linkedin-proof {
+      padding: 5rem 0;
+      background: linear-gradient(115deg, rgba(10, 102, 194, 0.16), rgba(10, 102, 194, 0.035) 58%, transparent);
+      border-top: 1px solid rgba(10, 102, 194, 0.55);
+      border-bottom: 1px solid rgba(10, 102, 194, 0.3);
+      box-shadow: inset 0 1px 34px rgba(10, 102, 194, 0.08);
+    }
     .linkedin-layout {
       display: grid; grid-template-columns: 1.05fr 0.95fr;
       gap: clamp(1.5rem, 4vw, 3rem); align-items: center;
-      max-width: 980px; margin: 0 auto;
+      max-width: 1120px; margin: 0 auto;
     }
     .linkedin-copy { text-align: left; }
     .linkedin-copy .section-heading,
     .linkedin-copy .section-subheading { text-align: left; }
+    .linkedin-stats {
+      display: flex; flex-wrap: wrap; align-items: center; gap: .45rem;
+      margin-top: 1.25rem; color: rgba(255, 255, 255, 0.72);
+      font-family: 'Inter', sans-serif; font-size: .78rem; letter-spacing: .02em;
+    }
+    .linkedin-stats span { white-space: nowrap; }
+    .linkedin-stats .linkedin-stat-separator { color: rgba(10, 102, 194, 0.95); }
+    .linkedin-cta-row { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
     .linkedin-cta-btn {
       display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem;
       padding: 0.8rem 1.4rem; border-radius: 999px; text-decoration: none;
@@ -1315,19 +1329,26 @@
       transform: translateY(-2px); box-shadow: 0 12px 30px rgba(10, 102, 194, 0.4);
     }
     .linkedin-cta-btn svg { width: 16px; height: 16px; fill: currentColor; }
+    .linkedin-cta-btn-secondary {
+      color: #dbeafe; background: rgba(10, 102, 194, 0.12);
+      border: 1px solid rgba(10, 102, 194, 0.65);
+    }
+    .linkedin-cta-btn-secondary:hover, .linkedin-cta-btn-secondary:focus-visible {
+      background: rgba(10, 102, 194, 0.22);
+    }
     .linkedin-card {
-      display: block; margin: 0; max-width: 400px; justify-self: center;
+      display: block; margin: 0; max-width: 520px; justify-self: center;
       border-radius: 16px; overflow: hidden; text-decoration: none;
-      background: #ffffff; border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+      background: #ffffff; border: 1px solid rgba(10, 102, 194, 0.5);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 34px rgba(10, 102, 194, 0.16);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .linkedin-card:hover, .linkedin-card:focus-visible {
-      transform: translateY(-4px); box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+      transform: translateY(-4px); box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55), 0 0 42px rgba(10, 102, 194, 0.24);
     }
     .linkedin-shot {
       display: block; width: 100%; height: auto;
-      max-height: 440px; object-fit: cover; object-position: top;
+      max-height: 620px; object-fit: cover; object-position: top;
     }
     @media (max-width: 768px) {
       .linkedin-layout { grid-template-columns: 1fr; gap: 2rem; }
@@ -1335,6 +1356,7 @@
       .linkedin-copy .section-heading,
       .linkedin-copy .section-subheading { text-align: center; }
       .linkedin-card { margin: 0 auto; }
+      .linkedin-cta-row { justify-content: center; }
     }
     .episode-quote {
       font-family: 'Cormorant Garamond', Georgia, serif;
@@ -1778,10 +1800,22 @@
           <span class="section-eyebrow">On LinkedIn</span>
           <h2 class="section-heading">The conversation travels.</h2>
           <p class="section-subheading">Guests share their episodes with their networks. Here is DeepInfra CEO Nikola Borisov on his.</p>
-          <a class="linkedin-cta-btn" href="https://www.linkedin.com/posts/nikola-borisov_pale-blue-nexus-share-7460478714129125376-tFjn/" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            View post on LinkedIn &rarr;
-          </a>
+          <div class="linkedin-stats" aria-label="LinkedIn engagement">
+            <span>39 reactions</span>
+            <span class="linkedin-stat-separator" aria-hidden="true">·</span>
+            <span>2 comments</span>
+            <span class="linkedin-stat-separator" aria-hidden="true">·</span>
+            <span>2 reposts</span>
+          </div>
+          <div class="linkedin-cta-row">
+            <a class="linkedin-cta-btn" href="https://www.linkedin.com/posts/nikola-borisov_pale-blue-nexus-share-7460478714129125376-tFjn/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              View post on LinkedIn &rarr;
+            </a>
+            <a class="linkedin-cta-btn linkedin-cta-btn-secondary" href="https://www.linkedin.com/in/yohanncalpu/" target="_blank" rel="noopener noreferrer">
+              Follow on LinkedIn &rarr;
+            </a>
+          </div>
         </div>
         <a class="linkedin-card fade-up" href="https://www.linkedin.com/posts/nikola-borisov_pale-blue-nexus-share-7460478714129125376-tFjn/" target="_blank" rel="noopener noreferrer" aria-label="View Nikola Borisov's LinkedIn post about Pale Blue Nexus">
           <img class="linkedin-shot" src="images/linkedin-nikola-borisov.png" alt="Nikola Borisov's LinkedIn post about his Pale Blue Nexus episode" loading="lazy" />
