@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-25T12:52:22.466Z",
+  "generatedAt": "2026-07-25T18:43:38.739Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -19,7 +19,7 @@
       "likes": 0,
       "comments": 0,
       "guestSlug": "jim-rogers",
-      "score": 192
+      "score": 191
     },
     {
       "id": "7665190322183425287",
@@ -34,7 +34,7 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 113
+      "score": 105
     },
     {
       "id": "7663238759256788225",
@@ -49,7 +49,7 @@
       "likes": 13,
       "comments": 0,
       "guestSlug": null,
-      "score": 80
+      "score": 77
     },
     {
       "id": "7662921800166247697",
@@ -64,7 +64,7 @@
       "likes": 5,
       "comments": 0,
       "guestSlug": null,
-      "score": 64
+      "score": 62
     },
     {
       "id": "7662213620008373512",
@@ -79,7 +79,7 @@
       "likes": 20,
       "comments": 3,
       "guestSlug": null,
-      "score": 61
+      "score": 60
     },
     {
       "id": "7662254278060297473",
@@ -94,7 +94,7 @@
       "likes": 0,
       "comments": 0,
       "guestSlug": null,
-      "score": 54
+      "score": 52
     },
     {
       "id": "7661101466526043410",
@@ -109,7 +109,7 @@
       "likes": 23,
       "comments": 0,
       "guestSlug": null,
-      "score": 50
+      "score": 49
     },
     {
       "id": "DS2-iheW6pI",
@@ -140,21 +140,6 @@
       "comments": 0,
       "guestSlug": null,
       "score": 18
-    },
-    {
-      "id": "QRipe0JQYmk",
-      "platform": "youtube",
-      "type": "video",
-      "title": "75% of VC Dollars Go to 3 Cities. She Left for Minnesota. | Mary Grove, Bread & Butter Ventures",
-      "url": "https://www.youtube.com/watch?v=QRipe0JQYmk",
-      "thumb": "https://i.ytimg.com/vi/QRipe0JQYmk/hqdefault.jpg",
-      "duration": "37:46",
-      "publishedAt": "2026-07-25T03:52:19.361Z",
-      "views": 4,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 11
     },
     {
       "id": "7662223526576835847",
@@ -215,6 +200,21 @@
       "comments": 0,
       "guestSlug": "austin-armstrong",
       "score": 8
+    },
+    {
+      "id": "QRipe0JQYmk",
+      "platform": "youtube",
+      "type": "video",
+      "title": "75% of VC Dollars Go to 3 Cities. She Left for Minnesota. | Mary Grove, Bread & Butter Ventures",
+      "url": "https://www.youtube.com/watch?v=QRipe0JQYmk",
+      "thumb": "https://i.ytimg.com/vi/QRipe0JQYmk/hqdefault.jpg",
+      "duration": "37:46",
+      "publishedAt": "2026-07-25T03:52:19.361Z",
+      "views": 4,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 6
     },
     {
       "id": "UC11q4mW01w",
