@@ -302,16 +302,20 @@ ${top.map((i, idx) => cardHtml(i, { rank: idx + 1 })).join("\n")}
 `;
 }
 
-function guestCardHtml(g, item) {
+function guestCardHtml(g, item, { isLatest = false } = {}) {
   const isPub = g.status === "published";
   const href = isPub && g.episodeSlug ? `/episodes/${g.episodeSlug}/` : (g.linkedin || g.website || "#");
   const ext = !(isPub && g.episodeSlug);
   const views = item && item.views ? `&middot; ${fmtViews(item.views)} views` : "";
   const tag = isPub ? `${esc(g.episode)} ${views}` : esc(g.episode);
-  return `        <a href="${esc(href)}"${ext ? ' target="_blank" rel="noopener noreferrer"' : ""} class="guest-show-card fade-up">
+  const statusClass = isPub ? "guest-show-status-published" : "guest-show-status-upcoming";
+  const statusLabel = isPub ? "Published" : "Coming soon";
+  const tagHtml = isPub ? `<span class="guest-show-tag">${tag}</span>` : "";
+  const latest = isLatest ? '<span class="guest-show-latest">Latest</span>' : "";
+  return `        <a href="${esc(href)}"${ext ? ' target="_blank" rel="noopener noreferrer"' : ""} class="guest-show-card${isLatest ? " guest-show-card-latest" : ""} fade-up">
           <div class="guest-show-photo"><img src="${esc(g.photo)}" alt="${esc(g.name)}" loading="lazy" /></div>
           <div class="guest-show-body">
-            <span class="guest-show-tag">${tag}</span>
+            <div class="guest-show-status-row">${tagHtml}<span class="guest-show-status ${statusClass}"><span class="guest-show-status-dot"></span>${statusLabel}</span>${latest}</div>
             <p class="guest-show-name">${esc(g.name)}</p>
             <p class="guest-show-role">${esc(g.role)}</p>
             ${g.quote ? `<p class="guest-show-quote">&ldquo;${esc(g.quote)}&rdquo;</p>` : ""}
@@ -324,6 +328,15 @@ function guestsSectionHtml(guests, byGuest) {
   const published = guests.filter((g) => g.status === "published");
   const upcoming = guests.filter((g) => g.status !== "published");
   const ordered = [...published, ...upcoming];
+  const latestPublished = published.reduce((latest, guest) => {
+    if (!latest) return guest;
+    const episodeNumber = Number((guest.episode || "").match(/\d+/)?.[0] || 0);
+    const latestEpisodeNumber = Number((latest.episode || "").match(/\d+/)?.[0] || 0);
+    if (episodeNumber !== latestEpisodeNumber) {
+      return episodeNumber > latestEpisodeNumber ? guest : latest;
+    }
+    return (guest.date || "") > (latest.date || "") ? guest : latest;
+  }, null);
   return `
   <!-- ════════ GUESTS SHOWCASE (auto-generated) ════════ -->
   <section class="guests-showcase" id="guests">
@@ -334,7 +347,7 @@ function guestsSectionHtml(guests, byGuest) {
         <p class="section-subheading">Founders, investors, and operators at the frontier of AI, space, and emerging tech. Each guest has a ready-to-share promo kit.</p>
       </div>
       <div class="guests-show-grid">
-${ordered.map((g) => guestCardHtml(g, byGuest[g.slug])).join("\n")}
+${ordered.map((g) => guestCardHtml(g, byGuest[g.slug], { isLatest: g.slug === latestPublished?.slug })).join("\n")}
       </div>
     </div>
   </section>

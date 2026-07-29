@@ -1273,18 +1273,40 @@
     .guests-showcase { padding: 5rem 0; }
     .guests-show-grid {
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem;
+      max-height: 34rem; overflow-y: auto; padding-right: .55rem;
+      scrollbar-width: thin; scrollbar-color: var(--border-accent) transparent;
     }
+    .guests-show-grid::-webkit-scrollbar { width: 6px; }
+    .guests-show-grid::-webkit-scrollbar-track { background: transparent; }
+    .guests-show-grid::-webkit-scrollbar-thumb { background: var(--border-accent); border-radius: 999px; }
     @media (max-width: 760px) { .guests-show-grid { grid-template-columns: 1fr; } }
     .guest-show-card {
       display: flex; gap: 1.1rem; align-items: stretch; text-decoration: none; color: inherit;
       background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 14px;
       padding: 1.1rem; transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
     }
+    .guest-show-card-latest { box-shadow: inset 2px 0 0 var(--accent-warm, #D4A84B); }
     .guest-show-card:hover { background: var(--bg-card-hover); border-color: var(--border-accent); transform: translateY(-3px); }
     .guest-show-photo { flex: 0 0 84px; }
     .guest-show-photo img { width: 84px; height: 84px; border-radius: 12px; object-fit: cover; border: 1px solid var(--border-accent); }
     .guest-show-body { display: flex; flex-direction: column; }
+    .guest-show-status-row { display: flex; align-items: center; flex-wrap: wrap; gap: .45rem; }
     .guest-show-tag { font-family: 'Inter', sans-serif; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-warm, #D4A84B); }
+    .guest-show-status, .guest-show-latest {
+      display: inline-flex; align-items: center; gap: .32rem; width: fit-content;
+      font-family: 'Inter', sans-serif; font-size: .62rem; font-weight: 600;
+      letter-spacing: .06em; text-transform: uppercase; border: 1px solid;
+      border-radius: 999px; padding: .2rem .48rem;
+    }
+    .guest-show-status-published { color: #8bd8a5; border-color: rgba(139, 216, 165, .35); }
+    .guest-show-status-upcoming { color: var(--accent-warm, #D4A84B); border-color: rgba(212, 168, 75, .4); }
+    .guest-show-status-dot { width: .38rem; height: .38rem; border-radius: 50%; background: currentColor; flex: 0 0 auto; }
+    .guest-show-status-upcoming .guest-show-status-dot { animation: guest-status-pulse 1.8s ease-in-out infinite; }
+    .guest-show-latest { color: var(--accent-blue); border-color: rgba(126, 184, 218, .35); }
+    @keyframes guest-status-pulse {
+      0%, 100% { opacity: .58; transform: scale(.9); }
+      50% { opacity: 1; transform: scale(1.2); }
+    }
     .guest-show-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.35rem; font-weight: 600; margin-top: 0.15rem; }
     .guest-show-role { font-family: 'Inter', sans-serif; font-size: 0.82rem; color: var(--accent-blue); margin-top: 0.1rem; }
     .guest-show-quote { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 0.98rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.35; }
@@ -2041,7 +2063,7 @@
         <a href="/episodes/jim-rogers/" class="guest-show-card fade-up">
           <div class="guest-show-photo"><img src="images/guest-jim-rogers.jpg" alt="Jim Rogers" loading="lazy" /></div>
           <div class="guest-show-body">
-            <span class="guest-show-tag">Episode 01 &middot; 23K views</span>
+            <div class="guest-show-status-row"><span class="guest-show-tag">Episode 01 &middot; 23K views</span><span class="guest-show-status guest-show-status-published"><span class="guest-show-status-dot"></span>Published</span></div>
             <p class="guest-show-name">Jim Rogers</p>
             <p class="guest-show-role">Co-founder, Quantum Fund. Legendary investor.</p>
             <p class="guest-show-quote">&ldquo;The most important thing to learn is what you love.&rdquo;</p>
@@ -2051,7 +2073,7 @@
         <a href="/episodes/jack-couch/" class="guest-show-card fade-up">
           <div class="guest-show-photo"><img src="images/guest-jack-couch.jpg" alt="Jack Couch" loading="lazy" /></div>
           <div class="guest-show-body">
-            <span class="guest-show-tag">Episode 02 &middot; 139 views</span>
+            <div class="guest-show-status-row"><span class="guest-show-tag">Episode 02 &middot; 139 views</span><span class="guest-show-status guest-show-status-published"><span class="guest-show-status-dot"></span>Published</span></div>
             <p class="guest-show-name">Jack Couch</p>
             <p class="guest-show-role">Founder, Sophtron. Former Global VP of Payments, Xero.</p>
             <p class="guest-show-quote">&ldquo;Sales is dead. Podcasts are how trust gets built now.&rdquo;</p>
@@ -2061,17 +2083,17 @@
         <a href="/episodes/austin-armstrong/" class="guest-show-card fade-up">
           <div class="guest-show-photo"><img src="images/guest-austin-armstrong.jpg" alt="Austin Armstrong" loading="lazy" /></div>
           <div class="guest-show-body">
-            <span class="guest-show-tag">Episode 03 &middot; 473 views</span>
+            <div class="guest-show-status-row"><span class="guest-show-tag">Episode 03 &middot; 473 views</span><span class="guest-show-status guest-show-status-published"><span class="guest-show-status-dot"></span>Published</span></div>
             <p class="guest-show-name">Austin Armstrong</p>
             <p class="guest-show-role">CEO, Syllaby. Managing Partner, Bullhouse Ventures.</p>
             <p class="guest-show-quote">&ldquo;The 40-hour work week is kind of BS.&rdquo;</p>
             <span class="guest-show-promo">Promo kit &rarr;</span>
           </div>
         </a>
-        <a href="/episodes/nikola-borisov/" class="guest-show-card fade-up">
+        <a href="/episodes/nikola-borisov/" class="guest-show-card guest-show-card-latest fade-up">
           <div class="guest-show-photo"><img src="images/guest-nikola-borisov.jpg" alt="Nikola Borisov" loading="lazy" /></div>
           <div class="guest-show-body">
-            <span class="guest-show-tag">Episode 04 &middot; 2.6K views</span>
+            <div class="guest-show-status-row"><span class="guest-show-tag">Episode 04 &middot; 2.6K views</span><span class="guest-show-status guest-show-status-published"><span class="guest-show-status-dot"></span>Published</span><span class="guest-show-latest">Latest</span></div>
             <p class="guest-show-name">Nikola Borisov</p>
             <p class="guest-show-role">Co-founder &amp; CEO, DeepInfra</p>
             <p class="guest-show-quote">&ldquo;Inference infrastructure is where the real compute war is fought.&rdquo;</p>
@@ -2081,7 +2103,7 @@
         <a href="https://www.linkedin.com/in/nectareco/" target="_blank" rel="noopener noreferrer" class="guest-show-card fade-up">
           <div class="guest-show-photo"><img src="images/guest-nectarios-economakis.jpg" alt="Nectarios Economakis" loading="lazy" /></div>
           <div class="guest-show-body">
-            <span class="guest-show-tag">Coming Soon</span>
+            <div class="guest-show-status-row"><span class="guest-show-status guest-show-status-upcoming"><span class="guest-show-status-dot"></span>Coming soon</span></div>
             <p class="guest-show-name">Nectarios Economakis</p>
             <p class="guest-show-role">Partner, Amiral Ventures. Co-founder, The PNR.</p>
             
@@ -2091,7 +2113,7 @@
         <a href="https://www.linkedin.com/in/elizablank/" target="_blank" rel="noopener noreferrer" class="guest-show-card fade-up">
           <div class="guest-show-photo"><img src="images/guest-eliza-blank.jpg" alt="Eliza Blank" loading="lazy" /></div>
           <div class="guest-show-body">
-            <span class="guest-show-tag">Coming Soon</span>
+            <div class="guest-show-status-row"><span class="guest-show-status guest-show-status-upcoming"><span class="guest-show-status-dot"></span>Coming soon</span></div>
             <p class="guest-show-name">Eliza Blank</p>
             <p class="guest-show-role">CEO, The Farmlink Project. Founder, The Sill.</p>
             
@@ -2101,7 +2123,7 @@
         <a href="https://www.linkedin.com/in/steve-gullans-biotech-cognitivetraining/" target="_blank" rel="noopener noreferrer" class="guest-show-card fade-up">
           <div class="guest-show-photo"><img src="images/guest-steve-gullans.png" alt="Steve Gullans, PhD" loading="lazy" /></div>
           <div class="guest-show-body">
-            <span class="guest-show-tag">Coming Soon</span>
+            <div class="guest-show-status-row"><span class="guest-show-status guest-show-status-upcoming"><span class="guest-show-status-dot"></span>Coming soon</span></div>
             <p class="guest-show-name">Steve Gullans, PhD</p>
             <p class="guest-show-role">CEO, Thynk Inc. Co-founder, Excel Venture Management.</p>
             
@@ -2111,7 +2133,7 @@
         <a href="https://www.linkedin.com/in/harenbhakta/" target="_blank" rel="noopener noreferrer" class="guest-show-card fade-up">
           <div class="guest-show-photo"><img src="images/guest-haren-bhakta.jpg" alt="Haren Bhakta, CFA" loading="lazy" /></div>
           <div class="guest-show-body">
-            <span class="guest-show-tag">Coming Soon</span>
+            <div class="guest-show-status-row"><span class="guest-show-status guest-show-status-upcoming"><span class="guest-show-status-dot"></span>Coming soon</span></div>
             <p class="guest-show-name">Haren Bhakta, CFA</p>
             <p class="guest-show-role">Co-founder, Vault AI. Former Head of Product, Dapper Labs.</p>
             
