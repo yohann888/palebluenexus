@@ -250,15 +250,17 @@ function guestPlaceholderSvg(name) {
 
 function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
   const knownIds = new Set(guests.map((guest) => guest.youtubeId).filter(Boolean));
+  const knownSlugs = new Set(guests.map((guest) => guest.slug).filter(Boolean));
   const drafts = [];
   for (const item of yt) {
     if (item.type !== "video" || knownIds.has(item.id)) continue;
     const name = parseDraftGuestName(item.title);
     const titleSlug = slugify(item.title).split("-").slice(0, 8).join("-");
     const baseSlug = name ? slugify(name) : `episode-${titleSlug || item.id}`;
-    const slug = guests.some((guest) => guest.slug === baseSlug)
+    const slug = knownSlugs.has(baseSlug)
       ? `${baseSlug}-${String(item.id).slice(-6).toLowerCase()}`
       : baseSlug;
+    knownSlugs.add(slug);
     const draft = {
       slug,
       name,
