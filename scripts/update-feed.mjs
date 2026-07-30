@@ -206,6 +206,91 @@ function dedupeYouTube(items) {
   return [...byTitle.values()];
 }
 
+function slugify(value) {
+  return String(value)
+    .toLowerCase()
+    .replace(/['’]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 64);
+}
+
+function looksLikePersonName(value) {
+  const words = String(value).trim().split(/\s+/).filter(Boolean);
+  return words.length >= 2 && words.length <= 5 &&
+    words.slice(0, 2).every((word) => /^[A-Z][A-Za-z.'’-]*$/.test(word));
+}
+
+function parseDraftGuestName(title) {
+  const pipeParts = String(title).split(/\s*\|\s*/);
+  const pipeCandidate = pipeParts.length > 1
+    ? pipeParts.at(-1).replace(/\s*,.*$/, "").replace(/\s*PBN\s*EP\s*\d+.*$/i, "").trim()
+    : "";
+  if (looksLikePersonName(pipeCandidate)) return pipeCandidate;
+
+  const withMatch = String(title).match(/\bwith\s+([A-Z][A-Za-z.'’-]*(?:\s+[A-Z][A-Za-z.'’-]*){1,4})/);
+  const withCandidate = withMatch ? withMatch[1].replace(/\s*,.*$/, "").trim() : "";
+  return looksLikePersonName(withCandidate) ? withCandidate : "";
+}
+
+function guestPlaceholderSvg(name) {
+  const initials = String(name).trim().split(/\s+/).filter(Boolean)
+    .map((word) => word[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase() || "PBN";
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<rect width="400" height="400" fill="#04060e"/>
+<circle cx="200" cy="200" r="150" fill="none" stroke="#D4A84B" stroke-width="3" stroke-opacity=".75"/>
+<text x="200" y="220" fill="#D4A84B" font-family="Inter,Arial,sans-serif" font-size="82" letter-spacing="6" text-anchor="middle">${esc(initials)}</text>
+<text x="200" y="275" fill="#7EB8DA" font-family="Inter,Arial,sans-serif" font-size="16" letter-spacing="4" text-anchor="middle">PALE BLUE NEXUS</text>
+</svg>
+`;
+}
+
+function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
+  const knownIds = new Set(guests.map((guest) => guest.youtubeId).filter(Boolean));
+  const drafts = [];
+  for (const item of yt) {
+    if (item.type !== "video" || knownIds.has(item.id)) continue;
+    const name = parseDraftGuestName(item.title);
+    const titleSlug = slugify(item.title).split("-").slice(0, 8).join("-");
+    const baseSlug = name ? slugify(name) : `episode-${titleSlug || item.id}`;
+    const slug = guests.some((guest) => guest.slug === baseSlug)
+      ? `${baseSlug}-${String(item.id).slice(-6).toLowerCase()}`
+      : baseSlug;
+    const draft = {
+      slug,
+      name,
+      role: "",
+      photo: `images/guest-${slug}.svg`,
+      linkedin: "",
+      website: "",
+      status: "upcoming",
+      episode: "Coming Soon",
+      episodeSlug: "",
+      youtubeId: item.id,
+      tiktokIds: [],
+      quote: "",
+      bio: "",
+      date: item.publishedAt ? item.publishedAt.slice(0, 10) : "",
+      needsReview: true,
+      needsPhoto: true,
+    };
+    drafts.push(draft);
+    knownIds.add(item.id);
+  }
+  if (!drafts.length) return [];
+  const imagesDir = join(ROOT, "images");
+  for (const draft of drafts) {
+    writeFileSync(join(imagesDir, `guest-${draft.slug}.svg`), guestPlaceholderSvg(draft.name));
+    guests.push(draft);
+  }
+  writeFileSync(join(ROOT, "data/guests.json"), JSON.stringify(guestsCfg, null, 2) + "\n");
+  log(`added episode drafts: ${drafts.map((draft) => draft.slug).join(", ")}`);
+  return drafts;
+}
+
 /* ----------------------------------------------------------- html rendering */
 
 const PLATFORM_LABEL = { youtube: "YouTube", tiktok: "TikTok" };
@@ -304,7 +389,9 @@ ${top.map((i, idx) => cardHtml(i, { rank: idx + 1 })).join("\n")}
 
 function guestCardHtml(g, item, { isLatest = false } = {}) {
   const isPub = g.status === "published";
-  const href = isPub && g.episodeSlug ? `/episodes/${g.episodeSlug}/` : (g.linkedin || g.website || "#");
+  const href = isPub && g.episodeSlug
+    ? `/episodes/${g.episodeSlug}/`
+    : (g.linkedin || g.website || (g.youtubeId ? `https://www.youtube.com/watch?v=${g.youtubeId}` : "#"));
   const ext = !(isPub && g.episodeSlug);
   const views = item && item.views ? `&middot; ${fmtViews(item.views)} views` : "";
   const tag = isPub ? `${esc(g.episode)} ${views}` : esc(g.episode);
@@ -312,14 +399,13 @@ function guestCardHtml(g, item, { isLatest = false } = {}) {
   const statusLabel = isPub ? "Published" : "Coming soon";
   const tagHtml = isPub ? `<span class="guest-show-tag">${tag}</span>` : "";
   const latest = isLatest ? '<span class="guest-show-latest">Latest</span>' : "";
+  const quoteHtml = g.quote ? `<p class="guest-show-quote">&ldquo;${esc(g.quote)}&rdquo;</p>` : "";
   return `        <a href="${esc(href)}"${ext ? ' target="_blank" rel="noopener noreferrer"' : ""} class="guest-show-card${isLatest ? " guest-show-card-latest" : ""} fade-up">
           <div class="guest-show-photo"><img src="${esc(g.photo)}" alt="${esc(g.name)}" loading="lazy" /></div>
           <div class="guest-show-body">
             <div class="guest-show-status-row">${tagHtml}<span class="guest-show-status ${statusClass}"><span class="guest-show-status-dot"></span>${statusLabel}</span>${latest}</div>
             <p class="guest-show-name">${esc(g.name)}</p>
-            <p class="guest-show-role">${esc(g.role)}</p>
-            ${g.quote ? `<p class="guest-show-quote">&ldquo;${esc(g.quote)}&rdquo;</p>` : ""}
-            <span class="guest-show-promo">Promo kit &rarr;</span>
+            <p class="guest-show-role">${esc(g.role)}</p>${quoteHtml}<span class="guest-show-promo">Promo kit &rarr;</span>
           </div>
         </a>`;
 }
@@ -525,6 +611,11 @@ async function main() {
       const beforeDedupe = yt.length;
       yt = dedupeYouTube(yt);
       log(`youtube: ${yt.length} videos (deduped from ${beforeDedupe}, dropped audio-only re-uploads)`);
+      try {
+        syncUnrecognizedEpisodes(yt, guests, guestsCfg);
+      } catch (e) {
+        log("warning: episode draft sync failed:", e.message);
+      }
     } catch (e) {
       log("youtube fetch failed:", e.message);
     }
