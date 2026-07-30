@@ -285,7 +285,6 @@ function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
   if (!drafts.length) return [];
   const imagesDir = join(ROOT, "images");
   for (const draft of drafts) {
-    writeFileSync(join(imagesDir, `guest-${draft.slug}.svg`), guestPlaceholderSvg(draft.name));
     guests.push(draft);
   }
   writeFileSync(join(ROOT, "data/guests.json"), JSON.stringify(guestsCfg, null, 2) + "\n");
@@ -412,9 +411,17 @@ function guestCardHtml(g, item, { isLatest = false } = {}) {
         </a>`;
 }
 
+// Auto-detected episode drafts (needsReview / needsPhoto) and any entry without
+// a real name are held back from all public output until a human supplies a real
+// name and photo, so a card is never rendered against a non-existent image.
+function isPublicGuest(g) {
+  return !g.needsReview && !g.needsPhoto && !!(g.name && g.name.trim());
+}
+
 function guestsSectionHtml(guests, byGuest) {
-  const published = guests.filter((g) => g.status === "published");
-  const upcoming = guests.filter((g) => g.status !== "published");
+  const renderable = guests.filter(isPublicGuest);
+  const published = renderable.filter((g) => g.status === "published");
+  const upcoming = renderable.filter((g) => g.status !== "published");
   const ordered = [...published, ...upcoming];
   const latestPublished = published.reduce((latest, guest) => {
     if (!latest) return guest;
@@ -684,17 +691,18 @@ async function main() {
   // per-guest promo og:image cards (hosted SVG, fetchable by social crawlers)
   const promoImgDir = join(ROOT, "images/promo");
   mkdirSync(promoImgDir, { recursive: true });
-  for (const g of guests) {
+  for (const g of guests.filter(isPublicGuest)) {
     writeFileSync(join(promoImgDir, `${g.slug}.svg`), promoSvg(g));
   }
 
   // per-guest promo pages
   const promoDir = join(ROOT, "share/guest");
   mkdirSync(promoDir, { recursive: true });
-  for (const g of guests) {
+  const publicGuests = guests.filter(isPublicGuest);
+  for (const g of publicGuests) {
     writeFileSync(join(promoDir, `${g.slug}.html`), promoPageHtml(g, byGuest[g.slug]));
   }
-  log(`wrote ${guests.length} promo pages to share/guest/`);
+  log(`wrote ${publicGuests.length} promo pages to share/guest/`);
 }
 
 main().catch((e) => {
