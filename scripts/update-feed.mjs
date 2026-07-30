@@ -411,10 +411,11 @@ function guestCardHtml(g, item, { isLatest = false } = {}) {
         </a>`;
 }
 
-// Auto-detected episode drafts (needsReview) and any entry without a real name
-// are held back from all public output until a human curates them.
+// Auto-detected episode drafts (needsReview / needsPhoto) and any entry without
+// a real name are held back from all public output until a human supplies a real
+// name and photo, so a card is never rendered against a non-existent image.
 function isPublicGuest(g) {
-  return !g.needsReview && !!(g.name && g.name.trim());
+  return !g.needsReview && !g.needsPhoto && !!(g.name && g.name.trim());
 }
 
 function guestsSectionHtml(guests, byGuest) {
