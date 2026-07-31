@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T13:22:27.134Z",
+  "generatedAt": "2026-07-31T19:00:47.725Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -21,21 +21,6 @@
   },
   "items": [
     {
-      "id": "7668489128450854145",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "He talks to a client. The proposal writes itself. The contract preps itself. The tasks send themselves. He just approves. And he says you can build this TODAY.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668489128450854145?_r=1&u_code=0&region=US&mid=7668489212031519509&preview_pb=0&sharer_language=en&_d=f01b7i5d5l0hbd&share_item_id=7668489128450854145&source=h5_t",
-      "thumb": "images/feed/tt-7668489128450854145.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-31T00:54:25.000Z",
-      "views": 141,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 271
-    },
-    {
       "id": "7668120385975487761",
       "platform": "tiktok",
       "type": "clip",
@@ -48,22 +33,7 @@
       "likes": 5,
       "comments": 1,
       "guestSlug": null,
-      "score": 239
-    },
-    {
-      "id": "7668393482377104661",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "He says only 1 in 10 founders raise ANYTHING. And if your whole plan is investors, you've already lost. The brutal math nobody shows you on TV.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668393482377104661?_r=1&u_code=0&region=US&mid=7668393523451857681&preview_pb=0&sharer_language=en&_d=f01b7i5d5l0hbd&share_item_id=7668393482377104661&source=h5_t",
-      "thumb": "images/feed/tt-7668393482377104661.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-30T18:43:05.000Z",
-      "views": 166,
-      "likes": 1,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 215
+      "score": 207
     },
     {
       "id": "t3dDHRRZyHk",
@@ -78,7 +48,37 @@
       "likes": 0,
       "comments": 0,
       "guestSlug": "jim-rogers",
-      "score": 192
+      "score": 191
+    },
+    {
+      "id": "7668489128450854145",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "He talks to a client. The proposal writes itself. The contract preps itself. The tasks send themselves. He just approves. And he says you can build this TODAY.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668489128450854145?_r=1&u_code=0&region=US&mid=7668489212031519509&preview_pb=0&sharer_language=en&_d=f01b7i5d5l0hbd&share_item_id=7668489128450854145&source=h5_t",
+      "thumb": "images/feed/tt-7668489128450854145.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-31T00:54:25.000Z",
+      "views": 141,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 187
+    },
+    {
+      "id": "7668393482377104661",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "He says only 1 in 10 founders raise ANYTHING. And if your whole plan is investors, you've already lost. The brutal math nobody shows you on TV.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668393482377104661?_r=1&u_code=0&region=US&mid=7668393523451857681&preview_pb=0&sharer_language=en&_d=f01b7i5d5l0hbd&share_item_id=7668393482377104661&source=h5_t",
+      "thumb": "images/feed/tt-7668393482377104661.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-30T18:43:05.000Z",
+      "views": 166,
+      "likes": 1,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 165
     },
     {
       "id": "7668138602328640785",
@@ -93,7 +93,7 @@
       "likes": 3,
       "comments": 0,
       "guestSlug": null,
-      "score": 156
+      "score": 135
     },
     {
       "id": "7663238759256788225",
@@ -108,7 +108,7 @@
       "likes": 13,
       "comments": 0,
       "guestSlug": null,
-      "score": 47
+      "score": 46
     },
     {
       "id": "DS2-iheW6pI",
@@ -138,7 +138,7 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 41
+      "score": 40
     },
     {
       "id": "7662921800166247697",
@@ -168,7 +168,7 @@
       "likes": 0,
       "comments": 0,
       "guestSlug": null,
-      "score": 35
+      "score": 34
     },
     {
       "id": "4Zcf0qmPu_I",
@@ -183,7 +183,7 @@
       "likes": 0,
       "comments": 0,
       "guestSlug": "vadim-peskov",
-      "score": 11
+      "score": 10
     },
     {
       "id": "CgWRHHS7A_g",
