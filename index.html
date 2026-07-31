@@ -1139,6 +1139,9 @@
       opacity: 1;
       transform: translateY(0);
     }
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
   
     /* ════════ NEW SECTIONS ════════ */
     
@@ -2400,15 +2403,36 @@
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 60);
     });
-    // Intersection Observer for fade-up animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    // Reveal fade-up elements on scroll, with a safety net so anything in the
+    // viewport is always shown even if the observer callback is missed
+    // (mobile Safari can skip it during momentum scrolling, leaving stats dim).
+    const fadeEls = document.querySelectorAll('.fade-up');
+    const reveal = (el) => el.classList.add('visible');
+    const revealInView = () => fadeEls.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) reveal(el);
+    });
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            reveal(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      fadeEls.forEach(el => observer.observe(el));
+    } else {
+      fadeEls.forEach(reveal);
+    }
+    let fadeTicking = false;
+    window.addEventListener('scroll', () => {
+      if (fadeTicking) return;
+      fadeTicking = true;
+      requestAnimationFrame(() => { revealInView(); fadeTicking = false; });
+    }, { passive: true });
+    window.addEventListener('load', revealInView);
+    revealInView();
     // Newsletter ‚Üí Beehiiv
     // Submits to your Beehiiv list via a hidden form POST targeting a hidden iframe.
     // Your custom form styling stays exactly the same ‚Äî Beehiiv handles the subscription.
