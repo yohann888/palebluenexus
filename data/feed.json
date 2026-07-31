@@ -411,5 +411,19 @@
       "guestSlug": "episode-art-on-bitcoin-using-ordinals-interview-w-rare",
       "score": 0
     }
-  ]
+  ],
+  "stats": {
+    "generatedAt": "2026-07-31T03:04:56.810Z",
+    "youtube": {
+      "views": 46688,
+      "subscribersText": "6.25K",
+      "videos": 144
+    },
+    "tiktok": {
+      "views": 27006,
+      "followers": 8,
+      "videos": 45
+    },
+    "totalViews": 73694
+  }
 }

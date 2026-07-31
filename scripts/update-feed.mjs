@@ -369,6 +369,59 @@ function topPerformingItems(items, count) {
     .slice(0, count);
 }
 
+// Channel-level totals across YouTube (regular + Shorts) and TikTok.
+async function fetchChannelStats() {
+  const stats = { generatedAt: new Date().toISOString() };
+
+  const yt = await edFetch("/youtube/channel/detailed-info", { browseId: YT_CHANNEL_ID });
+  const about = yt?.data?.metadata?.aboutChannelViewModel || {};
+  stats.youtube = {
+    views: parseCount(about.viewCountText),
+    subscribersText: String(about.subscriberCountText || "").replace(/\s*subscribers?$/i, "").trim(),
+    videos: parseInt(String(about.videoCountText || "").replace(/[^0-9]/g, ""), 10) || 0,
+  };
+  if (!about.viewCountText || !about.subscriberCountText) {
+    throw new Error("youtube about block missing viewCountText/subscriberCountText");
+  }
+
+  const info = await edFetch("/tt/user/info", { username: TT_USERNAME });
+  const s = info?.data?.stats || {};
+  const posts = (await edFetch("/tt/user/posts", { username: TT_USERNAME, depth: 5, oldest_createtime: 0 }))?.data || [];
+  let ttViews = 0;
+  for (const p of posts) ttViews += p?.statistics?.play_count || 0;
+  stats.tiktok = {
+    views: ttViews,
+    followers: s.followerCount || 0,
+    videos: s.videoCount || posts.length || 0,
+  };
+
+  stats.totalViews = stats.youtube.views + stats.tiktok.views;
+  return stats;
+}
+
+// Cumulative reach band, injected high on the homepage.
+function statsBandHtml(stats) {
+  if (!stats) return "";
+  const videos = (stats.youtube?.videos || 0) + (stats.tiktok?.videos || 0);
+  const items = [
+    { n: fmtViews(stats.totalViews), l: "Views across YouTube, Shorts &amp; TikTok" },
+    { n: esc(stats.youtube?.subscribersText || fmtViews(stats.youtube?.subscribers || 0)), l: "YouTube subscribers" },
+    { n: String(videos), l: "Videos &amp; clips published" },
+  ];
+  return "\n      <div class=\"reach-grid\">\n" +
+    items.map((i) => `        <div class="reach-item fade-up"><div class="reach-number">${i.n}</div><div class="reach-label">${i.l}</div></div>`).join("\n") +
+    "\n      </div>";
+}
+
+// Subscriber + combined-views stats on the /book/ proof band.
+function bookStatsHtml(stats) {
+  if (!stats) return "";
+  const subs = stats.youtube?.subscribersText || fmtViews(stats.youtube?.subscribers || 0);
+  return "\n          " +
+    `<div class="proof-item fade-up"><div class="proof-number">${esc(subs)}</div><div class="proof-label">YouTube subscribers</div></div>\n          ` +
+    `<div class="proof-item fade-up"><div class="proof-number">${fmtViews(stats.totalViews)}</div><div class="proof-label">Views across all channels and growing</div></div>`;
+}
+
 function bookTopHtml(items) {
   const top = topPerformingItems(items, 10);
   return `
@@ -612,6 +665,7 @@ async function main() {
   writeFileSync(join(imagesDir, ".gitkeep"), "");
 
   let items = existingFeed.items || [];
+  let stats = existingFeed.stats || null;
   if (ED_TOKEN) {
     let yt = [];
     let tt = [];
@@ -633,6 +687,12 @@ async function main() {
       log(`tiktok: ${tt.length} clips`);
     } catch (e) {
       log("tiktok fetch failed:", e.message);
+    }
+    try {
+      stats = await fetchChannelStats();
+      log(`channel stats: ${fmtViews(stats.totalViews)} combined views`);
+    } catch (e) {
+      log("channel stats fetch failed:", e.message);
     }
     if (yt.length || tt.length) items = [...yt, ...tt];
     else log("no fresh items fetched; reusing existing data/feed.json");
@@ -667,6 +727,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     source: { youtube: `@${"palebluenexus"}`, tiktok: `@${TT_USERNAME}` },
     count: items.length,
+    stats,
     items,
   };
   if (ED_TOKEN) {
@@ -679,12 +740,14 @@ async function main() {
   html = injectBetween(html, "AUTO-LATEST", latestDropsHtml(items));
   html = injectBetween(html, "AUTO-TOP", topPerformingHtml(items));
   html = injectBetween(html, "AUTO-GUESTS", guestsSectionHtml(guests, byGuest));
+  if (stats) html = injectBetween(html, "AUTO-STATS", statsBandHtml(stats));
   writeFileSync(join(ROOT, "index.html"), html);
   log("updated index.html sections");
 
   const bookPath = join(ROOT, "book/index.html");
   let bookHtml = readFileSync(bookPath, "utf8");
   bookHtml = injectBetween(bookHtml, "AUTO-BOOK-TOP", bookTopHtml(items));
+  if (stats) bookHtml = injectBetween(bookHtml, "AUTO-BOOK-STATS", bookStatsHtml(stats));
   writeFileSync(bookPath, bookHtml);
   log("updated book/index.html clips section");
 
