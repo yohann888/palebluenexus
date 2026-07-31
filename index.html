@@ -1353,6 +1353,12 @@
     }
     .sponsors-foot a { color: var(--accent-warm); text-decoration: none; }
     .sponsors-foot a:hover { text-decoration: underline; }
+    .reach-band { padding: 2.75rem 0; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); background: rgba(255,255,255,.02); }
+    .reach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 960px; margin: 0 auto; }
+    .reach-item { text-align: center; padding: .5rem 1rem; }
+    .reach-number { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2.1rem, 5vw, 3rem); line-height: 1; color: var(--accent-warm); }
+    .reach-label { margin-top: .5rem; font-family: 'Inter', sans-serif; font-size: .8rem; letter-spacing: .02em; color: var(--text-secondary); }
+    @media (max-width: 640px) { .reach-grid { grid-template-columns: 1fr; gap: .25rem; } }
     .linkedin-proof {
       padding: 5rem 0;
       background: linear-gradient(115deg, rgba(10, 102, 194, 0.16), rgba(10, 102, 194, 0.035) 58%, transparent);
@@ -1690,6 +1696,18 @@
         <span class="hero-sponsor-label">Title Sponsor</span>
         <span class="hero-sponsor-logo"><img src="images/sponsor-huckabuy.png" alt="Huckabuy" /></span>
       </a>
+    </div>
+  </section>
+  <!-- ════════ REACH (auto-updated) ════════ -->
+  <section class="reach-band" id="reach">
+    <div class="section-container">
+      <!-- AUTO-STATS:start -->
+      <div class="reach-grid">
+        <div class="reach-item fade-up"><div class="reach-number">74K</div><div class="reach-label">Views across YouTube, Shorts &amp; TikTok</div></div>
+        <div class="reach-item fade-up"><div class="reach-number">6.25K</div><div class="reach-label">YouTube subscribers</div></div>
+        <div class="reach-item fade-up"><div class="reach-number">189</div><div class="reach-label">Videos &amp; clips published</div></div>
+      </div>
+  <!-- AUTO-STATS:end -->
     </div>
   </section>
   <!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê PODCAST LINKS ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
