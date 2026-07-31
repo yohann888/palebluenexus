@@ -31,7 +31,7 @@ jobs:
         run: |
           git config user.name "pbn-content-bot"
           git config user.email "bot@palebluenexus.com"
-          git add data/feed.json data/guests.json index.html book/index.html images/feed images/promo share/guest
+          git add data/feed.json data/guests.json index.html book/index.html partner/index.html images/feed images/promo share/guest
           if git diff --cached --quiet; then
             echo "No content changes."
           else
