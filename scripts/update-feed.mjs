@@ -751,6 +751,18 @@ async function main() {
   writeFileSync(bookPath, bookHtml);
   log("updated book/index.html clips section");
 
+  const partnerPath = join(ROOT, "partner/index.html");
+  let partnerHtml = readFileSync(partnerPath, "utf8");
+  if (stats) {
+    const subs = esc(stats.youtube?.subscribersText || fmtViews(stats.youtube?.subscribers || 0));
+    partnerHtml = injectBetween(partnerHtml, "AUTO-PARTNER-HERO-SUBS", subs);
+    partnerHtml = injectBetween(partnerHtml, "AUTO-PARTNER-HERO-VIEWS", fmtViews(stats.totalViews));
+    partnerHtml = injectBetween(partnerHtml, "AUTO-PARTNER-AUD-SUBS", subs);
+    partnerHtml = injectBetween(partnerHtml, "AUTO-PARTNER-AUD-VIEWS", fmtViews(stats.totalViews));
+  }
+  writeFileSync(partnerPath, partnerHtml);
+  log("updated partner/index.html audience stats");
+
   // per-guest promo og:image cards (hosted SVG, fetchable by social crawlers)
   const promoImgDir = join(ROOT, "images/promo");
   mkdirSync(promoImgDir, { recursive: true });
