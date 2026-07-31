@@ -1,55 +1,69 @@
 {
-  "generatedAt": "2026-07-31T01:20:54.588Z",
+  "generatedAt": "2026-07-31T08:25:21.715Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
   },
   "count": 27,
+  "stats": {
+    "generatedAt": "2026-07-31T08:25:07.854Z",
+    "youtube": {
+      "views": 46688,
+      "subscribersText": "6.25K",
+      "videos": 144
+    },
+    "tiktok": {
+      "views": 27099,
+      "followers": 8,
+      "videos": 45
+    },
+    "totalViews": 73787
+  },
   "items": [
     {
-      "id": "7668393482377104661",
+      "id": "7668489128450854145",
       "platform": "tiktok",
       "type": "clip",
-      "title": "He says only 1 in 10 founders raise ANYTHING. And if your whole plan is investors, you've already lost. The brutal math nobody shows you on TV.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668393482377104661?_r=1&u_code=0&region=US&mid=7668393523451857681&preview_pb=0&sharer_language=en&_d=f020d9m1mid301&share_item_id=7668393482377104661&source=h5_t",
-      "thumb": "images/feed/tt-7668393482377104661.jpg",
+      "title": "He talks to a client. The proposal writes itself. The contract preps itself. The tasks send themselves. He just approves. And he says you can build this TODAY.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668489128450854145?_r=1&u_code=0&region=US&mid=7668489212031519509&preview_pb=0&sharer_language=en&_d=f01i65geafam7f&share_item_id=7668489128450854145&source=h5_t",
+      "thumb": "images/feed/tt-7668489128450854145.jpg",
       "duration": "",
-      "publishedAt": "2026-07-30T18:43:05.000Z",
-      "views": 116,
-      "likes": 1,
+      "publishedAt": "2026-07-31T00:54:25.000Z",
+      "views": 122,
+      "likes": 0,
       "comments": 0,
       "guestSlug": null,
-      "score": 424
+      "score": 390
     },
     {
       "id": "7668120385975487761",
       "platform": "tiktok",
       "type": "clip",
       "title": "Vadim explains where the time actually goes now: not code, decisions.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668120385975487761?_r=1&u_code=0&region=US&mid=7668120697385847572&preview_pb=0&sharer_language=en&_d=f020d9m1mid301&share_item_id=7668120385975487761&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668120385975487761?_r=1&u_code=0&region=US&mid=7668120697385847572&preview_pb=0&sharer_language=en&_d=f01i65geafam7f&share_item_id=7668120385975487761&source=h5_t",
       "thumb": "images/feed/tt-7668120385975487761.jpg",
       "duration": "",
       "publishedAt": "2026-07-30T01:04:23.000Z",
-      "views": 351,
+      "views": 356,
       "likes": 5,
       "comments": 1,
       "guestSlug": null,
-      "score": 353
+      "score": 277
     },
     {
-      "id": "7668138602328640785",
+      "id": "7668393482377104661",
       "platform": "tiktok",
       "type": "clip",
-      "title": "Age doesn't predict founder success. Neither does experience. Vadim says the real variable is how often you're willing to bet.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668138602328640785?_r=1&u_code=0&region=US&mid=7668138906823707412&preview_pb=0&sharer_language=en&_d=f020d9m1mid301&share_item_id=7668138602328640785&source=h5_t",
-      "thumb": "images/feed/tt-7668138602328640785.jpg",
+      "title": "He says only 1 in 10 founders raise ANYTHING. And if your whole plan is investors, you've already lost. The brutal math nobody shows you on TV.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668393482377104661?_r=1&u_code=0&region=US&mid=7668393523451857681&preview_pb=0&sharer_language=en&_d=f01i65geafam7f&share_item_id=7668393482377104661&source=h5_t",
+      "thumb": "images/feed/tt-7668393482377104661.jpg",
       "duration": "",
-      "publishedAt": "2026-07-30T02:15:02.000Z",
-      "views": 220,
-      "likes": 3,
+      "publishedAt": "2026-07-30T18:43:05.000Z",
+      "views": 147,
+      "likes": 1,
       "comments": 0,
       "guestSlug": null,
-      "score": 232
+      "score": 259
     },
     {
       "id": "t3dDHRRZyHk",
@@ -59,7 +73,7 @@
       "url": "https://www.youtube.com/watch?v=t3dDHRRZyHk",
       "thumb": "https://i.ytimg.com/vi/t3dDHRRZyHk/hqdefault.jpg",
       "duration": "36:07",
-      "publishedAt": "2026-04-02T01:20:50.925Z",
+      "publishedAt": "2026-04-02T08:25:04.698Z",
       "views": 23000,
       "likes": 0,
       "comments": 0,
@@ -67,11 +81,26 @@
       "score": 192
     },
     {
+      "id": "7668138602328640785",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Age doesn't predict founder success. Neither does experience. Vadim says the real variable is how often you're willing to bet.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668138602328640785?_r=1&u_code=0&region=US&mid=7668138906823707412&preview_pb=0&sharer_language=en&_d=f01i65geafam7f&share_item_id=7668138602328640785&source=h5_t",
+      "thumb": "images/feed/tt-7668138602328640785.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-30T02:15:02.000Z",
+      "views": 226,
+      "likes": 3,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 182
+    },
+    {
       "id": "7663238759256788225",
       "platform": "tiktok",
       "type": "clip",
       "title": "I asked who he'd put his brainwave headset on. Instant answer: Messi. His theory: elite athletes melt down the first time the game beats them. Naturals blow right through.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7663238759256788225?_r=1&u_code=0&region=US&mid=7663238841578965761&preview_pb=0&sharer_language=en&_d=f020d9m1mid301&share_item_id=7663238759256788225&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7663238759256788225?_r=1&u_code=0&region=US&mid=7663238841578965761&preview_pb=0&sharer_language=en&_d=f01i65geafam7f&share_item_id=7663238759256788225&source=h5_t",
       "thumb": "images/feed/tt-7663238759256788225.jpg",
       "duration": "",
       "publishedAt": "2026-07-16T21:20:24.000Z",
@@ -79,22 +108,7 @@
       "likes": 13,
       "comments": 0,
       "guestSlug": null,
-      "score": 49
-    },
-    {
-      "id": "7668489128450854145",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "He talks to a client. The proposal writes itself. The contract preps itself. The tasks send themselves. He just approves. And he says you can build this TODAY.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668489128450854145?_r=1&u_code=0&region=US&mid=7668489212031519509&preview_pb=0&sharer_language=en&_d=f020d9m1mid301&share_item_id=7668489128450854145&source=h5_t",
-      "thumb": "images/feed/tt-7668489128450854145.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-31T00:54:25.000Z",
-      "views": 11,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 44
+      "score": 48
     },
     {
       "id": "DS2-iheW6pI",
@@ -104,7 +118,7 @@
       "url": "https://www.youtube.com/watch?v=DS2-iheW6pI",
       "thumb": "https://i.ytimg.com/vi/DS2-iheW6pI/hqdefault.jpg",
       "duration": "54:28",
-      "publishedAt": "2026-06-01T01:20:50.925Z",
+      "publishedAt": "2026-06-01T08:25:04.698Z",
       "views": 2600,
       "likes": 0,
       "comments": 0,
@@ -116,7 +130,7 @@
       "platform": "tiktok",
       "type": "clip",
       "title": "His dad had Parkinson's. His cousin had ALS. So he recruited high school kids to grind up every drug in the pharmacy and build the first library of its kind. The NIH wouldn't fund it. He did it anyway.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7665190322183425287?_r=1&u_code=0&region=US&mid=7665190353377921810&preview_pb=0&sharer_language=en&_d=f020d9m1mid301&share_item_id=7665190322183425287&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7665190322183425287?_r=1&u_code=0&region=US&mid=7665190353377921810&preview_pb=0&sharer_language=en&_d=f01i65geafam7f&share_item_id=7665190322183425287&source=h5_t",
       "thumb": "images/feed/tt-7665190322183425287.jpg",
       "duration": "",
       "publishedAt": "2026-07-22T03:33:10.000Z",
@@ -124,14 +138,14 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 43
+      "score": 42
     },
     {
       "id": "7662921800166247697",
       "platform": "tiktok",
       "type": "clip",
       "title": "Every productivity video tells you to add something. This CEO's entire system is one question: what can I remove? He builds focus tech, and he runs his company the same way. Full episode on YouTube, Spotify and Apple.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7662921800166247697?_r=1&u_code=0&region=US&mid=7662921869793708820&preview_pb=0&sharer_language=en&_d=f020d9m1mid301&share_item_id=7662921800166247697&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7662921800166247697?_r=1&u_code=0&region=US&mid=7662921869793708820&preview_pb=0&sharer_language=en&_d=f01i65geafam7f&share_item_id=7662921800166247697&source=h5_t",
       "thumb": "images/feed/tt-7662921800166247697.jpg",
       "duration": "",
       "publishedAt": "2026-07-16T00:50:24.000Z",
@@ -139,14 +153,14 @@
       "likes": 5,
       "comments": 0,
       "guestSlug": null,
-      "score": 41
+      "score": 40
     },
     {
       "id": "7662254278060297473",
       "platform": "tiktok",
       "type": "clip",
       "title": "She wanted plants for her first apartment and found nowhere good to buy them. So she left brand strategy and built it herself. That was 2012.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7662254278060297473?_r=1&u_code=0&region=US&mid=7662254441966062353&preview_pb=0&sharer_language=en&_d=f020d9m1mid301&share_item_id=7662254278060297473&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7662254278060297473?_r=1&u_code=0&region=US&mid=7662254441966062353&preview_pb=0&sharer_language=en&_d=f01i65geafam7f&share_item_id=7662254278060297473&source=h5_t",
       "thumb": "images/feed/tt-7662254278060297473.jpg",
       "duration": "",
       "publishedAt": "2026-07-14T05:40:26.000Z",
@@ -154,7 +168,7 @@
       "likes": 0,
       "comments": 0,
       "guestSlug": null,
-      "score": 36
+      "score": 35
     },
     {
       "id": "4Zcf0qmPu_I",
@@ -164,12 +178,12 @@
       "url": "https://www.youtube.com/watch?v=4Zcf0qmPu_I",
       "thumb": "https://i.ytimg.com/vi/4Zcf0qmPu_I/hqdefault.jpg",
       "duration": "42:52",
-      "publishedAt": "2026-07-29T01:20:50.925Z",
+      "publishedAt": "2026-07-28T08:25:04.697Z",
       "views": 32,
       "likes": 0,
       "comments": 0,
       "guestSlug": "vadim-peskov",
-      "score": 16
+      "score": 11
     },
     {
       "id": "CgWRHHS7A_g",
@@ -179,7 +193,7 @@
       "url": "https://www.youtube.com/watch?v=CgWRHHS7A_g",
       "thumb": "https://i.ytimg.com/vi/CgWRHHS7A_g/hqdefault.jpg",
       "duration": "49:11",
-      "publishedAt": "2026-06-01T01:20:50.925Z",
+      "publishedAt": "2026-06-01T08:25:04.698Z",
       "views": 473,
       "likes": 0,
       "comments": 0,
@@ -191,7 +205,7 @@
       "platform": "tiktok",
       "type": "clip",
       "title": "Everything you touch came on a truck. Nobody thinks about it. Your food works the same way, and it's the one thing we can't afford to get wrong.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7662223526576835847?_r=1&u_code=0&region=US&mid=7662223555203877640&preview_pb=0&sharer_language=en&_d=f020d9m1mid301&share_item_id=7662223526576835847&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7662223526576835847?_r=1&u_code=0&region=US&mid=7662223555203877640&preview_pb=0&sharer_language=en&_d=f01i65geafam7f&share_item_id=7662223526576835847&source=h5_t",
       "thumb": "images/feed/tt-7662223526576835847.jpg",
       "duration": "",
       "publishedAt": "2026-07-14T03:40:34.000Z",
@@ -206,7 +220,7 @@
       "platform": "tiktok",
       "type": "clip",
       "title": "He left Harvard Med because the impact was too small. Then came the NASDAQ bell, the bankruptcies, and 60 companies of lessons. Full episode on YouTube, Spotify and Apple.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7662886131704368392?_r=1&u_code=0&region=US&mid=7662886182304402194&preview_pb=0&sharer_language=en&_d=f020d9m1mid301&share_item_id=7662886131704368392&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7662886131704368392?_r=1&u_code=0&region=US&mid=7662886182304402194&preview_pb=0&sharer_language=en&_d=f01i65geafam7f&share_item_id=7662886131704368392&source=h5_t",
       "thumb": "images/feed/tt-7662886131704368392.jpg",
       "duration": "",
       "publishedAt": "2026-07-15T22:31:54.000Z",
@@ -224,12 +238,12 @@
       "url": "https://www.youtube.com/watch?v=v2cOEyVK6QA",
       "thumb": "https://i.ytimg.com/vi/v2cOEyVK6QA/hqdefault.jpg",
       "duration": "48:18",
-      "publishedAt": "2026-07-28T01:20:50.925Z",
+      "publishedAt": "2026-07-27T08:25:04.698Z",
       "views": 15,
       "likes": 0,
       "comments": 0,
       "guestSlug": "vitaly-golomb",
-      "score": 5
+      "score": 4
     },
     {
       "id": "56Wm8v-vkto",
@@ -239,12 +253,12 @@
       "url": "https://www.youtube.com/watch?v=56Wm8v-vkto",
       "thumb": "https://i.ytimg.com/vi/56Wm8v-vkto/hqdefault.jpg",
       "duration": "37:46",
-      "publishedAt": "2026-07-26T01:20:50.925Z",
+      "publishedAt": "2026-07-25T08:25:04.698Z",
       "views": 13,
       "likes": 0,
       "comments": 0,
       "guestSlug": "mary-grove",
-      "score": 3
+      "score": 2
     },
     {
       "id": "4wwUJRkLB90",
@@ -254,7 +268,7 @@
       "url": "https://www.youtube.com/watch?v=4wwUJRkLB90",
       "thumb": "https://i.ytimg.com/vi/4wwUJRkLB90/hqdefault.jpg",
       "duration": "53:57",
-      "publishedAt": "2026-05-02T01:20:50.925Z",
+      "publishedAt": "2026-05-02T08:25:04.698Z",
       "views": 139,
       "likes": 0,
       "comments": 0,
@@ -269,7 +283,7 @@
       "url": "https://www.youtube.com/watch?v=UC11q4mW01w",
       "thumb": "https://i.ytimg.com/vi/UC11q4mW01w/hqdefault.jpg",
       "duration": "48:33",
-      "publishedAt": "2026-07-17T01:20:50.925Z",
+      "publishedAt": "2026-07-17T08:25:04.698Z",
       "views": 18,
       "likes": 0,
       "comments": 0,
@@ -284,7 +298,7 @@
       "url": "https://www.youtube.com/watch?v=XjHigKgY_78",
       "thumb": "https://i.ytimg.com/vi/XjHigKgY_78/hqdefault.jpg",
       "duration": "27:34",
-      "publishedAt": "2026-07-10T01:20:50.925Z",
+      "publishedAt": "2026-07-10T08:25:04.698Z",
       "views": 19,
       "likes": 0,
       "comments": 0,
@@ -299,7 +313,7 @@
       "url": "https://www.youtube.com/watch?v=C9Y1jk3o5SQ",
       "thumb": "https://i.ytimg.com/vi/C9Y1jk3o5SQ/hqdefault.jpg",
       "duration": "29:19",
-      "publishedAt": "2026-07-01T01:20:50.925Z",
+      "publishedAt": "2026-07-01T08:25:04.698Z",
       "views": 17,
       "likes": 0,
       "comments": 0,
@@ -314,7 +328,7 @@
       "url": "https://www.youtube.com/watch?v=y_ES2M40j7s",
       "thumb": "https://i.ytimg.com/vi/y_ES2M40j7s/hqdefault.jpg",
       "duration": "26:56",
-      "publishedAt": "2026-06-01T01:20:50.925Z",
+      "publishedAt": "2026-06-01T08:25:04.698Z",
       "views": 37,
       "likes": 0,
       "comments": 0,
@@ -329,7 +343,7 @@
       "url": "https://www.youtube.com/watch?v=BNvDi013VYg",
       "thumb": "https://i.ytimg.com/vi/BNvDi013VYg/hqdefault.jpg",
       "duration": "48:41",
-      "publishedAt": "2026-07-01T01:20:50.925Z",
+      "publishedAt": "2026-07-01T08:25:04.698Z",
       "views": 14,
       "likes": 0,
       "comments": 0,
@@ -344,7 +358,7 @@
       "url": "https://www.youtube.com/watch?v=QPwbfB8WIPY",
       "thumb": "https://i.ytimg.com/vi/QPwbfB8WIPY/hqdefault.jpg",
       "duration": "48:41",
-      "publishedAt": "2026-07-01T01:20:50.925Z",
+      "publishedAt": "2026-07-01T08:25:04.698Z",
       "views": 15,
       "likes": 0,
       "comments": 0,
@@ -359,7 +373,7 @@
       "url": "https://www.youtube.com/watch?v=QaYYeHDdyOM",
       "thumb": "https://i.ytimg.com/vi/QaYYeHDdyOM/hqdefault.jpg",
       "duration": "3:39",
-      "publishedAt": "2026-06-01T01:20:50.925Z",
+      "publishedAt": "2026-06-01T08:25:04.698Z",
       "views": 9,
       "likes": 0,
       "comments": 0,
@@ -374,7 +388,7 @@
       "url": "https://www.youtube.com/watch?v=IXeRsaOecOM",
       "thumb": "https://i.ytimg.com/vi/IXeRsaOecOM/hqdefault.jpg",
       "duration": "2:37",
-      "publishedAt": "2026-04-02T01:20:50.926Z",
+      "publishedAt": "2026-04-02T08:25:04.698Z",
       "views": 44,
       "likes": 0,
       "comments": 0,
@@ -389,7 +403,7 @@
       "url": "https://www.youtube.com/watch?v=x_ZRJd-2UUU",
       "thumb": "https://i.ytimg.com/vi/x_ZRJd-2UUU/hqdefault.jpg",
       "duration": "43:00",
-      "publishedAt": "2026-04-02T01:20:50.926Z",
+      "publishedAt": "2026-04-02T08:25:04.698Z",
       "views": 3,
       "likes": 0,
       "comments": 0,
@@ -404,26 +418,12 @@
       "url": "https://www.youtube.com/watch?v=tDCJ6aLwppM",
       "thumb": "https://i.ytimg.com/vi/tDCJ6aLwppM/hqdefault.jpg",
       "duration": "41:37",
-      "publishedAt": "2026-04-02T01:20:50.926Z",
+      "publishedAt": "2026-04-02T08:25:04.698Z",
       "views": 4,
       "likes": 0,
       "comments": 0,
       "guestSlug": "episode-art-on-bitcoin-using-ordinals-interview-w-rare",
       "score": 0
     }
-  ],
-  "stats": {
-    "generatedAt": "2026-07-31T03:04:56.810Z",
-    "youtube": {
-      "views": 46688,
-      "subscribersText": "6.25K",
-      "videos": 144
-    },
-    "tiktok": {
-      "views": 27006,
-      "followers": 8,
-      "videos": 45
-    },
-    "totalViews": 73694
-  }
+  ]
 }
