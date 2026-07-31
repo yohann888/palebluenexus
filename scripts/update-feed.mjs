@@ -380,6 +380,9 @@ async function fetchChannelStats() {
     subscribersText: String(about.subscriberCountText || "").replace(/\s*subscribers?$/i, "").trim(),
     videos: parseInt(String(about.videoCountText || "").replace(/[^0-9]/g, ""), 10) || 0,
   };
+  if (!about.viewCountText || !about.subscriberCountText) {
+    throw new Error("youtube about block missing viewCountText/subscriberCountText");
+  }
 
   const info = await edFetch("/tt/user/info", { username: TT_USERNAME });
   const s = info?.data?.stats || {};
@@ -402,7 +405,7 @@ function statsBandHtml(stats) {
   const videos = (stats.youtube?.videos || 0) + (stats.tiktok?.videos || 0);
   const items = [
     { n: fmtViews(stats.totalViews), l: "Views across YouTube, Shorts &amp; TikTok" },
-    { n: stats.youtube?.subscribersText || fmtViews(stats.youtube?.subscribers || 0), l: "YouTube subscribers" },
+    { n: esc(stats.youtube?.subscribersText || fmtViews(stats.youtube?.subscribers || 0)), l: "YouTube subscribers" },
     { n: String(videos), l: "Videos &amp; clips published" },
   ];
   return "\n      <div class=\"reach-grid\">\n" +
@@ -415,7 +418,7 @@ function bookStatsHtml(stats) {
   if (!stats) return "";
   const subs = stats.youtube?.subscribersText || fmtViews(stats.youtube?.subscribers || 0);
   return "\n          " +
-    `<div class="proof-item fade-up"><div class="proof-number">${subs}</div><div class="proof-label">YouTube subscribers</div></div>\n          ` +
+    `<div class="proof-item fade-up"><div class="proof-number">${esc(subs)}</div><div class="proof-label">YouTube subscribers</div></div>\n          ` +
     `<div class="proof-item fade-up"><div class="proof-number">${fmtViews(stats.totalViews)}</div><div class="proof-label">Views across all channels and growing</div></div>`;
 }
 
