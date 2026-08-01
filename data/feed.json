@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-08-01T01:22:14.588Z",
+  "generatedAt": "2026-08-01T07:55:27.012Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
   },
-  "count": 27,
+  "count": 26,
   "stats": {
-    "generatedAt": "2026-08-01T01:22:02.288Z",
+    "generatedAt": "2026-08-01T07:55:13.489Z",
     "youtube": {
       "views": 46869,
       "subscribersText": "6.25K",
-      "videos": 144
+      "videos": 146
     },
     "tiktok": {
-      "views": 27348,
+      "views": 27350,
       "followers": 8,
       "videos": 45
     },
-    "totalViews": 74217
+    "totalViews": 74219
   },
   "items": [
     {
@@ -25,15 +25,15 @@
       "platform": "tiktok",
       "type": "clip",
       "title": "He talks to a client. The proposal writes itself. The contract preps itself. The tasks send themselves. He just approves. And he says you can build this TODAY.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668489128450854145?_r=1&u_code=0&region=US&mid=7668489212031519509&preview_pb=0&sharer_language=en&_d=f021f44el33e56&share_item_id=7668489128450854145&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668489128450854145?_r=1&u_code=0&region=US&mid=7668489212031519509&preview_pb=0&sharer_language=en&_d=f01ak2jb403lbm&share_item_id=7668489128450854145&source=h5_t",
       "thumb": "images/feed/tt-7668489128450854145.jpg",
       "duration": "",
       "publishedAt": "2026-07-31T00:54:25.000Z",
-      "views": 331,
+      "views": 332,
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 327
+      "score": 258
     },
     {
       "id": "t3dDHRRZyHk",
@@ -43,7 +43,7 @@
       "url": "https://www.youtube.com/watch?v=t3dDHRRZyHk",
       "thumb": "https://i.ytimg.com/vi/t3dDHRRZyHk/hqdefault.jpg",
       "duration": "36:07",
-      "publishedAt": "2026-04-03T01:21:59.138Z",
+      "publishedAt": "2026-04-03T07:55:09.473Z",
       "views": 23000,
       "likes": 0,
       "comments": 0,
@@ -55,7 +55,7 @@
       "platform": "tiktok",
       "type": "clip",
       "title": "Vadim explains where the time actually goes now: not code, decisions.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668120385975487761?_r=1&u_code=0&region=US&mid=7668120697385847572&preview_pb=0&sharer_language=en&_d=f021f44el33e56&share_item_id=7668120385975487761&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668120385975487761?_r=1&u_code=0&region=US&mid=7668120697385847572&preview_pb=0&sharer_language=en&_d=f01ak2jb403lbm&share_item_id=7668120385975487761&source=h5_t",
       "thumb": "images/feed/tt-7668120385975487761.jpg",
       "duration": "",
       "publishedAt": "2026-07-30T01:04:23.000Z",
@@ -63,14 +63,14 @@
       "likes": 5,
       "comments": 1,
       "guestSlug": null,
-      "score": 180
+      "score": 158
     },
     {
       "id": "7668393482377104661",
       "platform": "tiktok",
       "type": "clip",
       "title": "He says only 1 in 10 founders raise ANYTHING. And if your whole plan is investors, you've already lost. The brutal math nobody shows you on TV.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668393482377104661?_r=1&u_code=0&region=US&mid=7668393523451857681&preview_pb=0&sharer_language=en&_d=f021f44el33e56&share_item_id=7668393482377104661&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668393482377104661?_r=1&u_code=0&region=US&mid=7668393523451857681&preview_pb=0&sharer_language=en&_d=f01ak2jb403lbm&share_item_id=7668393482377104661&source=h5_t",
       "thumb": "images/feed/tt-7668393482377104661.jpg",
       "duration": "",
       "publishedAt": "2026-07-30T18:43:05.000Z",
@@ -78,14 +78,14 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 148
+      "score": 122
     },
     {
       "id": "7668138602328640785",
       "platform": "tiktok",
       "type": "clip",
       "title": "Age doesn't predict founder success. Neither does experience. Vadim says the real variable is how often you're willing to bet.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668138602328640785?_r=1&u_code=0&region=US&mid=7668138906823707412&preview_pb=0&sharer_language=en&_d=f021f44el33e56&share_item_id=7668138602328640785&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668138602328640785?_r=1&u_code=0&region=US&mid=7668138906823707412&preview_pb=0&sharer_language=en&_d=f01ak2jb403lbm&share_item_id=7668138602328640785&source=h5_t",
       "thumb": "images/feed/tt-7668138602328640785.jpg",
       "duration": "",
       "publishedAt": "2026-07-30T02:15:02.000Z",
@@ -93,14 +93,14 @@
       "likes": 3,
       "comments": 0,
       "guestSlug": null,
-      "score": 117
+      "score": 102
     },
     {
       "id": "7663238759256788225",
       "platform": "tiktok",
       "type": "clip",
       "title": "I asked who he'd put his brainwave headset on. Instant answer: Messi. His theory: elite athletes melt down the first time the game beats them. Naturals blow right through.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7663238759256788225?_r=1&u_code=0&region=US&mid=7663238841578965761&preview_pb=0&sharer_language=en&_d=f021f44el33e56&share_item_id=7663238759256788225&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7663238759256788225?_r=1&u_code=0&region=US&mid=7663238841578965761&preview_pb=0&sharer_language=en&_d=f01ak2jb403lbm&share_item_id=7663238759256788225&source=h5_t",
       "thumb": "images/feed/tt-7663238759256788225.jpg",
       "duration": "",
       "publishedAt": "2026-07-16T21:20:24.000Z",
@@ -118,7 +118,7 @@
       "url": "https://www.youtube.com/watch?v=DS2-iheW6pI",
       "thumb": "https://i.ytimg.com/vi/DS2-iheW6pI/hqdefault.jpg",
       "duration": "54:28",
-      "publishedAt": "2026-06-02T01:21:59.138Z",
+      "publishedAt": "2026-06-02T07:55:09.473Z",
       "views": 2600,
       "likes": 0,
       "comments": 0,
@@ -130,7 +130,7 @@
       "platform": "tiktok",
       "type": "clip",
       "title": "His dad had Parkinson's. His cousin had ALS. So he recruited high school kids to grind up every drug in the pharmacy and build the first library of its kind. The NIH wouldn't fund it. He did it anyway.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7665190322183425287?_r=1&u_code=0&region=US&mid=7665190353377921810&preview_pb=0&sharer_language=en&_d=f021f44el33e56&share_item_id=7665190322183425287&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7665190322183425287?_r=1&u_code=0&region=US&mid=7665190353377921810&preview_pb=0&sharer_language=en&_d=f01ak2jb403lbm&share_item_id=7665190322183425287&source=h5_t",
       "thumb": "images/feed/tt-7665190322183425287.jpg",
       "duration": "",
       "publishedAt": "2026-07-22T03:33:10.000Z",
@@ -138,14 +138,14 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 39
+      "score": 38
     },
     {
       "id": "7662921800166247697",
       "platform": "tiktok",
       "type": "clip",
       "title": "Every productivity video tells you to add something. This CEO's entire system is one question: what can I remove? He builds focus tech, and he runs his company the same way. Full episode on YouTube, Spotify and Apple.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7662921800166247697?_r=1&u_code=0&region=US&mid=7662921869793708820&preview_pb=0&sharer_language=en&_d=f021f44el33e56&share_item_id=7662921800166247697&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7662921800166247697?_r=1&u_code=0&region=US&mid=7662921869793708820&preview_pb=0&sharer_language=en&_d=f01ak2jb403lbm&share_item_id=7662921800166247697&source=h5_t",
       "thumb": "images/feed/tt-7662921800166247697.jpg",
       "duration": "",
       "publishedAt": "2026-07-16T00:50:24.000Z",
@@ -153,14 +153,14 @@
       "likes": 5,
       "comments": 0,
       "guestSlug": null,
-      "score": 38
+      "score": 37
     },
     {
       "id": "7662254278060297473",
       "platform": "tiktok",
       "type": "clip",
       "title": "She wanted plants for her first apartment and found nowhere good to buy them. So she left brand strategy and built it herself. That was 2012.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7662254278060297473?_r=1&u_code=0&region=US&mid=7662254441966062353&preview_pb=0&sharer_language=en&_d=f021f44el33e56&share_item_id=7662254278060297473&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7662254278060297473?_r=1&u_code=0&region=US&mid=7662254441966062353&preview_pb=0&sharer_language=en&_d=f01ak2jb403lbm&share_item_id=7662254278060297473&source=h5_t",
       "thumb": "images/feed/tt-7662254278060297473.jpg",
       "duration": "",
       "publishedAt": "2026-07-14T05:40:26.000Z",
@@ -168,7 +168,22 @@
       "likes": 0,
       "comments": 0,
       "guestSlug": null,
-      "score": 34
+      "score": 33
+    },
+    {
+      "id": "GV9B930Faoc",
+      "platform": "youtube",
+      "type": "video",
+      "title": "Content Is the Next Code: Inside the Rise of AI Guardian Agents",
+      "url": "https://www.youtube.com/watch?v=GV9B930Faoc",
+      "thumb": "https://i.ytimg.com/vi/GV9B930Faoc/hqdefault.jpg",
+      "duration": "25:37",
+      "publishedAt": "2026-08-01T02:55:09.473Z",
+      "views": 4,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": "episode-content-is-the-next-code-inside-the-rise",
+      "score": 16
     },
     {
       "id": "4Zcf0qmPu_I",
@@ -178,12 +193,12 @@
       "url": "https://www.youtube.com/watch?v=4Zcf0qmPu_I",
       "thumb": "https://i.ytimg.com/vi/4Zcf0qmPu_I/hqdefault.jpg",
       "duration": "42:52",
-      "publishedAt": "2026-07-29T01:21:59.138Z",
-      "views": 34,
+      "publishedAt": "2026-07-28T07:55:09.473Z",
+      "views": 41,
       "likes": 0,
       "comments": 0,
       "guestSlug": "vadim-peskov",
-      "score": 11
+      "score": 10
     },
     {
       "id": "CgWRHHS7A_g",
@@ -193,7 +208,7 @@
       "url": "https://www.youtube.com/watch?v=CgWRHHS7A_g",
       "thumb": "https://i.ytimg.com/vi/CgWRHHS7A_g/hqdefault.jpg",
       "duration": "49:11",
-      "publishedAt": "2026-06-02T01:21:59.138Z",
+      "publishedAt": "2026-06-02T07:55:09.473Z",
       "views": 474,
       "likes": 0,
       "comments": 0,
@@ -205,7 +220,7 @@
       "platform": "tiktok",
       "type": "clip",
       "title": "Everything you touch came on a truck. Nobody thinks about it. Your food works the same way, and it's the one thing we can't afford to get wrong.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7662223526576835847?_r=1&u_code=0&region=US&mid=7662223555203877640&preview_pb=0&sharer_language=en&_d=f021f44el33e56&share_item_id=7662223526576835847&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7662223526576835847?_r=1&u_code=0&region=US&mid=7662223555203877640&preview_pb=0&sharer_language=en&_d=f01ak2jb403lbm&share_item_id=7662223526576835847&source=h5_t",
       "thumb": "images/feed/tt-7662223526576835847.jpg",
       "duration": "",
       "publishedAt": "2026-07-14T03:40:34.000Z",
@@ -220,7 +235,7 @@
       "platform": "tiktok",
       "type": "clip",
       "title": "He left Harvard Med because the impact was too small. Then came the NASDAQ bell, the bankruptcies, and 60 companies of lessons. Full episode on YouTube, Spotify and Apple.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7662886131704368392?_r=1&u_code=0&region=US&mid=7662886182304402194&preview_pb=0&sharer_language=en&_d=f021f44el33e56&share_item_id=7662886131704368392&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7662886131704368392?_r=1&u_code=0&region=US&mid=7662886182304402194&preview_pb=0&sharer_language=en&_d=f01ak2jb403lbm&share_item_id=7662886131704368392&source=h5_t",
       "thumb": "images/feed/tt-7662886131704368392.jpg",
       "duration": "",
       "publishedAt": "2026-07-15T22:31:54.000Z",
@@ -238,12 +253,12 @@
       "url": "https://www.youtube.com/watch?v=v2cOEyVK6QA",
       "thumb": "https://i.ytimg.com/vi/v2cOEyVK6QA/hqdefault.jpg",
       "duration": "48:18",
-      "publishedAt": "2026-07-28T01:21:59.138Z",
+      "publishedAt": "2026-07-27T07:55:09.473Z",
       "views": 15,
       "likes": 0,
       "comments": 0,
       "guestSlug": "vitaly-golomb",
-      "score": 4
+      "score": 3
     },
     {
       "id": "56Wm8v-vkto",
@@ -253,7 +268,7 @@
       "url": "https://www.youtube.com/watch?v=56Wm8v-vkto",
       "thumb": "https://i.ytimg.com/vi/56Wm8v-vkto/hqdefault.jpg",
       "duration": "37:46",
-      "publishedAt": "2026-07-26T01:21:59.138Z",
+      "publishedAt": "2026-07-25T07:55:09.473Z",
       "views": 13,
       "likes": 0,
       "comments": 0,
@@ -268,7 +283,7 @@
       "url": "https://www.youtube.com/watch?v=4wwUJRkLB90",
       "thumb": "https://i.ytimg.com/vi/4wwUJRkLB90/hqdefault.jpg",
       "duration": "53:57",
-      "publishedAt": "2026-05-03T01:21:59.138Z",
+      "publishedAt": "2026-05-03T07:55:09.473Z",
       "views": 139,
       "likes": 0,
       "comments": 0,
@@ -283,7 +298,7 @@
       "url": "https://www.youtube.com/watch?v=UC11q4mW01w",
       "thumb": "https://i.ytimg.com/vi/UC11q4mW01w/hqdefault.jpg",
       "duration": "48:33",
-      "publishedAt": "2026-07-18T01:21:59.138Z",
+      "publishedAt": "2026-07-18T07:55:09.473Z",
       "views": 18,
       "likes": 0,
       "comments": 0,
@@ -298,7 +313,7 @@
       "url": "https://www.youtube.com/watch?v=XjHigKgY_78",
       "thumb": "https://i.ytimg.com/vi/XjHigKgY_78/hqdefault.jpg",
       "duration": "27:34",
-      "publishedAt": "2026-07-11T01:21:59.138Z",
+      "publishedAt": "2026-07-11T07:55:09.473Z",
       "views": 19,
       "likes": 0,
       "comments": 0,
@@ -313,7 +328,7 @@
       "url": "https://www.youtube.com/watch?v=C9Y1jk3o5SQ",
       "thumb": "https://i.ytimg.com/vi/C9Y1jk3o5SQ/hqdefault.jpg",
       "duration": "29:19",
-      "publishedAt": "2026-07-02T01:21:59.138Z",
+      "publishedAt": "2026-07-02T07:55:09.473Z",
       "views": 18,
       "likes": 0,
       "comments": 0,
@@ -328,7 +343,7 @@
       "url": "https://www.youtube.com/watch?v=y_ES2M40j7s",
       "thumb": "https://i.ytimg.com/vi/y_ES2M40j7s/hqdefault.jpg",
       "duration": "26:56",
-      "publishedAt": "2026-06-02T01:21:59.138Z",
+      "publishedAt": "2026-06-02T07:55:09.473Z",
       "views": 37,
       "likes": 0,
       "comments": 0,
@@ -343,7 +358,7 @@
       "url": "https://www.youtube.com/watch?v=BNvDi013VYg",
       "thumb": "https://i.ytimg.com/vi/BNvDi013VYg/hqdefault.jpg",
       "duration": "48:41",
-      "publishedAt": "2026-07-02T01:21:59.138Z",
+      "publishedAt": "2026-07-02T07:55:09.473Z",
       "views": 14,
       "likes": 0,
       "comments": 0,
@@ -358,7 +373,7 @@
       "url": "https://www.youtube.com/watch?v=QPwbfB8WIPY",
       "thumb": "https://i.ytimg.com/vi/QPwbfB8WIPY/hqdefault.jpg",
       "duration": "48:41",
-      "publishedAt": "2026-07-02T01:21:59.138Z",
+      "publishedAt": "2026-07-02T07:55:09.473Z",
       "views": 15,
       "likes": 0,
       "comments": 0,
@@ -373,7 +388,7 @@
       "url": "https://www.youtube.com/watch?v=QaYYeHDdyOM",
       "thumb": "https://i.ytimg.com/vi/QaYYeHDdyOM/hqdefault.jpg",
       "duration": "3:39",
-      "publishedAt": "2026-06-02T01:21:59.138Z",
+      "publishedAt": "2026-06-02T07:55:09.473Z",
       "views": 9,
       "likes": 0,
       "comments": 0,
@@ -388,41 +403,11 @@
       "url": "https://www.youtube.com/watch?v=IXeRsaOecOM",
       "thumb": "https://i.ytimg.com/vi/IXeRsaOecOM/hqdefault.jpg",
       "duration": "2:37",
-      "publishedAt": "2026-04-03T01:21:59.138Z",
+      "publishedAt": "2026-03-04T07:55:09.473Z",
       "views": 44,
       "likes": 0,
       "comments": 0,
       "guestSlug": "episode-nft-hype-becomes-pale-blue-nexus",
-      "score": 0
-    },
-    {
-      "id": "x_ZRJd-2UUU",
-      "platform": "youtube",
-      "type": "video",
-      "title": "How to secure your NFTs & Ordinals with multisig wallets",
-      "url": "https://www.youtube.com/watch?v=x_ZRJd-2UUU",
-      "thumb": "https://i.ytimg.com/vi/x_ZRJd-2UUU/hqdefault.jpg",
-      "duration": "43:00",
-      "publishedAt": "2026-04-03T01:21:59.138Z",
-      "views": 3,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": "episode-how-to-secure-your-nfts-ordinals-with-multisig",
-      "score": 0
-    },
-    {
-      "id": "tDCJ6aLwppM",
-      "platform": "youtube",
-      "type": "video",
-      "title": "Art on Bitcoin using Ordinals - Interview w/ Rare Satoshi Society",
-      "url": "https://www.youtube.com/watch?v=tDCJ6aLwppM",
-      "thumb": "https://i.ytimg.com/vi/tDCJ6aLwppM/hqdefault.jpg",
-      "duration": "41:37",
-      "publishedAt": "2026-04-03T01:21:59.138Z",
-      "views": 4,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": "episode-art-on-bitcoin-using-ordinals-interview-w-rare",
       "score": 0
     }
   ]

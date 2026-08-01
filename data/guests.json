@@ -282,6 +282,24 @@
       "date": "2026-04-01",
       "needsReview": true,
       "needsPhoto": true
+    },
+    {
+      "slug": "episode-content-is-the-next-code-inside-the-rise",
+      "name": "",
+      "role": "",
+      "photo": "images/guest-episode-content-is-the-next-code-inside-the-rise.svg",
+      "linkedin": "",
+      "website": "",
+      "status": "upcoming",
+      "episode": "Coming Soon",
+      "episodeSlug": "",
+      "youtubeId": "GV9B930Faoc",
+      "tiktokIds": [],
+      "quote": "",
+      "bio": "",
+      "date": "2026-08-01",
+      "needsReview": true,
+      "needsPhoto": true
     }
   ]
 }
