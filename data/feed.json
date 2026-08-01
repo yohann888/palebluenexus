@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T12:47:25.337Z",
+  "generatedAt": "2026-08-01T18:45:43.812Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -33,7 +33,7 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 223
+      "score": 192
     },
     {
       "id": "t3dDHRRZyHk",
@@ -48,7 +48,7 @@
       "likes": 0,
       "comments": 0,
       "guestSlug": "jim-rogers",
-      "score": 192
+      "score": 191
     },
     {
       "id": "7668120385975487761",
@@ -63,7 +63,7 @@
       "likes": 5,
       "comments": 1,
       "guestSlug": null,
-      "score": 145
+      "score": 132
     },
     {
       "id": "7668393482377104661",
@@ -78,7 +78,7 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 108
+      "score": 94
     },
     {
       "id": "7668138602328640785",
@@ -93,7 +93,7 @@
       "likes": 3,
       "comments": 0,
       "guestSlug": null,
-      "score": 94
+      "score": 85
     },
     {
       "id": "7663238759256788225",
@@ -108,7 +108,7 @@
       "likes": 13,
       "comments": 0,
       "guestSlug": null,
-      "score": 44
+      "score": 43
     },
     {
       "id": "DS2-iheW6pI",
@@ -138,7 +138,7 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 37
+      "score": 36
     },
     {
       "id": "7662921800166247697",
@@ -153,7 +153,7 @@
       "likes": 5,
       "comments": 0,
       "guestSlug": null,
-      "score": 37
+      "score": 36
     },
     {
       "id": "7662254278060297473",
@@ -171,21 +171,6 @@
       "score": 33
     },
     {
-      "id": "GV9B930Faoc",
-      "platform": "youtube",
-      "type": "video",
-      "title": "Content Is the Next Code: Inside the Rise of AI Guardian Agents",
-      "url": "https://www.youtube.com/watch?v=GV9B930Faoc",
-      "thumb": "https://i.ytimg.com/vi/GV9B930Faoc/hqdefault.jpg",
-      "duration": "25:37",
-      "publishedAt": "2026-08-01T02:47:03.554Z",
-      "views": 6,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": "episode-content-is-the-next-code-inside-the-rise",
-      "score": 14
-    },
-    {
       "id": "4Zcf0qmPu_I",
       "platform": "youtube",
       "type": "video",
@@ -199,6 +184,21 @@
       "comments": 0,
       "guestSlug": "vadim-peskov",
       "score": 10
+    },
+    {
+      "id": "GV9B930Faoc",
+      "platform": "youtube",
+      "type": "video",
+      "title": "Content Is the Next Code: Inside the Rise of AI Guardian Agents",
+      "url": "https://www.youtube.com/watch?v=GV9B930Faoc",
+      "thumb": "https://i.ytimg.com/vi/GV9B930Faoc/hqdefault.jpg",
+      "duration": "25:37",
+      "publishedAt": "2026-08-01T02:47:03.554Z",
+      "views": 6,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": "episode-content-is-the-next-code-inside-the-rise",
+      "score": 9
     },
     {
       "id": "CgWRHHS7A_g",
