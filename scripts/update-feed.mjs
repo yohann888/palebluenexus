@@ -405,12 +405,17 @@ function removeDuplicateGuestVideos(guests) {
 
 const PLATFORM_LABEL = { youtube: "YouTube", tiktok: "TikTok" };
 
+function reachTotal(item) {
+  const listens = item.platform === "youtube" ? (item.listens || 0) : 0;
+  return (item.views || 0) + listens;
+}
+
 function cardHtml(item, { rank } = {}) {
+  const listens = item.platform === "youtube" ? (item.listens || 0) : 0;
+  const total = (item.views || 0) + listens;
   let metric;
-  if (item.views) {
-    const hasListens = item.platform === "youtube" && item.listens > 0;
-    const total = item.views + (hasListens ? item.listens : 0);
-    metric = `${fmtViews(total)} ${hasListens ? "views & listens" : "views"}`;
+  if (total > 0) {
+    metric = `${fmtViews(total)} ${listens > 0 ? "views & listens" : "views"}`;
   } else {
     metric = item.duration || "";
   }
@@ -481,7 +486,7 @@ ${top.map((i, idx) => cardHtml(i, { rank: idx + 1 })).join("\n")}
 
 function topPerformingItems(items, count) {
   return [...items]
-    .sort((a, b) => (b.views || 0) - (a.views || 0) || b.score - a.score)
+    .sort((a, b) => reachTotal(b) - reachTotal(a) || b.score - a.score)
     .slice(0, count);
 }
 
