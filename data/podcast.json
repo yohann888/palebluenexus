@@ -1,0 +1,20 @@
+{
+  "_comment": "Apple Podcasts + Spotify stream counts from Riverside hosting analytics (Hosting -> Analytics). There is no public Riverside API for these, so update the numbers here manually when they change. totalStreams is the account-wide 'Total streams' figure. Each episode is matched to its YouTube upload by youtubeId (preferred) or by title; keep youtubeId set so the match is stable even if titles differ between YouTube and Riverside.",
+  "asOf": "2026-08-03",
+  "totalStreams": 3149,
+  "episodes": [
+    { "title": "Jim Rogers: What a Legendary Investor Told Me After 17 Years", "youtubeId": "t3dDHRRZyHk", "streams": 400 },
+    { "title": "\"Sales is Fake. AI Will Eliminate It.\" Microsoft Vet & Sophtron CEO Jack Couch", "youtubeId": "4wwUJRkLB90", "streams": 186 },
+    { "title": "270,000 AI video SaaS Signups, 5M Followers | Austin Armstrong", "youtubeId": "CgWRHHS7A_g", "streams": 152 },
+    { "title": "Inside a New $40M Fund Built to Fix Canada's Brain Drain | Nectarios Economakis", "youtubeId": "y_ES2M40j7s", "streams": 142 },
+    { "title": "The AGI-Resistant Moat: Charles Cormier on What AI Can't Replace", "youtubeId": "QPwbfB8WIPY", "streams": 139 },
+    { "title": "Serving 5 Trillion AI Tokens a Week: Inside DeepInfra with Nikola Borisov", "youtubeId": "DS2-iheW6pI", "streams": 131 },
+    { "title": "The Logistics of Saving Food: Inside The Farmlink Project", "youtubeId": "C9Y1jk3o5SQ", "streams": 123 },
+    { "title": "Why the S&P Buys More of a Company After Its Founder Dies", "youtubeId": "XjHigKgY_78", "streams": 103 },
+    { "title": "You Can Train Your Brain to Flow on Command | Steve Gullans", "youtubeId": "9hy2PeP1P4o", "streams": 86 },
+    { "title": "75% of VC Dollars Go to 3 Cities. She Left for Minnesota. | Mary Grove, Bread & Butter Ventures", "youtubeId": "56Wm8v-vkto", "streams": 74 },
+    { "title": "Past Industrial Revolutions Took 100 Years. This One Takes 10. | Vitaly Golomb", "youtubeId": "v2cOEyVK6QA", "streams": 69 },
+    { "title": "Content Is the Next Code: Inside the Rise of AI Guardian Agents", "youtubeId": "3znLLBFnvQg", "streams": 55 },
+    { "title": "Why This Veteran Engineer Says Better Models Don't Mean Better Software", "youtubeId": "4Zcf0qmPu_I", "streams": 49 }
+  ]
+}
