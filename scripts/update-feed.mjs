@@ -877,11 +877,13 @@ function guestCardHtml(g, item, reach = {}, { isLatest = false } = {}) {
         </a>`;
 }
 
-// Auto-detected episode drafts (needsReview / needsPhoto) and any entry without
-// a real name are held back from all public output until a human supplies a real
-// name and photo, so a card is never rendered against a non-existent image.
+// Uncurated auto-detected drafts (needsReview) and any entry without a real name
+// are held back from all public output. A published guest using the branded
+// monogram placeholder (needsPhoto, but with a committed SVG asset) still renders
+// publicly — the monogram is a valid image, and needsPhoto only flags it for a
+// later real-photo swap.
 function isPublicGuest(g) {
-  return !g.needsReview && !g.needsPhoto && !!(g.name && g.name.trim());
+  return !g.needsReview && !!(g.name && g.name.trim()) && !!g.photo;
 }
 
 function guestsSectionHtml(guests, byGuest, guestReach) {
