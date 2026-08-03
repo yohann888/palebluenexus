@@ -899,8 +899,11 @@ async function main() {
   const guestReach = {};
   for (const g of guests) {
     const own = items.filter((i) => i.guestSlug === g.slug).sort((a, b) => b.score - a.score);
-    if (own[0]) byGuest[g.slug] = own[0];
-    else if (g.youtubeId) byGuest[g.slug] = items.find((i) => i.id === g.youtubeId) || null;
+    const preferred = items.find((i) => i.id === g.youtubeId) ||
+      own.find((i) => i.platform === "youtube") ||
+      own[0] ||
+      (g.youtubeId ? items.find((i) => i.id === g.youtubeId) : null);
+    byGuest[g.slug] = preferred || null;
     guestReach[g.slug] = {
       views: own.reduce((total, item) => total + (item.views || 0), 0),
       listens: streamsById.get(g.youtubeId) ?? 0,
