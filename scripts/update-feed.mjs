@@ -17,7 +17,9 @@
  * Usage: node scripts/update-feed.mjs
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, unlinkSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -128,6 +130,65 @@ async function fetchYouTube() {
     });
   }
   return items;
+}
+
+let imageMagickCommand;
+
+function resolveImageMagick() {
+  if (imageMagickCommand !== undefined) return imageMagickCommand;
+  try {
+    execFileSync("convert", ["-version"], { stdio: "ignore" });
+    imageMagickCommand = { command: "convert", prefix: [] };
+  } catch {
+    try {
+      execFileSync("magick", ["-version"], { stdio: "ignore" });
+      imageMagickCommand = { command: "magick", prefix: ["convert"] };
+    } catch {
+      imageMagickCommand = null;
+    }
+  }
+  return imageMagickCommand;
+}
+
+async function isAudioOnlyThumb(id) {
+  const imageMagick = resolveImageMagick();
+  if (!imageMagick) return false;
+
+  const tempPath = join(tmpdir(), `pbn-thumb-${id}.jpg`);
+  try {
+    const res = await fetch(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`);
+    if (!res.ok) return false;
+    writeFileSync(tempPath, Buffer.from(await res.arrayBuffer()));
+    const measure = (gravity) => {
+      const args = [
+        ...imageMagick.prefix,
+        tempPath,
+        "-gravity",
+        gravity,
+        "-crop",
+        "6%x60%+0+0",
+        "+repage",
+        "-colorspace",
+        "Gray",
+        "-format",
+        "%[fx:mean]",
+        "info:",
+      ];
+      return parseFloat(execFileSync(imageMagick.command, args, { encoding: "utf8" }).trim());
+    };
+    const left = measure("West");
+    const right = measure("East");
+    return left < 0.02 && right < 0.02;
+  } catch (e) {
+    log("audio-only thumbnail check failed", id, e.message);
+    return false;
+  } finally {
+    try {
+      unlinkSync(tempPath);
+    } catch {
+      // Best-effort cleanup; the thumbnail check remains fail-open.
+    }
+  }
 }
 
 async function fetchTikTok(imagesDir) {
@@ -671,9 +732,40 @@ async function main() {
     let tt = [];
     try {
       yt = await fetchYouTube();
+      const audioIds = new Set();
+      for (const item of yt) {
+        if (await isAudioOnlyThumb(item.id)) audioIds.add(item.id);
+      }
+
+      const videoTwins = new Map();
+      for (const item of yt) {
+        if (audioIds.has(item.id)) continue;
+        const title = normalizeTitle(item.title);
+        if (title && !videoTwins.has(title)) videoTwins.set(title, item.id);
+      }
+      const audioToVideo = new Map();
+      for (const item of yt) {
+        if (audioIds.has(item.id)) {
+          const videoTwin = videoTwins.get(normalizeTitle(item.title));
+          if (videoTwin) audioToVideo.set(item.id, videoTwin);
+        }
+      }
+      let remappedGuests = 0;
+      for (const guest of guests) {
+        const videoTwin = audioToVideo.get(guest.youtubeId);
+        if (videoTwin) {
+          guest.youtubeId = videoTwin;
+          remappedGuests += 1;
+        }
+      }
+      if (remappedGuests) {
+        writeFileSync(join(ROOT, "data/guests.json"), JSON.stringify(guestsCfg, null, 2) + "\n");
+      }
+      yt = yt.filter((item) => !audioIds.has(item.id));
       const beforeDedupe = yt.length;
       yt = dedupeYouTube(yt);
-      log(`youtube: ${yt.length} videos (deduped from ${beforeDedupe}, dropped audio-only re-uploads)`);
+      log(`youtube: ${yt.length} videos (dropped ${audioIds.size} audio-only re-uploads, deduped from ${beforeDedupe})`);
+      if (remappedGuests) log(`remapped ${remappedGuests} guest audio references to video twins`);
       try {
         syncUnrecognizedEpisodes(yt, guests, guestsCfg);
       } catch (e) {
