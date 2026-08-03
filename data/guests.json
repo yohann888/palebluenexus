@@ -284,22 +284,20 @@
       "needsPhoto": true
     },
     {
-      "slug": "episode-content-is-the-next-code-inside-the-rise",
-      "name": "",
-      "role": "",
-      "photo": "images/guest-episode-content-is-the-next-code-inside-the-rise.svg",
+      "slug": "matt-blumberg",
+      "name": "Matt Blumberg",
+      "role": "CEO, Markup AI",
+      "photo": "images/guest-matt-blumberg.jpg",
       "linkedin": "",
-      "website": "",
-      "status": "upcoming",
-      "episode": "Coming Soon",
-      "episodeSlug": "",
+      "website": "https://www.markup.ai/",
+      "status": "published",
+      "episode": "Episode 13",
+      "episodeSlug": "matt-blumberg",
       "youtubeId": "3znLLBFnvQg",
       "tiktokIds": [],
       "quote": "",
-      "bio": "",
-      "date": "2026-08-01",
-      "needsReview": true,
-      "needsPhoto": true
+      "bio": "CEO of Markup AI, building AI agents that keep enterprise content accurate and on-brand. A serial entrepreneur, he previously founded and led Return Path and co-founded Bolster, and is the author of Startup CEO.",
+      "date": "2026-08-01"
     }
   ]
 }

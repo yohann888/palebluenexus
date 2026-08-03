@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T13:59:53.692Z",
+  "generatedAt": "2026-08-03T14:16:55.642Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -32,8 +32,8 @@
       "views": 639,
       "likes": 3,
       "comments": 0,
-      "guestSlug": null,
-      "score": 437
+      "guestSlug": "matt-blumberg",
+      "score": 434
     },
     {
       "id": "7669130833411788040",
@@ -47,8 +47,8 @@
       "views": 668,
       "likes": 4,
       "comments": 0,
-      "guestSlug": null,
-      "score": 370
+      "guestSlug": "matt-blumberg",
+      "score": 368
     },
     {
       "id": "t3dDHRRZyHk",
@@ -246,7 +246,7 @@
       "views": 8,
       "likes": 0,
       "comments": 0,
-      "guestSlug": "episode-content-is-the-next-code-inside-the-rise",
+      "guestSlug": "matt-blumberg",
       "listens": 55,
       "score": 4
     },
