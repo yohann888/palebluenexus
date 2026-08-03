@@ -126,6 +126,7 @@ async function fetchYouTube() {
       platform: "youtube",
       type,
       title: r?.title?.runs?.[0]?.text || "",
+      descSnippet: r?.descriptionSnippet?.runs?.map((run) => run.text).join("") || "",
       url: `https://www.youtube.com/watch?v=${r.videoId}`,
       thumb: `https://i.ytimg.com/vi/${r.videoId}/hqdefault.jpg`,
       duration: lengthLabel,
@@ -314,6 +315,129 @@ function parseDraftGuestName(title) {
   return looksLikePersonName(withCandidate) ? withCandidate : "";
 }
 
+function parseSnippetGuestName(snippet) {
+  const match = String(snippet || "").match(/^\s*([A-Z][a-z]+(?:\s+[A-Z][a-z.'’-]+){1,2})\s*,/);
+  const candidate = match ? match[1].trim() : "";
+  return looksLikePersonName(candidate) ? candidate : "";
+}
+
+function parseGuestRole(text) {
+  const source = String(text || "").replace(/\s+/g, " ").trim();
+  const patterns = [
+    /\b(Co-founder\s*&\s*CEO|Founder\s+and\s+CEO|Managing Partner|General Partner|CEO|CTO|COO|President|Founder)\s+(?:of|at)\s+([A-Z][^.!?;\n|]{1,70}?)(?=\s*(?:[,.;!?|]|$))/i,
+    /\b(Co-founder\s*&\s*CEO|Founder\s+and\s+CEO|Managing Partner|General Partner|CEO|CTO|COO|President|Founder)\s*,\s*([A-Z][^.!?;\n|]{1,70}?)(?=\s*(?:[,.;!?|]|$))/i,
+  ];
+  for (const pattern of patterns) {
+    const match = source.match(pattern);
+    if (!match) continue;
+    const role = match[1].replace(/\s+/g, " ").trim();
+    const company = match[2].replace(/\s+/g, " ").replace(/[,:;.!?]+$/, "").trim();
+    if (!company) continue;
+    const result = `${role}, ${company}`;
+    if (result.length <= 60) return result;
+    return `${result.slice(0, 60).replace(/\s+\S*$/, "").replace(/[,:;.!?]+$/, "")}`;
+  }
+  const roleOnly = source.match(/\b(Co-founder\s*&\s*CEO|Founder\s+and\s+CEO|Managing Partner|General Partner|CEO|CTO|COO|President|Founder)\s*[.!?]?\s*$/i);
+  if (roleOnly) return roleOnly[1].replace(/\s+/g, " ").trim();
+  const descriptor = source.match(/\b(?:legendary\s+)?(investor(?:\s+and\s+author)?|entrepreneur|author|scientist|executive)\b/i);
+  return descriptor
+    ? descriptor[1].replace(/\s+/g, " ").trim().replace(/\b\w/g, (letter) => letter.toUpperCase()).replace(/\bAnd\b/g, "and")
+    : "";
+}
+
+async function fetchGuestHeadshot(name, slug) {
+  fetchGuestHeadshot.lastBio = "";
+  const userAgent = "PaleBlueNexus/1.0 (https://palebluenexus.com)";
+  const outputPath = join(ROOT, "images", `guest-${slug}.jpg`);
+  const tempPath = join(tmpdir(), `pbn-headshot-${slug}-${Date.now()}`);
+  let success = false;
+  try {
+    const summaryRes = await fetch(
+      `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(name)}`,
+      { headers: { "User-Agent": userAgent, accept: "application/json" } },
+    );
+    if (!summaryRes.ok) return null;
+    const summary = await summaryRes.json();
+    if (summary.type === "disambiguation") return null;
+    if (String(summary.title || "").trim().toLowerCase() !== String(name).trim().toLowerCase()) return null;
+    const sourceText = `${summary.extract || ""} ${summary.description || ""}`;
+    if (!/\b(founder|co-?founder|ceo|cto|coo|president|investor|entrepreneur|author|executive|scientist|venture|chief|partner)\b/i.test(sourceText)) {
+      return null;
+    }
+    const imageUrl = summary.originalimage?.source || summary.thumbnail?.source;
+    if (!imageUrl) return null;
+    let imageUrlObject;
+    try {
+      imageUrlObject = new URL(imageUrl);
+    } catch {
+      return null;
+    }
+    if (
+      imageUrlObject.protocol !== "https:" ||
+      !(imageUrlObject.hostname === "upload.wikimedia.org" || imageUrlObject.hostname.endsWith(".wikimedia.org"))
+    ) {
+      return null;
+    }
+    const imageRes = await fetch(imageUrl, { headers: { "User-Agent": userAgent } });
+    if (!imageRes.ok || !String(imageRes.headers.get("content-type") || "").toLowerCase().startsWith("image/")) return null;
+    const contentLength = Number(imageRes.headers.get("content-length"));
+    if (Number.isFinite(contentLength) && contentLength > 5_000_000) return null;
+    const imageBuffer = Buffer.from(await imageRes.arrayBuffer());
+    if (imageBuffer.length > 5_000_000) return null;
+    writeFileSync(tempPath, imageBuffer);
+    mkdirSync(join(ROOT, "images"), { recursive: true });
+    const imageMagick = resolveImageMagick();
+    if (imageMagick) {
+      const convertArgs = [
+        ...imageMagick.prefix,
+        tempPath,
+        "-auto-orient",
+        "-strip",
+        "-quality",
+        "88",
+        outputPath,
+      ];
+      execFileSync(imageMagick.command, convertArgs, { stdio: "ignore" });
+      try {
+        const identifyCommand = imageMagick.command === "magick" ? "magick" : "identify";
+        const identifyArgs = imageMagick.command === "magick"
+          ? ["identify", "-format", "%w %h", outputPath]
+          : ["-format", "%w %h", outputPath];
+        const [width, height] = execFileSync(identifyCommand, identifyArgs, { encoding: "utf8" })
+          .trim()
+          .split(/\s+/)
+          .map(Number);
+        if (!(width >= 200 && height >= 200)) return null;
+      } catch (error) {
+        if (error.code !== "ENOENT") return null;
+      }
+    } else {
+      writeFileSync(outputPath, readFileSync(tempPath));
+    }
+    const extract = String(summary.extract || "").trim();
+    fetchGuestHeadshot.lastBio = extract.split(/(?<=[.!?])\s+/)[0].slice(0, 240).trim();
+    success = true;
+    return `images/guest-${slug}.jpg`;
+  } catch {
+    return null;
+  } finally {
+    try { unlinkSync(tempPath); } catch {}
+    if (!success) {
+      try { unlinkSync(outputPath); } catch {}
+    }
+  }
+}
+
+fetchGuestHeadshot.lastBio = "";
+
+function nextEpisodeNumber(guests) {
+  const maxEpisode = guests.reduce((max, guest) => {
+    const number = parseInt(String(guest.episode || "").match(/\d+/)?.[0] || "0", 10);
+    return Math.max(max, number);
+  }, 0);
+  return `Episode ${String(maxEpisode + 1).padStart(2, "0")}`;
+}
+
 function guestPlaceholderSvg(name) {
   const initials = String(name).trim().split(/\s+/).filter(Boolean)
     .map((word) => word[0])
@@ -329,48 +453,149 @@ function guestPlaceholderSvg(name) {
 `;
 }
 
-function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
+async function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
   const knownIds = new Set(guests.map((guest) => guest.youtubeId).filter(Boolean));
   const knownSlugs = new Set(guests.map((guest) => guest.slug).filter(Boolean));
   const drafts = [];
+  const published = [];
   for (const item of yt) {
     if (item.type !== "video" || knownIds.has(item.id)) continue;
-    const name = parseDraftGuestName(item.title);
+    const name = parseDraftGuestName(item.title) || parseSnippetGuestName(item.descSnippet);
     const titleSlug = slugify(item.title).split("-").slice(0, 8).join("-");
     const baseSlug = name ? slugify(name) : `episode-${titleSlug || item.id}`;
     const slug = knownSlugs.has(baseSlug)
       ? `${baseSlug}-${String(item.id).slice(-6).toLowerCase()}`
       : baseSlug;
     knownSlugs.add(slug);
-    const draft = {
-      slug,
-      name,
-      role: "",
-      photo: `images/guest-${slug}.svg`,
-      linkedin: "",
-      website: "",
-      status: "upcoming",
-      episode: "Coming Soon",
-      episodeSlug: "",
-      youtubeId: item.id,
-      tiktokIds: [],
-      quote: "",
-      bio: "",
-      date: item.publishedAt ? item.publishedAt.slice(0, 10) : "",
-      needsReview: true,
-      needsPhoto: true,
-    };
-    drafts.push(draft);
+    const role = parseGuestRole(`${item.title} ${item.descSnippet || ""}`);
+    const canPublish = Boolean(name && role);
+    const photo = canPublish ? await fetchGuestHeadshot(name, slug) : null;
+    if (canPublish) {
+      const publicPhoto = photo || `images/guest-${slug}.svg`;
+      if (!photo) {
+        writeFileSync(join(ROOT, "images", `guest-${slug}.svg`), guestPlaceholderSvg(name));
+      }
+      const guest = {
+        slug,
+        name,
+        role,
+        photo: publicPhoto,
+        linkedin: "",
+        website: "",
+        status: "published",
+        episode: nextEpisodeNumber(guests),
+        episodeSlug: slug,
+        youtubeId: item.id,
+        tiktokIds: [],
+        quote: "",
+        bio: fetchGuestHeadshot.lastBio || "",
+        date: item.publishedAt ? item.publishedAt.slice(0, 10) : "",
+        episodeTitle: item.title,
+        duration: item.duration || "",
+        ...(photo ? {} : { needsPhoto: true }),
+      };
+      guests.push(guest);
+      mkdirSync(join(ROOT, "episodes", slug), { recursive: true });
+      writeFileSync(join(ROOT, "episodes", slug, "index.html"), newEpisodePageHtml(guest));
+      published.push(guest);
+      log(`auto-published ${slug}${photo ? "" : " (monogram)"}`);
+    } else {
+      const guest = {
+        slug,
+        name,
+        role: "",
+        photo: `images/guest-${slug}.svg`,
+        linkedin: "",
+        website: "",
+        status: "upcoming",
+        episode: "Coming Soon",
+        episodeSlug: "",
+        youtubeId: item.id,
+        tiktokIds: [],
+        quote: "",
+        bio: "",
+        date: item.publishedAt ? item.publishedAt.slice(0, 10) : "",
+        needsReview: true,
+        needsPhoto: true,
+      };
+      guests.push(guest);
+      drafts.push(guest);
+    }
     knownIds.add(item.id);
   }
-  if (!drafts.length) return [];
-  const imagesDir = join(ROOT, "images");
-  for (const draft of drafts) {
-    guests.push(draft);
-  }
+  if (!drafts.length && !published.length) return [];
   writeFileSync(join(ROOT, "data/guests.json"), JSON.stringify(guestsCfg, null, 2) + "\n");
-  log(`added episode drafts: ${drafts.map((draft) => draft.slug).join(", ")}`);
-  return drafts;
+  if (drafts.length) log(`added episode drafts: ${drafts.map((draft) => draft.slug).join(", ")}`);
+  return [...drafts, ...published];
+}
+
+function newEpisodePageHtml(g) {
+  const episodeTitle = String(g.episodeTitle || "").trim();
+  const pageTitle = `${g.name} - Pale Blue Nexus ${g.episode}`;
+  const description = `${episodeTitle}. ${g.role}.`;
+  const canonical = `https://palebluenexus.com/episodes/${g.episodeSlug}/`;
+  const image = `https://img.youtube.com/vi/${g.youtubeId}/maxresdefault.jpg`;
+  const episodeSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "PodcastSeries",
+        "@id": "https://palebluenexus.com/#podcast",
+        name: "Pale Blue Nexus",
+        url: "https://palebluenexus.com/",
+      },
+      {
+        "@type": "PodcastEpisode",
+        "@id": `${canonical}#episode`,
+        name: pageTitle,
+        description,
+        url: canonical,
+        image,
+        datePublished: g.date || "",
+        partOfSeries: { "@id": "https://palebluenexus.com/#podcast" },
+        guest: {
+          "@type": "Person",
+          name: g.name,
+          jobTitle: g.role,
+        },
+        associatedMedia: { "@id": `${canonical}#video` },
+      },
+      {
+        "@type": "VideoObject",
+        "@id": `${canonical}#video`,
+        name: pageTitle,
+        description,
+        thumbnailUrl: image,
+        uploadDate: g.date || "",
+        contentUrl: `https://www.youtube.com/watch?v=${g.youtubeId}`,
+        embedUrl: `https://www.youtube.com/embed/${g.youtubeId}`,
+      },
+    ],
+  };
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${esc(pageTitle)}</title>
+  <link rel="canonical" href="${esc(canonical)}" />
+  <meta name="description" content="${esc(description)}" />
+  <meta property="og:title" content="${esc(pageTitle)}" /><meta property="og:description" content="${esc(description)}" /><meta property="og:type" content="video.episode" /><meta property="og:url" content="${esc(canonical)}" /><meta property="og:image" content="${esc(image)}" />
+  <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="${esc(pageTitle)}" /><meta name="twitter:description" content="${esc(description)}" /><meta name="twitter:image" content="${esc(image)}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+  <script type="application/ld+json">${JSON.stringify(episodeSchema).replace(/</g, "\\u003c")}</script>
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg:#04060e;--border:rgba(255,255,255,.06);--gold:#D4A84B;--secondary:#A6D2E6;--muted:rgba(146,196,222,.7)}html{scroll-behavior:smooth}body{font-family:Montserrat,sans-serif;background:var(--bg);color:#fff;line-height:1.7}nav{position:fixed;top:0;left:0;right:0;z-index:2;padding:1.25rem 2.5rem}nav.scrolled{background:rgba(4,6,14,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}.nav-logo{display:flex}.nav-logo img{height:40px}.section-container{max-width:900px;margin:auto;padding:0 2rem}section{padding:7rem 2rem}.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem}h1,h2{font-family:"Cormorant Garamond",serif;line-height:1.15}h1{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:1rem}h2{font-size:2.4rem;margin-bottom:1rem}.hero{min-height:60vh;display:flex;align-items:flex-end;padding:8rem 0 4rem}.photo{width:120px;height:120px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);margin-bottom:1.5rem}.meta{display:flex;gap:1.5rem;color:var(--muted);font-size:.85rem;margin:1rem 0 1.5rem}.share{display:inline-flex;padding:.5rem 1rem;border:1px solid var(--border);border-radius:100px;color:var(--secondary);text-decoration:none;font-size:.8rem}.embed{aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--border)}iframe{width:100%;height:100%;border:0}.bio{color:var(--secondary);max-width:640px}footer{padding:3rem 2rem;text-align:center;border-top:1px solid var(--border);color:var(--muted);font-size:.85rem}.fade{animation:fade .8s ease forwards}@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}@media(max-width:600px){nav{padding:1rem 1.25rem}.section-container{padding:0 1rem}section{padding-left:1rem;padding-right:1rem}}
+  </style>
+</head>
+<body><nav id="nav"><a href="/" class="nav-logo"><img src="/images/pbn-logo.png" alt="Pale Blue Nexus" /></a></nav>
+  <section class="hero"><div class="section-container"><div class="fade"><span class="section-eyebrow eyebrow">${esc(g.episode)}</span><img class="guest-photo photo" src="../../${esc(g.photo)}" alt="${esc(g.name)}" /><h1>${esc(g.name)}</h1><p style="font-size:1.1rem;color:var(--secondary);max-width:600px">${esc(episodeTitle)}</p><div class="episode-meta meta"><span>${esc(g.episode)}</span></div><a class="share-btn share" href="https://www.youtube.com/watch?v=${esc(g.youtubeId)}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></div></div></section>
+  <!-- AUTO-EP-KIT:start --><!-- AUTO-EP-KIT:end -->
+  <section style="padding-top:0"><div class="section-container"><div class="embed fade"><iframe src="https://www.youtube.com/embed/${esc(g.youtubeId)}" title="${esc(episodeTitle)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div></div></section>
+  <section style="background:linear-gradient(180deg,rgba(10,14,28,1) 0%,var(--bg) 100%)"><div class="section-container"><span class="section-eyebrow eyebrow fade">About the Guest</span><h2 class="fade">${esc(g.name)}.</h2><p class="guest-bio bio fade">${esc(g.bio || "")}</p></div></section>
+  <footer><p>Pale Blue Nexus. Making sense of the future, from right here.</p></footer><script>window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50));</script>
+</body></html>
+`;
 }
 
 function removeDuplicateGuestVideos(guests) {
@@ -909,7 +1134,7 @@ async function main() {
       if (remappedGuests) log(`remapped ${remappedGuests} guest audio references to video twins`);
       if (removedDuplicateGuests) log(`removed ${removedDuplicateGuests} duplicate auto-detected guest records`);
       try {
-        syncUnrecognizedEpisodes(yt, guests, guestsCfg);
+        await syncUnrecognizedEpisodes(yt, guests, guestsCfg);
       } catch (e) {
         log("warning: episode draft sync failed:", e.message);
       }
@@ -999,7 +1224,7 @@ async function main() {
     source: { youtube: `@${"palebluenexus"}`, tiktok: `@${TT_USERNAME}` },
     count: items.length,
     stats,
-    items,
+    items: items.map(({ descSnippet, ...item }) => item),
   };
   if (ED_TOKEN) {
     writeFileSync(feedPath, JSON.stringify(feed, null, 2) + "\n");
