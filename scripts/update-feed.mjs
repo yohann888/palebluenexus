@@ -244,6 +244,19 @@ function normalizeTitle(t = "") {
     .trim();
 }
 
+function podcastKey(t = "") {
+  return String(t).toLowerCase().split("|")[0].replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+function guestNameKey(name = "") {
+  const stripped = String(name)
+    .replace(/^\s*(?:dr|mr|mrs|ms|prof)\.?\s+/i, "")
+    .replace(/\s*,\s*(?:phd|cfa|md|jd|esq|mba)\s*$/i, "")
+    .trim();
+  const tokens = stripped.split(/\s+/).filter(Boolean);
+  return tokens.length >= 2 ? `${tokens[0]} ${tokens.at(-1)}` : "";
+}
+
 function durationSeconds(label = "") {
   const parts = String(label).split(":").map(Number);
   if (!parts.length || parts.some(Number.isNaN)) return 0;
@@ -393,7 +406,10 @@ function removeDuplicateGuestVideos(guests) {
 const PLATFORM_LABEL = { youtube: "YouTube", tiktok: "TikTok" };
 
 function cardHtml(item, { rank } = {}) {
-  const metric = item.views ? `${fmtViews(item.views)} views` : (item.duration || "");
+  let metric = item.views ? `${fmtViews(item.views)} views` : (item.duration || "");
+  if (item.platform === "youtube" && item.listens > 0) {
+    metric += `${metric ? " · " : ""}${fmtViews(item.listens)} listens`;
+  }
   const badge = PLATFORM_LABEL[item.platform] || item.platform;
   const rankHtml = rank ? `<span class="feed-rank">#${rank}</span>` : "";
   const thumb = item.thumb || `https://i.ytimg.com/vi/${item.id}/hqdefault.jpg`;
@@ -496,11 +512,12 @@ async function fetchChannelStats() {
 }
 
 // Cumulative reach band, injected high on the homepage.
-function statsBandHtml(stats) {
+function statsBandHtml(stats, podcastTotal = 0) {
   if (!stats) return "";
   const videos = (stats.youtube?.videos || 0) + (stats.tiktok?.videos || 0);
+  const totalReach = (stats.totalViews || 0) + podcastTotal;
   const items = [
-    { n: fmtViews(stats.totalViews), l: "Views across YouTube, Shorts &amp; TikTok" },
+    { n: fmtViews(totalReach), l: "Views &amp; listens across YouTube, TikTok &amp; podcast" },
     { n: esc(stats.youtube?.subscribersText || fmtViews(stats.youtube?.subscribers || 0)), l: "YouTube subscribers" },
     { n: String(videos), l: "Videos &amp; clips published" },
   ];
@@ -510,12 +527,13 @@ function statsBandHtml(stats) {
 }
 
 // Subscriber + combined-views stats on the /book/ proof band.
-function bookStatsHtml(stats) {
+function bookStatsHtml(stats, podcastTotal = 0) {
   if (!stats) return "";
   const subs = stats.youtube?.subscribersText || fmtViews(stats.youtube?.subscribers || 0);
+  const totalReach = (stats.totalViews || 0) + podcastTotal;
   return "\n          " +
     `<div class="proof-item fade-up"><div class="proof-number">${esc(subs)}</div><div class="proof-label">YouTube subscribers</div></div>\n          ` +
-    `<div class="proof-item fade-up"><div class="proof-number">${fmtViews(stats.totalViews)}</div><div class="proof-label">Views across all channels and growing</div></div>`;
+    `<div class="proof-item fade-up"><div class="proof-number">${fmtViews(totalReach)}</div><div class="proof-label">Views &amp; listens across all channels and growing</div></div>`;
 }
 
 function bookTopHtml(items) {
@@ -537,14 +555,17 @@ ${top.map((i, idx) => cardHtml(i, { rank: idx + 1 })).join("\n")}
 `;
 }
 
-function guestCardHtml(g, item, { isLatest = false } = {}) {
+function guestCardHtml(g, item, reach = {}, { isLatest = false } = {}) {
   const isPub = g.status === "published";
   const href = isPub && g.episodeSlug
     ? `/episodes/${g.episodeSlug}/`
     : (g.linkedin || g.website || (g.youtubeId ? `https://www.youtube.com/watch?v=${g.youtubeId}` : "#"));
   const ext = !(isPub && g.episodeSlug);
-  const views = item && item.views ? `&middot; ${fmtViews(item.views)} views` : "";
-  const tag = isPub ? `${esc(g.episode)} ${views}` : esc(g.episode);
+  const reachSegments = [];
+  if (reach.views > 0) reachSegments.push(`${fmtViews(reach.views)} views`);
+  if (reach.listens > 0) reachSegments.push(`${fmtViews(reach.listens)} listens`);
+  const reachTag = reachSegments.length ? ` &middot; ${reachSegments.join(" &middot; ")}` : "";
+  const tag = isPub ? `${esc(g.episode)}${reachTag}` : esc(g.episode);
   const statusClass = isPub ? "guest-show-status-published" : "guest-show-status-upcoming";
   const statusLabel = isPub ? "Published" : "Coming soon";
   const tagHtml = isPub ? `<span class="guest-show-tag">${tag}</span>` : "";
@@ -567,7 +588,7 @@ function isPublicGuest(g) {
   return !g.needsReview && !g.needsPhoto && !!(g.name && g.name.trim());
 }
 
-function guestsSectionHtml(guests, byGuest) {
+function guestsSectionHtml(guests, byGuest, guestReach) {
   const renderable = guests.filter(isPublicGuest);
   const published = renderable.filter((g) => g.status === "published");
   const upcoming = renderable.filter((g) => g.status !== "published");
@@ -591,7 +612,7 @@ function guestsSectionHtml(guests, byGuest) {
         <p class="section-subheading">Founders, investors, and operators at the frontier of AI, space, and emerging tech. Each guest has a ready-to-share promo kit.</p>
       </div>
       <div class="guests-show-grid">
-${ordered.map((g) => guestCardHtml(g, byGuest[g.slug], { isLatest: g.slug === latestPublished?.slug })).join("\n")}
+${ordered.map((g) => guestCardHtml(g, byGuest[g.slug], guestReach[g.slug], { isLatest: g.slug === latestPublished?.slug })).join("\n")}
       </div>
     </div>
   </section>
@@ -755,6 +776,19 @@ async function main() {
   const guests = guestsCfg.guests;
   const feedPath = join(ROOT, "data/feed.json");
   const existingFeed = JSON.parse(readFileSync(feedPath, "utf8"));
+  let podcast = { totalStreams: 0, episodes: [] };
+  try {
+    podcast = JSON.parse(readFileSync(join(ROOT, "data/podcast.json"), "utf8"));
+  } catch (e) {
+    log("podcast.json missing/invalid; listens disabled", e.message);
+  }
+  const streamsById = new Map();
+  const streamsByKey = new Map();
+  for (const episode of podcast.episodes || []) {
+    const streams = Number(episode.streams) || 0;
+    if (episode.youtubeId) streamsById.set(String(episode.youtubeId), streams);
+    else if (episode.title) streamsByKey.set(podcastKey(episode.title), streams);
+  }
 
   const imagesDir = join(ROOT, "images/feed");
   mkdirSync(imagesDir, { recursive: true });
@@ -839,17 +873,43 @@ async function main() {
   }
   for (const it of items) {
     it.guestSlug = (it.platform === "youtube" ? ytIdToGuest[it.id] : ttIdToGuest[it.id]) || null;
+    if (it.platform === "youtube") {
+      it.listens = streamsById.get(it.id) ?? streamsByKey.get(podcastKey(it.title)) ?? 0;
+    } else {
+      delete it.listens;
+    }
     it.score = Math.round(performanceScore(it));
+  }
+
+  const publishedGuests = guests.filter((g) => g.status === "published");
+  for (const it of items) {
+    if (it.platform !== "tiktok" || it.guestSlug) continue;
+    const matches = publishedGuests.filter((g) => {
+      const name = guestNameKey(g.name);
+      if (!name) return false;
+      const escaped = name.split(" ").map((part) => part.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("\\s+");
+      return new RegExp(`\\b${escaped}\\b`, "i").test(it.title || "");
+    });
+    if (matches.length === 1) it.guestSlug = matches[0].slug;
   }
   items.sort((a, b) => b.score - a.score);
 
   // best-performing item per guest (their episode video if present)
   const byGuest = {};
+  const guestReach = {};
   for (const g of guests) {
     const own = items.filter((i) => i.guestSlug === g.slug).sort((a, b) => b.score - a.score);
-    if (own[0]) byGuest[g.slug] = own[0];
-    else if (g.youtubeId) byGuest[g.slug] = items.find((i) => i.id === g.youtubeId) || null;
+    const preferred = items.find((i) => i.id === g.youtubeId) ||
+      own.find((i) => i.platform === "youtube") ||
+      own[0] ||
+      (g.youtubeId ? items.find((i) => i.id === g.youtubeId) : null);
+    byGuest[g.slug] = preferred || null;
+    guestReach[g.slug] = {
+      views: own.reduce((total, item) => total + (item.views || 0), 0),
+      listens: streamsById.get(g.youtubeId) ?? 0,
+    };
   }
+  const totalReach = stats ? (stats.totalViews || 0) + (Number(podcast.totalStreams) || 0) : 0;
 
   // write feed.json
   const feed = {
@@ -868,15 +928,15 @@ async function main() {
   let html = readFileSync(join(ROOT, "index.html"), "utf8");
   html = injectBetween(html, "AUTO-LATEST", latestDropsHtml(items));
   html = injectBetween(html, "AUTO-TOP", topPerformingHtml(items));
-  html = injectBetween(html, "AUTO-GUESTS", guestsSectionHtml(guests, byGuest));
-  if (stats) html = injectBetween(html, "AUTO-STATS", statsBandHtml(stats));
+  html = injectBetween(html, "AUTO-GUESTS", guestsSectionHtml(guests, byGuest, guestReach));
+  if (stats) html = injectBetween(html, "AUTO-STATS", statsBandHtml(stats, Number(podcast.totalStreams) || 0));
   writeFileSync(join(ROOT, "index.html"), html);
   log("updated index.html sections");
 
   const bookPath = join(ROOT, "book/index.html");
   let bookHtml = readFileSync(bookPath, "utf8");
   bookHtml = injectBetween(bookHtml, "AUTO-BOOK-TOP", bookTopHtml(items));
-  if (stats) bookHtml = injectBetween(bookHtml, "AUTO-BOOK-STATS", bookStatsHtml(stats));
+  if (stats) bookHtml = injectBetween(bookHtml, "AUTO-BOOK-STATS", bookStatsHtml(stats, Number(podcast.totalStreams) || 0));
   writeFileSync(bookPath, bookHtml);
   log("updated book/index.html clips section");
 
@@ -885,9 +945,9 @@ async function main() {
   if (stats) {
     const subs = esc(stats.youtube?.subscribersText || fmtViews(stats.youtube?.subscribers || 0));
     partnerHtml = injectBetween(partnerHtml, "AUTO-PARTNER-HERO-SUBS", subs);
-    partnerHtml = injectBetween(partnerHtml, "AUTO-PARTNER-HERO-VIEWS", fmtViews(stats.totalViews));
+    partnerHtml = injectBetween(partnerHtml, "AUTO-PARTNER-HERO-VIEWS", fmtViews(totalReach));
     partnerHtml = injectBetween(partnerHtml, "AUTO-PARTNER-AUD-SUBS", subs);
-    partnerHtml = injectBetween(partnerHtml, "AUTO-PARTNER-AUD-VIEWS", fmtViews(stats.totalViews));
+    partnerHtml = injectBetween(partnerHtml, "AUTO-PARTNER-AUD-VIEWS", fmtViews(totalReach));
   }
   writeFileSync(partnerPath, partnerHtml);
   log("updated partner/index.html audience stats");
