@@ -363,11 +363,11 @@ async function fetchGuestHeadshot(name, slug) {
     const summary = await summaryRes.json();
     if (summary.type === "disambiguation") return null;
     if (String(summary.title || "").trim().toLowerCase() !== String(name).trim().toLowerCase()) return null;
-    fetchGuestHeadshot.lastQid = summary.wikibase_item || "";
     const sourceText = `${summary.extract || ""} ${summary.description || ""}`;
     if (!/\b(founder|co-?founder|ceo|cto|coo|president|investor|entrepreneur|author|executive|scientist|venture|chief|partner)\b/i.test(sourceText)) {
       return null;
     }
+    fetchGuestHeadshot.lastQid = summary.wikibase_item || "";
     const imageUrl = summary.originalimage?.source || summary.thumbnail?.source;
     if (!imageUrl) return null;
     let imageUrlObject;
