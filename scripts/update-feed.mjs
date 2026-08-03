@@ -445,6 +445,8 @@ async function fetchGuestWikidataQid(name) {
     const summary = await response.json();
     if (summary.type === "disambiguation") return "";
     if (String(summary.title || "").trim().toLowerCase() !== String(name).trim().toLowerCase()) return "";
+    const sourceText = `${summary.extract || ""} ${summary.description || ""}`;
+    if (!/\b(founder|co-?founder|ceo|cto|coo|president|investor|entrepreneur|author|executive|scientist|venture|chief|partner)\b/i.test(sourceText)) return "";
     return String(summary.wikibase_item || "");
   } catch {
     return "";
