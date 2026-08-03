@@ -126,7 +126,9 @@ async function fetchYouTube() {
       platform: "youtube",
       type,
       title: r?.title?.runs?.[0]?.text || "",
-      descSnippet: r?.descriptionSnippet?.runs?.map((run) => run.text).join("") || "",
+      descSnippet: r?.descriptionSnippet?.runs?.map((run) => run.text).join("")
+        || r?.detailedMetadataSnippets?.[0]?.snippetText?.runs?.map((run) => run.text).join("")
+        || "",
       url: `https://www.youtube.com/watch?v=${r.videoId}`,
       thumb: `https://i.ytimg.com/vi/${r.videoId}/hqdefault.jpg`,
       duration: lengthLabel,
@@ -494,9 +496,9 @@ async function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
         duration: item.duration || "",
         ...(photo ? {} : { needsPhoto: true }),
       };
-      guests.push(guest);
       mkdirSync(join(ROOT, "episodes", slug), { recursive: true });
       writeFileSync(join(ROOT, "episodes", slug, "index.html"), newEpisodePageHtml(guest));
+      guests.push(guest);
       published.push(guest);
       log(`auto-published ${slug}${photo ? "" : " (monogram)"}`);
     } else {
@@ -518,6 +520,7 @@ async function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
         needsReview: true,
         needsPhoto: true,
       };
+      writeFileSync(join(ROOT, "images", `guest-${slug}.svg`), guestPlaceholderSvg(name || "PBN"));
       guests.push(guest);
       drafts.push(guest);
     }
@@ -883,7 +886,7 @@ function guestCardHtml(g, item, reach = {}, { isLatest = false } = {}) {
 // publicly — the monogram is a valid image, and needsPhoto only flags it for a
 // later real-photo swap.
 function isPublicGuest(g) {
-  return !g.needsReview && !!(g.name && g.name.trim()) && !!g.photo;
+  return !g.needsReview && !!(g.name && g.name.trim()) && !!g.photo && existsSync(join(ROOT, g.photo));
 }
 
 function guestsSectionHtml(guests, byGuest, guestReach) {
@@ -1065,6 +1068,121 @@ function injectBetween(html, marker, replacement) {
   const block = `${start}${replacement}\n  ${end}`;
   if (!re.test(html)) throw new Error(`marker ${marker} not found in index.html`);
   return html.replace(re, () => block);
+}
+
+function episodeNumber(guest) {
+  return Number(String(guest.episode || "").match(/\d+/)?.[0] || 0);
+}
+
+function publicEpisodeGuests(guests) {
+  return guests
+    .filter((guest) => isPublicGuest(guest) && guest.episodeSlug)
+    .sort((a, b) => episodeNumber(a) - episodeNumber(b));
+}
+
+function markdownText(value) {
+  return String(value || "")
+    .replace(/\\/g, "\\\\")
+    .replace(/([*_`[\]])/g, "\\$1");
+}
+
+function compactEpisodeMarkdown(g, item) {
+  const title = g.episodeTitle || item?.title || "";
+  const duration = g.duration || item?.duration || "";
+  const youtubeUrl = g.youtubeId ? `https://www.youtube.com/watch?v=${g.youtubeId}` : "";
+  const guestLine = g.role ? `${g.name} (${g.role})` : g.name;
+  const bio = g.bio || `${g.name} appeared on Pale Blue Nexus.`;
+  return `# ${markdownText(g.name)} on Pale Blue Nexus
+
+## ${markdownText(g.episode)} — ${markdownText(title)}
+
+**Host:** Yohann Calpu (Pale Blue Nexus, Co-founder Aloomii)
+**Guest:** ${markdownText(guestLine)}
+**Duration:** ${markdownText(duration)}
+**Published:** ${markdownText(g.date || "")}
+**YouTube:** ${youtubeUrl}
+
+## About the Guest
+
+${markdownText(bio)}
+`;
+}
+
+function updateEpisodeMarkdownFiles(guests, items, byGuest) {
+  let created = 0;
+  for (const guest of publicEpisodeGuests(guests)) {
+    const episodeDir = join(ROOT, "episodes", guest.episodeSlug);
+    const markdownPath = join(episodeDir, "index.md");
+    if (existsSync(markdownPath)) continue;
+    mkdirSync(episodeDir, { recursive: true });
+    writeFileSync(markdownPath, compactEpisodeMarkdown(guest, byGuest[guest.slug] || items.find((item) => item.id === guest.youtubeId)));
+    created += 1;
+  }
+  return created;
+}
+
+function episodeSitemapBlock(guests) {
+  const lines = ["  <!-- AUTO-EPISODES:start -->"];
+  for (const guest of publicEpisodeGuests(guests)) {
+    lines.push(`  <url><loc>https://palebluenexus.com/episodes/${esc(guest.episodeSlug)}/</loc></url>`);
+  }
+  lines.push("  <!-- AUTO-EPISODES:end -->");
+  return lines;
+}
+
+function updateSitemap(sitemap, guests) {
+  const lines = sitemap.replace(/\r\n/g, "\n").split("\n");
+  const cleaned = [];
+  let inAutoBlock = false;
+  for (const line of lines) {
+    if (line.includes("<!-- AUTO-EPISODES:start -->")) {
+      inAutoBlock = true;
+      continue;
+    }
+    if (line.includes("<!-- AUTO-EPISODES:end -->")) {
+      inAutoBlock = false;
+      continue;
+    }
+    if (inAutoBlock) continue;
+    if (/<loc>https:\/\/palebluenexus\.com\/episodes\/[^/]+\/<\/loc>/.test(line)) continue;
+    cleaned.push(line);
+  }
+  const indexLine = cleaned.findIndex((line) => line.includes("<loc>https://palebluenexus.com/episodes/</loc>"));
+  const insertAt = indexLine >= 0 ? indexLine + 1 : cleaned.length - 1;
+  cleaned.splice(insertAt, 0, ...episodeSitemapBlock(guests));
+  return `${cleaned.join("\n").replace(/\n+$/, "")}\n`;
+}
+
+function episodeLlmsBlock(guests, byGuest, items) {
+  const lines = ["<!-- AUTO-EPISODES:start -->"];
+  for (const guest of publicEpisodeGuests(guests)) {
+    const item = byGuest[guest.slug] || items.find((candidate) => candidate.id === guest.youtubeId);
+    const title = guest.episodeTitle || item?.title || "";
+    const bio = guest.bio || `${guest.name} appeared on Pale Blue Nexus.`;
+    lines.push(
+      `### ${markdownText(guest.episode)}: ${markdownText(guest.name)}`,
+      markdownText(bio),
+      "",
+      `- **Title:** ${markdownText(title)}`,
+      `- **Date:** ${markdownText(guest.date || "")}`,
+      `- **Duration:** ${markdownText(guest.duration || item?.duration || "")}`,
+      `- **YouTube:** https://www.youtube.com/watch?v=${guest.youtubeId}`,
+      `- **Episode page:** https://palebluenexus.com/episodes/${esc(guest.episodeSlug)}/`,
+      `- **Markdown:** https://palebluenexus.com/episodes/${esc(guest.episodeSlug)}/index.md`,
+      "",
+    );
+  }
+  lines.push("<!-- AUTO-EPISODES:end -->");
+  return lines.join("\n");
+}
+
+function updateLlms(llms, guests, byGuest, items) {
+  const block = episodeLlmsBlock(guests, byGuest, items);
+  const markerRe = /<!-- AUTO-EPISODES:start -->[\s\S]*?<!-- AUTO-EPISODES:end -->/;
+  if (markerRe.test(llms)) return llms.replace(markerRe, block);
+  const sectionRe = /(## Episodes\n)[\s\S]*?(?=\n## Transcripts\b)/;
+  if (sectionRe.test(llms)) return llms.replace(sectionRe, (_, heading) => `${heading}\n${block}\n`);
+  return `${llms.trimEnd()}\n\n## Episodes\n\n${block}\n`;
 }
 
 /* -------------------------------------------------------------------- main */
@@ -1287,6 +1405,13 @@ async function main() {
   episodesIndexHtml = injectBetween(episodesIndexHtml, "AUTO-EPISODES", episodeIndexCardsHtml(episodeGuests, items));
   writeFileSync(episodesIndexPath, episodesIndexHtml);
   log(`updated ${episodeGuests.length} episode pages and episodes/index.html`);
+
+  const markdownEpisodesCreated = updateEpisodeMarkdownFiles(guests, items, byGuest);
+  const sitemapPath = join(ROOT, "sitemap.xml");
+  writeFileSync(sitemapPath, updateSitemap(readFileSync(sitemapPath, "utf8"), guests));
+  const llmsPath = join(ROOT, "llms.txt");
+  writeFileSync(llmsPath, updateLlms(readFileSync(llmsPath, "utf8"), guests, byGuest, items));
+  log(`updated sitemap.xml and llms.txt; created ${markdownEpisodesCreated} episode Markdown pages`);
 
   // per-guest promo og:image cards (hosted SVG, fetchable by social crawlers)
   const promoImgDir = join(ROOT, "images/promo");

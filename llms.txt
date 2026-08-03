@@ -12,25 +12,138 @@ Yohann Calpu — Host of Pale Blue Nexus, Co-founder of Aloomii.
 
 ## Episodes
 
+<!-- AUTO-EPISODES:start -->
 ### Episode 01: Jim Rogers
-Legendary investor and co-founder of the Quantum Fund.
+Co-founder of the Quantum Fund with George Soros. Returned 4,200% over ten years. Wrote Investment Biker and Adventure Capitalist after traveling through 116 countries. Now based in Singapore, still investing globally.
 
-- **Title:** What a Legendary Investor Told Me After 17 Years
+- **Title:** Legendary investor. Co-founder of the Quantum Fund with George Soros. The man who went around the world twice on a motorcycle and a car.
 - **Date:** 2026-02-24
 - **Duration:** 36:07
 - **YouTube:** https://www.youtube.com/watch?v=t3dDHRRZyHk
 - **Episode page:** https://palebluenexus.com/episodes/jim-rogers/
 - **Markdown:** https://palebluenexus.com/episodes/jim-rogers/index.md
-- **Guest website:** https://www.jimrogers.com
 
 ### Episode 02: Jack Couch
-Founder of Sophtron, building the open financial internet.
+Founder of Sophtron, building the open financial internet. Former Global VP of Payments at Xero. Founded Monchilla (acquired by Xero) and DeepIntel Solutions. A distribution operator who believes podcasts are the last channel where trust compounds.
 
-- **Title:** Why Sales Is Dead and Podcasts Build Trust
+- **Title:** Founder of Sophtron. The man building the open financial internet. On why sales is dead and podcasts are the new trust machine.
 - **Date:** 2026-03-10
+- **Duration:** 53:57
 - **YouTube:** https://www.youtube.com/watch?v=4wwUJRkLB90
 - **Episode page:** https://palebluenexus.com/episodes/jack-couch/
 - **Markdown:** https://palebluenexus.com/episodes/jack-couch/index.md
+
+### Episode 03: Austin Armstrong
+More than 4 million followers across social media. CEO and co-founder of Syllaby, an AI startup helping creators produce, schedule, and publish video at speed. Managing Partner at Bullhouse Ventures. Best-selling author of VIRALITY!
+
+- **Title:** CEO of Syllaby. Managing Partner, Bullhouse Ventures. 5 million followers across social media. The man who bet his agency on the AI wave and won.
+- **Date:** 2026-05-11
+- **Duration:** 49:11
+- **YouTube:** https://www.youtube.com/watch?v=CgWRHHS7A_g
+- **Episode page:** https://palebluenexus.com/episodes/austin-armstrong/
+- **Markdown:** https://palebluenexus.com/episodes/austin-armstrong/index.md
+
+### Episode 04: Nikola Borisov
+DeepInfra just closed a $107M Series B led by 500 Global, with NVIDIA and Samsung Next participating. The company processes nearly 5 trillion tokens per week across its own GPU infrastructure in 8 US data centers and supports 190+ open-source models.
+
+- **Title:** Co-founder & CEO of DeepInfra. Serving 5 trillion AI tokens a week across 8 US data centers. The man building the inference layer that enterprise AI runs on.
+- **Date:** 2026-05-14
+- **Duration:** 54:28
+- **YouTube:** https://www.youtube.com/watch?v=DS2-iheW6pI
+- **Episode page:** https://palebluenexus.com/episodes/nikola-borisov/
+- **Markdown:** https://palebluenexus.com/episodes/nikola-borisov/index.md
+
+### Episode 05: Nectarios Economakis
+Twenty years inside the Canadian tech ecosystem. First BD hire at Google Montreal, where he helped drive 50% year-over-year growth from 2011. Co-founded The PNR. Now Partner at Amiral Ventures, an early-stage and growth venture fund based in Montreal.
+
+- **Title:** Inside a New $40M Fund Built to Fix Canada's Brain Drain
+- **Date:** 2026-05-30
+- **Duration:** 26:56
+- **YouTube:** https://www.youtube.com/watch?v=y_ES2M40j7s
+- **Episode page:** https://palebluenexus.com/episodes/nectarios-economakis/
+- **Markdown:** https://palebluenexus.com/episodes/nectarios-economakis/index.md
+
+### Episode 06: Charles Cormier
+Founder and CEO of TopLeads. Builds AI-leveraged go-to-market and sales systems, and writes about how small teams compound output with AI rather than replacing the humans behind it.
+
+- **Title:** The Power Broker Thesis: Why Charles Cormier Is Betting on Humans, Not Agents
+- **Date:** 2026-06-29
+- **Duration:** 48:41
+- **YouTube:** https://www.youtube.com/watch?v=QPwbfB8WIPY
+- **Episode page:** https://palebluenexus.com/episodes/charles-cormier/
+- **Markdown:** https://palebluenexus.com/episodes/charles-cormier/index.md
+
+### Episode 07: Eliza Blank
+Thirteen years building The Sill, the houseplant company that put 'plant parent' into the cultural vocabulary. Twelve stores, $25M raised, exited in 2024. Now CEO of The Farmlink Project, which moved 150 million pounds of rescued produce in 2025.
+
+- **Title:** The Logistics of Saving Food: Inside The Farmlink Project
+- **Date:** 2026-06-29
+- **Duration:** 29:19
+- **YouTube:** https://www.youtube.com/watch?v=C9Y1jk3o5SQ
+- **Episode page:** https://palebluenexus.com/episodes/eliza-blank/
+- **Markdown:** https://palebluenexus.com/episodes/eliza-blank/index.md
+
+### Episode 08: Haren Bhakta, CFA
+Founder and CEO of Inside Ownership Index (OWN), built on the idea that companies with deep insider ownership outperform the market. A CFA charterholder who previously led product at Dapper Labs (NBA Top Shot, Flow blockchain).
+
+- **Title:** Why the S&P Buys More of a Company After Its Founder Dies
+- **Date:** 2026-07-08
+- **Duration:** 27:34
+- **YouTube:** https://www.youtube.com/watch?v=XjHigKgY_78
+- **Episode page:** https://palebluenexus.com/episodes/haren-bhakta/
+- **Markdown:** https://palebluenexus.com/episodes/haren-bhakta/index.md
+
+### Episode 09: Steve Gullans, PhD
+Eighteen years on Harvard Medical School faculty, 130+ scientific papers, AAAS Fellow. Co-founder of Excel Venture Management. Co-author of Evolving Ourselves with Juan Enriquez. Now CEO of Thynk Inc, applying cognitive training to ADHD and brain performance.
+
+- **Title:** You Can Train Your Brain to Flow on Command
+- **Date:** 2026-07-15
+- **Duration:** 48:33
+- **YouTube:** https://www.youtube.com/watch?v=9hy2PeP1P4o
+- **Episode page:** https://palebluenexus.com/episodes/steve-gullans/
+- **Markdown:** https://palebluenexus.com/episodes/steve-gullans/index.md
+
+### Episode 10: Mary Grove
+Managing Partner at Bread & Butter Ventures, backing founders building beyond the coasts. Previously founded and led Google for Startups, supporting entrepreneurs across more than 135 countries.
+
+- **Title:** 75% of VC Dollars Go to 3 Cities. She Left for Minnesota.
+- **Date:** 2026-07-25
+- **Duration:** 37:46
+- **YouTube:** https://www.youtube.com/watch?v=56Wm8v-vkto
+- **Episode page:** https://palebluenexus.com/episodes/mary-grove/
+- **Markdown:** https://palebluenexus.com/episodes/mary-grove/index.md
+
+### Episode 11: Vitaly Golomb
+Global investor, operator, and author of the bestseller Accelerated Startup. Former head of HP Tech Ventures, he has mentored and backed startups across dozens of countries.
+
+- **Title:** Past Industrial Revolutions Took 100 Years. This One Takes 10.
+- **Date:** 2026-07-27
+- **Duration:** 48:18
+- **YouTube:** https://www.youtube.com/watch?v=v2cOEyVK6QA
+- **Episode page:** https://palebluenexus.com/episodes/vitaly-golomb/
+- **Markdown:** https://palebluenexus.com/episodes/vitaly-golomb/index.md
+
+### Episode 12: Vadim Peskov
+Co-founder and CEO of Diffco, a Silicon Valley software studio building AI and mobile products. A veteran engineer who argues that better models don't automatically mean better software.
+
+- **Title:** Why This Veteran Engineer Says Better Models Don't Mean Better Software
+- **Date:** 2026-07-28
+- **Duration:** 42:52
+- **YouTube:** https://www.youtube.com/watch?v=4Zcf0qmPu_I
+- **Episode page:** https://palebluenexus.com/episodes/vadim-peskov/
+- **Markdown:** https://palebluenexus.com/episodes/vadim-peskov/index.md
+
+### Episode 13: Matt Blumberg
+CEO of Markup AI, building AI agents that keep enterprise content accurate and on-brand. A serial entrepreneur, he previously founded and led Return Path and co-founded Bolster, and is the author of Startup CEO.
+
+- **Title:** Content Is the Next Code: Inside the Rise of AI Guardian Agents.
+- **Date:** 2026-08-01
+- **Duration:** 25:37
+- **YouTube:** https://www.youtube.com/watch?v=3znLLBFnvQg
+- **Episode page:** https://palebluenexus.com/episodes/matt-blumberg/
+- **Markdown:** https://palebluenexus.com/episodes/matt-blumberg/index.md
+
+<!-- AUTO-EPISODES:end -->
 
 ## Transcripts
 
