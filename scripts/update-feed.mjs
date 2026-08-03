@@ -354,6 +354,40 @@ function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
   return drafts;
 }
 
+function removeDuplicateGuestVideos(guests) {
+  const ownerById = new Map();
+  const kept = [];
+  let removed = 0;
+
+  for (const guest of guests) {
+    if (!guest.youtubeId) {
+      kept.push(guest);
+      continue;
+    }
+
+    const existing = ownerById.get(guest.youtubeId);
+    if (!existing) {
+      ownerById.set(guest.youtubeId, guest);
+      kept.push(guest);
+      continue;
+    }
+
+    if (existing.needsReview && !guest.needsReview) {
+      kept[kept.indexOf(existing)] = guest;
+      ownerById.set(guest.youtubeId, guest);
+      removed += 1;
+    } else if (guest.needsReview) {
+      removed += 1;
+    } else {
+      kept.push(guest);
+      log(`warning: duplicate curated guest video id ${guest.youtubeId}`);
+    }
+  }
+
+  guests.splice(0, guests.length, ...kept);
+  return removed;
+}
+
 /* ----------------------------------------------------------- html rendering */
 
 const PLATFORM_LABEL = { youtube: "YouTube", tiktok: "TikTok" };
@@ -759,7 +793,8 @@ async function main() {
           remappedGuests += 1;
         }
       }
-      if (remappedGuests) {
+      const removedDuplicateGuests = removeDuplicateGuestVideos(guests);
+      if (remappedGuests || removedDuplicateGuests) {
         writeFileSync(join(ROOT, "data/guests.json"), JSON.stringify(guestsCfg, null, 2) + "\n");
       }
       yt = yt.filter((item) => !audioIds.has(item.id));
@@ -767,6 +802,7 @@ async function main() {
       yt = dedupeYouTube(yt);
       log(`youtube: ${yt.length} videos (dropped ${audioIds.size} audio-only re-uploads, deduped from ${beforeDedupe})`);
       if (remappedGuests) log(`remapped ${remappedGuests} guest audio references to video twins`);
+      if (removedDuplicateGuests) log(`removed ${removedDuplicateGuests} duplicate auto-detected guest records`);
       try {
         syncUnrecognizedEpisodes(yt, guests, guestsCfg);
       } catch (e) {
