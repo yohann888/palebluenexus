@@ -33,6 +33,12 @@ const TT_USERNAME = "palebluenexus";
 
 const LATEST_COUNT = 6;
 const TOP_COUNT = 10;
+const SHOW_LINKS = {
+  youtube: "https://www.youtube.com/@palebluenexus",
+  apple: "https://podcasts.apple.com/ca/podcast/pale-blue-nexus/id1529530113",
+  spotify: "https://open.spotify.com/show/6xY4m0p3646gZGMCb33Z3d",
+  tiktok: "https://www.tiktok.com/@palebluenexus",
+};
 
 const log = (...a) => console.log("[update-feed]", ...a);
 
@@ -439,6 +445,134 @@ function cardHtml(item, { rank } = {}) {
           <p class="feed-title">${esc(item.title)}</p>
           <p class="feed-meta">${esc(metric)}</p>
         </a>`;
+}
+
+function episodeDescription(g) {
+  const title = String(g.episodeTitle || "").trim();
+  const role = String(g.role || "").trim();
+  const titlePart = title.endsWith(".") ? title : `${title}.`;
+  const rolePart = role.endsWith(".") ? role : `${role}.`;
+  return [titlePart, rolePart].filter(Boolean).join(" ");
+}
+
+function episodePageHtml(g, { item, reach = {}, clips = [] } = {}) {
+  const episodeTitle = String(g.episodeTitle || item?.title || "").trim();
+  const pageTitle = `${g.name} - Pale Blue Nexus ${g.episode}`;
+  const description = episodeDescription(g);
+  const canonical = `https://palebluenexus.com/episodes/${g.episodeSlug}/`;
+  const image = `https://img.youtube.com/vi/${g.youtubeId}/maxresdefault.jpg`;
+  const datePublished = String(g.date || item?.publishedAt || "").slice(0, 10);
+  const total = (reach.views || 0) + (reach.listens || 0);
+  const metaParts = [esc(g.episode)];
+  if (total > 0) {
+    metaParts.push(`${fmtViews(total)} ${reach.listens > 0 ? "views &amp; listens" : "views"}`);
+  }
+  if (item?.duration) metaParts.push(esc(item.duration));
+  const metaHtml = metaParts.map((part) => `<span>${part}</span>`).join('\n          <span>&middot;</span>\n          ');
+  const episodeSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "PodcastSeries",
+        "@id": "https://palebluenexus.com/#podcast",
+        name: "Pale Blue Nexus",
+        url: "https://palebluenexus.com/",
+      },
+      {
+        "@type": "PodcastEpisode",
+        "@id": `${canonical}#episode`,
+        name: pageTitle,
+        description,
+        url: canonical,
+        image,
+        datePublished,
+        partOfSeries: { "@id": "https://palebluenexus.com/#podcast" },
+        guest: {
+          "@type": "Person",
+          name: g.name,
+          jobTitle: g.role,
+          ...(g.website ? { url: g.website } : {}),
+        },
+        associatedMedia: { "@id": `${canonical}#video` },
+      },
+      {
+        "@type": "VideoObject",
+        "@id": `${canonical}#video`,
+        name: pageTitle,
+        description,
+        thumbnailUrl: image,
+        uploadDate: datePublished,
+        contentUrl: `https://www.youtube.com/watch?v=${g.youtubeId}`,
+        embedUrl: `https://www.youtube.com/embed/${g.youtubeId}`,
+      },
+    ],
+  };
+  const clipsHtml = clips.length
+    ? `
+  <section style="background:linear-gradient(180deg,rgba(10,14,28,1) 0%,var(--bg) 100%)">
+    <div class="section-container">
+      <span class="section-eyebrow eyebrow fade">Clips</span>
+      <h2 class="fade">The moments that travelled.</h2>
+      <div class="clip-grid">
+${clips.map((clip) => {
+  const thumb = clip.thumb || `https://i.ytimg.com/vi/${clip.id}/hqdefault.jpg`;
+  const thumbUrl = /^https?:\/\//i.test(thumb) || thumb.startsWith("/")
+    ? thumb
+    : `/${thumb.replace(/^\.?\//, "")}`;
+  const platform = PLATFORM_LABEL[clip.platform] || clip.platform;
+  return `        <a href="${esc(clip.url)}" target="_blank" rel="noopener noreferrer" class="clip-card">
+          <div class="clip-thumb"><img src="${esc(thumbUrl)}" alt="${esc(clip.title)}" loading="lazy" /><span class="clip-badge">${esc(platform)}</span></div>
+          <div class="clip-info"><p class="clip-title">${esc(clip.title)}</p><p class="clip-meta">${fmtViews(clip.views || 0)} views</p></div>
+        </a>`;
+}).join("\n")}
+      </div>
+    </div>
+  </section>`
+    : "";
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${esc(pageTitle)}</title>
+  <link rel="canonical" href="${canonical}" />
+  <meta name="description" content="${esc(description)}" />
+  <meta property="og:title" content="${esc(pageTitle)}" /><meta property="og:description" content="${esc(description)}" /><meta property="og:type" content="video.episode" /><meta property="og:url" content="${canonical}" /><meta property="og:image" content="${image}" />
+  <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="${esc(pageTitle)}" /><meta name="twitter:description" content="${esc(description)}" /><meta name="twitter:image" content="${image}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+  <script type="application/ld+json">${JSON.stringify(episodeSchema).replace(/</g, "\\u003c")}</script>
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg:#04060e;--border:rgba(255,255,255,.06);--gold:#D4A84B;--secondary:#A6D2E6;--muted:rgba(146,196,222,.7)}html{scroll-behavior:smooth}body{font-family:Montserrat,sans-serif;background:var(--bg);color:#fff;line-height:1.7}nav{position:fixed;top:0;left:0;right:0;z-index:2;padding:1.25rem 2.5rem}nav.scrolled{background:rgba(4,6,14,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}.nav-logo{display:flex}.nav-logo img{height:40px}.section-container{max-width:900px;margin:auto;padding:0 2rem}section{padding:7rem 2rem}.eyebrow{font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:1rem}h1,h2{font-family:"Cormorant Garamond",serif;line-height:1.15}h1{font-size:clamp(2rem,4vw,2.8rem);margin-bottom:1rem}h2{font-size:2.4rem;margin-bottom:1rem}.hero{min-height:60vh;display:flex;align-items:flex-end;padding:8rem 0 4rem}.photo{width:120px;height:120px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);margin-bottom:1.5rem}.meta{display:flex;gap:1.5rem;color:var(--muted);font-size:.85rem;margin:1rem 0 1.5rem}.share{display:inline-flex;padding:.5rem 1rem;border:1px solid var(--border);border-radius:100px;color:var(--secondary);text-decoration:none;font-size:.8rem}.embed{aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--border)}iframe{width:100%;height:100%;border:0}.bio{color:var(--secondary);max-width:640px}.channel-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}.clip-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.5rem}.clip-card{display:block;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;overflow:hidden;color:inherit;text-decoration:none;transition:transform .3s,border-color .3s}.clip-card:hover{transform:translateY(-3px);border-color:rgba(212,168,75,.5)}.clip-thumb{aspect-ratio:16/9;background:#0a0f1e;position:relative}.clip-thumb img{width:100%;height:100%;object-fit:cover}.clip-badge{position:absolute;left:.65rem;bottom:.65rem;background:rgba(4,6,14,.85);color:var(--secondary);padding:.2rem .45rem;border-radius:999px;font-size:.65rem}.clip-info{padding:.8rem}.clip-title{font-size:.82rem;line-height:1.4;color:#fff}.clip-meta{font-size:.75rem;color:var(--muted);margin-top:.4rem}footer{padding:3rem 2rem;text-align:center;border-top:1px solid var(--border);color:var(--muted);font-size:.85rem}.fade{animation:fade .8s ease forwards}@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}@media(max-width:600px){nav{padding:1rem 1.25rem}.section-container{padding:0 1rem}section{padding-left:1rem;padding-right:1rem}}
+  </style>
+</head>
+<body><nav id="nav"><a href="/" class="nav-logo"><img src="/images/pbn-logo.png" alt="Pale Blue Nexus" /></a></nav>
+  <section class="hero"><div class="section-container"><div class="fade"><span class="section-eyebrow eyebrow">${esc(g.episode)}</span><img class="guest-photo photo" src="../../${esc(g.photo)}" alt="${esc(g.name)}" /><h1>${esc(g.name)}</h1><p style="font-size:1.1rem;color:var(--secondary);max-width:600px">${esc(episodeTitle)}</p><div class="episode-meta meta">${metaHtml}</div><a class="share-btn share" href="https://www.youtube.com/watch?v=${encodeURIComponent(g.youtubeId)}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></div></div></section>
+  <section style="padding-top:0"><div class="section-container"><div class="embed fade"><iframe src="https://www.youtube.com/embed/${encodeURIComponent(g.youtubeId)}" title="${esc(episodeTitle)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div></div></section>
+  <section style="background:linear-gradient(180deg,rgba(10,14,28,1) 0%,var(--bg) 100%)"><div class="section-container"><span class="section-eyebrow eyebrow fade">Watch &amp; listen everywhere</span><h2 class="fade">Find the full conversation.</h2><div class="channel-links"><a class="share" href="https://www.youtube.com/watch?v=${encodeURIComponent(g.youtubeId)}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a><a class="share" href="${SHOW_LINKS.apple}" target="_blank" rel="noopener noreferrer">Listen on Apple Podcasts</a><a class="share" href="${SHOW_LINKS.spotify}" target="_blank" rel="noopener noreferrer">Listen on Spotify</a></div></div></section>
+${clipsHtml}
+  <section style="background:linear-gradient(180deg,rgba(10,14,28,1) 0%,var(--bg) 100%)"><div class="section-container"><span class="section-eyebrow eyebrow fade">About the Guest</span><h2 class="fade">${esc(g.name)}.</h2><p class="guest-bio bio fade">${esc(g.bio || "")}</p></div></section>
+  <footer><p>Pale Blue Nexus. Making sense of the future, from right here.</p></footer><script>window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50));</script>
+</body></html>
+`;
+}
+
+function episodeIndexCardsHtml(guests, items) {
+  const published = guests
+    .filter((g) => g.status === "published" && g.episodeSlug && g.youtubeId)
+    .sort((a, b) => {
+      const aNumber = parseInt(String(a.episode).match(/\d+/)?.[0] || "0", 10);
+      const bNumber = parseInt(String(b.episode).match(/\d+/)?.[0] || "0", 10);
+      return bNumber - aNumber;
+    });
+  return `\n${published.map((g) => {
+    const item = items.find((i) => i.id === g.youtubeId);
+    const duration = item?.duration || "";
+    const thumb = `https://img.youtube.com/vi/${g.youtubeId}/hqdefault.jpg`;
+    return `        <a href="/episodes/${esc(g.episodeSlug)}/" class="episode-card fade-up">
+          <div class="episode-thumb"><img src="${thumb}" alt="${esc(g.name)}: Pale Blue Nexus ${esc(g.episode)}" loading="lazy" /></div>
+          <div class="episode-info"><p class="episode-number">${esc(g.episode)}</p><h3 class="episode-title">${esc(g.name)}</h3><p class="episode-desc">${esc(g.episodeTitle || item?.title || "")}</p><div class="episode-meta-row"><span>${esc(duration)}</span><span>&middot;</span><span>YouTube</span></div></div>
+        </a>`;
+  }).join("\n")}`;
 }
 
 function latestDropsHtml(items) {
@@ -959,6 +1093,25 @@ async function main() {
   }
   writeFileSync(partnerPath, partnerHtml);
   log("updated partner/index.html audience stats");
+
+  const episodeGuests = guests.filter((g) => g.status === "published" && g.episodeSlug && g.youtubeId && isPublicGuest(g));
+  for (const g of episodeGuests) {
+    const episodeDir = join(ROOT, "episodes", g.episodeSlug);
+    mkdirSync(episodeDir, { recursive: true });
+    const episodeItem = items.find((i) => i.id === g.youtubeId) || byGuest[g.slug];
+    const clips = items
+      .filter((i) => i.guestSlug === g.slug && i.type === "clip")
+      .sort((a, b) => b.score - a.score);
+    writeFileSync(
+      join(episodeDir, "index.html"),
+      episodePageHtml(g, { item: episodeItem, reach: guestReach[g.slug], clips }),
+    );
+  }
+  const episodesIndexPath = join(ROOT, "episodes/index.html");
+  let episodesIndexHtml = readFileSync(episodesIndexPath, "utf8");
+  episodesIndexHtml = injectBetween(episodesIndexHtml, "AUTO-EPISODES", episodeIndexCardsHtml(episodeGuests, items));
+  writeFileSync(episodesIndexPath, episodesIndexHtml);
+  log(`wrote ${episodeGuests.length} episode pages and updated episodes/index.html`);
 
   // per-guest promo og:image cards (hosted SVG, fetchable by social crawlers)
   const promoImgDir = join(ROOT, "images/promo");
