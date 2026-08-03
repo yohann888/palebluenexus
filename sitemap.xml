@@ -4,10 +4,21 @@
   <url><loc>https://palebluenexus.com/book/</loc></url>
   <url><loc>https://palebluenexus.com/partner/</loc></url>
   <url><loc>https://palebluenexus.com/episodes/</loc></url>
-  <url><loc>https://palebluenexus.com/episodes/austin-armstrong/</loc></url>
-  <url><loc>https://palebluenexus.com/episodes/jack-couch/</loc></url>
+  <!-- AUTO-EPISODES:start -->
   <url><loc>https://palebluenexus.com/episodes/jim-rogers/</loc></url>
+  <url><loc>https://palebluenexus.com/episodes/jack-couch/</loc></url>
+  <url><loc>https://palebluenexus.com/episodes/austin-armstrong/</loc></url>
   <url><loc>https://palebluenexus.com/episodes/nikola-borisov/</loc></url>
+  <url><loc>https://palebluenexus.com/episodes/nectarios-economakis/</loc></url>
+  <url><loc>https://palebluenexus.com/episodes/charles-cormier/</loc></url>
+  <url><loc>https://palebluenexus.com/episodes/eliza-blank/</loc></url>
+  <url><loc>https://palebluenexus.com/episodes/haren-bhakta/</loc></url>
+  <url><loc>https://palebluenexus.com/episodes/steve-gullans/</loc></url>
+  <url><loc>https://palebluenexus.com/episodes/mary-grove/</loc></url>
+  <url><loc>https://palebluenexus.com/episodes/vitaly-golomb/</loc></url>
+  <url><loc>https://palebluenexus.com/episodes/vadim-peskov/</loc></url>
+  <url><loc>https://palebluenexus.com/episodes/matt-blumberg/</loc></url>
+  <!-- AUTO-EPISODES:end -->
   <url><loc>https://palebluenexus.com/share/</loc></url>
   <url><loc>https://palebluenexus.com/share/guest/austin-armstrong.html</loc></url>
   <url><loc>https://palebluenexus.com/share/guest/eliza-blank.html</loc></url>
