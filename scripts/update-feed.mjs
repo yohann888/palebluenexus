@@ -349,6 +349,7 @@ function parseGuestRole(text) {
 
 async function fetchGuestHeadshot(name, slug) {
   fetchGuestHeadshot.lastBio = "";
+  fetchGuestHeadshot.lastQid = "";
   const userAgent = "PaleBlueNexus/1.0 (https://palebluenexus.com)";
   const outputPath = join(ROOT, "images", `guest-${slug}.jpg`);
   const tempPath = join(tmpdir(), `pbn-headshot-${slug}-${Date.now()}`);
@@ -362,6 +363,7 @@ async function fetchGuestHeadshot(name, slug) {
     const summary = await summaryRes.json();
     if (summary.type === "disambiguation") return null;
     if (String(summary.title || "").trim().toLowerCase() !== String(name).trim().toLowerCase()) return null;
+    fetchGuestHeadshot.lastQid = summary.wikibase_item || "";
     const sourceText = `${summary.extract || ""} ${summary.description || ""}`;
     if (!/\b(founder|co-?founder|ceo|cto|coo|president|investor|entrepreneur|author|executive|scientist|venture|chief|partner)\b/i.test(sourceText)) {
       return null;
@@ -431,6 +433,62 @@ async function fetchGuestHeadshot(name, slug) {
 }
 
 fetchGuestHeadshot.lastBio = "";
+fetchGuestHeadshot.lastQid = "";
+
+async function fetchGuestWikidataQid(name) {
+  try {
+    const response = await fetch(
+      `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(name)}`,
+      { headers: { "User-Agent": "PaleBlueNexus/1.0 (https://palebluenexus.com)", accept: "application/json" } },
+    );
+    if (!response.ok) return "";
+    const summary = await response.json();
+    if (summary.type === "disambiguation") return "";
+    if (String(summary.title || "").trim().toLowerCase() !== String(name).trim().toLowerCase()) return "";
+    return String(summary.wikibase_item || "");
+  } catch {
+    return "";
+  }
+}
+
+async function fetchWikidataLinks(qid) {
+  const empty = { website: "", linkedin: "", x: "" };
+  if (!qid) return empty;
+  try {
+    const response = await fetch(
+      `https://www.wikidata.org/wiki/Special:EntityData/${encodeURIComponent(qid)}.json`,
+      { headers: { "User-Agent": "PaleBlueNexus/1.0 (https://palebluenexus.com)" } },
+    );
+    if (!response.ok) return empty;
+    const entity = (await response.json())?.entities?.[qid];
+    const claims = entity?.claims || {};
+    const firstValue = (property) => claims[property]?.find((claim) => claim?.mainsnak?.datavalue?.value)?.mainsnak?.datavalue?.value;
+    const websiteValue = firstValue("P856");
+    let website = "";
+    if (typeof websiteValue === "string") {
+      try {
+        const url = new URL(websiteValue);
+        if (url.protocol === "https:" || url.protocol === "http:") website = url.toString();
+      } catch {}
+    }
+    const linkedinId = firstValue("P6634");
+    const xUsername = firstValue("P2002");
+    const linkedin = typeof linkedinId === "string" && /^[A-Za-z0-9._%-]+$/.test(linkedinId)
+      ? `https://www.linkedin.com/in/${linkedinId}`
+      : "";
+    const x = typeof xUsername === "string" && /^@?[A-Za-z0-9_]{1,15}$/.test(xUsername)
+      ? `https://x.com/${xUsername.replace(/^@/, "")}`
+      : "";
+    return { website, linkedin, x };
+  } catch {
+    return empty;
+  }
+}
+
+function parseGuestLinksFromDescription(descSnippet) {
+  const match = String(descSnippet || "").match(/https?:\/\/(?:www\.)?linkedin\.com\/in\/[A-Za-z0-9\-_%]+/i);
+  return { linkedin: match ? match[0] : "" };
+}
 
 function nextEpisodeNumber(guests) {
   const maxEpisode = guests.reduce((max, guest) => {
@@ -473,6 +531,8 @@ async function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
     const canPublish = Boolean(name && role);
     const photo = canPublish ? await fetchGuestHeadshot(name, slug) : null;
     if (canPublish) {
+      const wikiLinks = await fetchWikidataLinks(fetchGuestHeadshot.lastQid);
+      const descriptionLinks = parseGuestLinksFromDescription(item.descSnippet);
       const publicPhoto = photo || `images/guest-${slug}.svg`;
       if (!photo) {
         writeFileSync(join(ROOT, "images", `guest-${slug}.svg`), guestPlaceholderSvg(name));
@@ -482,8 +542,9 @@ async function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
         name,
         role,
         photo: publicPhoto,
-        linkedin: "",
-        website: "",
+        linkedin: wikiLinks.linkedin || descriptionLinks.linkedin || "",
+        website: wikiLinks.website || "",
+        x: wikiLinks.x || "",
         status: "published",
         episode: nextEpisodeNumber(guests),
         episodeSlug: slug,
@@ -514,6 +575,7 @@ async function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
         episodeSlug: "",
         youtubeId: item.id,
         tiktokIds: [],
+        x: "",
         quote: "",
         bio: "",
         date: item.publishedAt ? item.publishedAt.slice(0, 10) : "",
@@ -679,6 +741,24 @@ function episodeKitHtml(g, { item, reach = {}, clips = [] } = {}) {
   const total = (reach.views || 0) + (reach.listens || 0);
   const combinedStat = total > 0 ? `${fmtViews(total)} ${reach.listens > 0 ? "views & listens" : "views"}` : "";
   const episodeUrl = `https://www.youtube.com/watch?v=${esc(g.youtubeId)}`;
+  const guestLinks = [];
+  if (g.website) {
+    try {
+      const websiteUrl = new URL(g.website);
+      if (websiteUrl.protocol === "https:" || websiteUrl.protocol === "http:") {
+        guestLinks.push({ href: g.website, label: websiteUrl.hostname.replace(/^www\./, "") });
+      }
+    } catch {}
+  }
+  if (g.linkedin && /^https?:\/\/(?:www\.)?linkedin\.com\/in\/[A-Za-z0-9._%\-]+\/?$/i.test(g.linkedin)) {
+    guestLinks.push({ href: g.linkedin, label: "LinkedIn" });
+  }
+  if (g.x && /^https:\/\/x\.com\/[A-Za-z0-9_]{1,15}\/?$/i.test(g.x)) {
+    guestLinks.push({ href: g.x, label: "X" });
+  }
+  const guestLinksBlock = guestLinks.length
+    ? `<div class="ep-kit-guest-links fade-up">${guestLinks.map((link) => `<a href="${esc(link.href)}" target="_blank" rel="noopener noreferrer" class="share-btn share">${esc(link.label)}</a>`).join("\n")}</div>`
+    : "";
   const clipBlocks = clips.length
     ? `<div class="ep-kit-clips">
         <h2 class="ep-kit-heading">Clips</h2>
@@ -697,7 +777,7 @@ ${clips.map((clip) => {
     : "";
   return `
   <style>
-    .ep-kit{padding:0 0 2rem}.ep-kit-shell{background:linear-gradient(180deg,rgba(10,14,28,1) 0%,#04060e 100%);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)}.ep-kit-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}.ep-kit-stat{color:#A6D2E6;font-size:1rem}.ep-kit-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}.ep-kit-heading{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;line-height:1.15;margin-bottom:1rem}.ep-kit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}.ep-kit-card{display:block;color:inherit;text-decoration:none;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;transition:transform .3s,border-color .3s}.ep-kit-card:hover{transform:translateY(-3px);border-color:rgba(212,168,75,.5)}.ep-kit-thumb{aspect-ratio:16/9;position:relative;background:#0a0f1e}.ep-kit-thumb img{width:100%;height:100%;object-fit:cover}.ep-kit-badge{position:absolute;left:.65rem;bottom:.65rem;background:rgba(4,6,14,.85);color:#7EB8DA;padding:.2rem .45rem;border-radius:999px;font-size:.65rem}.ep-kit-body{padding:.9rem}.ep-kit-clip-title{font-size:.82rem;line-height:1.4;color:#fff}.ep-kit-clip-meta{font-size:.75rem;color:rgba(166,210,230,0.6);margin-top:.35rem}
+    .ep-kit{padding:0 0 2rem}.ep-kit-shell{background:linear-gradient(180deg,rgba(10,14,28,1) 0%,#04060e 100%);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)}.ep-kit-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}.ep-kit-stat{color:#A6D2E6;font-size:1rem}.ep-kit-links,.ep-kit-guest-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}.ep-kit-heading{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;line-height:1.15;margin-bottom:1rem}.ep-kit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}.ep-kit-card{display:block;color:inherit;text-decoration:none;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;transition:transform .3s,border-color .3s}.ep-kit-card:hover{transform:translateY(-3px);border-color:rgba(212,168,75,.5)}.ep-kit-thumb{aspect-ratio:16/9;position:relative;background:#0a0f1e}.ep-kit-thumb img{width:100%;height:100%;object-fit:cover}.ep-kit-badge{position:absolute;left:.65rem;bottom:.65rem;background:rgba(4,6,14,.85);color:#7EB8DA;padding:.2rem .45rem;border-radius:999px;font-size:.65rem}.ep-kit-body{padding:.9rem}.ep-kit-clip-title{font-size:.82rem;line-height:1.4;color:#fff}.ep-kit-clip-meta{font-size:.75rem;color:rgba(166,210,230,0.6);margin-top:.35rem}
   </style>
   <section class="ep-kit ep-kit-shell">
     <div class="section-container">
@@ -705,7 +785,7 @@ ${combinedStat ? `      <p class="ep-kit-stat fade-up">${combinedStat}</p>\n` : 
         <a href="${episodeUrl}" target="_blank" rel="noopener noreferrer" class="share-btn share">Watch on YouTube</a>
         <a href="${SHOW_LINKS.apple}" target="_blank" rel="noopener noreferrer" class="share-btn share">Listen on Apple Podcasts</a>
         <a href="${SHOW_LINKS.spotify}" target="_blank" rel="noopener noreferrer" class="share-btn share">Listen on Spotify</a>
-      </div>${clipBlocks ? `\n      ${clipBlocks}` : ""}
+      </div>${guestLinksBlock ? `\n      ${guestLinksBlock}` : ""}${clipBlocks ? `\n      ${clipBlocks}` : ""}
     </div>
   </section>`;
 }
@@ -1306,6 +1386,28 @@ async function main() {
   }
   if (guestsChanged) {
     writeFileSync(join(ROOT, "data/guests.json"), JSON.stringify(guestsCfg, null, 2) + "\n");
+  }
+  const socialBackfilled = [];
+  for (const guest of guests) {
+    if (guest.status !== "published" || !isPublicGuest(guest) || (guest.linkedin && guest.website && guest.x)) continue;
+    try {
+      const qid = await fetchGuestWikidataQid(guest.name);
+      const links = await fetchWikidataLinks(qid);
+      let changed = false;
+      for (const field of ["website", "linkedin", "x"]) {
+        if (!guest[field] && links[field]) {
+          guest[field] = links[field];
+          changed = true;
+        }
+      }
+      if (changed) socialBackfilled.push(guest.slug);
+    } catch (error) {
+      log(`warning: social-link backfill failed for ${guest.slug}:`, error.message);
+    }
+  }
+  if (socialBackfilled.length) {
+    writeFileSync(join(ROOT, "data/guests.json"), JSON.stringify(guestsCfg, null, 2) + "\n");
+    log(`backfilled guest social links: ${socialBackfilled.join(", ")}`);
   }
 
   const publishedGuests = guests.filter((g) => g.status === "published");
