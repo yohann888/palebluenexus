@@ -145,6 +145,7 @@ function resolveImageMagick() {
       imageMagickCommand = { command: "magick", prefix: ["convert"] };
     } catch {
       imageMagickCommand = null;
+      log("warning: ImageMagick unavailable; audio-only filtering is disabled");
     }
   }
   return imageMagickCommand;
