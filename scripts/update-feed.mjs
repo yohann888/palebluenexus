@@ -406,9 +406,13 @@ function removeDuplicateGuestVideos(guests) {
 const PLATFORM_LABEL = { youtube: "YouTube", tiktok: "TikTok" };
 
 function cardHtml(item, { rank } = {}) {
-  let metric = item.views ? `${fmtViews(item.views)} views` : (item.duration || "");
-  if (item.platform === "youtube" && item.listens > 0) {
-    metric += `${metric ? " · " : ""}${fmtViews(item.listens)} listens`;
+  let metric;
+  if (item.views) {
+    const hasListens = item.platform === "youtube" && item.listens > 0;
+    const total = item.views + (hasListens ? item.listens : 0);
+    metric = `${fmtViews(total)} ${hasListens ? "views & listens" : "views"}`;
+  } else {
+    metric = item.duration || "";
   }
   const badge = PLATFORM_LABEL[item.platform] || item.platform;
   const rankHtml = rank ? `<span class="feed-rank">#${rank}</span>` : "";
@@ -561,10 +565,9 @@ function guestCardHtml(g, item, reach = {}, { isLatest = false } = {}) {
     ? `/episodes/${g.episodeSlug}/`
     : (g.linkedin || g.website || (g.youtubeId ? `https://www.youtube.com/watch?v=${g.youtubeId}` : "#"));
   const ext = !(isPub && g.episodeSlug);
-  const reachSegments = [];
-  if (reach.views > 0) reachSegments.push(`${fmtViews(reach.views)} views`);
-  if (reach.listens > 0) reachSegments.push(`${fmtViews(reach.listens)} listens`);
-  const reachTag = reachSegments.length ? ` &middot; ${reachSegments.join(" &middot; ")}` : "";
+  const reachTotal = (reach.views || 0) + (reach.listens || 0);
+  const reachLabel = reach.listens > 0 ? "views &amp; listens" : "views";
+  const reachTag = reachTotal > 0 ? ` &middot; ${fmtViews(reachTotal)} ${reachLabel}` : "";
   const tag = isPub ? `${esc(g.episode)}${reachTag}` : esc(g.episode);
   const statusClass = isPub ? "guest-show-status-published" : "guest-show-status-upcoming";
   const statusLabel = isPub ? "Published" : "Coming soon";
