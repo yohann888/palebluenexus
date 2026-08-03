@@ -33,6 +33,12 @@ const TT_USERNAME = "palebluenexus";
 
 const LATEST_COUNT = 6;
 const TOP_COUNT = 10;
+const SHOW_LINKS = {
+  youtube: "https://www.youtube.com/@palebluenexus",
+  apple: "https://podcasts.apple.com/ca/podcast/pale-blue-nexus/id1529530113",
+  spotify: "https://open.spotify.com/show/6xY4m0p3646gZGMCb33Z3d",
+  tiktok: "https://www.tiktok.com/@palebluenexus",
+};
 
 const log = (...a) => console.log("[update-feed]", ...a);
 
@@ -405,10 +411,19 @@ function removeDuplicateGuestVideos(guests) {
 
 const PLATFORM_LABEL = { youtube: "YouTube", tiktok: "TikTok" };
 
+function reachTotal(item) {
+  const listens = item.platform === "youtube" ? (item.listens || 0) : 0;
+  return (item.views || 0) + listens;
+}
+
 function cardHtml(item, { rank } = {}) {
-  let metric = item.views ? `${fmtViews(item.views)} views` : (item.duration || "");
-  if (item.platform === "youtube" && item.listens > 0) {
-    metric += `${metric ? " · " : ""}${fmtViews(item.listens)} listens`;
+  const listens = item.platform === "youtube" ? (item.listens || 0) : 0;
+  const total = (item.views || 0) + listens;
+  let metric;
+  if (total > 0) {
+    metric = `${fmtViews(total)} ${listens > 0 ? "views & listens" : "views"}`;
+  } else {
+    metric = item.duration || "";
   }
   const badge = PLATFORM_LABEL[item.platform] || item.platform;
   const rankHtml = rank ? `<span class="feed-rank">#${rank}</span>` : "";
@@ -430,6 +445,63 @@ function cardHtml(item, { rank } = {}) {
           <p class="feed-title">${esc(item.title)}</p>
           <p class="feed-meta">${esc(metric)}</p>
         </a>`;
+}
+
+function episodeKitHtml(g, { item, reach = {}, clips = [] } = {}) {
+  const total = (reach.views || 0) + (reach.listens || 0);
+  const combinedStat = total > 0 ? `${fmtViews(total)} ${reach.listens > 0 ? "views & listens" : "views"}` : "";
+  const episodeUrl = `https://www.youtube.com/watch?v=${esc(g.youtubeId)}`;
+  const clipBlocks = clips.length
+    ? `<div class="ep-kit-clips">
+        <h2 class="ep-kit-heading">Clips</h2>
+        <div class="ep-kit-grid">
+${clips.map((clip) => {
+  const thumb = clip.thumb || `https://i.ytimg.com/vi/${clip.id}/hqdefault.jpg`;
+  const thumbUrl = /^https?:\/\//i.test(thumb) || thumb.startsWith("/") ? thumb : `/${thumb.replace(/^\.?\//, "")}`;
+  const platform = PLATFORM_LABEL[clip.platform] || clip.platform;
+  return `          <a href="${esc(clip.url)}" target="_blank" rel="noopener noreferrer" class="ep-kit-card">
+            <div class="ep-kit-thumb"><img src="${esc(thumbUrl)}" alt="${esc(clip.title)}" loading="lazy" /><span class="ep-kit-badge">${esc(platform)}</span></div>
+            <div class="ep-kit-body"><p class="ep-kit-clip-title">${esc(clip.title)}</p><p class="ep-kit-clip-meta">${fmtViews(clip.views || 0)} views</p></div>
+          </a>`;
+}).join("\n")}
+        </div>
+      </div>`
+    : "";
+  return `
+  <style>
+    .ep-kit{padding:0 0 2rem}.ep-kit-shell{background:linear-gradient(180deg,rgba(10,14,28,1) 0%,#04060e 100%);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)}.ep-kit-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}.ep-kit-stat{color:#A6D2E6;font-size:1rem}.ep-kit-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}.ep-kit-heading{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;line-height:1.15;margin-bottom:1rem}.ep-kit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}.ep-kit-card{display:block;color:inherit;text-decoration:none;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;transition:transform .3s,border-color .3s}.ep-kit-card:hover{transform:translateY(-3px);border-color:rgba(212,168,75,.5)}.ep-kit-thumb{aspect-ratio:16/9;position:relative;background:#0a0f1e}.ep-kit-thumb img{width:100%;height:100%;object-fit:cover}.ep-kit-badge{position:absolute;left:.65rem;bottom:.65rem;background:rgba(4,6,14,.85);color:#7EB8DA;padding:.2rem .45rem;border-radius:999px;font-size:.65rem}.ep-kit-body{padding:.9rem}.ep-kit-clip-title{font-size:.82rem;line-height:1.4;color:#fff}.ep-kit-clip-meta{font-size:.75rem;color:rgba(166,210,230,0.6);margin-top:.35rem}
+  </style>
+  <section class="ep-kit ep-kit-shell">
+    <div class="section-container">
+${combinedStat ? `      <p class="ep-kit-stat fade-up">${combinedStat}</p>\n` : ""}      <div class="ep-kit-links fade-up">
+        <a href="${episodeUrl}" target="_blank" rel="noopener noreferrer" class="share-btn share">Watch on YouTube</a>
+        <a href="${SHOW_LINKS.apple}" target="_blank" rel="noopener noreferrer" class="share-btn share">Listen on Apple Podcasts</a>
+        <a href="${SHOW_LINKS.spotify}" target="_blank" rel="noopener noreferrer" class="share-btn share">Listen on Spotify</a>
+      </div>${clipBlocks ? `\n      ${clipBlocks}` : ""}
+    </div>
+  </section>`;
+}
+
+function episodeIndexCardsHtml(guests, items) {
+  const published = guests
+    .filter((g) => g.status === "published" && g.episodeSlug && g.youtubeId)
+    .sort((a, b) => {
+      const aNumber = parseInt(String(a.episode).match(/\d+/)?.[0] || "0", 10);
+      const bNumber = parseInt(String(b.episode).match(/\d+/)?.[0] || "0", 10);
+      return bNumber - aNumber;
+    });
+  return `\n${published.map((g) => {
+    const item = items.find((i) => i.id === g.youtubeId);
+    const duration = g.duration || item?.duration || "";
+    const thumb = `https://img.youtube.com/vi/${esc(g.youtubeId)}/hqdefault.jpg`;
+    const meta = duration
+      ? `<span>${esc(duration)}</span><span>&middot;</span><span>YouTube</span>`
+      : "<span>YouTube</span>";
+    return `        <a href="/episodes/${esc(g.episodeSlug)}/" class="episode-card fade-up">
+          <div class="episode-thumb"><img src="${thumb}" alt="${esc(g.name)}: Pale Blue Nexus ${esc(g.episode)}" loading="lazy" /></div>
+          <div class="episode-info"><p class="episode-number">${esc(g.episode)}</p><h3 class="episode-title">${esc(g.name)}</h3><p class="episode-desc">${esc(g.episodeTitle || item?.title || "")}</p><div class="episode-meta-row">${meta}</div></div>
+        </a>`;
+  }).join("\n")}`;
 }
 
 function latestDropsHtml(items) {
@@ -477,7 +549,7 @@ ${top.map((i, idx) => cardHtml(i, { rank: idx + 1 })).join("\n")}
 
 function topPerformingItems(items, count) {
   return [...items]
-    .sort((a, b) => (b.views || 0) - (a.views || 0) || b.score - a.score)
+    .sort((a, b) => reachTotal(b) - reachTotal(a) || b.score - a.score)
     .slice(0, count);
 }
 
@@ -561,10 +633,9 @@ function guestCardHtml(g, item, reach = {}, { isLatest = false } = {}) {
     ? `/episodes/${g.episodeSlug}/`
     : (g.linkedin || g.website || (g.youtubeId ? `https://www.youtube.com/watch?v=${g.youtubeId}` : "#"));
   const ext = !(isPub && g.episodeSlug);
-  const reachSegments = [];
-  if (reach.views > 0) reachSegments.push(`${fmtViews(reach.views)} views`);
-  if (reach.listens > 0) reachSegments.push(`${fmtViews(reach.listens)} listens`);
-  const reachTag = reachSegments.length ? ` &middot; ${reachSegments.join(" &middot; ")}` : "";
+  const reachTotal = (reach.views || 0) + (reach.listens || 0);
+  const reachLabel = reach.listens > 0 ? "views &amp; listens" : "views";
+  const reachTag = reachTotal > 0 ? ` &middot; ${fmtViews(reachTotal)} ${reachLabel}` : "";
   const tag = isPub ? `${esc(g.episode)}${reachTag}` : esc(g.episode);
   const statusClass = isPub ? "guest-show-status-published" : "guest-show-status-upcoming";
   const statusLabel = isPub ? "Published" : "Coming soon";
@@ -880,6 +951,17 @@ async function main() {
     }
     it.score = Math.round(performanceScore(it));
   }
+  let guestsChanged = false;
+  for (const g of guests) {
+    const episodeItem = g.youtubeId ? items.find((item) => item.id === g.youtubeId) : null;
+    if (episodeItem?.duration && g.duration !== episodeItem.duration) {
+      g.duration = episodeItem.duration;
+      guestsChanged = true;
+    }
+  }
+  if (guestsChanged) {
+    writeFileSync(join(ROOT, "data/guests.json"), JSON.stringify(guestsCfg, null, 2) + "\n");
+  }
 
   const publishedGuests = guests.filter((g) => g.status === "published");
   for (const it of items) {
@@ -951,6 +1033,33 @@ async function main() {
   }
   writeFileSync(partnerPath, partnerHtml);
   log("updated partner/index.html audience stats");
+
+  const episodeGuests = guests.filter((g) => g.status === "published" && g.episodeSlug && g.youtubeId && isPublicGuest(g));
+  for (const g of episodeGuests) {
+    const episodeItem = items.find((i) => i.id === g.youtubeId) || byGuest[g.slug];
+    const clips = items
+      .filter((i) => i.guestSlug === g.slug && i.type === "clip")
+      .sort((a, b) => b.score - a.score);
+    const episodePath = join(ROOT, "episodes", g.episodeSlug, "index.html");
+    if (!existsSync(episodePath)) {
+      log(`warning: no episode page for ${g.slug}; skipping kit injection`);
+      continue;
+    }
+    const episodeHtml = readFileSync(episodePath, "utf8");
+    if (!episodeHtml.includes("<!-- AUTO-EP-KIT:start -->")) {
+      log(`warning: ${g.episodeSlug}/index.html has no AUTO-EP-KIT markers; skipping`);
+      continue;
+    }
+    writeFileSync(
+      episodePath,
+      injectBetween(episodeHtml, "AUTO-EP-KIT", episodeKitHtml(g, { item: episodeItem, reach: guestReach[g.slug], clips })),
+    );
+  }
+  const episodesIndexPath = join(ROOT, "episodes/index.html");
+  let episodesIndexHtml = readFileSync(episodesIndexPath, "utf8");
+  episodesIndexHtml = injectBetween(episodesIndexHtml, "AUTO-EPISODES", episodeIndexCardsHtml(episodeGuests, items));
+  writeFileSync(episodesIndexPath, episodesIndexHtml);
+  log(`updated ${episodeGuests.length} episode pages and episodes/index.html`);
 
   // per-guest promo og:image cards (hosted SVG, fetchable by social crawlers)
   const promoImgDir = join(ROOT, "images/promo");
