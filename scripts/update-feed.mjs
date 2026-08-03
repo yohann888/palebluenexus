@@ -315,6 +315,12 @@ function parseDraftGuestName(title) {
   return looksLikePersonName(withCandidate) ? withCandidate : "";
 }
 
+function parseSnippetGuestName(snippet) {
+  const match = String(snippet || "").match(/^\s*([A-Z][a-z]+(?:\s+[A-Z][a-z.'’-]+){1,2})\s*,/);
+  const candidate = match ? match[1].trim() : "";
+  return looksLikePersonName(candidate) ? candidate : "";
+}
+
 function parseGuestRole(text) {
   const source = String(text || "").replace(/\s+/g, " ").trim();
   const patterns = [
@@ -360,9 +366,25 @@ async function fetchGuestHeadshot(name, slug) {
     }
     const imageUrl = summary.originalimage?.source || summary.thumbnail?.source;
     if (!imageUrl) return null;
+    let imageUrlObject;
+    try {
+      imageUrlObject = new URL(imageUrl);
+    } catch {
+      return null;
+    }
+    if (
+      imageUrlObject.protocol !== "https:" ||
+      !(imageUrlObject.hostname === "upload.wikimedia.org" || imageUrlObject.hostname.endsWith(".wikimedia.org"))
+    ) {
+      return null;
+    }
     const imageRes = await fetch(imageUrl, { headers: { "User-Agent": userAgent } });
     if (!imageRes.ok || !String(imageRes.headers.get("content-type") || "").toLowerCase().startsWith("image/")) return null;
-    writeFileSync(tempPath, Buffer.from(await imageRes.arrayBuffer()));
+    const contentLength = Number(imageRes.headers.get("content-length"));
+    if (Number.isFinite(contentLength) && contentLength > 5_000_000) return null;
+    const imageBuffer = Buffer.from(await imageRes.arrayBuffer());
+    if (imageBuffer.length > 5_000_000) return null;
+    writeFileSync(tempPath, imageBuffer);
     mkdirSync(join(ROOT, "images"), { recursive: true });
     const imageMagick = resolveImageMagick();
     if (imageMagick) {
@@ -438,7 +460,7 @@ async function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
   const published = [];
   for (const item of yt) {
     if (item.type !== "video" || knownIds.has(item.id)) continue;
-    const name = parseDraftGuestName(item.title) || parseDraftGuestName(`Episode | ${item.descSnippet || ""}`);
+    const name = parseDraftGuestName(item.title) || parseSnippetGuestName(item.descSnippet);
     const titleSlug = slugify(item.title).split("-").slice(0, 8).join("-");
     const baseSlug = name ? slugify(name) : `episode-${titleSlug || item.id}`;
     const slug = knownSlugs.has(baseSlug)
