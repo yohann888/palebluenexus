@@ -446,13 +446,18 @@ async function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
       : baseSlug;
     knownSlugs.add(slug);
     const role = parseGuestRole(`${item.title} ${item.descSnippet || ""}`);
-    const photo = name && role ? await fetchGuestHeadshot(name, slug) : null;
-    const guest = photo
-      ? {
+    const canPublish = Boolean(name && role);
+    const photo = canPublish ? await fetchGuestHeadshot(name, slug) : null;
+    if (canPublish) {
+      const publicPhoto = photo || `images/guest-${slug}.svg`;
+      if (!photo) {
+        writeFileSync(join(ROOT, "images", `guest-${slug}.svg`), guestPlaceholderSvg(name));
+      }
+      const guest = {
         slug,
         name,
         role,
-        photo,
+        photo: publicPhoto,
         linkedin: "",
         website: "",
         status: "published",
@@ -465,32 +470,33 @@ async function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
         date: item.publishedAt ? item.publishedAt.slice(0, 10) : "",
         episodeTitle: item.title,
         duration: item.duration || "",
-      }
-      : {
-      slug,
-      name,
-      role: "",
-      photo: `images/guest-${slug}.svg`,
-      linkedin: "",
-      website: "",
-      status: "upcoming",
-      episode: "Coming Soon",
-      episodeSlug: "",
-      youtubeId: item.id,
-      tiktokIds: [],
-      quote: "",
-      bio: "",
-      date: item.publishedAt ? item.publishedAt.slice(0, 10) : "",
-      needsReview: true,
-      needsPhoto: true,
-    };
-    guests.push(guest);
-    if (photo) {
+        ...(photo ? {} : { needsPhoto: true }),
+      };
+      guests.push(guest);
       mkdirSync(join(ROOT, "episodes", slug), { recursive: true });
       writeFileSync(join(ROOT, "episodes", slug, "index.html"), newEpisodePageHtml(guest));
       published.push(guest);
-      log(`auto-published ${slug}`);
+      log(`auto-published ${slug}${photo ? "" : " (monogram)"}`);
     } else {
+      const guest = {
+        slug,
+        name,
+        role: "",
+        photo: `images/guest-${slug}.svg`,
+        linkedin: "",
+        website: "",
+        status: "upcoming",
+        episode: "Coming Soon",
+        episodeSlug: "",
+        youtubeId: item.id,
+        tiktokIds: [],
+        quote: "",
+        bio: "",
+        date: item.publishedAt ? item.publishedAt.slice(0, 10) : "",
+        needsReview: true,
+        needsPhoto: true,
+      };
+      guests.push(guest);
       drafts.push(guest);
     }
     knownIds.add(item.id);
