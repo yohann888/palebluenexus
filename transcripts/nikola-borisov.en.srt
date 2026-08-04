@@ -1,0 +1,5707 @@
+1
+00:00:14,720 --> 00:00:20,120
+Yeah, so Nicola, welcome to the show.
+
+2
+00:00:17,880 --> 00:00:22,480
+Uh, this is the fourth episode of Pale
+
+3
+00:00:20,120 --> 00:00:25,080
+Blue Nexus and um,
+
+4
+00:00:22,480 --> 00:00:27,240
+uh, happy to to have you on the show. We
+
+5
+00:00:25,080 --> 00:00:30,920
+met uh, prior to your big announcement
+
+6
+00:00:27,240 --> 00:00:34,080
+last week. Um, and uh, it was quite a
+
+7
+00:00:30,920 --> 00:00:35,720
+big announcement uh, let me say. It uh,
+
+8
+00:00:34,080 --> 00:00:37,920
+uh, something I knew something was
+
+9
+00:00:35,720 --> 00:00:39,640
+coming when I saw some of your your pull
+
+10
+00:00:37,920 --> 00:00:41,760
+requests on the open claw and I was like
+
+11
+00:00:39,640 --> 00:00:44,200
+I was really excited about that. So so
+
+12
+00:00:41,760 --> 00:00:45,560
+tell me about uh, your journey so far
+
+13
+00:00:44,200 --> 00:00:50,360
+and um,
+
+14
+00:00:45,560 --> 00:00:52,040
+about yourself and about the big race.
+
+15
+00:00:50,360 --> 00:00:55,120
+>> Sure. Thanks thanks for having me. It's
+
+16
+00:00:52,040 --> 00:00:56,200
+it's pleasure to be here. So
+
+17
+00:00:55,120 --> 00:00:58,120
+um,
+
+18
+00:00:56,200 --> 00:00:59,880
+I
+
+19
+00:00:58,120 --> 00:01:02,080
+I I started Deep Mind for about four
+
+20
+00:00:59,880 --> 00:01:05,680
+years ago with with two close friends of
+
+21
+00:01:02,080 --> 00:01:08,760
+mine. We we both met
+
+22
+00:01:05,680 --> 00:01:11,840
+while working at a previous uh, company
+
+23
+00:01:08,760 --> 00:01:13,600
+for a long time together and so
+
+24
+00:01:11,840 --> 00:01:16,720
+uh,
+
+25
+00:01:13,600 --> 00:01:19,240
+we really saw this need uh, as this AI
+
+26
+00:01:16,720 --> 00:01:20,800
+models were coming out.
+
+27
+00:01:19,240 --> 00:01:23,320
+The the interesting part about them is
+
+28
+00:01:20,800 --> 00:01:24,560
+they're just a computer application but
+
+29
+00:01:23,320 --> 00:01:25,720
+they're
+
+30
+00:01:24,560 --> 00:01:28,040
+they're like a computer program but
+
+31
+00:01:25,720 --> 00:01:30,760
+they're quite different. They require
+
+32
+00:01:28,040 --> 00:01:32,760
+this large amounts of
+
+33
+00:01:30,760 --> 00:01:34,440
+compute operations to produce even a
+
+34
+00:01:32,760 --> 00:01:36,760
+single token.
+
+35
+00:01:34,440 --> 00:01:39,120
+So the big models basically need
+
+36
+00:01:36,760 --> 00:01:41,600
+hundreds of billions
+
+37
+00:01:39,120 --> 00:01:45,280
+of multiplications to generate a single
+
+38
+00:01:41,600 --> 00:01:47,000
+token or a single word word out of them.
+
+39
+00:01:45,280 --> 00:01:49,440
+And so
+
+40
+00:01:47,000 --> 00:01:51,360
+we we saw these models kind of
+
+41
+00:01:49,440 --> 00:01:55,720
+just showing up slightly on the horizon.
+
+42
+00:01:51,360 --> 00:01:57,600
+It was 2022. It was before chat GPT but
+
+43
+00:01:55,720 --> 00:01:59,600
+you know, you could see for example
+
+44
+00:01:57,600 --> 00:02:02,880
+stable diffusion was this super popular
+
+45
+00:01:59,600 --> 00:02:05,320
+open source models that can draw
+
+46
+00:02:02,880 --> 00:02:07,240
+pictures. They had a lot of
+
+47
+00:02:05,320 --> 00:02:09,080
+artifacts as you remember like people
+
+48
+00:02:07,240 --> 00:02:09,479
+had a lot of fingers.
+
+49
+00:02:09,080 --> 00:02:10,560
+>> Yeah.
+
+50
+00:02:09,479 --> 00:02:13,680
+>> Uh
+
+51
+00:02:10,560 --> 00:02:15,680
+but it was kind of a demo of an open
+
+52
+00:02:13,680 --> 00:02:17,320
+source model that's quite powerful and
+
+53
+00:02:15,680 --> 00:02:18,920
+and showing something that wasn't done
+
+54
+00:02:17,320 --> 00:02:20,959
+before.
+
+55
+00:02:18,920 --> 00:02:23,080
+And at the time we didn't have chat GPT
+
+56
+00:02:20,959 --> 00:02:24,800
+so you couldn't chat with the model but
+
+57
+00:02:23,080 --> 00:02:26,880
+you could
+
+58
+00:02:24,800 --> 00:02:29,120
+essentially prompt the model to
+
+59
+00:02:26,880 --> 00:02:30,520
+to continue a sentence. For example,
+
+60
+00:02:29,120 --> 00:02:32,320
+instead of asking like what is the
+
+61
+00:02:30,520 --> 00:02:34,560
+capital of Paris, you had to say the
+
+62
+00:02:32,320 --> 00:02:36,120
+capital of Paris is
+
+63
+00:02:34,560 --> 00:02:37,400
+and let the model just continue the
+
+64
+00:02:36,120 --> 00:02:40,160
+sentence.
+
+65
+00:02:37,400 --> 00:02:43,160
+And even in that mode
+
+66
+00:02:40,160 --> 00:02:47,120
+you could still see kind of
+
+67
+00:02:43,160 --> 00:02:48,920
+signs of intelligence in the model.
+
+68
+00:02:47,120 --> 00:02:52,400
+Um
+
+69
+00:02:48,920 --> 00:02:54,280
+so we wanted to use our experience from
+
+70
+00:02:52,400 --> 00:02:55,880
+our previous
+
+71
+00:02:54,280 --> 00:02:58,640
+um I guess
+
+72
+00:02:55,880 --> 00:03:01,880
+company where we worked.
+
+73
+00:02:58,640 --> 00:03:04,840
+Uh we we built the infrastructure and
+
+74
+00:03:01,880 --> 00:03:07,720
+the back end for a messaging app with
+
+75
+00:03:04,840 --> 00:03:10,760
+over 200 million monthly active users.
+
+76
+00:03:07,720 --> 00:03:13,600
+And so we had a lot of experience of
+
+77
+00:03:10,760 --> 00:03:15,920
+how to procure and set up physical
+
+78
+00:03:13,600 --> 00:03:18,360
+server infrastructure
+
+79
+00:03:15,920 --> 00:03:21,880
+in data centers
+
+80
+00:03:18,360 --> 00:03:24,720
+and how to build like very
+
+81
+00:03:21,880 --> 00:03:26,239
+efficient kind of back end APIs on top
+
+82
+00:03:24,720 --> 00:03:29,280
+of it and make sure we use like the
+
+83
+00:03:26,239 --> 00:03:31,280
+infrastructure really fully. Like part
+
+84
+00:03:29,280 --> 00:03:33,920
+of our secret sauce for the messenger
+
+85
+00:03:31,280 --> 00:03:36,120
+was that we managed to
+
+86
+00:03:33,920 --> 00:03:38,280
+get a very high utilization on all the
+
+87
+00:03:36,120 --> 00:03:40,000
+hardware we bought
+
+88
+00:03:38,280 --> 00:03:42,840
+uh by mixing different types of
+
+89
+00:03:40,000 --> 00:03:45,040
+applications, you know, compute hungry
+
+90
+00:03:42,840 --> 00:03:47,880
+applications, memory hungry applications
+
+91
+00:03:45,040 --> 00:03:49,640
+onto the same machines
+
+92
+00:03:47,880 --> 00:03:51,560
+and balancing the load until we get
+
+93
+00:03:49,640 --> 00:03:54,240
+really high utilization of the
+
+94
+00:03:51,560 --> 00:03:56,480
+infrastructure. And so, I think
+
+95
+00:03:54,240 --> 00:03:58,400
+the idea behind deep infra is somewhat
+
+96
+00:03:56,480 --> 00:04:01,000
+similar. Like, we
+
+97
+00:03:58,400 --> 00:04:03,720
+building a cloud hosting platform for
+
+98
+00:04:01,000 --> 00:04:05,240
+these AI models.
+
+99
+00:04:03,720 --> 00:04:06,920
+Um
+
+100
+00:04:05,240 --> 00:04:09,800
+Again, these are kind of like new
+
+101
+00:04:06,920 --> 00:04:10,959
+applications. So, they need somewhere to
+
+102
+00:04:09,800 --> 00:04:12,680
+run.
+
+103
+00:04:10,959 --> 00:04:15,400
+And running them is what's called
+
+104
+00:04:12,680 --> 00:04:15,400
+inference.
+
+105
+00:04:17,600 --> 00:04:22,640
+Yeah. Um I can go more into our journey
+
+106
+00:04:20,480 --> 00:04:24,680
+like from very early
+
+107
+00:04:22,640 --> 00:04:26,919
+>> It sounds like
+
+108
+00:04:24,680 --> 00:04:29,919
+the challenge is that you solved at
+
+109
+00:04:26,919 --> 00:04:29,919
+IMO.im
+
+110
+00:04:30,280 --> 00:04:35,200
+are really sort of
+
+111
+00:04:32,960 --> 00:04:38,040
+an input into the same problem that
+
+112
+00:04:35,200 --> 00:04:40,400
+you're having with inference.
+
+113
+00:04:38,040 --> 00:04:42,800
+>> I I think so. Like, I think
+
+114
+00:04:40,400 --> 00:04:45,919
+you know, life is kind of a journey. You
+
+115
+00:04:42,800 --> 00:04:48,120
+see certain things that help you
+
+116
+00:04:45,919 --> 00:04:50,919
+kind of navigate the next stage in a
+
+117
+00:04:48,120 --> 00:04:53,520
+different way. And And it I'm all
+
+118
+00:04:50,919 --> 00:04:56,840
+the one of the main takeaways was like
+
+119
+00:04:53,520 --> 00:05:00,480
+how expensive AWS and the other public
+
+120
+00:04:56,840 --> 00:05:02,919
+clouds internet connectivity is.
+
+121
+00:05:00,480 --> 00:05:04,520
+And how
+
+122
+00:05:02,919 --> 00:05:06,919
+essentially more efficient you could be
+
+123
+00:05:04,520 --> 00:05:08,800
+if you do it yourself. But, you know,
+
+124
+00:05:06,919 --> 00:05:11,160
+it's not easy to do it yourself. That's
+
+125
+00:05:08,800 --> 00:05:13,680
+why people, you know, opt up for the
+
+126
+00:05:11,160 --> 00:05:15,160
+clouds because it's you get something
+
+127
+00:05:13,680 --> 00:05:17,160
+done and ready.
+
+128
+00:05:15,160 --> 00:05:20,120
+So, you need to invest in it. You need
+
+129
+00:05:17,160 --> 00:05:24,000
+the expertise to do it.
+
+130
+00:05:20,120 --> 00:05:26,400
+But, you can get to a lower like cost.
+
+131
+00:05:24,000 --> 00:05:29,160
+>> And talk about like the difference in
+
+132
+00:05:26,400 --> 00:05:30,720
+cost between somebody choosing like a
+
+133
+00:05:29,160 --> 00:05:35,120
+hyperscaler
+
+134
+00:05:30,720 --> 00:05:37,840
+uh solution like Amazon or uh
+
+135
+00:05:35,120 --> 00:05:40,800
+um Azure
+
+136
+00:05:37,840 --> 00:05:41,680
+against your solution.
+
+137
+00:05:40,800 --> 00:05:44,080
+>> Yeah.
+
+138
+00:05:41,680 --> 00:05:46,560
+Um
+
+139
+00:05:44,080 --> 00:05:48,200
+I believe like we we host a lot of
+
+140
+00:05:46,560 --> 00:05:49,960
+different open source models and each of
+
+141
+00:05:48,200 --> 00:05:52,000
+them has its own price. So it's really
+
+142
+00:05:49,960 --> 00:05:54,680
+not that easy to compare one to one, but
+
+143
+00:05:52,000 --> 00:05:58,600
+if you look at the GPU pricing,
+
+144
+00:05:54,680 --> 00:06:01,040
+you know, we are offering B200s at 275
+
+145
+00:05:58,600 --> 00:06:02,960
+and I believe like the public clouds
+
+146
+00:06:01,040 --> 00:06:07,520
+pricing are
+
+147
+00:06:02,960 --> 00:06:09,280
+in the 6 to 10 plus range.
+
+148
+00:06:07,520 --> 00:06:10,920
+And you typically to get that numbers,
+
+149
+00:06:09,280 --> 00:06:12,960
+you have to do like longer term
+
+150
+00:06:10,920 --> 00:06:15,200
+commitments as well and
+
+151
+00:06:12,960 --> 00:06:16,920
+and and commit to
+
+152
+00:06:15,200 --> 00:06:19,400
+to that cloud.
+
+153
+00:06:16,920 --> 00:06:19,400
+Um
+
+154
+00:06:19,640 --> 00:06:23,160
+And then on the tokens, there's another
+
+155
+00:06:21,320 --> 00:06:25,200
+layer of efficiency, right? Like we
+
+156
+00:06:23,160 --> 00:06:27,280
+believe we have really
+
+157
+00:06:25,200 --> 00:06:29,720
+efficient systems that can generate more
+
+158
+00:06:27,280 --> 00:06:31,919
+tokens an hour per card. And so that's
+
+159
+00:06:29,720 --> 00:06:34,000
+why we can offer
+
+160
+00:06:31,919 --> 00:06:35,480
+better pricing per token and also cash
+
+161
+00:06:34,000 --> 00:06:37,760
+token pricing that's really really
+
+162
+00:06:35,480 --> 00:06:40,640
+attractive. That's sometimes
+
+163
+00:06:37,760 --> 00:06:44,160
+10 times cheaper than than other options
+
+164
+00:06:40,640 --> 00:06:44,160
+or closed source models.
+
+165
+00:06:44,880 --> 00:06:48,440
+In summary, I think the big clouds have
+
+166
+00:06:46,520 --> 00:06:52,360
+really focused more on like hosting
+
+167
+00:06:48,440 --> 00:06:54,040
+Anthropic and Open AI models or Gemini.
+
+168
+00:06:52,360 --> 00:06:56,240
+So the real comparison here is like how
+
+169
+00:06:54,040 --> 00:06:58,720
+much does
+
+170
+00:06:56,240 --> 00:07:02,160
+I guess uh
+
+171
+00:06:58,720 --> 00:07:05,640
+you know, Anthropic's model cost
+
+172
+00:07:02,160 --> 00:07:07,760
+AWS versus how much does Deep Seek cost
+
+173
+00:07:05,640 --> 00:07:09,440
+with us. It's not the same model. Deep
+
+174
+00:07:07,760 --> 00:07:13,880
+Seek is still
+
+175
+00:07:09,440 --> 00:07:16,440
+slightly worse, like 3 to 5%
+
+176
+00:07:13,880 --> 00:07:19,720
+in in some benchmarks,
+
+177
+00:07:16,440 --> 00:07:20,720
+but it could be like 10 times cheaper.
+
+178
+00:07:19,720 --> 00:07:23,200
+>> Okay.
+
+179
+00:07:20,720 --> 00:07:25,480
+Um so cheaper is one thing. The one
+
+180
+00:07:23,200 --> 00:07:28,120
+thing I did notice though, I I I sort of
+
+181
+00:07:25,480 --> 00:07:30,480
+use your back end because I use Ollama
+
+182
+00:07:28,120 --> 00:07:32,560
+and you guys help them
+
+183
+00:07:30,480 --> 00:07:34,400
+uh provide their services.
+
+184
+00:07:32,560 --> 00:07:36,960
+Um I noticed over the weekend it got a
+
+185
+00:07:34,400 --> 00:07:39,840
+lot faster. Like I would type something
+
+186
+00:07:36,960 --> 00:07:42,520
+in and my my bot is responding like
+
+187
+00:07:39,840 --> 00:07:44,200
+right away versus there being some maybe
+
+188
+00:07:42,520 --> 00:07:45,920
+two three seconds in between when it
+
+189
+00:07:44,200 --> 00:07:49,080
+when it I don't know what happened
+
+190
+00:07:45,920 --> 00:07:52,640
+there, but uh keep up the good work.
+
+191
+00:07:49,080 --> 00:07:54,160
+>> I I I can share something. We
+
+192
+00:07:52,640 --> 00:07:57,960
+basically over the weekend like a big
+
+193
+00:07:54,160 --> 00:08:01,440
+batch of our infrastructure, new B300
+
+194
+00:07:57,960 --> 00:08:03,000
+GPUs came online. And so
+
+195
+00:08:01,440 --> 00:08:05,760
+there was a lot more breathing room for
+
+196
+00:08:03,000 --> 00:08:08,480
+all the models to scale up and and go
+
+197
+00:08:05,760 --> 00:08:09,600
+faster. I hope it's that. Uh
+
+198
+00:08:08,480 --> 00:08:12,280
+but
+
+199
+00:08:09,600 --> 00:08:14,640
+>> Whatever you did work, it's it's
+
+200
+00:08:12,280 --> 00:08:16,960
+uh it's responding quite faster for me.
+
+201
+00:08:14,640 --> 00:08:19,320
+So, um I can't wait to get out there and
+
+202
+00:08:16,960 --> 00:08:20,800
+use it. I feel like um that was a
+
+203
+00:08:19,320 --> 00:08:24,760
+meaningful upgrade uh from a user
+
+204
+00:08:20,800 --> 00:08:24,760
+experience perspective, so.
+
+205
+00:08:25,200 --> 00:08:31,520
+>> Thank you.
+
+206
+00:08:26,680 --> 00:08:33,880
+>> Um so, let's talk about scaling to
+
+207
+00:08:31,520 --> 00:08:37,320
+I guess your your app scale to 200
+
+208
+00:08:33,880 --> 00:08:39,400
+million monthly active users. And
+
+209
+00:08:37,320 --> 00:08:41,120
+this sort of inference level, how much
+
+210
+00:08:39,400 --> 00:08:43,479
+customers are you serving right now at
+
+211
+00:08:41,120 --> 00:08:45,360
+Deep Infra? And how much tokens are you
+
+212
+00:08:43,479 --> 00:08:48,560
+delivering?
+
+213
+00:08:45,360 --> 00:08:51,160
+>> So, at Deep Infra we're doing over 5
+
+214
+00:08:48,560 --> 00:08:53,280
+trillion tokens a week across like all
+
+215
+00:08:51,160 --> 00:08:54,120
+the models that we serve.
+
+216
+00:08:53,280 --> 00:08:57,040
+Um
+
+217
+00:08:54,120 --> 00:09:00,120
+we also do some
+
+218
+00:08:57,040 --> 00:09:03,280
+you know, cluster rentals to new labs
+
+219
+00:09:00,120 --> 00:09:06,920
+and and other customers. That's kind of
+
+220
+00:09:03,280 --> 00:09:08,880
+in addition to the inference business.
+
+221
+00:09:06,920 --> 00:09:10,400
+Um
+
+222
+00:09:08,880 --> 00:09:13,120
+it's been an interesting journey like
+
+223
+00:09:10,400 --> 00:09:15,040
+over the last uh basically four years.
+
+224
+00:09:13,120 --> 00:09:18,280
+It really started the growth really
+
+225
+00:09:15,040 --> 00:09:21,240
+started when Llama 2 came out.
+
+226
+00:09:18,280 --> 00:09:24,560
+And that was like the first commercially
+
+227
+00:09:21,240 --> 00:09:26,720
+allowed open source model that was
+
+228
+00:09:24,560 --> 00:09:28,480
+decent right?
+
+229
+00:09:26,720 --> 00:09:30,720
+For its time it was like the best open
+
+230
+00:09:28,480 --> 00:09:33,000
+source model. It was quite large. 70
+
+231
+00:09:30,720 --> 00:09:34,160
+billion parameters is
+
+232
+00:09:33,000 --> 00:09:36,440
+is
+
+233
+00:09:34,160 --> 00:09:38,760
+a was a big number at the time.
+
+234
+00:09:36,440 --> 00:09:41,360
+And so from that moment on, we just
+
+235
+00:09:38,760 --> 00:09:43,880
+started seeing growth in tokens. And it
+
+236
+00:09:41,360 --> 00:09:45,480
+was always
+
+237
+00:09:43,880 --> 00:09:48,320
+growing exponentially, but we started
+
+238
+00:09:45,480 --> 00:09:50,400
+from a very small kind of base.
+
+239
+00:09:48,320 --> 00:09:50,400
+Um
+
+240
+00:09:51,080 --> 00:09:55,160
+And so, then there was kind of like a
+
+241
+00:09:52,840 --> 00:09:56,880
+wave of new models coming out and us
+
+242
+00:09:55,160 --> 00:09:59,880
+raising more capital and investing in
+
+243
+00:09:56,880 --> 00:10:02,600
+more infrastructure. So,
+
+244
+00:09:59,880 --> 00:10:04,960
+for the Llama 2, we were only we only
+
+245
+00:10:02,600 --> 00:10:08,440
+had, I think,
+
+246
+00:10:04,960 --> 00:10:12,080
+couple H100 GPUs. Mostly it was A100.
+
+247
+00:10:08,440 --> 00:10:14,840
+And And then we got our seed round, we
+
+248
+00:10:12,080 --> 00:10:16,400
+got a bunch of H100s with that.
+
+249
+00:10:14,840 --> 00:10:17,360
+Then we could serve the Llama well. And
+
+250
+00:10:16,400 --> 00:10:20,640
+then
+
+251
+00:10:17,360 --> 00:10:22,200
+Me- Mistral came. It was like a small 7B
+
+252
+00:10:20,640 --> 00:10:23,960
+model. Then
+
+253
+00:10:22,200 --> 00:10:26,040
+And actually, one of the biggest changes
+
+254
+00:10:23,960 --> 00:10:28,960
+for us was when
+
+255
+00:10:26,040 --> 00:10:32,080
+um Mistral came. This was like the first
+
+256
+00:10:28,960 --> 00:10:34,680
+mixture of expert open-source model.
+
+257
+00:10:32,080 --> 00:10:35,280
+So, it's kind of like a new generation,
+
+258
+00:10:34,680 --> 00:10:36,440
+uh
+
+259
+00:10:35,280 --> 00:10:38,240
+think.
+
+260
+00:10:36,440 --> 00:10:41,320
+And
+
+261
+00:10:38,240 --> 00:10:43,200
+the story there was we were
+
+262
+00:10:41,320 --> 00:10:45,800
+I I I'll go a little technical. So, this
+
+263
+00:10:43,200 --> 00:10:46,960
+model was basically eight 7B models
+
+264
+00:10:45,800 --> 00:10:49,720
+together.
+
+265
+00:10:46,960 --> 00:10:51,400
+The experts were 7 billion parameters.
+
+266
+00:10:49,720 --> 00:10:53,200
+And
+
+267
+00:10:51,400 --> 00:10:55,520
+during runtime, you would use two of the
+
+268
+00:10:53,200 --> 00:10:57,760
+experts. So, the model should be as
+
+269
+00:10:55,520 --> 00:10:59,320
+expensive as 14 billion parameter model
+
+270
+00:10:57,760 --> 00:11:00,960
+to run.
+
+271
+00:10:59,320 --> 00:11:04,000
+But as soon as that model shipped,
+
+272
+00:11:00,960 --> 00:11:06,320
+everybody in the market priced the model
+
+273
+00:11:04,000 --> 00:11:08,440
+as if it's like
+
+274
+00:11:06,320 --> 00:11:10,920
+50-60 billion parameter model, like
+
+275
+00:11:08,440 --> 00:11:13,560
+using the full number of weights.
+
+276
+00:11:10,920 --> 00:11:15,720
+And we were really aggressive. Like to
+
+277
+00:11:13,560 --> 00:11:17,560
+us, it was quite clear that this should
+
+278
+00:11:15,720 --> 00:11:20,240
+cost as much as like a 14 billion
+
+279
+00:11:17,560 --> 00:11:22,080
+parameter model, because that's what you
+
+280
+00:11:20,240 --> 00:11:22,600
+would use during
+
+281
+00:11:22,080 --> 00:11:24,480
+>> runtime.
+
+282
+00:11:22,600 --> 00:11:27,000
+>> runtime. And so, we just priced this
+
+283
+00:11:24,480 --> 00:11:29,160
+model really aggressively. I remember,
+
+284
+00:11:27,000 --> 00:11:31,160
+you know, we announced 27 cents per
+
+285
+00:11:29,160 --> 00:11:33,440
+million tokens.
+
+286
+00:11:31,160 --> 00:11:36,440
+And at the time, you know, other people
+
+287
+00:11:33,440 --> 00:11:37,440
+were at $60 60 cents. And
+
+288
+00:11:36,440 --> 00:11:38,800
+>> Wow.
+
+289
+00:11:37,440 --> 00:11:40,280
+>> So, that got a lot of attention on
+
+290
+00:11:38,800 --> 00:11:41,680
+Twitter and a lot of traffic for our
+
+291
+00:11:40,280 --> 00:11:43,520
+model.
+
+292
+00:11:41,680 --> 00:11:44,920
+Um
+
+293
+00:11:43,520 --> 00:11:46,760
+I think around that time people started
+
+294
+00:11:44,920 --> 00:11:48,840
+saying "Oh inference
+
+295
+00:11:46,760 --> 00:11:50,360
+this is race to the bottom.
+
+296
+00:11:48,840 --> 00:11:51,960
+Look at, you know, the prices of these
+
+297
+00:11:50,360 --> 00:11:54,280
+things going down."
+
+298
+00:11:51,960 --> 00:11:55,320
+The interesting thing is that
+
+299
+00:11:54,280 --> 00:11:57,400
+even though this price was really
+
+300
+00:11:55,320 --> 00:11:59,240
+aggressive for day one, because when the
+
+301
+00:11:57,400 --> 00:12:01,080
+model comes up day one, it's not really
+
+302
+00:11:59,240 --> 00:12:04,080
+efficient.
+
+303
+00:12:01,080 --> 00:12:06,000
+It really, you know, over the next month
+
+304
+00:12:04,080 --> 00:12:07,480
+or two, like the efficiency of how well
+
+305
+00:12:06,000 --> 00:12:09,200
+we run this model really improved
+
+306
+00:12:07,480 --> 00:12:10,280
+dramatically. And
+
+307
+00:12:09,200 --> 00:12:12,520
+you know,
+
+308
+00:12:10,280 --> 00:12:14,680
+this model ran for like at least
+
+309
+00:12:12,520 --> 00:12:17,040
+year or maybe 18 months before we kind
+
+310
+00:12:14,680 --> 00:12:19,400
+of deprecated it.
+
+311
+00:12:17,040 --> 00:12:21,720
+Um I think the price went even lower
+
+312
+00:12:19,400 --> 00:12:23,400
+like after that. Like we just had more
+
+313
+00:12:21,720 --> 00:12:24,760
+and more efficiency and we could serve
+
+314
+00:12:23,400 --> 00:12:26,920
+it for
+
+315
+00:12:24,760 --> 00:12:29,320
+considerably less. I think
+
+316
+00:12:26,920 --> 00:12:32,360
+we just the software got better
+
+317
+00:12:29,320 --> 00:12:33,840
+on our side and
+
+318
+00:12:32,360 --> 00:12:35,000
+and so we could offer lower prices to
+
+319
+00:12:33,840 --> 00:12:36,800
+our customers.
+
+320
+00:12:35,000 --> 00:12:39,400
+>> What's the main factor there? Is it the
+
+321
+00:12:36,800 --> 00:12:41,839
+quantization or is it the the inference
+
+322
+00:12:39,400 --> 00:12:43,360
+sort of routing and engine?
+
+323
+00:12:41,839 --> 00:12:46,040
+>> It's a good question. Actually, there's
+
+324
+00:12:43,360 --> 00:12:46,480
+like a bunch of things. So, you don't
+
+325
+00:12:46,040 --> 00:12:48,800
+have to
+
+326
+00:12:46,480 --> 00:12:50,120
+>> to say your secret sauce.
+
+327
+00:12:48,800 --> 00:12:51,920
+>> Well, I I
+
+328
+00:12:50,120 --> 00:12:53,560
+I'm going to like mention like few of
+
+329
+00:12:51,920 --> 00:12:55,960
+the main techniques that I think make
+
+330
+00:12:53,560 --> 00:12:57,560
+these models more efficient that
+
+331
+00:12:55,960 --> 00:12:59,440
+um
+
+332
+00:12:57,560 --> 00:13:01,280
+I I'm happy to share. So, so
+
+333
+00:12:59,440 --> 00:13:03,400
+quantization is obviously one. And
+
+334
+00:13:01,280 --> 00:13:05,760
+interestingly, like the newer
+
+335
+00:13:03,400 --> 00:13:09,240
+generations of Nvidia GPUs basically
+
+336
+00:13:05,760 --> 00:13:11,560
+support low and lower precision math.
+
+337
+00:13:09,240 --> 00:13:15,400
+Um
+
+338
+00:13:11,560 --> 00:13:16,960
+we believe that and Nvidia also strongly
+
+339
+00:13:15,400 --> 00:13:19,040
+believes this because they're dedicating
+
+340
+00:13:16,960 --> 00:13:20,640
+large portions of the chip to this like
+
+341
+00:13:19,040 --> 00:13:22,400
+low precision compute. They're mostly
+
+342
+00:13:20,640 --> 00:13:24,480
+investing in this
+
+343
+00:13:22,400 --> 00:13:29,280
+4-bit
+
+344
+00:13:24,480 --> 00:13:31,320
+uh types. They're FP4 and VFP4.
+
+345
+00:13:29,280 --> 00:13:33,000
+So, so one thing is quantization of the
+
+346
+00:13:31,320 --> 00:13:34,840
+model which
+
+347
+00:13:33,000 --> 00:13:35,960
+to some of your listeners just means
+
+348
+00:13:34,840 --> 00:13:39,320
+like
+
+349
+00:13:35,960 --> 00:13:40,200
+you're compressing the model down. Like
+
+350
+00:13:39,320 --> 00:13:42,560
+uh
+
+351
+00:13:40,200 --> 00:13:45,360
+instead of using
+
+352
+00:13:42,560 --> 00:13:47,280
+16 bits per parameter, you use like
+
+353
+00:13:45,360 --> 00:13:50,360
+eight or even four. And that really
+
+354
+00:13:47,280 --> 00:13:52,280
+helps like make the model smaller.
+
+355
+00:13:50,360 --> 00:13:54,520
+You can both do more math the smaller
+
+356
+00:13:52,280 --> 00:13:56,960
+the precision is, but you can also
+
+357
+00:13:54,520 --> 00:14:00,800
+fit more
+
+358
+00:13:56,960 --> 00:14:03,800
+fit the model into like fewer cards.
+
+359
+00:14:00,800 --> 00:14:06,200
+Or leave more space for KV caching. Now,
+
+360
+00:14:03,800 --> 00:14:08,800
+KV caching is the other really kind of
+
+361
+00:14:06,200 --> 00:14:12,640
+important optimization.
+
+362
+00:14:08,800 --> 00:14:14,040
+In these agentic workloads,
+
+363
+00:14:12,640 --> 00:14:16,880
+what the model really does is it
+
+364
+00:14:14,040 --> 00:14:19,200
+basically sends roughly the same request
+
+365
+00:14:16,880 --> 00:14:21,760
+many, many times with like a little bit
+
+366
+00:14:19,200 --> 00:14:24,000
+of additional information at the end.
+
+367
+00:14:21,760 --> 00:14:26,040
+So, if you can
+
+368
+00:14:24,000 --> 00:14:28,560
+save some computation from the last time
+
+369
+00:14:26,040 --> 00:14:30,080
+you did the inference,
+
+370
+00:14:28,560 --> 00:14:33,880
+then the next time you have to do
+
+371
+00:14:30,080 --> 00:14:35,800
+inference for the same kind of customer,
+
+372
+00:14:33,880 --> 00:14:37,480
+you can be really efficient. Like you
+
+373
+00:14:35,800 --> 00:14:39,920
+don't have to bother the GPUs with the
+
+374
+00:14:37,480 --> 00:14:42,400
+big portion of the request.
+
+375
+00:14:39,920 --> 00:14:43,720
+And that's kind of a a big efficiency
+
+376
+00:14:42,400 --> 00:14:45,680
+gain. So, we were one of the first
+
+377
+00:14:43,720 --> 00:14:47,320
+people to have cached token pricing on
+
+378
+00:14:45,680 --> 00:14:48,880
+open router.
+
+379
+00:14:47,320 --> 00:14:50,839
+>> Okay.
+
+380
+00:14:48,880 --> 00:14:52,480
+>> And offer it to like our customers
+
+381
+00:14:50,839 --> 00:14:54,839
+obviously as well.
+
+382
+00:14:52,480 --> 00:14:56,520
+Uh
+
+383
+00:14:54,839 --> 00:14:57,920
+And that's a big
+
+384
+00:14:56,520 --> 00:14:59,400
+part of it.
+
+385
+00:14:57,920 --> 00:15:02,120
+And there's a bunch of other techniques.
+
+386
+00:14:59,400 --> 00:15:04,320
+And it's kind of all layered together.
+
+387
+00:15:02,120 --> 00:15:07,720
+And also more efficient kernels, like
+
+388
+00:15:04,320 --> 00:15:08,520
+moving to more efficient GPUs.
+
+389
+00:15:07,720 --> 00:15:10,680
+Uh
+
+390
+00:15:08,520 --> 00:15:13,360
+>> This sounds more like fine-tuning a
+
+391
+00:15:10,680 --> 00:15:16,200
+Ferrari than it does uh racing to the
+
+392
+00:15:13,360 --> 00:15:17,080
+bottom uh like type of thing, right? But
+
+393
+00:15:16,200 --> 00:15:18,680
+uh
+
+394
+00:15:17,080 --> 00:15:21,000
+it's a bit of both.
+
+395
+00:15:18,680 --> 00:15:24,080
+>> Yeah. You know, my analogy is I think
+
+396
+00:15:21,000 --> 00:15:27,680
+it's a lot like Formula 1.
+
+397
+00:15:24,080 --> 00:15:29,320
+And I'm a big fan of Formula 1. The
+
+398
+00:15:27,680 --> 00:15:31,680
+you know, the teams there are always
+
+399
+00:15:29,320 --> 00:15:34,040
+obsessed with like reducing the weight
+
+400
+00:15:31,680 --> 00:15:36,240
+of the car and then squeezing some more
+
+401
+00:15:34,040 --> 00:15:39,360
+power from the engine and squeezing some
+
+402
+00:15:36,240 --> 00:15:40,920
+more aerodynamic efficiency.
+
+403
+00:15:39,360 --> 00:15:42,440
+So like
+
+404
+00:15:40,920 --> 00:15:45,400
+at the end of the day you have to pursue
+
+405
+00:15:42,440 --> 00:15:47,680
+like all avenues of making this more
+
+406
+00:15:45,400 --> 00:15:49,720
+efficient
+
+407
+00:15:47,680 --> 00:15:53,360
+to kind of
+
+408
+00:15:49,720 --> 00:15:54,840
+end up winning or or being the top
+
+409
+00:15:53,360 --> 00:15:56,120
+few people.
+
+410
+00:15:54,840 --> 00:16:00,360
+>> Yeah. Um
+
+411
+00:15:56,120 --> 00:16:03,200
+and you know, you guys were
+
+412
+00:16:00,360 --> 00:16:05,960
+took capital from Nvidia. Um tell me
+
+413
+00:16:03,200 --> 00:16:08,000
+about like what they're doing uh with
+
+414
+00:16:05,960 --> 00:16:10,360
+Nvidia Dynamo. Is that part of your
+
+415
+00:16:08,000 --> 00:16:11,680
+stock now or is it going to be? Uh
+
+416
+00:16:10,360 --> 00:16:13,000
+and how do
+
+417
+00:16:11,680 --> 00:16:14,760
+And we'll get into the open source
+
+418
+00:16:13,000 --> 00:16:16,120
+versus closed stuff stuff uh stuff
+
+419
+00:16:14,760 --> 00:16:19,600
+later, but uh
+
+420
+00:16:16,120 --> 00:16:21,600
+tell me about Nvidia Dynamo right now.
+
+421
+00:16:19,600 --> 00:16:24,680
+>> Nvidia Dynamo is like
+
+422
+00:16:21,600 --> 00:16:27,400
+um open source project started by Nvidia
+
+423
+00:16:24,680 --> 00:16:29,680
+that is um
+
+424
+00:16:27,400 --> 00:16:31,800
+really like I think the next layer level
+
+425
+00:16:29,680 --> 00:16:32,320
+of efficiency in terms of inference and
+
+426
+00:16:31,800 --> 00:16:33,200
+scale.
+
+427
+00:16:32,320 --> 00:16:35,400
+>> Okay.
+
+428
+00:16:33,200 --> 00:16:38,360
+>> So,
+
+429
+00:16:35,400 --> 00:16:40,760
+I think internally at Deep Infusion
+
+430
+00:16:38,360 --> 00:16:43,160
+we've implemented large portions of the
+
+431
+00:16:40,760 --> 00:16:45,200
+ideas behind this already and we're
+
+432
+00:16:43,160 --> 00:16:47,120
+working more and more closely with the
+
+433
+00:16:45,200 --> 00:16:49,400
+Nvidia team on
+
+434
+00:16:47,120 --> 00:16:50,720
+on on this project
+
+435
+00:16:49,400 --> 00:16:52,640
+as well.
+
+436
+00:16:50,720 --> 00:16:55,520
+Um
+
+437
+00:16:52,640 --> 00:16:58,480
+For some of your viewers, it's basically
+
+438
+00:16:55,520 --> 00:17:00,880
+something like
+
+439
+00:16:58,480 --> 00:17:00,880
+um
+
+440
+00:17:01,640 --> 00:17:06,520
+uh kind of like Kubernetes in terms of
+
+441
+00:17:04,600 --> 00:17:09,280
+it helps organize how the inference
+
+442
+00:17:06,520 --> 00:17:12,000
+happens because inferences
+
+443
+00:17:09,280 --> 00:17:14,720
+to get the ultimate efficiency, you you
+
+444
+00:17:12,000 --> 00:17:17,120
+need to run this kind of at a big scale
+
+445
+00:17:14,720 --> 00:17:19,439
+and and Dynamo kind of helps organize
+
+446
+00:17:17,120 --> 00:17:21,920
+the scale around us and disaggregates
+
+447
+00:17:19,439 --> 00:17:24,240
+like one portion of the work with
+
+448
+00:17:21,920 --> 00:17:26,199
+another portion of the work.
+
+449
+00:17:24,240 --> 00:17:28,439
+So,
+
+450
+00:17:26,199 --> 00:17:29,920
+I think it's an important project.
+
+451
+00:17:28,439 --> 00:17:31,520
+Uh
+
+452
+00:17:29,920 --> 00:17:33,040
+and I think Nvidia is developing it
+
+453
+00:17:31,520 --> 00:17:35,600
+really well.
+
+454
+00:17:33,040 --> 00:17:38,000
+We essentially supporting various
+
+455
+00:17:35,600 --> 00:17:41,200
+different inference engines underneath
+
+456
+00:17:38,000 --> 00:17:44,560
+like VLLM and SGLang in addition to the
+
+457
+00:17:41,200 --> 00:17:46,440
+homegrown TensorRT-LLM from Nvidia.
+
+458
+00:17:44,560 --> 00:17:49,000
+I think also the project supports also
+
+459
+00:17:46,440 --> 00:17:51,520
+non-Nvidia hardware, which is
+
+460
+00:17:49,000 --> 00:17:55,160
+I think the right approach to make this
+
+461
+00:17:51,520 --> 00:17:57,560
+the real fundamental system for for
+
+462
+00:17:55,160 --> 00:18:00,040
+inference. So,
+
+463
+00:17:57,560 --> 00:18:02,160
+we're generally excited to collaborate
+
+464
+00:18:00,040 --> 00:18:03,440
+with Nvidia on on this front. And you
+
+465
+00:18:02,160 --> 00:18:05,800
+know, the relationship with Nvidia
+
+466
+00:18:03,440 --> 00:18:07,440
+started more on the technical side. Like
+
+467
+00:18:05,800 --> 00:18:10,240
+we
+
+468
+00:18:07,440 --> 00:18:12,480
+see a lot of tokens going through Deep
+
+469
+00:18:10,240 --> 00:18:14,560
+Infra and we see a lot of tokens flowing
+
+470
+00:18:12,480 --> 00:18:16,440
+through like various generations of
+
+471
+00:18:14,560 --> 00:18:18,040
+Nvidia GPUs.
+
+472
+00:18:16,440 --> 00:18:19,320
+We were really early adopters of
+
+473
+00:18:18,040 --> 00:18:19,920
+Blackwell
+
+474
+00:18:19,320 --> 00:18:22,400
+>> All right.
+
+475
+00:18:19,920 --> 00:18:24,920
+>> type GPUs. And so,
+
+476
+00:18:22,400 --> 00:18:26,920
+whenever we see any
+
+477
+00:18:24,920 --> 00:18:29,480
+instabilities, any crashes, any
+
+478
+00:18:26,920 --> 00:18:31,800
+performance issues,
+
+479
+00:18:29,480 --> 00:18:33,880
+we would share this with the Nvidia
+
+480
+00:18:31,800 --> 00:18:35,680
+technical teams. And
+
+481
+00:18:33,880 --> 00:18:38,120
+uh on their side, the Nvidia technical
+
+482
+00:18:35,680 --> 00:18:43,120
+teams would help
+
+483
+00:18:38,120 --> 00:18:45,720
+uh kind of address and fix and improve
+
+484
+00:18:43,120 --> 00:18:48,400
+I guess the libraries
+
+485
+00:18:45,720 --> 00:18:50,120
+that we use for inference.
+
+486
+00:18:48,400 --> 00:18:52,360
+And so, it was a good loop. Like, you
+
+487
+00:18:50,120 --> 00:18:54,480
+know, we would
+
+488
+00:18:52,360 --> 00:18:56,960
+share like important information that
+
+489
+00:18:54,480 --> 00:18:58,760
+helps kind of make
+
+490
+00:18:56,960 --> 00:19:00,720
+decisions on their end of like what
+
+491
+00:18:58,760 --> 00:19:02,640
+models to support and
+
+492
+00:19:00,720 --> 00:19:04,560
+what models to make more efficient and
+
+493
+00:19:02,640 --> 00:19:05,680
+and what models to fix like stability
+
+494
+00:19:04,560 --> 00:19:07,120
+issues.
+
+495
+00:19:05,680 --> 00:19:09,840
+And because we have a lot of traffic, we
+
+496
+00:19:07,120 --> 00:19:11,440
+see all these random
+
+497
+00:19:09,840 --> 00:19:14,640
+I guess
+
+498
+00:19:11,440 --> 00:19:16,560
+um events that cause like weird crashes
+
+499
+00:19:14,640 --> 00:19:18,440
+that are really hard for
+
+500
+00:19:16,560 --> 00:19:19,920
+for someone who who doesn't have the
+
+501
+00:19:18,440 --> 00:19:22,640
+same amount of traffic going through
+
+502
+00:19:19,920 --> 00:19:24,200
+their system to to notice and and fix
+
+503
+00:19:22,640 --> 00:19:26,520
+and improve.
+
+504
+00:19:24,200 --> 00:19:29,520
+So, we're just pretty open and shared a
+
+505
+00:19:26,520 --> 00:19:32,080
+lot with the team and
+
+506
+00:19:29,520 --> 00:19:32,080
+I think
+
+507
+00:19:32,720 --> 00:19:35,520
+I'm going to speak in a little bit for
+
+508
+00:19:34,320 --> 00:19:37,080
+them, but like for Nvidia it's really
+
+509
+00:19:35,520 --> 00:19:39,200
+important to have really efficient
+
+510
+00:19:37,080 --> 00:19:40,840
+software for inference, right? Like at
+
+511
+00:19:39,200 --> 00:19:43,000
+the end of the day like the their
+
+512
+00:19:40,840 --> 00:19:44,680
+customer measure whether to buy their
+
+513
+00:19:43,000 --> 00:19:46,000
+hardware versus someone else's hardware
+
+514
+00:19:44,680 --> 00:19:47,680
+on like
+
+515
+00:19:46,000 --> 00:19:49,440
+how many tokens can this thing generate
+
+516
+00:19:47,680 --> 00:19:51,080
+for me in an hour?
+
+517
+00:19:49,440 --> 00:19:52,600
+And does it have like support for many
+
+518
+00:19:51,080 --> 00:19:53,840
+different models that I might want to
+
+519
+00:19:52,600 --> 00:19:56,080
+use?
+
+520
+00:19:53,840 --> 00:19:57,880
+And so
+
+521
+00:19:56,080 --> 00:19:59,480
+I think they're coming to this with the
+
+522
+00:19:57,880 --> 00:20:00,960
+right mind. They understand that they
+
+523
+00:19:59,480 --> 00:20:03,200
+can't just like
+
+524
+00:20:00,960 --> 00:20:05,800
+sell the GPUs and that's it. They need
+
+525
+00:20:03,200 --> 00:20:07,880
+to invest a lot of engineers to work on
+
+526
+00:20:05,800 --> 00:20:10,000
+the software layers of the stack to make
+
+527
+00:20:07,880 --> 00:20:12,080
+the GPUs really
+
+528
+00:20:10,000 --> 00:20:14,280
+useful to someone.
+
+529
+00:20:12,080 --> 00:20:16,360
+Not just us, like just any any any of
+
+530
+00:20:14,280 --> 00:20:18,600
+their customers, right?
+
+531
+00:20:16,360 --> 00:20:19,800
+So
+
+532
+00:20:18,600 --> 00:20:21,480
+I think they understand this well, so
+
+533
+00:20:19,800 --> 00:20:25,120
+they've invested a lot of effort into
+
+534
+00:20:21,480 --> 00:20:26,920
+the software side of their cards
+
+535
+00:20:25,120 --> 00:20:29,680
+to basically show like the highest
+
+536
+00:20:26,920 --> 00:20:31,320
+inference performance um
+
+537
+00:20:29,680 --> 00:20:33,600
+compared to
+
+538
+00:20:31,320 --> 00:20:36,440
+other hardware.
+
+539
+00:20:33,600 --> 00:20:38,560
+>> And I mean, this reminds me of a few
+
+540
+00:20:36,440 --> 00:20:40,320
+different parallels within the tech
+
+541
+00:20:38,560 --> 00:20:41,600
+world in the last 20 years. One of it
+
+542
+00:20:40,320 --> 00:20:42,680
+being like
+
+543
+00:20:41,600 --> 00:20:44,960
+the
+
+544
+00:20:42,680 --> 00:20:46,880
+um the latency aspect. And the other
+
+545
+00:20:44,960 --> 00:20:49,560
+part is the open source aspect, like Red
+
+546
+00:20:46,880 --> 00:20:51,080
+Hat. But going back to latency,
+
+547
+00:20:49,560 --> 00:20:53,640
+um
+
+548
+00:20:51,080 --> 00:20:55,520
+uh you remember how high-frequency
+
+549
+00:20:53,640 --> 00:20:58,440
+trading used to happen closer to New
+
+550
+00:20:55,520 --> 00:21:00,640
+York where the data centers were to to
+
+551
+00:20:58,440 --> 00:21:03,040
+to the exchanges. Um are you
+
+552
+00:21:00,640 --> 00:21:04,800
+experiencing similar
+
+553
+00:21:03,040 --> 00:21:07,240
+uh build-out challenges where people
+
+554
+00:21:04,800 --> 00:21:10,520
+want higher lower latency? So, they want
+
+555
+00:21:07,240 --> 00:21:13,400
+to be closer to their cloud Uh or or to
+
+556
+00:21:10,520 --> 00:21:18,320
+their infrastructure.
+
+557
+00:21:13,400 --> 00:21:19,760
+>> E E both kind of yes and no. I feel like
+
+558
+00:21:18,320 --> 00:21:23,560
+the answer for inference is more
+
+559
+00:21:19,760 --> 00:21:25,360
+complicated like um
+
+560
+00:21:23,560 --> 00:21:27,720
+Let's take a typical request, right?
+
+561
+00:21:25,360 --> 00:21:29,720
+Like imagine you asking ChatGPT to do
+
+562
+00:21:27,720 --> 00:21:32,000
+something and and passing like a big
+
+563
+00:21:29,720 --> 00:21:33,400
+document together like with your initial
+
+564
+00:21:32,000 --> 00:21:36,160
+prompt.
+
+565
+00:21:33,400 --> 00:21:36,160
+So
+
+566
+00:21:36,640 --> 00:21:40,720
+the model needs to do this initial step
+
+567
+00:21:39,200 --> 00:21:42,600
+of like
+
+568
+00:21:40,720 --> 00:21:44,040
+look for all the data you've given it
+
+569
+00:21:42,600 --> 00:21:45,720
+before it starts giving you the first
+
+570
+00:21:44,040 --> 00:21:46,920
+token. That's what's called the prefill
+
+571
+00:21:45,720 --> 00:21:50,040
+phase.
+
+572
+00:21:46,920 --> 00:21:52,160
+And so that might take like from
+
+573
+00:21:50,040 --> 00:21:54,080
+100 to 200 milliseconds all the way to
+
+574
+00:21:52,160 --> 00:21:56,320
+like seconds depending on how much data
+
+575
+00:21:54,080 --> 00:21:57,600
+you've given it.
+
+576
+00:21:56,320 --> 00:22:01,480
+And then the model starts giving you
+
+577
+00:21:57,600 --> 00:22:01,480
+tokens and
+
+578
+00:22:01,560 --> 00:22:06,120
+and then like it might take 5 6 seconds
+
+579
+00:22:04,600 --> 00:22:09,000
+for the whole thing to complete, right?
+
+580
+00:22:06,120 --> 00:22:11,800
+Like the model starts giving you a text.
+
+581
+00:22:09,000 --> 00:22:11,800
+And so
+
+582
+00:22:11,920 --> 00:22:15,080
+actually there's a lot of latency
+
+583
+00:22:13,240 --> 00:22:17,440
+building to the whole inference like
+
+584
+00:22:15,080 --> 00:22:20,760
+from end to end the requests take like
+
+585
+00:22:17,440 --> 00:22:22,960
+long time like on the order of 5 seconds
+
+586
+00:22:20,760 --> 00:22:25,520
+to 10 to 30.
+
+587
+00:22:22,960 --> 00:22:27,600
+And so we've noticed that
+
+588
+00:22:25,520 --> 00:22:29,680
+we don't believe like
+
+589
+00:22:27,600 --> 00:22:32,360
+trying to put the actual compute like
+
+590
+00:22:29,680 --> 00:22:34,520
+right next to the humans
+
+591
+00:22:32,360 --> 00:22:36,280
+is the most efficient way.
+
+592
+00:22:34,520 --> 00:22:37,720
+Like we
+
+593
+00:22:36,280 --> 00:22:39,680
+to get lower latency, I think we just
+
+594
+00:22:37,720 --> 00:22:42,000
+have to build like the right
+
+595
+00:22:39,680 --> 00:22:43,680
+orchestration of GPUs and hold the model
+
+596
+00:22:42,000 --> 00:22:48,000
+in a way where we could generate the
+
+597
+00:22:43,680 --> 00:22:51,280
+tokens well and do the caching well.
+
+598
+00:22:48,000 --> 00:22:51,280
+And the other thing is like
+
+599
+00:22:51,400 --> 00:22:55,680
+I think if you look at high frequency
+
+600
+00:22:52,800 --> 00:22:57,520
+trading, they need like the very latest
+
+601
+00:22:55,680 --> 00:22:59,400
+data from the exchange and they need to
+
+602
+00:22:57,520 --> 00:23:01,000
+run like something really quick and like
+
+603
+00:22:59,400 --> 00:23:03,520
+make back like
+
+604
+00:23:01,000 --> 00:23:04,680
+a request to buy sell.
+
+605
+00:23:03,520 --> 00:23:06,560
+And uh
+
+606
+00:23:04,680 --> 00:23:08,240
+all these things are super small and and
+
+607
+00:23:06,560 --> 00:23:11,880
+they don't need
+
+608
+00:23:08,240 --> 00:23:13,560
+to run a super complicated algorithm
+
+609
+00:23:11,880 --> 00:23:15,640
+to decide like which of these two ways
+
+610
+00:23:13,560 --> 00:23:17,120
+to do it. So, they don't need a lot of
+
+611
+00:23:15,640 --> 00:23:19,600
+power is what I'm trying to say, but
+
+612
+00:23:17,120 --> 00:23:24,040
+inference is really, really power hungry
+
+613
+00:23:19,600 --> 00:23:25,720
+and compute hungry. That is why like
+
+614
+00:23:24,040 --> 00:23:27,640
+you know, there's all these data center
+
+615
+00:23:25,720 --> 00:23:30,280
+projects in the US and and most of them
+
+616
+00:23:27,640 --> 00:23:32,320
+happen in like rural areas
+
+617
+00:23:30,280 --> 00:23:34,560
+not near the city. Just the price of
+
+618
+00:23:32,320 --> 00:23:36,800
+electricity and like the
+
+619
+00:23:34,560 --> 00:23:39,600
+economics of deploying the
+
+620
+00:23:36,800 --> 00:23:42,360
+the GPUs work best in like
+
+621
+00:23:39,600 --> 00:23:44,360
+more rural areas. So, what latency is a
+
+622
+00:23:42,360 --> 00:23:47,280
+big portion of it, I don't think the
+
+623
+00:23:44,360 --> 00:23:47,280
+solution is
+
+624
+00:23:47,440 --> 00:23:51,320
+mostly the solution is not let's move
+
+625
+00:23:49,280 --> 00:23:53,480
+the GPUs next to like the population
+
+626
+00:23:51,320 --> 00:23:56,320
+centers. There will be some sort of GPUs
+
+627
+00:23:53,480 --> 00:23:58,040
+nearby for like very low latency tasks
+
+628
+00:23:56,320 --> 00:23:59,280
+like voice
+
+629
+00:23:58,040 --> 00:24:01,120
+>> Mhm.
+
+630
+00:23:59,280 --> 00:24:03,280
+>> tasks
+
+631
+00:24:01,120 --> 00:24:04,880
+or maybe even robotics tasks. Like there
+
+632
+00:24:03,280 --> 00:24:07,080
+will be some things that would require
+
+633
+00:24:04,880 --> 00:24:09,760
+ultra low latency.
+
+634
+00:24:07,080 --> 00:24:11,000
+But I think the
+
+635
+00:24:09,760 --> 00:24:13,880
+you know
+
+636
+00:24:11,000 --> 00:24:16,840
+the AI engineer, software engineer, the
+
+637
+00:24:13,880 --> 00:24:21,720
+AI doctor, the AI
+
+638
+00:24:16,840 --> 00:24:23,800
+um teacher potentially
+
+639
+00:24:21,720 --> 00:24:27,280
+the the latency would be okay for these
+
+640
+00:24:23,800 --> 00:24:30,160
+things to be hosted from
+
+641
+00:24:27,280 --> 00:24:31,840
+just a AI factory in in in the middle of
+
+642
+00:24:30,160 --> 00:24:34,320
+the country.
+
+643
+00:24:31,840 --> 00:24:35,480
+Now
+
+644
+00:24:34,320 --> 00:24:37,360
+I think you had another question about
+
+645
+00:24:35,480 --> 00:24:39,720
+the open source models. I'm happy to to
+
+646
+00:24:37,360 --> 00:24:41,400
+dive into that. Like this is a big
+
+647
+00:24:39,720 --> 00:24:44,680
+theme.
+
+648
+00:24:41,400 --> 00:24:46,880
+>> Yeah, I mean, open source I am a big
+
+649
+00:24:44,680 --> 00:24:48,840
+Unix fan. I I started my career being a
+
+650
+00:24:46,880 --> 00:24:49,400
+Unix administrator.
+
+651
+00:24:48,840 --> 00:24:50,760
+Um
+
+652
+00:24:49,400 --> 00:24:53,280
+and I've just seen how it's been
+
+653
+00:24:50,760 --> 00:24:56,320
+proliferated throughout the years uh
+
+654
+00:24:53,280 --> 00:24:59,960
+with Red Hat going to enterprise
+
+655
+00:24:56,320 --> 00:25:01,920
+um and different flavors of Unix. Even
+
+656
+00:24:59,960 --> 00:25:04,280
+our my Mac is running on a flavor of
+
+657
+00:25:01,920 --> 00:25:06,240
+Unix right now. So, uh talk to me about
+
+658
+00:25:04,280 --> 00:25:08,520
+open source and and how that's a
+
+659
+00:25:06,240 --> 00:25:11,160
+strategic sort of like
+
+660
+00:25:08,520 --> 00:25:12,240
+bet for you guys.
+
+661
+00:25:11,160 --> 00:25:14,400
+>> Yeah, I want to give you like a little
+
+662
+00:25:12,240 --> 00:25:16,800
+history of myself, too. So, I'm also a
+
+663
+00:25:14,400 --> 00:25:19,520
+very big
+
+664
+00:25:16,800 --> 00:25:21,320
+user and proponent of this since I grew
+
+665
+00:25:19,520 --> 00:25:23,040
+up like one of my
+
+666
+00:25:21,320 --> 00:25:24,760
+teachers in
+
+667
+00:25:23,040 --> 00:25:27,720
+in high school that that taught me how
+
+668
+00:25:24,760 --> 00:25:31,080
+to to program, he was really big
+
+669
+00:25:27,720 --> 00:25:34,040
+proponent of of Linux and Unix. So, like
+
+670
+00:25:31,080 --> 00:25:36,800
+I've used Ubuntu since
+
+671
+00:25:34,040 --> 00:25:39,440
+the
+
+672
+00:25:36,800 --> 00:25:42,400
+basically 2004
+
+673
+00:25:39,440 --> 00:25:45,520
+and ever since I've always like had
+
+674
+00:25:42,400 --> 00:25:46,800
+Ubuntu like as my operating system at
+
+675
+00:25:45,520 --> 00:25:48,600
+home.
+
+676
+00:25:46,800 --> 00:25:50,600
+And even I want to tell you a story on
+
+677
+00:25:48,600 --> 00:25:53,360
+the phone side. Like whenever like
+
+678
+00:25:50,600 --> 00:25:55,720
+iPhone came out, right? Like Google
+
+679
+00:25:53,360 --> 00:25:57,760
+Android operating system was supposed to
+
+680
+00:25:55,720 --> 00:25:59,280
+be really open source and
+
+681
+00:25:57,760 --> 00:26:01,120
+open source. I'm still sticking with
+
+682
+00:25:59,280 --> 00:26:02,440
+Android since like
+
+683
+00:26:01,120 --> 00:26:03,880
+the beginning.
+
+684
+00:26:02,440 --> 00:26:07,520
+Although I have to say like it didn't
+
+685
+00:26:03,880 --> 00:26:11,320
+turn out as I hoped it would.
+
+686
+00:26:07,520 --> 00:26:12,520
+I feel like sometimes
+
+687
+00:26:11,320 --> 00:26:16,040
+I don't know. Android doesn't feel as
+
+688
+00:26:12,520 --> 00:26:16,040
+open source as
+
+689
+00:26:16,200 --> 00:26:18,920
+as it should.
+
+690
+00:26:17,400 --> 00:26:20,840
+But
+
+691
+00:26:18,920 --> 00:26:22,320
+on the topic of open source versus
+
+692
+00:26:20,840 --> 00:26:26,080
+closed source models, it's kind of a
+
+693
+00:26:22,320 --> 00:26:26,080
+really serious discussion that
+
+694
+00:26:27,000 --> 00:26:31,280
+I think
+
+695
+00:26:28,720 --> 00:26:34,320
+when we started the company Deep Infrah
+
+696
+00:26:31,280 --> 00:26:36,360
+in 2022, that was the biggest risk to
+
+697
+00:26:34,320 --> 00:26:38,560
+us. Like I knew that there'll be a lot
+
+698
+00:26:36,360 --> 00:26:40,760
+of demand for inference.
+
+699
+00:26:38,560 --> 00:26:42,560
+I just didn't know if they would be open
+
+700
+00:26:40,760 --> 00:26:44,400
+source models. And it's a tough job
+
+701
+00:26:42,560 --> 00:26:45,800
+because you have to invest like
+
+702
+00:26:44,400 --> 00:26:48,360
+considerable amount of computer
+
+703
+00:26:45,800 --> 00:26:51,200
+resources to build a model.
+
+704
+00:26:48,360 --> 00:26:53,920
+And then you make it open.
+
+705
+00:26:51,200 --> 00:26:57,040
+And so like not that many can do this.
+
+706
+00:26:53,920 --> 00:26:59,440
+Like it requires support from
+
+707
+00:26:57,040 --> 00:27:01,480
+big organizations. But any open source
+
+708
+00:26:59,440 --> 00:27:03,120
+thing has like
+
+709
+00:27:01,480 --> 00:27:06,560
+all this community innovation that
+
+710
+00:27:03,120 --> 00:27:08,040
+happens around it. And so
+
+711
+00:27:06,560 --> 00:27:10,040
+um
+
+712
+00:27:08,040 --> 00:27:13,200
+and it in the innovation feeds off of
+
+713
+00:27:10,040 --> 00:27:16,480
+each other. So like Facebook made Llama
+
+714
+00:27:13,200 --> 00:27:18,520
+or Meta made the Llama models.
+
+715
+00:27:16,480 --> 00:27:20,760
+And
+
+716
+00:27:18,520 --> 00:27:22,920
+then you know
+
+717
+00:27:20,760 --> 00:27:25,240
+Mistral did the first like mixture of
+
+718
+00:27:22,920 --> 00:27:26,800
+expert ones.
+
+719
+00:27:25,240 --> 00:27:28,520
+Then Deep Seek really took this to the
+
+720
+00:27:26,800 --> 00:27:30,920
+next level and did a lot of small
+
+721
+00:27:28,520 --> 00:27:32,880
+experts and added like some interesting
+
+722
+00:27:30,920 --> 00:27:34,840
+attention things.
+
+723
+00:27:32,880 --> 00:27:36,120
+Like the MLA.
+
+724
+00:27:34,840 --> 00:27:37,840
+And so like
+
+725
+00:27:36,120 --> 00:27:40,400
+then a bunch of other people basically
+
+726
+00:27:37,840 --> 00:27:44,680
+managed to train Deep Seek like models.
+
+727
+00:27:40,400 --> 00:27:44,680
+Like Chime and GLM and
+
+728
+00:27:45,120 --> 00:27:52,000
+And so like I think the
+
+729
+00:27:48,160 --> 00:27:54,280
+cool ideas get adopted.
+
+730
+00:27:52,000 --> 00:27:56,600
+And some more computer resources getting
+
+731
+00:27:54,280 --> 00:27:59,920
+invested into it. So
+
+732
+00:27:56,600 --> 00:28:03,320
+I feel like AI is really important. It's
+
+733
+00:27:59,920 --> 00:28:06,240
+good for us to have decent even if
+
+734
+00:28:03,320 --> 00:28:09,960
+they're not the top open source models.
+
+735
+00:28:06,240 --> 00:28:12,240
+It's still I think a good option for
+
+736
+00:28:09,960 --> 00:28:14,560
+enterprises and
+
+737
+00:28:12,240 --> 00:28:16,600
+just researchers and universities and
+
+738
+00:28:14,560 --> 00:28:19,280
+all of us as a community to have a good
+
+739
+00:28:16,600 --> 00:28:22,560
+layer of decent open source models we
+
+740
+00:28:19,280 --> 00:28:25,040
+could build on top of.
+
+741
+00:28:22,560 --> 00:28:28,360
+Um over the last 3 years as I've been
+
+742
+00:28:25,040 --> 00:28:31,880
+watching this develop
+
+743
+00:28:28,360 --> 00:28:34,280
+I believe like the o- the closed source
+
+744
+00:28:31,880 --> 00:28:36,280
+models have improved dramatically but
+
+745
+00:28:34,280 --> 00:28:38,520
+the open source models have really kind
+
+746
+00:28:36,280 --> 00:28:42,360
+of caught up to them. Like when when
+
+747
+00:28:38,520 --> 00:28:46,160
+Llama 2 was out and OpenAI had their I
+
+748
+00:28:42,360 --> 00:28:48,440
+think GPT 3.5 or 4 at the time
+
+749
+00:28:46,160 --> 00:28:51,280
+the gap was really big, like
+
+750
+00:28:48,440 --> 00:28:53,200
+you know, almost half the intelligence
+
+751
+00:28:51,280 --> 00:28:54,760
+or something like that based on like
+
+752
+00:28:53,200 --> 00:28:57,880
+benchmarks.
+
+753
+00:28:54,760 --> 00:29:00,240
+But now, if you look at how well they
+
+754
+00:28:57,880 --> 00:29:02,040
+stack, still the top models in terms of
+
+755
+00:29:00,240 --> 00:29:05,080
+intelligence are the the top three
+
+756
+00:29:02,040 --> 00:29:06,760
+closed-source lines of models, but
+
+757
+00:29:05,080 --> 00:29:09,600
+basically the next right after that are
+
+758
+00:29:06,760 --> 00:29:12,040
+open-source models. I wish
+
+759
+00:29:09,600 --> 00:29:14,280
+we get more US-based open-source models,
+
+760
+00:29:12,040 --> 00:29:16,920
+and I think that's coming
+
+761
+00:29:14,280 --> 00:29:18,200
+thanks to Indian in some sense for doing
+
+762
+00:29:16,920 --> 00:29:18,520
+NeMo Tron
+
+763
+00:29:18,200 --> 00:29:21,480
+>> Mhm.
+
+764
+00:29:18,520 --> 00:29:23,800
+>> line of open-source models, but also,
+
+765
+00:29:21,480 --> 00:29:26,720
+you know, we believe like
+
+766
+00:29:23,800 --> 00:29:29,160
+a lot of other labs in the US will also
+
+767
+00:29:26,720 --> 00:29:31,640
+release open-source versions
+
+768
+00:29:29,160 --> 00:29:33,320
+of models as well.
+
+769
+00:29:31,640 --> 00:29:34,440
+So,
+
+770
+00:29:33,320 --> 00:29:35,160
+I
+
+771
+00:29:34,440 --> 00:29:40,280
+Yeah.
+
+772
+00:29:35,160 --> 00:29:42,040
+>> My stack is like I were I was using
+
+773
+00:29:40,280 --> 00:29:44,240
+the frontier models, the US frontier
+
+774
+00:29:42,040 --> 00:29:47,040
+models, and then I just found one day
+
+775
+00:29:44,240 --> 00:29:49,400
+with Kimmy 2.6, it was like, I can't see
+
+776
+00:29:47,040 --> 00:29:52,960
+the difference anymore. It's It's almost
+
+777
+00:29:49,400 --> 00:29:56,960
+It's not 100%, but um it's caught up
+
+778
+00:29:52,960 --> 00:30:00,600
+quite a bit, and with Deep Seek 4
+
+779
+00:29:56,960 --> 00:30:03,160
+uh Pro and Flash, it uh
+
+780
+00:30:00,600 --> 00:30:04,040
+it's it's the edge is going pretty fast,
+
+781
+00:30:03,160 --> 00:30:07,280
+so
+
+782
+00:30:04,040 --> 00:30:09,560
+um I think like for me and maybe a lot
+
+783
+00:30:07,280 --> 00:30:11,720
+of other devs out there that are looking
+
+784
+00:30:09,560 --> 00:30:13,880
+at this stuff, it's it's coming closer
+
+785
+00:30:11,720 --> 00:30:15,440
+and closer. So, we can see you know,
+
+786
+00:30:13,880 --> 00:30:16,480
+what happens 6 months from now, right?
+
+787
+00:30:15,440 --> 00:30:18,960
+So,
+
+788
+00:30:16,480 --> 00:30:21,560
+uh there's that as well.
+
+789
+00:30:18,960 --> 00:30:23,400
+>> I agree. And I think another thing I
+
+790
+00:30:21,560 --> 00:30:25,760
+want to point out here is
+
+791
+00:30:23,400 --> 00:30:28,040
+even for a moment as a mental exercise,
+
+792
+00:30:25,760 --> 00:30:32,160
+imagine we freeze all the models right
+
+793
+00:30:28,040 --> 00:30:32,160
+now. No one makes any models any better.
+
+794
+00:30:32,200 --> 00:30:37,160
+The exciting part is like
+
+795
+00:30:34,360 --> 00:30:38,880
+we've gotten to a level that is really
+
+796
+00:30:37,160 --> 00:30:40,600
+useful.
+
+797
+00:30:38,880 --> 00:30:42,520
+Like even
+
+798
+00:30:40,600 --> 00:30:44,920
+expert software engineers, and I like to
+
+799
+00:30:42,520 --> 00:30:47,720
+like I'm one of them
+
+800
+00:30:44,920 --> 00:30:50,880
+are mostly not writing any code anymore
+
+801
+00:30:47,720 --> 00:30:53,200
+like they're using this agents, coding
+
+802
+00:30:50,880 --> 00:30:55,360
+agents and this
+
+803
+00:30:53,200 --> 00:30:57,400
+frontier style models both open and
+
+804
+00:30:55,360 --> 00:30:59,200
+closed to
+
+805
+00:30:57,400 --> 00:31:01,160
+produce
+
+806
+00:30:59,200 --> 00:31:03,160
+much more kind of software than they
+
+807
+00:31:01,160 --> 00:31:05,840
+could otherwise
+
+808
+00:31:03,160 --> 00:31:07,240
+uh by doing it by hand. And so it's kind
+
+809
+00:31:05,840 --> 00:31:08,920
+of like as if we've invented the
+
+810
+00:31:07,240 --> 00:31:10,560
+compilers.
+
+811
+00:31:08,920 --> 00:31:12,520
+And from now on we'll just write
+
+812
+00:31:10,560 --> 00:31:15,400
+high-level code and compile down to like
+
+813
+00:31:12,520 --> 00:31:16,880
+the machine instructions. I feel like
+
+814
+00:31:15,400 --> 00:31:19,760
+the AI models are kind of like a
+
+815
+00:31:16,880 --> 00:31:21,960
+compiler for us. Like we give high-level
+
+816
+00:31:19,760 --> 00:31:23,400
+instructions and the thing lowers it
+
+817
+00:31:21,960 --> 00:31:24,880
+down to
+
+818
+00:31:23,400 --> 00:31:26,320
+code that then gets lowered by the
+
+819
+00:31:24,880 --> 00:31:28,320
+compiler to the actual machine
+
+820
+00:31:26,320 --> 00:31:29,560
+instructions.
+
+821
+00:31:28,320 --> 00:31:32,200
+>> Yeah, you're right. Like this
+
+822
+00:31:29,560 --> 00:31:34,280
+spec-driven development type of
+
+823
+00:31:32,200 --> 00:31:37,240
+uh idea where you can just give it a
+
+824
+00:31:34,280 --> 00:31:39,200
+spec uh and ask maybe the frontier model
+
+825
+00:31:37,240 --> 00:31:41,520
+to come up with a spec. Then you can
+
+826
+00:31:39,200 --> 00:31:43,480
+take that spec and give it to a good
+
+827
+00:31:41,520 --> 00:31:45,840
+enough model and it would as long as it
+
+828
+00:31:43,480 --> 00:31:47,200
+has some guardrails it'll go and code it
+
+829
+00:31:45,840 --> 00:31:48,760
+for you. So.
+
+830
+00:31:47,200 --> 00:31:50,720
+>> Yeah.
+
+831
+00:31:48,760 --> 00:31:52,560
+Exciting times we live in.
+
+832
+00:31:50,720 --> 00:31:55,600
+>> Yeah. Yeah, you could really boot up a
+
+833
+00:31:52,560 --> 00:31:58,240
+lot these days. Talk to me about like um
+
+834
+00:31:55,600 --> 00:32:01,640
+the next level of security and
+
+835
+00:31:58,240 --> 00:32:04,160
+compliance as as these sort of solutions
+
+836
+00:32:01,640 --> 00:32:06,560
+get rolled out to to to bigger companies
+
+837
+00:32:04,160 --> 00:32:08,960
+and enterprises and bigger businesses.
+
+838
+00:32:06,560 --> 00:32:12,960
+Like right now you guys are SOC 2
+
+839
+00:32:08,960 --> 00:32:14,080
+compliant and ISO 27001.
+
+840
+00:32:12,960 --> 00:32:16,520
+Um
+
+841
+00:32:14,080 --> 00:32:19,040
+how are you seeing are you seeing any
+
+842
+00:32:16,520 --> 00:32:21,160
+pushback from bigger enterprises? Um are
+
+843
+00:32:19,040 --> 00:32:24,680
+you looking to go to the next level on
+
+844
+00:32:21,160 --> 00:32:29,360
+on that that that regulation front?
+
+845
+00:32:24,680 --> 00:32:30,680
+>> Um on the compliance side there's
+
+846
+00:32:29,360 --> 00:32:32,880
+we
+
+847
+00:32:30,680 --> 00:32:35,600
+First we always like our posture in
+
+848
+00:32:32,880 --> 00:32:37,800
+general in terms of us owning and
+
+849
+00:32:35,600 --> 00:32:40,440
+operating the actual underlying kind of
+
+850
+00:32:37,800 --> 00:32:42,960
+infrastructure and having like
+
+851
+00:32:40,440 --> 00:32:45,920
+almost no like sub processors underneath
+
+852
+00:32:42,960 --> 00:32:47,880
+us only like very rare cases. So, most
+
+853
+00:32:45,920 --> 00:32:49,160
+of the tokens that we generate happen on
+
+854
+00:32:47,880 --> 00:32:53,600
+our own
+
+855
+00:32:49,160 --> 00:32:56,560
+hardware in our kind of own spaces.
+
+856
+00:32:53,600 --> 00:33:00,360
+Um and I think that's kind of a
+
+857
+00:32:56,560 --> 00:33:02,720
+what enterprises should be looking for
+
+858
+00:33:00,360 --> 00:33:04,600
+um just to understand you need to
+
+859
+00:33:02,720 --> 00:33:06,400
+understand well the chain of who is
+
+860
+00:33:04,600 --> 00:33:08,600
+going to handle your request down to the
+
+861
+00:33:06,400 --> 00:33:10,560
+actual execution. You want to make sure
+
+862
+00:33:08,600 --> 00:33:11,720
+you're not like giving it to someone
+
+863
+00:33:10,560 --> 00:33:13,560
+that will give it to someone that will
+
+864
+00:33:11,720 --> 00:33:16,120
+give it to someone and maybe the final
+
+865
+00:33:13,560 --> 00:33:19,400
+inference happens in China.
+
+866
+00:33:16,120 --> 00:33:20,840
+Right? And so I think companies need to
+
+867
+00:33:19,400 --> 00:33:23,960
+be careful about like who does the
+
+868
+00:33:20,840 --> 00:33:25,840
+inference, where, and like whether they
+
+869
+00:33:23,960 --> 00:33:27,880
+trust this company.
+
+870
+00:33:25,840 --> 00:33:30,360
+So, as a startup it's a it's a journey,
+
+871
+00:33:27,880 --> 00:33:33,400
+right? Like we can't convince day one
+
+872
+00:33:30,360 --> 00:33:35,440
+like some super large enterprises to
+
+873
+00:33:33,400 --> 00:33:37,520
+to like trust us with their data, but
+
+874
+00:33:35,440 --> 00:33:39,520
+we're definitely
+
+875
+00:33:37,520 --> 00:33:41,960
+far along on this journey and we have
+
+876
+00:33:39,520 --> 00:33:44,440
+like large enterprise customers using
+
+877
+00:33:41,960 --> 00:33:46,360
+our infrastructure.
+
+878
+00:33:44,440 --> 00:33:48,880
+Now,
+
+879
+00:33:46,360 --> 00:33:50,600
+I actually see this as an important
+
+880
+00:33:48,880 --> 00:33:52,040
+thing. Like even though the the models
+
+881
+00:33:50,600 --> 00:33:53,560
+are
+
+882
+00:33:52,040 --> 00:33:55,920
+some of them are trained outside of the
+
+883
+00:33:53,560 --> 00:33:57,880
+US, we're kind of like the safe
+
+884
+00:33:55,920 --> 00:33:59,560
+environment where we run them on our
+
+885
+00:33:57,880 --> 00:34:02,240
+US-based
+
+886
+00:33:59,560 --> 00:34:04,560
+V100 Nvidia GPUs and
+
+887
+00:34:02,240 --> 00:34:07,320
+we have zero retention policy, so we
+
+888
+00:34:04,560 --> 00:34:08,720
+don't store any data.
+
+889
+00:34:07,320 --> 00:34:10,600
+Um
+
+890
+00:34:08,720 --> 00:34:11,600
+kind of like this zero retention thing
+
+891
+00:34:10,600 --> 00:34:13,720
+because
+
+892
+00:34:11,600 --> 00:34:16,919
+you know, you don't have to spend
+
+893
+00:34:13,720 --> 00:34:19,840
+anything on storage and your customers
+
+894
+00:34:16,919 --> 00:34:22,040
+feel safe and and you have this less
+
+895
+00:34:19,840 --> 00:34:24,520
+exposure, less risk of
+
+896
+00:34:22,040 --> 00:34:26,560
+you know, stuff leaking out out of your
+
+897
+00:34:24,520 --> 00:34:27,600
+infrastructure.
+
+898
+00:34:26,560 --> 00:34:28,960
+So,
+
+899
+00:34:27,600 --> 00:34:31,879
+I think
+
+900
+00:34:28,960 --> 00:34:33,639
+the security, by the way, of this models
+
+901
+00:34:31,879 --> 00:34:35,120
+is going to be like probably the biggest
+
+902
+00:34:33,639 --> 00:34:38,720
+thing we will
+
+903
+00:34:35,120 --> 00:34:41,800
+be thinking about in the future.
+
+904
+00:34:38,720 --> 00:34:44,040
+I think it's not as much about like it's
+
+905
+00:34:41,800 --> 00:34:47,280
+not in the traditional sense of like are
+
+906
+00:34:44,040 --> 00:34:48,639
+my, you know, data center secure? Is my
+
+907
+00:34:47,280 --> 00:34:51,159
+system secure? It's like a little bit
+
+908
+00:34:48,639 --> 00:34:53,000
+about the model itself.
+
+909
+00:34:51,159 --> 00:34:54,440
+And there's a lot more verification that
+
+910
+00:34:53,000 --> 00:34:56,440
+we need to do to make sure the model
+
+911
+00:34:54,440 --> 00:34:59,280
+wouldn't
+
+912
+00:34:56,440 --> 00:35:00,880
+make a mistake that might be costly
+
+913
+00:34:59,280 --> 00:35:02,360
+or cannot
+
+914
+00:35:00,880 --> 00:35:04,920
+you know, all these prompt injections
+
+915
+00:35:02,360 --> 00:35:06,480
+are basically us kind of
+
+916
+00:35:04,920 --> 00:35:08,640
+tricking the model into doing the thing
+
+917
+00:35:06,480 --> 00:35:09,720
+that it shouldn't be doing. So, there's
+
+918
+00:35:08,640 --> 00:35:12,360
+a lot
+
+919
+00:35:09,720 --> 00:35:14,400
+I think we're not really safe there on
+
+920
+00:35:12,360 --> 00:35:16,920
+many fronts still, even the frontier
+
+921
+00:35:14,400 --> 00:35:19,560
+models. Like I
+
+922
+00:35:16,920 --> 00:35:19,560
+um
+
+923
+00:35:21,800 --> 00:35:24,840
+I'll give you a small example. Like I
+
+924
+00:35:23,280 --> 00:35:27,640
+think we're still not safe in the way
+
+925
+00:35:24,840 --> 00:35:29,280
+where you can just say open claw, here
+
+926
+00:35:27,640 --> 00:35:31,200
+read all my email.
+
+927
+00:35:29,280 --> 00:35:33,960
+Cuz I feel like the right scammer would
+
+928
+00:35:31,200 --> 00:35:35,880
+basically send the right email
+
+929
+00:35:33,960 --> 00:35:38,680
+that will prompt inject
+
+930
+00:35:35,880 --> 00:35:41,320
+the model potentially to share
+
+931
+00:35:38,680 --> 00:35:43,000
+like information and take over. So, so
+
+932
+00:35:41,320 --> 00:35:45,080
+some of these things are
+
+933
+00:35:43,000 --> 00:35:48,360
+we need to be careful with, but on the
+
+934
+00:35:45,080 --> 00:35:48,360
+other hand it's kind of
+
+935
+00:35:48,480 --> 00:35:52,480
+you cannot be too slow in adopting this
+
+936
+00:35:50,200 --> 00:35:54,320
+technology because then your business
+
+937
+00:35:52,480 --> 00:35:54,760
+gets kind of left behind
+
+938
+00:35:54,320 --> 00:35:58,320
+>> Mhm.
+
+939
+00:35:54,760 --> 00:36:00,120
+>> or your competitors are taking the full
+
+940
+00:35:58,320 --> 00:36:02,400
+advantage of it. So, it's we need to
+
+941
+00:36:00,120 --> 00:36:02,960
+balance the adoption.
+
+942
+00:36:02,400 --> 00:36:05,280
+>> Mhm.
+
+943
+00:36:02,960 --> 00:36:08,480
+>> I think at the moment there's like
+
+944
+00:36:05,280 --> 00:36:13,560
+definitely risk, but
+
+945
+00:36:08,480 --> 00:36:14,920
+I think the rewards are still higher.
+
+946
+00:36:13,560 --> 00:36:16,760
+And so, you have to take some of the
+
+947
+00:36:14,920 --> 00:36:19,080
+risks. You just have to minimize the the
+
+948
+00:36:16,760 --> 00:36:21,880
+risk as much as you can.
+
+949
+00:36:19,080 --> 00:36:24,600
+>> Tell me about like Nemo claw. Like I'm
+
+950
+00:36:21,880 --> 00:36:26,160
+very interested in this topic. Um it
+
+951
+00:36:24,600 --> 00:36:30,280
+sounds to to like there's obviously like
+
+952
+00:36:26,160 --> 00:36:33,480
+a wrapper on top to help make open claw
+
+953
+00:36:30,280 --> 00:36:35,840
+more enterprise friendly.
+
+954
+00:36:33,480 --> 00:36:38,120
+So, I kind of see where that's going.
+
+955
+00:36:35,840 --> 00:36:39,600
+>> So, I want to explain to like the
+
+956
+00:36:38,120 --> 00:36:41,080
+viewers about
+
+957
+00:36:39,600 --> 00:36:44,480
+how I think these two things work out
+
+958
+00:36:41,080 --> 00:36:45,920
+like you can either have a very
+
+959
+00:36:44,480 --> 00:36:47,360
+There's two ways to build these things.
+
+960
+00:36:45,920 --> 00:36:50,200
+You can either start with a system
+
+961
+00:36:47,360 --> 00:36:52,200
+that's really open and is allowed to do
+
+962
+00:36:50,200 --> 00:36:54,160
+everything.
+
+963
+00:36:52,200 --> 00:36:56,800
+And then just see what are the bad
+
+964
+00:36:54,160 --> 00:36:58,760
+things it could do and try to like
+
+965
+00:36:56,800 --> 00:37:02,160
+prevent some of them.
+
+966
+00:36:58,760 --> 00:37:05,240
+And I think that's more of a open claw.
+
+967
+00:37:02,160 --> 00:37:07,600
+Like by default the thing is
+
+968
+00:37:05,240 --> 00:37:09,200
+really open. It can like
+
+969
+00:37:07,600 --> 00:37:12,800
+do many things.
+
+970
+00:37:09,200 --> 00:37:14,640
+While Nemo claw is Nvidia's kind of
+
+971
+00:37:12,800 --> 00:37:16,320
+attempted
+
+972
+00:37:14,640 --> 00:37:19,680
+starting the other way like start with
+
+973
+00:37:16,320 --> 00:37:21,880
+something really secure. Like by default
+
+974
+00:37:19,680 --> 00:37:25,280
+the model is not really allowed to like
+
+975
+00:37:21,880 --> 00:37:28,000
+access the internet or
+
+976
+00:37:25,280 --> 00:37:29,320
+you know, do many many things or execute
+
+977
+00:37:28,000 --> 00:37:30,920
+anything.
+
+978
+00:37:29,320 --> 00:37:33,800
+You have to explicitly allow what the
+
+979
+00:37:30,920 --> 00:37:36,200
+model can execute and access and
+
+980
+00:37:33,800 --> 00:37:37,560
+basically that way you can
+
+981
+00:37:36,200 --> 00:37:39,480
+start from this end. Like we start with
+
+982
+00:37:37,560 --> 00:37:42,120
+something really secure.
+
+983
+00:37:39,480 --> 00:37:44,360
+See what it actually needs. Only allow
+
+984
+00:37:42,120 --> 00:37:45,800
+the minimum set of things it needs to
+
+985
+00:37:44,360 --> 00:37:48,480
+really execute.
+
+986
+00:37:45,800 --> 00:37:51,480
+And that I think makes sense for
+
+987
+00:37:48,480 --> 00:37:53,680
+obviously enterprise adoption.
+
+988
+00:37:51,480 --> 00:37:53,680
+Um
+
+989
+00:37:54,360 --> 00:37:56,920
+So, I think there's active development
+
+990
+00:37:55,680 --> 00:37:59,760
+there.
+
+991
+00:37:56,920 --> 00:38:03,200
+Uh we
+
+992
+00:37:59,760 --> 00:38:03,200
+will see where this goes, but
+
+993
+00:38:04,400 --> 00:38:09,560
+we're looking you know, more and more in
+
+994
+00:38:06,680 --> 00:38:11,400
+kind of ways to encapsulate and secure
+
+995
+00:38:09,560 --> 00:38:13,760
+these agents. Give them enough freedom
+
+996
+00:38:11,400 --> 00:38:16,080
+so they can execute, but also make sure
+
+997
+00:38:13,760 --> 00:38:19,160
+that they don't have
+
+998
+00:38:16,080 --> 00:38:19,920
+um unrestricted access.
+
+999
+00:38:19,160 --> 00:38:21,080
+Uh
+
+1000
+00:38:19,920 --> 00:38:22,640
+and
+
+1001
+00:38:21,080 --> 00:38:24,240
+and then also I think more and more
+
+1002
+00:38:22,640 --> 00:38:27,200
+there will be work that essentially
+
+1003
+00:38:24,240 --> 00:38:30,440
+monitors the work of the agent
+
+1004
+00:38:27,200 --> 00:38:33,880
+and looks for
+
+1005
+00:38:30,440 --> 00:38:34,680
+essentially suspicious activity that
+
+1006
+00:38:33,880 --> 00:38:36,560
+uh
+
+1007
+00:38:34,680 --> 00:38:38,960
+might happen and and then you can secure
+
+1008
+00:38:36,560 --> 00:38:40,920
+the agent in that way as well.
+
+1009
+00:38:38,960 --> 00:38:44,120
+>> Okay, that's interesting. So so that's
+
+1010
+00:38:40,920 --> 00:38:46,720
+that's the where NeMo Guard comes in.
+
+1011
+00:38:44,120 --> 00:38:49,320
+It's like uh a
+
+1012
+00:38:46,720 --> 00:38:51,160
+trusted sort of open guard in a way.
+
+1013
+00:38:49,320 --> 00:38:54,120
+>> Yeah, it's basically open guard inside
+
+1014
+00:38:51,160 --> 00:38:57,440
+like uh uh for lack of better words like
+
+1015
+00:38:54,120 --> 00:38:58,800
+uh a jail or a shell.
+
+1016
+00:38:57,440 --> 00:39:01,200
+And so
+
+1017
+00:38:58,800 --> 00:39:02,240
+before it can do anything, it has to
+
+1018
+00:39:01,200 --> 00:39:02,640
+ask.
+
+1019
+00:39:02,240 --> 00:39:04,560
+>> Okay.
+
+1020
+00:39:02,640 --> 00:39:06,320
+>> Well, well, you can you can see what
+
+1021
+00:39:04,560 --> 00:39:09,520
+it's trying to do and then you can
+
+1022
+00:39:06,320 --> 00:39:11,800
+decide to approve some of these actions
+
+1023
+00:39:09,520 --> 00:39:14,080
+and and build this more contained
+
+1024
+00:39:11,800 --> 00:39:18,280
+environment for it.
+
+1025
+00:39:14,080 --> 00:39:19,560
+>> Okay. Um let's um talk about the the ICP
+
+1026
+00:39:18,280 --> 00:39:21,600
+for
+
+1027
+00:39:19,560 --> 00:39:23,640
+DeepMind infra. Like, are you guys
+
+1028
+00:39:21,600 --> 00:39:27,440
+expanding into the
+
+1029
+00:39:23,640 --> 00:39:29,120
+the more regulated space, the the uh
+
+1030
+00:39:27,440 --> 00:39:31,720
+I guess the enterprise space? Are you
+
+1031
+00:39:29,120 --> 00:39:34,760
+happy being in that uh small to medium
+
+1032
+00:39:31,720 --> 00:39:37,360
+business, startups, tech startups area
+
+1033
+00:39:34,760 --> 00:39:39,440
+where where your cost savings are much
+
+1034
+00:39:37,360 --> 00:39:42,280
+needed?
+
+1035
+00:39:39,440 --> 00:39:45,920
+>> The way I look at it is I feel
+
+1036
+00:39:42,280 --> 00:39:47,400
+the demand for tokens is
+
+1037
+00:39:45,920 --> 00:39:48,440
+really high and it's coming from
+
+1038
+00:39:47,400 --> 00:39:48,920
+everywhere.
+
+1039
+00:39:48,440 --> 00:39:49,920
+>> Mhm.
+
+1040
+00:39:48,920 --> 00:39:51,440
+>> And
+
+1041
+00:39:49,920 --> 00:39:53,760
+we
+
+1042
+00:39:51,440 --> 00:39:56,920
+don't have
+
+1043
+00:39:53,760 --> 00:39:58,840
+it it's kind of in stages.
+
+1044
+00:39:56,920 --> 00:39:59,840
+We really want to help the people that
+
+1045
+00:39:58,840 --> 00:40:03,200
+need
+
+1046
+00:39:59,840 --> 00:40:04,920
+a lot of tokens at scale.
+
+1047
+00:40:03,200 --> 00:40:06,720
+And at the moment, I feel it's not
+
+1048
+00:40:04,920 --> 00:40:08,800
+really the large enterprises. They're
+
+1049
+00:40:06,720 --> 00:40:10,280
+still figuring out how to use it and
+
+1050
+00:40:08,800 --> 00:40:12,920
+where to use it.
+
+1051
+00:40:10,280 --> 00:40:15,560
+It's the people who really need tokens
+
+1052
+00:40:12,920 --> 00:40:17,960
+at scale are like
+
+1053
+00:40:15,560 --> 00:40:22,040
+kind of AI first companies that are
+
+1054
+00:40:17,960 --> 00:40:22,040
+building a product that it's like
+
+1055
+00:40:22,160 --> 00:40:28,200
+AI powered from the bottom up. Not
+
+1056
+00:40:25,920 --> 00:40:30,000
+Um you know, how do we insert some AI
+
+1057
+00:40:28,200 --> 00:40:32,880
+features into our existing SaaS, which
+
+1058
+00:40:30,000 --> 00:40:35,320
+still is quite powerful use case.
+
+1059
+00:40:32,880 --> 00:40:35,320
+So
+
+1060
+00:40:37,440 --> 00:40:42,200
+We we we try not to lock ourselves in
+
+1061
+00:40:40,120 --> 00:40:44,720
+any segment. One thing I can say is
+
+1062
+00:40:42,200 --> 00:40:47,280
+probably we're not a best fit for like
+
+1063
+00:40:44,720 --> 00:40:47,760
+the super regulated people like banks
+
+1064
+00:40:47,280 --> 00:40:48,120
+and
+
+1065
+00:40:47,760 --> 00:40:50,040
+>> Mhm.
+
+1066
+00:40:48,120 --> 00:40:52,720
+>> other folks are really interested in
+
+1067
+00:40:50,040 --> 00:40:54,360
+doing this like in a extra secure way on
+
+1068
+00:40:52,720 --> 00:40:55,880
+premise.
+
+1069
+00:40:54,360 --> 00:40:58,240
+And that's
+
+1070
+00:40:55,880 --> 00:41:00,080
+you know, our inference cloud is not the
+
+1071
+00:40:58,240 --> 00:41:01,600
+best fit at the moment for this use
+
+1072
+00:41:00,080 --> 00:41:04,160
+cases.
+
+1073
+00:41:01,600 --> 00:41:04,160
+Uh
+
+1074
+00:41:05,640 --> 00:41:10,160
+So yeah, we just try to scale our
+
+1075
+00:41:07,920 --> 00:41:13,560
+platform, add more compute resources to
+
+1076
+00:41:10,160 --> 00:41:16,880
+it, add more models, and then
+
+1077
+00:41:13,560 --> 00:41:19,400
+Um we have a very light outbound motion
+
+1078
+00:41:16,880 --> 00:41:21,720
+at the moment. Mostly all our clients
+
+1079
+00:41:19,400 --> 00:41:23,000
+are kind of inbound.
+
+1080
+00:41:21,720 --> 00:41:25,000
+And
+
+1081
+00:41:23,000 --> 00:41:26,840
+so we we look to help the people that
+
+1082
+00:41:25,000 --> 00:41:27,960
+need tokens the most.
+
+1083
+00:41:26,840 --> 00:41:29,680
+>> Okay.
+
+1084
+00:41:27,960 --> 00:41:32,480
+Tell me about like how you've been
+
+1085
+00:41:29,680 --> 00:41:34,880
+handling these last few weeks personally
+
+1086
+00:41:32,480 --> 00:41:36,360
+in your life. Uh it must have been quite
+
+1087
+00:41:34,880 --> 00:41:39,080
+a whirlwind
+
+1088
+00:41:36,360 --> 00:41:40,560
+uh over the last month or two. Um
+
+1089
+00:41:39,080 --> 00:41:41,800
+how how are things going and how are you
+
+1090
+00:41:40,560 --> 00:41:44,760
+balancing that? Are you going to the
+
+1091
+00:41:41,800 --> 00:41:47,800
+beach or having some fun?
+
+1092
+00:41:44,760 --> 00:41:49,760
+>> It's really tough, I think.
+
+1093
+00:41:47,800 --> 00:41:53,080
+One thing I can prepare your viewers for
+
+1094
+00:41:49,760 --> 00:41:55,240
+like if you want to be a founder
+
+1095
+00:41:53,080 --> 00:41:56,920
+you know, you're you know, doing it
+
+1096
+00:41:55,240 --> 00:41:58,800
+because you're hoping that the company
+
+1097
+00:41:56,920 --> 00:42:01,680
+is successful, but when the company is
+
+1098
+00:41:58,800 --> 00:42:05,040
+successful, then the amount of
+
+1099
+00:42:01,680 --> 00:42:08,080
+work for you really grows a lot and
+
+1100
+00:42:05,040 --> 00:42:10,000
+you kind of have to
+
+1101
+00:42:08,080 --> 00:42:11,480
+your job is a little bit of more
+
+1102
+00:42:10,000 --> 00:42:13,160
+building the company than building the
+
+1103
+00:42:11,480 --> 00:42:15,280
+actual product. Like you have to go and
+
+1104
+00:42:13,160 --> 00:42:17,600
+find the right people and hand them off
+
+1105
+00:42:15,280 --> 00:42:20,240
+each like particular area,
+
+1106
+00:42:17,600 --> 00:42:22,480
+and trust them, and
+
+1107
+00:42:20,240 --> 00:42:25,360
+So, there's a
+
+1108
+00:42:22,480 --> 00:42:29,840
+a crazy amount of work right now that
+
+1109
+00:42:25,360 --> 00:42:32,000
+leaves no slot empty on the calendar and
+
+1110
+00:42:29,840 --> 00:42:34,920
+no time to
+
+1111
+00:42:32,000 --> 00:42:37,640
+cover everything. So, you
+
+1112
+00:42:34,920 --> 00:42:39,200
+And you have to just try to think every
+
+1113
+00:42:37,640 --> 00:42:41,760
+day about like what are the most
+
+1114
+00:42:39,200 --> 00:42:43,160
+important things for us today and this
+
+1115
+00:42:41,760 --> 00:42:46,600
+week,
+
+1116
+00:42:43,160 --> 00:42:49,040
+and prioritize those versus like the
+
+1117
+00:42:46,600 --> 00:42:51,280
+incoming like
+
+1118
+00:42:49,040 --> 00:42:52,920
+wave of tasks and other things that are
+
+1119
+00:42:51,280 --> 00:42:55,160
+coming to you.
+
+1120
+00:42:52,920 --> 00:42:57,000
+Um and just
+
+1121
+00:42:55,160 --> 00:42:57,880
+just move forward.
+
+1122
+00:42:57,000 --> 00:42:59,360
+Um
+
+1123
+00:42:57,880 --> 00:43:03,240
+>> What kind of culture are you going to
+
+1124
+00:42:59,360 --> 00:43:06,680
+bring to to DP Infra internally?
+
+1125
+00:43:03,240 --> 00:43:09,880
+>> So, I'm really happy that I got to
+
+1126
+00:43:06,680 --> 00:43:11,920
+recruit a lot of my old team from from
+
+1127
+00:43:09,880 --> 00:43:15,000
+my old messenger where I worked together
+
+1128
+00:43:11,920 --> 00:43:17,960
+with some of these folks for many years.
+
+1129
+00:43:15,000 --> 00:43:20,840
+Mhm. So, you already
+
+1130
+00:43:17,960 --> 00:43:22,800
+you we we already had like a lot of work
+
+1131
+00:43:20,840 --> 00:43:25,520
+together and and culture
+
+1132
+00:43:22,800 --> 00:43:28,040
+together. And so,
+
+1133
+00:43:25,520 --> 00:43:30,160
+you I don't like scaling the company too
+
+1134
+00:43:28,040 --> 00:43:31,760
+quickly cuz I want to make sure like the
+
+1135
+00:43:30,160 --> 00:43:33,720
+new people get to learn from the
+
+1136
+00:43:31,760 --> 00:43:35,680
+existing people about like what we think
+
+1137
+00:43:33,720 --> 00:43:38,320
+is
+
+1138
+00:43:35,680 --> 00:43:40,160
+the right way to think about problems
+
+1139
+00:43:38,320 --> 00:43:41,720
+and approach them.
+
+1140
+00:43:40,160 --> 00:43:43,320
+And I don't
+
+1141
+00:43:41,720 --> 00:43:45,120
+think some companies grow too quickly
+
+1142
+00:43:43,320 --> 00:43:46,640
+and then there's not enough scope for
+
+1143
+00:43:45,120 --> 00:43:48,480
+the individual people to do. And they're
+
+1144
+00:43:46,640 --> 00:43:52,320
+working on things that are not
+
+1145
+00:43:48,480 --> 00:43:52,320
+really high priority. I think it's
+
+1146
+00:43:52,440 --> 00:43:55,680
+better to be a little bit understaffed
+
+1147
+00:43:55,000 --> 00:43:57,600
+>> Mhm.
+
+1148
+00:43:55,680 --> 00:43:59,640
+>> than overstaffed.
+
+1149
+00:43:57,600 --> 00:43:59,640
+Um
+
+1150
+00:44:01,760 --> 00:44:06,240
+I mean, culture is pretty important. We
+
+1151
+00:44:08,360 --> 00:44:13,560
+We're very light. I don't think we have
+
+1152
+00:44:09,720 --> 00:44:17,320
+any managers, really, at the moment. So,
+
+1153
+00:44:13,560 --> 00:44:17,320
+that's expected from a small company.
+
+1154
+00:44:18,640 --> 00:44:25,000
+>> Cool. And uh so, what are you looking
+
+1155
+00:44:22,240 --> 00:44:29,160
+forward for for the rest of 2026? Like
+
+1156
+00:44:25,000 --> 00:44:29,160
+how how do you What's exciting to you?
+
+1157
+00:44:30,320 --> 00:44:35,720
+>> I think I'm excited about scaling the
+
+1158
+00:44:33,920 --> 00:44:37,720
+compute clusters.
+
+1159
+00:44:35,720 --> 00:44:40,200
+So, there's like a crazy build schedule
+
+1160
+00:44:37,720 --> 00:44:41,600
+over the next few months, and
+
+1161
+00:44:40,200 --> 00:44:43,800
+things going to get even crazier towards
+
+1162
+00:44:41,600 --> 00:44:45,560
+the end of the year. Uh
+
+1163
+00:44:43,800 --> 00:44:47,240
+I guess bringing these clusters up that
+
+1164
+00:44:45,560 --> 00:44:50,120
+we've already kind of in the middle of
+
+1165
+00:44:47,240 --> 00:44:51,360
+the production.
+
+1166
+00:44:50,120 --> 00:44:52,840
+Just to give you an idea, by the way,
+
+1167
+00:44:51,360 --> 00:44:54,560
+like setting some of these compute
+
+1168
+00:44:52,840 --> 00:44:57,240
+clusters is like I think a major
+
+1169
+00:44:54,560 --> 00:44:58,880
+construction project. Like
+
+1170
+00:44:57,240 --> 00:45:01,600
+uh
+
+1171
+00:44:58,880 --> 00:45:03,880
+you know, they cost like
+
+1172
+00:45:01,600 --> 00:45:06,000
+tens of millions of dollars.
+
+1173
+00:45:03,880 --> 00:45:07,480
+And there's a lot of physical setup for
+
+1174
+00:45:06,000 --> 00:45:10,400
+them.
+
+1175
+00:45:07,480 --> 00:45:11,560
+You know, electricity wires, like
+
+1176
+00:45:10,400 --> 00:45:14,280
+it's kind of almost like building a
+
+1177
+00:45:11,560 --> 00:45:15,760
+house. They need like containment walls
+
+1178
+00:45:14,280 --> 00:45:18,120
+and
+
+1179
+00:45:15,760 --> 00:45:19,800
+and then cabling.
+
+1180
+00:45:18,120 --> 00:45:22,240
+So,
+
+1181
+00:45:19,800 --> 00:45:26,320
+the That's exciting. I think I'm excited
+
+1182
+00:45:22,240 --> 00:45:28,600
+to scale the company. Like we
+
+1183
+00:45:26,320 --> 00:45:30,280
+are actively hiring for number of
+
+1184
+00:45:28,600 --> 00:45:34,200
+different positions and and
+
+1185
+00:45:30,280 --> 00:45:37,240
+interviewing. And so, getting
+
+1186
+00:45:34,200 --> 00:45:40,640
+the right really motivated, experienced,
+
+1187
+00:45:37,240 --> 00:45:42,160
+but also hungry people
+
+1188
+00:45:40,640 --> 00:45:44,240
+to the right positions and giving them a
+
+1189
+00:45:42,160 --> 00:45:45,680
+chance to just like contribute is really
+
+1190
+00:45:44,240 --> 00:45:47,280
+important. I remember like in our
+
+1191
+00:45:45,680 --> 00:45:48,720
+journey, like we
+
+1192
+00:45:47,280 --> 00:45:51,200
+had
+
+1193
+00:45:48,720 --> 00:45:52,440
+quite a few kind of key hires. Like we
+
+1194
+00:45:51,200 --> 00:45:53,760
+couldn't have gotten here without
+
+1195
+00:45:52,440 --> 00:45:55,440
+getting
+
+1196
+00:45:53,760 --> 00:45:57,440
+this person to join us right at this
+
+1197
+00:45:55,440 --> 00:46:01,080
+moment, and they really took a big
+
+1198
+00:45:57,440 --> 00:46:04,040
+burden out of what I was doing before.
+
+1199
+00:46:01,080 --> 00:46:06,280
+And they kind of well. So, like that's
+
+1200
+00:46:04,040 --> 00:46:07,520
+uh scaling the
+
+1201
+00:46:06,280 --> 00:46:09,880
+the team
+
+1202
+00:46:07,520 --> 00:46:12,560
+is an important part.
+
+1203
+00:46:09,880 --> 00:46:13,680
+I think we
+
+1204
+00:46:12,560 --> 00:46:14,800
+Our business is really capital
+
+1205
+00:46:13,680 --> 00:46:15,560
+intensive.
+
+1206
+00:46:14,800 --> 00:46:17,480
+>> Mhm.
+
+1207
+00:46:15,560 --> 00:46:19,680
+>> So,
+
+1208
+00:46:17,480 --> 00:46:23,240
+for us to be successful, we need to be
+
+1209
+00:46:19,680 --> 00:46:24,400
+good at raising funding, both equity and
+
+1210
+00:46:23,240 --> 00:46:24,560
+debt.
+
+1211
+00:46:24,400 --> 00:46:26,360
+>> Mhm.
+
+1212
+00:46:24,560 --> 00:46:28,160
+>> Debt is an important vehicle to finance
+
+1213
+00:46:26,360 --> 00:46:30,040
+these clusters and
+
+1214
+00:46:28,160 --> 00:46:32,480
+this this infrastructure, and you have
+
+1215
+00:46:30,040 --> 00:46:33,680
+to
+
+1216
+00:46:32,480 --> 00:46:36,080
+I guess
+
+1217
+00:46:33,680 --> 00:46:37,840
+do a decent amount of it, and you have
+
+1218
+00:46:36,080 --> 00:46:40,800
+to do it really well
+
+1219
+00:46:37,840 --> 00:46:44,120
+to get to like better cost per capital
+
+1220
+00:46:40,800 --> 00:46:46,040
+cost per token, as well.
+
+1221
+00:46:44,120 --> 00:46:47,760
+>> So,
+
+1222
+00:46:46,040 --> 00:46:49,360
+exciting times.
+
+1223
+00:46:47,760 --> 00:46:52,120
+Um
+
+1224
+00:46:49,360 --> 00:46:54,560
+Just a random question. Are are the
+
+1225
+00:46:52,120 --> 00:46:56,280
+the servers the
+
+1226
+00:46:54,560 --> 00:46:57,840
+the hardware that you buy,
+
+1227
+00:46:56,280 --> 00:46:59,880
+are they
+
+1228
+00:46:57,840 --> 00:47:02,200
+do they have some level of depreciation
+
+1229
+00:46:59,880 --> 00:47:03,960
+over time?
+
+1230
+00:47:02,200 --> 00:47:05,200
+>> Yeah, you know,
+
+1231
+00:47:03,960 --> 00:47:09,280
+this is actually one of the biggest
+
+1232
+00:47:05,200 --> 00:47:10,960
+stories behind this whole boom of AI.
+
+1233
+00:47:09,280 --> 00:47:12,720
+The biggest kind of underlying question
+
+1234
+00:47:10,960 --> 00:47:15,960
+is how long would
+
+1235
+00:47:12,720 --> 00:47:19,200
+these things that we spend money on
+
+1236
+00:47:15,960 --> 00:47:20,560
+setting up, like essentially last us?
+
+1237
+00:47:19,200 --> 00:47:22,480
+And
+
+1238
+00:47:20,560 --> 00:47:24,360
+I want to give you like my perspective
+
+1239
+00:47:22,480 --> 00:47:26,560
+from my history with First the
+
+1240
+00:47:24,360 --> 00:47:28,800
+Messenger right?
+
+1241
+00:47:26,560 --> 00:47:31,440
+So, I joined like the Messenger in 2010
+
+1242
+00:47:28,800 --> 00:47:33,680
+when we only had about
+
+1243
+00:47:31,440 --> 00:47:36,520
+100 servers there.
+
+1244
+00:47:33,680 --> 00:47:40,920
+And then I ended up growing that
+
+1245
+00:47:36,520 --> 00:47:42,120
+number of servers to like 2 to 3,000.
+
+1246
+00:47:40,920 --> 00:47:43,760
+Um
+
+1247
+00:47:42,120 --> 00:47:45,480
+at the time, a lot of people were
+
+1248
+00:47:43,760 --> 00:47:47,800
+saying, "Okay, you know, every 3 years
+
+1249
+00:47:45,480 --> 00:47:50,400
+we're going to basically throw away the
+
+1250
+00:47:47,800 --> 00:47:51,440
+old servers and buy new servers."
+
+1251
+00:47:50,400 --> 00:47:53,200
+But
+
+1252
+00:47:51,440 --> 00:47:54,720
+for the Messenger, while I was doing
+
+1253
+00:47:53,200 --> 00:47:56,480
+this to, you know, set up our
+
+1254
+00:47:54,720 --> 00:47:59,720
+infrastructure,
+
+1255
+00:47:56,480 --> 00:48:01,560
+I kind always thought
+
+1256
+00:47:59,720 --> 00:48:03,760
+Okay, 4 years have passed. This server
+
+1257
+00:48:01,560 --> 00:48:08,360
+is still running.
+
+1258
+00:48:03,760 --> 00:48:08,360
+It still has memory and CPUs.
+
+1259
+00:48:09,040 --> 00:48:14,960
+Why throw it away, right? Like
+
+1260
+00:48:13,320 --> 00:48:18,120
+I guess when you do the math, the price
+
+1261
+00:48:14,960 --> 00:48:19,720
+of buying the new server
+
+1262
+00:48:18,120 --> 00:48:21,800
+and you know, the new server is
+
+1263
+00:48:19,720 --> 00:48:23,320
+basically for roughly
+
+1264
+00:48:21,800 --> 00:48:25,160
+Back then, like the price of servers
+
+1265
+00:48:23,320 --> 00:48:28,360
+would almost not change. So, the servers
+
+1266
+00:48:25,160 --> 00:48:29,880
+would always be like around $5,000 each.
+
+1267
+00:48:28,360 --> 00:48:31,680
+These were really
+
+1268
+00:48:29,880 --> 00:48:35,560
+not the Nvidia servers that we have
+
+1269
+00:48:31,680 --> 00:48:38,040
+today that are like crazy expensive.
+
+1270
+00:48:35,560 --> 00:48:39,600
+But, the servers will be roughly 5,000
+
+1271
+00:48:38,040 --> 00:48:40,960
+and
+
+1272
+00:48:39,600 --> 00:48:42,640
+throughout the 10 years I was there,
+
+1273
+00:48:40,960 --> 00:48:46,240
+like that price didn't really change up
+
+1274
+00:48:42,640 --> 00:48:48,600
+or down. It stayed around this number.
+
+1275
+00:48:46,240 --> 00:48:49,560
+But, what you got every year is like
+
+1276
+00:48:48,600 --> 00:48:51,800
+some
+
+1277
+00:48:49,560 --> 00:48:53,960
+better CPUs and some faster memory in
+
+1278
+00:48:51,800 --> 00:48:56,440
+each server.
+
+1279
+00:48:53,960 --> 00:48:59,080
+So, so Anyway, my my long story here is
+
+1280
+00:48:56,440 --> 00:49:00,560
+like at the at IMO
+
+1281
+00:48:59,080 --> 00:49:03,600
+we ended up not throwing away any
+
+1282
+00:49:00,560 --> 00:49:05,760
+machines. We kept them for 5 years and 7
+
+1283
+00:49:03,600 --> 00:49:08,000
+years. We would just move them a little
+
+1284
+00:49:05,760 --> 00:49:09,760
+bit from like high-priority applications
+
+1285
+00:49:08,000 --> 00:49:11,720
+to low-priority applications. So, when
+
+1286
+00:49:09,760 --> 00:49:13,080
+the machines got older
+
+1287
+00:49:11,720 --> 00:49:16,040
+I would just, for example, use them in
+
+1288
+00:49:13,080 --> 00:49:17,360
+our Hadoop clusters to
+
+1289
+00:49:16,040 --> 00:49:18,240
+to data analytics.
+
+1290
+00:49:17,360 --> 00:49:21,120
+>> Right.
+
+1291
+00:49:18,240 --> 00:49:23,280
+>> Because a failure of a machine there
+
+1292
+00:49:21,120 --> 00:49:24,920
+would basically have no effect. While
+
+1293
+00:49:23,280 --> 00:49:28,120
+failure of a machine serving live
+
+1294
+00:49:24,920 --> 00:49:28,120
+customer traffic is
+
+1295
+00:49:28,360 --> 00:49:31,960
+kind of more important.
+
+1296
+00:49:30,120 --> 00:49:33,760
+And so, we I think we did a really good
+
+1297
+00:49:31,960 --> 00:49:36,000
+job there of using the infrastructure
+
+1298
+00:49:33,760 --> 00:49:38,840
+really efficiently.
+
+1299
+00:49:36,000 --> 00:49:38,840
+And
+
+1300
+00:49:38,960 --> 00:49:43,560
+and we were really scrappy. And so, so
+
+1301
+00:49:41,400 --> 00:49:45,360
+the big question here is like how long
+
+1302
+00:49:43,560 --> 00:49:47,840
+would the servers that we buy now be
+
+1303
+00:49:45,360 --> 00:49:50,320
+useful for? And
+
+1304
+00:49:47,840 --> 00:49:53,120
+yes, Nvidia comes up with better and
+
+1305
+00:49:50,320 --> 00:49:55,800
+better GPUs all the time.
+
+1306
+00:49:53,120 --> 00:49:57,280
+But, what we've seen is that
+
+1307
+00:49:55,800 --> 00:50:00,240
+even the oldest
+
+1308
+00:49:57,280 --> 00:50:01,880
+servers we have, the A100s or the H100s
+
+1309
+00:50:00,240 --> 00:50:04,080
+that are now like 2 and 1/2 years old,
+
+1310
+00:50:01,880 --> 00:50:06,200
+are still
+
+1311
+00:50:04,080 --> 00:50:08,800
+pretty fully used. And and even the
+
+1312
+00:50:06,200 --> 00:50:10,200
+prices that we would charge for them has
+
+1313
+00:50:08,800 --> 00:50:10,720
+gone higher.
+
+1314
+00:50:10,200 --> 00:50:12,960
+>> Interesting.
+
+1315
+00:50:10,720 --> 00:50:13,400
+>> Mostly the function of the demand.
+
+1316
+00:50:12,960 --> 00:50:16,040
+>> Mhm.
+
+1317
+00:50:13,400 --> 00:50:16,040
+>> Um
+
+1318
+00:50:16,480 --> 00:50:19,680
+I feel like
+
+1319
+00:50:19,760 --> 00:50:24,040
+we will keep using this infrastructure.
+
+1320
+00:50:22,560 --> 00:50:26,200
+We'll build new ones, but there's so
+
+1321
+00:50:24,040 --> 00:50:28,440
+much demand coming
+
+1322
+00:50:26,200 --> 00:50:30,280
+down the line that
+
+1323
+00:50:28,440 --> 00:50:32,000
+even the oldest ones would still be
+
+1324
+00:50:30,280 --> 00:50:33,280
+pretty used.
+
+1325
+00:50:32,000 --> 00:50:34,600
+>> Okay.
+
+1326
+00:50:33,280 --> 00:50:36,640
+Um
+
+1327
+00:50:34,600 --> 00:50:39,360
+you have a pretty good perspective of
+
+1328
+00:50:36,640 --> 00:50:42,840
+this. So, what is the most overrated
+
+1329
+00:50:39,360 --> 00:50:44,480
+thing in AI infrastructure right now,
+
+1330
+00:50:42,840 --> 00:50:45,840
+you think? And where's, you know, in a
+
+1331
+00:50:44,480 --> 00:50:48,240
+few years we'll be like, "What the
+
+1332
+00:50:45,840 --> 00:50:48,240
+heck?"
+
+1333
+00:50:54,920 --> 00:50:59,440
+>> It's a good question. I think like
+
+1334
+00:51:02,720 --> 00:51:08,040
+I think like right now
+
+1335
+00:51:05,840 --> 00:51:09,520
+we're not asking ourselves like often
+
+1336
+00:51:08,040 --> 00:51:11,720
+the questions like, "Do I really need
+
+1337
+00:51:09,520 --> 00:51:13,120
+all of this? And what part of this do I
+
+1338
+00:51:11,720 --> 00:51:14,520
+really need?"
+
+1339
+00:51:13,120 --> 00:51:16,320
+And so, I try to keep asking this
+
+1340
+00:51:14,520 --> 00:51:18,200
+question all the time like, "This thing
+
+1341
+00:51:16,320 --> 00:51:20,400
+that we bought, are we using it? And how
+
+1342
+00:51:18,200 --> 00:51:23,000
+we use it? Is it
+
+1343
+00:51:20,400 --> 00:51:23,000
+And so,
+
+1344
+00:51:23,360 --> 00:51:27,640
+at the moment, I'll tell you like
+
+1345
+00:51:26,280 --> 00:51:30,480
+what I think and I'm I get a little bit
+
+1346
+00:51:27,640 --> 00:51:31,840
+in trouble like
+
+1347
+00:51:30,480 --> 00:51:33,600
+Nvidia has
+
+1348
+00:51:31,840 --> 00:51:35,520
+generated these reference designs of
+
+1349
+00:51:33,600 --> 00:51:39,160
+like how to build a cluster using their
+
+1350
+00:51:35,520 --> 00:51:41,280
+GPUs and their networking switches and
+
+1351
+00:51:39,160 --> 00:51:42,760
+and all in between.
+
+1352
+00:51:41,280 --> 00:51:46,720
+And
+
+1353
+00:51:42,760 --> 00:51:50,720
+this has been important for training.
+
+1354
+00:51:46,720 --> 00:51:52,200
+I think the designs are mostly
+
+1355
+00:51:50,720 --> 00:51:55,160
+following like what do you really need
+
+1356
+00:51:52,200 --> 00:51:57,360
+to do efficient training.
+
+1357
+00:51:55,160 --> 00:51:58,680
+But,
+
+1358
+00:51:57,360 --> 00:52:00,320
+I feel like inference is quite
+
+1359
+00:51:58,680 --> 00:52:02,240
+different, so it just requires a
+
+1360
+00:52:00,320 --> 00:52:04,560
+different design and there different
+
+1361
+00:52:02,240 --> 00:52:05,760
+questions. Do we need these parts? What
+
+1362
+00:52:04,560 --> 00:52:07,400
+are we going to interconnect them? How
+
+1363
+00:52:05,760 --> 00:52:09,120
+do we build a network that is good for
+
+1364
+00:52:07,400 --> 00:52:11,920
+inference?
+
+1365
+00:52:09,120 --> 00:52:11,920
+And uh
+
+1366
+00:52:13,360 --> 00:52:18,280
+So, that's the part where I think like
+
+1367
+00:52:16,800 --> 00:52:20,120
+we could optimize more the
+
+1368
+00:52:18,280 --> 00:52:22,200
+infrastructure.
+
+1369
+00:52:20,120 --> 00:52:22,200
+Um
+
+1370
+00:52:25,200 --> 00:52:28,960
+Yeah, and the other part is maybe
+
+1371
+00:52:26,240 --> 00:52:31,160
+storage. Like, people seem to I guess
+
+1372
+00:52:28,960 --> 00:52:35,160
+buy certain amount of storage and pay
+
+1373
+00:52:31,160 --> 00:52:37,160
+like quite a bit of premium for like
+
+1374
+00:52:35,160 --> 00:52:39,680
+these fancy storage
+
+1375
+00:52:37,160 --> 00:52:42,160
+providers where I don't know that you
+
+1376
+00:52:39,680 --> 00:52:44,680
+really
+
+1377
+00:52:42,160 --> 00:52:47,320
+how much do you really need that?
+
+1378
+00:52:44,680 --> 00:52:50,200
+Uh depending on what you're building.
+
+1379
+00:52:47,320 --> 00:52:52,400
+What what I like to do is
+
+1380
+00:52:50,200 --> 00:52:55,160
+you set up something and then you have
+
+1381
+00:52:52,400 --> 00:52:57,560
+to look at it and see like, "Okay,
+
+1382
+00:52:55,160 --> 00:52:59,360
+I'm using the GPUs at this level.
+
+1383
+00:52:57,560 --> 00:53:01,760
+Am Am I using the memory? How much of
+
+1384
+00:52:59,360 --> 00:53:03,480
+the memory I'm actually using?" So, not
+
+1385
+00:53:01,760 --> 00:53:05,200
+not too many people can give you like
+
+1386
+00:53:03,480 --> 00:53:07,040
+just a number. Out of all the memory
+
+1387
+00:53:05,200 --> 00:53:08,800
+we've bought,
+
+1388
+00:53:07,040 --> 00:53:10,160
+how much is free right now and how much
+
+1389
+00:53:08,800 --> 00:53:11,800
+is used?
+
+1390
+00:53:10,160 --> 00:53:12,960
+And this is like an important number,
+
+1391
+00:53:11,800 --> 00:53:14,520
+right?
+
+1392
+00:53:12,960 --> 00:53:15,960
+When you buy your next machines, if
+
+1393
+00:53:14,520 --> 00:53:17,120
+you're having so much free memory, then
+
+1394
+00:53:15,960 --> 00:53:19,920
+you should be buying a little less
+
+1395
+00:53:17,120 --> 00:53:21,560
+memory per machine.
+
+1396
+00:53:19,920 --> 00:53:23,280
+And the same questions for the CPUs.
+
+1397
+00:53:21,560 --> 00:53:25,480
+Like, how much of your CPUs are you
+
+1398
+00:53:23,280 --> 00:53:27,560
+actually currently utilizing? Like, what
+
+1399
+00:53:25,480 --> 00:53:28,720
+percent of the cores are idle versus
+
+1400
+00:53:27,560 --> 00:53:30,040
+busy?
+
+1401
+00:53:28,720 --> 00:53:31,800
+And the same thing for the switches and
+
+1402
+00:53:30,040 --> 00:53:33,560
+the other things. And this is what we
+
+1403
+00:53:31,800 --> 00:53:35,560
+did a lot at the messenger. Like, we
+
+1404
+00:53:33,560 --> 00:53:38,760
+basically tracked graphs of There was
+
+1405
+00:53:35,560 --> 00:53:41,000
+four key resources, like memory, CPU,
+
+1406
+00:53:38,760 --> 00:53:42,360
+disks, and networking.
+
+1407
+00:53:41,000 --> 00:53:45,120
+And so, we would
+
+1408
+00:53:42,360 --> 00:53:47,560
+have graphs data center wide of like how
+
+1409
+00:53:45,120 --> 00:53:49,280
+far are we utilizing each of these and
+
+1410
+00:53:47,560 --> 00:53:52,000
+then
+
+1411
+00:53:49,280 --> 00:53:55,280
+it will impact our
+
+1412
+00:53:52,000 --> 00:53:56,440
+next purchases so that we kind of make
+
+1413
+00:53:55,280 --> 00:53:58,800
+sure that
+
+1414
+00:53:56,440 --> 00:54:00,920
+the mix is right.
+
+1415
+00:53:58,800 --> 00:54:02,640
+>> Okay.
+
+1416
+00:54:00,920 --> 00:54:05,400
+Nikola, I just wanted to say thank you
+
+1417
+00:54:02,640 --> 00:54:07,000
+so much for these answers. Uh they are
+
+1418
+00:54:05,400 --> 00:54:09,040
+going to
+
+1419
+00:54:07,000 --> 00:54:10,920
+um
+
+1420
+00:54:09,040 --> 00:54:12,680
+help my audience get even more
+
+1421
+00:54:10,920 --> 00:54:14,080
+interested about AI and sort of the
+
+1422
+00:54:12,680 --> 00:54:16,560
+hardware and the infrastructure that
+
+1423
+00:54:14,080 --> 00:54:19,640
+goes behind all of the the cool little
+
+1424
+00:54:16,560 --> 00:54:22,360
+requests that we talk to to all of our
+
+1425
+00:54:19,640 --> 00:54:24,760
+AIs every day. So thanks for that and I
+
+1426
+00:54:22,360 --> 00:54:28,240
+we appreciate you coming on.
+
+1427
+00:54:24,760 --> 00:54:28,240
+>> Thank you so much. Pleasure.

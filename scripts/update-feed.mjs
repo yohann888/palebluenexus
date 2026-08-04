@@ -754,6 +754,57 @@ function transcriptHrefForSlug(slug) {
   return filename ? `../../transcripts/${filename}` : "";
 }
 
+function msToSrtTime(ms) {
+  const totalMilliseconds = Math.max(0, Number(ms) || 0);
+  const milliseconds = totalMilliseconds % 1000;
+  const totalSeconds = Math.floor(totalMilliseconds / 1000);
+  const seconds = totalSeconds % 60;
+  const totalMinutes = Math.floor(totalSeconds / 60);
+  const minutes = totalMinutes % 60;
+  const hours = Math.floor(totalMinutes / 60);
+  return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")},${String(milliseconds).padStart(3, "0")}`;
+}
+
+async function fetchTranscriptSrt(youtubeId) {
+  const key = process.env.SUPADATA_API_KEY;
+  if (!key) return null;
+
+  const headers = { "x-api-key": key };
+  const url = `https://api.supadata.ai/v1/transcript?url=${encodeURIComponent(`https://www.youtube.com/watch?v=${youtubeId}`)}&lang=en&mode=auto`;
+  let response = await fetch(url, { headers });
+  if (!response.ok) {
+    log(`transcript fetch failed for ${youtubeId} -> HTTP ${response.status}`);
+    return null;
+  }
+
+  let payload = await response.json();
+  if (!Array.isArray(payload?.content) && payload?.jobId) {
+    for (let attempt = 0; attempt < 10; attempt += 1) {
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      response = await fetch(
+        `https://api.supadata.ai/v1/transcript/${encodeURIComponent(payload.jobId)}`,
+        { headers },
+      );
+      if (!response.ok) {
+        log(`transcript fetch failed for ${youtubeId} -> HTTP ${response.status}`);
+        return null;
+      }
+      payload = await response.json();
+      if (Array.isArray(payload?.content) || payload?.status === "completed") break;
+      if (payload?.status === "failed") return null;
+    }
+  }
+
+  if (!Array.isArray(payload?.content) || !payload.content.length) return null;
+  return payload.content
+    .map((segment, index) => {
+      const start = Number(segment?.offset) || 0;
+      const end = start + (Number(segment?.duration) || 0);
+      return `${index + 1}\n${msToSrtTime(start)} --> ${msToSrtTime(end)}\n${String(segment?.text || "")}\n`;
+    })
+    .join("\n");
+}
+
 function episodeKitHtml(g, { item, reach = {}, clips = [] } = {}) {
   const total = (reach.views || 0) + (reach.listens || 0);
   const combinedStat = total > 0 ? `${fmtViews(total)} ${reach.listens > 0 ? "views & listens" : "views"}` : "";
@@ -1501,6 +1552,29 @@ async function main() {
   log("updated partner/index.html audience stats");
 
   const episodeGuests = guests.filter((g) => g.status === "published" && g.episodeSlug && g.youtubeId && isPublicGuest(g));
+  if (process.env.SUPADATA_API_KEY) {
+    const fetchedTranscriptSlugs = [];
+    for (const g of episodeGuests) {
+      if (transcriptHrefForSlug(g.episodeSlug)) continue;
+      try {
+        const srt = await fetchTranscriptSrt(g.youtubeId);
+        if (!srt) continue;
+        mkdirSync(join(ROOT, "transcripts"), { recursive: true });
+        writeFileSync(join(ROOT, "transcripts", `${g.episodeSlug}.en.srt`), srt);
+        fetchedTranscriptSlugs.push(g.episodeSlug);
+        log(`fetched transcript for ${g.slug}`);
+      } catch (error) {
+        log(`transcript fetch failed for ${g.slug}: ${error.message}`);
+      }
+    }
+    log(
+      fetchedTranscriptSlugs.length
+        ? `fetched transcripts: ${fetchedTranscriptSlugs.join(", ")}`
+        : "no new transcripts fetched",
+    );
+  } else {
+    log("skipping transcript backfill: SUPADATA_API_KEY is not set");
+  }
   for (const g of episodeGuests) {
     const episodeItem = items.find((i) => i.id === g.youtubeId) || byGuest[g.slug];
     const clips = items
