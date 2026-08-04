@@ -739,10 +739,26 @@ function cardHtml(item, { rank } = {}) {
         </a>`;
 }
 
+function transcriptHrefForSlug(slug) {
+  const candidates = [
+    `${slug}.en.srt`,
+    `${slug}.srt`,
+    `${slug}.srt.en.srt`,
+    `${slug}.en.vtt`,
+    `${slug}.vtt`,
+    `${slug}.txt`,
+  ];
+  const filename = candidates.find((candidate) =>
+    existsSync(join(ROOT, "transcripts", candidate)),
+  );
+  return filename ? `../../transcripts/${filename}` : "";
+}
+
 function episodeKitHtml(g, { item, reach = {}, clips = [] } = {}) {
   const total = (reach.views || 0) + (reach.listens || 0);
   const combinedStat = total > 0 ? `${fmtViews(total)} ${reach.listens > 0 ? "views & listens" : "views"}` : "";
   const episodeUrl = `https://www.youtube.com/watch?v=${esc(g.youtubeId)}`;
+  const transcriptHref = transcriptHrefForSlug(g.episodeSlug);
   const guestLinks = [];
   if (g.website) {
     try {
@@ -787,6 +803,7 @@ ${combinedStat ? `      <p class="ep-kit-stat fade-up">${combinedStat}</p>\n` : 
         <a href="${episodeUrl}" target="_blank" rel="noopener noreferrer" class="share-btn share">Watch on YouTube</a>
         <a href="${SHOW_LINKS.apple}" target="_blank" rel="noopener noreferrer" class="share-btn share">Listen on Apple Podcasts</a>
         <a href="${SHOW_LINKS.spotify}" target="_blank" rel="noopener noreferrer" class="share-btn share">Listen on Spotify</a>
+${transcriptHref ? `        <a href="${esc(transcriptHref)}" download class="share-btn share">Download Transcript</a>` : ""}
       </div>${guestLinksBlock ? `\n      ${guestLinksBlock}` : ""}${clipBlocks ? `\n      ${clipBlocks}` : ""}
     </div>
   </section>`;
