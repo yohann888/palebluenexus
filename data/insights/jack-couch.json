@@ -1,0 +1,12 @@
+{
+  "generatedAt": "2026-08-05T00:00:23.544Z",
+  "model": "claude-sonnet-5",
+  "youtubeId": "4wwUJRkLB90",
+  "moments": [
+    {
+      "t": 2005,
+      "title": "Why open-source AI agents couldn't pay your bills",
+      "insight": "Early AI agent hype like OpenClaw failed because banks and web apps actively block simple screen-scraping automation."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-08-05T00:07:07.848Z",
+  "model": "claude-sonnet-5",
+  "youtubeId": "DS2-iheW6pI",
+  "moments": [
+    {
+      "t": 58,
+      "title": "The Origin Story of DeepInfra",
+      "insight": "Founder explains how they started DeepInfra in 2022 after noticing AI models need hundreds of billions of computations per token, drawing on experience scaling a messaging app to 200M+ users."
+    },
+    {
+      "t": 356,
+      "title": "B200 GPUs at $275 vs $6-10 on Hyperscalers",
+      "insight": "DeepInfra offers Nvidia B200 GPUs at $275 compared to $6-10+ on major public clouds like AWS and Azure."
+    },
+    {
+      "t": 687,
+      "title": "Pricing a Model at 27¢ When Rivals Charged 60¢",
+      "insight": "DeepInfra aggressively priced Mistral's mixture-of-experts model at 27 cents per million tokens while competitors charged 60 cents, based on correctly costing only the active experts used at runtime."
+    },
+    {
+      "t": 1276,
+      "title": "Why Inference Isn't Like High-Frequency Trading",
+      "insight": "Unlike HFT which needs proximity to exchanges, inference is so power-hungry that GPUs are best placed in rural areas near cheap electricity rather than near users for latency."
+    },
+    {
+      "t": 1796,
+      "title": "Open Source Models Are Catching Up Fast",
+      "insight": "The founder says with models like Kimi 2.6 and DeepSeek 4, the gap between open and closed frontier models has nearly disappeared compared to the huge gap seen with Llama 2 vs GPT-4."
+    },
+    {
+      "t": 2822,
+      "title": "The Server Depreciation Myth in AI Infrastructure",
+      "insight": "Drawing from a decade running data centers, he argues old GPUs like A100s and H100s remain fully utilized and even command higher prices due to overwhelming demand, defying assumptions about rapid obs"
+    }
+  ]
+}

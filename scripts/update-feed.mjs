@@ -739,7 +739,7 @@ function cardHtml(item, { rank } = {}) {
         </a>`;
 }
 
-function transcriptHrefForSlug(slug) {
+function transcriptFileForSlug(slug) {
   const candidates = [
     `${slug}.en.srt`,
     `${slug}.srt`,
@@ -748,10 +748,120 @@ function transcriptHrefForSlug(slug) {
     `${slug}.vtt`,
     `${slug}.txt`,
   ];
-  const filename = candidates.find((candidate) =>
+  return candidates.find((candidate) =>
     existsSync(join(ROOT, "transcripts", candidate)),
-  );
+  ) || "";
+}
+
+function transcriptHrefForSlug(slug) {
+  const filename = transcriptFileForSlug(slug);
   return filename ? `../../transcripts/${filename}` : "";
+}
+
+function transcriptPathForSlug(slug) {
+  const filename = transcriptFileForSlug(slug);
+  return filename ? join(ROOT, "transcripts", filename) : "";
+}
+
+function parseTranscriptSegments(slug) {
+  const path = transcriptPathForSlug(slug);
+  if (!path || path.endsWith(".txt")) return [];
+  const blocks = readFileSync(path, "utf8").split(/\r?\n\s*\r?\n/);
+  const segments = [];
+  for (const block of blocks) {
+    const lines = block.split(/\r?\n/);
+    const timecodeIndex = lines.findIndex((line) =>
+      /(\d{2}):(\d{2}):(\d{2})[,.](\d{3})\s*--(?:>|&gt;)/.test(line),
+    );
+    if (timecodeIndex < 0) continue;
+    const match = lines[timecodeIndex].match(/(\d{2}):(\d{2}):(\d{2})[,.](\d{3})\s*--(?:>|&gt;)/);
+    if (!match) continue;
+    const start = Number(match[1]) * 3600 + Number(match[2]) * 60 + Number(match[3]);
+    const text = lines
+      .slice(timecodeIndex + 1)
+      .join(" ")
+      .trim();
+    if (text) segments.push({ start, text });
+  }
+  return segments;
+}
+
+function secToClock(t) {
+  const total = Math.max(0, Math.floor(Number(t) || 0));
+  const seconds = total % 60;
+  const totalMinutes = Math.floor(total / 60);
+  const minutes = totalMinutes % 60;
+  const hours = Math.floor(totalMinutes / 60);
+  return hours
+    ? `${hours}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`
+    : `${totalMinutes}:${String(seconds).padStart(2, "0")}`;
+}
+
+async function generateInsights(youtubeId, segments) {
+  const key = process.env.ANTHROPIC_API_KEY;
+  if (!key || !segments.length) return [];
+  try {
+    const transcript = segments
+      .map((segment) => `[${secToClock(segment.start)}] ${segment.text}`)
+      .join("\n");
+    const prompt = `Act as an editor creating chapter markers for a podcast promo page. From the timestamped transcript below, pick the 6 most compelling, substantive moments (key insights, strong quotes, turning points), spread across the episode. Return ONLY a JSON array (no prose, no code fences). Each element must be {"t": <integer seconds; MUST equal a timestamp that appears in the transcript>, "title": <hook, <=60 chars>, "insight": <one sentence, <=160 chars, what is actually said>}. Order ascending by t.\n\n${transcript}`;
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": key,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "claude-sonnet-5",
+        max_tokens: 1500,
+        messages: [{ role: "user", content: prompt }],
+      }),
+    });
+    if (!response.ok) {
+      log(`insights fetch failed for ${youtubeId} -> HTTP ${response.status}`);
+      return [];
+    }
+    const data = await response.json();
+    const textBlock = Array.isArray(data?.content)
+      ? data.content.find((block) => block?.type === "text")
+      : null;
+    const text = String(textBlock?.text || "");
+    const start = text.indexOf("[");
+    const end = text.lastIndexOf("]");
+    if (start < 0 || end <= start) return [];
+    const parsed = JSON.parse(text.slice(start, end + 1));
+    if (!Array.isArray(parsed)) return [];
+    const maxStart = segments[segments.length - 1].start;
+    return parsed
+      .map((item) => ({
+        t: Math.floor(Number(item?.t)),
+        title: String(item?.title || "").trim().slice(0, 80),
+        insight: String(item?.insight || "").trim().slice(0, 200),
+      }))
+      .filter((item) =>
+        Number.isFinite(item.t) &&
+        item.t >= 0 &&
+        item.t <= maxStart &&
+        item.title &&
+        item.insight,
+      )
+      .sort((a, b) => a.t - b.t)
+      .slice(0, 8);
+  } catch {
+    return [];
+  }
+}
+
+function readInsights(slug) {
+  const path = join(ROOT, "data", "insights", `${slug}.json`);
+  if (!existsSync(path)) return [];
+  try {
+    const data = JSON.parse(readFileSync(path, "utf8"));
+    return Array.isArray(data?.moments) ? data.moments : [];
+  } catch {
+    return [];
+  }
 }
 
 function msToSrtTime(ms) {
@@ -805,7 +915,7 @@ async function fetchTranscriptSrt(youtubeId) {
     .join("\n");
 }
 
-function episodeKitHtml(g, { item, reach = {}, clips = [] } = {}) {
+function episodeKitHtml(g, { item, reach = {}, clips = [], insights = [] } = {}) {
   const total = (reach.views || 0) + (reach.listens || 0);
   const combinedStat = total > 0 ? `${fmtViews(total)} ${reach.listens > 0 ? "views & listens" : "views"}` : "";
   const episodeUrl = `https://www.youtube.com/watch?v=${esc(g.youtubeId)}`;
@@ -828,6 +938,17 @@ function episodeKitHtml(g, { item, reach = {}, clips = [] } = {}) {
   const guestLinksBlock = guestLinks.length
     ? `<div class="ep-kit-guest-links fade-up">${guestLinks.map((link) => `<a href="${esc(link.href)}" target="_blank" rel="noopener noreferrer" class="share-btn share">${esc(link.label)}</a>`).join("\n")}</div>`
     : "";
+  const momentsBlock = insights.length
+    ? `<div class="ep-kit-moments">
+        <h2 class="ep-kit-heading">Key moments</h2>
+        <div class="ep-kit-moment-list">
+${insights.map((moment) => `          <a href="${esc(`https://www.youtube.com/watch?v=${g.youtubeId}&t=${moment.t}s`)}" target="_blank" rel="noopener noreferrer" class="ep-kit-moment">
+            <span class="ep-kit-ts">${esc(secToClock(moment.t))}</span>
+            <span class="ep-kit-moment-text"><span class="ep-kit-moment-title">${esc(moment.title)}</span><span class="ep-kit-moment-insight">${esc(moment.insight)}</span></span>
+          </a>`).join("\n")}
+        </div>
+      </div>`
+    : "";
   const clipBlocks = clips.length
     ? `<div class="ep-kit-clips">
         <h2 class="ep-kit-heading">Clips</h2>
@@ -846,7 +967,7 @@ ${clips.map((clip) => {
     : "";
   return `
   <style>
-    .ep-kit{padding:0 0 2rem}.ep-kit-shell{background:linear-gradient(180deg,rgba(10,14,28,1) 0%,#04060e 100%);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)}.ep-kit-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}.ep-kit-stat{color:#A6D2E6;font-size:1rem}.ep-kit-links,.ep-kit-guest-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}.ep-kit-heading{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;line-height:1.15;margin-bottom:1rem}.ep-kit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}.ep-kit-card{display:block;color:inherit;text-decoration:none;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;transition:transform .3s,border-color .3s}.ep-kit-card:hover{transform:translateY(-3px);border-color:rgba(212,168,75,.5)}.ep-kit-thumb{aspect-ratio:16/9;position:relative;background:#0a0f1e}.ep-kit-thumb img{width:100%;height:100%;object-fit:cover}.ep-kit-badge{position:absolute;left:.65rem;bottom:.65rem;background:rgba(4,6,14,.85);color:#7EB8DA;padding:.2rem .45rem;border-radius:999px;font-size:.65rem}.ep-kit-body{padding:.9rem}.ep-kit-clip-title{font-size:.82rem;line-height:1.4;color:#fff}.ep-kit-clip-meta{font-size:.75rem;color:rgba(166,210,230,0.6);margin-top:.35rem}
+    .ep-kit{padding:0 0 2rem}.ep-kit-shell{background:linear-gradient(180deg,rgba(10,14,28,1) 0%,#04060e 100%);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)}.ep-kit-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}.ep-kit-stat{color:#A6D2E6;font-size:1rem}.ep-kit-links,.ep-kit-guest-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}.ep-kit-moments{margin-top:2rem}.ep-kit-moment-list{display:flex;flex-direction:column;gap:.5rem;margin-top:1rem}.ep-kit-moment{display:flex;gap:.9rem;align-items:baseline;color:inherit;text-decoration:none;padding:.7rem .9rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;transition:border-color .3s,transform .3s}.ep-kit-moment:hover{border-color:rgba(212,168,75,.5);transform:translateX(3px)}.ep-kit-ts{color:#D4A84B;font-variant-numeric:tabular-nums;font-size:.85rem;white-space:nowrap;min-width:3.2rem}.ep-kit-moment-text{display:flex;flex-direction:column;gap:.2rem}.ep-kit-moment-title{color:#fff;font-size:.9rem;font-weight:500}.ep-kit-moment-insight{color:rgba(166,210,230,0.75);font-size:.8rem;line-height:1.4}.ep-kit-heading{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;line-height:1.15;margin-bottom:1rem}.ep-kit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,190px));justify-content:center;gap:1rem;margin-top:1rem}.ep-kit-card{display:block;color:inherit;text-decoration:none;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;transition:transform .3s,border-color .3s}.ep-kit-card:hover{transform:translateY(-3px);border-color:rgba(212,168,75,.5)}.ep-kit-thumb{aspect-ratio:3/4;position:relative;background:#0a0f1e}.ep-kit-thumb img{width:100%;height:100%;object-fit:cover;object-position:center top}.ep-kit-badge{position:absolute;left:.65rem;bottom:.65rem;background:rgba(4,6,14,.85);color:#7EB8DA;padding:.2rem .45rem;border-radius:999px;font-size:.65rem}.ep-kit-body{padding:.9rem}.ep-kit-clip-title{font-size:.82rem;line-height:1.4;color:#fff}.ep-kit-clip-meta{font-size:.75rem;color:rgba(166,210,230,0.6);margin-top:.35rem}
   </style>
   <section class="ep-kit ep-kit-shell">
     <div class="section-container">
@@ -855,7 +976,7 @@ ${combinedStat ? `      <p class="ep-kit-stat fade-up">${combinedStat}</p>\n` : 
         <a href="${SHOW_LINKS.apple}" target="_blank" rel="noopener noreferrer" class="share-btn share">Listen on Apple Podcasts</a>
         <a href="${SHOW_LINKS.spotify}" target="_blank" rel="noopener noreferrer" class="share-btn share">Listen on Spotify</a>
 ${transcriptHref ? `        <a href="${esc(transcriptHref)}" download class="share-btn share">Download Transcript</a>` : ""}
-      </div>${guestLinksBlock ? `\n      ${guestLinksBlock}` : ""}${clipBlocks ? `\n      ${clipBlocks}` : ""}
+      </div>${guestLinksBlock ? `\n      ${guestLinksBlock}` : ""}${momentsBlock ? `\n      ${momentsBlock}` : ""}${clipBlocks ? `\n      ${clipBlocks}` : ""}
     </div>
   </section>`;
 }
@@ -1575,6 +1696,40 @@ async function main() {
   } else {
     log("skipping transcript backfill: SUPADATA_API_KEY is not set");
   }
+  if (process.env.ANTHROPIC_API_KEY) {
+    const generatedInsightSlugs = [];
+    for (const g of episodeGuests) {
+      const insightPath = join(ROOT, "data", "insights", `${g.episodeSlug}.json`);
+      if (existsSync(insightPath)) continue;
+      try {
+        const segments = parseTranscriptSegments(g.episodeSlug);
+        if (!segments.length) continue;
+        const moments = await generateInsights(g.youtubeId, segments);
+        if (!moments.length) continue;
+        mkdirSync(join(ROOT, "data", "insights"), { recursive: true });
+        writeFileSync(
+          insightPath,
+          JSON.stringify({
+            generatedAt: new Date().toISOString(),
+            model: "claude-sonnet-5",
+            youtubeId: g.youtubeId,
+            moments,
+          }, null, 2),
+        );
+        generatedInsightSlugs.push(g.episodeSlug);
+        log(`generated insights for ${g.slug}`);
+      } catch (error) {
+        log(`insights generation failed for ${g.slug}: ${error.message}`);
+      }
+    }
+    log(
+      generatedInsightSlugs.length
+        ? `generated insights: ${generatedInsightSlugs.join(", ")}`
+        : "no new insights generated",
+    );
+  } else {
+    log("skipping insights: ANTHROPIC_API_KEY is not set");
+  }
   for (const g of episodeGuests) {
     const episodeItem = items.find((i) => i.id === g.youtubeId) || byGuest[g.slug];
     const clips = items
@@ -1592,7 +1747,12 @@ async function main() {
     }
     writeFileSync(
       episodePath,
-      injectBetween(episodeHtml, "AUTO-EP-KIT", episodeKitHtml(g, { item: episodeItem, reach: guestReach[g.slug], clips })),
+      injectBetween(episodeHtml, "AUTO-EP-KIT", episodeKitHtml(g, {
+        item: episodeItem,
+        reach: guestReach[g.slug],
+        clips,
+        insights: readInsights(g.episodeSlug),
+      })),
     );
   }
   const episodesIndexPath = join(ROOT, "episodes/index.html");

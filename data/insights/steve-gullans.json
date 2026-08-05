@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-08-05T00:06:09.411Z",
+  "model": "claude-sonnet-5",
+  "youtubeId": "9hy2PeP1P4o",
+  "moments": [
+    {
+      "t": 211,
+      "title": "A headset that trains your brain's flow state",
+      "insight": "Steve describes Think, a headset that reads brainwaves to help users enter a flow state even under pressure, like a superpower."
+    },
+    {
+      "t": 396,
+      "title": "Billions spent on ed-tech, kids aren't improving",
+      "insight": "Despite billions poured into school technology, standardized test scores haven't improved—but six weeks of this training raises scores a full grade level."
+    },
+    {
+      "t": 703,
+      "title": "Why big companies won't build this",
+      "insight": "Big gaming companies profit from dopamine-driven addiction, not cognitive training that requires sustained effort like going to the gym."
+    },
+    {
+      "t": 1027,
+      "title": "ADHD training as effective as medication",
+      "insight": "Eight clinical trials showed the technology works as well as medication for ADHD, and attention issues underlie nearly all major mental health diagnoses."
+    },
+    {
+      "t": 1680,
+      "title": "The brain has hundreds of undiscovered subtypes",
+      "insight": "Just as cancer went from 50 known types to hundreds, Steve predicts we'll soon map dozens of cognitive/neurodivergent subtypes we can't yet see."
+    },
+    {
+      "t": 2579,
+      "title": "The one job every startup CEO actually has",
+      "insight": "Steve's blunt investor advice: a CEO's only real job is raising money, yet 99% of entrepreneurs only talk about what they care about, not what investors need to hear."
+    }
+  ]
+}
