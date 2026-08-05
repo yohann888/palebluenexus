@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T13:28:35.565Z",
+  "generatedAt": "2026-08-05T19:07:40.831Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -33,7 +33,7 @@
       "likes": 3,
       "comments": 0,
       "guestSlug": "matt-blumberg",
-      "score": 187
+      "score": 175
     },
     {
       "id": "7669130833411788040",
@@ -48,7 +48,7 @@
       "likes": 4,
       "comments": 0,
       "guestSlug": "matt-blumberg",
-      "score": 177
+      "score": 167
     },
     {
       "id": "t3dDHRRZyHk",
@@ -79,7 +79,7 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 61
+      "score": 58
     },
     {
       "id": "7668120385975487761",
@@ -94,7 +94,7 @@
       "likes": 5,
       "comments": 1,
       "guestSlug": null,
-      "score": 56
+      "score": 54
     },
     {
       "id": "DS2-iheW6pI",
@@ -113,21 +113,6 @@
       "score": 43
     },
     {
-      "id": "7668138602328640785",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Age doesn't predict founder success. Neither does experience. Vadim says the real variable is how often you're willing to bet.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668138602328640785?_r=1&u_code=0&region=US&mid=7668138906823707412&preview_pb=0&sharer_language=en&_d=f01j29bl7mb79a&share_item_id=7668138602328640785&source=h5_t",
-      "thumb": "images/feed/tt-7668138602328640785.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-30T02:15:02.000Z",
-      "views": 227,
-      "likes": 3,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 36
-    },
-    {
       "id": "7663238759256788225",
       "platform": "tiktok",
       "type": "clip",
@@ -143,6 +128,21 @@
       "score": 35
     },
     {
+      "id": "7668138602328640785",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Age doesn't predict founder success. Neither does experience. Vadim says the real variable is how often you're willing to bet.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668138602328640785?_r=1&u_code=0&region=US&mid=7668138906823707412&preview_pb=0&sharer_language=en&_d=f01j29bl7mb79a&share_item_id=7668138602328640785&source=h5_t",
+      "thumb": "images/feed/tt-7668138602328640785.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-30T02:15:02.000Z",
+      "views": 227,
+      "likes": 3,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 34
+    },
+    {
       "id": "7668393482377104661",
       "platform": "tiktok",
       "type": "clip",
@@ -155,7 +155,7 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 33
+      "score": 31
     },
     {
       "id": "7662921800166247697",
@@ -170,7 +170,7 @@
       "likes": 5,
       "comments": 0,
       "guestSlug": null,
-      "score": 30
+      "score": 29
     },
     {
       "id": "7665190322183425287",
@@ -185,7 +185,7 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 27
+      "score": 26
     },
     {
       "id": "CgWRHHS7A_g",
@@ -217,7 +217,7 @@
       "comments": 0,
       "guestSlug": "vadim-peskov",
       "listens": 49,
-      "score": 6
+      "score": 5
     },
     {
       "id": "7662886131704368392",
