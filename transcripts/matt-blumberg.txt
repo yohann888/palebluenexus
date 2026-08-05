@@ -22,7 +22,15 @@ Wow.
 
 [snorts]
 
-Um and um the company made a decision in uh 2024 that um almost all of its customers were in the US. Uh and that the business really needed to pivot and become a contemporary agentic AI business. Um so, the board uh went through a search process and found me. Um and I joined in early 2025. I brought in um a lot of folks uh that I've worked with over the last uh 15 or 20 years across multiple companies uh in the tech space. And basically uh we uh built and actually just last week launched our new platform. Uh so, we renamed the company and the new platform is called Markup AI. Um it's a really powerful uh agentic AI platform uh to help the enterprises keep their content safe uh and ready to publish. Um so, we have agents that do brand, uh accuracy, compliance, and AI search visibility. Um and that's our platform. That's our business. Uh we cover any surface imaginable uh because we're available through MCP server, through API, uh and through a Chrome extension that integrates with just about every application you can imagine. Um so, [clears throat] we work with writers, we work with editors, we work with large companies across all verticals. Uh and again, the the the the story behind the business really is um content is the next code. Um the infrastructure layer around coding assistance is pretty well developed at this point. Content is where most enterprises are now turning their attention in terms of getting their true power of large language models um and the productivity benefits that that come with them. But like the early days of LLMs with coding, um there are lots of guardrails missing.
+Um and um the company made a decision in uh 2024 that um almost all of its customers were in the US.  Uh and that the business really needed to pivot and become a contemporary agentic AI business.  Um so, the board uh went through a search process and found me.  Um and I joined in early 2025.
+
+I brought in um a lot of folks uh that I've worked with over the last uh 15 or 20 years across multiple companies uh in the tech space.  And basically uh we uh built and actually just last week launched our new platform.  Uh so, we renamed the company and the new platform is called Markup AI.  Um it's a really powerful uh agentic AI platform uh to help the enterprises keep their content safe uh and ready to publish.
+
+Um so, we have agents that do brand, uh accuracy, compliance, and AI search visibility.  Um and that's our platform.  That's our business.  Uh we cover any surface imaginable uh because we're available through MCP server, through API, uh and through a Chrome extension that integrates with just about every application you can imagine.
+
+Um so, [clears throat] we work with writers, we work with editors, we work with large companies across all verticals.  Uh and again, the the the the story behind the business really is um content is the next code.  Um the infrastructure layer around coding assistance is pretty well developed at this point.  Content is where most enterprises are now turning their attention in terms of getting their true power of large language models um and the productivity benefits that that come with them.
+
+But like the early days of LLMs with coding, um there are lots of guardrails missing.
 
 [snorts]
 
@@ -30,7 +38,11 @@ Um so that's what we're building and that's what we launched last week. And we s
 
 Wow. So So tell me some of the benefits that your customers are experiencing for from using Markup in the Aigentic stack?
 
-Yeah, it's it's there is a productivity benefit. Um there is a um um we saw a very clear ROI benefit. There's a a real quality benefit. Um and there's some benefits [clears throat] that I always describe as the previously unthinkable. Which is really the magic of AI, right? It's It's not just that you do things faster, it's that you do things you just couldn't do before. So um let me give you a couple pieces of color around that. One of our clients um really succinctly put it the other day. She said, "Look, we fired all of our writers. We put it all in the hands of um LLMs. And now my team and I that are left spend 80% of our time fixing content that comes out of LLMs. Um so LLMs have turned people from writers into editors.
+Yeah, it's it's there is a productivity benefit.  Um there is a um um we saw a very clear ROI benefit.  There's a a real quality benefit.  Um and there's some benefits [clears throat] that I always describe as the previously unthinkable.
+
+Which is really the magic of AI, right?  It's It's not just that you do things faster, it's that you do things you just couldn't do before.  So um let me give you a couple pieces of color around that.  One of our clients um really succinctly put it the other day.
+
+She said, "Look, we fired all of our writers.  We put it all in the hands of um LLMs.  And now my team and I that are left spend 80% of our time fixing content that comes out of LLMs.  Um so LLMs have turned people from writers into editors.
 
 Yeah.
 
@@ -58,7 +70,9 @@ Um so, the reporting and analytics just comes back to how many things did we cat
 
 Yeah.
 
-Even smaller ones have brand and style guides that are 20-30 pages long. So, anytime we do a pass at a document or a webpage and correct it, we can say, "Oh, we found 82 errors. We fixed them." Um same thing if we're doing compliance checking um for a particular law that the client cares about based on its jurisdiction or its vertical, how many things did we flag for human in the loop? Um similarly for AEO and GEO, sort of that AI search visibility, how many things did we find, flag, and fix that are going to improve um AI search visibility. And then the same thing for accuracy, uh when we do accuracy work, how many things did we find and flag against the deterministic source that needed to be corrected.
+Even smaller ones have brand and style guides that are 20-30 pages long.  So, anytime we do a pass at a document or a webpage and correct it, we can say, "Oh, we found 82 errors.  We fixed them. " Um same thing if we're doing compliance checking um for a particular law that the client cares about based on its jurisdiction or its vertical, how many things did we flag for human in the loop?
+
+Um similarly for AEO and GEO, sort of that AI search visibility, how many things did we find, flag, and fix that are going to improve um AI search visibility.  And then the same thing for accuracy, uh when we do accuracy work, how many things did we find and flag against the deterministic source that needed to be corrected.
 
 Right. Well, I thought that
 
@@ -70,7 +84,7 @@ Yeah, I mean it is it's an interesting world. Like they talk about the metaverse
 
 Right.
 
-Um so, we have agents like the AI search and AI visibility agents that know the rules for AEO and GEO and will will make the text conform to those rules, which sort of gets to machine readability. But if you really look underneath the hood with those rules, a lot of those rules are about the content being authentic, about being fresh, about being accurate, and all those things are are human rules. So, I'm not sure at the end of the day that this two-track internet is exactly going to unfold the way it sounds, but to the extent that it does, that just means that people are going to need to version their content A and B.
+Um so, we have agents like the AI search and AI visibility agents that know the rules for AEO and GEO and will will make the text conform to those rules, which sort of gets to machine readability.  But if you really look underneath the hood with those rules, a lot of those rules are about the content being authentic, about being fresh, about being accurate, and all those things are are human rules.  So, I'm not sure at the end of the day that this two-track internet is exactly going to unfold the way it sounds, but to the extent that it does, that just means that people are going to need to version their content A and B.
 
 Right.
 
@@ -88,7 +102,11 @@ Personally, I didn't engage that much in it. I mean, I know what all that is, bu
 
 Yeah, so uh speaking of which, um Matt, what do you do for for fun as a as a father and as a CEO?
 
-Um I have lots of fun in lots of different ways. I've got three great kids. They're late teens and uh I love having fun with them. Uh it's great to have everyone home for the summer from the different uh schools that they're at and uh um one of them likes to golf and so do I, so we do a lot of golf. Um a couple of them like to watch movies and uh we do a lot of that. Um and um love hiking. Uh love spending time with my wife. Um and uh I would say sort of the intellectual interests for me are have always been around uh American history and politics. Uh so I exercise that one in lots of different ways. I'm I'm doing a lot of vibe coding at the moment. Um so like uh like to keep busy.
+Um I have lots of fun in lots of different ways.  I've got three great kids.  They're late teens and uh I love having fun with them.  Uh it's great to have everyone home for the summer from the different uh schools that they're at and uh um one of them likes to golf and so do I, so we do a lot of golf.
+
+Um a couple of them like to watch movies and uh we do a lot of that.  Um and um love hiking.  Uh love spending time with my wife.  Um and uh I would say sort of the intellectual interests for me are have always been around uh American history and politics.
+
+Uh so I exercise that one in lots of different ways.  I'm I'm doing a lot of vibe coding at the moment.  Um so like uh like to keep busy.
 
 The thing about history is like I never watch historical movies because I know the the the movies are written by the winners and it's like I don't want to be lied to, right? So, how do you tell in history what's real and what's not?
 
@@ -118,7 +136,9 @@ And that's the the the the term guardian agent. So, AI to check the AI. And you 
 
 And there's like a there's a concept of a deterministic trust score when you have AI track AI or or check on AI. Explain that.
 
-Yeah, I mean all of our agents have um algorithms that score. Um we uh most often, unless a client really wants to get granular and see a zero to 100 score, um we will bucket things into low, medium, and high risk. Um and that that tends to do the job for most clients. The high risk has to be human in the loop. Medium and low risk just fix. Um but uh but you know, any any determinism can come with an algorithm that produces a score. Uh and uh you know, again, back to my earlier example, if a comma is missing, it's not going to be that big of a deal. Um if you are saying something that's out of compliance with a claim substantiation law, uh that's going to be a real problem.
+Yeah, I mean all of our agents have um algorithms that score.  Um we uh most often, unless a client really wants to get granular and see a zero to 100 score, um we will bucket things into low, medium, and high risk.  Um and that that tends to do the job for most clients.  The high risk has to be human in the loop.
+
+Medium and low risk just fix.  Um but uh but you know, any any determinism can come with an algorithm that produces a score.  Uh and uh you know, again, back to my earlier example, if a comma is missing, it's not going to be that big of a deal.  Um if you are saying something that's out of compliance with a claim substantiation law, uh that's going to be a real problem.
 
 And is there like some way to check what you guys have done? Like is there like a a false negative or check or anything like that for you guys?
 
@@ -130,11 +150,21 @@ we're selling safety um and confidence. Um but we're also um you know, I think s
 
 I absolutely believe in that. The the the sponsor of this show is is Huckabuy and they are in the search visibility phase. Let maybe let's talk about that a little bit. Um where do you think this space is going? Obviously, the old uh world of Google search is no longer there with with AI results coming above the fold um and and most people using AI to discover brands these days. What is your uh take on that?
 
-I mean that's that's here to stay. You know, it's interesting because you look at you know, you look at the different AI services and they really the quality varies pretty widely you know, when they default you to a an old model or if you decide you're going to use an old model because it's cheaper. You're going to find stuff that's out of date. People who use things like perplexity which are like up to the minute rag optimized are finding things that are really current. Freshness is a real test that you want to use with that. But you know, I think whether it's Google layering in Gemini's output or people going straight to perplexity or something else. People are just going to increasingly be you know, turning to AI to look for things and you know, I mean the results the difference in the results is incredible. You you ask perplexity a question you get back a table comparing five different products against the three things they know you care about. That's a pretty big difference than than getting a page of links which is sort of the old old school work. So Google's obviously figured this out too. It's sort of you know, a 10 up top. But I'm not sure that's exactly the best engine for that output at least today. Google's got plenty of resources. They can make that better and better and better.
+I mean that's that's here to stay.  You know, it's interesting because you look at you know, you look at the different AI services and they really the quality varies pretty widely you know, when they default you to a an old model or if you decide you're going to use an old model because it's cheaper.  You're going to find stuff that's out of date.  People who use things like perplexity which are like up to the minute rag optimized are finding things that are really current.
+
+Freshness is a real test that you want to use with that.  But you know, I think whether it's Google layering in Gemini's output or people going straight to perplexity or something else.  People are just going to increasingly be you know, turning to AI to look for things and you know, I mean the results the difference in the results is incredible.  You you ask perplexity a question you get back a table comparing five different products against the three things they know you care about.
+
+That's a pretty big difference than than getting a page of links which is sort of the old old school work.  So Google's obviously figured this out too.  It's sort of you know, a 10 up top.  But I'm not sure that's exactly the best engine for that output at least today.
+
+Google's got plenty of resources.  They can make that better and better and better.
 
 And you know, the old way is paid search. How does that get translate into this world? Do you see a path ahead for neutrality there?
 
-Yeah, I mean that's that's interesting when you think about it. You know, I would say the current regime is that paid search is getting a little less impactful. I expect that will change over time because economics dictate that it will. But I you know, I could be wrong. Look if everybody starts doing you know, $20 a month subscriptions to these things you know, to use their preferred one and to use it in a memory focused mode. Maybe not. I mean the reason that paid search evolved is that search is free and chewed up a lot of compute and a lot of everything at Google and Yahoo and Microsoft. And you know, SEM was a really good way of of recouping the cost of that. You know, if the world moves to subscription model, maybe that doesn't need to be there. My guess is even if it moves to subscription model, you'll start seeing that in search results and you know, hopefully that will evolve the same way the SEO versus SEM world did where things are flagged and at least you know what's sponsored versus what's organic.
+Yeah, I mean that's that's interesting when you think about it.  You know, I would say the current regime is that paid search is getting a little less impactful.  I expect that will change over time because economics dictate that it will.  But I you know, I could be wrong.
+
+Look if everybody starts doing you know, $20 a month subscriptions to these things you know, to use their preferred one and to use it in a memory focused mode.  Maybe not.  I mean the reason that paid search evolved is that search is free and chewed up a lot of compute and a lot of everything at Google and Yahoo and Microsoft.  And you know, SEM was a really good way of of recouping the cost of that.
+
+You know, if the world moves to subscription model, maybe that doesn't need to be there.  My guess is even if it moves to subscription model, you'll start seeing that in search results and you know, hopefully that will evolve the same way the SEO versus SEM world did where things are flagged and at least you know what's sponsored versus what's organic.
 
 I like that insight very much. I think like maybe everybody will have a $20 a month subscription just as they have car insurance and uh
 
@@ -146,15 +176,27 @@ Um you know, they'll have probably $20 ones and then they'll have the $100 one f
 
 Right. Right. It it it certainly I do. I have couple and I have $20 ones too. So you're right. Talk about the world of I guess search in a year's time or two years' time. Where do you think it's going to go? I'm interested in this question as well.
 
-Yeah, I am you know, I'm not really an expert in search. So I don't know that I'm the best person to ask. I mean, I would say um uh the data would suggest the public data would suggest that Google's not losing share. Hmm. [snorts] I find that a little hard to believe. Um and I don't I can't reconcile that though. And the only reason I find it hard to believe is that there are a lot of people I know that are using the the different models not Gemini for search. Um and I know maybe I know a really small segment of the population, but um and Google certainly built a reflex over the last you know, 25 years that that included a verb Google. So um Uh so, I you know, a little unclear to me, but there there has to be some some fragmentation coming. Um but, you know, you never know with big tech. Um you know, Perplexity could start eating share, and all of a sudden someone buys them. Uh and that could be Google, you know, doubling down if they're allowed to uh with antitrust. Uh or it could be someone else that decides to um you know, to really to pick up that user base, pick up that technology, and and um it's I think it's I think it's impossible to tell. I think quite frankly, it's impossible to tell where anything is going beyond a few months out uh because the pace of change and the pace of development is like nothing I have seen in my career in technology.
+Yeah, I am you know, I'm not really an expert in search.  So I don't know that I'm the best person to ask.  I mean, I would say um uh the data would suggest the public data would suggest that Google's not losing share.  Hmm.
+
+[snorts] I find that a little hard to believe.  Um and I don't I can't reconcile that though.  And the only reason I find it hard to believe is that there are a lot of people I know that are using the the different models not Gemini for search.  Um and I know maybe I know a really small segment of the population, but um and Google certainly built a reflex over the last you know, 25 years that that included a verb Google.
+
+So um Uh so, I you know, a little unclear to me, but there there has to be some some fragmentation coming.  Um but, you know, you never know with big tech.  Um you know, Perplexity could start eating share, and all of a sudden someone buys them.  Uh and that could be Google, you know, doubling down if they're allowed to uh with antitrust.
+
+Uh or it could be someone else that decides to um you know, to really to pick up that user base, pick up that technology, and and um it's I think it's I think it's impossible to tell.  I think quite frankly, it's impossible to tell where anything is going beyond a few months out uh because the pace of change and the pace of development is like nothing I have seen in my career in technology.
 
 Well, and the one thing, you know, markup is it is is policing is is the it sounds to me like the avalanche of AI slop that that's that's coming out there, and and we all see it. It's there there's a bunch of stuff uh on your LinkedIn feeds, on your everywhere. And what is your, I guess, take on that? Like, how do you feel this AI slop problem uh will be I guess, dealt with?
 
-Um well, hopefully we deal with it. Uh and the world turns to us to deal with it. And uh you know, we built a business that's really easy to embed in lots of other solutions. We are not a monolithic stand-alone thing outside of workflows. Um but, um you know, uh but realistically, not everyone in the world is going to use us, and I don't know. I mean, it you know, AI automates bad behavior. Um and the reality is the internet automates bad behavior, too. Um and I'm not sure everything has been solved around that. And uh I don't think everything's going to be solved around AI slop, either. Um maybe the uh maybe the machine-to-machine reading will will either mean that it's not a problem because they can cut through slop, um or uh surfaces the problem more efficiently to solve.
+Um well, hopefully we deal with it.  Uh and the world turns to us to deal with it.  And uh you know, we built a business that's really easy to embed in lots of other solutions.  We are not a monolithic stand-alone thing outside of workflows.
+
+Um but, um you know, uh but realistically, not everyone in the world is going to use us, and I don't know.  I mean, it you know, AI automates bad behavior.  Um and the reality is the internet automates bad behavior, too.  Um and I'm not sure everything has been solved around that.
+
+And uh I don't think everything's going to be solved around AI slop, either.  Um maybe the uh maybe the machine-to-machine reading will will either mean that it's not a problem because they can cut through slop, um or uh surfaces the problem more efficiently to solve.
 
 What do you think about AI influencers and user-generated content?
 
-Um, there are a couple of them that I follow, who have really smart things to say, and who definitely influence influence us here that are I would say they're you know sort of more power enterprise, you know, B2B influencers. I don't focus a lot on B2C AI influencers, and I don't know if there if there are any. There probably are some. Um, but you know, the thing with AI is again coming back to the previously unimaginable, it's really about power users exploring and pushing the boundaries and then recording what they did and what worked and what didn't work. So a couple of people [clears throat] that I pay attention to are like Camille Bach or Bank, B A N C. Um, Nate Jones. They both have really good substacks, um, where they just go into like either what they did something they did that worked, something they did that didn't work, or something a client of theirs tried. And those those end up being really really helpful.
+Um, there are a couple of them that I follow, who have really smart things to say, and who definitely influence influence us here that are I would say they're you know sort of more power enterprise, you know, B2B influencers.  I don't focus a lot on B2C AI influencers, and I don't know if there if there are any.  There probably are some.  Um, but you know, the thing with AI is again coming back to the previously unimaginable, it's really about power users exploring and pushing the boundaries and then recording what they did and what worked and what didn't work.
+
+So a couple of people [clears throat] that I pay attention to are like Camille Bach or Bank, B A N C.  Um, Nate Jones.  They both have really good substacks, um, where they just go into like either what they did something they did that worked, something they did that didn't work, or something a client of theirs tried.  And those those end up being really really helpful.
 
 Matt, what's the next 6 months to a year look like for Mark up, and what would you consider this 2026 being a great year capping off? What would happen there?
 

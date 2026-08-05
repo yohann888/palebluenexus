@@ -657,7 +657,7 @@ function newEpisodePageHtml(g) {
   </style>
 </head>
 <body><nav id="nav"><a href="/" class="nav-logo"><img src="/images/pbn-logo.png" alt="Pale Blue Nexus" /></a></nav>
-  <section class="hero"><div class="section-container"><div class="fade"><nav aria-label="Breadcrumb" class="ep-breadcrumb" style="margin-bottom:1.25rem;font-size:.8rem;letter-spacing:.05em"><a href="/guests/" style="color:#D4A84B;text-decoration:none">Guests</a><span style="color:rgba(166,210,230,.5);margin:0 .5rem">/</span><span style="color:#A6D2E6">${esc(g.name)}</span></nav><span class="section-eyebrow eyebrow">${esc(g.episode)}</span><img class="guest-photo photo" src="../../${esc(g.photo)}" alt="${esc(g.name)}" /><h1>${esc(g.name)}</h1><p style="font-size:1.1rem;color:var(--secondary);max-width:600px">${esc(episodeTitle)}</p><div class="episode-meta meta"><span>${esc(g.episode)}</span></div><a class="share-btn share" href="https://www.youtube.com/watch?v=${esc(g.youtubeId)}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></div></div></section>
+  <section class="hero"><div class="section-container"><div class="fade"><div role="navigation" aria-label="Breadcrumb" class="ep-breadcrumb" style="margin-bottom:1.25rem;font-size:.8rem;letter-spacing:.05em"><a href="/guests/" style="color:#D4A84B;text-decoration:none">Guests</a><span style="color:rgba(166,210,230,.5);margin:0 .5rem">/</span><span style="color:#A6D2E6">${esc(g.name)}</span></div><span class="section-eyebrow eyebrow">${esc(g.episode)}</span><img class="guest-photo photo" src="../../${esc(g.photo)}" alt="${esc(g.name)}" /><h1>${esc(g.name)}</h1><p style="font-size:1.1rem;color:var(--secondary);max-width:600px">${esc(episodeTitle)}</p><div class="episode-meta meta"><span>${esc(g.episode)}</span></div><a class="share-btn share" href="https://www.youtube.com/watch?v=${esc(g.youtubeId)}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></div></div></section>
   <section style="background:linear-gradient(180deg,rgba(10,14,28,1) 0%,var(--bg) 100%)"><div class="section-container"><span class="section-eyebrow eyebrow fade">About the Guest</span><h2 class="fade">${esc(g.name)}.</h2><p class="guest-bio bio fade">${esc(g.bio || "")}</p></div></section>
   <!-- AUTO-EP-KIT:start --><!-- AUTO-EP-KIT:end -->
   <section style="padding-top:0"><div class="section-container"><div class="embed fade"><iframe src="https://www.youtube.com/embed/${esc(g.youtubeId)}" title="${esc(episodeTitle)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div></div></section>
@@ -769,15 +769,19 @@ function transcriptParagraphs(slug) {
   if (!segments.length) return [];
   const text = segments.map((segment) => segment.text).join(" ").replace(/\s+/g, " ").trim();
   if (!text) return [];
-  if (text.includes(">>")) {
-    return text.split(/\s*>>\s*/).map((paragraph) => paragraph.trim()).filter(Boolean);
-  }
-  return (text.match(/[^.!?]+[.!?]+|\S.+$/g) || [])
-    .reduce((paragraphs, sentence, index) => {
-      const group = Math.floor(index / 4);
-      paragraphs[group] = `${paragraphs[group] || ""}${paragraphs[group] ? " " : ""}${sentence.trim()}`;
-      return paragraphs;
-    }, []);
+  const chunkToParagraphs = (chunk) => {
+    if (chunk.length <= 600) return [chunk];
+    const sentences = chunk.match(/[^.!?]+[.!?]+|\S.+$/g) || [chunk];
+    const paragraphs = [];
+    for (let index = 0; index < sentences.length; index += 4) {
+      paragraphs.push(sentences.slice(index, index + 4).join(" ").trim());
+    }
+    return paragraphs.filter(Boolean);
+  };
+  const chunks = text.includes(">>")
+    ? text.split(/\s*>>\s*/).map((chunk) => chunk.trim()).filter(Boolean)
+    : [text];
+  return chunks.flatMap(chunkToParagraphs);
 }
 
 function parseTranscriptSegments(slug) {

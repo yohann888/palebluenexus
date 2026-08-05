@@ -153,16 +153,23 @@
       empty.hidden = matchesList.length !== 0;
     }
 
+    function fill() {
+      renderMore();
+      while (rendered < matchesList.length && sentinel.getBoundingClientRect().top < window.innerHeight) {
+        renderMore();
+      }
+    }
+
     function reset() {
       const query = search.value.trim().toLowerCase();
       matchesList = guests.filter((guest) => matches(guest, query, field.value));
       rendered = 0;
       grid.innerHTML = "";
-      renderMore();
+      fill();
     }
 
     new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting && rendered < matchesList.length) renderMore();
+      if (entries[0].isIntersecting && rendered < matchesList.length) fill();
     }).observe(sentinel);
     search.addEventListener("input", reset);
     field.addEventListener("change", reset);
