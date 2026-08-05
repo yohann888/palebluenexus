@@ -1,0 +1,245 @@
+Vadim Peskov — Why This Veteran Engineer Says Better Models Don't Mean Better Software
+
+[music] [music] Well, uh, Vadim, thanks for joining me today. Uh, you are the founder and CEO of a company that's been around since, uh 2008 um, around there. Defco. Uh, tell us about Defco. And, uh, I'm actually excited to have you on because you're, I guess I would say like a very experienced engineer, software engineer, and um [snorts] um, looking forward to this conversation.
+
+Yeah, I mean, thanks for inviting.  Yeah, I know a few things about computers.  Maybe that's can't confirm it.  But um my company is uh uh diff we developing uh different software for different uh gross stage startups and enterprises and yeah we started 18 years ago.
+
+So in some countries we can all start drinking finally.  uh but it been a journey uh and right now our main focus in gent development and building uh custom systems with enhanced development techniques and as well as uh building agents for many enterprises that we work with.  So basically replenishing human workflows uh and automating human workflows with actually agents that works.  Yeah.
+
+And you know, in our pre-all, I talked to you quite a bit and and it just seemed like you were good engineers before and now with AI tools, it just seems like, you know, everybody uses that term 10x engineer or 100x engineer, but I think in your case, in my opinion, it actually applies seeing some of the output that you guys have uh have done.  What do you think about that?  I think realistically when we talk about 10x engineer 100x or like again you hear all over the the numbers realistically this is the question of um basically what type of project you have and what kind of and how you actually measuring this because first of all this is unrealistic metric the same as like you remember the on the old days was like oh this engineer delivered so many thousands lines of code.
+
+Yeah.
+
+And does it mean that this engineer is good
+
+and like how we can actually measure that we 10 times faster?
+
+It is an actually interesting type of illusion because in fact uh
+
+in many cases humans do not touch the tickets
+
+or like not touching the codes etc. So why and how we can actually measure this? Mhm.
+
+So it is an output per number of ticket. But this is also questionable. Can we measure this by speed of development of the project? Can yes but in reality architectural things in a project and product type of decisions is actually most uh limiting factor in many cases. So again, um I think when we're talking about those numbers, it's really great tagline for Techrunch article. Um but to actual folks on a field, it is more like a bluff and you like, yeah, great. Um we have the number, but what does actually mean?
+
+Well, what about let's let's go to something really pragmatic like costs for the same project. Would you say the cost is is less or more or the same with AI tools?
+
+I think realistically we cut down the cost uh for our clients by at least 4x.
+
+Wow.
+
+In most cases
+
+I would say in most cases it's
+
+still discussion.
+
+Um it's also really important to determine if it's a new project or if it's permale project. So it's existing project those completely different um an illusion that you have a like a 20-year-old u legacy code base and you can really do wonderful things with AI about this. That's a really interesting uh myth. It's not in reality unfortunately. You still have a many many legacy issues as you would with humans as well and for many of those projects they not actually uh documented well. So you have a lot of uh surprises in along the way.
+
+So a lot of refactoring going on possibly.
+
+Yeah.  And this is really interesting conversation when what type of project you actually encounter and how to approach uh because if we have a new completely new project.  Yeah.  But like again in the same way I don't see people building um competitors of uh hotspot and salesforce in one day.
+
+That's not happening and I don't think it will happen next year or two.  uh I don't think we're near uh those kind of things.  So actual large piece of software it's not replaceable by uh AI at least at this moment.  Can you develop really large system um with AI help and develop it faster than previously?
+
+Absolutely.  Uh but again those things are completely different.  So, I mean, one of the last questions I was going to ask you was like, what would you build today as a as a founder?  Like, what would you build?
+
+Like, let's say you were starting your own project.  What would you build today?  Now, you know, I was going to leave that for last, but it sounds like it just fits right into this part of things.  You know, if you're not going to build SAP or you're not going to build Salesforce, what are you going to build?
+
+I mean it's all comes down to the old matics of um system of decision, system of engagement and system of record.  Yeah.
+
+Um and now we have also another thing that we call a system of intelligence which is basically uh system of agents or agentic systems which is a quite a new concept in a way and um it's really dependent on what uh could be done.  reality it's a lot of different opportunities I would say um what to build I think realistically I would try to go against the most hardest um and most compliance-based industry because no one would look there and those things looks really tough in reality they in many many cases not really tough um and uh they all wants to automate um again banking, healthcare, insurance type um of uh businesses any like complex uh manufacturing u drug discoveries etc. So again when you go against those complex type of system you really finding an interesting opportunities I think and you really can defend your position much more than building let's say a simpler u tool market automation or something like this
+
+because [snorts] come on like how many marketmations tools are there and we all use 10 maybe maybe life. [clears throat] So again, I think this is uh my playbook because uh you do not look into the most brightest thing. You look into the most unsexy uh type of industry and you're like, "Okay, now I will get and own this."
+
+Yeah.  It's funny that you say that because I I watched a a video with uh a fellow who is a billionaire, but you don't know he was because he just chose the most unsexy type of industries like uh piping and and logistics and and and different things like that.  And it sounds like the software industry is going through the same sort of thing.  It's like choose the most boring pro like part of software.
+
+the regulated areas, the compliance areas, the the piping, the the things that are I I guess used on on a mass scale and just build there.  So that that's that's very interesting to see.  Um, and there's a lot of people building out stuff in Silicon Valley that are, you know, the AI for HVAC companies, the a the AI for whatever.  And I think you have a strong opinion on these things.
+
+Uh, just looking at your website.  Um, and I know you're a you're a service provider, so you will build anything, right?  But, uh, what do you enjoy building the most?  Oh, okay.
+
+So, you really prepared the challenging questions.  I like this.  Um, [clears throat] thank you man.  Like, um, again realistically um, I would kind of divide this into three type of categories um that would be uh, in a way interesting.
+
+I think still in enterprises it's a lot of use cases that um you can really solve and I really like to see the the case when you like take a large um system and you really um let's say we had 150 sales for working on the flow and the output was let's say 100 mil just as example uh and now we can take and free up basically more than half of the day of those people so they can sell more.
+
+Mhm.
+
+In reality, it's not 200 mil, it's u60, but it is good. And when you see those examples, you're like, okay, this is really the right flow of things. And you know that you can accumate more and you can get rid of uh even more things that people do not need there. And again I'm not talking about like replacing humans because I think in sales um you need human touch and I think it will be valued for a long time. I think the second thing is um really challenging R&D projects.
+
+Mhm. when you [clears throat] when you look into the specifics of the project and you like I have no freaking idea how to build this stuff.
+
+Mhm.
+
+And again, you know the direction but you have no idea how to build this properly.  You you doubting um which approach you would choose.  And this is more complex type of things uh where you do not trying to recreate the same um systems that exist.  I think those are kind of like the most fun and challenging to work with.
+
+Um in a way um not necessarily the most profitable in the cases.  However, I think it's a it's a lot of fun uh to work with those.  Um beside this I think uh the last piece is uh is uh the projects that you kind of like you see the immediate result.  Um so you build the system and you work with the founder.
+
+It's not about the product, it's about the founder in this case.  Um because we work with a lot of growth stage startups and we work also with a lot of second time founders and I'm a big fan of working with those guys because they know what to do.  Mhm.  And they sometime you sometimes see on like some decision that they will make and you like why and it end up being a great deal.
+
+Um and again you learn from those experiences and I think this is the biggest kind of advantage of working in this industry that you can learn from so many folks in the same time and you have uh a lot of relationship that really kind of leading you to understanding that those type of projects really is something different.  And when you see the napkin idea um coming back to an actual 100 million plus business in next couple of years.  This is really amazing.  It sounds like you're you're almost um taking an advisor consulting position as well.
+
+Uh are you also and I believe you said you were you're also an investor in some of these projects too if you like the idea.  I um kind of like combining the advisor and investor role in some of those cases.  In some cases we work as a service provider for them.  In some cases we so completely separate.
+
+Okay. And I [snorts] also met mentor in Alchemist and few other places but yeah.
+
+Okay. Talk about your um experience as a investor. What do you like? What do you what do you what would you invest in
+
+on early stages? You mean?
+
+Yeah. Yeah. I think it's a kind of uh really straightforward playbook. So it's a always combination of timing uh market and founder.
+
+Yeah.
+
+Realistically for me the founder is more important than many other things. Um because I see that um sometimes the great founder will uh create the market or sometimes the great founder will adopt the product. And I think the the fact that again the founder is really of I mean founding team in reality. Um you want to see the folks that not just knows what they do because this is the boring part. Like if you have insurance folks trying to build insurance startup. Yeah. I mean they would build something but they typically would not build a disruptive thing.
+
+When you have real outsiders come into this market and they really create something new and they don't know that no one done this before like creating the accounting systems in a way that no one done before.  you like um why you have not done this before like oh no one actually suggested this but this is I think a good thing why you skipped this oh uh no one actually suggested this so again uh I think challenging the start school is important there and uh founders that really kind of bold and really persistent um and really seen the future.  I think this is really really important and not being afraid again on losing because it's always the conversation I you uh have fear of losing or you have a um uh basically passion to win.
+
+And in both cases it's okay. And it's just two type of of founders and you in my cases I think you can find a right playbook but you need to see those eyes really really
+
+you need to see the fire there because if you don't see the fire
+
+it's it's all long done. That that that that makes a lot of sense. You need to look into a founders's eyes and see like that man is really or that woman is really crazy and they're going to take a big risk or they're going to do what it takes to to make this company succeed. So it's like a passion.
+
+Yeah. Because the founders journey is really lonely.
+
+The entrepreneurship in general really really lonely and really really painful.
+
+Mhm. People think about like smoothies and all the funny things and uh looking into the wonderful things of uh uh TV shows etc. In reality it's freaking broil guys.
+
+Mhm.
+
+And they like oh yeah we will raise so much money. We'll do such wonderful things. Come on. Like first of all only one out of 10 will raise anything. um second one of the trainer will raise something else uh on the second round and uh we can continue
+
+and uh if you relying on the on investments you already lost.  So it's it's many other things that exist in this playbook that important to change.  [snorts] Yep.  And um I think you said it right there.
+
+It's a it's a it's a journey and it's something like a lot of people don't take into account.  It's funny.  Uh, did you see the post by, uh, Gary Tan out of, uh, Y Cominator talking about, you know, uh, founders who are in their 40s and 50s being a little bit more resilient than founders uh, well well, he didn't make a comparison.  He just made the statement.
+
+And you know, I just thought that was cool because there's people like myself included um that have a lot of life experience and uh that sort of goes into your skill set and you know why Cominator is known for just having 18y olds, right?  and and 23 year olds.  But to have the the founder and the the manager managing partner of Y Cominator say something like that was was kind of like it made me smile a little bit.  What what are your thoughts about that?
+
+I don't think it's specifically about age or like specific type of experiences.  I think it's all about the energy that you have.
+
+Yeah. Because again I see absolutely dumb 20 year olds and absolutely dumb 40 year olds and 50 etc. And I have absolutely brilliant folks in the same categories and I see that they like really like I see so many founders being so careful.
+
+Mhm.
+
+You not winning by being careful.
+
+Yeah.  You win it by betting and betting again and again.  The business is all about experiments.  It's like, hey, I have a theory that this stuff will work.
+
+I have no idea it will.  I have only limited control, but I will do whatever it takes to really prove the theory, and it will not work by itself, and I will push it as hard as I freaking can.  And the only way I succeeded if I really analyze if this is actually a good outcome or not.  And I will be wrong in many many cases.
+
+And this would be a fun journey because I will fail so many many times.  And my successes actually comes from those failures that I will learn and I will adapt and will send up again and we'll do whatever it takes.  So I think this is the kind of like the journey and I think I have a lot of uh folks in the 40s and 50s and even 60s that I think is a great founders.  Um and in the same time I have the same category that really kind of careful and like oh I don't know if I should oh let me take a vacation and think about this stuff.
+
+No, no.  You you you know that this will not work.  Like you need to battle this today.  Mhm.
+
+Like it's need to be uh done immediately. Uh not like because like the point is if you keep um uh combining those issues um you will have a lot of issues
+
+if you try to battle them and you pertize them and you play right um sure and it's not about the rules either like again your own rules again you need to remember that history written by winners There's no losers.  I love your perspective.  Like I I I thank you for correcting me on that generalization I made, which was clearly a generalization.  And it's it's hard to to uh say anything across the board like that.
+
+But uh you're right.  You're right.  It is about attitude really.  It's about attitude, sense of urgency, um, instinct, many different things that that happen.
+
+Um, anyways, let's move on.  U, you've been previbe code, initial foundations of vibe coding, and now we're getting to the point where we're having cloud agents just not just doing work for you, and you're just coming back and hitting the PR button or uh, merge button.  [snorts] um where what's wrong how has software changed and and how is what is the career progression for a software engineer these days like h how what is what's the best way to get started on all these things I want to be honest I have no idea [laughter] it's changing right yeah I been asked this same question around nine months ago um oh 7 months ago. So basically the OPUS was just released and um we seen completely different flows of agentic workflows again um it's all just like started basically and um one person that I think is 18 or 17 asked me about like hey I study computer science what do you think what is the next steps uh will look like and I'm like man I have no idea
+
+because again I've been running this business for 16 years or for 18 years and we're the reality is I have no idea where it will lead us in next um year.  I don't know where we will be in next months.  [laughter] Um again the um horizontal um planning in many companies now like weeks.  Yeah.
+
+And it it is long because [laughter] you literally don't know what will happen tomorrow.  So I think like the reality of um many of those use cases that I think the fundamentals is important and right now how we see this is um we don't need coders anymore. Like we don't need people who write the code because we're not writing code anymore
+
+specifically.  we need to understand uh the system.  So we need people who can design the system.  So we need architects, we need product people [snorts] and uh we need to create a right harnessing uh for them to build those systems not other way around.
+
+So in many cases it's all about the context and all about putting the right structure of AI to build us.  So in the software industry I think architects still will be important.  I think really understanding and playing really really fast and learning really fast is also really important because like it's not longer enough and not longer actually making sense to just go ahead and check your uh whatever uh books uh and like learn something for a year.  No, those skills doesn't really apply.
+
+You need to learn really really fast and you need to adapt.
+
+The fun fact like again I don't care which language you're learning.  It doesn't really apply anymore because like again we took many projects in the last 6 months for tech stack that we had um limited capabilities for.  The fun fact, we actually never wrote any code.  Oh wow.
+
+It was all by a [clears throat] we found many issues in a legacy system.  We fixed those.  We applied those things.  We're not writing this manually because it doesn't really make sense because it is expensive.
+
+Um first of all, it's slow.  And second, we will make mistakes.  Yeah.  Will AI make mistakes?
+
+Sure.  But if we compare a number of mistakes of AI to human, we actually will see that we actually do pretty good on AI.
+
+So I think like like yeah you have so many issues with yeah but like you developing 10 times faster or 100 times faster.
+
+Of course you will have issues.  Yeah it is expected you should have issues.  Basically you will have security problems.  You have bugs.
+
+you will have some things that doesn't really make sense.  Sure, fix the prompting, fix the harnessing and memory and yeah, go ahead and uh fix those things uh in the system, but do not touch the code.  If you touch the code, you kind of like broke the idea of agentic development basically.  Oh my goodness.
+
+So it went from I I guess what you're saying is like it maybe a year and a half ago it went from yeah I'm using an AI coding assistant it's helping me write 20% of my code 30% it's checking things it's validating things to maybe 8 months ago when Opus came out to oh it's writing code it's writing 60 70% and now you're seeing it's 100%.  Um, or close to 100%.  I mean, it can it can be argued it's it's it's always going to be in between 85 and 100%.  But you're saying as an experienced vendor, an experienced shop, you're nearing the 100 mark or you're closer to the 100 mark depending on the project just to be clear.
+
+Wow.  It is some projects that you cannot do this.  It's some limitations that applies etc.  But in many many cases especially for new projects we we have many uh smaller projects uh below let's say 100k uh uh budgeting wise that is basically one month one month's built uh all agentic development.
+
+Yeah, we spend a lot of time on creating the right documentation and the right harnessing and right uh logic to actually create the flows there um and ensure that AI knows everything and yeah we mention EI to develop this basically in a matter of days.
+
+Wow. So the most time spent actually on discussing functionality, making product decisions, um all of those things, writing with a genic systems, it's it's really quick. Mhm.
+
+[gasps]
+
+So I remember working for a company uh maybe about 7 8 years ago [snorts] and there they used to charge I don't know 20,000 30,000 for a website you know maybe it's got a store on it maybe it gets up to 40,000 um it seems to me like that if somebody got that quote today they would just go no that's you want a simple website with a an e-commerce store and a CMS and and uh for for 40,000 are you kidding me you you can do that now for probably in days and and like 4x less the cost like you said right so so where is the what is the unique selling proposition like you you it's different for you like you you have a you have a business that has 18 years worth of clients your your your reputation is amazing in the industry but where does the business of software development go from here and and you know maybe you don't know like like you said before but what is the edge that people can have
+
+I don't think anyone knows
+
+this is the fun fact [snorts]
+
+I mean listen um if we're talking about uh the websites we still have websites that do for 100k.
+
+Okay. Um it's not a simple promo website obviously and it is many cases when AI is not doing the best. Um it still exists again it's not the silver bullet for everything. Um pixel perfect is not the best thing for AI. Um and uh again we build system to leverage as much as possible. However, we limited into ability of doing this just because again AI is not perfect there and if we have a projects where uh client will tell us hey this uh shade is 30% it's supposed to be 45 you kind of like you cannot use the for this will we will think it's okay
+
+because it's really it's okay no one cares But someone [gasps]
+
+someone in some enterprises will.  So realistically um we have limitations there obviously but uh for many projects those things not really applies and not really important because the time of the feature that will leave is really low.  Uh and yeah you can adapt and you can fix those things later etc.  So it's a iterative process where the software development will go it is the question that I have no idea uh because I think the how I see the industry right now um everyone using it the number of people that using this in advanced level so let's say we have uh the first level of uh uh quitting assistance kind of like a copilot etc.
+
+Um, [clears throat] this is probably 80% of the market or even more.  And you still have, by the way, a lot of folks that believe that they can do things better than AI.  And thank you.  I really appreciate that those folks exist.
+
+They really helping us to grow our business.  Um, I I'm really happy for this.  [cough and clears throat] And last year we had those folks that we had inside of the company that no longer was a company because we don't need the folks to really write better than AI.  We need folks to create systems for AI to create systems that better.
+
+So it's simple where it will go.  It's a good question that I think I have really a lot of open um uh open-ended uh discussions because realistically we don't really know if we will have a system that will allow us to create everything from scratch in the matter of seconds.  I think a few kind of like ideas where I think we kind of like are going.  I think in um real life um what I see is the model advancements that happening at least like right now doesn't really affect the quality of output so dramatically because again the difference between feeble meas etc is basically really minimal if you have the right heart if you have the right system and you're not stupid enough to not create the documentation in a stupid way.
+
+Um, in this case, you will have pretty much a good output and you can use open source models as well and have cost like that 10 times less.  [clears throat] I think this is where we kind of like leading this into.  So the better models doesn't equal the better performance because the problem is actually people that prompting this.
+
+Mhm.
+
+And I'm not saying that the prompting is a problem.  I'm saying that many people just do not give AI enough information what they need to do.  They give AI two lines.  Hey, build me wherever um this system um and I build me a website for my company.
+
+I'm doing wherever balloon uh sales for holiday parties.  Great.  It's not enough to describe the task.  You probably should really think through the content first before you ask about uh the website as example.
+
+in this case is a simple uh um example and you need to go through the understanding what the actual flows um uh of users should be.  So I think this is not going away and AI with better models will not solve this and in large systems it's still the question of really deep understanding of the users and really deep understanding of um what people will buy and what they actually need.
+
+Mhm.
+
+And in many cases um it is the question of harnessing and engineering uh those systems. Will we have uh more faster development? Absolutely. Yes. Um I think um the cost um like we kind of like have a kind of like pricing crisis uh that coming probably to the market
+
+as well because um the cost is kind of like going down in a way.  Um again right now I think many uh folks set in more advanced levels um um uh of uh agentic development systems have a age of uh creating u faster and better uh and I think the smaller dev shops and uh folks that don't really s deep into I think those guys will get to this point.  Uh but at this point it uh we'll have more and more um on um uh uh the folks that already on the uh bigger level but we definitely will have on like midmarket and lower tier market we'll have a lot of folks that kind of hey we'll do everything for 5,000 or whatever.  Yeah, we'll have those cases and again you kind of like looking into this and with the same kind of mindset as like can you let's say we like 5 years ago.
+
+Yeah. Can we go to cheaper developer in different countries and build systems
+
+for cheaper?
+
+Absolutely. Uh will this be a good quality product? No. Like I mean some exceptions, sure, but generally speaking, if you're hiring someone for 15 bucks an hour, do not expect them to build you a next unicorn.
+
+Yeah.
+
+Like don't don't be like ridiculous because people thinking that developers for 200 bucks an hour and 20 bucks an hour are the same thing. No, they're like completely different.
+
+Yeah.
+
+Can both of them be stupid?  Yes.  But generally this is this is a difference.  Yeah, that that that that makes absolute sense and I see how your your your advisory consulting investing sort of like fit hand inand with that because uh you definitely uh they say taste and judgment is a big thing these days and I think with your experience it comes a lot of that.
+
+So, um I just wanted to to to end out with um I know that you I've said this a couple times already that you don't know where the industry is going, but if there was one bold prediction that you can make for the next 12 to 18 months that you can say, you know, I I I I I'll put my name on this prediction.  What would it be?
+
+Oh boy. Uh, and after people will quote me and I would be like, um, I I'll I'll clip this one.
+
+Oh no. Um, okay. I I think I I will give you two just in case.
+
+Okay. [laughter] Uh, to to choose which one will work. Um, probably no. Uh, none of them. I think uh the first logic that we would see is that we'll have more and more um open source usage.
+
+Okay.
+
+Uh so basically we'll have um multiidentic systems on um many open source uh models that um you're not giving away your data.  Again, if if you're a small person like company building some not like life science type of stuff and you building another S for X Y and Z things, it doesn't really matter.  But when we're talking about like really companies with a lot of uh private data, hey, open source is a way to go and with the right harnessing, it's actually not much worse than um the best models on the market.  Um so it is and much cheaper like it it is really important in terms of the inference.
+
+I think this is the one prediction that I see.  The second is I think we'll have more and more systems that um have a different um user flow experiences where we actually have less uh people um interacting with the system and doing whatever system need like inputting information inside of the CRM etc.  So you basically will have a system that will give you uh tasks that already completed or suggest tasks to do.  So it will be something like okay so you had a conversation with John uh so I logged this conversation based on this uh here's the proposal that I generated please review and approve and here's the contract please review and approve as well as uh here's a few tasks to tell the product team to potentially add and I already send those so this is the way how we would see the interactions with u mini interfaces in the future I'm not saying that all will be text.
+
+I think it will be still interfaces and UI etc.  I think we need the uh visual representation of those things.  However, I don't think we need um actually manually click through those uh system and interfaces.  And I would pay for this CRM uh more than I would pay for the regular one because it's actually reducing my uh flows.
+
+And you can do this inside of Hotspot.  You can do this inside of Salesforce right now if you set up this right, but it's not a default.
+
+Interesting. Yeah, decision data is important. Yep. Um, thank you VM for your your time today. Uh, it was a very enlightening conversation for me and a very fun one because it's about software development which uh it's been a long-term passion of mine. So, uh, have yourself a great day, sir. And, uh, maybe stay on for a second.

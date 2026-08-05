@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pale Blue Nexus Guests | Founders, Investors, and Operators</title>
+  <link rel="canonical" href="https://palebluenexus.com/guests/" />
+  <meta name="description" content="Meet every guest featured on Pale Blue Nexus: founders, investors, and operators at the frontier of AI, space, and emerging tech." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="../images/favicon.png" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg-deep: #04060e;
+      --bg-card: rgba(255,255,255,0.03);
+      --bg-card-hover: rgba(255,255,255,0.06);
+      --border-subtle: rgba(255,255,255,0.06);
+      --border-accent: rgba(212,168,75,0.5);
+      --text-primary: #FFFFFF;
+      --text-secondary: rgba(166,210,230,1);
+      --text-muted: rgba(146,196,222,0.7);
+      --accent-blue: #7EB8DA;
+      --accent-warm: #D4A84B;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg-deep); color: var(--text-primary); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2.5rem; display: flex; align-items: center; justify-content: space-between; }
+    nav.scrolled { background: rgba(4,6,14,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-subtle); }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo img { height: 40px; }
+    .nav-links { display: flex; align-items: center; gap: 2.25rem; list-style: none; }
+    .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 0.04em; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--text-primary); }
+    .section-container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 7rem 2rem; }
+    .page-hero { min-height: 40vh; display: flex; align-items: flex-end; padding: 8rem 0 3rem; }
+    .section-eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent-warm); display: block; margin-bottom: 1rem; }
+    .section-heading { font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.15; margin-bottom: 1rem; }
+    .section-subheading { color: var(--text-secondary); max-width: 680px; }
+    .guest-dir-controls { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+    .guest-dir-controls input, .guest-dir-controls select { min-height: 2.8rem; border: 1px solid var(--border-subtle); border-radius: 8px; background: var(--bg-card); color: var(--text-primary); font: inherit; padding: .65rem .8rem; }
+    .guest-dir-controls input { flex: 1 1 280px; }
+    .guest-dir-controls select { flex: 0 1 170px; }
+    .guest-dir-controls input::placeholder { color: var(--text-muted); }
+    .guest-dir-controls input:focus, .guest-dir-controls select:focus { outline: none; border-color: var(--accent-warm); box-shadow: 0 0 0 2px rgba(212,168,75,.15); }
+    .guest-dir-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .guest-show-card { display: flex; gap: 1.1rem; align-items: stretch; text-decoration: none; color: inherit; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 1.1rem; transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease; }
+    .guest-show-card:hover { background: var(--bg-card-hover); border-color: var(--border-accent); transform: translateY(-3px); }
+    .guest-show-photo { flex: 0 0 84px; }
+    .guest-show-photo img { width: 84px; height: 84px; border-radius: 12px; object-fit: cover; border: 1px solid var(--border-accent); }
+    .guest-show-body { display: flex; flex-direction: column; min-width: 0; }
+    .guest-show-tag { font-family: 'Inter', sans-serif; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-warm); }
+    .guest-show-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.35rem; font-weight: 600; margin-top: 0.15rem; }
+    .guest-show-role { font-family: 'Inter', sans-serif; font-size: 0.82rem; color: var(--accent-blue); margin-top: 0.1rem; }
+    .guest-show-quote { font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 0.98rem; color: var(--text-secondary); margin-top: 0.5rem; line-height: 1.35; }
+    .guest-show-promo { font-family: 'Inter', sans-serif; font-size: 0.78rem; color: var(--accent-warm); margin-top: auto; padding-top: 0.6rem; }
+    #guest-empty { color: var(--text-secondary); margin-top: 2rem; }
+    footer { padding: 3rem 2rem; text-align: center; border-top: 1px solid var(--border-subtle); }
+    footer p { color: var(--text-muted); font-size: 0.85rem; }
+    @media (max-width: 760px) { .nav-links { gap: 1rem; } .guest-dir-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <nav id="nav">
+    <a href="/" class="nav-logo"><img src="../images/pbn-logo.png" alt="Pale Blue Nexus" /></a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/episodes/">Episodes</a></li>
+      <li><a href="/guests/">Guests</a></li>
+      <li><a href="/book/">Be a Guest</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="section-container">
+        <span class="section-eyebrow">Guests</span>
+        <h1 class="section-heading">Every guest.</h1>
+        <p class="section-subheading">Founders, investors, and operators at the frontier of AI, space, and emerging tech.</p>
+        <div class="guest-dir-controls">
+          <input id="guest-search" type="search" placeholder="Search guests…" aria-label="Search guests" />
+          <select id="guest-field" aria-label="Search field">
+            <option value="all">All</option>
+            <option value="first">First name</option>
+            <option value="last">Last name</option>
+            <option value="company">Company</option>
+          </select>
+        </div>
+      </div>
+    </section>
+    <section style="padding-top:1rem">
+      <div class="section-container">
+        <div id="guest-grid" class="guest-dir-grid"></div>
+        <div id="guest-sentinel" aria-hidden="true"></div>
+        <p id="guest-empty" hidden>No guests match your search.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- AUTO-GUESTS-DATA:start --><script id="pbn-guests" type="application/json">[{"name":"Jim Rogers","first":"Jim","last":"Rogers","role":"Co-founder, Quantum Fund. Legendary investor.","company":"jimrogers.com","photo":"/images/guest-jim-rogers.jpg","href":"/episodes/jim-rogers/","episode":"Episode 01","stat":"23K views & listens","quote":"The most important thing to learn is what you love."},{"name":"Jack Couch","first":"Jack","last":"Couch","role":"Founder, Sophtron. Former Global VP of Payments, Xero.","company":"","photo":"/images/guest-jack-couch.jpg","href":"/episodes/jack-couch/","episode":"Episode 02","stat":"325 views & listens","quote":"Sales is dead. Podcasts are how trust gets built now."},{"name":"Austin Armstrong","first":"Austin","last":"Armstrong","role":"CEO, Syllaby. Managing Partner, Bullhouse Ventures.","company":"","photo":"/images/guest-austin-armstrong.jpg","href":"/episodes/austin-armstrong/","episode":"Episode 03","stat":"626 views & listens","quote":"The 40-hour work week is kind of BS."},{"name":"Nikola Borisov","first":"Nikola","last":"Borisov","role":"Co-founder & CEO, DeepInfra","company":"","photo":"/images/guest-nikola-borisov.jpg","href":"/episodes/nikola-borisov/","episode":"Episode 04","stat":"2.7K views & listens","quote":"Inference infrastructure is where the real compute war is fought."},{"name":"Nectarios Economakis","first":"Nectarios","last":"Economakis","role":"Partner, Amiral Ventures. Co-founder, The PNR.","company":"","photo":"/images/guest-nectarios-economakis.jpg","href":"/episodes/nectarios-economakis/","episode":"Episode 05","stat":"179 views & listens","quote":""},{"name":"Charles Cormier","first":"Charles","last":"Cormier","role":"CEO, TopLeads.","company":"","photo":"/images/guest-charles-cormier.jpg","href":"/episodes/charles-cormier/","episode":"Episode 06","stat":"154 views & listens","quote":""},{"name":"Eliza Blank","first":"Eliza","last":"Blank","role":"CEO, The Farmlink Project. Founder, The Sill.","company":"","photo":"/images/guest-eliza-blank.jpg","href":"/episodes/eliza-blank/","episode":"Episode 07","stat":"141 views & listens","quote":""},{"name":"Haren Bhakta, CFA","first":"Haren","last":"CFA","role":"Founder & CEO, Inside Ownership Index (OWN).","company":"","photo":"/images/guest-haren-bhakta.jpg","href":"/episodes/haren-bhakta/","episode":"Episode 08","stat":"122 views & listens","quote":""},{"name":"Steve Gullans, PhD","first":"Steve","last":"PhD","role":"CEO, Thynk Inc. Co-founder, Excel Venture Management.","company":"","photo":"/images/guest-steve-gullans.png","href":"/episodes/steve-gullans/","episode":"Episode 09","stat":"102 views & listens","quote":""},{"name":"Mary Grove","first":"Mary","last":"Grove","role":"Managing Partner, Bread & Butter Ventures.","company":"","photo":"/images/guest-mary-grove.jpg","href":"/episodes/mary-grove/","episode":"Episode 10","stat":"88 views & listens","quote":""},{"name":"Vitaly Golomb","first":"Vitaly","last":"Golomb","role":"Investor and author of Accelerated Startup.","company":"","photo":"/images/guest-vitaly-golomb.jpg","href":"/episodes/vitaly-golomb/","episode":"Episode 11","stat":"84 views & listens","quote":""},{"name":"Vadim Peskov","first":"Vadim","last":"Peskov","role":"Co-founder & CEO, Diffco.","company":"","photo":"/images/guest-vadim-peskov.jpg","href":"/episodes/vadim-peskov/","episode":"Episode 12","stat":"93 views & listens","quote":""},{"name":"Matt Blumberg","first":"Matt","last":"Blumberg","role":"CEO, Markup AI","company":"markup.ai","photo":"/images/guest-matt-blumberg.jpg","href":"/episodes/matt-blumberg/","episode":"Episode 13","stat":"1.4K views & listens","quote":""}]</script>
+  <!-- AUTO-GUESTS-DATA:end -->
+
+  <footer><p>Pale Blue Nexus. Making sense of the future, from right here.</p></footer>
+
+  <script>
+    const guests = JSON.parse(document.getElementById("pbn-guests").textContent || "[]");
+    const grid = document.getElementById("guest-grid");
+    const sentinel = document.getElementById("guest-sentinel");
+    const empty = document.getElementById("guest-empty");
+    const search = document.getElementById("guest-search");
+    const field = document.getElementById("guest-field");
+    const batchSize = 12;
+    let matchesList = guests;
+    let rendered = 0;
+
+    function escapeHtml(value) {
+      return String(value || "").replace(/[&<>"']/g, (character) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+      }[character]));
+    }
+
+    function matches(guest, query, selectedField) {
+      if (!query) return true;
+      const haystack = selectedField === "first" ? guest.first
+        : selectedField === "last" ? guest.last
+        : selectedField === "company" ? `${guest.company || ""} ${guest.role || ""}`
+        : `${guest.name || ""} ${guest.role || ""} ${guest.company || ""}`;
+      return String(haystack || "").toLowerCase().includes(query);
+    }
+
+    function cardHtml(guest) {
+      const tag = [guest.episode, guest.stat].filter(Boolean).join(" · ");
+      return `<a class="guest-show-card" href="${escapeHtml(guest.href)}">
+        <div class="guest-show-photo"><img src="${escapeHtml(guest.photo)}" alt="${escapeHtml(guest.name)}" loading="lazy" /></div>
+        <div class="guest-show-body">
+          <span class="guest-show-tag">${escapeHtml(tag)}</span>
+          <p class="guest-show-name">${escapeHtml(guest.name)}</p>
+          <p class="guest-show-role">${escapeHtml(guest.role)}</p>
+          ${guest.quote ? `<p class="guest-show-quote">&ldquo;${escapeHtml(guest.quote)}&rdquo;</p>` : ""}
+          <span class="guest-show-promo">Promo kit &rarr;</span>
+        </div>
+      </a>`;
+    }
+
+    function renderMore() {
+      const next = matchesList.slice(rendered, rendered + batchSize);
+      if (next.length) {
+        grid.insertAdjacentHTML("beforeend", next.map(cardHtml).join(""));
+        rendered += next.length;
+      }
+      empty.hidden = matchesList.length !== 0;
+    }
+
+    function fill() {
+      renderMore();
+      while (rendered < matchesList.length && sentinel.getBoundingClientRect().top < window.innerHeight) {
+        renderMore();
+      }
+    }
+
+    function reset() {
+      const query = search.value.trim().toLowerCase();
+      matchesList = guests.filter((guest) => matches(guest, query, field.value));
+      rendered = 0;
+      grid.innerHTML = "";
+      fill();
+    }
+
+    new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && rendered < matchesList.length) fill();
+    }).observe(sentinel);
+    search.addEventListener("input", reset);
+    field.addEventListener("change", reset);
+    reset();
+    window.addEventListener("scroll", () => nav.classList.toggle("scrolled", window.scrollY > 50));
+  </script>
+</body>
+</html>

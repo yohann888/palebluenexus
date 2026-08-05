@@ -1,0 +1,307 @@
+Vitaly Golomb — Past Industrial Revolutions Took 100 Years. This One Takes 10. | Vitaly Golomb
+
+[music] Welcome Vitali um to the podcast. Uh nice to have you here. Uh one of the things that I cover on my podcast is like sort of macro trends that are happening in the world uh on this pale blue dot of ours that you can see from far away in the in the universe. Um so what's happening here Vitali about I I mean first off welcome to to the show. Tell us a little bit about yourself and then we'll go into some one of the couple things that I'm really interested in.
+
+Yeah thanks for having me.  Um coming to you from Bay Area from Silicon Valley where I've spent most of my life who grew up.  Um I run NAFTA Capital which is an investment banking practice.  Uh we we raise capital for growth stage companies and uh new M&A probably about half and half in a few different uh uh deep tech categories mobility energy transition uh industrial automation prop tech um and material science data center and the new category we're entering is aerospace and defense.
+
+Uh we're also in the process of raising our own venture fund MAFA uh MAFA Ventures and we have a sister company that helps uh kind of post series A deep tech companies build sales engines called MAFA growth.  Uh I also do a lot of writing a lot of research uh and have uh my second book coming out later this year that's focused on political economics uh called a displacement machine and kind of what's happening with young men in America and and what might be next with AI taking over more and more jobs.  Now the the thesis of your book is that jobs will be lost, but almost on a daily basis you hear jobs will be lost, jobs will not be lost, jobs will be lost.  So you you're definitely on the jobs will be lost side is what I'm thinking.
+
+Um talk about that and what your thesis would be if that happens.
+
+Well, there's no way that jobs will not be lost, right?  We're talking about, you know, the next industrial revolution and everybody wants to be optimistic and and people say, "Of course, it's going to be great and and they're just naturally optimistic. " But you have to look at kind of some some sheer facts here.  You know, first industrial revolution took about 100 years, about four generations.
+
+Um, and where the grandfather certainly didn't know, you know, didn't know the job that his grandkid would do.  Um we had the second industrial revolution that took about 60 50 years depends how you count.  Uh so about three generations so already kind of getting tighter and a little bit more difficult for people to make the transition.  Um and then the the computer revolution is you know it's about 40 years starting in ' 70s ' 80s however you want to count.
+
+Um and we we are part of that.  So we we feel that and and we know that for older generations it was it was difficult to make the digital transition.  Now this one is happening within the context of one generation within 10 years and that means that people who will be displaced who are already being displaced they have to retrain and they're still mid-career and I don't think it's realistic for somebody who has let's say a high school education and is doing a you know logistics job or um or is working in a in a warehouse or doing some assembly or driving a truck or doing some basic administrative work.  uh it's not realistic for them to retrain for a career of the future and raise their their level of of uh of education.
+
+So that's what that's what concerns me.  Um will we get through it?  Of course we always get through everything, but it's a question of kind of pain.  And um if you look at you know Goldman Sachs is on my side, right?
+
+They're projecting a pretty pretty big unemployment 10 20% possibility in the next 5 years. Um, and what we know for sure if you study history is that any society that gets a 20% unemployment goes fascist,
+
+right?  And you can see, you know, World War II and and uh and how the Nazi party came to power uh democratically is within 3 years the middle class in Germany after World War I lost their status and lost their income and lost their ability to live, you know, how they they were used to living.  And that's that's what creates these movements.  So that's what really concerns me.
+
+Will we make the transition?  Sure.  But the question is kind of at what cost and how is it what is it going to look like and what can we do to get ahead of that uh to ease that transition.  Um you know Europe is doing uh Europe has a you know famously has a good social net that uh is helpful here.
+
+Even China is passing regulation about uh robotics replacing labor and how that can be done or not done.  US has no guardrails right?  We're just kind of free-for-all and uh that may you know take us very quickly into a brick wall.  So, that's that's what I'm concerned about.
+
+Very interesting. Um, one of the things I picked up on there was the truck driver. Are we that close to having automated trucks on the road?
+
+We already have automated trucks on the road being tested.  Uh, we there's several companies in Europe and US and in China that are doing commercial uh EBS uh commercial AVs.  They're all electric, but um uh autonomous vehicles that are already operating in limited environments. So in mining in in big kind of rail yards things like that uh it and there's already companies that are publicly traded companies I won't name names um that are already testing this for on-road um onroad uh autonomy and truck driver you know or professional driver in the US is the single biggest profession and it's been notori it's a notoriously difficult profession so there's a high turnover rate for example in in trucking truck drivers they on average
+
+you know it cost them a lot to reach root and train a truck driver, but they will they will stay with the company for about 10 months on average.  Maybe that stretched out a little bit.  Uh but that was a stat I remember from a few years ago.  So um it will solve a a particular pain uh to begin with because you know now now there's platooning.
+
+So essentially one driver is platooning several trucks behind them.  Um so there's ways you know people have been trying to say solve this problem for years.  But it will get to a point where it's going to be fully autonomous and you're going to see professional drivers lose their job and that's about 9 or 10 million people in US that are in that profession.
+
+Interesting. Now talk about the manufacturing side too. Um I think Elon Musk said that last year or it is June now. Yeah, he said last year he said by the end of this year we'll have robots on the manufacturing floor of Tesla if it's not already there. Um but it would might be more scaled out by the end of this year.
+
+Yeah, I mean you have to separate the hype from reality.  Uh I would never quote Elon Musk on anything around timelines because he's never met a timeline.  Um so but the reality is that uh automotive manufacturing has been the most roboticized uh category for many years right because you can you can very much define a process it goes in the line it's kind of the most friendly to robotics 10 years ago I went to Shenzen went to an electronics manufacturer and kind of on the on the ground floor you saw um a bunch of yellow suits right and those were the workers doing assembly and then you had uh green suits that were like one out of Those were the managers.  You go to the next floor and it's only green suits and automation.
+
+And then the idea was you go to the third floor and it's just lights out manufacturer with no human involvement.  That was 10 years ago, right?  So if you want to see the future, go to China and and see how they're doing manufacturing.  Um manufacturing will be more and more automated.
+
+um you know if you look if you go to the Porsche factory um you know the first time a human touches it is after it comes out of the out of the um paint booth [clears throat] right
+
+so there are already major parts of the process that are automated um and you know there was all this hype uh political hype um about bringing manufacturing back to the US maybe it'll come back but it won't be humans it will be robots that are doing that work
+
+so that's that's long gone kind of simple you know simple moving part from left to right and doing all those things and getting roboticized.
+
+On the other hand, you know, who wants to stand on their feet for eight hours doing the same repetitive task?
+
+That's that's no that's no life.  That's no lifestyle.  Question is like how do you get those people to be productive and and feel uh you know let them earn a living in another way.  How do you retrain those people?
+
+Um but in in our fund, we're specifically looking at five specific categories in vertical robotics.  Uh one being healthcare healthcare robotics which could be which can span from surgical um technologies that are super precise which have been in market for a while now um surgical robots to um things in a hospital that help for example autonomous robots that will move hospital beds and move patients around the hospital which makes it more efficient and faster because usually that's a big pain to things around the home because we have aging populations from Japan to Germany and Italy and Spain to us, you know, and and other areas around the world where you need uh companions that will do certain things around the house.  I mean, it it spans from from kind of uh delivering pills on time to somebody uh all the way to um to literally a companion because in Japan it's notorious. People live by themselves
+
+um and they're lonely.
+
+So, that's one one key category that's probably the biggest addressable market in the near next, you know, 3 to 5 years. Uh the second one being logistics right so materials handling handling things around the warehouse um and then of course manufacturing automation not just automotive but everything else um and then autonomy uh onroad autonomy whether it's passenger vehicles or commercial vehicles or mass transit or airplanes all those things uh those are the big robots right that are that are navigating the physical world with with AI
+
+uh and then finally uh security and defense right we can't ignore that in today's world unfortunately.  Uh and that also bifurcates to military technology which is basically high high-tech weapons and then there's actual true defense security which has some dual use um as well right where it's more defensive and you know anti- drone etc those kind of things.  So those are the areas that we look at and broadly if you look at the venture capital industry um the industry's already moved on about 70% of venture capital is going into uh these vertical applications kind of enduser applications with revenue right on the horizon versus the core technology that's been invested for the last you know call it 10 20 years where we're talking about the the foundation models for robotics the the different grippers and sensors and compute kind of all these kind of horizontal solutions that gave is the building blocks to now be able to build the full solutions.  So about 70% of the capital goes directly now.
+
+Um you know we still have a lot of progress on on the kind of core technologies but but we focus on kind of go to market and and look at specifically you know the specific problem that they're trying to solve in their particular market. [gasps]
+
+That was a lot.  Um, I think what I feel like is that you're turning me over to now believe that there will be severe job displacement.  And what are we going to do, Vitali?  Like, what are we going to do?
+
+Are we just going to sit around and play cards?  Um, I actually feel like that's a a a realistic thing.  Um, I observe like the the trading card market, for example.  it it's uh um you know Pokemon and Magic and stuff and and there's like a a renaissance in that right now like uh there's an investment side but there's actual people who sit down and play it.
+
+Maybe we're just s the future us are just going to be sitting around socializing and playing cards.
+
+Well, there's a philosophical angle here and there's an economic angle, right? So the philosophical angle is like how are people going to um to fill their time and find uh find what they're passionate about and their meaning in life. You know, everybody's going to be different there.
+
+But at a more base level, we're talking about economics, right?
+
+And in capitalism, we have the capital and labor contracts, right? They work together, capital and labor. And if we get to a point, you know, it's never that clean. and it's not going to be a clean cut. But if we get to a point where capital doesn't really need labor that much or at some point eventually at all, then we have complete kind of sucking cell. On the other hand, even if you're in a B2B business and you're selling to other companies, US is a 70% plus consumer economy. So at the end of the day, somebody's selling to consumers and they're driving the economy,
+
+right?
+
+So if you have an unhealthy economy where consumers have no money to spend, then nothing's going to work,
+
+right?  So, so it's kind of a self-fixing system in that sense.  But we are going to get out of whack, right?  If we don't if we don't balance all of these factors and very consciously go in a particular direction which in involves um our legislature, it involves the government to be able to create these economic conditions based on what's in front of us, not what's behind us.
+
+Unfortunately, the average age of a senator in the US is probably 120.  And uh what we're talking about, you know, the Moors law was, you know, was uh 18 months, right?  Every 18 months, there was a doubling of power and technology in semiconductor.  The Moore's law in AI and robotics is 6 months right now, and it's only going to shrink.
+
+So, we need to get ahead of it.  You know, every six months, basically, we're having a quadrupling of power of AI in a year, right?  and and that that's only getting compressed.  So, how do we put in the guard rails that that the these factors that are completely changing the economics of business that they not going to completely break the economics of our society, right?
+
+And and I don't hear a lot to be honest yet from from politicians who are thinking about this and putting the guardrails in place because if I'm a founder of a of an AI or robotics company, I have a fiduciary duty.  You know, that's how capitalism works is my job is to you as a profit motive.  I want to maximize the opportunity for my company, maximize the value, reduce the cost, increase the the revenues.  That's what I'm supposed to do.
+
+So without a guardrails, I'm going to maximize that.  Yeah.
+
+So, there has to be an equal playing field for everybody in that in that category that has here are the rules of the game.  You can be you can do what you want.  You can be the winner.  You can be number one, but you're not going to break our society.
+
+Uh, you know, it's it's too dangerous, right?  So, so going back to that, you you did offer a nice balance between uh so capital understands that it doesn't need labor, but also for capital to make money, it needs labor to spend, right?  So, like h how do you like does government have to be involved there?  Is that what you're saying?
+
+Um and regulation, is that is that where it comes in?  uh there's that whole layer there that needs to be figured out, right?  And I think that's what you're saying.
+
+Yeah. I I think we need to have a reset and then understand the economics. What does that mean? You know, how do we if people are getting displaced and if if we're allowing robotics like in China there's a law they just passed a couple of laws
+
+on a kind of country level and on a province level or not province they call it something else but essentially they passed laws and said you cannot lay off people to replace them with AI with robotics. Um and and there's certain rules to the game. You have to pay them a year. I think severance etc. You have to make sure that they can retrain. You're responsible for that. And um there has to be some version of that in the US. Um although manufacturing fortunately unfortunately is not as big of a factor in the US as it as it was 25 years ago.
+
+Um and that's the opportunity to to uh displace that.  So uh but the other question is okay is there going to be then you know you you can you can take things that we know.  So for example for every employee in US the company pays a tax and the employee pays an income tax right so if there are no employees or much fewer employees 10 to one all of that tax revenue goes away.  So then we need some kind of equivalent of that being or more so paid uh by the company for the robotics for the productivity that they have for the productivity gain and some of the tax revenue maybe goes as like a negative tax meaning a refund to a certain group of people that allows them to kind of help ease the transition or generally we get to this utopia that Musks and other describe um that you know nobody's going to work everything's being roboticized it's going to be great well how are people going to eat?
+
+Like is is it going to be everything is going to be free and abundant and uh you know it doesn't work.  I I was born in the Soviet Union and I can tell you that this this this vision of utopia and communism and you know Marxism communism doesn't work.  In practice you still had people even in the in the days of Soviet Union they were more motivated and instead of you know they would go around the rules they would essentially steal to have a better lifestyle than their neighbor next door right because they they weren't interested in that.  So human nature is going to be human nature.
+
+Um but there has to be something you know I'm not a I'm not a tax expert by any means but uh but as a hobbyist economist um you know there's some very obvious gaps that need to be filled and and and this is why I guess that UBI talk UHI talk has has been surfacing ideas are being thrown out.  Um yeah what do what are your thoughts on that?  It just seems I see it more and more.
+
+Yeah. I mean, you know, it's not it's not without precedent. You look at Norway, for example,
+
+they have a they obviously have a lot of oil reserves and and they're taking the income that the century country generates from those natural resources and it pays a negative tax, right?  So, first of all, uh universal basic income is uh has become very polarizing in the US.  US is all about slogans and brands and and what you name things in politics makes a difference.  So calling it a a reverse tax or negative income tax I think everybody will get behind that right Republicans too.
+
+Um so so that's one thing but the question is you know where does that come from and is it a transition to something else and we have a game plan that's 5 or 10 year transition or does this become a permanent part of our economics is that you know all these things sol are solved there there are some gaps that could be filled obviously US has now surpassed you know US debt has surpassed our GDP um for the first time and um you know this could be a very long separate conversation you know kind inflating our way out of that is maybe the only answer.  Um but um there are certain things we can reduce.  So for example the healthcare industry in US completely broken right there's a profit motive at least 40% is wasted because it's then in this kind of cycle of insurance billing and paying and administrative work that goes into all of that. um that you know I I give people example like okay the army exists to protect the population um and we just pay a tax and and we everybody has the coverage of the army so why don't we do the same thing with healthcare which is designed to protect the population even more so
+
+um that's kind of the justification of of nationalizing healthare which every other normal country has done um which is a huge huge area of spend um so there there's definitely things that can be reduced in our balance sheet let's in our in our P&L of the country and and how we run our economy.  Um, but we also need to figure out, okay, if there's certain, you know, if we have this big transition and a big part of the population is going to struggle with this, we need to figure out a way to help them make that transition.  And maybe there is a future where everybody's an entrepreneur and everybody knows everything and they can start their own businesses and sell to each other and it's going to be a happy utopian place.  Um, but it's not going to happen overnight, that's for sure.
+
+Okay.  Uh yeah, I mean it's uh it's a good narrative there about the entrepreneur stuff, but yeah, like not everybody is is capable of it, too.  So, um one thing that you said there, and I'm going to do this for the clips, but uh what is your take on US versus Canada healthcare system?  Um so US versus Canada health care system I don't know enough about the Canadian health care system besides the fact that um you know US is unique in completely private system where um there are many many people who can't afford the basic health care and that means that they don't catch things on an annual physical and it becomes uh terminal cancer or some other you big four disease.
+
+Uh so that's kind of a non-starter, right?  That that's the basic that has to be fixed.  Uh one suggestion I've heard that's interesting is to every year reduce the uh the age of of of Medicare by one year.  So we gradually get to the system where you qualify and you could take the Medicare option, you know, at 64, 63, 62, 61, etc.
+
+By the time you get there, you kind of, you know, you you make the transition.  um we kind of phase out the private health care system that way because it'll provide a better option.
+
+Um so it's it's really about how the billing is handled. You can still say that you know all the not all but most of the best universities and best university education is in the US. So we produce the best uh doctors probably arguably there are some other countries that do it well you know as well but US at volume does the best and uh it's not a question of quality it's a question of affordability
+
+okay
+
+and we really have to fix this this issue with uh with how people are paying you know paying in exorbitant amounts of money every month or their employers are and they have to factor it in instead of you know paying their employees the cash in their pocket they have to budget for you know $2,000 a for somebody in their 40s to have basic health insurance. It's crazy.
+
+I've actually been lucky enough to experience both healthcare systems and I do prefer the American one um only because I found like you had more competition for care and thus it kept the I guess the quality level high.  um and premiums low.  In Canada, it's it's uh it's a little bit cumbersome to get the right care at the right time.  Um yeah, and it's uh I'll just say that like definitely there's not the bankruptcies that happen in the US because I I've heard that too like it the healthcare if you if you get um you've heard that, right?
+
+Like it's the number one source. I think something like uh yeah I think something like 40% of the population has medical debt
+
+in this country.
+
+Yeah. Which is something unheard of that I've heard in Canada. So So that part I get like you don't want to get sick and then all of a sudden you're you're bankrupt because of it because Canada doesn't allow that to happen in in a in a certain sense. But there are tradeoffs and I think like it could be run uh optimally so that people have a little bit more um I think it's yeah I mean certainly there's competition right but uh let's say being in a top 1% sure I can afford to pay and I'll have the best healthcare in the world
+
+but if we're talking about kind of from the perspective of uh of government you know I want maximum percentage of the population to have the best outcome
+
+and it's kind of orthogonal the the cost structure is one thing and then the quality of care is is probably a separate thing and they they don't necessarily overlap 100% at least there's there's certainly some competition for the best doctors and you can only have so many best doctors
+
+but the other thing is US has an advantage because it's it's 10 times the population of Canada
+
+right California has more population than all of Canada and that means that you can divide the risk by a larger population and you can provide the opportunity for providers for doctors uh to have a bigger potential market um the insurance there there's other elements if we really drill down on this and and again I'm not an expert But I I know enough to be dangerous. Um for example, the the cost of malpractice insurance uh in the US uh is so so high. Um I know somebody who was a pediatric neurosurgeon and this is many years ago
+
+but first you know first year uh he was in private practice. His his insurance on its own was like uh $90,000 a year and would just climb from there as he builds up the cases, right? make historic cases that he could be sued for.
+
+Um, which doesn't exist to the same to the same degree nearly in in other countries, right? You'd really it's a very US is very lious society and we pay for it because then there's, you know, malpractice insurance and all these things that are created on top of that as a cost structure. So there there's definitely ways to kind of cut all of that down and reform the entire healthcare system.
+
+Question is, you know, is there going to be the political will to do that?  um looking at history probably not.  So we have to figure out some kind of a phasing strategy uh whether it's that Medicare kind of reducing the age of Medicare over time uh or something else or we start kind of kind of sniper rifling like specific cost structures and taking those out of the equation and trying to reduce it.  But right now we pay the most and we have the worst outcomes looking at kind of population health by percentage.
+
+Speaking about political will, it feels to me that AI is being used in that way.  We saw it with the layoffs at first.  Um where people and companies were laying off just for the sake of it or they they I guess um they were using it to justify the layoffs.  Um not fully correct.
+
+However, it was done for reasonings like here's the political will.  Like it it's it's almost like uh here here's the reason.  So So I think that at some point you're right.  There's going to be regulation that comes in and AI might be the political will that we all need.
+
+Yeah, I would say there's a couple different things happening in tech. We have, you know, the big tech companies hired very very quickly during co
+
+and the ones that are doing layoffs are still not below their COVID headcount.
+
+And there's a lot of AI washing uh with certain companies who are just saying, "Oh, we're doing this because we're more efficient. We're laying off." They're not doing it because they're more efficient. They're using that as an excuse.
+
+Yeah.  uh because there's kind of certain trends um starting with you know Musk coming into Twitter and cutting 80% of the workforce but not killing the company entirely.  They they lost half their revenue um but still um and then you saw a bunch of layoffs kind of following that and but reality is they do have to put in a lot of capex a lot of investment into data centers to keep up with each other and they have to get that money from somewhere.  So they're cutting humans and putting that money into data center to automate things.
+
+Uh they are cutting out a number of layers of middle management.  Uh traditionally that doesn't need to be there.
+
+Um I wrote uh a couple of mega trends uh two of the eight mega trends for EY this time around which is published every four years. Uh one of them is kind of on the future of of uh organizations and what that's going to look like. And in our research, we identified that
+
+mostly it's going to be middle management that's going to go,
+
+right? You're going to have management, you're going to have individual contributors uh primarily. So,
+
+yeah, it's it's uh we're the tip of the spear, right?  It's cannibalizing the tech industry first, but it's going to come for customer service, administrative jobs, um um all sorts of things.  And then ultimately in the physical world, we're going to see it as well kind of replacing uh you know, repetitive tasks in the physical world.  I did see like a little uptick on customer service roles mainly because people were sick of talking to AI um or Yeah.
+
+So did you notice that? I'm not tracking the labor statistics that closely, but it it's it's you know, I think the near-term effect as you're going to see the quality of customer service may improve because the systems are smarter
+
+and they solve a call, for example, faster or they solve a trouble ticket instead of three round trip emails, it'll do it in one.  You know, those kind of KPIs we're going to see, but inevitably it's going to reduce the number of people you need in customer service. maybe not eliminate but drastically reduce because they're going to use these automation tools or the first layer of support will be automated and you can already see it on any website right if you if you see a chat support um uh little you know in any corner of any website and the first layer is already you know 99% of the time it's bots before you get to a human so they're they're reducing that the load for customer service for sure
+
+I mean we we see it even at McDonald's when they want to try and get you to to go to that kiosk at the Right. Or even
+
+Right.
+
+Yeah. [gasps]
+
+That's a good proxy for the same same thing. Yeah.
+
+So, tell me about your your book um your essay and uh the thesis behind it and maybe go through some of the the points that you feel will map out the trends for the next 5 years.
+
+Yeah.  The book is uh so I wrote a book 10 years ago called Accelerate Startup which is kind of soup to nuts on how to startups.  I have a second edition of that coming out this year which is completely rewritten because 10 years later AI has kind of rewritten the rules of how startups what they do how they do it and what they focus on.  So that's that's one.
+
+The the other one is like I mentioned political economist book called the displacement machine.  And um what I was the initial thesis was around kind of this grievance economy which is uh young men being pulled into crypto and into supplements and into all sorts of misogynistic content online to try to play the blame game.  Psychologically it's the same thing.  you you somebody is in a in a bad place in their life and they try to find an outside reason why they are in that place, right?
+
+And you point and you give them somebody to be angry at.
+
+Um or you give them an an opportunity to opt out. That's how this whole crypto industry works. Crypto is complete nonsense uh relative to uh to you know traditional economics. It's like trading you know nothing. and and whoever says that it's you know just nent is is kind of silly because it's been around for almost 20 years now.
+
+Um so um but people get pulled into that because they don't feel like they can participate in normal economy so they need some alternative some shortcut.  Uh that's why that works.  uh what I noticed, you know, so there there's that element that's that's kind of top of mind right now, especially and it really kind of went through the roof under COVID when people were kind of lonely, alone and and were being pulled into these online communities even more so.  Um social media is has no guardrails, right?
+
+Because of section 230, um people can do and say whatever they want.  And then before you had people that were a little twisted that were kind of in line, kept in line because they're part of society.  now they can find each other online and that's how we see we we see these these really negative memes coming about uh and and kind of these these movements um enter the political entrepreneurs political entrepreneurs are people who are taking all of this and pointing them towards political action um and when you saw you know Charlie Kirk's funeral which was at a football stadium um with translated live to a bunch of people and then you had people going out there and basically giving you know their version of a of a Nazi speech um with Steven Miller's literally the same themes as as Nazi speeches.  You know, to me that's like that was alarm bells because then you see this transition from kind of taking you know people being economically taken advantage of with all this all these things that are being sold to them because they have a a hole to fill in their in their in their mind.
+
+uh to then being pointed at these political uh movements and using kind of negative campaigning to kind of find a scapegoat and turn people against something not for something but turn them against something in that direction.  Um so so that's kind of the history lesson there.  Um, I also pulled in, you know, things like the southern strategy, um, which was a a very important element and kind of the the moral majority, right?  This is what this is the movement the evangelical movement that brought about uh Reagan and has has has uh has been long lasting since then but started with you know this church as this big mega churches uh avoidance or trying to avoid taxes on their schools and being and and forcing them to reintegrate schools but they really turned up political message and um and all of that.
+
+Now the next question is like okay what happens when this gets all even worse because a lot of these people come from kind of from areas where manufacturing left the country and kind of gutted society.  Um and you have people who not only lost a paycheck but they lost community, right?  And they're looking a way to fill that because they don't they don't you know they used to be able to graduate high school know that they can go get a good union job in manufacturing and in automotive assembly etc.  and a couple of years later they can get married, they can buy a house, they can have kids, they they can have a nice middle class life.
+
+All that's gone, right?  So, um, so all of that now, you know, a lot of those people retrained to these jobs that are going to be some of the first affected by AI automation.  So, it's going to completely kind of, you know, take the floor from under them.  So, what what what happens next, right?
+
+And and kind of trying to think, okay, these trying to connect the dots, right?  these these social entrepreneurs, these political entrepreneurs that are going to take advantage of this situation and what are they going to do with it?  And then looking at other countries and how they've dealt with with kind of reintegration.  So when you had East and West Germany reintegrate, right, that that could have been a potential disaster, but the way they did it, they are the biggest and strongest economy in Europe, right?
+
+So there's there's hope there.  Denmark has a particular way of handling uh when people get uh get lose their job and how they get retrained and how they preserve community and how they preserve income and all those things.  So you know there's a bit of towards the end I try to kind of provide a little bit of a prescription on what needs to be done in the next few years and how much money needs to be spent which is probably about hundred billion dollars would it be which is in the big picture not that much.  We just spent that on a pointless war in Iran um in a few months.
+
+But being able to set society on a course where we have the social net and we we kind of help ease this transition to what comes next um for for us and the next five or 10 years are going to be we're going to you know this kind of crisis period started with 9/11.  Uh you can argue there's a great book called the fourth journeying is here and it talks about kind of the seasonality in civilization and that we're in a crisis period now which will last probably into kind of by 20 into like early 2030s where we're going to turn and society is going to feel very different.  The last time we had this was you know the great depression through World World War II, right?  And you can see the difference between pre Great Depression, America and the world and post World War II kind of the spring of it all and and and how healthy society became and and the economy and the growth we got.
+
+So the the projection is that we're kind of going through the same thing now and by let's say 2032 2035 we should be on the other side of it.  The question is how do we navigate these next few years and make sure that our society doesn't break because there's no guarantees that it won't. you I love your perspective because you're coming from somebody who has lived in a communist society and you're now looking at fixing a capitalist society with some sort of communism people would say but it's like um am I wrong there's a lot of nuance to it right there's a lot of nuance yeah there is nuance
+
+it's not it's not there's only there's not only capitalism communism right that's very reductionist
+
+uh even like democratic socialism is not socialism right democratic Socialism is what most of the countries in Europe are effectively. So
+
+there's a lot of nuance there and you know I I like to say I'm a single issue voter and that issue is economics
+
+because if we have a healthy economic society then a lot of the other negative negative things fade away to a certain degree right
+
+is is there a country that you would say I would model it after this country.
+
+It's very difficult.  Um you know US has certain advantages if we just stop being stupid.  Um, one of which is that uh we have this uh this great group of future economy drivers which are working age immigrants into the US and we have this uh this amazing resource called Central and South America that we should welcome with both arms open uh and provide opportunity because these are people who are coming they're they're they're hungry for success.  They want to be successful with their families.
+
+I'm telling you this as a, you know, as a as a refugee.  My family immigrated out of Soviet Union as refugees before Soviet Union broke broke up.  Um, and they want a good life for their family and they're going to come and they're going to drive the economy.  Whereas um in Asia, even China, China, we've passed peak China as far as population because the one one child law.
+
+Mhm.
+
+So, China's is is already been shrinking for the last four or five years and will be projected to be half the size by the end of the century
+
+by the way. And you can't build an economy if your if your population is going to is shrinking by half, right?
+
+Mhm.
+
+So, you need a growing growing population.  We have plenty of room in this country, right?  Especially in the middle of the country.  Um and um and Europe has has big structural problems, right?
+
+you have an aging population but uh they're they're very much against uh the migration that needs to happen and it's always kind of south to north migration right and and you have uh North Africa and Middle East as the source of migration into Europe um which I would argue is is very you know culturally a huge gap between Europe and and and that population that's why and Europe's never been good about uh integrating immigrants anyway so there's going to be some structural problems there but we this advantage where we can have a relatively young economy.  We have a lot of natural resources.  So, we are on our way.  So, is there a country to model after everything?
+
+No.  Um because we have unique advantages, but there's certain things we can learn from Europe as far as a social uh safety net.  Um we definitely need to fix our our healthcare system.  We need to get money out of politics and get to a normal, you know, 10-week campaign, not two-year campaign with billions of dollars.
+
+Uh because you know we have Trump again because Elon Musk gave him $300 million period.  That's the single biggest factor.  Um so you know we need to fix certain things and hopefully we we don't break you know all the way.  Um and and we get a chance to to fix those things.
+
+What companies are you excited about that you're investing in right now?  um which sector and within that sector what what do you look for?  So I we're we're focused, you know, when you're a VC, you're focused on your thesis.  You don't do kind of extracurricular, especially early on with a fund one, you don't do extracurricular investments in in random things as an angel.
+
+Um so we're laser focused on robotics because we think uh you know from our research that's 39% kagger, a compound annual growth rate projected, which is which makes it the fastest technology wave of all time, faster than the internet wave, the mobile wave, social, etc.  by far.  So that's the area kind of broadly where we're focused on.  Um and generally we like companies who can become category leaders in their space.
+
+They've identified their customer and also we are a little bit old school in the way that we're doing a small portfolio concentrated portfolio of companies 20 to 30 in the in the whole fund and that means it gives us an opportunity to to be helpful uh with each company open up opportunities for them uh with you know potential big customers uh help them with supply chain all those kind of things.  So that's that's kind of the general area.  uh give you a couple of companies that I'm excited about that I've angel invested in the past.  Um and it's always been products that I like to use, right?
+
+I see that I see, you know, I discover a product that I use or want to use and I I like, you know, something about their story.  So, I'll give you three examples.  Uh one is a company called FitBot, which is an uh you know, I've been involved with them for almost 10 years, and they were the one of the first kind of AI personal trainers.  So, I have a home gym.
+
+I've been going to the gym, you know,
+
+an average of 5 days a week for the last 15 years.
+
+Um, and um, and this is, you know, it solves a particular need where you basically say, "Here are my goals. Here's how much time I have, what equipment I have, and it'll generate the work and it'll track everything over time just like a personal trainer would, right? So, for 10 bucks a month, instead of $100 an hour, you have a personal trainer in your pocket,
+
+which is great."
+
+So, that that's one that that made sense a lot to me.  and they've grown leaps and bounds.  They're one of the leaders in this category uh these days and uh great product, great team.  Um another one is I I you know I I've done a lot in mobility um and I I was very excited to uh to get involved with Rivian early on and had an opportunity to invest while they were still private.
+
+Um now their stock performance after IPO hasn't been great.  There's been a lot of macro uh macro um conditions that they couldn't really control.  Um, and there's a lot of companies that went under in the sector that and they and they stayed uh stayed afloat and they've been able to survive.  Now they have the R2, the kind of mass market vehicle launching and I think that's their kind of model 3 moment where they're going to go mainstream.
+
+So I'm excited about uh Rivian still.  And another one is Perplexity.  So Perplexity um I was an early user. I had some friends who invested in them kind of at seed and series A stage and um I I just find they have a very elegant way of of solving and they move very quickly in the space where they don't need the capital investment of the big LLM players um but they're providing that uh that functional layer that's very very useful to to professionals especially that gives them all the tools in one place
+
+and uh we use it heavily and I also had an opportunity to invest in them um a couple of rounds ago.  Uh so those you know generally as an angel investor and this is very typical behavior kind of thinking from that perspective you always invest in things you know and that you're passionate about.  Um as a professional money manager of a fund you have to set a thesis for a particular category.  You have to build up the knowledge base and the institutional knowledge in that area and and the network and invest uh in the areas where you you think you know are going to be big in a few years kind of systemically.
+
+So that's a long answer for you.  No, no, thank you for that.  I I think robotics is definitely a good bet.  Um, and uh I look forward to having one in my house one day to do the dishes and stuff.
+
+How do how far do you think we're away from that?
+
+So, I'm pretty bearish on humanoids. Um, okay. in general. I think um so think of it this way and the best the easiest way I found to explain is look at look at how many uh look at the warning sticker in the back of your toaster right in your house
+
+and everything that can go wrong with a toaster.
+
+Now imagine a 150 200lb robot that's walking around the house around kids, pets and and elders
+
+around stairs and all sorts of things.
+
+Is it safe?  I don't know.  um probably not yet and not not even close to it.  Then the question is like of usefulness, right?
+
+If we're creating a new category and this thing is going to cost realistically, I don't know, $20,000.  Uh I mean in US you have to look at the kind of the average population is they're hanging on to their cars longer, a few years longer now.  Like an average age of a car is about 14 years on the road.  Um because they're trying to save money.
+
+So is you know how much of the population is going to buy a $20,000 toy, right?  or what is it going to replace for them?  Is it going to walk their dog?  Is it going to do their laundry?
+
+Like what is it going to do that's displacing current spend that they have at home?  So I don't I don't think we have much good we don't have many good answers to that just yet.  Now in the commercial environment um then if we look a little bit deeper yes uh robotization of certain tasks then becomes a question of do we have a um do we have a use case for something that's bipedal that looks like you know that has a head has hands and has feet.  Uh that use case is pretty small.
+
+You're going to see a lot more use case for like a tracked robot right big warehouse or big uh manufacturing plant.  It's going to roll around.  that's much more efficient than walking like a human.  Yeah.
+
+So the kind of human scale uh robotics that's the question is is where's the place for that?  Is there a place for that?
+
+Um so I think the form factors that you'll actually see in production with companies figure that we're advising a company called humanoid uh that's based out of the UK.  Their form factor is doesn't look quite like a simple robot with hands and arms and legs.  uh it's usually tracked uh you know having uh wheels or tracks that it rolls around on or it attaches to something and it has a sensor array but it doesn't need to look like a human head with eyes and mouth.  Uh we're we're pretty far away from that.
+
+I think we're 5 10 years away from that.  China, you know, if you want to see the future, go to China.  They're five or 10 years ahead in robotics already.  So you can see what's going to come here after, you know, in the next 5 years.
+
+Amazing. Yeah, I've seen uh cars that have umbrellas and things like that. So, uh, that has a umbrella that goes up and protects them from rain and things like that. I saw that on the timeline.
+
+Yeah.
+
+Yeah.
+
+Yeah. There's interesting things, but it's always a question of, okay, what what's cool and and is good content online versus
+
+take my money. I want to buy this thing. It's going to solve a problem for me. It's going to do a job for me. Like, what am I going to put in my house? You know,
+
+Yeah. Exactly.
+
+You're going to Once you become a customer, you're thinking, "Okay, I'm going to pull out my credit card and buy this thing." Then you start thinking like, you know, you can buy the the Boston Robotics dog. It's cute and it does tricks. Are you going to spend $20,000, right? Yeah, exactly.
+
+Yeah. Maybe for commercial purposes, for military, sure. But is that thing Are you going to buy it instead of a dog? I don't think so.
+
+No.
+
+So, well, thank you so much for being on the show. This has shed a lot of light and I'm going to be thinking about this conversation a lot because there's a lot that you downloaded and uh I'll probably have some follow-up questions, Vitali, so I'll talk to you. Well, it's been my pleasure.

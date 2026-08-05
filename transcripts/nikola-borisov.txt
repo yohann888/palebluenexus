@@ -1,0 +1,311 @@
+Nikola Borisov — Serving 5 Trillion AI Tokens a Week: Inside DeepInfra with Nikola Borisov
+
+Yeah, so Nicola, welcome to the show. Uh, this is the fourth episode of Pale Blue Nexus and um, uh, happy to to have you on the show. We met uh, prior to your big announcement last week. Um, and uh, it was quite a big announcement uh, let me say. It uh, uh, something I knew something was coming when I saw some of your your pull requests on the open claw and I was like I was really excited about that. So so tell me about uh, your journey so far and um, about yourself and about the big race.
+
+Sure.  Thanks thanks for having me.  It's it's pleasure to be here.  So um, I I I started Deep Mind for about four years ago with with two close friends of mine.
+
+We we both met while working at a previous uh, company for a long time together and so uh, we really saw this need uh, as this AI models were coming out.  The the interesting part about them is they're just a computer application but they're they're like a computer program but they're quite different.  They require this large amounts of compute operations to produce even a single token.  So the big models basically need hundreds of billions of multiplications to generate a single token or a single word word out of them.
+
+And so we we saw these models kind of just showing up slightly on the horizon.  It was 2022.  It was before chat GPT but you know, you could see for example stable diffusion was this super popular open source models that can draw pictures.  They had a lot of artifacts as you remember like people had a lot of fingers.
+
+Yeah.
+
+Uh but it was kind of a demo of an open source model that's quite powerful and and showing something that wasn't done before.  And at the time we didn't have chat GPT so you couldn't chat with the model but you could essentially prompt the model to to continue a sentence.  For example, instead of asking like what is the capital of Paris, you had to say the capital of Paris is and let the model just continue the sentence.  And even in that mode you could still see kind of signs of intelligence in the model.
+
+Um so we wanted to use our experience from our previous um I guess company where we worked.  Uh we we built the infrastructure and the back end for a messaging app with over 200 million monthly active users.  And so we had a lot of experience of how to procure and set up physical server infrastructure in data centers and how to build like very efficient kind of back end APIs on top of it and make sure we use like the infrastructure really fully.  Like part of our secret sauce for the messenger was that we managed to get a very high utilization on all the hardware we bought uh by mixing different types of applications, you know, compute hungry applications, memory hungry applications onto the same machines and balancing the load until we get really high utilization of the infrastructure.
+
+And so, I think the idea behind deep infra is somewhat similar.  Like, we building a cloud hosting platform for these AI models.  Um Again, these are kind of like new applications.  So, they need somewhere to run.
+
+And running them is what's called inference.  Yeah. Um I can go more into our journey like from very early
+
+It sounds like the challenge is that you solved at IMO.im are really sort of an input into the same problem that you're having with inference.
+
+I I think so.  Like, I think you know, life is kind of a journey.  You see certain things that help you kind of navigate the next stage in a different way.  And And it I'm all the one of the main takeaways was like how expensive AWS and the other public clouds internet connectivity is.
+
+And how essentially more efficient you could be if you do it yourself.  But, you know, it's not easy to do it yourself.  That's why people, you know, opt up for the clouds because it's you get something done and ready.  So, you need to invest in it.
+
+You need the expertise to do it.  But, you can get to a lower like cost.
+
+And talk about like the difference in cost between somebody choosing like a hyperscaler uh solution like Amazon or uh um Azure against your solution.
+
+Yeah.  Um I believe like we we host a lot of different open source models and each of them has its own price.  So it's really not that easy to compare one to one, but if you look at the GPU pricing, you know, we are offering B200s at 275 and I believe like the public clouds pricing are in the 6 to 10 plus range.  And you typically to get that numbers, you have to do like longer term commitments as well and and and commit to to that cloud.
+
+Um And then on the tokens, there's another layer of efficiency, right?  Like we believe we have really efficient systems that can generate more tokens an hour per card.  And so that's why we can offer better pricing per token and also cash token pricing that's really really attractive.  That's sometimes 10 times cheaper than than other options or closed source models.
+
+In summary, I think the big clouds have really focused more on like hosting Anthropic and Open AI models or Gemini.  So the real comparison here is like how much does I guess uh you know, Anthropic's model cost AWS versus how much does Deep Seek cost with us.  It's not the same model.  Deep Seek is still slightly worse, like 3 to 5% in in some benchmarks, but it could be like 10 times cheaper.
+
+Okay. Um so cheaper is one thing. The one thing I did notice though, I I I sort of use your back end because I use Ollama and you guys help them uh provide their services. Um I noticed over the weekend it got a lot faster. Like I would type something in and my my bot is responding like right away versus there being some maybe two three seconds in between when it when it I don't know what happened there, but uh keep up the good work.
+
+I I I can share something. We basically over the weekend like a big batch of our infrastructure, new B300 GPUs came online. And so there was a lot more breathing room for all the models to scale up and and go faster. I hope it's that. Uh but
+
+Whatever you did work, it's it's uh it's responding quite faster for me. So, um I can't wait to get out there and use it. I feel like um that was a meaningful upgrade uh from a user experience perspective, so.
+
+Thank you.
+
+Um so, let's talk about scaling to I guess your your app scale to 200 million monthly active users. And this sort of inference level, how much customers are you serving right now at Deep Infra? And how much tokens are you delivering?
+
+So, at Deep Infra we're doing over 5 trillion tokens a week across like all the models that we serve.  Um we also do some you know, cluster rentals to new labs and and other customers.  That's kind of in addition to the inference business.  Um it's been an interesting journey like over the last uh basically four years.
+
+It really started the growth really started when Llama 2 came out.  And that was like the first commercially allowed open source model that was decent right?  For its time it was like the best open source model.  It was quite large.
+
+70 billion parameters is is a was a big number at the time.  And so from that moment on, we just started seeing growth in tokens.  And it was always growing exponentially, but we started from a very small kind of base.  Um And so, then there was kind of like a wave of new models coming out and us raising more capital and investing in more infrastructure.
+
+So, for the Llama 2, we were only we only had, I think, couple H100 GPUs.  Mostly it was A100.  And And then we got our seed round, we got a bunch of H100s with that.  Then we could serve the Llama well.
+
+And then Me- Mistral came.  It was like a small 7B model.  Then And actually, one of the biggest changes for us was when um Mistral came.  This was like the first mixture of expert open-source model.
+
+So, it's kind of like a new generation, uh think.  And the story there was we were I I I'll go a little technical.  So, this model was basically eight 7B models together.  The experts were 7 billion parameters.
+
+And during runtime, you would use two of the experts.  So, the model should be as expensive as 14 billion parameter model to run.  But as soon as that model shipped, everybody in the market priced the model as if it's like 50-60 billion parameter model, like using the full number of weights.  And we were really aggressive.
+
+Like to us, it was quite clear that this should cost as much as like a 14 billion parameter model, because that's what you would use during
+
+runtime.
+
+runtime. And so, we just priced this model really aggressively. I remember, you know, we announced 27 cents per million tokens. And at the time, you know, other people were at $60 60 cents. And
+
+Wow.
+
+So, that got a lot of attention on Twitter and a lot of traffic for our model.  Um I think around that time people started saying "Oh inference this is race to the bottom.  Look at, you know, the prices of these things going down. " The interesting thing is that even though this price was really aggressive for day one, because when the model comes up day one, it's not really efficient.
+
+It really, you know, over the next month or two, like the efficiency of how well we run this model really improved dramatically.  And you know, this model ran for like at least year or maybe 18 months before we kind of deprecated it.  Um I think the price went even lower like after that.  Like we just had more and more efficiency and we could serve it for considerably less.
+
+I think we just the software got better on our side and and so we could offer lower prices to our customers.
+
+What's the main factor there? Is it the quantization or is it the the inference sort of routing and engine?
+
+It's a good question. Actually, there's like a bunch of things. So, you don't have to
+
+to say your secret sauce.
+
+Well, I I I'm going to like mention like few of the main techniques that I think make these models more efficient that um I I'm happy to share.  So, so quantization is obviously one.  And interestingly, like the newer generations of Nvidia GPUs basically support low and lower precision math.  Um we believe that and Nvidia also strongly believes this because they're dedicating large portions of the chip to this like low precision compute.
+
+They're mostly investing in this 4-bit uh types.  They're FP4 and VFP4.  So, so one thing is quantization of the model which to some of your listeners just means like you're compressing the model down.  Like uh instead of using 16 bits per parameter, you use like eight or even four.
+
+And that really helps like make the model smaller.  You can both do more math the smaller the precision is, but you can also fit more fit the model into like fewer cards.  Or leave more space for KV caching.  Now, KV caching is the other really kind of important optimization.
+
+In these agentic workloads, what the model really does is it basically sends roughly the same request many, many times with like a little bit of additional information at the end.  So, if you can save some computation from the last time you did the inference, then the next time you have to do inference for the same kind of customer, you can be really efficient.  Like you don't have to bother the GPUs with the big portion of the request.  And that's kind of a a big efficiency gain.
+
+So, we were one of the first people to have cached token pricing on open router.
+
+Okay.
+
+And offer it to like our customers obviously as well. Uh And that's a big part of it. And there's a bunch of other techniques. And it's kind of all layered together. And also more efficient kernels, like moving to more efficient GPUs. Uh
+
+This sounds more like fine-tuning a Ferrari than it does uh racing to the bottom uh like type of thing, right? But uh it's a bit of both.
+
+Yeah. You know, my analogy is I think it's a lot like Formula 1. And I'm a big fan of Formula 1. The you know, the teams there are always obsessed with like reducing the weight of the car and then squeezing some more power from the engine and squeezing some more aerodynamic efficiency. So like at the end of the day you have to pursue like all avenues of making this more efficient to kind of end up winning or or being the top few people.
+
+Yeah. Um and you know, you guys were took capital from Nvidia. Um tell me about like what they're doing uh with Nvidia Dynamo. Is that part of your stock now or is it going to be? Uh and how do And we'll get into the open source versus closed stuff stuff uh stuff later, but uh tell me about Nvidia Dynamo right now.
+
+Nvidia Dynamo is like um open source project started by Nvidia that is um really like I think the next layer level of efficiency in terms of inference and scale.
+
+Okay.
+
+So, I think internally at Deep Infusion we've implemented large portions of the ideas behind this already and we're working more and more closely with the Nvidia team on on on this project as well.  Um For some of your viewers, it's basically something like um uh kind of like Kubernetes in terms of it helps organize how the inference happens because inferences to get the ultimate efficiency, you you need to run this kind of at a big scale and and Dynamo kind of helps organize the scale around us and disaggregates like one portion of the work with another portion of the work.  So, I think it's an important project.  Uh and I think Nvidia is developing it really well.
+
+We essentially supporting various different inference engines underneath like VLLM and SGLang in addition to the homegrown TensorRT-LLM from Nvidia.  I think also the project supports also non-Nvidia hardware, which is I think the right approach to make this the real fundamental system for for inference.  So, we're generally excited to collaborate with Nvidia on on this front.  And you know, the relationship with Nvidia started more on the technical side.
+
+Like we see a lot of tokens going through Deep Infra and we see a lot of tokens flowing through like various generations of Nvidia GPUs. We were really early adopters of Blackwell
+
+All right.
+
+type GPUs.  And so, whenever we see any instabilities, any crashes, any performance issues, we would share this with the Nvidia technical teams.  And uh on their side, the Nvidia technical teams would help uh kind of address and fix and improve I guess the libraries that we use for inference.  And so, it was a good loop.
+
+Like, you know, we would share like important information that helps kind of make decisions on their end of like what models to support and what models to make more efficient and and what models to fix like stability issues.  And because we have a lot of traffic, we see all these random I guess um events that cause like weird crashes that are really hard for for someone who who doesn't have the same amount of traffic going through their system to to notice and and fix and improve.  So, we're just pretty open and shared a lot with the team and I think I'm going to speak in a little bit for them, but like for Nvidia it's really important to have really efficient software for inference, right?  Like at the end of the day like the their customer measure whether to buy their hardware versus someone else's hardware on like how many tokens can this thing generate for me in an hour?
+
+And does it have like support for many different models that I might want to use?  And so I think they're coming to this with the right mind.  They understand that they can't just like sell the GPUs and that's it.  They need to invest a lot of engineers to work on the software layers of the stack to make the GPUs really useful to someone.
+
+Not just us, like just any any any of their customers, right?  So I think they understand this well, so they've invested a lot of effort into the software side of their cards to basically show like the highest inference performance um compared to other hardware.
+
+And I mean, this reminds me of a few different parallels within the tech world in the last 20 years. One of it being like the um the latency aspect. And the other part is the open source aspect, like Red Hat. But going back to latency, um uh you remember how high-frequency trading used to happen closer to New York where the data centers were to to to the exchanges. Um are you experiencing similar uh build-out challenges where people want higher lower latency? So, they want to be closer to their cloud Uh or or to their infrastructure.
+
+E E both kind of yes and no.  I feel like the answer for inference is more complicated like um Let's take a typical request, right?  Like imagine you asking ChatGPT to do something and and passing like a big document together like with your initial prompt.  So the model needs to do this initial step of like look for all the data you've given it before it starts giving you the first token.
+
+That's what's called the prefill phase.  And so that might take like from 100 to 200 milliseconds all the way to like seconds depending on how much data you've given it.  And then the model starts giving you tokens and and then like it might take 5 6 seconds for the whole thing to complete, right?  Like the model starts giving you a text.
+
+And so actually there's a lot of latency building to the whole inference like from end to end the requests take like long time like on the order of 5 seconds to 10 to 30.  And so we've noticed that we don't believe like trying to put the actual compute like right next to the humans is the most efficient way.  Like we to get lower latency, I think we just have to build like the right orchestration of GPUs and hold the model in a way where we could generate the tokens well and do the caching well.  And the other thing is like I think if you look at high frequency trading, they need like the very latest data from the exchange and they need to run like something really quick and like make back like a request to buy sell.
+
+And uh all these things are super small and and they don't need to run a super complicated algorithm to decide like which of these two ways to do it.  So, they don't need a lot of power is what I'm trying to say, but inference is really, really power hungry and compute hungry.  That is why like you know, there's all these data center projects in the US and and most of them happen in like rural areas not near the city.  Just the price of electricity and like the economics of deploying the the GPUs work best in like more rural areas.
+
+So, what latency is a big portion of it, I don't think the solution is mostly the solution is not let's move the GPUs next to like the population centers. There will be some sort of GPUs nearby for like very low latency tasks like voice
+
+Mhm.
+
+tasks or maybe even robotics tasks. Like there will be some things that would require ultra low latency. But I think the you know the AI engineer, software engineer, the AI doctor, the AI um teacher potentially the the latency would be okay for these things to be hosted from just a AI factory in in in the middle of the country. Now I think you had another question about the open source models. I'm happy to to dive into that. Like this is a big theme.
+
+Yeah, I mean, open source I am a big Unix fan. I I started my career being a Unix administrator. Um and I've just seen how it's been proliferated throughout the years uh with Red Hat going to enterprise um and different flavors of Unix. Even our my Mac is running on a flavor of Unix right now. So, uh talk to me about open source and and how that's a strategic sort of like bet for you guys.
+
+Yeah, I want to give you like a little history of myself, too.  So, I'm also a very big user and proponent of this since I grew up like one of my teachers in in high school that that taught me how to to program, he was really big proponent of of Linux and Unix.  So, like I've used Ubuntu since the basically 2004 and ever since I've always like had Ubuntu like as my operating system at home.  And even I want to tell you a story on the phone side.
+
+Like whenever like iPhone came out, right?  Like Google Android operating system was supposed to be really open source and open source.  I'm still sticking with Android since like the beginning.  Although I have to say like it didn't turn out as I hoped it would.
+
+I feel like sometimes I don't know.  Android doesn't feel as open source as as it should.  But on the topic of open source versus closed source models, it's kind of a really serious discussion that I think when we started the company Deep Infrah in 2022, that was the biggest risk to us.  Like I knew that there'll be a lot of demand for inference.
+
+I just didn't know if they would be open source models.  And it's a tough job because you have to invest like considerable amount of computer resources to build a model.  And then you make it open.  And so like not that many can do this.
+
+Like it requires support from big organizations.  But any open source thing has like all this community innovation that happens around it.  And so um and it in the innovation feeds off of each other.  So like Facebook made Llama or Meta made the Llama models.
+
+And then you know Mistral did the first like mixture of expert ones.  Then Deep Seek really took this to the next level and did a lot of small experts and added like some interesting attention things.  Like the MLA.  And so like then a bunch of other people basically managed to train Deep Seek like models.
+
+Like Chime and GLM and And so like I think the cool ideas get adopted.  And some more computer resources getting invested into it.  So I feel like AI is really important.  It's good for us to have decent even if they're not the top open source models.
+
+It's still I think a good option for enterprises and just researchers and universities and all of us as a community to have a good layer of decent open source models we could build on top of.  Um over the last 3 years as I've been watching this develop I believe like the o- the closed source models have improved dramatically but the open source models have really kind of caught up to them.  Like when when Llama 2 was out and OpenAI had their I think GPT 3. 5 or 4 at the time the gap was really big, like you know, almost half the intelligence or something like that based on like benchmarks.
+
+But now, if you look at how well they stack, still the top models in terms of intelligence are the the top three closed-source lines of models, but basically the next right after that are open-source models. I wish we get more US-based open-source models, and I think that's coming thanks to Indian in some sense for doing NeMo Tron
+
+Mhm.
+
+line of open-source models, but also, you know, we believe like a lot of other labs in the US will also release open-source versions of models as well. So, I Yeah.
+
+My stack is like I were I was using the frontier models, the US frontier models, and then I just found one day with Kimmy 2.6, it was like, I can't see the difference anymore. It's It's almost It's not 100%, but um it's caught up quite a bit, and with Deep Seek 4 uh Pro and Flash, it uh it's it's the edge is going pretty fast, so um I think like for me and maybe a lot of other devs out there that are looking at this stuff, it's it's coming closer and closer. So, we can see you know, what happens 6 months from now, right? So, uh there's that as well.
+
+I agree.  And I think another thing I want to point out here is even for a moment as a mental exercise, imagine we freeze all the models right now.  No one makes any models any better.  The exciting part is like we've gotten to a level that is really useful.
+
+Like even expert software engineers, and I like to like I'm one of them are mostly not writing any code anymore like they're using this agents, coding agents and this frontier style models both open and closed to produce much more kind of software than they could otherwise uh by doing it by hand.  And so it's kind of like as if we've invented the compilers.  And from now on we'll just write high-level code and compile down to like the machine instructions.  I feel like the AI models are kind of like a compiler for us.
+
+Like we give high-level instructions and the thing lowers it down to code that then gets lowered by the compiler to the actual machine instructions.
+
+Yeah, you're right. Like this spec-driven development type of uh idea where you can just give it a spec uh and ask maybe the frontier model to come up with a spec. Then you can take that spec and give it to a good enough model and it would as long as it has some guardrails it'll go and code it for you. So.
+
+Yeah. Exciting times we live in.
+
+Yeah. Yeah, you could really boot up a lot these days. Talk to me about like um the next level of security and compliance as as these sort of solutions get rolled out to to to bigger companies and enterprises and bigger businesses. Like right now you guys are SOC 2 compliant and ISO 27001. Um how are you seeing are you seeing any pushback from bigger enterprises? Um are you looking to go to the next level on on that that that regulation front?
+
+Um on the compliance side there's we First we always like our posture in general in terms of us owning and operating the actual underlying kind of infrastructure and having like almost no like sub processors underneath us only like very rare cases.  So, most of the tokens that we generate happen on our own hardware in our kind of own spaces.  Um and I think that's kind of a what enterprises should be looking for um just to understand you need to understand well the chain of who is going to handle your request down to the actual execution.  You want to make sure you're not like giving it to someone that will give it to someone that will give it to someone and maybe the final inference happens in China.
+
+Right?  And so I think companies need to be careful about like who does the inference, where, and like whether they trust this company.  So, as a startup it's a it's a journey, right?  Like we can't convince day one like some super large enterprises to to like trust us with their data, but we're definitely far along on this journey and we have like large enterprise customers using our infrastructure.
+
+Now, I actually see this as an important thing.  Like even though the the models are some of them are trained outside of the US, we're kind of like the safe environment where we run them on our US-based V100 Nvidia GPUs and we have zero retention policy, so we don't store any data.  Um kind of like this zero retention thing because you know, you don't have to spend anything on storage and your customers feel safe and and you have this less exposure, less risk of you know, stuff leaking out out of your infrastructure.  So, I think the security, by the way, of this models is going to be like probably the biggest thing we will be thinking about in the future.
+
+I think it's not as much about like it's not in the traditional sense of like are my, you know, data center secure?  Is my system secure?  It's like a little bit about the model itself.  And there's a lot more verification that we need to do to make sure the model wouldn't make a mistake that might be costly or cannot you know, all these prompt injections are basically us kind of tricking the model into doing the thing that it shouldn't be doing.
+
+So, there's a lot I think we're not really safe there on many fronts still, even the frontier models.  Like I um I'll give you a small example.  Like I think we're still not safe in the way where you can just say open claw, here read all my email.  Cuz I feel like the right scammer would basically send the right email that will prompt inject the model potentially to share like information and take over.
+
+So, so some of these things are we need to be careful with, but on the other hand it's kind of you cannot be too slow in adopting this technology because then your business gets kind of left behind
+
+Mhm.
+
+or your competitors are taking the full advantage of it. So, it's we need to balance the adoption.
+
+Mhm.
+
+I think at the moment there's like definitely risk, but I think the rewards are still higher. And so, you have to take some of the risks. You just have to minimize the the risk as much as you can.
+
+Tell me about like Nemo claw. Like I'm very interested in this topic. Um it sounds to to like there's obviously like a wrapper on top to help make open claw more enterprise friendly. So, I kind of see where that's going.
+
+So, I want to explain to like the viewers about how I think these two things work out like you can either have a very There's two ways to build these things.  You can either start with a system that's really open and is allowed to do everything.  And then just see what are the bad things it could do and try to like prevent some of them.  And I think that's more of a open claw.
+
+Like by default the thing is really open.  It can like do many things.  While Nemo claw is Nvidia's kind of attempted starting the other way like start with something really secure.  Like by default the model is not really allowed to like access the internet or you know, do many many things or execute anything.
+
+You have to explicitly allow what the model can execute and access and basically that way you can start from this end.  Like we start with something really secure.  See what it actually needs.  Only allow the minimum set of things it needs to really execute.
+
+And that I think makes sense for obviously enterprise adoption.  Um So, I think there's active development there.  Uh we will see where this goes, but we're looking you know, more and more in kind of ways to encapsulate and secure these agents.  Give them enough freedom so they can execute, but also make sure that they don't have um unrestricted access.
+
+Uh and and then also I think more and more there will be work that essentially monitors the work of the agent and looks for essentially suspicious activity that uh might happen and and then you can secure the agent in that way as well.
+
+Okay, that's interesting. So so that's that's the where NeMo Guard comes in. It's like uh a trusted sort of open guard in a way.
+
+Yeah, it's basically open guard inside like uh uh for lack of better words like uh a jail or a shell. And so before it can do anything, it has to ask.
+
+Okay.
+
+Well, well, you can you can see what it's trying to do and then you can decide to approve some of these actions and and build this more contained environment for it.
+
+Okay. Um let's um talk about the the ICP for DeepMind infra. Like, are you guys expanding into the the more regulated space, the the uh I guess the enterprise space? Are you happy being in that uh small to medium business, startups, tech startups area where where your cost savings are much needed?
+
+The way I look at it is I feel the demand for tokens is really high and it's coming from everywhere.
+
+Mhm.
+
+And we don't have it it's kind of in stages.  We really want to help the people that need a lot of tokens at scale.  And at the moment, I feel it's not really the large enterprises.  They're still figuring out how to use it and where to use it.
+
+It's the people who really need tokens at scale are like kind of AI first companies that are building a product that it's like AI powered from the bottom up.  Not Um you know, how do we insert some AI features into our existing SaaS, which still is quite powerful use case.  So We we we try not to lock ourselves in any segment. One thing I can say is probably we're not a best fit for like the super regulated people like banks and
+
+Mhm.
+
+other folks are really interested in doing this like in a extra secure way on premise. And that's you know, our inference cloud is not the best fit at the moment for this use cases. Uh So yeah, we just try to scale our platform, add more compute resources to it, add more models, and then Um we have a very light outbound motion at the moment. Mostly all our clients are kind of inbound. And so we we look to help the people that need tokens the most.
+
+Okay. Tell me about like how you've been handling these last few weeks personally in your life. Uh it must have been quite a whirlwind uh over the last month or two. Um how how are things going and how are you balancing that? Are you going to the beach or having some fun?
+
+It's really tough, I think.  One thing I can prepare your viewers for like if you want to be a founder you know, you're you know, doing it because you're hoping that the company is successful, but when the company is successful, then the amount of work for you really grows a lot and you kind of have to your job is a little bit of more building the company than building the actual product.  Like you have to go and find the right people and hand them off each like particular area, and trust them, and So, there's a a crazy amount of work right now that leaves no slot empty on the calendar and no time to cover everything.  So, you And you have to just try to think every day about like what are the most important things for us today and this week, and prioritize those versus like the incoming like wave of tasks and other things that are coming to you.
+
+Um and just just move forward. Um
+
+What kind of culture are you going to bring to to DP Infra internally?
+
+So, I'm really happy that I got to recruit a lot of my old team from from my old messenger where I worked together with some of these folks for many years.  Mhm.  So, you already you we we already had like a lot of work together and and culture together.  And so, you I don't like scaling the company too quickly cuz I want to make sure like the new people get to learn from the existing people about like what we think is the right way to think about problems and approach them.
+
+And I don't think some companies grow too quickly and then there's not enough scope for the individual people to do.  And they're working on things that are not really high priority. I think it's better to be a little bit understaffed
+
+Mhm.
+
+than overstaffed. Um I mean, culture is pretty important. We We're very light. I don't think we have any managers, really, at the moment. So, that's expected from a small company.
+
+Cool. And uh so, what are you looking forward for for the rest of 2026? Like how how do you What's exciting to you?
+
+I think I'm excited about scaling the compute clusters.  So, there's like a crazy build schedule over the next few months, and things going to get even crazier towards the end of the year.  Uh I guess bringing these clusters up that we've already kind of in the middle of the production.  Just to give you an idea, by the way, like setting some of these compute clusters is like I think a major construction project.
+
+Like uh you know, they cost like tens of millions of dollars.  And there's a lot of physical setup for them.  You know, electricity wires, like it's kind of almost like building a house.  They need like containment walls and and then cabling.
+
+So, the That's exciting.  I think I'm excited to scale the company.  Like we are actively hiring for number of different positions and and interviewing.  And so, getting the right really motivated, experienced, but also hungry people to the right positions and giving them a chance to just like contribute is really important.
+
+I remember like in our journey, like we had quite a few kind of key hires.  Like we couldn't have gotten here without getting this person to join us right at this moment, and they really took a big burden out of what I was doing before.  And they kind of well.  So, like that's uh scaling the the team is an important part.
+
+I think we Our business is really capital intensive.
+
+Mhm.
+
+So, for us to be successful, we need to be good at raising funding, both equity and debt.
+
+Mhm.
+
+Debt is an important vehicle to finance these clusters and this this infrastructure, and you have to I guess do a decent amount of it, and you have to do it really well to get to like better cost per capital cost per token, as well.
+
+So, exciting times. Um Just a random question. Are are the the servers the the hardware that you buy, are they do they have some level of depreciation over time?
+
+Yeah, you know, this is actually one of the biggest stories behind this whole boom of AI.  The biggest kind of underlying question is how long would these things that we spend money on setting up, like essentially last us?  And I want to give you like my perspective from my history with First the Messenger right?  So, I joined like the Messenger in 2010 when we only had about 100 servers there.
+
+And then I ended up growing that number of servers to like 2 to 3,000.  Um at the time, a lot of people were saying, "Okay, you know, every 3 years we're going to basically throw away the old servers and buy new servers. " But for the Messenger, while I was doing this to, you know, set up our infrastructure, I kind always thought Okay, 4 years have passed.  This server is still running.
+
+It still has memory and CPUs.  Why throw it away, right?  Like I guess when you do the math, the price of buying the new server and you know, the new server is basically for roughly Back then, like the price of servers would almost not change.  So, the servers would always be like around $5,000 each.
+
+These were really not the Nvidia servers that we have today that are like crazy expensive.  But, the servers will be roughly 5,000 and throughout the 10 years I was there, like that price didn't really change up or down.  It stayed around this number.  But, what you got every year is like some better CPUs and some faster memory in each server.
+
+So, so Anyway, my my long story here is like at the at IMO we ended up not throwing away any machines.  We kept them for 5 years and 7 years.  We would just move them a little bit from like high-priority applications to low-priority applications.  So, when the machines got older I would just, for example, use them in our Hadoop clusters to to data analytics.
+
+Right.
+
+Because a failure of a machine there would basically have no effect.  While failure of a machine serving live customer traffic is kind of more important.  And so, we I think we did a really good job there of using the infrastructure really efficiently.  And and we were really scrappy.
+
+And so, so the big question here is like how long would the servers that we buy now be useful for?  And yes, Nvidia comes up with better and better GPUs all the time.  But, what we've seen is that even the oldest servers we have, the A100s or the H100s that are now like 2 and 1/2 years old, are still pretty fully used.  And and even the prices that we would charge for them has gone higher.
+
+Interesting.
+
+Mostly the function of the demand.
+
+Mhm.
+
+Um I feel like we will keep using this infrastructure. We'll build new ones, but there's so much demand coming down the line that even the oldest ones would still be pretty used.
+
+Okay. Um you have a pretty good perspective of this. So, what is the most overrated thing in AI infrastructure right now, you think? And where's, you know, in a few years we'll be like, "What the heck?"
+
+It's a good question.  I think like I think like right now we're not asking ourselves like often the questions like, "Do I really need all of this?  And what part of this do I really need? " And so, I try to keep asking this question all the time like, "This thing that we bought, are we using it?
+
+And how we use it?  Is it And so, at the moment, I'll tell you like what I think and I'm I get a little bit in trouble like Nvidia has generated these reference designs of like how to build a cluster using their GPUs and their networking switches and and all in between.  And this has been important for training.  I think the designs are mostly following like what do you really need to do efficient training.
+
+But, I feel like inference is quite different, so it just requires a different design and there different questions.  Do we need these parts?  What are we going to interconnect them?  How do we build a network that is good for inference?
+
+And uh So, that's the part where I think like we could optimize more the infrastructure.  Um Yeah, and the other part is maybe storage.  Like, people seem to I guess buy certain amount of storage and pay like quite a bit of premium for like these fancy storage providers where I don't know that you really how much do you really need that?  Uh depending on what you're building.
+
+What what I like to do is you set up something and then you have to look at it and see like, "Okay, I'm using the GPUs at this level.  Am Am I using the memory?  How much of the memory I'm actually using? " So, not not too many people can give you like just a number.
+
+Out of all the memory we've bought, how much is free right now and how much is used?  And this is like an important number, right?  When you buy your next machines, if you're having so much free memory, then you should be buying a little less memory per machine.  And the same questions for the CPUs.
+
+Like, how much of your CPUs are you actually currently utilizing?  Like, what percent of the cores are idle versus busy?  And the same thing for the switches and the other things.  And this is what we did a lot at the messenger.
+
+Like, we basically tracked graphs of There was four key resources, like memory, CPU, disks, and networking.  And so, we would have graphs data center wide of like how far are we utilizing each of these and then it will impact our next purchases so that we kind of make sure that the mix is right.
+
+Okay. Nikola, I just wanted to say thank you so much for these answers. Uh they are going to um help my audience get even more interested about AI and sort of the hardware and the infrastructure that goes behind all of the the cool little requests that we talk to to all of our AIs every day. So thanks for that and I we appreciate you coming on.
+
+Thank you so much. Pleasure.
