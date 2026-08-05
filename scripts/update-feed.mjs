@@ -18,6 +18,7 @@
  */
 
 import { readFileSync, writeFileSync, mkdirSync, existsSync, unlinkSync } from "node:fs";
+import { deflateRawSync } from "node:zlib";
 import { execFileSync } from "node:child_process";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
@@ -656,7 +657,7 @@ function newEpisodePageHtml(g) {
   </style>
 </head>
 <body><nav id="nav"><a href="/" class="nav-logo"><img src="/images/pbn-logo.png" alt="Pale Blue Nexus" /></a></nav>
-  <section class="hero"><div class="section-container"><div class="fade"><span class="section-eyebrow eyebrow">${esc(g.episode)}</span><img class="guest-photo photo" src="../../${esc(g.photo)}" alt="${esc(g.name)}" /><h1>${esc(g.name)}</h1><p style="font-size:1.1rem;color:var(--secondary);max-width:600px">${esc(episodeTitle)}</p><div class="episode-meta meta"><span>${esc(g.episode)}</span></div><a class="share-btn share" href="https://www.youtube.com/watch?v=${esc(g.youtubeId)}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></div></div></section>
+  <section class="hero"><div class="section-container"><div class="fade"><nav aria-label="Breadcrumb" class="ep-breadcrumb" style="margin-bottom:1.25rem;font-size:.8rem;letter-spacing:.05em"><a href="/guests/" style="color:#D4A84B;text-decoration:none">Guests</a><span style="color:rgba(166,210,230,.5);margin:0 .5rem">/</span><span style="color:#A6D2E6">${esc(g.name)}</span></nav><span class="section-eyebrow eyebrow">${esc(g.episode)}</span><img class="guest-photo photo" src="../../${esc(g.photo)}" alt="${esc(g.name)}" /><h1>${esc(g.name)}</h1><p style="font-size:1.1rem;color:var(--secondary);max-width:600px">${esc(episodeTitle)}</p><div class="episode-meta meta"><span>${esc(g.episode)}</span></div><a class="share-btn share" href="https://www.youtube.com/watch?v=${esc(g.youtubeId)}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></div></div></section>
   <section style="background:linear-gradient(180deg,rgba(10,14,28,1) 0%,var(--bg) 100%)"><div class="section-container"><span class="section-eyebrow eyebrow fade">About the Guest</span><h2 class="fade">${esc(g.name)}.</h2><p class="guest-bio bio fade">${esc(g.bio || "")}</p></div></section>
   <!-- AUTO-EP-KIT:start --><!-- AUTO-EP-KIT:end -->
   <section style="padding-top:0"><div class="section-container"><div class="embed fade"><iframe src="https://www.youtube.com/embed/${esc(g.youtubeId)}" title="${esc(episodeTitle)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div></div></section>
@@ -763,6 +764,22 @@ function transcriptPathForSlug(slug) {
   return filename ? join(ROOT, "transcripts", filename) : "";
 }
 
+function transcriptParagraphs(slug) {
+  const segments = parseTranscriptSegments(slug);
+  if (!segments.length) return [];
+  const text = segments.map((segment) => segment.text).join(" ").replace(/\s+/g, " ").trim();
+  if (!text) return [];
+  if (text.includes(">>")) {
+    return text.split(/\s*>>\s*/).map((paragraph) => paragraph.trim()).filter(Boolean);
+  }
+  return (text.match(/[^.!?]+[.!?]+|\S.+$/g) || [])
+    .reduce((paragraphs, sentence, index) => {
+      const group = Math.floor(index / 4);
+      paragraphs[group] = `${paragraphs[group] || ""}${paragraphs[group] ? " " : ""}${sentence.trim()}`;
+      return paragraphs;
+    }, []);
+}
+
 function parseTranscriptSegments(slug) {
   const path = transcriptPathForSlug(slug);
   if (!path || path.endsWith(".txt")) return [];
@@ -864,6 +881,130 @@ function readInsights(slug) {
   }
 }
 
+let crc32Table;
+
+function crc32(buf) {
+  if (!crc32Table) {
+    crc32Table = Array.from({ length: 256 }, (_, index) => {
+      let value = index;
+      for (let bit = 0; bit < 8; bit += 1) {
+        value = value & 1 ? 0xedb88320 ^ (value >>> 1) : value >>> 1;
+      }
+      return value >>> 0;
+    });
+  }
+  let checksum = 0xffffffff;
+  for (const byte of buf) checksum = crc32Table[(checksum ^ byte) & 0xff] ^ (checksum >>> 8);
+  return (checksum ^ 0xffffffff) >>> 0;
+}
+
+function zipSync(entries) {
+  const localParts = [];
+  const centralParts = [];
+  let offset = 0;
+  for (const entry of entries) {
+    const name = Buffer.from(entry.name);
+    const data = Buffer.isBuffer(entry.data) ? entry.data : Buffer.from(entry.data);
+    const compressed = deflateRawSync(data);
+    const header = Buffer.alloc(30 + name.length);
+    header.writeUInt32LE(0x04034b50, 0);
+    header.writeUInt16LE(20, 4);
+    header.writeUInt16LE(0, 6);
+    header.writeUInt16LE(8, 8);
+    header.writeUInt16LE(0, 10);
+    header.writeUInt16LE(0, 12);
+    header.writeUInt32LE(crc32(data), 14);
+    header.writeUInt32LE(compressed.length, 18);
+    header.writeUInt32LE(data.length, 22);
+    header.writeUInt16LE(name.length, 26);
+    header.writeUInt16LE(0, 28);
+    name.copy(header, 30);
+    localParts.push(header, compressed);
+
+    const central = Buffer.alloc(46 + name.length);
+    central.writeUInt32LE(0x02014b50, 0);
+    central.writeUInt16LE(20, 4);
+    central.writeUInt16LE(20, 6);
+    central.writeUInt16LE(0, 8);
+    central.writeUInt16LE(8, 10);
+    central.writeUInt16LE(0, 12);
+    central.writeUInt16LE(0, 14);
+    central.writeUInt32LE(crc32(data), 16);
+    central.writeUInt32LE(compressed.length, 20);
+    central.writeUInt32LE(data.length, 24);
+    central.writeUInt16LE(name.length, 28);
+    central.writeUInt16LE(0, 30);
+    central.writeUInt16LE(0, 32);
+    central.writeUInt16LE(0, 34);
+    central.writeUInt16LE(0, 36);
+    central.writeUInt32LE(0, 38);
+    central.writeUInt32LE(offset, 42);
+    name.copy(central, 46);
+    centralParts.push(central);
+    offset += header.length + compressed.length;
+  }
+  const centralDirectory = Buffer.concat(centralParts);
+  const end = Buffer.alloc(22);
+  end.writeUInt32LE(0x06054b50, 0);
+  end.writeUInt16LE(0, 4);
+  end.writeUInt16LE(0, 6);
+  end.writeUInt16LE(entries.length, 8);
+  end.writeUInt16LE(entries.length, 10);
+  end.writeUInt32LE(centralDirectory.length, 12);
+  end.writeUInt32LE(offset, 16);
+  end.writeUInt16LE(0, 20);
+  return Buffer.concat([...localParts, centralDirectory, end]);
+}
+
+function xmlEsc(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function buildDocx(title, paragraphs) {
+  const contentTypes = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>`;
+  const rels = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>`;
+  const titleParagraph = `<w:p><w:r><w:rPr><w:b/></w:rPr><w:t xml:space="preserve">${xmlEsc(title)}</w:t></w:r></w:p>`;
+  const body = paragraphs
+    .map((paragraph) => `<w:p><w:r><w:t xml:space="preserve">${xmlEsc(paragraph)}</w:t></w:r></w:p>`)
+    .join("");
+  const document = `<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>${titleParagraph}${body}<w:sectPr/></w:body></w:document>`;
+  return zipSync([
+    { name: "[Content_Types].xml", data: Buffer.from(contentTypes) },
+    { name: "_rels/.rels", data: Buffer.from(rels) },
+    { name: "word/document.xml", data: Buffer.from(document) },
+  ]);
+}
+
+function writeTranscriptDerivatives(slug, title) {
+  const txtPath = join(ROOT, "transcripts", `${slug}.txt`);
+  const docxPath = join(ROOT, "transcripts", `${slug}.docx`);
+  if (existsSync(txtPath) && existsSync(docxPath)) return false;
+  const paragraphs = transcriptParagraphs(slug);
+  if (!paragraphs.length) return false;
+  mkdirSync(join(ROOT, "transcripts"), { recursive: true });
+  if (!existsSync(txtPath)) writeFileSync(txtPath, `${title}\n\n${paragraphs.join("\n\n")}\n`);
+  if (!existsSync(docxPath)) writeFileSync(docxPath, buildDocx(title, paragraphs));
+  return true;
+}
+
+function transcriptFormatsForSlug(slug) {
+  const formats = [];
+  const filename = transcriptFileForSlug(slug);
+  if (/\.(?:srt|vtt)$/i.test(filename)) {
+    formats.push({ label: "SRT", href: `../../transcripts/${filename}` });
+  }
+  if (existsSync(join(ROOT, "transcripts", `${slug}.txt`))) {
+    formats.push({ label: "TXT", href: `../../transcripts/${slug}.txt` });
+  }
+  if (existsSync(join(ROOT, "transcripts", `${slug}.docx`))) {
+    formats.push({ label: "Word", href: `../../transcripts/${slug}.docx` });
+  }
+  return formats;
+}
+
 function msToSrtTime(ms) {
   const totalMilliseconds = Math.max(0, Number(ms) || 0);
   const milliseconds = totalMilliseconds % 1000;
@@ -919,7 +1060,7 @@ function episodeKitHtml(g, { item, reach = {}, clips = [], insights = [] } = {})
   const total = (reach.views || 0) + (reach.listens || 0);
   const combinedStat = total > 0 ? `${fmtViews(total)} ${reach.listens > 0 ? "views & listens" : "views"}` : "";
   const episodeUrl = `https://www.youtube.com/watch?v=${esc(g.youtubeId)}`;
-  const transcriptHref = transcriptHrefForSlug(g.episodeSlug);
+  const transcriptFormats = transcriptFormatsForSlug(g.episodeSlug);
   const guestLinks = [];
   if (g.website) {
     try {
@@ -952,6 +1093,9 @@ ${insights.map((moment) => `          <a href="${esc(`https://www.youtube.com/wa
         </div>
       </div>`
     : "";
+  const transcriptBlock = transcriptFormats.length
+    ? `<div class="ep-kit-transcripts fade-up"><span class="ep-kit-tx-label">Download transcript</span>${transcriptFormats.map((format) => `<a href="${esc(format.href)}" download class="share-btn share">${esc(format.label)}</a>`).join("")}</div>`
+    : "";
   const clipBlocks = clips.length
     ? `<div class="ep-kit-clips">
         <h2 class="ep-kit-heading">Clips</h2>
@@ -970,7 +1114,7 @@ ${clips.map((clip) => {
     : "";
   return `
   <style>
-    .ep-kit{padding:0 0 2rem}.ep-kit-shell{background:linear-gradient(180deg,rgba(10,14,28,1) 0%,#04060e 100%);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)}.ep-kit-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}.ep-kit-stat{color:#A6D2E6;font-size:1rem}.ep-kit-links,.ep-kit-guest-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}.ep-kit-guest-links--top{margin-top:0;margin-bottom:1.5rem;align-items:center}.ep-kit-links-label{flex-basis:100%;color:#A6D2E6;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.1rem}.ep-kit-guest-link{border-color:rgba(212,168,75,.55)}.ep-kit-moments{margin-top:2rem}.ep-kit-moment-list{display:flex;flex-direction:column;gap:.5rem;margin-top:1rem}.ep-kit-moment{display:flex;gap:.9rem;align-items:baseline;color:inherit;text-decoration:none;padding:.7rem .9rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;transition:border-color .3s,transform .3s}.ep-kit-moment:hover{border-color:rgba(212,168,75,.5);transform:translateX(3px)}.ep-kit-ts{color:#D4A84B;font-variant-numeric:tabular-nums;font-size:.85rem;white-space:nowrap;min-width:3.2rem}.ep-kit-moment-text{display:flex;flex-direction:column;gap:.2rem}.ep-kit-moment-title{color:#fff;font-size:.9rem;font-weight:500}.ep-kit-moment-insight{color:rgba(166,210,230,0.75);font-size:.8rem;line-height:1.4}.ep-kit-heading{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;line-height:1.15;margin-bottom:1rem}.ep-kit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,190px));justify-content:center;gap:1rem;margin-top:1rem}.ep-kit-card{display:block;color:inherit;text-decoration:none;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;transition:transform .3s,border-color .3s}.ep-kit-card:hover{transform:translateY(-3px);border-color:rgba(212,168,75,.5)}.ep-kit-thumb{aspect-ratio:3/4;position:relative;background:#0a0f1e}.ep-kit-thumb img{width:100%;height:100%;object-fit:cover;object-position:center top}.ep-kit-badge{position:absolute;left:.65rem;bottom:.65rem;background:rgba(4,6,14,.85);color:#7EB8DA;padding:.2rem .45rem;border-radius:999px;font-size:.65rem}.ep-kit-body{padding:.9rem}.ep-kit-clip-title{font-size:.82rem;line-height:1.4;color:#fff}.ep-kit-clip-meta{font-size:.75rem;color:rgba(166,210,230,0.6);margin-top:.35rem}
+    .ep-kit{padding:0 0 2rem}.ep-kit-shell{background:linear-gradient(180deg,rgba(10,14,28,1) 0%,#04060e 100%);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)}.ep-kit-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}.ep-kit-stat{color:#A6D2E6;font-size:1rem}.ep-kit-links,.ep-kit-guest-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}.ep-kit-transcripts{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1rem}.ep-kit-tx-label{color:#A6D2E6;font-size:.8rem;letter-spacing:.02em}.ep-kit-guest-links--top{margin-top:0;margin-bottom:1.5rem;align-items:center}.ep-kit-links-label{flex-basis:100%;color:#A6D2E6;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.1rem}.ep-kit-guest-link{border-color:rgba(212,168,75,.55)}.ep-kit-moments{margin-top:2rem}.ep-kit-moment-list{display:flex;flex-direction:column;gap:.5rem;margin-top:1rem}.ep-kit-moment{display:flex;gap:.9rem;align-items:baseline;color:inherit;text-decoration:none;padding:.7rem .9rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;transition:border-color .3s,transform .3s}.ep-kit-moment:hover{border-color:rgba(212,168,75,.5);transform:translateX(3px)}.ep-kit-ts{color:#D4A84B;font-variant-numeric:tabular-nums;font-size:.85rem;white-space:nowrap;min-width:3.2rem}.ep-kit-moment-text{display:flex;flex-direction:column;gap:.2rem}.ep-kit-moment-title{color:#fff;font-size:.9rem;font-weight:500}.ep-kit-moment-insight{color:rgba(166,210,230,0.75);font-size:.8rem;line-height:1.4}.ep-kit-heading{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;line-height:1.15;margin-bottom:1rem}.ep-kit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,190px));justify-content:center;gap:1rem;margin-top:1rem}.ep-kit-card{display:block;color:inherit;text-decoration:none;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;transition:transform .3s,border-color .3s}.ep-kit-card:hover{transform:translateY(-3px);border-color:rgba(212,168,75,.5)}.ep-kit-thumb{aspect-ratio:3/4;position:relative;background:#0a0f1e}.ep-kit-thumb img{width:100%;height:100%;object-fit:cover;object-position:center top}.ep-kit-badge{position:absolute;left:.65rem;bottom:.65rem;background:rgba(4,6,14,.85);color:#7EB8DA;padding:.2rem .45rem;border-radius:999px;font-size:.65rem}.ep-kit-body{padding:.9rem}.ep-kit-clip-title{font-size:.82rem;line-height:1.4;color:#fff}.ep-kit-clip-meta{font-size:.75rem;color:rgba(166,210,230,0.6);margin-top:.35rem}
   </style>
   <section class="ep-kit ep-kit-shell">
     <div class="section-container">
@@ -978,8 +1122,7 @@ ${guestLinksBlock ? `      ${guestLinksBlock}\n` : ""}${combinedStat ? `      <p
         <a href="${episodeUrl}" target="_blank" rel="noopener noreferrer" class="share-btn share">Watch on YouTube</a>
         <a href="${SHOW_LINKS.apple}" target="_blank" rel="noopener noreferrer" class="share-btn share">Listen on Apple Podcasts</a>
         <a href="${SHOW_LINKS.spotify}" target="_blank" rel="noopener noreferrer" class="share-btn share">Listen on Spotify</a>
-${transcriptHref ? `        <a href="${esc(transcriptHref)}" download class="share-btn share">Download Transcript</a>` : ""}
-      </div>${momentsBlock ? `\n      ${momentsBlock}` : ""}${clipBlocks ? `\n      ${clipBlocks}` : ""}
+      </div>${transcriptBlock ? `\n      ${transcriptBlock}` : ""}${momentsBlock ? `\n      ${momentsBlock}` : ""}${clipBlocks ? `\n      ${clipBlocks}` : ""}
     </div>
   </section>`;
 }
@@ -1192,6 +1335,38 @@ ${ordered.map((g) => guestCardHtml(g, byGuest[g.slug], guestReach[g.slug], { isL
     </div>
   </section>
 `;
+}
+
+function guestsDirectoryData(guests, guestReach) {
+  const renderable = guests.filter(isPublicGuest);
+  const ordered = [
+    ...renderable.filter((guest) => guest.status === "published").sort((a, b) => episodeNumber(a) - episodeNumber(b)),
+    ...renderable.filter((guest) => guest.status !== "published"),
+  ];
+  const data = ordered.map((guest) => {
+    let company = "";
+    try {
+      if (guest.website) company = new URL(guest.website).hostname.replace(/^www\./, "");
+    } catch {}
+    const nameParts = String(guest.name || "").trim().split(/\s+/).filter(Boolean);
+    const reach = guestReach[guest.slug] || {};
+    const total = (reach.views || 0) + (reach.listens || 0);
+    return {
+      name: guest.name,
+      first: nameParts[0] || "",
+      last: nameParts.length > 1 ? nameParts[nameParts.length - 1] : "",
+      role: guest.role || "",
+      company,
+      photo: `/${guest.photo}`,
+      href: guest.episodeSlug
+        ? `/episodes/${guest.episodeSlug}/`
+        : (guest.website || guest.linkedin || "#"),
+      episode: guest.episode || "",
+      stat: total > 0 ? `${fmtViews(total)}${reach.listens > 0 ? " views & listens" : " views"}` : "",
+      quote: guest.quote || "",
+    };
+  });
+  return JSON.stringify(data).replace(/</g, "\\u003c");
 }
 
 /* --------------------------------------------------- per-guest promo pages */
@@ -1656,6 +1831,16 @@ async function main() {
   writeFileSync(join(ROOT, "index.html"), html);
   log("updated index.html sections");
 
+  const guestsPath = join(ROOT, "guests/index.html");
+  let guestsHtml = readFileSync(guestsPath, "utf8");
+  guestsHtml = injectBetween(
+    guestsHtml,
+    "AUTO-GUESTS-DATA",
+    `<script id="pbn-guests" type="application/json">${guestsDirectoryData(guests, guestReach)}</script>`,
+  );
+  writeFileSync(guestsPath, guestsHtml);
+  log("updated guests/index.html data");
+
   const bookPath = join(ROOT, "book/index.html");
   let bookHtml = readFileSync(bookPath, "utf8");
   bookHtml = injectBetween(bookHtml, "AUTO-BOOK-TOP", bookTopHtml(items));
@@ -1733,6 +1918,23 @@ async function main() {
   } else {
     log("skipping insights: ANTHROPIC_API_KEY is not set");
   }
+  const derivativeSlugs = [];
+  for (const g of episodeGuests) {
+    try {
+      const item = items.find((i) => i.id === g.youtubeId) || byGuest[g.slug];
+      const title = [g.name, item?.title].filter(Boolean).join(" — ");
+      if (writeTranscriptDerivatives(g.episodeSlug, title)) {
+        derivativeSlugs.push(g.episodeSlug);
+      }
+    } catch (error) {
+      log(`transcript derivative generation failed for ${g.slug}: ${error.message}`);
+    }
+  }
+  log(
+    derivativeSlugs.length
+      ? `generated transcript formats: ${derivativeSlugs.join(", ")}`
+      : "no new transcript formats generated",
+  );
   for (const g of episodeGuests) {
     const episodeItem = items.find((i) => i.id === g.youtubeId) || byGuest[g.slug];
     const clips = items

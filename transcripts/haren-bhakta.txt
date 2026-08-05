@@ -1,0 +1,115 @@
+Haren Bhakta, CFA — Why the S&P Buys More of a Company After Its Founder Dies
+
+[music]
+
+Uh, welcome Haren back to um from Inside Ownership Index on the podcast today. I'm actually quite excited about this. Uh, it's a financial product. But what is the thesis behind it, Haren? And please give a introduction to yourself.
+
+Yeah, I'm I'm Haren, the CEO and founder of Inside Ownership Index. You know, we launched an ETF. The ETF is essentially buying companies where leadership have alignment with shareholders and they have that alignment because they're significant owners of the business itself. And basically, we created an index based on the ownership of insiders. And tracking the performance of those shares.
+
+Amazing. And what made you want to create this? And I believe there is some research behind this as well, right?
+
+Yeah, I put out a lot of research on this. And now, I wanted to create this um because I thought of the idea while sitting in the Berkshire annual meeting, which Warren Buffett has been doing every year in Omaha. And I've became a big fan boy of of Warren and Charlie. And I've attended every meeting since 2017. And I put a lot of my own money and my clients' money in Berkshire Hathaway. And in 2024, where I thought of the idea while sitting at the meeting, I was sitting there kind of afraid because that was the first meeting Charlie Munger wasn't there. He had passed away. And I was afraid, you know, what am I going to do with my shares when Warren Buffett passes away? I don't believe in the company in the same way without him. I bought the company because or about shares in the company because of that trust in him. So, while I'm sitting there in the back of my mind with this fear of what am I going to do, at some point it clicked in me that the S&P 500 will buy more Berkshire when Warren Buffett dies. And I just thought, wait, why would anyone want Berkshire Hathaway or who would want more of it after Warren Buffett? We should want more while he's alive. Same goes with Tesla. Who would want more Tesla without Elon Musk? Who you know, we should want more Tesla while he's there. I don't think anyone would want Tesla without Elon Musk. And then you have Meta. Who would want Meta without Mark Zuckerberg, right? So, this process the S&P does is called free float adjusting. They exclude the shares held by controlling shareholders and when they retire, sell, die, those shares become what's called free floating and then they expand the calculation for uh their ownership. Basically, after they they sell or die or or retire. And this is the opposite direction of what anyone would want. We want more of these companies while they're there and less so when they're gone. And uh so, I came home from Omaha and looked into this, you know, what if we weighted the portfolio according to their ownership? Would we have outperformed? And I could not find the inside ownership data anywhere. I went to all the data providers. I went to Capital IQ, Bloomberg, FactSet, everyone. Nobody had it. Now, the data's there in the proxy filings. So, I had to manually go through 20 years of all 500 constituents of the S&P to get this data. It was about 20,000 different proxy filings manually and aggregated this data. The data's there, just no one had aggregated it. So, I'm currently the only one with this inside ownership data going back back that far.
+
+Interesting.
+
+Yeah.
+
+Yeah, and and how so so the idea obviously is to have something that's sustainable and performs, right? And and gives you a yield.
+
+That's right. Now, index funds, academia got it uh half correct. They they said, "Well, we should just be buying low-cost index funds." And they index to the corporation. Now, I figured out something a little bit more unique that's actually better. We should be indexing to the leaders of the organization rather than the corporations themselves. Corporations, all they are is a group of people, right? We can't we can't just um interchangeably change people out of an organization and call that organization the same. So, that that that's actually a thought experiment I ask people is imagine a very successful company run by very successful leaders. Now, overnight, let's change that that organization. Let's Let's change the leaders to new leaders, all new leaders. Let's keep the logo the same, the the building the same, but let's change out all the leaders of the organization. Would you call that the same company? You know, and most people would say no, right?
+
+Now, how does it work when somebody leaves the company and they sell their shares? Does Does Do you have to go and recalculate and reaggregate all that data?
+
+Right. So, we don't have to go back in the previous quarters, but every quarter we're we're rebalancing. So, we go through the proxy filings if there are any for each company um for all 500 companies that rebalance the portfolio based on current reported ownership.
+
+Interesting.
+
+Yeah. And most of the time like large positions can leave the portfolio. Um most of the time that happens because of uh death or retirement. Most of these um CEOs and and chairman of the boards type roles where they have all the ownership they usually don't sell their entire stake or sell large parts of it. What they do is retire or die and then they are no longer insiders that no longer overseeing the culture of the company and then we rotate out of those companies through through the rebalance.
+
+So, you've gone live on the New York Stock Exchange now.
+
+That's right. The ETF is now live. The ticker symbol is OWN.
+
+That's amazing. How did you get that?
+
+Yeah, I was shocked that it wasn't available. I'm I'm I'm really happy. We were looking around uh for ticker symbols and OWN just made perfect sense and we were shocked that it was available and and very happy about that. I think it it adds to our brand.
+
+Very cool. And so, I also saw some news with Corgi. What What What was that?
+
+So, Corgi we partnered with Corgi to launch this ETF. Now, Corgi is an AI financial company. They are really disrupting the entire space for financial services. Now, their primary business is insurance. Now, all insurance is is a long document, right? It's a 100-page piece of paper with um natural language on it. Now, the technology exists to write these documents and to read them. Now, which didn't exist before. Now, insurance has largely been done by humans. Even the calculation of premiums, to this day, most insurance companies are using an actuary that uses a pen and paper, not even not even software. Now, now the technology with AI exists to read these documents and and uh rewrite them when necessary. So, they bought an insurance company and are replacing all the humans involved with AI agents.
+
+Mhm.
+
+That communicate with each other, and they're able to offer insurance to the end um insured much cheaper than any other company because they're leveraging AI more aggressively than any any other company is, right? Most companies get ingrained in a way of doing business, and they're not able to adapt. And that's why new businesses always come and overtake overtake the incumbents, right? I mean, if we just look at the S&P 500, look at the largest companies in the world. They're most They all come from the US, for one, but they were all founded in our lifetime or near it. So, you know, all the the competitive advantages some legacy companies have, but it's always new companies that come up and dominate. Now, we're going to have three IPOs that are going to um be completely new companies as well. As SpaceX which was founded um you know, after the year 2000 and Anthropic and Open AI all all pretty much new companies. So, you know, this is how the world has always been where it's new companies that come out and overtake the old and is is done by owners.
+
+So, yeah, you don't hear much more about IBM and and and players like that anymore, right? Like so
+
+Right. Actually have a great example with IBM IBM. Now, I asked people to you know, what is the most dominant company to ever exist? And to me that answer's IBM. IBM And when I say dominant, I I I mean by relative size. So, IBM in the year 1984 was more than two times large almost two and a half times larger than the next largest company in the entire world. So, this would be like Nvidia today being $12 trillion. It was dominant and no one could compete. Now, a lot of people don't know the history of management at IBM, but Thomas Watson Sr. was the founder of IBM 1911. Long time ago, but it was actually his son, Thomas Watson Jr., that took IBM public. And the service CEO in the '70s. Now 1984 he was on the board. So, the ownership was there overseeing the company. 1984 peak IBM. He retires in 1984 and by 1992, just eight years later, IBM is not even in the top 10. Today, IBM is not even in the top 25. This is what happens when those responsible for the success of an organization leave.
+
+So, this kind of proves your thesis, really.
+
+Exactly. Exactly. So, um monopolies get built by owners, and they slowly erode once they're gone.
+
+Interesting. So, what kind of companies make your list, Taren? Um tell me about some of them, and what numbers are we talking about here?
+
+Yes, so we're the essentially the S&P 500 with the skin in the game factor. So, we re-weight the S&P 500 based on ownership by the leaders. So, the companies in the index are exactly the same, but we take the top 100 from the S&P 500. So, it is going to be the same constituents as the S&P, but re-weighted. Now, we're going to have more concentration. Now, indexing, what it does is it gives you exposure to the largest companies, and it doesn't sell. So, this is why that the index funds do so well is because they don't sell the the winners, and they let them run. Now, the winners are actually more individuals in the companies themselves. If you look at the average company, and look at the extreme winners, like Nvidia Apple uh Google, Amazon, Tesla, right? There's there's a big difference between average and great, but now look at the average leader, and compare them to the greatest leaders. That difference is much larger. The power law is significant. So, when we index to the leaders, we get more exposure to the the extreme right tail of the distribution. We get much higher uh returns by indexing to the leaders.
+
+So so interesting. So this is this is a lot this isn't a here's a full global list of companies and find the ones that have the most uh public ownership or or ownership. It it's it's like let's take the subset of the S&P and then within that let's re-weight on the S&P and rank them there and I guess the idea is to beat the S&P?
+
+Yes, that's the idea. Over time. Now, this is a long-term finding. Now, it doesn't outperform the S&P every year. It doesn't perform it outperform every month but what we see is that over long periods of time these extreme winners come out of owner-led companies. And um I did a study recently where I looked at uh a term called 100 bagger. 100 bagger means that a stock went up 100 times your initial investment. So you would invest $10,000, it becomes over a million. Now this I found between the year 2000 to to 2025, I found 21 of them. And I looked at all 21 of them what they look like before they went on that 100 bagger journey. And all but two. So 19 of the 21 had one thing in common. They all had ownership above 5%.
+
+Uh-huh.
+
+By the insiders. So insiders own significant stakes in the companies that had those huge outlier returns. Now, they were not all founder-led. They were not um it was not even necessarily by the CEO. And it they weren't necessarily new companies either. Some like Tractor Supply, they were very old companies not run by founders, but there was significant ownership by the leaders. Berkshire Hathaway, for example, it's not a hundred bagger over the last 20 years, but it is like a you know, more than 10,000 bagger over the last 55 years. Um that Warren Buffett is not the founder of Berkshire. He he took control in 1965. So, it doesn't have to be a founder. Howard Schultz is not the founder of Starbucks. He He bought Starbucks when it had 11 stores. So, what we're looking for is owners, owner-operators. And you know, the main reason why ownership matters is the culture of the company remains intact. They can think long-term. If [snorts] there's no ownership, they're almost forced to think quarterly and long-term value creation is done in thinking in decades, not in quarterly thinking. In fact, very often these CEOs that are creating enormous value make the company look less desirable in the near term. For example, Jeff Bezos at Amazon didn't show profit for a long time at Amazon. But he didn't care. He knew he was investing in something that's going to create enormous value. And um by doing that, you actually give value to your customers first. So, an extreme customer-centric company where you distribute a lot of your profits back to your customers. A lot of people don't talk about this, but that's what Amazon did, and that's what Costco did as well, where you're constantly figuring out ways to give profits back to your customers in the form of lower prices or or better services. So, uh companies with no ownership, they're judged quarterly and they think quarterly, so they don't do these steps to that make the company look worse, but but long-term better.
+
+I don't know if you know off the top of your head, but um I just saw uh some price increases from Microsoft and Apple on their hardware because of memory prices. I wonder what their inside ownership percentages are like.
+
+That's a great example, so those two will For one, Apple is the one example that has continued to do well despite a large part of the ownership leaving. Now, Steve Jobs passed away, um but I'll note that Tim Cook and another guy named Art Levinson, the chairman of the board of Apple, they own significant parts of Apple, so they're long-time employees who have developed ownership. So, Apple is in and has been in the inside ownership index. So, but despite Steve Jobs, they've been able to maintain their competitive advantage, but I'll note one thing that they have not invested in the future. They've only leveraged the iPhone. They They're not investing in AI, and they're not participating in any kind of uh future investment. They're not preparing for disruption, essentially. They're They're going to be outside the system once the disruptions happen in the cell phone space. Perfect example I have of that is like AT&T. Now, AT&T had a government-regulated monopoly in the '70s. It was the largest company in the world. And when you have monopolies that are built around government regulation, um innovation comes from outside the system. So, the cell phone was invented outside of AT&T and the telephone system. So, when a disruption takes place with Apple in the cell phone space, I don't know when, but there will be a disruption at some point. Now, it's probably going to come from outside of Apple. They won't replace the iPhone.
+
+Yeah.
+
+Um somebody else will.
+
+Now, how does how does the I'm just going back to something that you said previously just because it's it's it's stirring a a question that I have, but like how does getting outsize returns from 100 baggers how does the Inside Ownership Index leverage that? Like, how does it Yeah.
+
+Well, for one, now these outsize returns have come from owner-operated companies, right?
+
+Right.
+
+So, for example, the largest company in the world now is Nvidia, an owner-operated company. Right? Um if we look back at 2018 and we try to predict which company is going to overtake Microsoft and Apple, now, you know, it would have been hard to guess, but I could have told you with almost a surety that it was going to come from an owner-operated company.
+
+Okay.
+
+So, so the index overweights essentially companies run by owners because we're tracking ownership.
+
+Within the S&P?
+
+Within the S&P. So, the largest companies in the world will always eventually be owner-operated. So, now, whoever replaces Nvidia someday, most likely, I'm very confident that's going to come from an owner-operated company.
+
+Okay. So, obviously you're you're hanging your hat here on the human angle, which I totally get. Um it's alignment of incentives. Humans are incredibly uh ingenious people. Um, now what happens on the outs downside? Like we are human and we can make mistakes. Uh, is there a downside risk for it being
+
+That's a great question. Now, I did a study also. Now, I looked at S&P 500 over the last 5 years and I looked to see who were the biggest value destroyers. So, it's funny how the the the largest outliers came from high ownership companies and the study I did with the the largest value destroyers, the top five all come from companies with very little inside ownership. So, the number one value destroyer was PayPal. PayPal was founded by Elon Musk, but he's no longer part of the company, so um PayPal Comcast Disney even Nike was one of the biggest value destroyers in the S&P. You know, Phil Knight, the founder of Nike, is no longer part of the company. So, again, this is what happens when those responsible for the success of an organization leave, the companies typically go through a decay and slowly erode. It's not It's not overnight, but you know, Nike stock I think is down 4 years in a row, three to four years in a row. It's down 70% and it's down 70% in in the largest bull market in history. So, we have a company a world-class brand like Nike should not be down in a 5-year bull market or 6-year bull market in in what we've experienced since COVID. I I this is the largest run in history, and yet Nike, a world-class brand, is down 70%.
+
+Wow.
+
+So, the best analogy I have is what I call a hired CEO. I like to compare them to a zoo lion. A zoo lion gets fed every day whether it's successfully hunts or not. In the same way, a hired CEO gets their base salary, quarterly bonus, and very often a golden parachute. So, I like to compare a hired, I'm sorry, a owner-operator CEO a wild lion. Now, they're trained to survive. They're already proven they can survive in the world, right? They created the very success of their organization, and um if they make mistakes, they don't eat. They feel the pain, and that's what you want in a CEO. You want them to feel the pain of mistakes. And when you have a hired CEO, they get ingrained in into a way of thinking, and they don't feel the pain until it's too late. You know, one example I have is uh Blockbuster. So, Blockbuster had a zoo lion as a CEO, and they saw, you know, these late fees in DVD rentals, and they thought, well, you know, we don't want to get rid of these late fees cuz we make so much money from it. So, they suppress innovation. They suppress what the customers desire. And when you have owners who are more like artisans, owners are like artisans. They care deeply about the customer, and they're figuring out ways to give value to them, and not just profits. And that's what creates long-term value is obsessing over the customer.
+
+And I I would assume like even when times are good, like the zoo CEO would kind of rest on his laurels where maybe they like the the the wild CEO would just kind of like double down or take more risk during the good times type of thing, right?
+
+Exactly. Someone had brought up to me recently that the Kodak, for example, they invented the digital camera. Believe it or not, but they suppressed it because the zoo lion was making too much money from film. So, they suppressed that innovation that they actually developed. So, they could have been the leader in in um, you know, the digital camera space.
+
+Yeah.
+
+And, you know, they essentially went bankrupt because of short-term thinking.
+
+And routine thinking, I guess, too. Like uh
+
+Exactly. Um, another example I have, I think um, Mark Anderson was talking about how for 100 years, the rocket would launch stuff into space. And when it came back, it just dropped in the ocean and it was never reused. Elon Musk's Elon Musk said, "Well, what if we just land these rockets on their butt and reuse them?" So, then he collapsed the entire cost structure of launching rockets by reusing the the rocket. So, they brought down the cost by um, I believe 90% by a a magnitude of 10. So, what they've been able to do is create a monopoly around rockets. Now, you have these hired CEOs in the rocket industry who have thought completely within the box. Then someone like Elon Musk comes out, you know, and thinks completely outside of the box and drives value for the end customers, essentially.
+
+I have to say, Aaron, um I am going to look up this index and probably put some money into it because I really like the thesis.
+
+That's awesome. Yeah, so the ticker symbol is OWN, the website is insideownership.com.
+
+Well, we will leave on that and I will, you know, encourage my audience to kind of like understand the concepts behind this. It It's It's one of the most, I think, basic type of understanding. This is alignment of incentives. It's kind of like what the the crypto industry was based on and and and this kind of just takes it to another level. Uh and I love the thought behind it and the research. Thank you so much for coming on.
+
+Thank you for having me on.
