@@ -1,0 +1,3607 @@
+1
+00:00:03,274 --> 00:00:05,294
+[music]
+
+2
+00:00:11,790 --> 00:00:13,810
+[music]
+
+3
+00:00:15,120 --> 00:00:21,600
+Well, uh, Vadim, thanks for joining me
+
+4
+00:00:18,480 --> 00:00:24,560
+today. Uh, you are the founder and CEO
+
+5
+00:00:21,600 --> 00:00:26,640
+of a company that's been around since,
+
+6
+00:00:24,560 --> 00:00:30,320
+uh 2008
+
+7
+00:00:26,640 --> 00:00:32,399
+um, around there. Defco. Uh, tell us
+
+8
+00:00:30,320 --> 00:00:34,239
+about Defco. And, uh, I'm actually
+
+9
+00:00:32,399 --> 00:00:36,480
+excited to have you on because you're, I
+
+10
+00:00:34,239 --> 00:00:38,800
+guess I would say like a very
+
+11
+00:00:36,480 --> 00:00:41,120
+experienced engineer, software engineer,
+
+12
+00:00:38,800 --> 00:00:42,399
+and um [snorts]
+
+13
+00:00:41,120 --> 00:00:44,079
+um, looking forward to this
+
+14
+00:00:42,399 --> 00:00:45,840
+conversation.
+
+15
+00:00:44,079 --> 00:00:47,520
+>> Yeah, I mean, thanks for inviting. Yeah,
+
+16
+00:00:45,840 --> 00:00:51,280
+I know a few things about computers.
+
+17
+00:00:47,520 --> 00:00:54,879
+Maybe that's can't confirm it. But um my
+
+18
+00:00:51,280 --> 00:00:56,640
+company is uh uh diff we developing uh
+
+19
+00:00:54,879 --> 00:00:59,039
+different software for different uh
+
+20
+00:00:56,640 --> 00:01:01,359
+gross stage startups and enterprises and
+
+21
+00:00:59,039 --> 00:01:03,280
+yeah we started 18 years ago. So in some
+
+22
+00:01:01,359 --> 00:01:07,680
+countries we can all start drinking
+
+23
+00:01:03,280 --> 00:01:10,159
+finally. uh but it been a journey uh and
+
+24
+00:01:07,680 --> 00:01:12,720
+right now our main focus in gent
+
+25
+00:01:10,159 --> 00:01:14,560
+development and building uh custom
+
+26
+00:01:12,720 --> 00:01:16,479
+systems with enhanced development
+
+27
+00:01:14,560 --> 00:01:19,119
+techniques and as well as uh building
+
+28
+00:01:16,479 --> 00:01:21,680
+agents for many enterprises that we work
+
+29
+00:01:19,119 --> 00:01:23,759
+with. So basically replenishing human
+
+30
+00:01:21,680 --> 00:01:26,880
+workflows uh and automating human
+
+31
+00:01:23,759 --> 00:01:28,479
+workflows with actually agents that
+
+32
+00:01:26,880 --> 00:01:31,200
+works.
+
+33
+00:01:28,479 --> 00:01:32,880
+Yeah. And you know, in our pre-all, I
+
+34
+00:01:31,200 --> 00:01:35,439
+talked to you quite a bit and and it
+
+35
+00:01:32,880 --> 00:01:39,840
+just seemed like you were good engineers
+
+36
+00:01:35,439 --> 00:01:42,079
+before and now with AI tools, it just
+
+37
+00:01:39,840 --> 00:01:44,560
+seems like, you know, everybody uses
+
+38
+00:01:42,079 --> 00:01:47,439
+that term 10x engineer or 100x engineer,
+
+39
+00:01:44,560 --> 00:01:49,759
+but I think in your case, in my opinion,
+
+40
+00:01:47,439 --> 00:01:52,880
+it actually applies seeing some of the
+
+41
+00:01:49,759 --> 00:01:56,320
+output that you guys have uh have done.
+
+42
+00:01:52,880 --> 00:01:59,119
+What do you think about that?
+
+43
+00:01:56,320 --> 00:02:02,799
+I think realistically when we talk about
+
+44
+00:01:59,119 --> 00:02:06,079
+10x engineer 100x or like again you hear
+
+45
+00:02:02,799 --> 00:02:10,239
+all over the the numbers realistically
+
+46
+00:02:06,079 --> 00:02:12,640
+this is the question of um basically
+
+47
+00:02:10,239 --> 00:02:14,560
+what type of project you have and what
+
+48
+00:02:12,640 --> 00:02:17,599
+kind of and how you actually measuring
+
+49
+00:02:14,560 --> 00:02:20,720
+this because first of all this is
+
+50
+00:02:17,599 --> 00:02:22,800
+unrealistic metric the same as like you
+
+51
+00:02:20,720 --> 00:02:24,800
+remember the on the old days was like oh
+
+52
+00:02:22,800 --> 00:02:26,319
+this engineer delivered so many
+
+53
+00:02:24,800 --> 00:02:26,800
+thousands lines of code.
+
+54
+00:02:26,319 --> 00:02:28,879
+>> Yeah.
+
+55
+00:02:26,800 --> 00:02:29,680
+>> And does it mean that this engineer is
+
+56
+00:02:28,879 --> 00:02:31,520
+good
+
+57
+00:02:29,680 --> 00:02:34,959
+>> and like how we can actually measure
+
+58
+00:02:31,520 --> 00:02:37,200
+that we 10 times faster?
+
+59
+00:02:34,959 --> 00:02:41,200
+>> It is an actually interesting type of
+
+60
+00:02:37,200 --> 00:02:44,000
+illusion because in fact uh
+
+61
+00:02:41,200 --> 00:02:45,120
+>> in many cases humans do not touch the
+
+62
+00:02:44,000 --> 00:02:48,560
+tickets
+
+63
+00:02:45,120 --> 00:02:50,879
+>> or like not touching the codes etc. So
+
+64
+00:02:48,560 --> 00:02:51,840
+why and how we can actually measure
+
+65
+00:02:50,879 --> 00:02:54,959
+this? Mhm.
+
+66
+00:02:51,840 --> 00:02:58,160
+>> So it is an output per number of ticket.
+
+67
+00:02:54,959 --> 00:03:00,640
+But this is also questionable. Can we
+
+68
+00:02:58,160 --> 00:03:04,319
+measure this by speed of development of
+
+69
+00:03:00,640 --> 00:03:07,120
+the project? Can yes but in reality
+
+70
+00:03:04,319 --> 00:03:10,080
+architectural things in a project and
+
+71
+00:03:07,120 --> 00:03:13,519
+product type of decisions is actually
+
+72
+00:03:10,080 --> 00:03:16,159
+most uh limiting factor in many cases.
+
+73
+00:03:13,519 --> 00:03:18,800
+So again, um I think when we're talking
+
+74
+00:03:16,159 --> 00:03:24,080
+about those numbers, it's really great
+
+75
+00:03:18,800 --> 00:03:27,440
+tagline for Techrunch article. Um but
+
+76
+00:03:24,080 --> 00:03:30,080
+to actual folks on a field, it is more
+
+77
+00:03:27,440 --> 00:03:32,239
+like a bluff and you like, yeah, great.
+
+78
+00:03:30,080 --> 00:03:33,360
+Um we have the number, but what does
+
+79
+00:03:32,239 --> 00:03:35,440
+actually mean?
+
+80
+00:03:33,360 --> 00:03:38,319
+>> Well, what about let's let's go to
+
+81
+00:03:35,440 --> 00:03:40,239
+something really pragmatic like costs
+
+82
+00:03:38,319 --> 00:03:44,720
+for the same project. Would you say the
+
+83
+00:03:40,239 --> 00:03:46,080
+cost is is less or more or the same with
+
+84
+00:03:44,720 --> 00:03:48,720
+AI tools?
+
+85
+00:03:46,080 --> 00:03:50,560
+>> I think realistically we cut down the
+
+86
+00:03:48,720 --> 00:03:53,200
+cost
+
+87
+00:03:50,560 --> 00:03:53,760
+uh for our clients by at least 4x.
+
+88
+00:03:53,200 --> 00:03:55,680
+>> Wow.
+
+89
+00:03:53,760 --> 00:03:58,400
+>> In most cases
+
+90
+00:03:55,680 --> 00:03:59,920
+>> I would say in most cases it's
+
+91
+00:03:58,400 --> 00:04:02,720
+>> still discussion.
+
+92
+00:03:59,920 --> 00:04:04,799
+>> Um it's also really important to
+
+93
+00:04:02,720 --> 00:04:06,959
+determine if it's a new project or if
+
+94
+00:04:04,799 --> 00:04:11,120
+it's permale project. So it's existing
+
+95
+00:04:06,959 --> 00:04:13,200
+project those completely different um an
+
+96
+00:04:11,120 --> 00:04:16,320
+illusion that you have a like a
+
+97
+00:04:13,200 --> 00:04:19,440
+20-year-old u legacy code base and you
+
+98
+00:04:16,320 --> 00:04:21,919
+can really do wonderful things with AI
+
+99
+00:04:19,440 --> 00:04:24,320
+about this. That's a really interesting
+
+100
+00:04:21,919 --> 00:04:26,880
+uh myth. It's not in reality
+
+101
+00:04:24,320 --> 00:04:29,040
+unfortunately. You still have a many
+
+102
+00:04:26,880 --> 00:04:31,680
+many legacy issues as you would with
+
+103
+00:04:29,040 --> 00:04:34,400
+humans as well and for many of those
+
+104
+00:04:31,680 --> 00:04:37,360
+projects they not actually uh documented
+
+105
+00:04:34,400 --> 00:04:38,240
+well. So you have a lot of uh surprises
+
+106
+00:04:37,360 --> 00:04:40,160
+in along the way.
+
+107
+00:04:38,240 --> 00:04:41,520
+>> So a lot of refactoring going on
+
+108
+00:04:40,160 --> 00:04:44,320
+possibly.
+
+109
+00:04:41,520 --> 00:04:46,320
+>> Yeah. And this is really interesting
+
+110
+00:04:44,320 --> 00:04:49,520
+conversation when what type of project
+
+111
+00:04:46,320 --> 00:04:52,639
+you actually encounter and how to
+
+112
+00:04:49,520 --> 00:04:54,880
+approach uh because if we have a new
+
+113
+00:04:52,639 --> 00:04:58,160
+completely new project. Yeah. But like
+
+114
+00:04:54,880 --> 00:05:01,840
+again in the same way I don't see people
+
+115
+00:04:58,160 --> 00:05:05,440
+building um competitors of uh hotspot
+
+116
+00:05:01,840 --> 00:05:07,120
+and salesforce in one day. That's not
+
+117
+00:05:05,440 --> 00:05:09,440
+happening and I don't think it will
+
+118
+00:05:07,120 --> 00:05:11,039
+happen next year or two. uh I don't
+
+119
+00:05:09,440 --> 00:05:14,160
+think we're near uh those kind of
+
+120
+00:05:11,039 --> 00:05:18,880
+things. So actual large piece of
+
+121
+00:05:14,160 --> 00:05:21,520
+software it's not replaceable by uh AI
+
+122
+00:05:18,880 --> 00:05:25,680
+at least at this moment. Can you develop
+
+123
+00:05:21,520 --> 00:05:27,759
+really large system um with AI help and
+
+124
+00:05:25,680 --> 00:05:29,919
+develop it faster than previously?
+
+125
+00:05:27,759 --> 00:05:32,880
+Absolutely. Uh but again those things
+
+126
+00:05:29,919 --> 00:05:35,759
+are completely different.
+
+127
+00:05:32,880 --> 00:05:39,440
+So, I mean, one of the last questions I
+
+128
+00:05:35,759 --> 00:05:42,000
+was going to ask you was like, what
+
+129
+00:05:39,440 --> 00:05:43,840
+would you build today
+
+130
+00:05:42,000 --> 00:05:45,759
+as a
+
+131
+00:05:43,840 --> 00:05:47,360
+as a founder? Like, what would you
+
+132
+00:05:45,759 --> 00:05:48,639
+build? Like, let's say you were starting
+
+133
+00:05:47,360 --> 00:05:50,400
+your own project. What would you build
+
+134
+00:05:48,639 --> 00:05:51,919
+today? Now, you know, I was going to
+
+135
+00:05:50,400 --> 00:05:54,320
+leave that for last, but it sounds like
+
+136
+00:05:51,919 --> 00:05:56,479
+it just fits right into this part of
+
+137
+00:05:54,320 --> 00:05:58,080
+things. You know, if you're not going to
+
+138
+00:05:56,479 --> 00:06:02,280
+build SAP or you're not going to build
+
+139
+00:05:58,080 --> 00:06:02,280
+Salesforce, what are you going to build?
+
+140
+00:06:02,560 --> 00:06:08,560
+I mean it's all comes down to the old
+
+141
+00:06:05,520 --> 00:06:10,240
+matics of um system of decision, system
+
+142
+00:06:08,560 --> 00:06:11,199
+of engagement and system of record.
+
+143
+00:06:10,240 --> 00:06:14,240
+Yeah.
+
+144
+00:06:11,199 --> 00:06:17,039
+>> Um and now we have also another thing
+
+145
+00:06:14,240 --> 00:06:20,000
+that we call a system of intelligence
+
+146
+00:06:17,039 --> 00:06:23,120
+which is basically uh system of agents
+
+147
+00:06:20,000 --> 00:06:26,560
+or agentic systems which is a quite a
+
+148
+00:06:23,120 --> 00:06:28,960
+new concept in a way and um it's really
+
+149
+00:06:26,560 --> 00:06:30,400
+dependent on what uh could be done.
+
+150
+00:06:28,960 --> 00:06:34,160
+reality it's a lot of different
+
+151
+00:06:30,400 --> 00:06:37,759
+opportunities I would say um what to
+
+152
+00:06:34,160 --> 00:06:40,240
+build I think realistically
+
+153
+00:06:37,759 --> 00:06:43,680
+I would try to go against the most
+
+154
+00:06:40,240 --> 00:06:45,520
+hardest um and most compliance-based
+
+155
+00:06:43,680 --> 00:06:49,039
+industry
+
+156
+00:06:45,520 --> 00:06:51,440
+because no one would look there and
+
+157
+00:06:49,039 --> 00:06:53,600
+those things looks really tough in
+
+158
+00:06:51,440 --> 00:06:59,280
+reality they in many many cases not
+
+159
+00:06:53,600 --> 00:07:02,720
+really tough um and uh they all wants to
+
+160
+00:06:59,280 --> 00:07:08,000
+automate um again banking, healthcare,
+
+161
+00:07:02,720 --> 00:07:12,479
+insurance type um of uh businesses
+
+162
+00:07:08,000 --> 00:07:15,520
+any like complex uh manufacturing u drug
+
+163
+00:07:12,479 --> 00:07:19,120
+discoveries etc. So again when you go
+
+164
+00:07:15,520 --> 00:07:21,360
+against those complex type of system you
+
+165
+00:07:19,120 --> 00:07:24,960
+really finding an interesting
+
+166
+00:07:21,360 --> 00:07:28,800
+opportunities I think and you really can
+
+167
+00:07:24,960 --> 00:07:32,639
+defend your position much more than
+
+168
+00:07:28,800 --> 00:07:35,039
+building let's say a simpler u tool
+
+169
+00:07:32,639 --> 00:07:36,319
+market automation or something like this
+
+170
+00:07:35,039 --> 00:07:40,319
+>> because [snorts] come on like how many
+
+171
+00:07:36,319 --> 00:07:44,400
+marketmations tools are there and we all
+
+172
+00:07:40,319 --> 00:07:48,000
+use 10 maybe maybe life. [clears throat]
+
+173
+00:07:44,400 --> 00:07:51,919
+So again, I think this is uh my playbook
+
+174
+00:07:48,000 --> 00:07:54,479
+because uh you do not look into the most
+
+175
+00:07:51,919 --> 00:07:56,080
+brightest thing. You look into the most
+
+176
+00:07:54,479 --> 00:07:58,720
+unsexy
+
+177
+00:07:56,080 --> 00:08:01,680
+uh type of industry and you're like,
+
+178
+00:07:58,720 --> 00:08:04,319
+"Okay, now I will get and own this."
+
+179
+00:08:01,680 --> 00:08:08,400
+>> Yeah. It's funny that you say that
+
+180
+00:08:04,319 --> 00:08:12,080
+because I I watched a a video with
+
+181
+00:08:08,400 --> 00:08:13,759
+uh a fellow who is a billionaire, but
+
+182
+00:08:12,080 --> 00:08:16,720
+you don't know he was because he just
+
+183
+00:08:13,759 --> 00:08:20,240
+chose the most unsexy type of industries
+
+184
+00:08:16,720 --> 00:08:22,960
+like uh piping and and logistics and and
+
+185
+00:08:20,240 --> 00:08:24,560
+and different things like that. And it
+
+186
+00:08:22,960 --> 00:08:26,000
+sounds like the software industry is
+
+187
+00:08:24,560 --> 00:08:29,120
+going through the same sort of thing.
+
+188
+00:08:26,000 --> 00:08:32,800
+It's like choose the most boring
+
+189
+00:08:29,120 --> 00:08:36,240
+pro like part of software. the regulated
+
+190
+00:08:32,800 --> 00:08:39,760
+areas, the compliance areas, the the
+
+191
+00:08:36,240 --> 00:08:43,440
+piping, the the things that are
+
+192
+00:08:39,760 --> 00:08:46,160
+I I guess used on on a mass scale and
+
+193
+00:08:43,440 --> 00:08:50,480
+just build there. So that that's that's
+
+194
+00:08:46,160 --> 00:08:53,360
+very interesting to see. Um, and there's
+
+195
+00:08:50,480 --> 00:08:56,399
+a lot of people building out stuff in
+
+196
+00:08:53,360 --> 00:09:01,680
+Silicon Valley that are, you know, the
+
+197
+00:08:56,399 --> 00:09:04,720
+AI for HVAC companies, the a the AI for
+
+198
+00:09:01,680 --> 00:09:07,120
+whatever. And I think you have a strong
+
+199
+00:09:04,720 --> 00:09:10,160
+opinion on these things. Uh, just
+
+200
+00:09:07,120 --> 00:09:12,959
+looking at your website. Um, and I know
+
+201
+00:09:10,160 --> 00:09:15,279
+you're a you're a service provider, so
+
+202
+00:09:12,959 --> 00:09:19,360
+you will build anything, right? But, uh,
+
+203
+00:09:15,279 --> 00:09:22,000
+what do you enjoy building the most?
+
+204
+00:09:19,360 --> 00:09:23,961
+Oh, okay. So, you really prepared the
+
+205
+00:09:22,000 --> 00:09:26,480
+challenging questions. I like this. Um,
+
+206
+00:09:23,961 --> 00:09:30,320
+[clears throat] thank you
+
+207
+00:09:26,480 --> 00:09:32,399
+man. Like, um,
+
+208
+00:09:30,320 --> 00:09:36,800
+again realistically
+
+209
+00:09:32,399 --> 00:09:39,600
+um, I would kind of divide this into
+
+210
+00:09:36,800 --> 00:09:42,880
+three type of categories um that would
+
+211
+00:09:39,600 --> 00:09:44,800
+be uh, in a way interesting. I think
+
+212
+00:09:42,880 --> 00:09:49,839
+still in enterprises it's a lot of use
+
+213
+00:09:44,800 --> 00:09:52,399
+cases that um you can really solve and I
+
+214
+00:09:49,839 --> 00:09:56,880
+really like to see the the case when you
+
+215
+00:09:52,399 --> 00:10:02,160
+like take a large um system and you
+
+216
+00:09:56,880 --> 00:10:04,800
+really um let's say we had 150 sales for
+
+217
+00:10:02,160 --> 00:10:08,320
+working on the flow
+
+218
+00:10:04,800 --> 00:10:12,399
+and the output was let's say 100 mil
+
+219
+00:10:08,320 --> 00:10:14,399
+just as example uh and now we can take
+
+220
+00:10:12,399 --> 00:10:17,360
+and free up
+
+221
+00:10:14,399 --> 00:10:19,519
+basically more than half of the day of
+
+222
+00:10:17,360 --> 00:10:20,079
+those people so they can sell more.
+
+223
+00:10:19,519 --> 00:10:24,959
+>> Mhm.
+
+224
+00:10:20,079 --> 00:10:28,480
+>> In reality, it's not 200 mil, it's u60,
+
+225
+00:10:24,959 --> 00:10:30,640
+but it is good. And when you see those
+
+226
+00:10:28,480 --> 00:10:34,720
+examples, you're like, okay, this is
+
+227
+00:10:30,640 --> 00:10:37,120
+really the right flow of things.
+
+228
+00:10:34,720 --> 00:10:40,800
+And you know that you can accumate more
+
+229
+00:10:37,120 --> 00:10:43,600
+and you can get rid of uh even more
+
+230
+00:10:40,800 --> 00:10:45,120
+things that people do not need there.
+
+231
+00:10:43,600 --> 00:10:47,360
+And again I'm not talking about like
+
+232
+00:10:45,120 --> 00:10:51,120
+replacing humans because I think in
+
+233
+00:10:47,360 --> 00:10:54,399
+sales um you need human touch and I
+
+234
+00:10:51,120 --> 00:10:58,560
+think it will be valued for a long time.
+
+235
+00:10:54,399 --> 00:11:00,880
+I think the second thing is um really
+
+236
+00:10:58,560 --> 00:11:03,200
+challenging R&D projects.
+
+237
+00:11:00,880 --> 00:11:06,640
+>> Mhm. when you [clears throat]
+
+238
+00:11:03,200 --> 00:11:09,680
+when you look into the specifics of the
+
+239
+00:11:06,640 --> 00:11:11,360
+project and you like I have no freaking
+
+240
+00:11:09,680 --> 00:11:12,880
+idea how to build this stuff.
+
+241
+00:11:11,360 --> 00:11:17,279
+>> Mhm.
+
+242
+00:11:12,880 --> 00:11:19,760
+>> And again, you know the direction
+
+243
+00:11:17,279 --> 00:11:22,959
+but you have no idea how to build this
+
+244
+00:11:19,760 --> 00:11:27,120
+properly. You you doubting
+
+245
+00:11:22,959 --> 00:11:30,320
+um which approach you would choose. And
+
+246
+00:11:27,120 --> 00:11:33,680
+this is more complex type of things uh
+
+247
+00:11:30,320 --> 00:11:37,120
+where you do not trying to recreate the
+
+248
+00:11:33,680 --> 00:11:39,519
+same um systems that exist.
+
+249
+00:11:37,120 --> 00:11:41,839
+I think those are kind of like the most
+
+250
+00:11:39,519 --> 00:11:45,200
+fun and challenging to work with. Um in
+
+251
+00:11:41,839 --> 00:11:48,000
+a way um not necessarily the most
+
+252
+00:11:45,200 --> 00:11:49,760
+profitable in the cases. However, I
+
+253
+00:11:48,000 --> 00:11:51,760
+think it's a it's a lot of fun uh to
+
+254
+00:11:49,760 --> 00:11:55,680
+work with those.
+
+255
+00:11:51,760 --> 00:12:00,880
+Um beside this I think uh the last piece
+
+256
+00:11:55,680 --> 00:12:03,920
+is uh is uh the projects that you kind
+
+257
+00:12:00,880 --> 00:12:06,399
+of like you see the immediate result. Um
+
+258
+00:12:03,920 --> 00:12:08,560
+so you build the system and you work
+
+259
+00:12:06,399 --> 00:12:10,240
+with the founder. It's not about the
+
+260
+00:12:08,560 --> 00:12:13,120
+product, it's about the founder in this
+
+261
+00:12:10,240 --> 00:12:14,959
+case. Um because we work with a lot of
+
+262
+00:12:13,120 --> 00:12:17,200
+growth stage startups and we work also
+
+263
+00:12:14,959 --> 00:12:19,600
+with a lot of second time founders and
+
+264
+00:12:17,200 --> 00:12:22,639
+I'm a big fan of working with those guys
+
+265
+00:12:19,600 --> 00:12:24,880
+because they know what to do. Mhm. And
+
+266
+00:12:22,639 --> 00:12:26,480
+they sometime you sometimes see on like
+
+267
+00:12:24,880 --> 00:12:30,480
+some decision that they will make and
+
+268
+00:12:26,480 --> 00:12:34,880
+you like why and it end up being a great
+
+269
+00:12:30,480 --> 00:12:36,399
+deal. Um and again you learn from those
+
+270
+00:12:34,880 --> 00:12:38,800
+experiences
+
+271
+00:12:36,399 --> 00:12:41,600
+and I think this is the biggest kind of
+
+272
+00:12:38,800 --> 00:12:43,600
+advantage of working in this industry
+
+273
+00:12:41,600 --> 00:12:45,440
+that you can learn from so many folks in
+
+274
+00:12:43,600 --> 00:12:48,160
+the same time
+
+275
+00:12:45,440 --> 00:12:50,480
+and you have uh a lot of relationship
+
+276
+00:12:48,160 --> 00:12:52,959
+that really kind of leading you to
+
+277
+00:12:50,480 --> 00:12:56,160
+understanding that those type of
+
+278
+00:12:52,959 --> 00:13:00,320
+projects really is something different.
+
+279
+00:12:56,160 --> 00:13:04,160
+And when you see the napkin idea
+
+280
+00:13:00,320 --> 00:13:08,639
+um coming back to an actual 100 million
+
+281
+00:13:04,160 --> 00:13:11,200
+plus business in next couple of years.
+
+282
+00:13:08,639 --> 00:13:14,480
+This is really amazing.
+
+283
+00:13:11,200 --> 00:13:16,880
+It sounds like you're you're almost um
+
+284
+00:13:14,480 --> 00:13:22,160
+taking an advisor consulting position as
+
+285
+00:13:16,880 --> 00:13:23,920
+well. Uh are you also and I believe you
+
+286
+00:13:22,160 --> 00:13:25,600
+said you were you're also an investor in
+
+287
+00:13:23,920 --> 00:13:27,920
+some of these projects too if you like
+
+288
+00:13:25,600 --> 00:13:31,120
+the idea.
+
+289
+00:13:27,920 --> 00:13:33,279
+I um kind of like combining the advisor
+
+290
+00:13:31,120 --> 00:13:35,120
+and investor role in some of those
+
+291
+00:13:33,279 --> 00:13:37,760
+cases.
+
+292
+00:13:35,120 --> 00:13:40,160
+In some cases we work as a service
+
+293
+00:13:37,760 --> 00:13:41,680
+provider for them. In some cases we so
+
+294
+00:13:40,160 --> 00:13:42,959
+completely separate.
+
+295
+00:13:41,680 --> 00:13:44,720
+>> Okay.
+
+296
+00:13:42,959 --> 00:13:47,839
+And I [snorts] also met mentor in
+
+297
+00:13:44,720 --> 00:13:53,360
+Alchemist and few other places but yeah.
+
+298
+00:13:47,839 --> 00:13:55,279
+>> Okay. Talk about your um experience as a
+
+299
+00:13:53,360 --> 00:14:00,920
+investor. What do you like? What do you
+
+300
+00:13:55,279 --> 00:14:00,920
+what do you what would you invest in
+
+301
+00:14:02,079 --> 00:14:07,120
+>> on early stages? You mean?
+
+302
+00:14:03,839 --> 00:14:10,560
+>> Yeah. Yeah.
+
+303
+00:14:07,120 --> 00:14:12,160
+I think it's a kind of uh really
+
+304
+00:14:10,560 --> 00:14:15,839
+straightforward playbook. So it's a
+
+305
+00:14:12,160 --> 00:14:16,959
+always combination of timing uh market
+
+306
+00:14:15,839 --> 00:14:18,240
+and founder.
+
+307
+00:14:16,959 --> 00:14:20,320
+>> Yeah.
+
+308
+00:14:18,240 --> 00:14:23,920
+>> Realistically for me the founder is more
+
+309
+00:14:20,320 --> 00:14:28,399
+important than many other things. Um
+
+310
+00:14:23,920 --> 00:14:31,360
+because I see that um
+
+311
+00:14:28,399 --> 00:14:33,040
+sometimes the great founder will uh
+
+312
+00:14:31,360 --> 00:14:36,959
+create the market or sometimes the great
+
+313
+00:14:33,040 --> 00:14:42,240
+founder will adopt the product. And I
+
+314
+00:14:36,959 --> 00:14:45,199
+think the the fact that again the
+
+315
+00:14:42,240 --> 00:14:48,399
+founder is really of I mean founding
+
+316
+00:14:45,199 --> 00:14:52,240
+team in reality. Um
+
+317
+00:14:48,399 --> 00:14:55,519
+you want to see the folks that not just
+
+318
+00:14:52,240 --> 00:14:59,120
+knows what they do because this is the
+
+319
+00:14:55,519 --> 00:15:01,760
+boring part. Like if you have insurance
+
+320
+00:14:59,120 --> 00:15:04,240
+folks trying to build insurance startup.
+
+321
+00:15:01,760 --> 00:15:06,240
+Yeah. I mean they would build something
+
+322
+00:15:04,240 --> 00:15:08,000
+but they typically would not build a
+
+323
+00:15:06,240 --> 00:15:10,000
+disruptive thing.
+
+324
+00:15:08,000 --> 00:15:12,720
+>> When you have real outsiders come into
+
+325
+00:15:10,000 --> 00:15:16,000
+this market and they really create
+
+326
+00:15:12,720 --> 00:15:19,440
+something new and they don't know that
+
+327
+00:15:16,000 --> 00:15:21,760
+no one done this before like creating
+
+328
+00:15:19,440 --> 00:15:25,600
+the accounting systems in a way that no
+
+329
+00:15:21,760 --> 00:15:28,320
+one done before. you like
+
+330
+00:15:25,600 --> 00:15:30,320
+um why you have not done this before
+
+331
+00:15:28,320 --> 00:15:33,360
+like oh no one actually suggested this
+
+332
+00:15:30,320 --> 00:15:37,040
+but this is I think a good thing why you
+
+333
+00:15:33,360 --> 00:15:40,560
+skipped this oh uh no one actually
+
+334
+00:15:37,040 --> 00:15:42,399
+suggested this so again uh I think
+
+335
+00:15:40,560 --> 00:15:46,320
+challenging the start school is
+
+336
+00:15:42,399 --> 00:15:48,639
+important there and uh founders that
+
+337
+00:15:46,320 --> 00:15:50,399
+really kind of bold and really
+
+338
+00:15:48,639 --> 00:15:53,920
+persistent
+
+339
+00:15:50,399 --> 00:15:56,240
+um and really seen the future. I think
+
+340
+00:15:53,920 --> 00:16:00,000
+this is really really important and not
+
+341
+00:15:56,240 --> 00:16:04,560
+being afraid again on losing because
+
+342
+00:16:00,000 --> 00:16:06,800
+it's always the conversation I you
+
+343
+00:16:04,560 --> 00:16:12,240
+uh
+
+344
+00:16:06,800 --> 00:16:14,480
+have fear of losing or you have a um uh
+
+345
+00:16:12,240 --> 00:16:18,399
+basically passion to win.
+
+346
+00:16:14,480 --> 00:16:23,120
+>> And in both cases it's okay. And it's
+
+347
+00:16:18,399 --> 00:16:27,920
+just two type of of founders and you in
+
+348
+00:16:23,120 --> 00:16:29,839
+my cases I think you can find a right
+
+349
+00:16:27,920 --> 00:16:32,880
+playbook
+
+350
+00:16:29,839 --> 00:16:34,240
+but you need to see those eyes really
+
+351
+00:16:32,880 --> 00:16:37,360
+really
+
+352
+00:16:34,240 --> 00:16:39,360
+>> you need to see the fire there because
+
+353
+00:16:37,360 --> 00:16:42,399
+if you don't see the fire
+
+354
+00:16:39,360 --> 00:16:44,639
+>> it's it's all long done. That that that
+
+355
+00:16:42,399 --> 00:16:47,360
+that makes a lot of sense. You need to
+
+356
+00:16:44,639 --> 00:16:49,279
+look into a founders's eyes and see like
+
+357
+00:16:47,360 --> 00:16:52,160
+that man is really or that woman is
+
+358
+00:16:49,279 --> 00:16:54,079
+really crazy and they're going to take a
+
+359
+00:16:52,160 --> 00:16:56,160
+big risk or they're going to do what it
+
+360
+00:16:54,079 --> 00:16:57,360
+takes to to make this company succeed.
+
+361
+00:16:56,160 --> 00:16:59,759
+So it's like a passion.
+
+362
+00:16:57,360 --> 00:17:00,959
+>> Yeah. Because the founders journey is
+
+363
+00:16:59,759 --> 00:17:03,199
+really lonely.
+
+364
+00:17:00,959 --> 00:17:05,439
+>> The entrepreneurship in general really
+
+365
+00:17:03,199 --> 00:17:08,079
+really lonely and really really painful.
+
+366
+00:17:05,439 --> 00:17:11,520
+>> Mhm. People think about like smoothies
+
+367
+00:17:08,079 --> 00:17:15,679
+and all the funny things and uh looking
+
+368
+00:17:11,520 --> 00:17:18,079
+into the wonderful things of uh uh TV
+
+369
+00:17:15,679 --> 00:17:19,120
+shows etc. In reality it's freaking
+
+370
+00:17:18,079 --> 00:17:19,919
+broil guys.
+
+371
+00:17:19,120 --> 00:17:22,319
+>> Mhm.
+
+372
+00:17:19,919 --> 00:17:24,240
+>> And they like oh yeah we will raise so
+
+373
+00:17:22,319 --> 00:17:27,039
+much money. We'll do such wonderful
+
+374
+00:17:24,240 --> 00:17:29,840
+things. Come on. Like first of all only
+
+375
+00:17:27,039 --> 00:17:31,919
+one out of 10 will raise anything. um
+
+376
+00:17:29,840 --> 00:17:34,400
+second one of the trainer will raise
+
+377
+00:17:31,919 --> 00:17:37,200
+something else uh on the second round
+
+378
+00:17:34,400 --> 00:17:40,160
+and uh we can continue
+
+379
+00:17:37,200 --> 00:17:43,679
+>> and uh if you relying on the on
+
+380
+00:17:40,160 --> 00:17:47,280
+investments you already lost. So it's
+
+381
+00:17:43,679 --> 00:17:50,282
+it's many other things that exist in
+
+382
+00:17:47,280 --> 00:17:51,440
+this playbook that important to change.
+
+383
+00:17:50,282 --> 00:17:54,480
+[snorts]
+
+384
+00:17:51,440 --> 00:17:56,799
+Yep. And um
+
+385
+00:17:54,480 --> 00:18:00,960
+I think you said it right there. It's a
+
+386
+00:17:56,799 --> 00:18:03,679
+it's a it's a journey and it's something
+
+387
+00:18:00,960 --> 00:18:06,720
+like a lot of people don't take into
+
+388
+00:18:03,679 --> 00:18:11,840
+account. It's funny. Uh, did you see the
+
+389
+00:18:06,720 --> 00:18:14,880
+post by, uh, Gary Tan out of, uh, Y
+
+390
+00:18:11,840 --> 00:18:17,600
+Cominator talking about,
+
+391
+00:18:14,880 --> 00:18:20,240
+you know, uh,
+
+392
+00:18:17,600 --> 00:18:22,559
+founders who are in their 40s and 50s
+
+393
+00:18:20,240 --> 00:18:25,280
+being a little bit more resilient than
+
+394
+00:18:22,559 --> 00:18:27,679
+founders uh, well well, he didn't make a
+
+395
+00:18:25,280 --> 00:18:30,640
+comparison. He just made the statement.
+
+396
+00:18:27,679 --> 00:18:33,760
+And you know, I just thought that was
+
+397
+00:18:30,640 --> 00:18:36,480
+cool because there's people like myself
+
+398
+00:18:33,760 --> 00:18:42,400
+included um that have a lot of life
+
+399
+00:18:36,480 --> 00:18:45,760
+experience and uh that sort of goes into
+
+400
+00:18:42,400 --> 00:18:48,880
+your skill set and you know why
+
+401
+00:18:45,760 --> 00:18:51,679
+Cominator is known for just having 18y
+
+402
+00:18:48,880 --> 00:18:55,600
+olds, right? and and 23 year olds. But
+
+403
+00:18:51,679 --> 00:18:59,039
+to have the the founder and the the
+
+404
+00:18:55,600 --> 00:19:00,799
+manager managing partner of Y Cominator
+
+405
+00:18:59,039 --> 00:19:02,559
+say something like that was was kind of
+
+406
+00:19:00,799 --> 00:19:05,360
+like it made me smile a little bit. What
+
+407
+00:19:02,559 --> 00:19:07,919
+what are your thoughts about that?
+
+408
+00:19:05,360 --> 00:19:10,640
+I don't think it's specifically about
+
+409
+00:19:07,919 --> 00:19:13,280
+age or like specific type of
+
+410
+00:19:10,640 --> 00:19:14,480
+experiences. I think it's all about the
+
+411
+00:19:13,280 --> 00:19:16,160
+energy that you have.
+
+412
+00:19:14,480 --> 00:19:20,080
+>> Yeah.
+
+413
+00:19:16,160 --> 00:19:23,600
+Because again I see absolutely dumb 20
+
+414
+00:19:20,080 --> 00:19:27,120
+year olds and absolutely dumb 40 year
+
+415
+00:19:23,600 --> 00:19:30,160
+olds and 50 etc. And I have absolutely
+
+416
+00:19:27,120 --> 00:19:35,600
+brilliant folks in the same categories
+
+417
+00:19:30,160 --> 00:19:38,559
+and I see that they like really like
+
+418
+00:19:35,600 --> 00:19:40,160
+I see so many founders being so careful.
+
+419
+00:19:38,559 --> 00:19:43,679
+>> Mhm.
+
+420
+00:19:40,160 --> 00:19:47,280
+>> You not winning by being careful.
+
+421
+00:19:43,679 --> 00:19:50,320
+>> Yeah. You win it by betting and betting
+
+422
+00:19:47,280 --> 00:19:52,559
+again and again. The business is all
+
+423
+00:19:50,320 --> 00:19:55,360
+about experiments.
+
+424
+00:19:52,559 --> 00:19:58,320
+It's like, hey, I have a theory that
+
+425
+00:19:55,360 --> 00:20:01,440
+this stuff will work. I have no idea it
+
+426
+00:19:58,320 --> 00:20:03,600
+will. I have only limited control, but I
+
+427
+00:20:01,440 --> 00:20:06,080
+will do whatever it takes to really
+
+428
+00:20:03,600 --> 00:20:08,400
+prove the theory,
+
+429
+00:20:06,080 --> 00:20:11,440
+and it will not work by itself, and I
+
+430
+00:20:08,400 --> 00:20:14,720
+will push it as hard as I freaking can.
+
+431
+00:20:11,440 --> 00:20:17,280
+And the only way I succeeded if I really
+
+432
+00:20:14,720 --> 00:20:20,000
+analyze if this is actually a good
+
+433
+00:20:17,280 --> 00:20:23,120
+outcome or not. And I will be wrong in
+
+434
+00:20:20,000 --> 00:20:26,880
+many many cases. And this would be a fun
+
+435
+00:20:23,120 --> 00:20:30,320
+journey because I will fail so many many
+
+436
+00:20:26,880 --> 00:20:32,000
+times. And my successes actually comes
+
+437
+00:20:30,320 --> 00:20:34,400
+from those failures that I will learn
+
+438
+00:20:32,000 --> 00:20:37,600
+and I will adapt and will send up again
+
+439
+00:20:34,400 --> 00:20:39,520
+and we'll do whatever it takes. So I
+
+440
+00:20:37,600 --> 00:20:43,760
+think this is the kind of like the
+
+441
+00:20:39,520 --> 00:20:47,840
+journey and I think I have a lot of uh
+
+442
+00:20:43,760 --> 00:20:51,679
+folks in the 40s and 50s and even 60s
+
+443
+00:20:47,840 --> 00:20:54,400
+that I think is a great founders. Um
+
+444
+00:20:51,679 --> 00:20:57,280
+and in the same time I have the same
+
+445
+00:20:54,400 --> 00:21:01,039
+category that really kind of careful and
+
+446
+00:20:57,280 --> 00:21:02,960
+like oh I don't know if I should oh let
+
+447
+00:21:01,039 --> 00:21:04,320
+me take a vacation and think about this
+
+448
+00:21:02,960 --> 00:21:07,200
+stuff.
+
+449
+00:21:04,320 --> 00:21:12,000
+No, no. You you you know that this will
+
+450
+00:21:07,200 --> 00:21:17,919
+not work. Like you need to battle this
+
+451
+00:21:12,000 --> 00:21:22,240
+today. Mhm. Like it's
+
+452
+00:21:17,919 --> 00:21:26,000
+need to be uh done immediately. Uh not
+
+453
+00:21:22,240 --> 00:21:31,679
+like because like the point is
+
+454
+00:21:26,000 --> 00:21:33,919
+if you keep um uh combining those issues
+
+455
+00:21:31,679 --> 00:21:36,000
+um you will have a lot of issues
+
+456
+00:21:33,919 --> 00:21:40,320
+>> if you try to battle them and you
+
+457
+00:21:36,000 --> 00:21:43,760
+pertize them and you play right um sure
+
+458
+00:21:40,320 --> 00:21:47,039
+and it's not about the rules either like
+
+459
+00:21:43,760 --> 00:21:49,600
+again your own rules
+
+460
+00:21:47,039 --> 00:21:54,400
+again you need to remember that history
+
+461
+00:21:49,600 --> 00:21:56,640
+written by winners There's no losers.
+
+462
+00:21:54,400 --> 00:21:59,760
+I love your perspective. Like I I I
+
+463
+00:21:56,640 --> 00:22:02,159
+thank you for correcting me on that
+
+464
+00:21:59,760 --> 00:22:04,960
+generalization I made, which was clearly
+
+465
+00:22:02,159 --> 00:22:08,640
+a generalization. And it's it's hard to
+
+466
+00:22:04,960 --> 00:22:10,799
+to uh say anything across the board like
+
+467
+00:22:08,640 --> 00:22:12,880
+that. But uh you're right. You're right.
+
+468
+00:22:10,799 --> 00:22:15,440
+It is about attitude really. It's about
+
+469
+00:22:12,880 --> 00:22:18,799
+attitude, sense of urgency,
+
+470
+00:22:15,440 --> 00:22:23,039
+um, instinct, many different things that
+
+471
+00:22:18,799 --> 00:22:30,280
+that happen. Um, anyways, let's move on.
+
+472
+00:22:23,039 --> 00:22:30,280
+U, you've been previbe code, initial
+
+473
+00:22:30,480 --> 00:22:33,840
+foundations of vibe coding, and now
+
+474
+00:22:32,640 --> 00:22:36,880
+we're getting to the point where we're
+
+475
+00:22:33,840 --> 00:22:37,919
+having cloud agents just not just doing
+
+476
+00:22:36,880 --> 00:22:40,720
+work for you, and you're just coming
+
+477
+00:22:37,919 --> 00:22:42,640
+back and hitting the PR button or uh,
+
+478
+00:22:40,720 --> 00:22:45,280
+merge button. [snorts]
+
+479
+00:22:42,640 --> 00:22:47,840
+um where
+
+480
+00:22:45,280 --> 00:22:50,720
+what's wrong how has software changed
+
+481
+00:22:47,840 --> 00:22:52,400
+and and how is what is the career
+
+482
+00:22:50,720 --> 00:22:55,039
+progression for a software engineer
+
+483
+00:22:52,400 --> 00:22:56,480
+these days like h how what is what's the
+
+484
+00:22:55,039 --> 00:22:59,480
+best way to get started on all these
+
+485
+00:22:56,480 --> 00:22:59,480
+things
+
+486
+00:23:00,000 --> 00:23:03,200
+I want to be honest I have no idea
+
+487
+00:23:02,065 --> 00:23:07,200
+[laughter]
+
+488
+00:23:03,200 --> 00:23:09,840
+it's changing right yeah I
+
+489
+00:23:07,200 --> 00:23:12,400
+been asked this same question around
+
+490
+00:23:09,840 --> 00:23:12,400
+nine months ago
+
+491
+00:23:12,480 --> 00:23:22,400
+um oh 7 months ago. So basically the
+
+492
+00:23:16,400 --> 00:23:25,679
+OPUS was just released and um
+
+493
+00:23:22,400 --> 00:23:30,559
+we seen completely different flows of
+
+494
+00:23:25,679 --> 00:23:35,440
+agentic workflows again um it's all just
+
+495
+00:23:30,559 --> 00:23:38,400
+like started basically and um one person
+
+496
+00:23:35,440 --> 00:23:40,640
+that I think is 18 or 17 asked me about
+
+497
+00:23:38,400 --> 00:23:42,799
+like hey I study computer science what
+
+498
+00:23:40,640 --> 00:23:46,000
+do you think what is the next steps uh
+
+499
+00:23:42,799 --> 00:23:47,679
+will look like and I'm like man I have
+
+500
+00:23:46,000 --> 00:23:49,679
+no idea
+
+501
+00:23:47,679 --> 00:23:52,799
+>> because again I've been running this
+
+502
+00:23:49,679 --> 00:23:55,280
+business for 16 years or for 18 years
+
+503
+00:23:52,799 --> 00:23:59,840
+and we're the reality is I have no idea
+
+504
+00:23:55,280 --> 00:24:01,600
+where it will lead us in next um year. I
+
+505
+00:23:59,840 --> 00:24:03,039
+don't know where we will be in next
+
+506
+00:24:01,600 --> 00:24:07,760
+months. [laughter]
+
+507
+00:24:03,039 --> 00:24:10,080
+Um again the um horizontal
+
+508
+00:24:07,760 --> 00:24:12,159
+um
+
+509
+00:24:10,080 --> 00:24:16,740
+planning in many companies now like
+
+510
+00:24:12,159 --> 00:24:18,400
+weeks. Yeah. And it it is long because
+
+511
+00:24:16,740 --> 00:24:21,520
+[laughter] you literally don't know what
+
+512
+00:24:18,400 --> 00:24:24,320
+will happen tomorrow. So I think like
+
+513
+00:24:21,520 --> 00:24:28,080
+the reality of um many of those use
+
+514
+00:24:24,320 --> 00:24:31,679
+cases that I think the fundamentals is
+
+515
+00:24:28,080 --> 00:24:36,559
+important and right now how we see this
+
+516
+00:24:31,679 --> 00:24:38,559
+is um we don't need coders anymore.
+
+517
+00:24:36,559 --> 00:24:40,559
+Like we don't need people who write the
+
+518
+00:24:38,559 --> 00:24:41,520
+code because we're not writing code
+
+519
+00:24:40,559 --> 00:24:43,039
+anymore
+
+520
+00:24:41,520 --> 00:24:46,720
+>> specifically.
+
+521
+00:24:43,039 --> 00:24:49,520
+we need to understand uh the system. So
+
+522
+00:24:46,720 --> 00:24:52,480
+we need people who can design the
+
+523
+00:24:49,520 --> 00:24:55,279
+system. So we need architects, we need
+
+524
+00:24:52,480 --> 00:24:57,919
+product people [snorts] and uh we need
+
+525
+00:24:55,279 --> 00:25:01,120
+to create a right
+
+526
+00:24:57,919 --> 00:25:03,039
+harnessing uh for them to build those
+
+527
+00:25:01,120 --> 00:25:07,600
+systems
+
+528
+00:25:03,039 --> 00:25:11,200
+not other way around. So
+
+529
+00:25:07,600 --> 00:25:13,120
+in many cases it's all about the context
+
+530
+00:25:11,200 --> 00:25:16,960
+and all about putting the right
+
+531
+00:25:13,120 --> 00:25:20,240
+structure of AI to build us. So in the
+
+532
+00:25:16,960 --> 00:25:22,559
+software industry I think architects
+
+533
+00:25:20,240 --> 00:25:26,400
+still will be important.
+
+534
+00:25:22,559 --> 00:25:28,640
+I think really understanding and playing
+
+535
+00:25:26,400 --> 00:25:32,720
+really really fast and learning really
+
+536
+00:25:28,640 --> 00:25:35,760
+fast is also really important because
+
+537
+00:25:32,720 --> 00:25:38,880
+like it's not longer enough and not
+
+538
+00:25:35,760 --> 00:25:44,159
+longer actually making sense to just go
+
+539
+00:25:38,880 --> 00:25:48,320
+ahead and check your uh whatever
+
+540
+00:25:44,159 --> 00:25:50,720
+uh books uh and like learn something for
+
+541
+00:25:48,320 --> 00:25:52,320
+a year. No, those skills doesn't really
+
+542
+00:25:50,720 --> 00:25:54,640
+apply.
+
+543
+00:25:52,320 --> 00:25:56,159
+You need to learn really really fast and
+
+544
+00:25:54,640 --> 00:25:58,000
+you need to adapt.
+
+545
+00:25:56,159 --> 00:26:00,000
+>> The fun fact like again I don't care
+
+546
+00:25:58,000 --> 00:26:02,880
+which language you're learning. It
+
+547
+00:26:00,000 --> 00:26:08,559
+doesn't really apply anymore
+
+548
+00:26:02,880 --> 00:26:12,159
+because like again we took many projects
+
+549
+00:26:08,559 --> 00:26:17,279
+in the last 6 months for tech stack that
+
+550
+00:26:12,159 --> 00:26:20,320
+we had um limited capabilities for.
+
+551
+00:26:17,279 --> 00:26:24,463
+The fun fact, we actually never wrote
+
+552
+00:26:20,320 --> 00:26:25,520
+any code. Oh wow. It was all by a
+
+553
+00:26:24,463 --> 00:26:28,240
+[clears throat]
+
+554
+00:26:25,520 --> 00:26:30,559
+we found many issues in a legacy system.
+
+555
+00:26:28,240 --> 00:26:32,480
+We fixed those. We applied those things.
+
+556
+00:26:30,559 --> 00:26:35,120
+We're not writing this manually because
+
+557
+00:26:32,480 --> 00:26:37,679
+it doesn't really make sense because it
+
+558
+00:26:35,120 --> 00:26:40,480
+is expensive. Um first of all, it's
+
+559
+00:26:37,679 --> 00:26:44,400
+slow. And second, we will make mistakes.
+
+560
+00:26:40,480 --> 00:26:46,720
+Yeah. Will AI make mistakes? Sure. But
+
+561
+00:26:44,400 --> 00:26:49,760
+if we compare a number of mistakes of AI
+
+562
+00:26:46,720 --> 00:26:53,200
+to human, we actually will see that we
+
+563
+00:26:49,760 --> 00:26:55,440
+actually do pretty good on AI.
+
+564
+00:26:53,200 --> 00:26:58,400
+>> So I think like
+
+565
+00:26:55,440 --> 00:27:00,000
+like yeah you have so many issues with
+
+566
+00:26:58,400 --> 00:27:02,320
+yeah but like you developing 10 times
+
+567
+00:27:00,000 --> 00:27:05,039
+faster or 100 times faster.
+
+568
+00:27:02,320 --> 00:27:07,600
+>> Of course you will have issues. Yeah it
+
+569
+00:27:05,039 --> 00:27:09,919
+is expected you should have issues.
+
+570
+00:27:07,600 --> 00:27:12,480
+Basically you will have security
+
+571
+00:27:09,919 --> 00:27:14,159
+problems. You have bugs. you will have
+
+572
+00:27:12,480 --> 00:27:18,320
+some things that doesn't really make
+
+573
+00:27:14,159 --> 00:27:20,960
+sense. Sure, fix the prompting, fix the
+
+574
+00:27:18,320 --> 00:27:23,440
+harnessing and memory and yeah, go ahead
+
+575
+00:27:20,960 --> 00:27:26,400
+and uh fix those things uh in the
+
+576
+00:27:23,440 --> 00:27:29,600
+system, but do not touch the code. If
+
+577
+00:27:26,400 --> 00:27:31,919
+you touch the code, you kind of like
+
+578
+00:27:29,600 --> 00:27:34,880
+broke the idea of agentic development
+
+579
+00:27:31,919 --> 00:27:38,960
+basically.
+
+580
+00:27:34,880 --> 00:27:41,279
+Oh my goodness. So it went from
+
+581
+00:27:38,960 --> 00:27:44,480
+I I guess what you're saying is like it
+
+582
+00:27:41,279 --> 00:27:47,679
+maybe a year and a half ago it went from
+
+583
+00:27:44,480 --> 00:27:50,880
+yeah I'm using an AI coding assistant
+
+584
+00:27:47,679 --> 00:27:52,720
+it's helping me write 20% of my code 30%
+
+585
+00:27:50,880 --> 00:27:56,640
+it's checking things it's validating
+
+586
+00:27:52,720 --> 00:27:58,720
+things to maybe
+
+587
+00:27:56,640 --> 00:28:03,440
+8 months ago when Opus came out to oh
+
+588
+00:27:58,720 --> 00:28:07,840
+it's writing code it's writing 60 70%
+
+589
+00:28:03,440 --> 00:28:10,399
+and now you're seeing it's 100%.
+
+590
+00:28:07,840 --> 00:28:12,399
+Um, or close to 100%. I mean, it can it
+
+591
+00:28:10,399 --> 00:28:16,240
+can be argued it's it's it's always
+
+592
+00:28:12,399 --> 00:28:19,520
+going to be in between 85 and 100%. But
+
+593
+00:28:16,240 --> 00:28:23,039
+you're saying as an experienced vendor,
+
+594
+00:28:19,520 --> 00:28:25,039
+an experienced shop, you're nearing the
+
+595
+00:28:23,039 --> 00:28:27,440
+100 mark or you're closer to the 100
+
+596
+00:28:25,039 --> 00:28:30,480
+mark depending on the project just to be
+
+597
+00:28:27,440 --> 00:28:32,080
+clear. Wow. It is some projects that you
+
+598
+00:28:30,480 --> 00:28:35,760
+cannot do this. It's some limitations
+
+599
+00:28:32,080 --> 00:28:38,720
+that applies etc. But in many many cases
+
+600
+00:28:35,760 --> 00:28:44,240
+especially for new projects we we have
+
+601
+00:28:38,720 --> 00:28:49,760
+many uh smaller projects uh below let's
+
+602
+00:28:44,240 --> 00:28:53,520
+say 100k uh uh budgeting wise that is
+
+603
+00:28:49,760 --> 00:28:56,559
+basically one month one month's built
+
+604
+00:28:53,520 --> 00:28:59,200
+uh all agentic development.
+
+605
+00:28:56,559 --> 00:29:00,559
+Yeah, we spend a lot of time on creating
+
+606
+00:28:59,200 --> 00:29:03,919
+the right documentation and the right
+
+607
+00:29:00,559 --> 00:29:07,919
+harnessing and right uh logic to
+
+608
+00:29:03,919 --> 00:29:10,640
+actually create the flows there um and
+
+609
+00:29:07,919 --> 00:29:12,640
+ensure that AI knows everything and yeah
+
+610
+00:29:10,640 --> 00:29:14,000
+we mention EI to develop this basically
+
+611
+00:29:12,640 --> 00:29:18,000
+in a matter of days.
+
+612
+00:29:14,000 --> 00:29:19,840
+>> Wow. So the most time spent actually on
+
+613
+00:29:18,000 --> 00:29:23,520
+discussing functionality, making product
+
+614
+00:29:19,840 --> 00:29:27,360
+decisions, um all of those things,
+
+615
+00:29:23,520 --> 00:29:29,830
+writing with a genic systems, it's it's
+
+616
+00:29:27,360 --> 00:29:30,960
+really quick. Mhm.
+
+617
+00:29:29,830 --> 00:29:36,799
+>> [gasps]
+
+618
+00:29:30,960 --> 00:29:41,440
+>> So I remember working for a company
+
+619
+00:29:36,799 --> 00:29:43,919
+uh maybe about 7 8 years ago [snorts]
+
+620
+00:29:41,440 --> 00:29:47,919
+and there they used to charge I don't
+
+621
+00:29:43,919 --> 00:29:50,480
+know 20,000 30,000 for a website you
+
+622
+00:29:47,919 --> 00:29:53,120
+know maybe it's got a store on it maybe
+
+623
+00:29:50,480 --> 00:29:55,760
+it gets up to 40,000
+
+624
+00:29:53,120 --> 00:29:58,559
+um
+
+625
+00:29:55,760 --> 00:30:01,440
+it seems to me like that if somebody got
+
+626
+00:29:58,559 --> 00:30:04,320
+that quote today they would just go no
+
+627
+00:30:01,440 --> 00:30:08,640
+that's you want a simple website with a
+
+628
+00:30:04,320 --> 00:30:10,640
+an e-commerce store and a CMS and and uh
+
+629
+00:30:08,640 --> 00:30:13,919
+for for 40,000 are you kidding me you
+
+630
+00:30:10,640 --> 00:30:16,399
+you can do that now for probably in days
+
+631
+00:30:13,919 --> 00:30:19,200
+and and like 4x less the cost like you
+
+632
+00:30:16,399 --> 00:30:22,799
+said right so so where is the what is
+
+633
+00:30:19,200 --> 00:30:24,720
+the unique selling proposition like you
+
+634
+00:30:22,799 --> 00:30:27,360
+you it's different for you like you you
+
+635
+00:30:24,720 --> 00:30:29,840
+have a you have a business that has 18
+
+636
+00:30:27,360 --> 00:30:32,399
+years worth of clients your your your
+
+637
+00:30:29,840 --> 00:30:35,840
+reputation is amazing in the industry
+
+638
+00:30:32,399 --> 00:30:38,720
+but where does the business of software
+
+639
+00:30:35,840 --> 00:30:40,880
+development go from here and and you
+
+640
+00:30:38,720 --> 00:30:42,799
+know maybe you don't know like like you
+
+641
+00:30:40,880 --> 00:30:44,960
+said before but what is the edge that
+
+642
+00:30:42,799 --> 00:30:46,960
+people can have
+
+643
+00:30:44,960 --> 00:30:49,919
+>> I don't think anyone knows
+
+644
+00:30:46,960 --> 00:30:52,000
+>> this is the fun fact [snorts]
+
+645
+00:30:49,919 --> 00:30:56,240
+>> I mean
+
+646
+00:30:52,000 --> 00:30:59,039
+listen um if we're talking about uh the
+
+647
+00:30:56,240 --> 00:31:00,559
+websites we still have websites that
+
+648
+00:30:59,039 --> 00:31:05,679
+do for 100k.
+
+649
+00:31:00,559 --> 00:31:10,399
+>> Okay. Um it's not a simple promo website
+
+650
+00:31:05,679 --> 00:31:13,279
+obviously and it is many cases when AI
+
+651
+00:31:10,399 --> 00:31:16,320
+is not doing the best. Um it still
+
+652
+00:31:13,279 --> 00:31:20,080
+exists again it's not the silver bullet
+
+653
+00:31:16,320 --> 00:31:24,000
+for everything. Um pixel perfect is not
+
+654
+00:31:20,080 --> 00:31:26,880
+the best thing for AI. Um and uh again
+
+655
+00:31:24,000 --> 00:31:30,240
+we build system to leverage as much as
+
+656
+00:31:26,880 --> 00:31:33,360
+possible. However, we limited into
+
+657
+00:31:30,240 --> 00:31:36,559
+ability of doing this just because again
+
+658
+00:31:33,360 --> 00:31:41,200
+AI is not perfect there and if we have a
+
+659
+00:31:36,559 --> 00:31:46,159
+projects where uh client will tell us
+
+660
+00:31:41,200 --> 00:31:48,799
+hey this uh shade is 30% it's supposed
+
+661
+00:31:46,159 --> 00:31:51,600
+to be 45
+
+662
+00:31:48,799 --> 00:31:54,640
+you kind of like you cannot use the for
+
+663
+00:31:51,600 --> 00:31:56,559
+this will we will think it's okay
+
+664
+00:31:54,640 --> 00:31:57,519
+>> because it's really it's okay no one
+
+665
+00:31:56,559 --> 00:31:58,960
+cares
+
+666
+00:31:57,519 --> 00:32:01,679
+But someone [gasps]
+
+667
+00:31:58,960 --> 00:32:03,840
+>> someone in some enterprises will. So
+
+668
+00:32:01,679 --> 00:32:07,120
+realistically
+
+669
+00:32:03,840 --> 00:32:09,840
+um we have limitations there obviously
+
+670
+00:32:07,120 --> 00:32:11,600
+but uh for many projects those things
+
+671
+00:32:09,840 --> 00:32:14,559
+not really applies and not really
+
+672
+00:32:11,600 --> 00:32:18,080
+important because the time of the
+
+673
+00:32:14,559 --> 00:32:20,399
+feature that will leave is really low.
+
+674
+00:32:18,080 --> 00:32:22,240
+Uh and yeah you can adapt and you can
+
+675
+00:32:20,399 --> 00:32:24,399
+fix those things later etc. So it's a
+
+676
+00:32:22,240 --> 00:32:26,320
+iterative process
+
+677
+00:32:24,399 --> 00:32:29,279
+where the software development will go
+
+678
+00:32:26,320 --> 00:32:32,159
+it is the question that I have no idea
+
+679
+00:32:29,279 --> 00:32:35,679
+uh because I think the how I see the
+
+680
+00:32:32,159 --> 00:32:37,519
+industry right now um everyone using it
+
+681
+00:32:35,679 --> 00:32:40,080
+the
+
+682
+00:32:37,519 --> 00:32:42,080
+number of people that using this in
+
+683
+00:32:40,080 --> 00:32:44,880
+advanced level
+
+684
+00:32:42,080 --> 00:32:47,519
+so let's say we have uh the first level
+
+685
+00:32:44,880 --> 00:32:50,640
+of uh uh quitting assistance kind of
+
+686
+00:32:47,519 --> 00:32:54,640
+like a copilot etc. Um, [clears throat]
+
+687
+00:32:50,640 --> 00:32:57,440
+this is probably 80% of the market
+
+688
+00:32:54,640 --> 00:32:59,039
+or even more. And you still have, by the
+
+689
+00:32:57,440 --> 00:33:01,039
+way, a lot of folks that believe that
+
+690
+00:32:59,039 --> 00:33:04,000
+they can do things better than AI. And
+
+691
+00:33:01,039 --> 00:33:06,799
+thank you. I really appreciate that
+
+692
+00:33:04,000 --> 00:33:10,399
+those folks exist. They really helping
+
+693
+00:33:06,799 --> 00:33:11,877
+us to grow our business. Um, I I'm
+
+694
+00:33:10,399 --> 00:33:12,960
+really happy for this.
+
+695
+00:33:11,877 --> 00:33:16,320
+[cough and clears throat]
+
+696
+00:33:12,960 --> 00:33:18,480
+And last year we had those folks that we
+
+697
+00:33:16,320 --> 00:33:21,360
+had inside of the company that no longer
+
+698
+00:33:18,480 --> 00:33:24,960
+was a company because we don't need the
+
+699
+00:33:21,360 --> 00:33:28,240
+folks to really write better than AI. We
+
+700
+00:33:24,960 --> 00:33:31,279
+need folks to create systems for AI to
+
+701
+00:33:28,240 --> 00:33:33,200
+create systems that better. So it's
+
+702
+00:33:31,279 --> 00:33:35,120
+simple
+
+703
+00:33:33,200 --> 00:33:39,679
+where it will go. It's a good question
+
+704
+00:33:35,120 --> 00:33:43,919
+that I think I have really a lot of open
+
+705
+00:33:39,679 --> 00:33:46,480
+um uh open-ended uh discussions because
+
+706
+00:33:43,919 --> 00:33:48,799
+realistically
+
+707
+00:33:46,480 --> 00:33:50,480
+we don't really know if we will have a
+
+708
+00:33:48,799 --> 00:33:52,559
+system that will allow us to create
+
+709
+00:33:50,480 --> 00:33:54,080
+everything from scratch in the matter of
+
+710
+00:33:52,559 --> 00:33:57,600
+seconds.
+
+711
+00:33:54,080 --> 00:33:59,679
+I think a few kind of like ideas where I
+
+712
+00:33:57,600 --> 00:34:01,200
+think we kind of like are going. I think
+
+713
+00:33:59,679 --> 00:34:06,240
+in
+
+714
+00:34:01,200 --> 00:34:08,480
+um real life um what I see is the model
+
+715
+00:34:06,240 --> 00:34:12,399
+advancements that happening at least
+
+716
+00:34:08,480 --> 00:34:15,119
+like right now doesn't really affect the
+
+717
+00:34:12,399 --> 00:34:17,280
+quality of output so dramatically
+
+718
+00:34:15,119 --> 00:34:20,839
+because again the difference between
+
+719
+00:34:17,280 --> 00:34:20,839
+feeble meas
+
+720
+00:34:21,359 --> 00:34:27,760
+etc
+
+721
+00:34:23,200 --> 00:34:29,839
+is basically really minimal if you have
+
+722
+00:34:27,760 --> 00:34:33,040
+the right heart if you have the right
+
+723
+00:34:29,839 --> 00:34:34,879
+system and you're not stupid enough to
+
+724
+00:34:33,040 --> 00:34:38,399
+not create the documentation in a stupid
+
+725
+00:34:34,879 --> 00:34:41,359
+way. Um, in this case, you will have
+
+726
+00:34:38,399 --> 00:34:43,040
+pretty much a good output and you can
+
+727
+00:34:41,359 --> 00:34:46,560
+use
+
+728
+00:34:43,040 --> 00:34:50,000
+open source models as well and have cost
+
+729
+00:34:46,560 --> 00:34:51,839
+like that 10 times less. [clears throat]
+
+730
+00:34:50,000 --> 00:34:55,520
+I think this is where we kind of like
+
+731
+00:34:51,839 --> 00:34:57,680
+leading this into. So the better models
+
+732
+00:34:55,520 --> 00:35:00,400
+doesn't equal the better performance
+
+733
+00:34:57,680 --> 00:35:01,680
+because the problem is actually people
+
+734
+00:35:00,400 --> 00:35:02,400
+that prompting this.
+
+735
+00:35:01,680 --> 00:35:04,160
+>> Mhm.
+
+736
+00:35:02,400 --> 00:35:07,040
+>> And I'm not saying that the prompting is
+
+737
+00:35:04,160 --> 00:35:09,520
+a problem. I'm saying that many people
+
+738
+00:35:07,040 --> 00:35:12,800
+just do not give AI enough information
+
+739
+00:35:09,520 --> 00:35:15,920
+what they need to do. They give AI two
+
+740
+00:35:12,800 --> 00:35:17,440
+lines. Hey, build me
+
+741
+00:35:15,920 --> 00:35:20,800
+wherever
+
+742
+00:35:17,440 --> 00:35:23,599
+um this system um and I build me a
+
+743
+00:35:20,800 --> 00:35:27,200
+website for my company. I'm doing
+
+744
+00:35:23,599 --> 00:35:30,079
+wherever balloon uh sales for holiday
+
+745
+00:35:27,200 --> 00:35:33,839
+parties. Great.
+
+746
+00:35:30,079 --> 00:35:36,320
+It's not enough to describe the task.
+
+747
+00:35:33,839 --> 00:35:38,960
+You probably should really think through
+
+748
+00:35:36,320 --> 00:35:41,200
+the content first before you ask about
+
+749
+00:35:38,960 --> 00:35:45,760
+uh the website as example. in this case
+
+750
+00:35:41,200 --> 00:35:48,240
+is a simple uh um example and you need
+
+751
+00:35:45,760 --> 00:35:53,599
+to go through the understanding what the
+
+752
+00:35:48,240 --> 00:35:56,960
+actual flows um uh of users should be.
+
+753
+00:35:53,599 --> 00:35:59,359
+So I think this is not going away and AI
+
+754
+00:35:56,960 --> 00:36:02,160
+with better models will not solve this
+
+755
+00:35:59,359 --> 00:36:03,920
+and in large systems it's still the
+
+756
+00:36:02,160 --> 00:36:06,560
+question of really deep understanding of
+
+757
+00:36:03,920 --> 00:36:10,480
+the users and really deep understanding
+
+758
+00:36:06,560 --> 00:36:11,520
+of um what people will buy and what they
+
+759
+00:36:10,480 --> 00:36:12,079
+actually need.
+
+760
+00:36:11,520 --> 00:36:17,040
+>> Mhm.
+
+761
+00:36:12,079 --> 00:36:20,240
+>> And in many cases um it is the question
+
+762
+00:36:17,040 --> 00:36:22,079
+of harnessing and engineering uh those
+
+763
+00:36:20,240 --> 00:36:25,280
+systems.
+
+764
+00:36:22,079 --> 00:36:30,640
+Will we have uh more faster development?
+
+765
+00:36:25,280 --> 00:36:33,599
+Absolutely. Yes. Um I think um the cost
+
+766
+00:36:30,640 --> 00:36:36,560
+um like we kind of like have a kind of
+
+767
+00:36:33,599 --> 00:36:38,400
+like pricing crisis uh that coming
+
+768
+00:36:36,560 --> 00:36:41,200
+probably to the market
+
+769
+00:36:38,400 --> 00:36:44,800
+>> as well because um the cost is kind of
+
+770
+00:36:41,200 --> 00:36:47,839
+like going down in a way. Um
+
+771
+00:36:44,800 --> 00:36:52,480
+again right now I think many uh folks
+
+772
+00:36:47,839 --> 00:36:55,040
+set in more advanced levels um um uh of
+
+773
+00:36:52,480 --> 00:36:59,920
+uh agentic development systems have a
+
+774
+00:36:55,040 --> 00:37:04,320
+age of uh creating u faster and better
+
+775
+00:36:59,920 --> 00:37:07,440
+uh and I think the smaller dev shops and
+
+776
+00:37:04,320 --> 00:37:09,920
+uh folks that don't really s deep into I
+
+777
+00:37:07,440 --> 00:37:12,880
+think those guys
+
+778
+00:37:09,920 --> 00:37:15,920
+will get to this point. Uh but at this
+
+779
+00:37:12,880 --> 00:37:19,359
+point it uh we'll have more and more um
+
+780
+00:37:15,920 --> 00:37:22,240
+on um uh uh the folks that already on
+
+781
+00:37:19,359 --> 00:37:25,839
+the uh bigger level but we definitely
+
+782
+00:37:22,240 --> 00:37:28,240
+will have on like midmarket and lower
+
+783
+00:37:25,839 --> 00:37:31,359
+tier market we'll have a lot of folks
+
+784
+00:37:28,240 --> 00:37:34,240
+that kind of hey we'll do everything for
+
+785
+00:37:31,359 --> 00:37:38,480
+5,000 or whatever. Yeah, we'll have
+
+786
+00:37:34,240 --> 00:37:41,200
+those cases and again you kind of like
+
+787
+00:37:38,480 --> 00:37:44,960
+looking into this and with the same kind
+
+788
+00:37:41,200 --> 00:37:47,280
+of mindset as like can you let's say we
+
+789
+00:37:44,960 --> 00:37:50,160
+like 5 years ago. Yeah. Can we go to
+
+790
+00:37:47,280 --> 00:37:52,400
+cheaper developer in different countries
+
+791
+00:37:50,160 --> 00:37:53,599
+and build systems
+
+792
+00:37:52,400 --> 00:37:56,400
+>> for cheaper?
+
+793
+00:37:53,599 --> 00:37:59,520
+>> Absolutely. Uh will this be a good
+
+794
+00:37:56,400 --> 00:38:03,119
+quality product? No.
+
+795
+00:37:59,520 --> 00:38:05,359
+Like I mean some exceptions, sure, but
+
+796
+00:38:03,119 --> 00:38:08,240
+generally speaking, if you're hiring
+
+797
+00:38:05,359 --> 00:38:10,720
+someone for 15 bucks an hour,
+
+798
+00:38:08,240 --> 00:38:12,400
+do not expect them to build you a next
+
+799
+00:38:10,720 --> 00:38:13,359
+unicorn.
+
+800
+00:38:12,400 --> 00:38:16,240
+>> Yeah.
+
+801
+00:38:13,359 --> 00:38:18,560
+>> Like don't don't be like ridiculous
+
+802
+00:38:16,240 --> 00:38:20,800
+because people thinking that developers
+
+803
+00:38:18,560 --> 00:38:22,880
+for 200 bucks an hour and 20 bucks an
+
+804
+00:38:20,800 --> 00:38:24,880
+hour are the same thing. No, they're
+
+805
+00:38:22,880 --> 00:38:25,520
+like completely different.
+
+806
+00:38:24,880 --> 00:38:28,240
+>> Yeah.
+
+807
+00:38:25,520 --> 00:38:32,079
+>> Can both of them be stupid? Yes. But
+
+808
+00:38:28,240 --> 00:38:34,400
+generally this is this is a difference.
+
+809
+00:38:32,079 --> 00:38:36,960
+Yeah, that that that that makes absolute
+
+810
+00:38:34,400 --> 00:38:39,680
+sense and I see how your your your
+
+811
+00:38:36,960 --> 00:38:43,200
+advisory consulting investing sort of
+
+812
+00:38:39,680 --> 00:38:45,359
+like fit hand inand with that because uh
+
+813
+00:38:43,200 --> 00:38:49,599
+you definitely
+
+814
+00:38:45,359 --> 00:38:51,599
+uh they say taste and judgment is a big
+
+815
+00:38:49,599 --> 00:38:54,400
+thing these days and I think with your
+
+816
+00:38:51,599 --> 00:38:58,720
+experience it comes a lot of that. So,
+
+817
+00:38:54,400 --> 00:39:03,280
+um I just wanted to to to end out with
+
+818
+00:38:58,720 --> 00:39:06,079
+um I know that
+
+819
+00:39:03,280 --> 00:39:07,359
+you I've said this a couple times
+
+820
+00:39:06,079 --> 00:39:09,760
+already that you don't know where the
+
+821
+00:39:07,359 --> 00:39:12,560
+industry is going, but if there was one
+
+822
+00:39:09,760 --> 00:39:16,000
+bold prediction that you can make for
+
+823
+00:39:12,560 --> 00:39:20,000
+the next 12 to 18 months that you can
+
+824
+00:39:16,000 --> 00:39:25,520
+say, you know, I I I I I'll put my name
+
+825
+00:39:20,000 --> 00:39:28,960
+on this prediction. What would it be?
+
+826
+00:39:25,520 --> 00:39:33,280
+>> Oh boy. Uh, and after people will quote
+
+827
+00:39:28,960 --> 00:39:34,560
+me and I would be like, um, I I'll I'll
+
+828
+00:39:33,280 --> 00:39:39,040
+clip this one.
+
+829
+00:39:34,560 --> 00:39:40,560
+>> Oh no. Um, okay. I I think I I will give
+
+830
+00:39:39,040 --> 00:39:42,079
+you two just in case.
+
+831
+00:39:40,560 --> 00:39:44,480
+>> Okay. [laughter]
+
+832
+00:39:42,079 --> 00:39:48,960
+Uh, to to choose which one will work.
+
+833
+00:39:44,480 --> 00:39:52,720
+Um, probably no. Uh, none of them. I
+
+834
+00:39:48,960 --> 00:39:55,280
+think uh the first logic that we would
+
+835
+00:39:52,720 --> 00:39:58,079
+see is
+
+836
+00:39:55,280 --> 00:39:59,119
+that we'll have more and more um open
+
+837
+00:39:58,079 --> 00:39:59,520
+source usage.
+
+838
+00:39:59,119 --> 00:40:03,200
+>> Okay.
+
+839
+00:39:59,520 --> 00:40:07,040
+>> Uh so basically we'll have um
+
+840
+00:40:03,200 --> 00:40:11,119
+multiidentic systems on um many open
+
+841
+00:40:07,040 --> 00:40:13,440
+source uh models that um you're not
+
+842
+00:40:11,119 --> 00:40:16,320
+giving away your data. Again, if if
+
+843
+00:40:13,440 --> 00:40:19,520
+you're a small person like company
+
+844
+00:40:16,320 --> 00:40:21,760
+building some not like life science type
+
+845
+00:40:19,520 --> 00:40:23,760
+of stuff and you building another S for
+
+846
+00:40:21,760 --> 00:40:25,680
+X Y and Z things, it doesn't really
+
+847
+00:40:23,760 --> 00:40:28,800
+matter. But when we're talking about
+
+848
+00:40:25,680 --> 00:40:31,280
+like really companies with a lot of uh
+
+849
+00:40:28,800 --> 00:40:33,119
+private data, hey, open source is a way
+
+850
+00:40:31,280 --> 00:40:36,800
+to go and with the right harnessing,
+
+851
+00:40:33,119 --> 00:40:40,240
+it's actually not much worse than um the
+
+852
+00:40:36,800 --> 00:40:42,880
+best models on the market. Um so it is
+
+853
+00:40:40,240 --> 00:40:45,440
+and much cheaper like it it is really
+
+854
+00:40:42,880 --> 00:40:47,760
+important in terms of the inference. I
+
+855
+00:40:45,440 --> 00:40:51,680
+think this is the one prediction that I
+
+856
+00:40:47,760 --> 00:40:55,440
+see. The second is I think we'll have
+
+857
+00:40:51,680 --> 00:40:57,359
+more and more systems that um have a
+
+858
+00:40:55,440 --> 00:41:01,520
+different
+
+859
+00:40:57,359 --> 00:41:05,760
+um user flow experiences where we
+
+860
+00:41:01,520 --> 00:41:07,599
+actually have less uh people um
+
+861
+00:41:05,760 --> 00:41:10,160
+interacting with the system and doing
+
+862
+00:41:07,599 --> 00:41:13,200
+whatever system need like inputting
+
+863
+00:41:10,160 --> 00:41:15,440
+information inside of the CRM etc. So
+
+864
+00:41:13,200 --> 00:41:18,880
+you basically will have a system that
+
+865
+00:41:15,440 --> 00:41:20,400
+will give you uh tasks that already
+
+866
+00:41:18,880 --> 00:41:22,960
+completed
+
+867
+00:41:20,400 --> 00:41:24,560
+or suggest tasks to do. So it will be
+
+868
+00:41:22,960 --> 00:41:27,520
+something like okay so you had a
+
+869
+00:41:24,560 --> 00:41:30,240
+conversation with John uh so I logged
+
+870
+00:41:27,520 --> 00:41:32,319
+this conversation based on this uh
+
+871
+00:41:30,240 --> 00:41:34,480
+here's the proposal that I generated
+
+872
+00:41:32,319 --> 00:41:36,720
+please review and approve and here's the
+
+873
+00:41:34,480 --> 00:41:40,079
+contract please review and approve as
+
+874
+00:41:36,720 --> 00:41:42,720
+well as uh here's a few tasks to tell
+
+875
+00:41:40,079 --> 00:41:46,319
+the product team to potentially add and
+
+876
+00:41:42,720 --> 00:41:48,720
+I already send those so this is the way
+
+877
+00:41:46,319 --> 00:41:51,280
+how we would see the interactions with u
+
+878
+00:41:48,720 --> 00:41:53,200
+mini interfaces in the future I'm not
+
+879
+00:41:51,280 --> 00:41:56,000
+saying that all will be text. I think it
+
+880
+00:41:53,200 --> 00:41:58,319
+will be still interfaces and UI etc. I
+
+881
+00:41:56,000 --> 00:42:00,800
+think we need the uh visual
+
+882
+00:41:58,319 --> 00:42:04,480
+representation of those things. However,
+
+883
+00:42:00,800 --> 00:42:06,880
+I don't think we need um actually
+
+884
+00:42:04,480 --> 00:42:08,640
+manually click through those uh system
+
+885
+00:42:06,880 --> 00:42:12,640
+and interfaces.
+
+886
+00:42:08,640 --> 00:42:15,760
+And I would pay for this CRM uh more
+
+887
+00:42:12,640 --> 00:42:18,000
+than I would pay for the regular one
+
+888
+00:42:15,760 --> 00:42:20,720
+because it's actually reducing my uh
+
+889
+00:42:18,000 --> 00:42:22,400
+flows. And you can do this inside of
+
+890
+00:42:20,720 --> 00:42:24,079
+Hotspot. You can do this inside of
+
+891
+00:42:22,400 --> 00:42:26,480
+Salesforce right now if you set up this
+
+892
+00:42:24,079 --> 00:42:28,160
+right, but it's not a default.
+
+893
+00:42:26,480 --> 00:42:31,760
+>> Interesting.
+
+894
+00:42:28,160 --> 00:42:34,560
+Yeah, decision data is important. Yep.
+
+895
+00:42:31,760 --> 00:42:38,160
+Um, thank you VM for your your time
+
+896
+00:42:34,560 --> 00:42:40,079
+today. Uh, it was a very enlightening
+
+897
+00:42:38,160 --> 00:42:41,839
+conversation for me and a very fun one
+
+898
+00:42:40,079 --> 00:42:44,079
+because it's about software development
+
+899
+00:42:41,839 --> 00:42:46,560
+which uh
+
+900
+00:42:44,079 --> 00:42:49,200
+it's been a long-term passion of mine.
+
+901
+00:42:46,560 --> 00:42:53,200
+So, uh, have yourself a great day, sir.
+
+902
+00:42:49,200 --> 00:42:53,200
+And, uh, maybe stay on for a second.

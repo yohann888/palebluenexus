@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-08-05T00:06:22.059Z",
+  "model": "claude-sonnet-5",
+  "youtubeId": "v2cOEyVK6QA",
+  "moments": [
+    {
+      "t": 535,
+      "title": "Automated trucks already testing on real roads",
+      "insight": "Self-driving trucks are already operating commercially in mining and rail yards, threatening the largest US profession—9-10 million drivers."
+    },
+    {
+      "t": 740,
+      "title": "Robots are coming back to manufacturing, not humans",
+      "insight": "US manufacturing may return from overseas, but it'll be run by robots instead of human workers."
+    }
+  ]
+}

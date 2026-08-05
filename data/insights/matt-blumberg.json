@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-08-05T00:06:27.932Z",
+  "model": "claude-sonnet-5",
+  "youtubeId": "3znLLBFnvQg",
+  "moments": [
+    {
+      "t": 301,
+      "title": "Content is the next code",
+      "insight": "Matt argues enterprises are now turning to AI for content the way they did for coding, but the guardrails are still missing."
+    },
+    {
+      "t": 504,
+      "title": "LLMs turned writers into editors",
+      "insight": "A client fired all writers, then found her remaining team spends 80% of time fixing LLM-generated content instead of writing."
+    },
+    {
+      "t": 845,
+      "title": "Scanning 5 million pages after an acquisition",
+      "insight": "Markup AI can scan millions of pages to flag or auto-fix brand inconsistencies after a company acquisition."
+    },
+    {
+      "t": 1233,
+      "title": "Bring healthy skepticism to all content",
+      "insight": "Matt says AI makes it more critical than ever to teach people—especially kids—to spot credibility signals, since teens can spot fakes better than adults."
+    }
+  ]
+}

@@ -28,13 +28,15 @@ jobs:
       - name: Refresh feed (YouTube + TikTok) and regenerate sections
         env:
           ENSEMBLE_API_KEY: ${{ secrets.ENSEMBLE_API_KEY }}
+          SUPADATA_API_KEY: ${{ secrets.SUPADATA_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: node scripts/update-feed.mjs
 
       - name: Commit and push if changed
         run: |
           git config user.name "pbn-content-bot"
           git config user.email "bot@palebluenexus.com"
-          git add data/feed.json data/guests.json index.html book/index.html partner/index.html episodes images/feed images/promo share/guest sitemap.xml llms.txt
+          git add data/feed.json data/guests.json index.html book/index.html partner/index.html episodes images/feed images/promo share/guest sitemap.xml llms.txt transcripts data/insights
           for guest_image in images/guest-*.jpg images/guest-*.svg; do
             [ -e "$guest_image" ] && git add "$guest_image"
           done

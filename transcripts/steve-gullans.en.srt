@@ -1,0 +1,4879 @@
+1
+00:00:04,584 --> 00:00:06,604
+[music]
+
+2
+00:00:14,480 --> 00:00:22,720
+Hey, Steve. Uh, welcome to Pale Blue
+
+3
+00:00:17,680 --> 00:00:25,119
+Nexus. Uh, you're a PhD.
+
+4
+00:00:22,720 --> 00:00:26,880
+Um, graduated from one of the top
+
+5
+00:00:25,119 --> 00:00:29,039
+schools.
+
+6
+00:00:26,880 --> 00:00:32,079
+Tell me a little bit about your project,
+
+7
+00:00:29,039 --> 00:00:33,280
+Think, and uh welcome to the show.
+
+8
+00:00:32,079 --> 00:00:36,559
+>> All right. Well, it's great to be with
+
+9
+00:00:33,280 --> 00:00:38,399
+you, Johan. Uh real a fan of anything
+
+10
+00:00:36,559 --> 00:00:40,320
+that's entrepreneurial and especially
+
+11
+00:00:38,399 --> 00:00:42,320
+innovators like you, bringing the
+
+12
+00:00:40,320 --> 00:00:45,040
+messages to the world that matter most
+
+13
+00:00:42,320 --> 00:00:46,960
+for the future generations. Uh I wake up
+
+14
+00:00:45,040 --> 00:00:49,600
+every morning trying to inspire somebody
+
+15
+00:00:46,960 --> 00:00:51,360
+younger uh to build something new that's
+
+16
+00:00:49,600 --> 00:00:54,399
+going to make people stand up and feel
+
+17
+00:00:51,360 --> 00:00:56,160
+that life is better. Uh so yeah my my
+
+18
+00:00:54,399 --> 00:00:58,239
+background is very eclectic. I was an
+
+19
+00:00:56,160 --> 00:01:01,120
+academic scientist
+
+20
+00:00:58,239 --> 00:01:03,760
+uh ended that part of my career about 23
+
+21
+00:01:01,120 --> 00:01:05,840
+years ago uh as a professor at Harvard
+
+22
+00:01:03,760 --> 00:01:07,920
+Med. I left because I wasn't making a
+
+23
+00:01:05,840 --> 00:01:10,159
+big enough difference in the lives of
+
+24
+00:01:07,920 --> 00:01:12,799
+everyday people. I ran a couple of
+
+25
+00:01:10,159 --> 00:01:14,960
+companies, ran a venture capital fund
+
+26
+00:01:12,799 --> 00:01:17,520
+and ran a public company. Got to ring
+
+27
+00:01:14,960 --> 00:01:20,560
+the NASDAQ bell. And so I've seen every
+
+28
+00:01:17,520 --> 00:01:23,040
+side imaginable. Uh from the beautiful,
+
+29
+00:01:20,560 --> 00:01:25,200
+the fantastic, the glorious down to the
+
+30
+00:01:23,040 --> 00:01:26,880
+the bad and the ugly, unders sides,
+
+31
+00:01:25,200 --> 00:01:28,080
+underbellies of bankruptcies and
+
+32
+00:01:26,880 --> 00:01:31,439
+everything else. I've probably been
+
+33
+00:01:28,080 --> 00:01:34,560
+around 60 companies at some level
+
+34
+00:01:31,439 --> 00:01:37,119
+firsthand uh in my journey going back to
+
+35
+00:01:34,560 --> 00:01:39,200
+my academic days. And so uh
+
+36
+00:01:37,119 --> 00:01:41,520
+fundamentally I care about working with
+
+37
+00:01:39,200 --> 00:01:43,680
+great people and building good teams and
+
+38
+00:01:41,520 --> 00:01:45,200
+doing something that's wonderful for the
+
+39
+00:01:43,680 --> 00:01:47,920
+world.
+
+40
+00:01:45,200 --> 00:01:50,240
+Yeah, I connected with you on our pre-in
+
+41
+00:01:47,920 --> 00:01:53,280
+call um because you're developing this
+
+42
+00:01:50,240 --> 00:01:56,320
+really cool product that uh you know my
+
+43
+00:01:53,280 --> 00:02:00,079
+kids can use like they it's a it's a
+
+44
+00:01:56,320 --> 00:02:04,000
+hardware device um it sits on your head
+
+45
+00:02:00,079 --> 00:02:06,079
+and given your background you know like
+
+46
+00:02:04,000 --> 00:02:07,680
+you're kind of well positioned to to
+
+47
+00:02:06,079 --> 00:02:10,080
+develop this product. Tell me a little
+
+48
+00:02:07,680 --> 00:02:11,599
+bit about it and and what do you expect
+
+49
+00:02:10,080 --> 00:02:14,319
+to achieve with it?
+
+50
+00:02:11,599 --> 00:02:17,520
+>> Right. So the the uh the company's name
+
+51
+00:02:14,319 --> 00:02:19,599
+is Think T H Y N K. Uh I was actually
+
+52
+00:02:17,520 --> 00:02:22,400
+retired and I came out of retirement
+
+53
+00:02:19,599 --> 00:02:25,599
+because I'd seen this technology. It was
+
+54
+00:02:22,400 --> 00:02:27,760
+languishing a bit and so I I took hold
+
+55
+00:02:25,599 --> 00:02:30,239
+of it and brought it forward into the
+
+56
+00:02:27,760 --> 00:02:32,319
+markets, refined the the the technology
+
+57
+00:02:30,239 --> 00:02:35,280
+a bit. And what it is is it's a little
+
+58
+00:02:32,319 --> 00:02:38,480
+headset that you wear. By you I mean
+
+59
+00:02:35,280 --> 00:02:40,959
+anybody between the age of five and 95.
+
+60
+00:02:38,480 --> 00:02:45,120
+Anybody from any walk of life or any
+
+61
+00:02:40,959 --> 00:02:48,080
+nationality. And using this headset uh
+
+62
+00:02:45,120 --> 00:02:51,680
+you actually it passively monitors your
+
+63
+00:02:48,080 --> 00:02:54,239
+brain waves in related to very very
+
+64
+00:02:51,680 --> 00:02:56,480
+specific functions which again the field
+
+65
+00:02:54,239 --> 00:02:59,519
+neuroscience has been working on this
+
+66
+00:02:56,480 --> 00:03:01,360
+for decades. And then your brain waves
+
+67
+00:02:59,519 --> 00:03:04,080
+are then used to control a video game on
+
+68
+00:03:01,360 --> 00:03:06,879
+an iPad. It's an adventure game like
+
+69
+00:03:04,080 --> 00:03:08,879
+Temple Doom or you know Subway Surf or
+
+70
+00:03:06,879 --> 00:03:12,959
+things that kids can play or adults can
+
+71
+00:03:08,879 --> 00:03:15,440
+play. Uh but it's not an addictive game.
+
+72
+00:03:12,959 --> 00:03:18,239
+It's a game that's taught it's to teach
+
+73
+00:03:15,440 --> 00:03:20,239
+you cognitive skills. Although some kids
+
+74
+00:03:18,239 --> 00:03:22,879
+in particular get addicted in the sense
+
+75
+00:03:20,239 --> 00:03:24,480
+that they enjoy winning uh against
+
+76
+00:03:22,879 --> 00:03:27,120
+themselves, seeing how much they can
+
+77
+00:03:24,480 --> 00:03:28,800
+achieve on their own. there there is uh
+
+78
+00:03:27,120 --> 00:03:32,239
+no ultimate goal in that other than
+
+79
+00:03:28,800 --> 00:03:36,879
+improving your tech brain skills and uh
+
+80
+00:03:32,239 --> 00:03:38,400
+we're now serving everyday people. We
+
+81
+00:03:36,879 --> 00:03:41,680
+don't go direct to consumer because
+
+82
+00:03:38,400 --> 00:03:44,560
+we're a very small team right now. Uh so
+
+83
+00:03:41,680 --> 00:03:47,360
+we're we started in the first market is
+
+84
+00:03:44,560 --> 00:03:50,480
+uh public schools mostly in the south
+
+85
+00:03:47,360 --> 00:03:53,280
+and we'll be moving into sports. And the
+
+86
+00:03:50,480 --> 00:03:55,440
+best way to think about what we teach is
+
+87
+00:03:53,280 --> 00:03:58,159
+we all wish we could get into a flow
+
+88
+00:03:55,440 --> 00:04:01,760
+state every time we're writing uh a
+
+89
+00:03:58,159 --> 00:04:03,599
+document or driving the car or in a very
+
+90
+00:04:01,760 --> 00:04:06,159
+challenging moment uh
+
+91
+00:04:03,599 --> 00:04:07,920
+>> stressful taking an exam.
+
+92
+00:04:06,159 --> 00:04:09,680
+>> But somehow we get locked into these
+
+93
+00:04:07,920 --> 00:04:10,959
+little pathways that you know you're
+
+94
+00:04:09,680 --> 00:04:13,120
+worried about dinner, you're worried
+
+95
+00:04:10,959 --> 00:04:15,840
+about uh your date tonight or something
+
+96
+00:04:13,120 --> 00:04:17,359
+else and you're distracted. So, we get
+
+97
+00:04:15,840 --> 00:04:20,079
+you into that flow state of being
+
+98
+00:04:17,359 --> 00:04:22,400
+non-distracted while being in a high
+
+99
+00:04:20,079 --> 00:04:25,520
+pressure situation of having to be part
+
+100
+00:04:22,400 --> 00:04:27,759
+of a video game. So, imagine it's it's
+
+101
+00:04:25,520 --> 00:04:31,440
+not like sitting in a cave and
+
+102
+00:04:27,759 --> 00:04:33,759
+meditating. It's like being at work on a
+
+103
+00:04:31,440 --> 00:04:35,840
+timeline to deliver something to your
+
+104
+00:04:33,759 --> 00:04:39,040
+boss. How do I get into this flow state
+
+105
+00:04:35,840 --> 00:04:41,759
+under pressure? That's what we teach.
+
+106
+00:04:39,040 --> 00:04:43,520
+>> Get into a flow state under pressure. I
+
+107
+00:04:41,759 --> 00:04:47,600
+mean, it it's already hard enough to get
+
+108
+00:04:43,520 --> 00:04:50,639
+into a flow state. Um, and now you're
+
+109
+00:04:47,600 --> 00:04:52,639
+you're almost saying that you can
+
+110
+00:04:50,639 --> 00:04:54,320
+bring it on at will, which is like a
+
+111
+00:04:52,639 --> 00:04:57,360
+superpower these days, especially with
+
+112
+00:04:54,320 --> 00:04:58,960
+so many distractions out there. It is a
+
+113
+00:04:57,360 --> 00:05:01,600
+superpower.
+
+114
+00:04:58,960 --> 00:05:04,000
+Uh, I had a personal beginning in this
+
+115
+00:05:01,600 --> 00:05:05,520
+field about 10 years ago. I was doing uh
+
+116
+00:05:04,000 --> 00:05:07,280
+some
+
+117
+00:05:05,520 --> 00:05:09,759
+uh mindfulness training with the John
+
+118
+00:05:07,280 --> 00:05:12,320
+Kitt Zen Institute in Massachusetts and
+
+119
+00:05:09,759 --> 00:05:14,720
+I was failing miserably. I couldn't get
+
+120
+00:05:12,320 --> 00:05:16,720
+away from my own thoughts. And so I
+
+121
+00:05:14,720 --> 00:05:20,320
+actually had the pleasure of meeting Dr.
+
+122
+00:05:16,720 --> 00:05:22,800
+Jud Brewer who uh brought me into his
+
+123
+00:05:20,320 --> 00:05:25,360
+lab with tens of thousands of dollars of
+
+124
+00:05:22,800 --> 00:05:28,080
+EEG and other equipment. And I learned
+
+125
+00:05:25,360 --> 00:05:30,080
+with bio feedback to actually meditate
+
+126
+00:05:28,080 --> 00:05:31,360
+at a level I know most humans have never
+
+127
+00:05:30,080 --> 00:05:34,320
+felt. Mhm.
+
+128
+00:05:31,360 --> 00:05:36,560
+>> But it was the value of the device that
+
+129
+00:05:34,320 --> 00:05:38,160
+I could actually teach myself, but was
+
+130
+00:05:36,560 --> 00:05:40,639
+because it was giving me an independent
+
+131
+00:05:38,160 --> 00:05:42,560
+measure. Imagine trying to lose weight
+
+132
+00:05:40,639 --> 00:05:44,960
+without having a scale to stand on. Oh,
+
+133
+00:05:42,560 --> 00:05:46,800
+I feel a lot skinnier today. [laughter]
+
+134
+00:05:44,960 --> 00:05:48,639
+You really don't know what you're doing
+
+135
+00:05:46,800 --> 00:05:50,720
+in a flow state. But we all know, we've
+
+136
+00:05:48,639 --> 00:05:53,440
+all been in that state, getting a lot of
+
+137
+00:05:50,720 --> 00:05:55,280
+work done or playing music or somewhere
+
+138
+00:05:53,440 --> 00:05:58,320
+in a sport, you don't even remember
+
+139
+00:05:55,280 --> 00:06:01,280
+making the shot, but it went in somehow.
+
+140
+00:05:58,320 --> 00:06:05,280
+>> That's trainable. That's something we've
+
+141
+00:06:01,280 --> 00:06:07,840
+lost as a modern species because of our
+
+142
+00:06:05,280 --> 00:06:11,360
+distracted lives.
+
+143
+00:06:07,840 --> 00:06:14,960
+>> Why doesn't uh a current
+
+144
+00:06:11,360 --> 00:06:17,280
+publisher like Nintendo or somebody
+
+145
+00:06:14,960 --> 00:06:18,800
+that's really good at hardware develop a
+
+146
+00:06:17,280 --> 00:06:20,639
+device like this? Is it just that
+
+147
+00:06:18,800 --> 00:06:22,240
+they're align their incentives don't
+
+148
+00:06:20,639 --> 00:06:26,319
+align here?
+
+149
+00:06:22,240 --> 00:06:27,600
+>> Uh it's there's a few reasons. Um, one
+
+150
+00:06:26,319 --> 00:06:29,199
+there there's never been a product
+
+151
+00:06:27,600 --> 00:06:32,800
+that's worked in this space until we
+
+152
+00:06:29,199 --> 00:06:34,400
+came along. Uh, literally billions have
+
+153
+00:06:32,800 --> 00:06:36,240
+been thrown, for example, working in
+
+154
+00:06:34,400 --> 00:06:38,160
+schools primarily right now. Billions
+
+155
+00:06:36,240 --> 00:06:41,120
+have been thrown with into technology to
+
+156
+00:06:38,160 --> 00:06:43,360
+help students do better in school.
+
+157
+00:06:41,120 --> 00:06:45,199
+How has it worked out? Well, we've given
+
+158
+00:06:43,360 --> 00:06:46,720
+them standardized tests and they're not
+
+159
+00:06:45,199 --> 00:06:48,560
+doing any better. We can now blame
+
+160
+00:06:46,720 --> 00:06:51,039
+COVID, but they're still not doing any
+
+161
+00:06:48,560 --> 00:06:53,440
+better no matter what we throw. When we
+
+162
+00:06:51,039 --> 00:06:55,919
+do this, kids behavior calms down when
+
+163
+00:06:53,440 --> 00:06:57,680
+we our self-regulatory pathways in our
+
+164
+00:06:55,919 --> 00:07:00,400
+brain that we help develop over the
+
+165
+00:06:57,680 --> 00:07:02,400
+course of just six weeks and their math
+
+166
+00:07:00,400 --> 00:07:04,720
+and reading scores on standardized tests
+
+167
+00:07:02,400 --> 00:07:07,520
+go up one grade level playing just an
+
+168
+00:07:04,720 --> 00:07:09,360
+hour a week. And big companies care
+
+169
+00:07:07,520 --> 00:07:11,840
+about
+
+170
+00:07:09,360 --> 00:07:14,160
+selling to everybody.
+
+171
+00:07:11,840 --> 00:07:16,080
+And in the gaming world, it's very easy
+
+172
+00:07:14,160 --> 00:07:17,680
+to sell something that's a dopamine
+
+173
+00:07:16,080 --> 00:07:20,240
+rush.
+
+174
+00:07:17,680 --> 00:07:22,720
+>> You challenge in a in a co in that kind
+
+175
+00:07:20,240 --> 00:07:25,440
+of cognitive sense. Our game challenges
+
+176
+00:07:22,720 --> 00:07:29,120
+you every instant at your own personal
+
+177
+00:07:25,440 --> 00:07:30,800
+level. It's dynamically adjusting to how
+
+178
+00:07:29,120 --> 00:07:33,599
+good you are.
+
+179
+00:07:30,800 --> 00:07:35,280
+>> And so as a result, it's like going to
+
+180
+00:07:33,599 --> 00:07:38,400
+the gym. Does it feel good to lift
+
+181
+00:07:35,280 --> 00:07:41,199
+weights every single day? And most
+
+182
+00:07:38,400 --> 00:07:42,720
+people quit after a month. And so
+
+183
+00:07:41,199 --> 00:07:45,919
+something is good for you takes some
+
+184
+00:07:42,720 --> 00:07:47,599
+dedication. And that's what uh the big v
+
+185
+00:07:45,919 --> 00:07:49,199
+the big companies know that if you're
+
+186
+00:07:47,599 --> 00:07:51,520
+counting on people to buy something
+
+187
+00:07:49,199 --> 00:07:53,919
+that's good for them and to get a
+
+188
+00:07:51,520 --> 00:07:56,319
+subscription that's year after year it's
+
+189
+00:07:53,919 --> 00:07:58,479
+not going to work. [laughter]
+
+190
+00:07:56,319 --> 00:08:01,520
+But there is an in between stage. It is
+
+191
+00:07:58,479 --> 00:08:04,720
+possible to think of video games
+
+192
+00:08:01,520 --> 00:08:07,280
+controlled by a headset like ours where
+
+193
+00:08:04,720 --> 00:08:09,280
+there's actually different routes to
+
+194
+00:08:07,280 --> 00:08:12,080
+take. Okay, I mean this is in the future
+
+195
+00:08:09,280 --> 00:08:13,840
+where some are the training comp steps
+
+196
+00:08:12,080 --> 00:08:15,840
+and the others are just the pure fun
+
+197
+00:08:13,840 --> 00:08:17,919
+steps. So you can begin to integrate
+
+198
+00:08:15,840 --> 00:08:19,919
+across platforms.
+
+199
+00:08:17,919 --> 00:08:24,479
+>> So it's a scientific problem and it's
+
+200
+00:08:19,919 --> 00:08:26,479
+also a understanding your market uh
+
+201
+00:08:24,479 --> 00:08:27,919
+problem behavior. How do you get people
+
+202
+00:08:26,479 --> 00:08:29,440
+to change behaviors?
+
+203
+00:08:27,919 --> 00:08:31,680
+>> They're happy with the results. And
+
+204
+00:08:29,440 --> 00:08:33,760
+that's why we like to do work in groups
+
+205
+00:08:31,680 --> 00:08:35,919
+because everybody shows up for their
+
+206
+00:08:33,760 --> 00:08:38,479
+their group uh tutoring class or they
+
+207
+00:08:35,919 --> 00:08:40,240
+show up for their senior citizen weekly
+
+208
+00:08:38,479 --> 00:08:42,000
+reading class or you know book reading
+
+209
+00:08:40,240 --> 00:08:43,440
+or whatever. If you show up for this
+
+210
+00:08:42,000 --> 00:08:46,320
+class, you're going to do it the end of
+
+211
+00:08:43,440 --> 00:08:50,000
+six weeks. You got the benefit.
+
+212
+00:08:46,320 --> 00:08:53,200
+So, the game's called Skyler's Run, and
+
+213
+00:08:50,000 --> 00:08:57,920
+um it monitors
+
+214
+00:08:53,200 --> 00:08:59,360
+uh the users's attention state every 100
+
+215
+00:08:57,920 --> 00:09:00,160
+milliseconds right?
+
+216
+00:08:59,360 --> 00:09:02,880
+>> Correct.
+
+217
+00:09:00,160 --> 00:09:05,040
+>> Um what's kind of like the most
+
+218
+00:09:02,880 --> 00:09:07,600
+uncomfortable thing you've learned
+
+219
+00:09:05,040 --> 00:09:10,000
+regarding the human and how the human
+
+220
+00:09:07,600 --> 00:09:12,320
+behavior is while like I guess looking
+
+221
+00:09:10,000 --> 00:09:15,120
+at the data at scale? Uh
+
+222
+00:09:12,320 --> 00:09:17,440
+>> well there's a few things I've been in
+
+223
+00:09:15,120 --> 00:09:21,040
+uh the field of data generation in
+
+224
+00:09:17,440 --> 00:09:24,480
+health and wellness for my whole career
+
+225
+00:09:21,040 --> 00:09:26,160
+uh where you know fundamentally uh we've
+
+226
+00:09:24,480 --> 00:09:27,760
+actually gotten with wearables in
+
+227
+00:09:26,160 --> 00:09:30,720
+particular to a point where we can
+
+228
+00:09:27,760 --> 00:09:33,120
+measure lots and lots of things but
+
+229
+00:09:30,720 --> 00:09:34,880
+there's very few things that when you're
+
+230
+00:09:33,120 --> 00:09:38,000
+measuring it that actually teaches you
+
+231
+00:09:34,880 --> 00:09:40,240
+how to improve it. uh you know if you
+
+232
+00:09:38,000 --> 00:09:42,080
+wear a heart monitor and says you're
+
+233
+00:09:40,240 --> 00:09:43,680
+stressed it does that monitor doesn't
+
+234
+00:09:42,080 --> 00:09:45,360
+give you a training program how to
+
+235
+00:09:43,680 --> 00:09:47,680
+reduce your stress or your heart rate
+
+236
+00:09:45,360 --> 00:09:50,080
+variability or anything else that's a
+
+237
+00:09:47,680 --> 00:09:53,360
+difference we're seeing here so it's it
+
+238
+00:09:50,080 --> 00:09:56,160
+becomes an approach that people have to
+
+239
+00:09:53,360 --> 00:09:58,640
+understand it's no different
+
+240
+00:09:56,160 --> 00:10:02,160
+than going to the gym
+
+241
+00:09:58,640 --> 00:10:05,040
+>> for your brain 60 years ago who went to
+
+242
+00:10:02,160 --> 00:10:07,839
+the gym to exercise I guarantee your
+
+243
+00:10:05,040 --> 00:10:08,959
+great grandmother didn't Oh, if you
+
+244
+00:10:07,839 --> 00:10:11,279
+asked her, she would have said, "What
+
+245
+00:10:08,959 --> 00:10:14,560
+are you talking about?" Now, we've given
+
+246
+00:10:11,279 --> 00:10:16,720
+over our physical uh challenges to
+
+247
+00:10:14,560 --> 00:10:18,000
+machines and automation and cars and
+
+248
+00:10:16,720 --> 00:10:20,160
+everything else. We're doing the same
+
+249
+00:10:18,000 --> 00:10:24,160
+thing with our brain. So, the idea of a
+
+250
+00:10:20,160 --> 00:10:26,560
+cognitive suite of tools for any age for
+
+251
+00:10:24,160 --> 00:10:28,640
+a wide range of skills. We teach 13
+
+252
+00:10:26,560 --> 00:10:31,200
+skills right now. We're envisioning a
+
+253
+00:10:28,640 --> 00:10:33,440
+map to a 100 skills that is
+
+254
+00:10:31,200 --> 00:10:36,079
+individualized and it can be in any sort
+
+255
+00:10:33,440 --> 00:10:38,160
+of game game setting. So the fundamental
+
+256
+00:10:36,079 --> 00:10:40,640
+difference here is the training aspect
+
+257
+00:10:38,160 --> 00:10:43,279
+that transfers into the real world. So
+
+258
+00:10:40,640 --> 00:10:44,959
+if you're better at this game, you're
+
+259
+00:10:43,279 --> 00:10:47,680
+better at math and reading. You're
+
+260
+00:10:44,959 --> 00:10:48,959
+better at surgery as opposed to if
+
+261
+00:10:47,680 --> 00:10:50,800
+you're better at this game, you can
+
+262
+00:10:48,959 --> 00:10:53,042
+drive Mario Karts anytime you want and
+
+263
+00:10:50,800 --> 00:10:53,760
+that's all you can do. [snorts]
+
+264
+00:10:53,042 --> 00:10:56,399
+[laughter]
+
+265
+00:10:53,760 --> 00:10:59,279
+That's the big difference. All right. I
+
+266
+00:10:56,399 --> 00:11:02,880
+I I see my son on Mario Kart and and all
+
+267
+00:10:59,279 --> 00:11:05,279
+of these games and uh yeah, I'm I'm How
+
+268
+00:11:02,880 --> 00:11:07,920
+much is it, man? I want to buy one.
+
+269
+00:11:05,279 --> 00:11:09,200
+>> So, uh, right right now we're in schools
+
+270
+00:11:07,920 --> 00:11:10,800
+where because kids can share the
+
+271
+00:11:09,200 --> 00:11:13,600
+headsets, we give out the headsets.
+
+272
+00:11:10,800 --> 00:11:15,519
+They're inexpensive, built by team of
+
+273
+00:11:13,600 --> 00:11:17,519
+brilliant engineers that have EEG
+
+274
+00:11:15,519 --> 00:11:18,959
+machines in every major hospital on the
+
+275
+00:11:17,519 --> 00:11:20,480
+planet. But they're very proud of this
+
+276
+00:11:18,959 --> 00:11:22,480
+simple device because the signal and
+
+277
+00:11:20,480 --> 00:11:24,880
+noise is as good as anything they've
+
+278
+00:11:22,480 --> 00:11:26,800
+ever produced before. And the EEG
+
+279
+00:11:24,880 --> 00:11:28,560
+experts, the clinicians and the the
+
+280
+00:11:26,800 --> 00:11:30,000
+psychologists have built something
+
+281
+00:11:28,560 --> 00:11:33,200
+great. And then we also have a team of
+
+282
+00:11:30,000 --> 00:11:35,120
+psychologists who are data analytical
+
+283
+00:11:33,200 --> 00:11:38,640
+people who've gotten their PhDs in
+
+284
+00:11:35,120 --> 00:11:41,839
+gaming technologies and how games can
+
+285
+00:11:38,640 --> 00:11:43,680
+actually map to very specific cognitive
+
+286
+00:11:41,839 --> 00:11:45,360
+skills in the brain.
+
+287
+00:11:43,680 --> 00:11:47,200
+>> And so when you put that combination
+
+288
+00:11:45,360 --> 00:11:49,279
+together, you end up with something
+
+289
+00:11:47,200 --> 00:11:51,120
+that's very compelling. It's the first
+
+290
+00:11:49,279 --> 00:11:53,120
+of what's going to be hundreds of things
+
+291
+00:11:51,120 --> 00:11:56,000
+in the space just like apps on the
+
+292
+00:11:53,120 --> 00:11:58,480
+iPhone. So where we are right now is
+
+293
+00:11:56,000 --> 00:12:01,440
+we're selling it only to schools because
+
+294
+00:11:58,480 --> 00:12:02,959
+we don't have a big team to manage the
+
+295
+00:12:01,440 --> 00:12:04,320
+inbound calls from you know a
+
+296
+00:12:02,959 --> 00:12:06,240
+grandmother who doesn't know how to use
+
+297
+00:12:04,320 --> 00:12:07,360
+an iPad or something because we see
+
+298
+00:12:06,240 --> 00:12:09,120
+these
+
+299
+00:12:07,360 --> 00:12:11,680
+>> we will go direct to consumers in about
+
+300
+00:12:09,120 --> 00:12:15,519
+a year. Uh you can write us you can look
+
+301
+00:12:11,680 --> 00:12:17,680
+for us on think uh it's just about
+
+302
+00:12:15,519 --> 00:12:19,600
+making sure we can give everybody a
+
+303
+00:12:17,680 --> 00:12:22,480
+seamless experience. It shows up in the
+
+304
+00:12:19,600 --> 00:12:24,480
+mail, you put it on and you go. And for
+
+305
+00:12:22,480 --> 00:12:25,760
+right now, it's uh as I tell people, if
+
+306
+00:12:24,480 --> 00:12:27,279
+you know Steve, you might be able to get
+
+307
+00:12:25,760 --> 00:12:31,279
+one. Depends if you're an inves
+
+308
+00:12:27,279 --> 00:12:33,839
+potential investor. But uh uh we have a
+
+309
+00:12:31,279 --> 00:12:35,839
+lot of people asking, but we're also in
+
+310
+00:12:33,839 --> 00:12:39,600
+the schools. We're in Florida, Puerto
+
+311
+00:12:35,839 --> 00:12:41,519
+Rico, Ohio, Tennessee. We're and we're
+
+312
+00:12:39,600 --> 00:12:44,000
+in some of the largest school districts
+
+313
+00:12:41,519 --> 00:12:45,680
+in the entire United States states. So
+
+314
+00:12:44,000 --> 00:12:48,560
+rather than selling one person at a
+
+315
+00:12:45,680 --> 00:12:50,320
+time, we can sell one district and they
+
+316
+00:12:48,560 --> 00:12:53,680
+Puerto Rico for example, we're doing a
+
+317
+00:12:50,320 --> 00:12:55,600
+pilot there has 250,000 students in one
+
+318
+00:12:53,680 --> 00:12:57,760
+school system.
+
+319
+00:12:55,600 --> 00:13:00,240
+>> Wow. Yeah. And even uh through
+
+320
+00:12:57,760 --> 00:13:03,040
+initiatives like uh podcasts, you can
+
+321
+00:13:00,240 --> 00:13:06,880
+reach more people. So um tell me about
+
+322
+00:13:03,040 --> 00:13:10,480
+like cognitive skills and which ones
+
+323
+00:13:06,880 --> 00:13:13,200
+stand out to you as ones that help
+
+324
+00:13:10,480 --> 00:13:15,200
+adults the most in today's world. So the
+
+325
+00:13:13,200 --> 00:13:18,160
+one one we're dealing with is actually
+
+326
+00:13:15,200 --> 00:13:19,920
+fundamentally a uh there's there's
+
+327
+00:13:18,160 --> 00:13:24,000
+different levels if you look at it as
+
+328
+00:13:19,920 --> 00:13:27,680
+sort of pyramid blocks where you build
+
+329
+00:13:24,000 --> 00:13:29,680
+up to the premium executive uh skills,
+
+330
+00:13:27,680 --> 00:13:31,200
+executive function skills of deep
+
+331
+00:13:29,680 --> 00:13:32,959
+reasoning, you know, being able to put
+
+332
+00:13:31,200 --> 00:13:35,760
+mathematical concepts together,
+
+333
+00:13:32,959 --> 00:13:37,600
+understanding uh quantum theory. Those
+
+334
+00:13:35,760 --> 00:13:39,440
+are very high reasoning skills. And it
+
+335
+00:13:37,600 --> 00:13:41,519
+could even be giving speeches in public
+
+336
+00:13:39,440 --> 00:13:44,160
+and things like that where all the
+
+337
+00:13:41,519 --> 00:13:47,760
+skills below it where there's language
+
+338
+00:13:44,160 --> 00:13:49,920
+or you know uh connecting the dots have
+
+339
+00:13:47,760 --> 00:13:52,480
+to come into play to build to the top
+
+340
+00:13:49,920 --> 00:13:55,680
+skill. Well, what we've bypassed with a
+
+341
+00:13:52,480 --> 00:13:58,720
+lot of our technologies recently or
+
+342
+00:13:55,680 --> 00:14:00,560
+actually unlearn is when you start doing
+
+343
+00:13:58,720 --> 00:14:06,480
+multitasking,
+
+344
+00:14:00,560 --> 00:14:09,760
+you lose the framework required to be uh
+
+345
+00:14:06,480 --> 00:14:11,199
+in sort of an automated mode and to be
+
+346
+00:14:09,760 --> 00:14:13,760
+self-regulated where you're not
+
+347
+00:14:11,199 --> 00:14:15,360
+interrupting people every 3 minutes,
+
+348
+00:14:13,760 --> 00:14:17,839
+you're not looking at your phone every
+
+349
+00:14:15,360 --> 00:14:20,880
+two minutes. Those are now reflexes that
+
+350
+00:14:17,839 --> 00:14:23,360
+are built into our body.
+
+351
+00:14:20,880 --> 00:14:27,120
+you everybody opens their phone at least
+
+352
+00:14:23,360 --> 00:14:28,560
+150 times a day and 50% of the time it's
+
+353
+00:14:27,120 --> 00:14:30,480
+not because it's ringing or you
+
+354
+00:14:28,560 --> 00:14:32,720
+expecting it's just you it's like a
+
+355
+00:14:30,480 --> 00:14:34,720
+nervous tw tick I have to do that
+
+356
+00:14:32,720 --> 00:14:37,199
+>> but when you lose that when you pick up
+
+357
+00:14:34,720 --> 00:14:38,399
+that ability it's great for the AI world
+
+358
+00:14:37,199 --> 00:14:40,720
+because you're going to have so many
+
+359
+00:14:38,399 --> 00:14:43,040
+things streaming at you but you still
+
+360
+00:14:40,720 --> 00:14:45,760
+need to sit down and take that damn test
+
+361
+00:14:43,040 --> 00:14:48,560
+again where it no matter what it is or
+
+362
+00:14:45,760 --> 00:14:50,800
+drive the car under in a snowstorm you
+
+363
+00:14:48,560 --> 00:14:52,320
+have to be able to get into a state
+
+364
+00:14:50,800 --> 00:14:56,240
+where you're just excluding everything
+
+365
+00:14:52,320 --> 00:14:58,079
+that's out there. And so I view it as
+
+366
+00:14:56,240 --> 00:15:02,000
+we speak English, but we've learned to
+
+367
+00:14:58,079 --> 00:15:05,839
+speak French with this AI brain now, but
+
+368
+00:15:02,000 --> 00:15:07,760
+we still need English once in a while.
+
+369
+00:15:05,839 --> 00:15:09,360
+And coming back to one of your original
+
+370
+00:15:07,760 --> 00:15:11,519
+questions,
+
+371
+00:15:09,360 --> 00:15:14,000
+people who play it regularly, and we had
+
+372
+00:15:11,519 --> 00:15:16,320
+a lot of summer intern engineers playing
+
+373
+00:15:14,000 --> 00:15:17,920
+a lot who one was a competitive video
+
+374
+00:15:16,320 --> 00:15:20,639
+gamer, he noticed the scores were going
+
+375
+00:15:17,920 --> 00:15:22,720
+up. People who play a lot say, "I know
+
+376
+00:15:20,639 --> 00:15:25,760
+the difference. I know when I'm in the
+
+377
+00:15:22,720 --> 00:15:27,839
+flow state, I can feel it." We believe
+
+378
+00:15:25,760 --> 00:15:32,480
+it's possible to push yourself into it,
+
+379
+00:15:27,839 --> 00:15:34,399
+but we haven't gotten there yet. Okay.
+
+380
+00:15:32,480 --> 00:15:39,199
+But it's great
+
+381
+00:15:34,399 --> 00:15:42,320
+>> and I guess it it can help when it uh
+
+382
+00:15:39,199 --> 00:15:46,079
+with conditions like ADHD and things
+
+383
+00:15:42,320 --> 00:15:48,800
+like that. Uh or keep somebody focused.
+
+384
+00:15:46,079 --> 00:15:50,480
+>> Absolutely. Um focus and attention to
+
+385
+00:15:48,800 --> 00:15:52,079
+the top ones with working memory is
+
+386
+00:15:50,480 --> 00:15:54,560
+another example. If you can't remember a
+
+387
+00:15:52,079 --> 00:15:56,800
+phone number, uh that's a problem. And
+
+388
+00:15:54,560 --> 00:15:58,560
+so imagine how many phone numbers we
+
+389
+00:15:56,800 --> 00:15:59,920
+used to learn as kids. We had them all
+
+390
+00:15:58,560 --> 00:16:02,000
+in our brain. Mhm.
+
+391
+00:15:59,920 --> 00:16:03,680
+>> Now, you ask any of my grandkids, they
+
+392
+00:16:02,000 --> 00:16:05,279
+couldn't remember anybody's phone
+
+393
+00:16:03,680 --> 00:16:07,920
+number. It's not a skill that we have
+
+394
+00:16:05,279 --> 00:16:11,199
+anymore. There's part of the the working
+
+395
+00:16:07,920 --> 00:16:13,040
+uh memory. So, the uh I forgot what you
+
+396
+00:16:11,199 --> 00:16:16,000
+asked. I apologize. The
+
+397
+00:16:13,040 --> 00:16:17,680
+>> even even multiplication tables like we
+
+398
+00:16:16,000 --> 00:16:20,720
+used to know all our multiplication
+
+399
+00:16:17,680 --> 00:16:23,600
+tables. We we used to have to to to say
+
+400
+00:16:20,720 --> 00:16:26,240
+them uh all of them in front of the
+
+401
+00:16:23,600 --> 00:16:28,320
+class or you know on on demand. And I
+
+402
+00:16:26,240 --> 00:16:31,759
+ask my daughter that these days and no
+
+403
+00:16:28,320 --> 00:16:33,600
+clue. It's like that whole era of just
+
+404
+00:16:31,759 --> 00:16:34,800
+memorizing, working memory is just not
+
+405
+00:16:33,600 --> 00:16:37,040
+there anymore.
+
+406
+00:16:34,800 --> 00:16:38,959
+>> And another great analogy, especially
+
+407
+00:16:37,040 --> 00:16:39,920
+for kids, is you you say, "Here's what
+
+408
+00:16:38,959 --> 00:16:41,519
+we're going to teach." And I tell them,
+
+409
+00:16:39,920 --> 00:16:43,360
+"Are you what sport do you play? You're
+
+410
+00:16:41,519 --> 00:16:45,040
+going to be better at soccer because you
+
+411
+00:16:43,360 --> 00:16:46,880
+can do you can focus on the penalty
+
+412
+00:16:45,040 --> 00:16:48,560
+kicks or something." Just have them
+
+413
+00:16:46,880 --> 00:16:50,160
+write with their natural hand. So their
+
+414
+00:16:48,560 --> 00:16:54,000
+right hand, write their name in a
+
+415
+00:16:50,160 --> 00:16:56,639
+sentence. Now do it with your left hand.
+
+416
+00:16:54,000 --> 00:16:59,920
+Your left hand is physically capable of
+
+417
+00:16:56,639 --> 00:17:02,320
+doing it, but your brain pathway hasn't
+
+418
+00:16:59,920 --> 00:17:03,920
+learned to do it yet.
+
+419
+00:17:02,320 --> 00:17:06,640
+>> And over the course of three or four
+
+420
+00:17:03,920 --> 00:17:08,959
+weeks, you can train it. And that's
+
+421
+00:17:06,640 --> 00:17:11,679
+exactly what we're talking about here.
+
+422
+00:17:08,959 --> 00:17:13,120
+So in in the case of ADHD,
+
+423
+00:17:11,679 --> 00:17:16,000
+there were actually eight clinical
+
+424
+00:17:13,120 --> 00:17:18,480
+trials run with this technology before I
+
+425
+00:17:16,000 --> 00:17:20,319
+acquired it, showing it works as well as
+
+426
+00:17:18,480 --> 00:17:22,240
+any med
+
+427
+00:17:20,319 --> 00:17:24,160
+in the metrics you measure when you're
+
+428
+00:17:22,240 --> 00:17:26,959
+measuring ADHD.
+
+429
+00:17:24,160 --> 00:17:30,400
+Now, just like obesity or hypertension,
+
+430
+00:17:26,959 --> 00:17:33,679
+there is no cut off line that says you
+
+431
+00:17:30,400 --> 00:17:36,160
+have ADHD or you don't. We all have a
+
+432
+00:17:33,679 --> 00:17:37,840
+elements of it. So that's why it's
+
+433
+00:17:36,160 --> 00:17:39,600
+useful for everyone. That's why we
+
+434
+00:17:37,840 --> 00:17:42,480
+haven't we don't need a clinical
+
+435
+00:17:39,600 --> 00:17:46,160
+designation of any kind. But I will say
+
+436
+00:17:42,480 --> 00:17:49,280
+of the 19 most commonly
+
+437
+00:17:46,160 --> 00:17:51,120
+uh diagnosed mental health conditions
+
+438
+00:17:49,280 --> 00:17:55,200
+including depression and bulimia and
+
+439
+00:17:51,120 --> 00:17:58,160
+things like that in all but two uh
+
+440
+00:17:55,200 --> 00:18:01,360
+attention issues rank as one of the
+
+441
+00:17:58,160 --> 00:18:03,280
+biggest symptoms they have.
+
+442
+00:18:01,360 --> 00:18:07,919
+And it's not it's even worse in some
+
+443
+00:18:03,280 --> 00:18:08,960
+than it is in ADHD itself. H
+
+444
+00:18:07,919 --> 00:18:11,039
+That's amazing.
+
+445
+00:18:08,960 --> 00:18:13,840
+>> Underlies everything.
+
+446
+00:18:11,039 --> 00:18:17,039
+>> I mean, there's there's one thing and
+
+447
+00:18:13,840 --> 00:18:19,840
+one word that uh I think is important
+
+448
+00:18:17,039 --> 00:18:23,679
+these days and it's focus. We just have
+
+449
+00:18:19,840 --> 00:18:26,160
+so much noise everywhere. It's the the I
+
+450
+00:18:23,679 --> 00:18:29,840
+am constantly as as a CEO myself, I'm
+
+451
+00:18:26,160 --> 00:18:31,760
+constantly looking at my to-do list and
+
+452
+00:18:29,840 --> 00:18:33,919
+having to say, what is it that I'm
+
+453
+00:18:31,760 --> 00:18:37,679
+taking out of this? Like what can I
+
+454
+00:18:33,919 --> 00:18:40,000
+remove? And I think it's like uh there's
+
+455
+00:18:37,679 --> 00:18:43,600
+just so many things that that that you
+
+456
+00:18:40,000 --> 00:18:45,120
+can focus on, but you just have to be
+
+457
+00:18:43,600 --> 00:18:47,679
+choosy about that.
+
+458
+00:18:45,120 --> 00:18:49,600
+>> You know, we've done a pilot study that
+
+459
+00:18:47,679 --> 00:18:53,120
+was quite successful with a company
+
+460
+00:18:49,600 --> 00:18:55,600
+called Mentabi Health, MABI, that does
+
+461
+00:18:53,120 --> 00:18:58,880
+telemental health. They provide adults
+
+462
+00:18:55,600 --> 00:19:01,200
+with counseling and med medications and
+
+463
+00:18:58,880 --> 00:19:03,039
+you know a therapist.
+
+464
+00:19:01,200 --> 00:19:06,799
+And so the people who came into that
+
+465
+00:19:03,039 --> 00:19:10,320
+were between early 20s and mid-40s. Uh
+
+466
+00:19:06,799 --> 00:19:12,240
+and we sent them a headset at home. They
+
+467
+00:19:10,320 --> 00:19:15,440
+had they had a trainer who was part of
+
+468
+00:19:12,240 --> 00:19:16,799
+Mntavi. Uh and only about half the
+
+469
+00:19:15,440 --> 00:19:18,400
+people finished the program because
+
+470
+00:19:16,799 --> 00:19:20,799
+we're all busy. And now we're talking
+
+471
+00:19:18,400 --> 00:19:23,360
+about people who have you know anxieties
+
+472
+00:19:20,799 --> 00:19:26,240
+or whatever. Every single person who
+
+473
+00:19:23,360 --> 00:19:28,320
+completed the program
+
+474
+00:19:26,240 --> 00:19:30,799
+raved about how it was life-changing on
+
+475
+00:19:28,320 --> 00:19:32,400
+top of what they were already doing. The
+
+476
+00:19:30,799 --> 00:19:34,400
+number one thing they said, which
+
+477
+00:19:32,400 --> 00:19:37,048
+relates to what you just said, is I now
+
+478
+00:19:34,400 --> 00:19:38,799
+get my work done by the end of the day.
+
+479
+00:19:37,048 --> 00:19:40,720
+[snorts]
+
+480
+00:19:38,799 --> 00:19:42,400
+>> That's why they go home. And the other
+
+481
+00:19:40,720 --> 00:19:45,840
+thing that the other comment I love was
+
+482
+00:19:42,400 --> 00:19:47,919
+I no longer interrupt my co-workers.
+
+483
+00:19:45,840 --> 00:19:49,679
+>> Interesting.
+
+484
+00:19:47,919 --> 00:19:52,480
+>> Impatience. Yeah.
+
+485
+00:19:49,679 --> 00:19:55,200
+>> Yep. Impatience. Um, talk to me about
+
+486
+00:19:52,480 --> 00:19:59,840
+like your journey
+
+487
+00:19:55,200 --> 00:20:03,440
+from being a 18-year career at Harvard
+
+488
+00:19:59,840 --> 00:20:06,640
+Medical to becoming a CEO. I I I think
+
+489
+00:20:03,440 --> 00:20:08,480
+like not many people understand how
+
+490
+00:20:06,640 --> 00:20:11,120
+difficult that could be, you know, being
+
+491
+00:20:08,480 --> 00:20:13,679
+in such a academic sort of mindset now
+
+492
+00:20:11,120 --> 00:20:15,760
+to becoming a CEO and a man a people
+
+493
+00:20:13,679 --> 00:20:17,200
+manager and all the other business owner
+
+494
+00:20:15,760 --> 00:20:18,559
+and all those different things.
+
+495
+00:20:17,200 --> 00:20:21,919
+>> Yeah. Although I'm not that good at the
+
+496
+00:20:18,559 --> 00:20:24,799
+finances, but I was [laughter]
+
+497
+00:20:21,919 --> 00:20:28,799
+I skipped that class. Um, but I can read
+
+498
+00:20:24,799 --> 00:20:31,039
+a cap table and a piano. The uh the
+
+499
+00:20:28,799 --> 00:20:32,960
+journey was totally unexpected. You
+
+500
+00:20:31,039 --> 00:20:35,679
+know, I was a basic scientist studying
+
+501
+00:20:32,960 --> 00:20:38,480
+very basic research problems. Uh, and in
+
+502
+00:20:35,679 --> 00:20:41,039
+the mid 90s, my father got Parkinson's
+
+503
+00:20:38,480 --> 00:20:44,400
+and my cousin got ALS. I wasn't working
+
+504
+00:20:41,039 --> 00:20:48,000
+in neuroscience at the time, but I
+
+505
+00:20:44,400 --> 00:20:49,520
+switched over. said and I was impatient
+
+506
+00:20:48,000 --> 00:20:52,240
+because I wanted something that would
+
+507
+00:20:49,520 --> 00:20:54,080
+help them in particular. So I formed
+
+508
+00:20:52,240 --> 00:20:56,080
+alliances with some of the nonprofit
+
+509
+00:20:54,080 --> 00:20:58,000
+groups to say let's try to do something
+
+510
+00:20:56,080 --> 00:20:59,919
+different. Let's not go figure out the
+
+511
+00:20:58,000 --> 00:21:01,440
+basic science suddenly. Let's see if we
+
+512
+00:20:59,919 --> 00:21:04,320
+can find some diagnostics or
+
+513
+00:21:01,440 --> 00:21:07,440
+therapeutics in their nearer term turn
+
+514
+00:21:04,320 --> 00:21:11,039
+out to be unfundable by the NIH.
+
+515
+00:21:07,440 --> 00:21:13,440
+Uh I examples are I made the first
+
+516
+00:21:11,039 --> 00:21:15,840
+library ever of all existing drugs in
+
+517
+00:21:13,440 --> 00:21:17,760
+the pharmacy by asking bought and last
+
+518
+00:21:15,840 --> 00:21:20,240
+and Latin high school kids to come into
+
+519
+00:21:17,760 --> 00:21:22,240
+my lab across the street and grind up
+
+520
+00:21:20,240 --> 00:21:24,159
+pills
+
+521
+00:21:22,240 --> 00:21:26,559
+not fundable by the NIH because what's
+
+522
+00:21:24,159 --> 00:21:29,039
+your hypothesis that it might work in
+
+523
+00:21:26,559 --> 00:21:31,520
+some disease you know we could do these
+
+524
+00:21:29,039 --> 00:21:34,400
+in petri dishes or animals uh I
+
+525
+00:21:31,520 --> 00:21:36,000
+sequenced the first cancer uh tumor with
+
+526
+00:21:34,400 --> 00:21:38,240
+a team we put together got the
+
+527
+00:21:36,000 --> 00:21:40,240
+informatics done in Malaysia. This is a
+
+528
+00:21:38,240 --> 00:21:41,919
+little over 20 years ago because there
+
+529
+00:21:40,240 --> 00:21:45,919
+was no AI platform that was strong
+
+530
+00:21:41,919 --> 00:21:47,600
+enough here at that time. And uh again,
+
+531
+00:21:45,919 --> 00:21:49,520
+what what's your hypothesis when you
+
+532
+00:21:47,600 --> 00:21:51,120
+sequence it to well now we have this
+
+533
+00:21:49,520 --> 00:21:53,280
+field called translational medicine
+
+534
+00:21:51,120 --> 00:21:55,360
+where everything's come forward. It was
+
+535
+00:21:53,280 --> 00:21:58,159
+out of my frustration of trying to get
+
+536
+00:21:55,360 --> 00:22:00,000
+being a good hum human humanitarian by
+
+537
+00:21:58,159 --> 00:22:01,200
+offering up these technologies because I
+
+538
+00:22:00,000 --> 00:22:03,679
+was getting access to them high
+
+539
+00:22:01,200 --> 00:22:06,960
+throughput screening all these things to
+
+540
+00:22:03,679 --> 00:22:08,640
+the academic groups and finding nothing
+
+541
+00:22:06,960 --> 00:22:10,159
+they were interested but nobody wanted
+
+542
+00:22:08,640 --> 00:22:11,919
+to give me money to do it actually
+
+543
+00:22:10,159 --> 00:22:14,000
+Michael J. Fox wrote me one of his first
+
+544
+00:22:11,919 --> 00:22:16,880
+grants to look for biomarkers
+
+545
+00:22:14,000 --> 00:22:19,679
+>> in the blood for Parkinson's. It's now
+
+546
+00:22:16,880 --> 00:22:22,400
+coming to fruition 25 years later, but
+
+547
+00:22:19,679 --> 00:22:24,080
+it was literally no neurologist believed
+
+548
+00:22:22,400 --> 00:22:26,240
+there was a signature in your blood for
+
+549
+00:22:24,080 --> 00:22:27,600
+something that goes on in your brain.
+
+550
+00:22:26,240 --> 00:22:29,280
+Now they're getting approved for
+
+551
+00:22:27,600 --> 00:22:30,080
+Alzheimer's at this moment.
+
+552
+00:22:29,280 --> 00:22:32,480
+>> Wow.
+
+553
+00:22:30,080 --> 00:22:36,480
+>> And so my funding was all coming from
+
+554
+00:22:32,480 --> 00:22:39,600
+Hollywood and Wall Street fundraisers.
+
+555
+00:22:36,480 --> 00:22:41,520
+And eventually I just said I just got to
+
+556
+00:22:39,600 --> 00:22:43,440
+push out. I got I was I was working with
+
+557
+00:22:41,520 --> 00:22:45,600
+a lot of VCs just helping them look at
+
+558
+00:22:43,440 --> 00:22:48,080
+technologies. And that's really how I
+
+559
+00:22:45,600 --> 00:22:50,880
+got involved in the
+
+560
+00:22:48,080 --> 00:22:53,280
+um the business world is I worked with
+
+561
+00:22:50,880 --> 00:22:56,720
+small companies and I worked with VCs
+
+562
+00:22:53,280 --> 00:22:58,720
+and I gave away free time when I when I
+
+563
+00:22:56,720 --> 00:23:00,640
+to be sure I could be in I I was get
+
+564
+00:22:58,720 --> 00:23:02,720
+paid for a lot of the consulting but I
+
+565
+00:23:00,640 --> 00:23:05,360
+would give away free time to stay in the
+
+566
+00:23:02,720 --> 00:23:07,520
+business conversations what is this
+
+567
+00:23:05,360 --> 00:23:10,080
+technology works perfectly why is it not
+
+568
+00:23:07,520 --> 00:23:13,039
+getting funded and that's when I learned
+
+569
+00:23:10,080 --> 00:23:14,880
+you know the market fit the timing you
+
+570
+00:23:13,039 --> 00:23:17,120
+know the money the team All of these
+
+571
+00:23:14,880 --> 00:23:19,280
+things became critically
+
+572
+00:23:17,120 --> 00:23:21,360
+important. I built a couple of teams
+
+573
+00:23:19,280 --> 00:23:22,880
+myself and then I put a venture capital
+
+574
+00:23:21,360 --> 00:23:26,000
+fund together with my very close friend
+
+575
+00:23:22,880 --> 00:23:28,720
+Juan Enriquez. Um, which was great. We
+
+576
+00:23:26,000 --> 00:23:32,880
+had over 200 million and we invested it
+
+577
+00:23:28,720 --> 00:23:35,679
+over 10 10 years or 12 years I guess.
+
+578
+00:23:32,880 --> 00:23:37,440
+Uh, I enjoyed that a lot but at the same
+
+579
+00:23:35,679 --> 00:23:39,600
+time I have more of an operating
+
+580
+00:23:37,440 --> 00:23:41,919
+personality.
+
+581
+00:23:39,600 --> 00:23:44,240
+um you going you know to a board meeting
+
+582
+00:23:41,919 --> 00:23:47,039
+quarterly and just hearing an update is
+
+583
+00:23:44,240 --> 00:23:49,360
+not as enjoyable as being part of a team
+
+584
+00:23:47,039 --> 00:23:51,440
+and building it and that's uh
+
+585
+00:23:49,360 --> 00:23:53,679
+>> I was going to ask you why don't you
+
+586
+00:23:51,440 --> 00:23:56,000
+just advise instead of uh operating or
+
+587
+00:23:53,679 --> 00:23:56,880
+building but uh it is nothing like
+
+588
+00:23:56,000 --> 00:23:59,600
+building right so
+
+589
+00:23:56,880 --> 00:24:02,559
+>> no it's about the team yeah and and and
+
+590
+00:23:59,600 --> 00:24:04,240
+now so then I I ran a public company
+
+591
+00:24:02,559 --> 00:24:08,159
+because one of my portfolio companies
+
+592
+00:24:04,240 --> 00:24:10,400
+needed a new CEO and uh there was uh it
+
+593
+00:24:08,159 --> 00:24:12,159
+was just a way for me to move outside
+
+594
+00:24:10,400 --> 00:24:13,600
+the fund. And the fund was going great,
+
+595
+00:24:12,159 --> 00:24:15,679
+but I didn't want to sign another
+
+596
+00:24:13,600 --> 00:24:19,039
+contract for 10 years because that's
+
+597
+00:24:15,679 --> 00:24:20,480
+really what you'd have to do. And uh so
+
+598
+00:24:19,039 --> 00:24:23,200
+I said, well, let me try this public
+
+599
+00:24:20,480 --> 00:24:26,159
+gig, which we had an FDA event that hurt
+
+600
+00:24:23,200 --> 00:24:29,039
+us significantly. But then I retired and
+
+601
+00:24:26,159 --> 00:24:30,880
+I came out of retirement when uh after
+
+602
+00:24:29,039 --> 00:24:32,159
+seeing my grandkids who were living with
+
+603
+00:24:30,880 --> 00:24:35,200
+us because they had no daycare in
+
+604
+00:24:32,159 --> 00:24:38,080
+California. Um one of them struggling to
+
+605
+00:24:35,200 --> 00:24:40,400
+learn how to read through a iPad screen.
+
+606
+00:24:38,080 --> 00:24:42,080
+Yeah, the teacher was wonderful.
+
+607
+00:24:40,400 --> 00:24:45,039
+Practically standing at her head to keep
+
+608
+00:24:42,080 --> 00:24:47,279
+him entertained, but the human mind
+
+609
+00:24:45,039 --> 00:24:50,320
+needs some help.
+
+610
+00:24:47,279 --> 00:24:52,240
+>> I love that. It's like I'm not done yet,
+
+611
+00:24:50,320 --> 00:24:54,400
+you know? I've got a I've got a I'm I'm
+
+612
+00:24:52,240 --> 00:24:56,559
+well positioned to to deliver this and
+
+613
+00:24:54,400 --> 00:25:00,080
+you are. So, it's it's amazing and I
+
+614
+00:24:56,559 --> 00:25:02,000
+think I hope um it comes to market to to
+
+615
+00:25:00,080 --> 00:25:04,320
+the point where people can uh benefit
+
+616
+00:25:02,000 --> 00:25:06,159
+from it. Uh, I I think it's a great
+
+617
+00:25:04,320 --> 00:25:09,039
+>> idea for a product
+
+618
+00:25:06,159 --> 00:25:11,360
+>> and we'd like to get to market quickly.
+
+619
+00:25:09,039 --> 00:25:13,520
+The biggest struggle right now is we're
+
+620
+00:25:11,360 --> 00:25:15,840
+finding since nothing like this has ever
+
+621
+00:25:13,520 --> 00:25:17,520
+existed that worked, we're having to
+
+622
+00:25:15,840 --> 00:25:19,279
+prove it one case at a time. So, for
+
+623
+00:25:17,520 --> 00:25:23,360
+example, we're going into elite
+
+624
+00:25:19,279 --> 00:25:26,000
+sportsmies now to chat because there's
+
+625
+00:25:23,360 --> 00:25:28,159
+these kids pay 50 grand a year to go to
+
+626
+00:25:26,000 --> 00:25:29,279
+these sportsmies. to try to get D1
+
+627
+00:25:28,159 --> 00:25:30,559
+scholarships
+
+628
+00:25:29,279 --> 00:25:34,000
+>> where they're now getting paid a million
+
+629
+00:25:30,559 --> 00:25:35,760
+dollars to play basketball
+
+630
+00:25:34,000 --> 00:25:37,840
+and they're missing it brain cognitive
+
+631
+00:25:35,760 --> 00:25:39,279
+training when the big, you know, when
+
+632
+00:25:37,840 --> 00:25:42,080
+you're at the free throw line in the
+
+633
+00:25:39,279 --> 00:25:44,559
+finals, you got to make that shot.
+
+634
+00:25:42,080 --> 00:25:46,960
+>> This I I attended a a performance
+
+635
+00:25:44,559 --> 00:25:48,720
+workshop at IMG Academy down in Florida
+
+636
+00:25:46,960 --> 00:25:50,960
+there. And uh
+
+637
+00:25:48,720 --> 00:25:53,919
+>> yeah, they talk a lot about this type of
+
+638
+00:25:50,960 --> 00:25:56,640
+stuff. you you might uh you might run
+
+639
+00:25:53,919 --> 00:25:57,919
+some tests over there if you if you
+
+640
+00:25:56,640 --> 00:26:00,559
+connect with them
+
+641
+00:25:57,919 --> 00:26:02,799
+>> which is and we have entre we're talking
+
+642
+00:26:00,559 --> 00:26:06,159
+with a former NHL goalie right now and
+
+643
+00:26:02,799 --> 00:26:09,360
+some others in New England. Uh it's
+
+644
+00:26:06,159 --> 00:26:11,600
+really about finding the right coach or
+
+645
+00:26:09,360 --> 00:26:13,200
+guide to help someone through it. We
+
+646
+00:26:11,600 --> 00:26:15,679
+can't just give it to someone and expect
+
+647
+00:26:13,200 --> 00:26:18,799
+them to succeed because we don't have
+
+648
+00:26:15,679 --> 00:26:20,799
+the proof of what it improves in sports.
+
+649
+00:26:18,799 --> 00:26:22,640
+And that's frankly what I'm looking for
+
+650
+00:26:20,799 --> 00:26:25,279
+is people to tell me what would you
+
+651
+00:26:22,640 --> 00:26:26,480
+measure? I we're not going to go a whole
+
+652
+00:26:25,279 --> 00:26:28,480
+season looking at free throw
+
+653
+00:26:26,480 --> 00:26:30,240
+percentages. Okay, let's measure.
+
+654
+00:26:28,480 --> 00:26:32,720
+>> And because there is no existing
+
+655
+00:26:30,240 --> 00:26:34,320
+cognitive training, they don't have lots
+
+656
+00:26:32,720 --> 00:26:37,279
+of measures.
+
+657
+00:26:34,320 --> 00:26:39,200
+>> All right. I I I bet you are met with a
+
+658
+00:26:37,279 --> 00:26:40,960
+lot of like
+
+659
+00:26:39,200 --> 00:26:44,480
+I guess
+
+660
+00:26:40,960 --> 00:26:47,440
+uh reluctance and and and maybe critics
+
+661
+00:26:44,480 --> 00:26:51,120
+that say you know the this neuro uh
+
+662
+00:26:47,440 --> 00:26:53,520
+feedback sort of field has gone through
+
+663
+00:26:51,120 --> 00:26:55,440
+a tried product market fit scenario
+
+664
+00:26:53,520 --> 00:26:57,279
+before but you know what you're talking
+
+665
+00:26:55,440 --> 00:26:59,679
+about here is actual measurement and
+
+666
+00:26:57,279 --> 00:27:01,520
+actual uh science.
+
+667
+00:26:59,679 --> 00:27:04,000
+>> Yeah. And and so we in the schools for
+
+668
+00:27:01,520 --> 00:27:07,039
+example in every case we just say what
+
+669
+00:27:04,000 --> 00:27:08,960
+is it you want to get better at
+
+670
+00:27:07,039 --> 00:27:10,480
+>> and behavior comes number one for the
+
+671
+00:27:08,960 --> 00:27:12,480
+teachers. So how do you measure
+
+672
+00:27:10,480 --> 00:27:14,559
+behavior? Well here's a survey we use
+
+673
+00:27:12,480 --> 00:27:16,080
+great but one of the behavior things we
+
+674
+00:27:14,559 --> 00:27:18,799
+didn't even think about but it's come
+
+675
+00:27:16,080 --> 00:27:20,960
+through in our most recent work is
+
+676
+00:27:18,799 --> 00:27:23,200
+there's something called referrals. When
+
+677
+00:27:20,960 --> 00:27:26,320
+a child is really disruptive they get
+
+678
+00:27:23,200 --> 00:27:29,360
+written up in an official referral and
+
+679
+00:27:26,320 --> 00:27:31,360
+three referrals and you're out. And the
+
+680
+00:27:29,360 --> 00:27:32,880
+number of referrals is down. And that's
+
+681
+00:27:31,360 --> 00:27:35,919
+something that translates to every
+
+682
+00:27:32,880 --> 00:27:36,240
+teacher in America, that one statement.
+
+683
+00:27:35,919 --> 00:27:38,799
+>> Yeah.
+
+684
+00:27:36,240 --> 00:27:40,880
+>> And there's an example. And for the
+
+685
+00:27:38,799 --> 00:27:42,400
+superintendants, they love the math and
+
+686
+00:27:40,880 --> 00:27:44,799
+reading scores because that's what's the
+
+687
+00:27:42,400 --> 00:27:46,640
+front page of the paper when the annual
+
+688
+00:27:44,799 --> 00:27:50,320
+numbers come out.
+
+689
+00:27:46,640 --> 00:27:51,840
+>> Yep. Tell me about the term
+
+690
+00:27:50,320 --> 00:27:55,279
+neurodeivergent.
+
+691
+00:27:51,840 --> 00:27:57,360
+It's come up recently and I think you
+
+692
+00:27:55,279 --> 00:28:00,159
+would be great to explain what this is
+
+693
+00:27:57,360 --> 00:28:03,600
+and how you how uh what you think about
+
+694
+00:28:00,159 --> 00:28:06,559
+uh people who have this sort of trait.
+
+695
+00:28:03,600 --> 00:28:10,640
+>> Um yeah, let me explain it from uh from
+
+696
+00:28:06,559 --> 00:28:13,440
+my own background which uh starts uh in
+
+697
+00:28:10,640 --> 00:28:14,880
+this case in the field of cancer. I I
+
+698
+00:28:13,440 --> 00:28:16,240
+actually have a lot of expertise and
+
+699
+00:28:14,880 --> 00:28:18,880
+background in cancer particularly
+
+700
+00:28:16,240 --> 00:28:21,520
+genomics. I'm helping people work on
+
+701
+00:28:18,880 --> 00:28:24,399
+vaccines right now independently
+
+702
+00:28:21,520 --> 00:28:28,080
+uh that will come forward very quickly.
+
+703
+00:28:24,399 --> 00:28:29,760
+Uh and what you discover there is when I
+
+704
+00:28:28,080 --> 00:28:31,840
+first doing started doing genetic
+
+705
+00:28:29,760 --> 00:28:34,320
+analysis as an academic in the cancer
+
+706
+00:28:31,840 --> 00:28:35,760
+field is the pathologists had already
+
+707
+00:28:34,320 --> 00:28:37,279
+declared how many different types of
+
+708
+00:28:35,760 --> 00:28:40,080
+cancer there were and there were no
+
+709
+00:28:37,279 --> 00:28:44,640
+more. That was it. If you go back 70
+
+710
+00:28:40,080 --> 00:28:47,200
+years to the WH I guess their blue book
+
+711
+00:28:44,640 --> 00:28:50,080
+uh states there were 50 years ago there
+
+712
+00:28:47,200 --> 00:28:54,080
+was only 50 types of cancer only one
+
+713
+00:28:50,080 --> 00:28:56,399
+type of breast cancer now we have a
+
+714
+00:28:54,080 --> 00:28:59,120
+triple negative her two positive blah
+
+715
+00:28:56,399 --> 00:29:01,760
+blah blah everything so there's over
+
+716
+00:28:59,120 --> 00:29:04,720
+there's hundreds of different cancers in
+
+717
+00:29:01,760 --> 00:29:08,080
+fact there's 20 major types of breast
+
+718
+00:29:04,720 --> 00:29:08,960
+cancer and 18 subtypes now just that
+
+719
+00:29:08,080 --> 00:29:10,720
+H
+
+720
+00:29:08,960 --> 00:29:13,279
+>> and so we're going to see the same thing
+
+721
+00:29:10,720 --> 00:29:15,440
+happen with the brain. There's only two
+
+722
+00:29:13,279 --> 00:29:19,200
+m there's only two codes for depression.
+
+723
+00:29:15,440 --> 00:29:21,600
+It's basically major and minor. Okay.
+
+724
+00:29:19,200 --> 00:29:24,720
+But everything is a spectrum about human
+
+725
+00:29:21,600 --> 00:29:26,480
+biology. Everything I've ever looked at
+
+726
+00:29:24,720 --> 00:29:29,679
+and you know we can find ways to
+
+727
+00:29:26,480 --> 00:29:33,760
+redefine. For example, diabetes is now a
+
+728
+00:29:29,679 --> 00:29:36,480
+higher A1C than it was 20 years ago
+
+729
+00:29:33,760 --> 00:29:38,559
+because nobody could get to the one we
+
+730
+00:29:36,480 --> 00:29:41,200
+used to have. It's [laughter] normal.
+
+731
+00:29:38,559 --> 00:29:43,120
+We're now now the index for BMI and
+
+732
+00:29:41,200 --> 00:29:45,360
+obesity is higher than it used to be.
+
+733
+00:29:43,120 --> 00:29:47,360
+So, we just change the guidepost like we
+
+734
+00:29:45,360 --> 00:29:51,279
+do with everything else. In mental
+
+735
+00:29:47,360 --> 00:29:54,159
+health, there is no cut off. Uh they say
+
+736
+00:29:51,279 --> 00:29:56,559
+20% of people have mental health issues.
+
+737
+00:29:54,159 --> 00:29:58,640
+In fact, it's a 100% of people over the
+
+738
+00:29:56,559 --> 00:30:00,320
+course of their lifetime.
+
+739
+00:29:58,640 --> 00:30:03,200
+There's no one who doesn't go through a
+
+740
+00:30:00,320 --> 00:30:06,399
+point of some depression or some anxiety
+
+741
+00:30:03,200 --> 00:30:08,640
+or something else. It's just we said you
+
+742
+00:30:06,399 --> 00:30:10,960
+got to have a diagnosis in order to get
+
+743
+00:30:08,640 --> 00:30:13,200
+some treatment and the treatment's very
+
+744
+00:30:10,960 --> 00:30:14,559
+expensive. You know, it requires if
+
+745
+00:30:13,200 --> 00:30:17,120
+you're going to see a therapist 1 hour.
+
+746
+00:30:14,559 --> 00:30:20,080
+You can't do 20 minutes. So, that might
+
+747
+00:30:17,120 --> 00:30:22,480
+work just fine, especially with AI. So
+
+748
+00:30:20,080 --> 00:30:24,240
+what I'm saying is 20 years from now
+
+749
+00:30:22,480 --> 00:30:26,720
+with these devices like we have, we're
+
+750
+00:30:24,240 --> 00:30:30,960
+going to start to see all the subtypes
+
+751
+00:30:26,720 --> 00:30:33,360
+of brain ability of cognitive behavior,
+
+752
+00:30:30,960 --> 00:30:35,440
+your actual behavior, and we'll say, you
+
+753
+00:30:33,360 --> 00:30:38,960
+know what, there's 18 types of
+
+754
+00:30:35,440 --> 00:30:42,080
+Parkinson's we see in just the data. We
+
+755
+00:30:38,960 --> 00:30:44,640
+now know for sure which ones are going
+
+756
+00:30:42,080 --> 00:30:46,480
+to respond to which drug regimens,
+
+757
+00:30:44,640 --> 00:30:48,720
+>> right? And we're going to see the same
+
+758
+00:30:46,480 --> 00:30:53,279
+thing for nerds. The neurodiversity is
+
+759
+00:30:48,720 --> 00:30:56,080
+just a wide variety of metrics you care
+
+760
+00:30:53,279 --> 00:30:58,399
+about. Some are manifest in behaviors we
+
+761
+00:30:56,080 --> 00:31:00,159
+find a little troublesome because maybe
+
+762
+00:30:58,399 --> 00:31:02,640
+you're always late or maybe who knows
+
+763
+00:31:00,159 --> 00:31:04,799
+what, you know, but if they're not
+
+764
+00:31:02,640 --> 00:31:06,720
+troublesome, but that doesn't mean you
+
+765
+00:31:04,799 --> 00:31:08,559
+can't improve. That's comes back to this
+
+766
+00:31:06,720 --> 00:31:10,559
+idea. It's have a mental gym that I can
+
+767
+00:31:08,559 --> 00:31:14,799
+improve. I can learn a language in six
+
+768
+00:31:10,559 --> 00:31:17,919
+months with some mental help.
+
+769
+00:31:14,799 --> 00:31:20,480
+>> That's interesting. Um
+
+770
+00:31:17,919 --> 00:31:24,880
+what does the FDA say about your device?
+
+771
+00:31:20,480 --> 00:31:26,399
+Like um is it it's there's there's two
+
+772
+00:31:24,880 --> 00:31:28,799
+there's several stakeholders. One is the
+
+773
+00:31:26,399 --> 00:31:30,720
+user, one is the clinician if you're
+
+774
+00:31:28,799 --> 00:31:32,880
+going to go the clinical route. The
+
+775
+00:31:30,720 --> 00:31:35,039
+other is the FDA and then finally the
+
+776
+00:31:32,880 --> 00:31:36,880
+insurance companies which generally
+
+777
+00:31:35,039 --> 00:31:38,399
+comes down to Medicare or Medicaid
+
+778
+00:31:36,880 --> 00:31:42,799
+because they're the largest insurer
+
+779
+00:31:38,399 --> 00:31:46,720
+company. Uh the uh the FDA cares about
+
+780
+00:31:42,799 --> 00:31:48,399
+the claims you make. So when I talk to
+
+781
+00:31:46,720 --> 00:31:50,559
+people, I've talked to scientists about
+
+782
+00:31:48,399 --> 00:31:52,960
+their neurochnology. It could be like a
+
+783
+00:31:50,559 --> 00:31:55,120
+a music app that entrains the mind in a
+
+784
+00:31:52,960 --> 00:31:56,720
+certain frequency. They say, "Well,
+
+785
+00:31:55,120 --> 00:31:59,840
+we're going after Parkinson's." I said,
+
+786
+00:31:56,720 --> 00:32:02,320
+"Why? Everybody likes music. Everybody
+
+787
+00:31:59,840 --> 00:32:04,640
+wants to have a better be a better
+
+788
+00:32:02,320 --> 00:32:07,440
+dancer. Why would you confine yourself
+
+789
+00:32:04,640 --> 00:32:10,960
+to have to get a diagnosis?" And in this
+
+790
+00:32:07,440 --> 00:32:12,720
+digital health space, you can't change.
+
+791
+00:32:10,960 --> 00:32:15,519
+We couldn't change our game if we got it
+
+792
+00:32:12,720 --> 00:32:17,919
+approved. Imagine
+
+793
+00:32:15,519 --> 00:32:20,080
+in this world of AI not being able to
+
+794
+00:32:17,919 --> 00:32:22,559
+change it. So it goes from Skyler to
+
+795
+00:32:20,080 --> 00:32:24,159
+Johan's journey,
+
+796
+00:32:22,559 --> 00:32:25,679
+>> you know, and all of these things have
+
+797
+00:32:24,159 --> 00:32:27,600
+to go through one more reg and there's
+
+798
+00:32:25,679 --> 00:32:30,960
+nothing. It's 100% safe. These
+
+799
+00:32:27,600 --> 00:32:34,320
+technologies are out there. So when it
+
+800
+00:32:30,960 --> 00:32:36,000
+comes to the FDA, they are compliant and
+
+801
+00:32:34,320 --> 00:32:38,240
+they're willing to do this, but it comes
+
+802
+00:32:36,000 --> 00:32:41,600
+down to what's the claim you're making,
+
+803
+00:32:38,240 --> 00:32:43,360
+>> right? And the other the insurance
+
+804
+00:32:41,600 --> 00:32:45,760
+companies want to get return on their
+
+805
+00:32:43,360 --> 00:32:48,320
+investment.
+
+806
+00:32:45,760 --> 00:32:49,840
+So that's why that's why I want to make
+
+807
+00:32:48,320 --> 00:32:50,960
+this dirt cheap.
+
+808
+00:32:49,840 --> 00:32:52,720
+>> Yeah.
+
+809
+00:32:50,960 --> 00:32:54,080
+>> If if this comes out as a clinical
+
+810
+00:32:52,720 --> 00:32:56,480
+product, it's going to be several
+
+811
+00:32:54,080 --> 00:32:57,120
+thousand required prescription from your
+
+812
+00:32:56,480 --> 00:32:59,120
+doctor.
+
+813
+00:32:57,120 --> 00:33:00,320
+>> It doesn't need to be. It's for kids in
+
+814
+00:32:59,120 --> 00:33:03,519
+school.
+
+815
+00:33:00,320 --> 00:33:05,279
+>> And then you have so we're there's an in
+
+816
+00:33:03,519 --> 00:33:06,799
+between space. There's the FDA and then
+
+817
+00:33:05,279 --> 00:33:08,799
+there's I'll call it loosely the
+
+818
+00:33:06,799 --> 00:33:11,200
+neutrauticals where there's broad claims
+
+819
+00:33:08,799 --> 00:33:13,919
+and no meaningful data. There's an in
+
+820
+00:33:11,200 --> 00:33:15,519
+between space that we're blazing and I'm
+
+821
+00:33:13,919 --> 00:33:18,240
+really procilitizing all the
+
+822
+00:33:15,519 --> 00:33:19,679
+neuroscientists I know. Publish the
+
+823
+00:33:18,240 --> 00:33:20,480
+data. We're not going to work on
+
+824
+00:33:19,679 --> 00:33:21,760
+everything.
+
+825
+00:33:20,480 --> 00:33:24,960
+>> Mhm.
+
+826
+00:33:21,760 --> 00:33:26,159
+>> But publish the data and then I'm also
+
+827
+00:33:24,960 --> 00:33:29,440
+and [clears throat] then people can make
+
+828
+00:33:26,159 --> 00:33:30,880
+their own decision because it's safe
+
+829
+00:33:29,440 --> 00:33:33,200
+whether they want to do it or not. It's
+
+830
+00:33:30,880 --> 00:33:34,640
+like plastic surgery or Botox. It's
+
+831
+00:33:33,200 --> 00:33:36,080
+safe. You decide whether you want to do
+
+832
+00:33:34,640 --> 00:33:39,519
+it.
+
+833
+00:33:36,080 --> 00:33:42,399
+>> Are something called peptides safe?
+
+834
+00:33:39,519 --> 00:33:46,159
+>> Yes, they well there you can make bad
+
+835
+00:33:42,399 --> 00:33:48,480
+peptides. Okay. And it's a vir viral or
+
+836
+00:33:46,159 --> 00:33:50,000
+bacterial po uh toxins are often
+
+837
+00:33:48,480 --> 00:33:53,200
+peptides
+
+838
+00:33:50,000 --> 00:33:56,720
+for example. Uh peptides
+
+839
+00:33:53,200 --> 00:33:59,600
+um it's uh how would I want to approach
+
+840
+00:33:56,720 --> 00:34:02,000
+that? Uh peptides are nothing different
+
+841
+00:33:59,600 --> 00:34:03,679
+than small proteins. Insulin is a
+
+842
+00:34:02,000 --> 00:34:06,480
+peptide. I see
+
+843
+00:34:03,679 --> 00:34:09,839
+>> look how many people take insulin in
+
+844
+00:34:06,480 --> 00:34:13,599
+this world and it was we als we have
+
+845
+00:34:09,839 --> 00:34:15,599
+other peptides GLP-1's a peptide
+
+846
+00:34:13,599 --> 00:34:18,720
+>> why why are they making such a a
+
+847
+00:34:15,599 --> 00:34:20,159
+comeback within uh I guess the youth of
+
+848
+00:34:18,720 --> 00:34:22,639
+today
+
+849
+00:34:20,159 --> 00:34:25,119
+>> it's they've been targeting uh high
+
+850
+00:34:22,639 --> 00:34:26,879
+performance athletes when I talk about
+
+851
+00:34:25,119 --> 00:34:30,240
+I've taught bioeththics when I talk
+
+852
+00:34:26,879 --> 00:34:32,240
+about adoption of new uh technologies it
+
+853
+00:34:30,240 --> 00:34:34,560
+always starts the same with a with an
+
+854
+00:34:32,240 --> 00:34:36,320
+orphan rare childhood disease because
+
+855
+00:34:34,560 --> 00:34:39,040
+nobody's going to argue about the cost
+
+856
+00:34:36,320 --> 00:34:42,159
+or the need to do it and then over the
+
+857
+00:34:39,040 --> 00:34:45,760
+course of time as it the safety profile
+
+858
+00:34:42,159 --> 00:34:49,679
+shows it's perfectly safe like a peptide
+
+859
+00:34:45,760 --> 00:34:51,359
+in some cases or even in the case of the
+
+860
+00:34:49,679 --> 00:34:56,000
+training for the tour to France in the
+
+861
+00:34:51,359 --> 00:34:58,800
+old days um then the price comes down it
+
+862
+00:34:56,000 --> 00:35:01,760
+ends up going into high performance and
+
+863
+00:34:58,800 --> 00:35:04,720
+beauty beauty or aging you know Botox
+
+864
+00:35:01,760 --> 00:35:06,880
+toxic H human growth hormone Barry Bonds
+
+865
+00:35:04,720 --> 00:35:09,520
+and all these baseball players they were
+
+866
+00:35:06,880 --> 00:35:10,400
+taking doses that were so high it was
+
+867
+00:35:09,520 --> 00:35:11,680
+stupid.
+
+868
+00:35:10,400 --> 00:35:15,839
+>> Mhm.
+
+869
+00:35:11,680 --> 00:35:18,320
+>> But if now we're talking about with GLP1
+
+870
+00:35:15,839 --> 00:35:20,000
+in this peptide universe it's you have
+
+871
+00:35:18,320 --> 00:35:23,359
+to inject it. You can't swallow them
+
+872
+00:35:20,000 --> 00:35:26,800
+right now. Something is 100% natural is
+
+873
+00:35:23,359 --> 00:35:29,040
+what your body already uses.
+
+874
+00:35:26,800 --> 00:35:31,839
+And that's the beauty of it. Unlike
+
+875
+00:35:29,040 --> 00:35:34,640
+pills that you swallow, the body doesn't
+
+876
+00:35:31,839 --> 00:35:37,200
+make any of those compounds, right? Some
+
+877
+00:35:34,640 --> 00:35:40,480
+come from nature, many, but these are
+
+878
+00:35:37,200 --> 00:35:45,040
+actual natural uh components of your own
+
+879
+00:35:40,480 --> 00:35:47,119
+body. And so what I do is I measure and
+
+880
+00:35:45,040 --> 00:35:48,800
+adjust.
+
+881
+00:35:47,119 --> 00:35:51,280
+Measure what's going on and make sure
+
+882
+00:35:48,800 --> 00:35:53,040
+you're adjusting properly to get into
+
+883
+00:35:51,280 --> 00:35:55,599
+the right range. And so in the case of
+
+884
+00:35:53,040 --> 00:35:58,240
+the peptides, that step is missing. What
+
+885
+00:35:55,599 --> 00:36:00,240
+are you measuring and adjusting to?
+
+886
+00:35:58,240 --> 00:36:02,960
+If I'm just taking it like I take a
+
+887
+00:36:00,240 --> 00:36:04,640
+supplement and I know I know people who
+
+888
+00:36:02,960 --> 00:36:07,040
+take 40 supplements and I'll say, "Well,
+
+889
+00:36:04,640 --> 00:36:10,160
+what's that one for?" And they'll for my
+
+890
+00:36:07,040 --> 00:36:13,040
+immune system. What on earth does that
+
+891
+00:36:10,160 --> 00:36:15,920
+mean? Show me what the purpose is. And
+
+892
+00:36:13,040 --> 00:36:18,400
+so the at normal levels levels,
+
+893
+00:36:15,920 --> 00:36:20,640
+especially as you get older, all of
+
+894
+00:36:18,400 --> 00:36:22,800
+these hormone systems
+
+895
+00:36:20,640 --> 00:36:24,720
+begin to fall apart. That's why we get
+
+896
+00:36:22,800 --> 00:36:26,160
+cancer. That's why we get diabetes.
+
+897
+00:36:24,720 --> 00:36:28,079
+That's why our muscles weaken. That's
+
+898
+00:36:26,160 --> 00:36:30,560
+why we lose our memory because they're
+
+899
+00:36:28,079 --> 00:36:33,760
+all on a decline. If we just brought
+
+900
+00:36:30,560 --> 00:36:35,280
+them back into the natural range, it
+
+901
+00:36:33,760 --> 00:36:36,480
+would be great. In fact, I've given many
+
+902
+00:36:35,280 --> 00:36:38,160
+lectures saying, "I'd like to make an
+
+903
+00:36:36,480 --> 00:36:40,560
+organ that makes about 50 of those
+
+904
+00:36:38,160 --> 00:36:43,040
+things just naturally at the same level
+
+905
+00:36:40,560 --> 00:36:44,720
+I was at it when I was 50. I did one at
+
+906
+00:36:43,040 --> 00:36:46,079
+the science museum. It's two little old
+
+907
+00:36:44,720 --> 00:36:48,880
+ladies came running up to me. They're
+
+908
+00:36:46,079 --> 00:36:53,040
+not so old." Uh, and said, "Where do I
+
+909
+00:36:48,880 --> 00:36:55,359
+get this organ? I want it right away."
+
+910
+00:36:53,040 --> 00:36:58,000
+Oh, man. that that that would uh that
+
+911
+00:36:55,359 --> 00:37:00,480
+would do well I guess. Uh that's that's
+
+912
+00:36:58,000 --> 00:37:02,400
+interesting. So So GLP1 is the chemical
+
+913
+00:37:00,480 --> 00:37:03,119
+compound or is that that's the peptide
+
+914
+00:37:02,400 --> 00:37:06,320
+name?
+
+915
+00:37:03,119 --> 00:37:08,880
+>> That that's the name of the GLP1 that is
+
+916
+00:37:06,320 --> 00:37:12,400
+gluc glucanol like peptide one. Yes,
+
+917
+00:37:08,880 --> 00:37:14,960
+that's the one that's goi and mont all
+
+918
+00:37:12,400 --> 00:37:16,000
+the weight loss drugs that are globally.
+
+919
+00:37:14,960 --> 00:37:18,640
+>> I see. Interesting.
+
+920
+00:37:16,000 --> 00:37:21,280
+>> The toxicity of those has been a little
+
+921
+00:37:18,640 --> 00:37:24,079
+nause. That's one of the purposes of
+
+922
+00:37:21,280 --> 00:37:27,599
+GLP-1 is when you've eaten too much like
+
+923
+00:37:24,079 --> 00:37:29,200
+at Thanksgiving, GLP1 makes you feel
+
+924
+00:37:27,599 --> 00:37:31,119
+nauseous.
+
+925
+00:37:29,200 --> 00:37:34,000
+>> Interesting.
+
+926
+00:37:31,119 --> 00:37:36,320
+>> Okay. Um,
+
+927
+00:37:34,000 --> 00:37:39,520
+what do you think about
+
+928
+00:37:36,320 --> 00:37:42,000
+uh your products pollination or
+
+929
+00:37:39,520 --> 00:37:44,320
+cross-pollination with AI? There's a lot
+
+930
+00:37:42,000 --> 00:37:46,480
+that you can that you can do with the
+
+931
+00:37:44,320 --> 00:37:48,720
+data. Um,
+
+932
+00:37:46,480 --> 00:37:50,880
+>> yeah. Uh, I have a few thoughts about
+
+933
+00:37:48,720 --> 00:37:54,560
+that. first just to speak about data se
+
+934
+00:37:50,880 --> 00:37:57,839
+privacy and and safety. Uh you know we
+
+935
+00:37:54,560 --> 00:38:01,391
+got social media a bit wrong in terms of
+
+936
+00:37:57,839 --> 00:38:03,599
+where the the guidelines are and and the
+
+937
+00:38:01,391 --> 00:38:05,040
+[snorts] borders uh and we're trying to
+
+938
+00:38:03,599 --> 00:38:07,599
+correct that now. I think we grossly
+
+939
+00:38:05,040 --> 00:38:09,119
+underestimated as a society what the
+
+940
+00:38:07,599 --> 00:38:12,079
+implications were for a lot of the
+
+941
+00:38:09,119 --> 00:38:14,000
+social media devices in the neuro techch
+
+942
+00:38:12,079 --> 00:38:15,599
+field the the whole everybody's trying
+
+943
+00:38:14,000 --> 00:38:17,359
+to get out in front not everybody people
+
+944
+00:38:15,599 --> 00:38:18,720
+like me and others trying to get out in
+
+945
+00:38:17,359 --> 00:38:21,440
+front of it. There's actually four
+
+946
+00:38:18,720 --> 00:38:24,880
+groups now that are nonprofits that are
+
+947
+00:38:21,440 --> 00:38:26,720
+that are working on neuroche uh neur
+
+948
+00:38:24,880 --> 00:38:29,680
+neuro your neurorites. There's a
+
+949
+00:38:26,720 --> 00:38:33,440
+neurorites foundation. I spoke I spoke
+
+950
+00:38:29,680 --> 00:38:36,079
+the other day to Stephen uh who runs the
+
+951
+00:38:33,440 --> 00:38:38,320
+organization about aligning ourselves
+
+952
+00:38:36,079 --> 00:38:41,520
+because the only thing I really worry
+
+953
+00:38:38,320 --> 00:38:43,520
+about I in terms of safety and security
+
+954
+00:38:41,520 --> 00:38:47,040
+and privacy we have the HIPPO
+
+955
+00:38:43,520 --> 00:38:50,000
+regulations to follow as a guideline
+
+956
+00:38:47,040 --> 00:38:53,760
+and in schools in particular
+
+957
+00:38:50,000 --> 00:38:55,839
+uh privacy is enormously important and
+
+958
+00:38:53,760 --> 00:38:57,839
+>> being in there even near their computer
+
+959
+00:38:55,839 --> 00:38:58,800
+systems is a problem in all of this
+
+960
+00:38:57,839 --> 00:39:01,119
+Right.
+
+961
+00:38:58,800 --> 00:39:03,280
+>> So, we're good citizens on that front,
+
+962
+00:39:01,119 --> 00:39:04,960
+but we have to extend it to into the
+
+963
+00:39:03,280 --> 00:39:07,040
+video gaming universe and everywhere
+
+964
+00:39:04,960 --> 00:39:09,119
+else. What is Don't take people's data.
+
+965
+00:39:07,040 --> 00:39:10,960
+I mean, it's from their without telling
+
+966
+00:39:09,119 --> 00:39:12,480
+them. Don't infuse information into
+
+967
+00:39:10,960 --> 00:39:14,160
+their brains without telling them. Those
+
+968
+00:39:12,480 --> 00:39:15,599
+are the obvious things.
+
+969
+00:39:14,160 --> 00:39:17,440
+>> But right now, we're trying to figure
+
+970
+00:39:15,599 --> 00:39:19,680
+out where do we draw draw the
+
+971
+00:39:17,440 --> 00:39:21,119
+guidelines. And what I'm what I'm
+
+972
+00:39:19,680 --> 00:39:23,119
+recommending to all of these groups is
+
+973
+00:39:21,119 --> 00:39:25,680
+we don't know what we don't know yet.
+
+974
+00:39:23,119 --> 00:39:27,520
+Because that was absolutely true. We
+
+975
+00:39:25,680 --> 00:39:28,720
+can't envision what technology is going
+
+976
+00:39:27,520 --> 00:39:30,640
+to exist
+
+977
+00:39:28,720 --> 00:39:32,880
+>> and so let's not make the rules are so
+
+978
+00:39:30,640 --> 00:39:34,800
+hard and fast that nothing new can
+
+979
+00:39:32,880 --> 00:39:36,880
+happen. And I said, "The only thing I
+
+980
+00:39:34,800 --> 00:39:40,240
+really care about
+
+981
+00:39:36,880 --> 00:39:42,960
+for me, because we're a good actor, is
+
+982
+00:39:40,240 --> 00:39:46,560
+that people don't come along and ruin
+
+983
+00:39:42,960 --> 00:39:48,640
+the field for us by making claims that
+
+984
+00:39:46,560 --> 00:39:51,040
+are unfounded
+
+985
+00:39:48,640 --> 00:39:53,040
+>> or doing something that makes no sense
+
+986
+00:39:51,040 --> 00:39:55,520
+or doing a knockoff of ours and saying
+
+987
+00:39:53,040 --> 00:39:58,320
+it's just as good without any credible
+
+988
+00:39:55,520 --> 00:40:00,079
+evidence." And so that's the idea is
+
+989
+00:39:58,320 --> 00:40:01,119
+let's build a standard. Uh they're
+
+990
+00:40:00,079 --> 00:40:03,280
+actually
+
+991
+00:40:01,119 --> 00:40:07,200
+>> yeah that might work.
+
+992
+00:40:03,280 --> 00:40:10,000
+>> The the data is going to be incredibly
+
+993
+00:40:07,200 --> 00:40:12,960
+valuable. Um but you're right there
+
+994
+00:40:10,000 --> 00:40:16,400
+there needs to be privacy here and in
+
+995
+00:40:12,960 --> 00:40:18,240
+Canada like we have this I'm consulting
+
+996
+00:40:16,400 --> 00:40:18,800
+somebody about um
+
+997
+00:40:18,240 --> 00:40:20,880
+>> Mhm.
+
+998
+00:40:18,800 --> 00:40:23,359
+>> this similar type of thing that they're
+
+999
+00:40:20,880 --> 00:40:25,520
+collecting health data and it it can't
+
+1000
+00:40:23,359 --> 00:40:26,720
+go to the cloud and into somebody's
+
+1001
+00:40:25,520 --> 00:40:30,079
+model. Yeah.
+
+1002
+00:40:26,720 --> 00:40:31,760
+>> Um, it has to stay local. Uh, which is,
+
+1003
+00:40:30,079 --> 00:40:33,040
+uh, one of the things that my company
+
+1004
+00:40:31,760 --> 00:40:36,079
+does for
+
+1005
+00:40:33,040 --> 00:40:39,359
+>> for clients is just to to keep their
+
+1006
+00:40:36,079 --> 00:40:40,720
+data safe, right? Uh, so I guess you
+
+1007
+00:40:39,359 --> 00:40:42,000
+have a similar challenge about how
+
+1008
+00:40:40,720 --> 00:40:43,440
+you're collecting this data and where
+
+1009
+00:40:42,000 --> 00:40:46,160
+it's stored.
+
+1010
+00:40:43,440 --> 00:40:47,920
+>> We do. Uh right now when we're in the
+
+1011
+00:40:46,160 --> 00:40:51,280
+real world and we with a paying
+
+1012
+00:40:47,920 --> 00:40:53,040
+customer, we do we leave all the data on
+
+1013
+00:40:51,280 --> 00:40:54,480
+the headset except a single number
+
+1014
+00:40:53,040 --> 00:40:57,680
+that's derived from it
+
+1015
+00:40:54,480 --> 00:40:59,760
+>> that controls a video game. And so we do
+
+1016
+00:40:57,680 --> 00:41:01,839
+collect the game performance metrics
+
+1017
+00:40:59,760 --> 00:41:03,839
+because that allows us to go across the
+
+1018
+00:41:01,839 --> 00:41:05,359
+13 categories and tell how well you're
+
+1019
+00:41:03,839 --> 00:41:06,800
+doing in each skill or whether you're
+
+1020
+00:41:05,359 --> 00:41:08,240
+improving.
+
+1021
+00:41:06,800 --> 00:41:10,560
+>> That but again that's within the
+
+1022
+00:41:08,240 --> 00:41:12,480
+confidentiality of the system we're
+
+1023
+00:41:10,560 --> 00:41:14,800
+living within. But there are other
+
+1024
+00:41:12,480 --> 00:41:16,800
+companies and we can obviously open ours
+
+1025
+00:41:14,800 --> 00:41:19,119
+up and we will under IRB when we want to
+
+1026
+00:41:16,800 --> 00:41:20,960
+go after another field. Imagine we
+
+1027
+00:41:19,119 --> 00:41:23,359
+wanted to work with drug addiction for
+
+1028
+00:41:20,960 --> 00:41:25,280
+example or something. We might want to
+
+1029
+00:41:23,359 --> 00:41:27,680
+see a signal in there that's we're not
+
+1030
+00:41:25,280 --> 00:41:29,200
+picking up now because it's a different
+
+1031
+00:41:27,680 --> 00:41:31,440
+situation.
+
+1032
+00:41:29,200 --> 00:41:32,640
+>> Uh so but there are companies right now
+
+1033
+00:41:31,440 --> 00:41:34,400
+that are putting all the data in the
+
+1034
+00:41:32,640 --> 00:41:37,359
+cloud.
+
+1035
+00:41:34,400 --> 00:41:39,520
+The real value becomes when you have the
+
+1036
+00:41:37,359 --> 00:41:41,520
+outcome data linked to it. No different
+
+1037
+00:41:39,520 --> 00:41:44,000
+than in any of the other clinical
+
+1038
+00:41:41,520 --> 00:41:46,079
+settings. So the outcome is did the
+
+1039
+00:41:44,000 --> 00:41:47,040
+student do better better or worse on the
+
+1040
+00:41:46,079 --> 00:41:47,280
+test.
+
+1041
+00:41:47,040 --> 00:41:49,200
+>> Yeah.
+
+1042
+00:41:47,280 --> 00:41:51,839
+>> Did the athlete hit a home run or strike
+
+1043
+00:41:49,200 --> 00:41:53,680
+out? Those kinds of things. If they're
+
+1044
+00:41:51,839 --> 00:41:55,839
+not there, you can't sub. You'll see
+
+1045
+00:41:53,680 --> 00:41:57,920
+subgroups like I did when the original
+
+1046
+00:41:55,839 --> 00:41:59,520
+days were looking at cancer genomics.
+
+1047
+00:41:57,920 --> 00:42:01,280
+Look at all these different subtypes,
+
+1048
+00:41:59,520 --> 00:42:03,520
+but we didn't have any idea how to treat
+
+1049
+00:42:01,280 --> 00:42:05,200
+them or what and we had no difference in
+
+1050
+00:42:03,520 --> 00:42:07,920
+the outcomes. They just existed as
+
+1051
+00:42:05,200 --> 00:42:09,760
+different.
+
+1052
+00:42:07,920 --> 00:42:13,359
+That's interesting. So that's all the
+
+1053
+00:42:09,760 --> 00:42:16,640
+the the valuable data is whether or not
+
+1054
+00:42:13,359 --> 00:42:17,520
+it caused a noticeable improvement in
+
+1055
+00:42:16,640 --> 00:42:19,680
+there.
+
+1056
+00:42:17,520 --> 00:42:22,400
+>> Yeah, it's some outcome event that you
+
+1057
+00:42:19,680 --> 00:42:24,079
+can track and say it could even be on
+
+1058
+00:42:22,400 --> 00:42:26,400
+entry. Here's the data that coming in.
+
+1059
+00:42:24,079 --> 00:42:28,000
+These are the kids who are the most
+
+1060
+00:42:26,400 --> 00:42:32,079
+successful. We could see that before
+
+1061
+00:42:28,000 --> 00:42:33,599
+they did the first mission even.
+
+1062
+00:42:32,079 --> 00:42:36,880
+>> Interesting.
+
+1063
+00:42:33,599 --> 00:42:39,440
+What is your advice to
+
+1064
+00:42:36,880 --> 00:42:41,359
+startups and entrepreneurs these days
+
+1065
+00:42:39,440 --> 00:42:42,960
+that you you sit on a lot of boards and
+
+1066
+00:42:41,359 --> 00:42:45,599
+you you you're
+
+1067
+00:42:42,960 --> 00:42:48,560
+>> um you see the startup ecosystem for
+
+1068
+00:42:45,599 --> 00:42:50,240
+what it is. Uh and and what is a a
+
+1069
+00:42:48,560 --> 00:42:53,920
+couple pieces of advice that you would
+
+1070
+00:42:50,240 --> 00:42:56,480
+give to a startup in like the seed to to
+
+1071
+00:42:53,920 --> 00:42:59,040
+series 8 sort of range?
+
+1072
+00:42:56,480 --> 00:43:01,040
+>> Uh a few things. Uh the CEO's only job
+
+1073
+00:42:59,040 --> 00:43:04,560
+is raising money. Let me repeat that.
+
+1074
+00:43:01,040 --> 00:43:07,280
+the CEO shop host job is raising money
+
+1075
+00:43:04,560 --> 00:43:10,720
+as a VC they all they would do is talk
+
+1076
+00:43:07,280 --> 00:43:12,400
+technology and they had no idea what I
+
+1077
+00:43:10,720 --> 00:43:15,280
+was interested in which is the other
+
+1078
+00:43:12,400 --> 00:43:17,200
+thing is before you meet with anybody
+
+1079
+00:43:15,280 --> 00:43:18,880
+doesn't matter if it's a customer
+
+1080
+00:43:17,200 --> 00:43:21,760
+potential collaborator potential
+
+1081
+00:43:18,880 --> 00:43:24,880
+investor think about what it is that
+
+1082
+00:43:21,760 --> 00:43:27,200
+they care most about 99% of
+
+1083
+00:43:24,880 --> 00:43:30,960
+entrepreneurs only talk about what they
+
+1084
+00:43:27,200 --> 00:43:33,280
+know and what they care the most about
+
+1085
+00:43:30,960 --> 00:43:36,880
+>> that's interesting. Um what you're
+
+1086
+00:43:33,280 --> 00:43:41,119
+saying is like some CEOs they are maybe
+
+1087
+00:43:36,880 --> 00:43:44,960
+too involved in product and design and
+
+1088
+00:43:41,119 --> 00:43:46,160
+not enough on just focusing on finances
+
+1089
+00:43:44,960 --> 00:43:47,599
+and and raising.
+
+1090
+00:43:46,160 --> 00:43:49,119
+>> Yeah. I mean a simpler question when I
+
+1091
+00:43:47,599 --> 00:43:51,599
+was a VCA used say let's assume your
+
+1092
+00:43:49,119 --> 00:43:54,000
+technology works is perfect. Uh all
+
+1093
+00:43:51,599 --> 00:43:56,800
+right um who [snorts] you going to sell
+
+1094
+00:43:54,000 --> 00:43:59,280
+it to? and they'll say, you know,
+
+1095
+00:43:56,800 --> 00:44:01,440
+they'll say, uh, uh, well, there's,
+
+1096
+00:43:59,280 --> 00:44:02,880
+imagine it's a cancer diagnostic and do
+
+1097
+00:44:01,440 --> 00:44:04,800
+something about that. Well, there's
+
+1098
+00:44:02,880 --> 00:44:06,960
+there's all these diagnostic labs out
+
+1099
+00:44:04,800 --> 00:44:08,560
+there that I'm sure they'll want it.
+
+1100
+00:44:06,960 --> 00:44:10,800
+Well, could you tell me the name of one
+
+1101
+00:44:08,560 --> 00:44:13,119
+that you've talked to and how much they
+
+1102
+00:44:10,800 --> 00:44:14,720
+would pay for it? [laughter]
+
+1103
+00:44:13,119 --> 00:44:18,040
+I even had one person say, "Well, that's
+
+1104
+00:44:14,720 --> 00:44:18,040
+your job."
+
+1105
+00:44:18,675 --> 00:44:22,000
+[laughter]
+
+1106
+00:44:19,440 --> 00:44:24,000
+No, if you don't if you've never talked
+
+1107
+00:44:22,000 --> 00:44:25,520
+to a customer,
+
+1108
+00:44:24,000 --> 00:44:27,200
+how do you have any idea what you're
+
+1109
+00:44:25,520 --> 00:44:29,599
+talking? So, that's what an investor
+
+1110
+00:44:27,200 --> 00:44:32,400
+wants to know. Who's going to buy this?
+
+1111
+00:44:29,599 --> 00:44:33,839
+As I said, assume it works perfectly.
+
+1112
+00:44:32,400 --> 00:44:35,920
+Who's going to buy it?
+
+1113
+00:44:33,839 --> 00:44:38,720
+>> That was on my mind.
+
+1114
+00:44:35,920 --> 00:44:40,640
+>> And and that's just such a such great
+
+1115
+00:44:38,720 --> 00:44:43,359
+advice because the customer is always
+
+1116
+00:44:40,640 --> 00:44:45,520
+right in this regard. Like you can't
+
+1117
+00:44:43,359 --> 00:44:46,880
+>> you you you that when somebody throws
+
+1118
+00:44:45,520 --> 00:44:48,880
+their money down to buy a product from
+
+1119
+00:44:46,880 --> 00:44:51,040
+you that's everything that you need as a
+
+1120
+00:44:48,880 --> 00:44:52,560
+founder right like that's everything
+
+1121
+00:44:51,040 --> 00:44:54,240
+>> and what will they pay for it I mean you
+
+1122
+00:44:52,560 --> 00:44:56,480
+asked me earlier you know can I buy it
+
+1123
+00:44:54,240 --> 00:44:57,680
+directly and as consumer we know we
+
+1124
+00:44:56,480 --> 00:44:59,760
+could charge a lot of money for it but
+
+1125
+00:44:57,680 --> 00:45:02,720
+we know a lot of people would fail
+
+1126
+00:44:59,760 --> 00:45:04,800
+>> if they didn't have the right uh
+
+1127
+00:45:02,720 --> 00:45:07,359
+guidance from us going into the the
+
+1128
+00:45:04,800 --> 00:45:10,000
+experience. So that's why we cut our
+
+1129
+00:45:07,359 --> 00:45:12,000
+figure we figure it out with kids to
+
+1130
+00:45:10,000 --> 00:45:13,599
+start with because they're kind and we
+
+1131
+00:45:12,000 --> 00:45:15,359
+just keep moving on.
+
+1132
+00:45:13,599 --> 00:45:17,520
+>> Yeah. At the end of the day, you you
+
+1133
+00:45:15,359 --> 00:45:20,240
+need the the case studies, right? So
+
+1134
+00:45:17,520 --> 00:45:22,640
+>> yeah, absolutely. And the proof points
+
+1135
+00:45:20,240 --> 00:45:24,880
+that shows it and and those and so as
+
+1136
+00:45:22,640 --> 00:45:27,440
+for an entrepreneur, you stop building
+
+1137
+00:45:24,880 --> 00:45:29,359
+the technology at the expense of testing
+
+1138
+00:45:27,440 --> 00:45:30,800
+it. All right. I'm using it with
+
+1139
+00:45:29,359 --> 00:45:33,839
+someone.
+
+1140
+00:45:30,800 --> 00:45:36,720
+>> On that not though, like if you if you
+
+1141
+00:45:33,839 --> 00:45:38,480
+could put the think set headset on
+
+1142
+00:45:36,720 --> 00:45:41,200
+anybody you wanted to, who would you put
+
+1143
+00:45:38,480 --> 00:45:45,520
+it on?
+
+1144
+00:45:41,200 --> 00:45:47,280
+>> Uh I would like uh to see it on uh Lo
+
+1145
+00:45:45,520 --> 00:45:49,359
+Messi. I'd like to see him actually
+
+1146
+00:45:47,280 --> 00:45:52,560
+perform on this.
+
+1147
+00:45:49,359 --> 00:45:54,240
+>> Wow. Are you uh for this World Cup, man?
+
+1148
+00:45:52,560 --> 00:45:55,680
+That would be some interesting
+
+1149
+00:45:54,240 --> 00:45:57,520
+>> Absolutely. I mean, if he if he did it
+
+1150
+00:45:55,680 --> 00:46:00,560
+before, I'd like to see how how well he
+
+1151
+00:45:57,520 --> 00:46:03,040
+can pop cuz elite athletes can jump
+
+1152
+00:46:00,560 --> 00:46:05,200
+right into this space until they hit a
+
+1153
+00:46:03,040 --> 00:46:07,440
+skill when they fail because they all do
+
+1154
+00:46:05,200 --> 00:46:09,839
+like mission four, five or six, then
+
+1155
+00:46:07,440 --> 00:46:10,880
+they have a complete meltdown.
+
+1156
+00:46:09,839 --> 00:46:12,960
+>> Yeah.
+
+1157
+00:46:10,880 --> 00:46:15,040
+>> But there some people like, you know,
+
+1158
+00:46:12,960 --> 00:46:16,480
+Michael Jordan and others, they blow
+
+1159
+00:46:15,040 --> 00:46:18,960
+right through it.
+
+1160
+00:46:16,480 --> 00:46:21,680
+>> Yeah. Interesting. because that's a
+
+1161
+00:46:18,960 --> 00:46:25,040
+natural skill they have that they
+
+1162
+00:46:21,680 --> 00:46:26,800
+learned on their own and were born with
+
+1163
+00:46:25,040 --> 00:46:28,319
+that differentiates them so much
+
+1164
+00:46:26,800 --> 00:46:31,119
+>> that that's where the term you're a
+
+1165
+00:46:28,319 --> 00:46:33,200
+natural comes from, right? Uh
+
+1166
+00:46:31,119 --> 00:46:35,920
+>> and every single athlete says there was
+
+1167
+00:46:33,200 --> 00:46:38,000
+someone more skilled than I was in when
+
+1168
+00:46:35,920 --> 00:46:39,119
+I was in school, but I had the ability
+
+1169
+00:46:38,000 --> 00:46:43,200
+to win.
+
+1170
+00:46:39,119 --> 00:46:44,960
+>> Yeah, that's interesting. Um and and on
+
+1171
+00:46:43,200 --> 00:46:48,319
+that note, I'll wrap it up with this.
+
+1172
+00:46:44,960 --> 00:46:50,160
+like you you've been around in the field
+
+1173
+00:46:48,319 --> 00:46:53,920
+for some time. What's one thing about
+
+1174
+00:46:50,160 --> 00:46:55,599
+the brain that in 20 years uh will
+
+1175
+00:46:53,920 --> 00:46:57,440
+surprise everybody, but you kind of see
+
+1176
+00:46:55,599 --> 00:47:00,480
+it going that way?
+
+1177
+00:46:57,440 --> 00:47:03,440
+>> I what I see is PE again just think
+
+1178
+00:47:00,480 --> 00:47:06,000
+about going from 16 apps to 1.9 million
+
+1179
+00:47:03,440 --> 00:47:08,400
+on the iPhone. I see there being so many
+
+1180
+00:47:06,000 --> 00:47:11,760
+technologies that will enable us to
+
+1181
+00:47:08,400 --> 00:47:13,920
+accelerate the way we learn and the
+
+1182
+00:47:11,760 --> 00:47:17,440
+skills we have. So imagine me expanding
+
+1183
+00:47:13,920 --> 00:47:19,680
+beyond five senses to having, you know,
+
+1184
+00:47:17,440 --> 00:47:21,440
+infrared or whatever, being able to be a
+
+1185
+00:47:19,680 --> 00:47:22,800
+tactile sense or something else that
+
+1186
+00:47:21,440 --> 00:47:25,680
+your brain can train because our brain
+
+1187
+00:47:22,800 --> 00:47:27,920
+has such plasticity. If you lose a limb,
+
+1188
+00:47:25,680 --> 00:47:30,079
+you can figure out how to how to, you
+
+1189
+00:47:27,920 --> 00:47:32,640
+know, write with your feet or whatever.
+
+1190
+00:47:30,079 --> 00:47:34,319
+We have so much opportunity that people
+
+1191
+00:47:32,640 --> 00:47:36,000
+are going to find, you know, I don't
+
+1192
+00:47:34,319 --> 00:47:38,000
+know how to play music. Well, let's put
+
+1193
+00:47:36,000 --> 00:47:41,920
+together a music thing. So, it's good to
+
+1194
+00:47:38,000 --> 00:47:45,040
+be an enjoyable training of doing music
+
+1195
+00:47:41,920 --> 00:47:46,560
+lessons. [laughter]
+
+1196
+00:47:45,040 --> 00:47:48,400
+>> I remember trying to learn the piano
+
+1197
+00:47:46,560 --> 00:47:50,240
+when I was a kid and was such a pain.
+
+1198
+00:47:48,400 --> 00:47:52,240
+But I I see what you're saying like if
+
+1199
+00:47:50,240 --> 00:47:54,480
+you can diagnose it, if you can label it
+
+1200
+00:47:52,240 --> 00:47:55,760
+and you can have a customized learning
+
+1201
+00:47:54,480 --> 00:47:58,000
+plan to learn that piano
+
+1202
+00:47:55,760 --> 00:47:59,680
+>> going as you're going, it's it's
+
+1203
+00:47:58,000 --> 00:48:01,119
+teaching you the rhythm just and you're
+
+1204
+00:47:59,680 --> 00:48:03,920
+keeping up with it and it's just pushing
+
+1205
+00:48:01,119 --> 00:48:04,240
+you just a touch every step of the way.
+
+1206
+00:48:03,920 --> 00:48:05,920
+>> Yeah. Yeah.
+
+1207
+00:48:04,240 --> 00:48:07,839
+>> And maybe there's a tactile sense cuz
+
+1208
+00:48:05,920 --> 00:48:09,920
+you have poor sense of beat in your own
+
+1209
+00:48:07,839 --> 00:48:12,560
+brain that's just going against your
+
+1210
+00:48:09,920 --> 00:48:14,400
+hand with a little uh that gets you at
+
+1211
+00:48:12,560 --> 00:48:16,319
+the right beat at the same time is
+
+1212
+00:48:14,400 --> 00:48:18,000
+training that part of your brain.
+
+1213
+00:48:16,319 --> 00:48:19,520
+>> Yeah, I am not coordinated in that
+
+1214
+00:48:18,000 --> 00:48:22,000
+regard and I think that's something that
+
+1215
+00:48:19,520 --> 00:48:24,640
+would help me. Thanks, Steve. This has
+
+1216
+00:48:22,000 --> 00:48:26,559
+been an amazing conversation. I think
+
+1217
+00:48:24,640 --> 00:48:28,240
+it's going to do uh it's going to help a
+
+1218
+00:48:26,559 --> 00:48:30,000
+lot of people in my audience. Thank you
+
+1219
+00:48:28,240 --> 00:48:33,760
+for coming. Let's stay in touch. All
+
+1220
+00:48:30,000 --> 00:48:33,760
+right. Thanks, Johan. A lot of fun.

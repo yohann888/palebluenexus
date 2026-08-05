@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-08-05T00:03:34.139Z",
+  "model": "claude-sonnet-5",
+  "youtubeId": "y_ES2M40j7s",
+  "moments": [
+    {
+      "t": 21,
+      "title": "Why He's Changing Canadian VC",
+      "insight": "Nectar explains Amiral Ventures launched to fill a gap: Canada lacks VC capital and funds willing to lead rounds and write term sheets."
+    },
+    {
+      "t": 154,
+      "title": "The Brain Drain Problem",
+      "insight": "He argues Canada's best talent leaves because the US has the big generational tech companies, not because founders are wrong to go."
+    },
+    {
+      "t": 366,
+      "title": "French Wine vs. Canadian Wine",
+      "insight": "Using a wine analogy, he says Silicon Valley has generations of maturity while Canada's tech ecosystem is only at 'generation 1.5 or 2.'"
+    },
+    {
+      "t": 593,
+      "title": "Canada's Innovation, Not Commercialization",
+      "insight": "He notes Canada birthed transformer AI and smartphone tech but has historically failed to commercialize its own breakthroughs."
+    },
+    {
+      "t": 993,
+      "title": "No One Knows What Will Work",
+      "insight": "He refuses to dismiss startup ideas, citing how top investors called Airbnb 'the dumbest idea' before it became a giant success."
+    },
+    {
+      "t": 1266,
+      "title": "The Founder Trait That Matters Most",
+      "insight": "Nectar says a founder's skin color, age, or gender is irrelevant—what matters is the quality of their ideas and their grit under pressure."
+    }
+  ]
+}

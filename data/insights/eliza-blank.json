@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-08-05T00:01:14.448Z",
+  "model": "claude-sonnet-5",
+  "youtubeId": "C9Y1jk3o5SQ",
+  "moments": [
+    {
+      "t": 341,
+      "title": "How COVID Sparked a Food Rescue Movement",
+      "insight": "College students started FarmLink during COVID by renting U-Hauls to connect surplus farm food with struggling food banks."
+    },
+    {
+      "t": 465,
+      "title": "150 Million Pounds of Food, 100 Trucks a Week",
+      "insight": "FarmLink scaled from 40 million pounds of rescued food in its first year to 150 million pounds annually today."
+    },
+    {
+      "t": 1026,
+      "title": "From Houseplants to Farm Fields",
+      "insight": "Eliza describes founding The Sill in 2012 and how that entrepreneurial journey eventually led her to FarmLink."
+    },
+    {
+      "t": 1104,
+      "title": "The Triple Win: Food, Farmers, and the Planet",
+      "insight": "Rescuing surplus food fights hunger, supports farmers, and cuts methane emissions from rotting landfill waste."
+    },
+    {
+      "t": 1180,
+      "title": "Why Peach Trees Are Being Bulldozed",
+      "insight": "Eliza reveals California is paying farmers to destroy peach orchards after Del Monte's bankruptcy killed demand for canned fruit."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-08-05T00:01:08.173Z",
+  "model": "claude-sonnet-5",
+  "youtubeId": "QPwbfB8WIPY",
+  "moments": [
+    {
+      "t": 220,
+      "title": "Founder as identity: the alien who builds",
+      "insight": "Charles defines himself first as a founder, calling it his core identity and 'icebergs' beneath capitalism."
+    },
+    {
+      "t": 445,
+      "title": "Why 'give your work for free' is toxic advice",
+      "insight": "He argues that free work undervalues young founders and blocks them from learning real fundamentals like ICP and offers."
+    },
+    {
+      "t": 1039,
+      "title": "Comfort is a poison pill, retirement kills",
+      "insight": "Charles claims safety and comfort are traps, citing that retirees statistically die sooner due to lost purpose."
+    },
+    {
+      "t": 1970,
+      "title": "The physical reset: 30k runs and 1000 push-ups",
+      "insight": "When plateauing, he forces hard physical resets like ultra runs and thousand-rep workouts to biochemically 'reboot' himself."
+    }
+  ]
+}
