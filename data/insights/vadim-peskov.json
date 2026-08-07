@@ -1,12 +1,32 @@
 {
-  "generatedAt": "2026-08-05T00:01:51.977Z",
+  "generatedAt": "2026-08-07T13:49:15.996Z",
   "model": "claude-sonnet-5",
   "youtubeId": "4Zcf0qmPu_I",
   "moments": [
     {
-      "t": 2246,
-      "title": "The 10x Engineer Myth, Debunked",
-      "insight": "He argues metrics like '10x engineer' are unrealistic hype—more a headline than a real measure of value."
+      "t": 157,
+      "title": "Is the '10x engineer' claim even real?",
+      "insight": "Vadim argues that measuring engineers by speed or output is an unreliable illusion, much like counting lines of code."
+    },
+    {
+      "t": 226,
+      "title": "AI cuts client dev costs by 4x",
+      "insight": "Defco says AI-driven development has cut project costs for clients by at least four times in most cases."
+    },
+    {
+      "t": 448,
+      "title": "Skip the sexy startups—go where no one looks",
+      "insight": "His playbook: target the most compliance-heavy, 'unsexy' industries like banking and healthcare because competition is thin and automation opportunity is huge."
+    },
+    {
+      "t": 1962,
+      "title": "Founders are lonely, and passion beats fear",
+      "insight": "He says great founders show a visible 'fire' in their eyes—either fear of losing or passion to win—and without it, it's a lost cause."
+    },
+    {
+      "t": 2334,
+      "title": "\"We don't need coders anymore\"",
+      "insight": "Vadim claims his teams now build systems where AI writes 100% of the code, and touching the code yourself breaks the point of agentic development."
     }
   ]
 }

@@ -1,12 +1,37 @@
 {
-  "generatedAt": "2026-08-05T00:00:32.344Z",
+  "generatedAt": "2026-08-07T13:59:34.774Z",
   "model": "claude-sonnet-5",
   "youtubeId": "CgWRHHS7A_g",
   "moments": [
     {
-      "t": 8,
-      "title": "The Triangle: An Underpriced Startup Ecosystem",
-      "insight": "Austin argues the Triangle is one of the most underpriced, undertapped startup ecosystems in the country, yet local talent doesn't realize they can headquarter there."
+      "t": 428,
+      "title": "Triangle: America's most underrated startup hub",
+      "insight": "Austin argues the Triangle is one of the most underpriced, undertapped startup ecosystems in the country."
+    },
+    {
+      "t": 590,
+      "title": "Why AI is driving people back in-person",
+      "insight": "AI-driven job displacement is freeing up time, pushing people to seek in-person connection and community again."
+    },
+    {
+      "t": 1092,
+      "title": "The real reason businesses fail at video",
+      "insight": "Founders know they need content but don't know what to say, how to edit, or how to stay consistent—so Syllaby automates it."
+    },
+    {
+      "t": 1849,
+      "title": "From back-of-the-room fan to conference owner",
+      "insight": "A cold DM in 2021 turned into owning and rebranding the entire conference as AI Marketing World by 2025."
+    },
+    {
+      "t": 2503,
+      "title": "Why he ran his own agency into the ground",
+      "insight": "Clients only wanted to work with him personally, so stepping back to build Syllaby caused the agency to collapse."
+    },
+    {
+      "t": 2789,
+      "title": "'Literally illegal': his blunt take on AI UGC",
+      "insight": "He argues AI-generated fake product reviews violate FTC rules and will bring major fines to companies using them."
     }
   ]
 }
