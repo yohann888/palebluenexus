@@ -10,6 +10,10 @@ Pale Blue Nexus is a podcast by Yohann Calpu, co-founder of Aloomii. It features
 
 Yohann Calpu — Host of Pale Blue Nexus, Co-founder of Aloomii.
 
+## Podcast RSS
+
+https://api.riverside.com/hosting/XLo1YoIr.rss
+
 ## Episodes
 
 <!-- AUTO-EPISODES:start -->

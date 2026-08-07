@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://palebluenexus.com/sitemap.xml
+Sitemap: https://palebluenexus.com/sitemap-video.xml

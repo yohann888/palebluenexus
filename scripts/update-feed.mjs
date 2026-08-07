@@ -40,6 +40,7 @@ const SHOW_LINKS = {
   spotify: "https://open.spotify.com/show/6xY4m0p3646gZGMCb33Z3d",
   tiktok: "https://www.tiktok.com/@palebluenexus",
 };
+const RSS_FEED_URL = "https://api.riverside.com/hosting/XLo1YoIr.rss";
 
 const log = (...a) => console.log("[update-feed]", ...a);
 
@@ -72,6 +73,207 @@ function parseCount(text) {
   else if (unit === "M") n *= 1e6;
   else if (unit === "B") n *= 1e9;
   return Math.round(n);
+}
+
+function isoDuration(value) {
+  const seconds = durationSeconds(value);
+  if (!seconds) return "";
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const remainder = seconds % 60;
+  return `PT${hours ? `${hours}H` : ""}${minutes ? `${minutes}M` : ""}${remainder ? `${remainder}S` : ""}`;
+}
+
+function youtubeViewCount(item) {
+  if (!item || item.platform !== "youtube") return 0;
+  const views = Number(item.views);
+  return Number.isFinite(views) && views > 0 ? Math.floor(views) : 0;
+}
+
+function derivedEpisodeDescription(g) {
+  const title = String(g.episodeTitle || "").trim().replace(/[.!?]+\s*$/, "");
+  const role = String(g.role || "").trim();
+  return [title, role].filter(Boolean).join(". ");
+}
+
+function decodeHtml(value) {
+  return String(value || "")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
+function pageEpisodeDescription(html, g) {
+  const meta = html.match(/<meta\s+name=["']description["']\s+content="([^"]*)"/i)
+    || html.match(/<meta\s+name=["']description["']\s+content='([^']*)'/i);
+  if (meta?.[1]) return decodeHtml(meta[1]);
+  const ld = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/i);
+  if (ld) {
+    try {
+      const schema = JSON.parse(ld[1]);
+      const description = schema["@graph"]?.find((entry) =>
+        entry["@type"] === "PodcastEpisode" || entry["@type"] === "VideoObject"
+      )?.description;
+      if (description) return description;
+    } catch {}
+  }
+  return derivedEpisodeDescription(g);
+}
+
+function episodeVideoMetadata(g, { html = "", description = "" } = {}) {
+  return {
+    name: `${g.name} - Pale Blue Nexus ${g.episode}`,
+    description: description || (html ? pageEpisodeDescription(html, g) : derivedEpisodeDescription(g)),
+  };
+}
+
+function episodeInsights(insights = []) {
+  return insights
+    .map((moment) => ({ ...moment, t: Number(moment.t) }))
+    .filter((moment) => Number.isFinite(moment.t) && moment.t >= 0 && moment.title)
+    .sort((a, b) => a.t - b.t);
+}
+
+function episodeStructuredData(g, { item = null, insights = [], description = derivedEpisodeDescription(g) } = {}) {
+  const metadata = episodeVideoMetadata(g, { description });
+  const canonical = `https://palebluenexus.com/episodes/${g.episodeSlug}/`;
+  const image = `https://img.youtube.com/vi/${g.youtubeId}/maxresdefault.jpg`;
+  const duration = g.duration || item?.duration || "";
+  const durationValue = isoDuration(duration);
+  const durationEnd = durationSeconds(duration);
+  const moments = episodeInsights(insights);
+  const hasPart = moments.map((moment, index) => {
+    const next = moments[index + 1]?.t ?? durationEnd;
+    return {
+      "@type": "Clip",
+      name: moment.title,
+      startOffset: moment.t,
+      ...(next > moment.t ? { endOffset: next } : {}),
+      url: `${canonical}?t=${moment.t}`,
+    };
+  });
+  const video = {
+    "@type": "VideoObject",
+    "@id": `${canonical}#video`,
+    name: metadata.name,
+    description: metadata.description,
+    thumbnailUrl: image,
+    uploadDate: g.date || "",
+    ...(durationValue ? { duration: durationValue } : {}),
+    contentUrl: `https://www.youtube.com/watch?v=${g.youtubeId}`,
+    embedUrl: `https://www.youtube.com/embed/${g.youtubeId}`,
+    ...(youtubeViewCount(item) ? {
+      interactionStatistic: {
+        "@type": "InteractionCounter",
+        interactionType: { "@type": "WatchAction" },
+        userInteractionCount: youtubeViewCount(item),
+      },
+    } : {}),
+    ...(hasPart.length ? { hasPart } : {}),
+  };
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "PodcastSeries",
+        "@id": "https://palebluenexus.com/#podcast",
+        name: "Pale Blue Nexus",
+        url: "https://palebluenexus.com/",
+        webFeed: RSS_FEED_URL,
+      },
+      {
+        "@type": "PodcastEpisode",
+        "@id": `${canonical}#episode`,
+        name: metadata.name,
+        description: metadata.description,
+        url: canonical,
+        image,
+        datePublished: g.date || "",
+        partOfSeries: { "@id": "https://palebluenexus.com/#podcast" },
+        guest: {
+          "@type": "Person",
+          name: g.name,
+          jobTitle: g.role,
+          ...(g.website ? { url: g.website } : {}),
+        },
+        associatedMedia: { "@id": `${canonical}#video` },
+      },
+      video,
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://palebluenexus.com/" },
+          { "@type": "ListItem", position: 2, name: "Guests", item: "https://palebluenexus.com/guests/" },
+          { "@type": "ListItem", position: 3, name: g.name, item: canonical },
+        ],
+      },
+    ],
+  };
+}
+
+function episodeSeoHeadHtml(g) {
+  const canonical = `https://palebluenexus.com/episodes/${g.episodeSlug}/`;
+  const embed = `https://www.youtube.com/embed/${g.youtubeId}`;
+  return `<!-- AUTO-EP-SEO:start -->
+  <link rel="alternate" type="application/rss+xml" title="Pale Blue Nexus" href="${RSS_FEED_URL}" />
+  <meta property="og:video" content="${embed}" />
+  <meta property="og:video:url" content="${embed}" />
+  <meta property="og:video:secure_url" content="${embed}" />
+  <meta property="og:video:type" content="text/html" />
+  <meta property="og:video:width" content="1280" />
+  <meta property="og:video:height" content="720" />
+  <!-- AUTO-EP-SEO:end -->`;
+}
+
+function episodePlayerScript() {
+  return `<!-- AUTO-EP-PLAYER:start -->
+  <script>
+    (() => {
+      const rawSeconds = new URLSearchParams(window.location.search).get("t");
+      if (rawSeconds === null || rawSeconds.trim() === "") return;
+      const seconds = Number(rawSeconds);
+      if (!Number.isFinite(seconds) || seconds <= 0) return;
+      const iframe = document.querySelector('iframe[src*="youtube.com/embed/"]');
+      if (!iframe) return;
+      const url = new URL(iframe.src);
+      url.searchParams.set("start", Math.floor(seconds));
+      iframe.src = url.toString();
+    })();
+  </script>
+  <!-- AUTO-EP-PLAYER:end -->`;
+}
+
+function episodeVideoHtml(g) {
+  return `<!-- AUTO-EP-VIDEO:start -->
+  <section class="episode-video" style="padding:0 0 4rem"><div class="section-container"><div style="aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08)"><iframe src="https://www.youtube.com/embed/${esc(g.youtubeId)}" title="${esc(g.episodeTitle || `${g.name} on Pale Blue Nexus`)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" style="width:100%;height:100%;border:0"></iframe></div></div></section>
+  <!-- AUTO-EP-VIDEO:end -->`;
+}
+
+function updateEpisodeVideo(html, g) {
+  const video = episodeVideoHtml(g);
+  const markerRe = /<!-- AUTO-EP-VIDEO:start -->[\s\S]*?<!-- AUTO-EP-VIDEO:end -->/;
+  if (markerRe.test(html)) return html.replace(markerRe, () => video);
+  if (/<iframe\b[^>]+src=["'][^"']*youtube\.com\/embed\//i.test(html)) return html;
+  return html.replace("<footer", () => `${video}\n  <footer`);
+}
+
+function updateEpisodeSeo(html, g, { item = null, insights = [] } = {}) {
+  const schema = JSON.stringify(episodeStructuredData(g, {
+    item,
+    insights,
+    description: pageEpisodeDescription(html, g),
+  })).replace(/</g, "\\u003c");
+  const ld = `<script type="application/ld+json">${schema}</script>`;
+  const ldRe = /<script type="application\/ld\+json">[\s\S]*?<\/script>/;
+  html = ldRe.test(html) ? html.replace(ldRe, () => ld) : html.replace("</head>", () => `  ${ld}\n</head>`);
+  const seo = episodeSeoHeadHtml(g);
+  const seoRe = /<!-- AUTO-EP-SEO:start -->[\s\S]*?<!-- AUTO-EP-SEO:end -->/;
+  html = seoRe.test(html) ? html.replace(seoRe, () => seo) : html.replace("</head>", () => `  ${seo}\n</head>`);
+  const player = episodePlayerScript();
+  const playerRe = /<!-- AUTO-EP-PLAYER:start -->[\s\S]*?<!-- AUTO-EP-PLAYER:end -->/;
+  return playerRe.test(html) ? html.replace(playerRe, () => player) : html.replace("</body>", () => `  ${player}\n</body>`);
 }
 
 // "4 days ago" / "Streamed 2 weeks ago" / "1 month ago" -> approx Date
@@ -600,46 +802,10 @@ async function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
 function newEpisodePageHtml(g) {
   const episodeTitle = String(g.episodeTitle || "").trim();
   const pageTitle = `${g.name} - Pale Blue Nexus ${g.episode}`;
-  const description = `${episodeTitle}. ${g.role}.`;
+  const description = derivedEpisodeDescription(g);
   const canonical = `https://palebluenexus.com/episodes/${g.episodeSlug}/`;
   const image = `https://img.youtube.com/vi/${g.youtubeId}/maxresdefault.jpg`;
-  const episodeSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "PodcastSeries",
-        "@id": "https://palebluenexus.com/#podcast",
-        name: "Pale Blue Nexus",
-        url: "https://palebluenexus.com/",
-      },
-      {
-        "@type": "PodcastEpisode",
-        "@id": `${canonical}#episode`,
-        name: pageTitle,
-        description,
-        url: canonical,
-        image,
-        datePublished: g.date || "",
-        partOfSeries: { "@id": "https://palebluenexus.com/#podcast" },
-        guest: {
-          "@type": "Person",
-          name: g.name,
-          jobTitle: g.role,
-        },
-        associatedMedia: { "@id": `${canonical}#video` },
-      },
-      {
-        "@type": "VideoObject",
-        "@id": `${canonical}#video`,
-        name: pageTitle,
-        description,
-        thumbnailUrl: image,
-        uploadDate: g.date || "",
-        contentUrl: `https://www.youtube.com/watch?v=${g.youtubeId}`,
-        embedUrl: `https://www.youtube.com/embed/${g.youtubeId}`,
-      },
-    ],
-  };
+  const episodeSchema = episodeStructuredData(g);
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -649,6 +815,7 @@ function newEpisodePageHtml(g) {
   <meta name="description" content="${esc(description)}" />
   <meta property="og:title" content="${esc(pageTitle)}" /><meta property="og:description" content="${esc(description)}" /><meta property="og:type" content="video.episode" /><meta property="og:url" content="${esc(canonical)}" /><meta property="og:image" content="${esc(image)}" />
   <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content="${esc(pageTitle)}" /><meta name="twitter:description" content="${esc(description)}" /><meta name="twitter:image" content="${esc(image)}" />
+  ${episodeSeoHeadHtml(g)}
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
   <script type="application/ld+json">${JSON.stringify(episodeSchema).replace(/</g, "\\u003c")}</script>
   <link rel="icon" type="image/png" href="/images/favicon.png" />
@@ -660,8 +827,9 @@ function newEpisodePageHtml(g) {
   <section class="hero"><div class="section-container"><div class="fade"><div role="navigation" aria-label="Breadcrumb" class="ep-breadcrumb" style="margin-bottom:1.25rem;font-size:.8rem;letter-spacing:.05em"><a href="/guests/" style="color:#D4A84B;text-decoration:none">Guests</a><span style="color:rgba(166,210,230,.5);margin:0 .5rem">/</span><span style="color:#A6D2E6">${esc(g.name)}</span></div><span class="section-eyebrow eyebrow">${esc(g.episode)}</span><img class="guest-photo photo" src="../../${esc(g.photo)}" alt="${esc(g.name)}" /><h1>${esc(g.name)}</h1><p style="font-size:1.1rem;color:var(--secondary);max-width:600px">${esc(episodeTitle)}</p><div class="episode-meta meta"><span>${esc(g.episode)}</span></div><a class="share-btn share" href="https://www.youtube.com/watch?v=${esc(g.youtubeId)}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></div></div></section>
   <section style="background:linear-gradient(180deg,rgba(10,14,28,1) 0%,var(--bg) 100%)"><div class="section-container"><span class="section-eyebrow eyebrow fade">About the Guest</span><h2 class="fade">${esc(g.name)}.</h2><p class="guest-bio bio fade">${esc(g.bio || "")}</p></div></section>
   <!-- AUTO-EP-KIT:start --><!-- AUTO-EP-KIT:end -->
-  <section style="padding-top:0"><div class="section-container"><div class="embed fade"><iframe src="https://www.youtube.com/embed/${esc(g.youtubeId)}" title="${esc(episodeTitle)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div></div></section>
+  ${episodeVideoHtml(g)}
   <footer><p>Pale Blue Nexus. Making sense of the future, from right here.</p></footer><script>window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50));</script>
+  ${episodePlayerScript()}
 </body></html>
 `;
 }
@@ -1606,6 +1774,86 @@ function updateSitemap(sitemap, guests) {
   return `${cleaned.join("\n").replace(/\n+$/, "")}\n`;
 }
 
+function videoSitemapBlock(guests, items) {
+  const lines = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">',
+  ];
+  for (const guest of publicEpisodeGuests(guests)) {
+    const item = items.find((candidate) => candidate.id === guest.youtubeId);
+    const episodePath = join(ROOT, "episodes", guest.episodeSlug, "index.html");
+    const episodeHtml = existsSync(episodePath) ? readFileSync(episodePath, "utf8") : "";
+    const metadata = episodeVideoMetadata(guest, { html: episodeHtml });
+    const title = videoSitemapField(metadata.name, 100, "title", guest.episodeSlug);
+    const description = videoSitemapField(metadata.description, 2048, "description", guest.episodeSlug);
+    const playerLoc = `https://www.youtube.com/embed/${guest.youtubeId}`;
+    const duration = durationSeconds(guest.duration || item?.duration || "");
+    if (duration > 28800) {
+      throw new Error(`video sitemap duration exceeds 8 hours for ${guest.episodeSlug}`);
+    }
+    lines.push(
+      "  <url>",
+      `    <loc>https://palebluenexus.com/episodes/${xmlEsc(guest.episodeSlug)}/</loc>`,
+      "    <video:video>",
+      `      <video:thumbnail_loc>${xmlEsc(`https://img.youtube.com/vi/${guest.youtubeId}/maxresdefault.jpg`)}</video:thumbnail_loc>`,
+      `      <video:title>${xmlEsc(title)}</video:title>`,
+      `      <video:description>${xmlEsc(description)}</video:description>`,
+      `      <video:player_loc allow_embed="yes">${xmlEsc(playerLoc)}</video:player_loc>`,
+      ...(duration ? [`      <video:duration>${duration}</video:duration>`] : []),
+      ...(guest.date ? [`      <video:publication_date>${xmlEsc(guest.date)}</video:publication_date>`] : []),
+      "    </video:video>",
+      "  </url>",
+    );
+  }
+  lines.push("</urlset>");
+  return `${lines.join("\n")}\n`;
+}
+
+function videoSitemapField(value, maxLength, field, slug) {
+  const text = String(value || "").trim();
+  if (!text) throw new Error(`video sitemap ${field} is empty for ${slug}`);
+  if (text.length > maxLength) {
+    throw new Error(`video sitemap ${field} exceeds ${maxLength} characters for ${slug}`);
+  }
+  return text;
+}
+
+function updateHomepageSeo(html) {
+  const ldRe = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/;
+  const match = html.match(ldRe);
+  if (match) {
+    try {
+      const schema = JSON.parse(match[1]);
+      const series = schema["@graph"]?.find((entry) => entry["@type"] === "PodcastSeries");
+      if (series) series.webFeed = RSS_FEED_URL;
+      html = html.replace(ldRe, () => `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n  </script>`);
+    } catch (error) {
+      log(`warning: homepage JSON-LD update failed: ${error.message}`);
+    }
+  }
+  const rss = `<!-- AUTO-SITE-SEO:start -->
+  <link rel="alternate" type="application/rss+xml" title="Pale Blue Nexus" href="${RSS_FEED_URL}" />
+  <!-- AUTO-SITE-SEO:end -->`;
+  const rssRe = /<!-- AUTO-SITE-SEO:start -->[\s\S]*?<!-- AUTO-SITE-SEO:end -->/;
+  return rssRe.test(html) ? html.replace(rssRe, () => rss) : html.replace("</head>", () => `  ${rss}\n</head>`);
+}
+
+function updateAgentCard(agentCard) {
+  if (agentCard.includes(`"url": "${RSS_FEED_URL}"`)) return agentCard;
+  const marker = `      }
+    ],
+    "published_episodes"`;
+  const rss = `      },
+      {
+        "platform": "Podcast RSS",
+        "type": "audio",
+        "url": "${RSS_FEED_URL}"
+      }
+    ],
+    "published_episodes"`;
+  return agentCard.replace(marker, rss);
+}
+
 function episodeLlmsBlock(guests, byGuest, items) {
   const lines = ["<!-- AUTO-EPISODES:start -->"];
   for (const guest of publicEpisodeGuests(guests)) {
@@ -1632,10 +1880,16 @@ function episodeLlmsBlock(guests, byGuest, items) {
 function updateLlms(llms, guests, byGuest, items) {
   const block = episodeLlmsBlock(guests, byGuest, items);
   const markerRe = /<!-- AUTO-EPISODES:start -->[\s\S]*?<!-- AUTO-EPISODES:end -->/;
-  if (markerRe.test(llms)) return llms.replace(markerRe, block);
-  const sectionRe = /(## Episodes\n)[\s\S]*?(?=\n## Transcripts\b)/;
-  if (sectionRe.test(llms)) return llms.replace(sectionRe, (_, heading) => `${heading}\n${block}\n`);
-  return `${llms.trimEnd()}\n\n## Episodes\n\n${block}\n`;
+  if (markerRe.test(llms)) llms = llms.replace(markerRe, () => block);
+  else {
+    const sectionRe = /(## Episodes\n)[\s\S]*?(?=\n## Transcripts\b)/;
+    if (sectionRe.test(llms)) llms = llms.replace(sectionRe, (_, heading) => `${heading}\n${block}\n`);
+    else llms = `${llms.trimEnd()}\n\n## Episodes\n\n${block}\n`;
+  }
+  const rssSection = `## Podcast RSS\n\n${RSS_FEED_URL}`;
+  const rssRe = /## Podcast RSS\n\n[^\n]+/;
+  if (rssRe.test(llms)) return llms.replace(rssRe, () => rssSection);
+  return llms.replace(/\n## Episodes\b/, () => `\n${rssSection}\n\n## Episodes`);
 }
 
 /* -------------------------------------------------------------------- main */
@@ -1832,6 +2086,7 @@ async function main() {
   html = injectBetween(html, "AUTO-TOP", topPerformingHtml(items));
   html = injectBetween(html, "AUTO-GUESTS", guestsSectionHtml(guests, byGuest, guestReach));
   if (stats) html = injectBetween(html, "AUTO-STATS", statsBandHtml(stats, Number(podcast.totalStreams) || 0));
+  html = updateHomepageSeo(html);
   writeFileSync(join(ROOT, "index.html"), html);
   log("updated index.html sections");
 
@@ -1954,13 +2209,20 @@ async function main() {
       log(`warning: ${g.episodeSlug}/index.html has no AUTO-EP-KIT markers; skipping`);
       continue;
     }
+    const episodeWithVideo = updateEpisodeVideo(episodeHtml, g);
+    const hasYoutubeEmbed = /<iframe\b[^>]+src=["'][^"']*youtube\.com\/embed\//i.test(episodeWithVideo);
+    const insights = hasYoutubeEmbed ? readInsights(g.episodeSlug) : [];
+    const updatedEpisodeHtml = updateEpisodeSeo(episodeWithVideo, g, {
+      item: episodeItem,
+      insights,
+    });
     writeFileSync(
       episodePath,
-      injectBetween(episodeHtml, "AUTO-EP-KIT", episodeKitHtml(g, {
+      injectBetween(updatedEpisodeHtml, "AUTO-EP-KIT", episodeKitHtml(g, {
         item: episodeItem,
         reach: guestReach[g.slug],
         clips,
-        insights: readInsights(g.episodeSlug),
+        insights,
       })),
     );
   }
@@ -1973,9 +2235,21 @@ async function main() {
   const markdownEpisodesCreated = updateEpisodeMarkdownFiles(guests, items, byGuest);
   const sitemapPath = join(ROOT, "sitemap.xml");
   writeFileSync(sitemapPath, updateSitemap(readFileSync(sitemapPath, "utf8"), guests));
+  const videoSitemapPath = join(ROOT, "sitemap-video.xml");
+  writeFileSync(videoSitemapPath, videoSitemapBlock(guests, items));
+  const robotsPath = join(ROOT, "robots.txt");
+  let robots = readFileSync(robotsPath, "utf8");
+  if (!robots.includes("Sitemap: https://palebluenexus.com/sitemap-video.xml")) {
+    robots = `${robots.trimEnd()}\nSitemap: https://palebluenexus.com/sitemap-video.xml\n`;
+  }
+  writeFileSync(robotsPath, robots);
   const llmsPath = join(ROOT, "llms.txt");
   writeFileSync(llmsPath, updateLlms(readFileSync(llmsPath, "utf8"), guests, byGuest, items));
-  log(`updated sitemap.xml and llms.txt; created ${markdownEpisodesCreated} episode Markdown pages`);
+  const agentCardPath = join(ROOT, ".well-known/agent-card.json");
+  if (existsSync(agentCardPath)) {
+    writeFileSync(agentCardPath, updateAgentCard(readFileSync(agentCardPath, "utf8")));
+  }
+  log(`updated sitemap.xml, sitemap-video.xml, robots.txt, llms.txt, and agent-card; created ${markdownEpisodesCreated} episode Markdown pages`);
 
   // per-guest promo og:image cards (hosted SVG, fetchable by social crawlers)
   const promoImgDir = join(ROOT, "images/promo");
