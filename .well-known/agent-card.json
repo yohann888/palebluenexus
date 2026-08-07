@@ -59,6 +59,11 @@
         "platform": "TikTok",
         "type": "video",
         "url": "https://www.tiktok.com/@palebluenexus"
+      },
+      {
+        "platform": "Podcast RSS",
+        "type": "audio",
+        "url": "https://api.riverside.com/hosting/XLo1YoIr.rss"
       }
     ],
     "published_episodes": [
