@@ -1880,7 +1880,7 @@ function episodeLlmsBlock(guests, byGuest, items) {
 function updateLlms(llms, guests, byGuest, items) {
   const block = episodeLlmsBlock(guests, byGuest, items);
   const markerRe = /<!-- AUTO-EPISODES:start -->[\s\S]*?<!-- AUTO-EPISODES:end -->/;
-  if (markerRe.test(llms)) llms = llms.replace(markerRe, block);
+  if (markerRe.test(llms)) llms = llms.replace(markerRe, () => block);
   else {
     const sectionRe = /(## Episodes\n)[\s\S]*?(?=\n## Transcripts\b)/;
     if (sectionRe.test(llms)) llms = llms.replace(sectionRe, (_, heading) => `${heading}\n${block}\n`);
@@ -1888,8 +1888,8 @@ function updateLlms(llms, guests, byGuest, items) {
   }
   const rssSection = `## Podcast RSS\n\n${RSS_FEED_URL}`;
   const rssRe = /## Podcast RSS\n\n[^\n]+/;
-  if (rssRe.test(llms)) return llms.replace(rssRe, rssSection);
-  return llms.replace(/\n## Episodes\b/, `\n${rssSection}\n\n## Episodes`);
+  if (rssRe.test(llms)) return llms.replace(rssRe, () => rssSection);
+  return llms.replace(/\n## Episodes\b/, () => `\n${rssSection}\n\n## Episodes`);
 }
 
 /* -------------------------------------------------------------------- main */
