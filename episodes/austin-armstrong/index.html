@@ -319,8 +319,10 @@
   <!-- AUTO-EP-PLAYER:start -->
   <script>
     (() => {
-      const seconds = Number(new URLSearchParams(window.location.search).get("t"));
-      if (!Number.isFinite(seconds) || seconds < 0) return;
+      const rawSeconds = new URLSearchParams(window.location.search).get("t");
+      if (rawSeconds === null || rawSeconds.trim() === "") return;
+      const seconds = Number(rawSeconds);
+      if (!Number.isFinite(seconds) || seconds <= 0) return;
       const iframe = document.querySelector('iframe[src*="youtube.com/embed/"]');
       if (!iframe) return;
       const url = new URL(iframe.src);

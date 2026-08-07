@@ -231,8 +231,10 @@ function episodePlayerScript() {
   return `<!-- AUTO-EP-PLAYER:start -->
   <script>
     (() => {
-      const seconds = Number(new URLSearchParams(window.location.search).get("t"));
-      if (!Number.isFinite(seconds) || seconds < 0) return;
+      const rawSeconds = new URLSearchParams(window.location.search).get("t");
+      if (rawSeconds === null || rawSeconds.trim() === "") return;
+      const seconds = Number(rawSeconds);
+      if (!Number.isFinite(seconds) || seconds <= 0) return;
       const iframe = document.querySelector('iframe[src*="youtube.com/embed/"]');
       if (!iframe) return;
       const url = new URL(iframe.src);
@@ -252,9 +254,9 @@ function episodeVideoHtml(g) {
 function updateEpisodeVideo(html, g) {
   const video = episodeVideoHtml(g);
   const markerRe = /<!-- AUTO-EP-VIDEO:start -->[\s\S]*?<!-- AUTO-EP-VIDEO:end -->/;
-  if (markerRe.test(html)) return html.replace(markerRe, video);
+  if (markerRe.test(html)) return html.replace(markerRe, () => video);
   if (/<iframe\b[^>]+src=["'][^"']*youtube\.com\/embed\//i.test(html)) return html;
-  return html.replace("<footer", `${video}\n  <footer`);
+  return html.replace("<footer", () => `${video}\n  <footer`);
 }
 
 function updateEpisodeSeo(html, g, { item = null, insights = [] } = {}) {
@@ -265,13 +267,13 @@ function updateEpisodeSeo(html, g, { item = null, insights = [] } = {}) {
   })).replace(/</g, "\\u003c");
   const ld = `<script type="application/ld+json">${schema}</script>`;
   const ldRe = /<script type="application\/ld\+json">[\s\S]*?<\/script>/;
-  html = ldRe.test(html) ? html.replace(ldRe, ld) : html.replace("</head>", `  ${ld}\n</head>`);
+  html = ldRe.test(html) ? html.replace(ldRe, () => ld) : html.replace("</head>", () => `  ${ld}\n</head>`);
   const seo = episodeSeoHeadHtml(g);
   const seoRe = /<!-- AUTO-EP-SEO:start -->[\s\S]*?<!-- AUTO-EP-SEO:end -->/;
-  html = seoRe.test(html) ? html.replace(seoRe, seo) : html.replace("</head>", `  ${seo}\n</head>`);
+  html = seoRe.test(html) ? html.replace(seoRe, () => seo) : html.replace("</head>", () => `  ${seo}\n</head>`);
   const player = episodePlayerScript();
   const playerRe = /<!-- AUTO-EP-PLAYER:start -->[\s\S]*?<!-- AUTO-EP-PLAYER:end -->/;
-  return playerRe.test(html) ? html.replace(playerRe, player) : html.replace("</body>", `  ${player}\n</body>`);
+  return playerRe.test(html) ? html.replace(playerRe, () => player) : html.replace("</body>", () => `  ${player}\n</body>`);
 }
 
 // "4 days ago" / "Streamed 2 weeks ago" / "1 month ago" -> approx Date
@@ -1824,7 +1826,7 @@ function updateHomepageSeo(html) {
       const schema = JSON.parse(match[1]);
       const series = schema["@graph"]?.find((entry) => entry["@type"] === "PodcastSeries");
       if (series) series.webFeed = RSS_FEED_URL;
-      html = html.replace(ldRe, `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n  </script>`);
+      html = html.replace(ldRe, () => `<script type="application/ld+json">\n${JSON.stringify(schema, null, 2)}\n  </script>`);
     } catch (error) {
       log(`warning: homepage JSON-LD update failed: ${error.message}`);
     }
@@ -1833,7 +1835,7 @@ function updateHomepageSeo(html) {
   <link rel="alternate" type="application/rss+xml" title="Pale Blue Nexus" href="${RSS_FEED_URL}" />
   <!-- AUTO-SITE-SEO:end -->`;
   const rssRe = /<!-- AUTO-SITE-SEO:start -->[\s\S]*?<!-- AUTO-SITE-SEO:end -->/;
-  return rssRe.test(html) ? html.replace(rssRe, rss) : html.replace("</head>", `  ${rss}\n</head>`);
+  return rssRe.test(html) ? html.replace(rssRe, () => rss) : html.replace("</head>", () => `  ${rss}\n</head>`);
 }
 
 function updateAgentCard(agentCard) {
