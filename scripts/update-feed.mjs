@@ -90,6 +90,37 @@ function youtubeViewCount(item) {
   return Number.isFinite(views) && views > 0 ? Math.floor(views) : 0;
 }
 
+function derivedEpisodeDescription(g) {
+  const title = String(g.episodeTitle || "").trim().replace(/[.!?]+\s*$/, "");
+  const role = String(g.role || "").trim();
+  return [title, role].filter(Boolean).join(". ");
+}
+
+function decodeHtml(value) {
+  return String(value || "")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">");
+}
+
+function pageEpisodeDescription(html, g) {
+  const meta = html.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)["']/i);
+  if (meta?.[1]) return decodeHtml(meta[1]);
+  const ld = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/i);
+  if (ld) {
+    try {
+      const schema = JSON.parse(ld[1]);
+      const description = schema["@graph"]?.find((entry) =>
+        entry["@type"] === "PodcastEpisode" || entry["@type"] === "VideoObject"
+      )?.description;
+      if (description) return description;
+    } catch {}
+  }
+  return derivedEpisodeDescription(g);
+}
+
 function episodeInsights(insights = []) {
   return insights
     .map((moment) => ({ ...moment, t: Number(moment.t) }))
@@ -97,7 +128,7 @@ function episodeInsights(insights = []) {
     .sort((a, b) => a.t - b.t);
 }
 
-function episodeStructuredData(g, { item = null, insights = [] } = {}) {
+function episodeStructuredData(g, { item = null, insights = [], description = derivedEpisodeDescription(g) } = {}) {
   const canonical = `https://palebluenexus.com/episodes/${g.episodeSlug}/`;
   const image = `https://img.youtube.com/vi/${g.youtubeId}/maxresdefault.jpg`;
   const duration = g.duration || item?.duration || "";
@@ -118,7 +149,7 @@ function episodeStructuredData(g, { item = null, insights = [] } = {}) {
     "@type": "VideoObject",
     "@id": `${canonical}#video`,
     name: `${g.name} - Pale Blue Nexus ${g.episode}`,
-    description: `${g.episodeTitle || ""}. ${g.role || ""}`.trim(),
+    description,
     thumbnailUrl: image,
     uploadDate: g.date || "",
     ...(durationValue ? { duration: durationValue } : {}),
@@ -156,6 +187,7 @@ function episodeStructuredData(g, { item = null, insights = [] } = {}) {
           "@type": "Person",
           name: g.name,
           jobTitle: g.role,
+          ...(g.website ? { url: g.website } : {}),
         },
         associatedMedia: { "@id": `${canonical}#video` },
       },
@@ -202,8 +234,26 @@ function episodePlayerScript() {
   <!-- AUTO-EP-PLAYER:end -->`;
 }
 
+function episodeVideoHtml(g) {
+  return `<!-- AUTO-EP-VIDEO:start -->
+  <section class="episode-video" style="padding:0 0 4rem"><div class="section-container"><div style="aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.08)"><iframe src="https://www.youtube.com/embed/${esc(g.youtubeId)}" title="${esc(g.episodeTitle || `${g.name} on Pale Blue Nexus`)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" style="width:100%;height:100%;border:0"></iframe></div></div></section>
+  <!-- AUTO-EP-VIDEO:end -->`;
+}
+
+function updateEpisodeVideo(html, g) {
+  const video = episodeVideoHtml(g);
+  const markerRe = /<!-- AUTO-EP-VIDEO:start -->[\s\S]*?<!-- AUTO-EP-VIDEO:end -->/;
+  if (markerRe.test(html)) return html.replace(markerRe, video);
+  if (/<iframe\b[^>]+src=["'][^"']*youtube\.com\/embed\//i.test(html)) return html;
+  return html.replace("<footer", `${video}\n  <footer`);
+}
+
 function updateEpisodeSeo(html, g, { item = null, insights = [] } = {}) {
-  const schema = JSON.stringify(episodeStructuredData(g, { item, insights })).replace(/</g, "\\u003c");
+  const schema = JSON.stringify(episodeStructuredData(g, {
+    item,
+    insights,
+    description: pageEpisodeDescription(html, g),
+  })).replace(/</g, "\\u003c");
   const ld = `<script type="application/ld+json">${schema}</script>`;
   const ldRe = /<script type="application\/ld\+json">[\s\S]*?<\/script>/;
   html = ldRe.test(html) ? html.replace(ldRe, ld) : html.replace("</head>", `  ${ld}\n</head>`);
@@ -741,7 +791,7 @@ async function syncUnrecognizedEpisodes(yt, guests, guestsCfg) {
 function newEpisodePageHtml(g) {
   const episodeTitle = String(g.episodeTitle || "").trim();
   const pageTitle = `${g.name} - Pale Blue Nexus ${g.episode}`;
-  const description = `${episodeTitle}. ${g.role}.`;
+  const description = derivedEpisodeDescription(g);
   const canonical = `https://palebluenexus.com/episodes/${g.episodeSlug}/`;
   const image = `https://img.youtube.com/vi/${g.youtubeId}/maxresdefault.jpg`;
   const episodeSchema = episodeStructuredData(g);
@@ -766,7 +816,7 @@ function newEpisodePageHtml(g) {
   <section class="hero"><div class="section-container"><div class="fade"><div role="navigation" aria-label="Breadcrumb" class="ep-breadcrumb" style="margin-bottom:1.25rem;font-size:.8rem;letter-spacing:.05em"><a href="/guests/" style="color:#D4A84B;text-decoration:none">Guests</a><span style="color:rgba(166,210,230,.5);margin:0 .5rem">/</span><span style="color:#A6D2E6">${esc(g.name)}</span></div><span class="section-eyebrow eyebrow">${esc(g.episode)}</span><img class="guest-photo photo" src="../../${esc(g.photo)}" alt="${esc(g.name)}" /><h1>${esc(g.name)}</h1><p style="font-size:1.1rem;color:var(--secondary);max-width:600px">${esc(episodeTitle)}</p><div class="episode-meta meta"><span>${esc(g.episode)}</span></div><a class="share-btn share" href="https://www.youtube.com/watch?v=${esc(g.youtubeId)}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></div></div></section>
   <section style="background:linear-gradient(180deg,rgba(10,14,28,1) 0%,var(--bg) 100%)"><div class="section-container"><span class="section-eyebrow eyebrow fade">About the Guest</span><h2 class="fade">${esc(g.name)}.</h2><p class="guest-bio bio fade">${esc(g.bio || "")}</p></div></section>
   <!-- AUTO-EP-KIT:start --><!-- AUTO-EP-KIT:end -->
-  <section style="padding-top:0"><div class="section-container"><div class="embed fade"><iframe src="https://www.youtube.com/embed/${esc(g.youtubeId)}" title="${esc(episodeTitle)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div></div></section>
+  ${episodeVideoHtml(g)}
   <footer><p>Pale Blue Nexus. Making sense of the future, from right here.</p></footer><script>window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50));</script>
   ${episodePlayerScript()}
 </body></html>
@@ -2132,12 +2182,10 @@ async function main() {
       log(`warning: ${g.episodeSlug}/index.html has no AUTO-EP-KIT markers; skipping`);
       continue;
     }
-    const hasYoutubeEmbed = /<iframe\b[^>]+src=["'][^"']*youtube\.com\/embed\//i.test(episodeHtml);
-    if (!hasYoutubeEmbed) {
-      log(`warning: ${g.episodeSlug}/index.html has no YouTube embed; skipping Clip markup`);
-    }
+    const episodeWithVideo = updateEpisodeVideo(episodeHtml, g);
+    const hasYoutubeEmbed = /<iframe\b[^>]+src=["'][^"']*youtube\.com\/embed\//i.test(episodeWithVideo);
     const insights = hasYoutubeEmbed ? readInsights(g.episodeSlug) : [];
-    const updatedEpisodeHtml = updateEpisodeSeo(episodeHtml, g, {
+    const updatedEpisodeHtml = updateEpisodeSeo(episodeWithVideo, g, {
       item: episodeItem,
       insights,
     });
