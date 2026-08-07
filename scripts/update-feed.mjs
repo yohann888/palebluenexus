@@ -990,7 +990,7 @@ const INSIGHT_TIMESTAMP_TOLERANCE_SECONDS = 5;
 const INSIGHT_MIN_GAP_SECONDS = 45;
 
 function normalizeInsightMoments(parsed, segments) {
-  if (!Array.isArray(parsed)) return [];
+  if (!Array.isArray(parsed) || !Array.isArray(segments) || !segments.length) return [];
   const maxStart = segments[segments.length - 1].start;
   const normalized = parsed
     .map((item) => {
@@ -2185,7 +2185,7 @@ async function main() {
           const existing = JSON.parse(readFileSync(insightPath, "utf8"));
           const segments = parseTranscriptSegments(g.episodeSlug);
           const moments = normalizeInsightMoments(existing?.moments, segments);
-          if (segments.length && JSON.stringify(moments) !== JSON.stringify(existing?.moments)) {
+          if (segments.length && moments.length && JSON.stringify(moments) !== JSON.stringify(existing?.moments)) {
             writeFileSync(
               insightPath,
               JSON.stringify({ ...existing, moments }, null, 2),
