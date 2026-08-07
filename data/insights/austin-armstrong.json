@@ -1,12 +1,37 @@
 {
-  "generatedAt": "2026-08-05T00:00:32.344Z",
+  "generatedAt": "2026-08-07T13:49:07.918Z",
   "model": "claude-sonnet-5",
   "youtubeId": "CgWRHHS7A_g",
   "moments": [
     {
       "t": 8,
-      "title": "The Triangle: An Underpriced Startup Ecosystem",
-      "insight": "Austin argues the Triangle is one of the most underpriced, undertapped startup ecosystems in the country, yet local talent doesn't realize they can headquarter there."
+      "title": "The Triangle: An Underpriced Startup Hub",
+      "insight": "Austin argues the Research Triangle is one of the most underpriced, undertapped startup ecosystems in the country."
+    },
+    {
+      "t": 9,
+      "title": "Why He Built Bull House",
+      "insight": "Founders often don't realize they can headquarter their startup in the Triangle instead of leaving for coastal cities."
+    },
+    {
+      "t": 19,
+      "title": "Syllaby's Origin Story",
+      "insight": "He built Syllaby to automate the exact pain points—content ideas, scripting, editing—that made clients hire his old marketing agency."
+    },
+    {
+      "t": 20,
+      "title": "Post-AI: In-Person Is Making a Comeback",
+      "insight": "As AI automates work and frees up time, people are craving in-person connection again, driving his co-working concept."
+    },
+    {
+      "t": 41,
+      "title": "Why He Quit Agency Life for SaaS",
+      "insight": "Agency work became an emotional rollercoaster of feast-or-famine revenue and constant mental context-switching across clients."
+    },
+    {
+      "t": 46,
+      "title": "\"It's Basically Illegal\": AI UGC Take",
+      "insight": "He calls AI-generated fake product reviews unethical and an FTC violation, predicting heavy fines for brands that use them."
     }
   ]
 }

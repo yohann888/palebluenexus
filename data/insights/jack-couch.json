@@ -1,12 +1,37 @@
 {
-  "generatedAt": "2026-08-05T00:00:23.544Z",
+  "generatedAt": "2026-08-07T13:55:00.000Z",
   "model": "claude-sonnet-5",
   "youtubeId": "4wwUJRkLB90",
   "moments": [
     {
-      "t": 2005,
-      "title": "Why open-source AI agents couldn't pay your bills",
-      "insight": "Early AI agent hype like OpenClaw failed because banks and web apps actively block simple screen-scraping automation."
+      "t": 163,
+      "title": "Why screen scraping fails AI agents",
+      "insight": "Banks and web apps block simple screen-scraping navigation, so AI agents cannot connect reliably."
+    },
+    {
+      "t": 167,
+      "title": "How Softron connects AI agents to banks",
+      "insight": "Softron helps AI agents connect to banks, credit unions, and utilities that normally block automation."
+    },
+    {
+      "t": 1014,
+      "title": "AI finds hidden spending patterns",
+      "insight": "An AI financial advisor revealed one user spent seven times more on fruit and vegetables than people nearby."
+    },
+    {
+      "t": 1397,
+      "title": "Why remote teams can outwork the office",
+      "insight": "After an acquisition, Jack saw a remote team focus and move faster than the office-based way of working."
+    },
+    {
+      "t": 1863,
+      "title": "Sales and marketing as a historical workaround",
+      "insight": "Jack argues sales and marketing grew from poor communication tools and may shrink as AI transfers product information directly."
+    },
+    {
+      "t": 2713,
+      "title": "Why frontier AI labs might acquire Softron",
+      "insight": "Jack thinks frontier AI labs may acquire Softron because they are running into a wall of accessible training data."
     }
   ]
 }

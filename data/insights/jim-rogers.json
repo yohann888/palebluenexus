@@ -1,12 +1,37 @@
 {
-  "generatedAt": "2026-08-05T00:03:10.485Z",
+  "generatedAt": "2026-08-07T13:48:53.443Z",
   "model": "claude-sonnet-5",
   "youtubeId": "t3dDHRRZyHk",
   "moments": [
     {
-      "t": 2049,
-      "title": "America the 'largest debtor,' Asia the future",
-      "insight": "Jim Rogers argues population and prosperity are shifting to Asia, calling America the largest debtor in world history."
+      "t": 462,
+      "title": "AI panic? History says this happened before",
+      "insight": "Rogers compares AI hysteria to past fears over railroads, electricity, and computers, calling it a recurring pattern, not something new."
+    },
+    {
+      "t": 661,
+      "title": "Why he painted his round-the-world car yellow",
+      "insight": "He chose yellow for his epic road trip specifically because its rarity made him visible, hoping it would protect him from danger."
+    },
+    {
+      "t": 721,
+      "title": "\"I am lucky to be alive\"",
+      "insight": "Reflecting on his multi-year drive through 116 countries, Rogers admits many who attempt such trips die, and he feels fortunate to have survived."
+    },
+    {
+      "t": 1122,
+      "title": "What actually separates success from failure",
+      "insight": "Rogers argues that across all eras and countries, success simply comes down to ambitious people learning to work hard and do the right thing."
+    },
+    {
+      "t": 1432,
+      "title": "The one piece of advice he repeats endlessly",
+      "insight": "He insists the single most important thing anyone can do is figure out what they truly love and pursue it, regardless of money or others' opinions."
+    },
+    {
+      "t": 1758,
+      "title": "Why he waited until 60 to become a father",
+      "insight": "Rogers reveals he had his first child at 66 and second at 65, calling fatherhood the most exciting and best decision of his life."
     }
   ]
 }
