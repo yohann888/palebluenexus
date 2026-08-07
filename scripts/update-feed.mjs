@@ -986,60 +986,93 @@ function secToClock(t) {
     : `${totalMinutes}:${String(seconds).padStart(2, "0")}`;
 }
 
+const INSIGHT_TIMESTAMP_TOLERANCE_SECONDS = 5;
+const INSIGHT_MIN_GAP_SECONDS = 45;
+
+function normalizeInsightMoments(parsed, segments) {
+  if (!Array.isArray(parsed)) return [];
+  const maxStart = segments[segments.length - 1].start;
+  const normalized = parsed
+    .map((item) => {
+      const rawTimestamp = Number(item?.t);
+      if (!Number.isFinite(rawTimestamp) || rawTimestamp < 0 || rawTimestamp > maxStart) {
+        return null;
+      }
+      let nearest = null;
+      let nearestDistance = Infinity;
+      for (const segment of segments) {
+        const distance = Math.abs(segment.start - rawTimestamp);
+        if (distance < nearestDistance) {
+          nearest = segment;
+          nearestDistance = distance;
+        }
+      }
+      if (!nearest || nearestDistance > INSIGHT_TIMESTAMP_TOLERANCE_SECONDS) {
+        return null;
+      }
+      return {
+        t: nearest.start,
+        title: String(item?.title || "").trim().slice(0, 80),
+        insight: String(item?.insight || "").trim().slice(0, 200),
+      };
+    })
+    .filter((item) => item && item.title && item.insight)
+    .sort((a, b) => a.t - b.t);
+  const spaced = [];
+  for (const item of normalized) {
+    const previous = spaced[spaced.length - 1];
+    if (previous && item.t - previous.t < INSIGHT_MIN_GAP_SECONDS) continue;
+    spaced.push(item);
+  }
+  return spaced.slice(0, 8);
+}
+
 async function generateInsights(youtubeId, segments) {
   const key = process.env.ANTHROPIC_API_KEY;
   if (!key || !segments.length) return [];
-  try {
-    const transcript = segments
-      .map((segment) => `[${secToClock(segment.start)}] ${segment.text}`)
-      .join("\n");
-    const prompt = `Act as an editor creating chapter markers for a podcast promo page. From the timestamped transcript below, pick the 6 most compelling, substantive moments (key insights, strong quotes, turning points), spread across the episode. Return ONLY a JSON array (no prose, no code fences). Each element must be {"t": <integer seconds; MUST equal a timestamp that appears in the transcript>, "title": <hook, <=60 chars>, "insight": <one sentence, <=160 chars, what is actually said>}. Order ascending by t.\n\n${transcript}`;
-    const response = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: {
-        "x-api-key": key,
-        "anthropic-version": "2023-06-01",
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "claude-sonnet-5",
-        max_tokens: 1500,
-        messages: [{ role: "user", content: prompt }],
-      }),
-    });
-    if (!response.ok) {
-      log(`insights fetch failed for ${youtubeId} -> HTTP ${response.status}`);
-      return [];
+  const transcript = segments
+    .map((segment) => `[t=${segment.start}s | ${secToClock(segment.start)}] ${segment.text}`)
+    .join("\n");
+  const prompt = `Act as an editor creating chapter markers for a podcast promo page. From the timestamped transcript below, pick the 6 most compelling, substantive moments (key insights, strong quotes, turning points), spread across the episode. Return ONLY a JSON array (no prose, no code fences). Each element must be {"t": <integer seconds; MUST equal or be within 5 seconds of a timestamp that appears in the transcript>, "title": <hook, <=60 chars>, "insight": <one sentence, <=160 chars, what is actually said>}. Order ascending by t and keep selected moments at least 45 seconds apart.\n\n${transcript}`;
+  let best = [];
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    try {
+      const response = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: {
+          "x-api-key": key,
+          "anthropic-version": "2023-06-01",
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "claude-sonnet-5",
+          max_tokens: 1500,
+          messages: [{ role: "user", content: prompt }],
+        }),
+      });
+      if (!response.ok) {
+        log(`insights fetch failed for ${youtubeId} -> HTTP ${response.status}`);
+        continue;
+      }
+      const data = await response.json();
+      const textBlock = Array.isArray(data?.content)
+        ? data.content.find((block) => block?.type === "text")
+        : null;
+      const text = String(textBlock?.text || "");
+      const start = text.indexOf("[");
+      const end = text.lastIndexOf("]");
+      if (start < 0 || end <= start) continue;
+      const moments = normalizeInsightMoments(
+        JSON.parse(text.slice(start, end + 1)),
+        segments,
+      );
+      if (moments.length > best.length) best = moments;
+      if (best.length >= 6) break;
+    } catch {
+      // Try one bounded retry for malformed or low-yield model responses.
     }
-    const data = await response.json();
-    const textBlock = Array.isArray(data?.content)
-      ? data.content.find((block) => block?.type === "text")
-      : null;
-    const text = String(textBlock?.text || "");
-    const start = text.indexOf("[");
-    const end = text.lastIndexOf("]");
-    if (start < 0 || end <= start) return [];
-    const parsed = JSON.parse(text.slice(start, end + 1));
-    if (!Array.isArray(parsed)) return [];
-    const maxStart = segments[segments.length - 1].start;
-    return parsed
-      .map((item) => ({
-        t: Math.floor(Number(item?.t)),
-        title: String(item?.title || "").trim().slice(0, 80),
-        insight: String(item?.insight || "").trim().slice(0, 200),
-      }))
-      .filter((item) =>
-        Number.isFinite(item.t) &&
-        item.t >= 0 &&
-        item.t <= maxStart &&
-        item.title &&
-        item.insight,
-      )
-      .sort((a, b) => a.t - b.t)
-      .slice(0, 8);
-  } catch {
-    return [];
   }
+  return best;
 }
 
 function readInsights(slug) {
@@ -2147,7 +2180,23 @@ async function main() {
     const generatedInsightSlugs = [];
     for (const g of episodeGuests) {
       const insightPath = join(ROOT, "data", "insights", `${g.episodeSlug}.json`);
-      if (existsSync(insightPath)) continue;
+      if (existsSync(insightPath)) {
+        try {
+          const existing = JSON.parse(readFileSync(insightPath, "utf8"));
+          const segments = parseTranscriptSegments(g.episodeSlug);
+          const moments = normalizeInsightMoments(existing?.moments, segments);
+          if (segments.length && JSON.stringify(moments) !== JSON.stringify(existing?.moments)) {
+            writeFileSync(
+              insightPath,
+              JSON.stringify({ ...existing, moments }, null, 2),
+            );
+            log(`normalized insights for ${g.slug}`);
+          }
+        } catch {
+          // Leave an existing cache untouched if it cannot be normalized.
+        }
+        continue;
+      }
       try {
         const segments = parseTranscriptSegments(g.episodeSlug);
         if (!segments.length) continue;

@@ -9,7 +9,7 @@
       "insight": "Founder explains how they started DeepInfra in 2022 after noticing AI models need hundreds of billions of computations per token, drawing on experience scaling a messaging app to 200M+ users."
     },
     {
-      "t": 356,
+      "t": 354,
       "title": "B200 GPUs at $275 vs $6-10 on Hyperscalers",
       "insight": "DeepInfra offers Nvidia B200 GPUs at $275 compared to $6-10+ on major public clouds like AWS and Azure."
     },
@@ -19,7 +19,7 @@
       "insight": "DeepInfra aggressively priced Mistral's mixture-of-experts model at 27 cents per million tokens while competitors charged 60 cents, based on correctly costing only the active experts used at runtime."
     },
     {
-      "t": 1276,
+      "t": 1278,
       "title": "Why Inference Isn't Like High-Frequency Trading",
       "insight": "Unlike HFT which needs proximity to exchanges, inference is so power-hungry that GPUs are best placed in rural areas near cheap electricity rather than near users for latency."
     },
