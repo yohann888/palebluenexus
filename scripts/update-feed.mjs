@@ -106,7 +106,8 @@ function decodeHtml(value) {
 }
 
 function pageEpisodeDescription(html, g) {
-  const meta = html.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)["']/i);
+  const meta = html.match(/<meta\s+name=["']description["']\s+content="([^"]*)"/i)
+    || html.match(/<meta\s+name=["']description["']\s+content='([^']*)'/i);
   if (meta?.[1]) return decodeHtml(meta[1]);
   const ld = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/i);
   if (ld) {
@@ -121,6 +122,13 @@ function pageEpisodeDescription(html, g) {
   return derivedEpisodeDescription(g);
 }
 
+function episodeVideoMetadata(g, { html = "", description = "" } = {}) {
+  return {
+    name: `${g.name} - Pale Blue Nexus ${g.episode}`,
+    description: description || (html ? pageEpisodeDescription(html, g) : derivedEpisodeDescription(g)),
+  };
+}
+
 function episodeInsights(insights = []) {
   return insights
     .map((moment) => ({ ...moment, t: Number(moment.t) }))
@@ -129,6 +137,7 @@ function episodeInsights(insights = []) {
 }
 
 function episodeStructuredData(g, { item = null, insights = [], description = derivedEpisodeDescription(g) } = {}) {
+  const metadata = episodeVideoMetadata(g, { description });
   const canonical = `https://palebluenexus.com/episodes/${g.episodeSlug}/`;
   const image = `https://img.youtube.com/vi/${g.youtubeId}/maxresdefault.jpg`;
   const duration = g.duration || item?.duration || "";
@@ -148,8 +157,8 @@ function episodeStructuredData(g, { item = null, insights = [], description = de
   const video = {
     "@type": "VideoObject",
     "@id": `${canonical}#video`,
-    name: `${g.name} - Pale Blue Nexus ${g.episode}`,
-    description,
+    name: metadata.name,
+    description: metadata.description,
     thumbnailUrl: image,
     uploadDate: g.date || "",
     ...(durationValue ? { duration: durationValue } : {}),
@@ -177,8 +186,8 @@ function episodeStructuredData(g, { item = null, insights = [], description = de
       {
         "@type": "PodcastEpisode",
         "@id": `${canonical}#episode`,
-        name: `${g.name} - Pale Blue Nexus ${g.episode}`,
-        description: video.description,
+        name: metadata.name,
+        description: metadata.description,
         url: canonical,
         image,
         datePublished: g.date || "",
@@ -1770,9 +1779,16 @@ function videoSitemapBlock(guests, items) {
   ];
   for (const guest of publicEpisodeGuests(guests)) {
     const item = items.find((candidate) => candidate.id === guest.youtubeId);
-    const title = guest.episodeTitle || item?.title || `${guest.name} on Pale Blue Nexus`;
-    const description = `${title}. ${guest.role || ""}`.trim();
+    const episodePath = join(ROOT, "episodes", guest.episodeSlug, "index.html");
+    const episodeHtml = existsSync(episodePath) ? readFileSync(episodePath, "utf8") : "";
+    const metadata = episodeVideoMetadata(guest, { html: episodeHtml });
+    const title = videoSitemapField(metadata.name, 100, "title", guest.episodeSlug);
+    const description = videoSitemapField(metadata.description, 2048, "description", guest.episodeSlug);
+    const playerLoc = `https://www.youtube.com/embed/${guest.youtubeId}`;
     const duration = durationSeconds(guest.duration || item?.duration || "");
+    if (duration > 28800) {
+      throw new Error(`video sitemap duration exceeds 8 hours for ${guest.episodeSlug}`);
+    }
     lines.push(
       "  <url>",
       `    <loc>https://palebluenexus.com/episodes/${xmlEsc(guest.episodeSlug)}/</loc>`,
@@ -1780,7 +1796,7 @@ function videoSitemapBlock(guests, items) {
       `      <video:thumbnail_loc>${xmlEsc(`https://img.youtube.com/vi/${guest.youtubeId}/maxresdefault.jpg`)}</video:thumbnail_loc>`,
       `      <video:title>${xmlEsc(title)}</video:title>`,
       `      <video:description>${xmlEsc(description)}</video:description>`,
-      `      <video:player_loc allow_embed="yes">${xmlEsc(`https://www.youtube.com/embed/${guest.youtubeId}`)}</video:player_loc>`,
+      `      <video:player_loc allow_embed="yes">${xmlEsc(playerLoc)}</video:player_loc>`,
       ...(duration ? [`      <video:duration>${duration}</video:duration>`] : []),
       ...(guest.date ? [`      <video:publication_date>${xmlEsc(guest.date)}</video:publication_date>`] : []),
       "    </video:video>",
@@ -1789,6 +1805,15 @@ function videoSitemapBlock(guests, items) {
   }
   lines.push("</urlset>");
   return `${lines.join("\n")}\n`;
+}
+
+function videoSitemapField(value, maxLength, field, slug) {
+  const text = String(value || "").trim();
+  if (!text) throw new Error(`video sitemap ${field} is empty for ${slug}`);
+  if (text.length > maxLength) {
+    throw new Error(`video sitemap ${field} exceeds ${maxLength} characters for ${slug}`);
+  }
+  return text;
 }
 
 function updateHomepageSeo(html) {
