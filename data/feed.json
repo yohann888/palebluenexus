@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-08-08T00:37:44.821Z",
+  "generatedAt": "2026-08-08T06:28:34.465Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
   },
   "count": 25,
   "stats": {
-    "generatedAt": "2026-08-08T00:37:18.689Z",
+    "generatedAt": "2026-08-08T06:28:14.810Z",
     "youtube": {
-      "views": 47192,
+      "views": 47198,
       "subscribersText": "6.23K",
       "videos": 150
     },
     "tiktok": {
-      "views": 28952,
+      "views": 29325,
       "followers": 9,
       "videos": 49
     },
-    "totalViews": 76144
+    "totalViews": 76523
   },
   "items": [
     {
@@ -25,15 +25,30 @@
       "platform": "tiktok",
       "type": "clip",
       "title": "Your company's style guide is hundreds of pages long, and nobody is checking content against it. Matt Blumberg of Markup AI breaks down how every content pass comes back scored: errors caught, errors fixed, and anything uncertain flagged for a human to review.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7671349535423122709?_r=1&u_code=0&region=US&mid=7671349561562123029&preview_pb=0&sharer_language=en&_d=f01cfkia5ad154&share_item_id=7671349535423122709&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7671349535423122709?_r=1&u_code=0&region=US&mid=7671349561562123029&preview_pb=0&sharer_language=en&_d=f021m4f7h3kg2m&share_item_id=7671349535423122709&source=h5_t",
       "thumb": "images/feed/tt-7671349535423122709.jpg",
       "duration": "",
       "publishedAt": "2026-08-07T17:54:05.000Z",
-      "views": 269,
+      "views": 466,
+      "likes": 3,
+      "comments": 0,
+      "guestSlug": "matt-blumberg",
+      "score": 895
+    },
+    {
+      "id": "7671444882254302472",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Who checks the AI that's checking your content? Matt Blumberg of Markup AI says every agent scores its findings into low, medium, and high risk. High risk goes to a human, the rest gets fixed automatically, and they run agents that check their own agents.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7671444882254302472?_r=1&u_code=0&region=US&mid=7671444911276739346&preview_pb=0&sharer_language=en&_d=f021m4f7h3kg2m&share_item_id=7671444882254302472&source=h5_t",
+      "thumb": "images/feed/tt-7671444882254302472.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-08T00:04:04.000Z",
+      "views": 192,
       "likes": 0,
       "comments": 0,
       "guestSlug": "matt-blumberg",
-      "score": 960
+      "score": 719
     },
     {
       "id": "t3dDHRRZyHk",
@@ -43,7 +58,7 @@
       "url": "https://www.youtube.com/watch?v=t3dDHRRZyHk",
       "thumb": "https://i.ytimg.com/vi/t3dDHRRZyHk/hqdefault.jpg",
       "duration": "36:07",
-      "publishedAt": "2026-03-11T00:37:11.363Z",
+      "publishedAt": "2026-03-11T06:28:07.595Z",
       "views": 23000,
       "likes": 0,
       "comments": 0,
@@ -56,7 +71,7 @@
       "platform": "tiktok",
       "type": "clip",
       "title": "One of Matt Blumberg's clients fired her entire writing team and went all in on AI. Now her remaining team spends 80% of its time fixing what the AI writes. Markup AI's CEO breaks down what that shift actually looks like.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7669260082256825617?_r=1&u_code=0&region=US&mid=7669260148338199316&preview_pb=0&sharer_language=en&_d=f01cfkia5ad154&share_item_id=7669260082256825617&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7669260082256825617?_r=1&u_code=0&region=US&mid=7669260148338199316&preview_pb=0&sharer_language=en&_d=f021m4f7h3kg2m&share_item_id=7669260082256825617&source=h5_t",
       "thumb": "images/feed/tt-7669260082256825617.jpg",
       "duration": "",
       "publishedAt": "2026-08-02T02:46:02.000Z",
@@ -64,14 +79,14 @@
       "likes": 3,
       "comments": 0,
       "guestSlug": "matt-blumberg",
-      "score": 109
+      "score": 104
     },
     {
       "id": "7669130833411788040",
       "platform": "tiktok",
       "type": "clip",
       "title": "Matt Blumberg, CEO of Markup AI, on the one thing he refuses to watch. Golf with his kids, hiking with his wife, and zero historical movies, because he doesn't want to be lied to. Full conversation on Pale Blue Nexus.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7669130833411788040?_r=1&u_code=0&region=US&mid=7669130883797895943&preview_pb=0&sharer_language=en&_d=f01cfkia5ad154&share_item_id=7669130833411788040&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7669130833411788040?_r=1&u_code=0&region=US&mid=7669130883797895943&preview_pb=0&sharer_language=en&_d=f021m4f7h3kg2m&share_item_id=7669130833411788040&source=h5_t",
       "thumb": "images/feed/tt-7669130833411788040.jpg",
       "duration": "",
       "publishedAt": "2026-08-01T18:24:24.000Z",
@@ -79,22 +94,7 @@
       "likes": 4,
       "comments": 0,
       "guestSlug": "matt-blumberg",
-      "score": 107
-    },
-    {
-      "id": "7671444882254302472",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Who checks the AI that's checking your content? Matt Blumberg of Markup AI says every agent scores its findings into low, medium, and high risk. High risk goes to a human, the rest gets fixed automatically, and they run agents that check their own agents.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7671444882254302472?_r=1&u_code=0&region=US&mid=7671444911276739346&preview_pb=0&sharer_language=en&_d=f01cfkia5ad154&share_item_id=7671444882254302472&source=h5_t",
-      "thumb": "images/feed/tt-7671444882254302472.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-08T00:04:04.000Z",
-      "views": 16,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": "matt-blumberg",
-      "score": 64
+      "score": 103
     },
     {
       "id": "DS2-iheW6pI",
@@ -104,7 +104,7 @@
       "url": "https://www.youtube.com/watch?v=DS2-iheW6pI",
       "thumb": "https://i.ytimg.com/vi/DS2-iheW6pI/hqdefault.jpg",
       "duration": "54:28",
-      "publishedAt": "2026-06-09T00:37:11.363Z",
+      "publishedAt": "2026-06-09T06:28:07.595Z",
       "views": 2600,
       "likes": 0,
       "comments": 0,
@@ -117,7 +117,7 @@
       "platform": "tiktok",
       "type": "clip",
       "title": "He talks to a client. The proposal writes itself. The contract preps itself. The tasks send themselves. He just approves. And he says you can build this TODAY.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668489128450854145?_r=1&u_code=0&region=US&mid=7668489212031519509&preview_pb=0&sharer_language=en&_d=f01cfkia5ad154&share_item_id=7668489128450854145&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668489128450854145?_r=1&u_code=0&region=US&mid=7668489212031519509&preview_pb=0&sharer_language=en&_d=f021m4f7h3kg2m&share_item_id=7668489128450854145&source=h5_t",
       "thumb": "images/feed/tt-7668489128450854145.jpg",
       "duration": "",
       "publishedAt": "2026-07-31T00:54:25.000Z",
@@ -125,14 +125,14 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 42
+      "score": 41
     },
     {
       "id": "7668120385975487761",
       "platform": "tiktok",
       "type": "clip",
       "title": "Vadim explains where the time actually goes now: not code, decisions.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668120385975487761?_r=1&u_code=0&region=US&mid=7668120697385847572&preview_pb=0&sharer_language=en&_d=f01cfkia5ad154&share_item_id=7668120385975487761&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668120385975487761?_r=1&u_code=0&region=US&mid=7668120697385847572&preview_pb=0&sharer_language=en&_d=f021m4f7h3kg2m&share_item_id=7668120385975487761&source=h5_t",
       "thumb": "images/feed/tt-7668120385975487761.jpg",
       "duration": "",
       "publishedAt": "2026-07-30T01:04:23.000Z",
@@ -140,14 +140,14 @@
       "likes": 5,
       "comments": 1,
       "guestSlug": null,
-      "score": 40
+      "score": 39
     },
     {
       "id": "7663238759256788225",
       "platform": "tiktok",
       "type": "clip",
       "title": "I asked who he'd put his brainwave headset on. Instant answer: Messi. His theory: elite athletes melt down the first time the game beats them. Naturals blow right through.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7663238759256788225?_r=1&u_code=0&region=US&mid=7663238841578965761&preview_pb=0&sharer_language=en&_d=f01cfkia5ad154&share_item_id=7663238759256788225&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7663238759256788225?_r=1&u_code=0&region=US&mid=7663238841578965761&preview_pb=0&sharer_language=en&_d=f021m4f7h3kg2m&share_item_id=7663238759256788225&source=h5_t",
       "thumb": "images/feed/tt-7663238759256788225.jpg",
       "duration": "",
       "publishedAt": "2026-07-16T21:20:24.000Z",
@@ -162,7 +162,7 @@
       "platform": "tiktok",
       "type": "clip",
       "title": "Age doesn't predict founder success. Neither does experience. Vadim says the real variable is how often you're willing to bet.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668138602328640785?_r=1&u_code=0&region=US&mid=7668138906823707412&preview_pb=0&sharer_language=en&_d=f01cfkia5ad154&share_item_id=7668138602328640785&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668138602328640785?_r=1&u_code=0&region=US&mid=7668138906823707412&preview_pb=0&sharer_language=en&_d=f021m4f7h3kg2m&share_item_id=7668138602328640785&source=h5_t",
       "thumb": "images/feed/tt-7668138602328640785.jpg",
       "duration": "",
       "publishedAt": "2026-07-30T02:15:02.000Z",
@@ -170,14 +170,14 @@
       "likes": 3,
       "comments": 0,
       "guestSlug": null,
-      "score": 26
+      "score": 25
     },
     {
       "id": "7668393482377104661",
       "platform": "tiktok",
       "type": "clip",
       "title": "He says only 1 in 10 founders raise ANYTHING. And if your whole plan is investors, you've already lost. The brutal math nobody shows you on TV.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668393482377104661?_r=1&u_code=0&region=US&mid=7668393523451857681&preview_pb=0&sharer_language=en&_d=f01cfkia5ad154&share_item_id=7668393482377104661&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668393482377104661?_r=1&u_code=0&region=US&mid=7668393523451857681&preview_pb=0&sharer_language=en&_d=f021m4f7h3kg2m&share_item_id=7668393482377104661&source=h5_t",
       "thumb": "images/feed/tt-7668393482377104661.jpg",
       "duration": "",
       "publishedAt": "2026-07-30T18:43:05.000Z",
@@ -185,14 +185,14 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 23
+      "score": 22
     },
     {
       "id": "7665190322183425287",
       "platform": "tiktok",
       "type": "clip",
       "title": "His dad had Parkinson's. His cousin had ALS. So he recruited high school kids to grind up every drug in the pharmacy and build the first library of its kind. The NIH wouldn't fund it. He did it anyway.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7665190322183425287?_r=1&u_code=0&region=US&mid=7665190353377921810&preview_pb=0&sharer_language=en&_d=f01cfkia5ad154&share_item_id=7665190322183425287&source=h5_t",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7665190322183425287?_r=1&u_code=0&region=US&mid=7665190353377921810&preview_pb=0&sharer_language=en&_d=f021m4f7h3kg2m&share_item_id=7665190322183425287&source=h5_t",
       "thumb": "images/feed/tt-7665190322183425287.jpg",
       "duration": "",
       "publishedAt": "2026-07-22T03:33:10.000Z",
@@ -200,7 +200,7 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 23
+      "score": 22
     },
     {
       "id": "CgWRHHS7A_g",
@@ -210,7 +210,7 @@
       "url": "https://www.youtube.com/watch?v=CgWRHHS7A_g",
       "thumb": "https://i.ytimg.com/vi/CgWRHHS7A_g/hqdefault.jpg",
       "duration": "49:11",
-      "publishedAt": "2026-06-09T00:37:11.363Z",
+      "publishedAt": "2026-06-09T06:28:07.595Z",
       "views": 475,
       "likes": 0,
       "comments": 0,
@@ -226,13 +226,13 @@
       "url": "https://www.youtube.com/watch?v=4Zcf0qmPu_I",
       "thumb": "https://i.ytimg.com/vi/4Zcf0qmPu_I/hqdefault.jpg",
       "duration": "42:52",
-      "publishedAt": "2026-07-29T00:37:11.362Z",
+      "publishedAt": "2026-07-28T06:28:07.594Z",
       "views": 46,
       "likes": 0,
       "comments": 0,
       "guestSlug": "vadim-peskov",
       "listens": 49,
-      "score": 5
+      "score": 4
     },
     {
       "id": "3znLLBFnvQg",
@@ -242,8 +242,8 @@
       "url": "https://www.youtube.com/watch?v=3znLLBFnvQg",
       "thumb": "https://i.ytimg.com/vi/3znLLBFnvQg/hqdefault.jpg",
       "duration": "25:37",
-      "publishedAt": "2026-08-02T00:37:11.362Z",
-      "views": 14,
+      "publishedAt": "2026-08-01T06:28:07.594Z",
+      "views": 16,
       "likes": 0,
       "comments": 0,
       "guestSlug": "matt-blumberg",
@@ -258,7 +258,7 @@
       "url": "https://www.youtube.com/watch?v=4wwUJRkLB90",
       "thumb": "https://i.ytimg.com/vi/4wwUJRkLB90/hqdefault.jpg",
       "duration": "53:57",
-      "publishedAt": "2026-05-10T00:37:11.363Z",
+      "publishedAt": "2026-05-10T06:28:07.595Z",
       "views": 139,
       "likes": 0,
       "comments": 0,
@@ -274,7 +274,7 @@
       "url": "https://www.youtube.com/watch?v=v2cOEyVK6QA",
       "thumb": "https://i.ytimg.com/vi/v2cOEyVK6QA/hqdefault.jpg",
       "duration": "48:18",
-      "publishedAt": "2026-07-28T00:37:11.363Z",
+      "publishedAt": "2026-07-27T06:28:07.594Z",
       "views": 15,
       "likes": 0,
       "comments": 0,
@@ -290,7 +290,7 @@
       "url": "https://www.youtube.com/watch?v=56Wm8v-vkto",
       "thumb": "https://i.ytimg.com/vi/56Wm8v-vkto/hqdefault.jpg",
       "duration": "37:46",
-      "publishedAt": "2026-07-26T00:37:11.363Z",
+      "publishedAt": "2026-07-25T06:28:07.594Z",
       "views": 14,
       "likes": 0,
       "comments": 0,
@@ -306,7 +306,7 @@
       "url": "https://www.youtube.com/watch?v=9hy2PeP1P4o",
       "thumb": "https://i.ytimg.com/vi/9hy2PeP1P4o/hqdefault.jpg",
       "duration": "48:33",
-      "publishedAt": "2026-07-18T00:37:11.363Z",
+      "publishedAt": "2026-07-18T06:28:07.595Z",
       "views": 16,
       "likes": 0,
       "comments": 0,
@@ -322,7 +322,7 @@
       "url": "https://www.youtube.com/watch?v=XjHigKgY_78",
       "thumb": "https://i.ytimg.com/vi/XjHigKgY_78/hqdefault.jpg",
       "duration": "27:34",
-      "publishedAt": "2026-07-09T00:37:11.363Z",
+      "publishedAt": "2026-07-09T06:28:07.595Z",
       "views": 19,
       "likes": 0,
       "comments": 0,
@@ -338,7 +338,7 @@
       "url": "https://www.youtube.com/watch?v=C9Y1jk3o5SQ",
       "thumb": "https://i.ytimg.com/vi/C9Y1jk3o5SQ/hqdefault.jpg",
       "duration": "29:19",
-      "publishedAt": "2026-07-09T00:37:11.363Z",
+      "publishedAt": "2026-07-09T06:28:07.595Z",
       "views": 18,
       "likes": 0,
       "comments": 0,
@@ -354,7 +354,7 @@
       "url": "https://www.youtube.com/watch?v=y_ES2M40j7s",
       "thumb": "https://i.ytimg.com/vi/y_ES2M40j7s/hqdefault.jpg",
       "duration": "26:56",
-      "publishedAt": "2026-06-09T00:37:11.363Z",
+      "publishedAt": "2026-06-09T06:28:07.595Z",
       "views": 37,
       "likes": 0,
       "comments": 0,
@@ -370,7 +370,7 @@
       "url": "https://www.youtube.com/watch?v=QPwbfB8WIPY",
       "thumb": "https://i.ytimg.com/vi/QPwbfB8WIPY/hqdefault.jpg",
       "duration": "48:41",
-      "publishedAt": "2026-07-09T00:37:11.363Z",
+      "publishedAt": "2026-07-09T06:28:07.595Z",
       "views": 15,
       "likes": 0,
       "comments": 0,
@@ -386,7 +386,7 @@
       "url": "https://www.youtube.com/watch?v=QaYYeHDdyOM",
       "thumb": "https://i.ytimg.com/vi/QaYYeHDdyOM/hqdefault.jpg",
       "duration": "3:39",
-      "publishedAt": "2026-06-09T00:37:11.363Z",
+      "publishedAt": "2026-06-09T06:28:07.595Z",
       "views": 9,
       "likes": 0,
       "comments": 0,
@@ -402,7 +402,7 @@
       "url": "https://www.youtube.com/watch?v=WCIfSvVw2h0",
       "thumb": "https://i.ytimg.com/vi/WCIfSvVw2h0/hqdefault.jpg",
       "duration": "2:35",
-      "publishedAt": "2026-03-11T00:37:11.363Z",
+      "publishedAt": "2026-03-11T06:28:07.595Z",
       "views": 17,
       "likes": 0,
       "comments": 0,
