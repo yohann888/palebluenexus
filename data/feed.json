@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T12:19:20.570Z",
+  "generatedAt": "2026-08-08T18:17:10.540Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -33,7 +33,7 @@
       "likes": 4,
       "comments": 0,
       "guestSlug": "matt-blumberg",
-      "score": 683
+      "score": 516
     },
     {
       "id": "7671444882254302472",
@@ -48,7 +48,7 @@
       "likes": 0,
       "comments": 0,
       "guestSlug": "matt-blumberg",
-      "score": 437
+      "score": 294
     },
     {
       "id": "t3dDHRRZyHk",
@@ -79,7 +79,7 @@
       "likes": 3,
       "comments": 0,
       "guestSlug": "matt-blumberg",
-      "score": 100
+      "score": 97
     },
     {
       "id": "7669130833411788040",
@@ -94,7 +94,7 @@
       "likes": 4,
       "comments": 0,
       "guestSlug": "matt-blumberg",
-      "score": 100
+      "score": 96
     },
     {
       "id": "DS2-iheW6pI",
@@ -125,7 +125,7 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": null,
-      "score": 40
+      "score": 38
     },
     {
       "id": "7668120385975487761",
@@ -140,7 +140,7 @@
       "likes": 5,
       "comments": 1,
       "guestSlug": null,
-      "score": 38
+      "score": 37
     },
     {
       "id": "7663238759256788225",
@@ -170,22 +170,7 @@
       "likes": 3,
       "comments": 0,
       "guestSlug": null,
-      "score": 25
-    },
-    {
-      "id": "7668393482377104661",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "He says only 1 in 10 founders raise ANYTHING. And if your whole plan is investors, you've already lost. The brutal math nobody shows you on TV.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668393482377104661?_r=1&u_code=0&region=US&mid=7668393523451857681&preview_pb=0&sharer_language=en&_d=f022edjcfb9m18&share_item_id=7668393482377104661&source=h5_t",
-      "thumb": "images/feed/tt-7668393482377104661.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-30T18:43:05.000Z",
-      "views": 187,
-      "likes": 2,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 22
+      "score": 24
     },
     {
       "id": "7665190322183425287",
@@ -201,6 +186,21 @@
       "comments": 0,
       "guestSlug": null,
       "score": 22
+    },
+    {
+      "id": "7668393482377104661",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "He says only 1 in 10 founders raise ANYTHING. And if your whole plan is investors, you've already lost. The brutal math nobody shows you on TV.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668393482377104661?_r=1&u_code=0&region=US&mid=7668393523451857681&preview_pb=0&sharer_language=en&_d=f022edjcfb9m18&share_item_id=7668393482377104661&source=h5_t",
+      "thumb": "images/feed/tt-7668393482377104661.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-30T18:43:05.000Z",
+      "views": 187,
+      "likes": 2,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 21
     },
     {
       "id": "CgWRHHS7A_g",
