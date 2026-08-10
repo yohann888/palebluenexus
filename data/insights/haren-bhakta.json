@@ -4,7 +4,7 @@
   "youtubeId": "XjHigKgY_78",
   "moments": [
     {
-      "t": 118,
+      "t": 116,
       "title": "The Berkshire meeting that sparked an ETF",
       "insight": "Sitting at Warren Buffett's first meeting without Charlie Munger, the founder feared what happens to Berkshire when Buffett dies."
     },
@@ -19,17 +19,12 @@
       "insight": "IBM was 2.5x larger than its nearest competitor in 1984, but fell out of the top 10 within eight years of its owner-chairman retiring."
     },
     {
-      "t": 653,
-      "title": "How ownership data was built from scratch",
-      "insight": "No data provider had insider ownership history, so he manually aggregated data from 20,000 proxy filings across 20 years of S&P 500 companies."
-    },
-    {
       "t": 900,
       "title": "The 100-bagger secret: 19 of 21 shared one trait",
       "insight": "Studying every stock that returned 100x since 2000, 19 of 21 had insider ownership above 5% before their massive run-up."
     },
     {
-      "t": 1176,
+      "t": 1175,
       "title": "Zoo lion vs. wild lion: the CEO metaphor",
       "insight": "A hired 'zoo lion' CEO gets paid regardless of performance, while an owner-operator 'wild lion' feels the pain of mistakes directly."
     }

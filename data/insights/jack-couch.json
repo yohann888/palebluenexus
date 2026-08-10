@@ -1,12 +1,37 @@
 {
-  "generatedAt": "2026-08-05T00:00:23.544Z",
+  "generatedAt": "2026-08-07T13:59:27.960Z",
   "model": "claude-sonnet-5",
   "youtubeId": "4wwUJRkLB90",
   "moments": [
     {
-      "t": 2005,
-      "title": "Why open-source AI agents couldn't pay your bills",
-      "insight": "Early AI agent hype like OpenClaw failed because banks and web apps actively block simple screen-scraping automation."
+      "t": 167,
+      "title": "Why AI Agents Can't Actually Pay Your Bills",
+      "insight": "Most banking apps use simple screen scraping that gets blocked easily, so Softron gives AI agents real access to banks and utilities."
+    },
+    {
+      "t": 570,
+      "title": "The Data Ownership Fight: Whose Info Is It?",
+      "insight": "Banks claim your personal data as their own property and are now threatening to charge you just to access it via apps like Cash App."
+    },
+    {
+      "t": 974,
+      "title": "Turning ChatGPT Into a Financial Advisor",
+      "insight": "A Softron-ChatGPT integration revealed a user spends seven times more on fruits and vegetables than her Seattle neighborhood average."
+    },
+    {
+      "t": 1857,
+      "title": "Is Sales and Marketing a Dying Career?",
+      "insight": "The guest argues AI will eliminate sales jobs entirely since buyers will just ask ChatGPT which product is best instead of trusting a salesperson's handshake."
+    },
+    {
+      "t": 2031,
+      "title": "Trade Show Booths Are Just Money on Fire",
+      "insight": "Spending millions on conference booths is really just 'proof of bling' to signal status, not an efficient way to transfer product information."
+    },
+    {
+      "t": 2710,
+      "title": "Softron's Endgame: Acquired by a Frontier AI Lab",
+      "insight": "The founder predicts Softron will be acquired by a major AI model company as they hit a 'data wall' and need proprietary access to real-world data."
     }
   ]
 }

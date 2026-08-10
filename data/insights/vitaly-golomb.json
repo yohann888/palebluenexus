@@ -1,17 +1,37 @@
 {
-  "generatedAt": "2026-08-05T00:06:22.059Z",
+  "generatedAt": "2026-08-07T13:59:50.684Z",
   "model": "claude-sonnet-5",
   "youtubeId": "v2cOEyVK6QA",
   "moments": [
     {
-      "t": 535,
-      "title": "Automated trucks already testing on real roads",
-      "insight": "Self-driving trucks are already operating commercially in mining and rail yards, threatening the largest US profession—9-10 million drivers."
+      "t": 128,
+      "title": "\"There's no way jobs will not be lost\"",
+      "insight": "Vitali argues this industrial revolution is compressed into one generation, making mid-career retraining unrealistic for many workers."
     },
     {
-      "t": 740,
-      "title": "Robots are coming back to manufacturing, not humans",
-      "insight": "US manufacturing may return from overseas, but it'll be run by robots instead of human workers."
+      "t": 236,
+      "title": "The 20% unemployment fascism warning",
+      "insight": "History shows societies hitting 20% unemployment tend toward fascism, citing Goldman Sachs projections and Weimar Germany's collapse."
+    },
+    {
+      "t": 815,
+      "title": "Moore's Law for AI is now just 6 months",
+      "insight": "AI/robotics capability is doubling every 6 months, far outpacing aging legislators' ability to craft guardrails in time."
+    },
+    {
+      "t": 1044,
+      "title": "A Soviet refugee's verdict on utopian AI dreams",
+      "insight": "Having grown up in the USSR, Vitali argues true post-work utopia doesn't work in practice—human nature always finds workarounds."
+    },
+    {
+      "t": 1964,
+      "title": "Connecting economic displacement to political extremism",
+      "insight": "He traces a direct line from job loss and lost community to political entrepreneurs exploiting grievance, invoking troubling Nazi-era parallels."
+    },
+    {
+      "t": 2678,
+      "title": "Why he's bearish on humanoid robots at home",
+      "insight": "A 150-200lb robot walking around kids and pets isn't safe yet, and most people won't pay $20,000 for an unclear use case."
     }
   ]
 }
