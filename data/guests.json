@@ -326,6 +326,26 @@
       "date": "2026-08-01",
       "episodeTitle": "Content Is the Next Code: Inside the Rise of AI Guardian Agents.",
       "duration": "25:37"
+    },
+    {
+      "slug": "victor-lugli",
+      "name": "Victor Lugli",
+      "role": "Investor",
+      "photo": "images/guest-victor-lugli.svg",
+      "linkedin": "",
+      "website": "",
+      "x": "",
+      "status": "published",
+      "episode": "Episode 14",
+      "episodeSlug": "victor-lugli",
+      "youtubeId": "v5ZquyIrNWU",
+      "tiktokIds": [],
+      "quote": "",
+      "bio": "",
+      "date": "2026-08-08",
+      "episodeTitle": "The Neuroscientist Investor Who Says AI Isn't Intelligent | Victor Lugli",
+      "duration": "59:28",
+      "needsPhoto": true
     }
   ]
 }

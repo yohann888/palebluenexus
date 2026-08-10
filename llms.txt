@@ -147,6 +147,16 @@ CEO of Markup AI, building AI agents that keep enterprise content accurate and o
 - **Episode page:** https://palebluenexus.com/episodes/matt-blumberg/
 - **Markdown:** https://palebluenexus.com/episodes/matt-blumberg/index.md
 
+### Episode 14: Victor Lugli
+Victor Lugli appeared on Pale Blue Nexus.
+
+- **Title:** The Neuroscientist Investor Who Says AI Isn't Intelligent | Victor Lugli
+- **Date:** 2026-08-08
+- **Duration:** 59:28
+- **YouTube:** https://www.youtube.com/watch?v=v5ZquyIrNWU
+- **Episode page:** https://palebluenexus.com/episodes/victor-lugli/
+- **Markdown:** https://palebluenexus.com/episodes/victor-lugli/index.md
+
 <!-- AUTO-EPISODES:end -->
 
 ## Transcripts
