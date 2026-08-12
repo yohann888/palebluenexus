@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+<rect width="400" height="400" fill="#04060e"/>
+<circle cx="200" cy="200" r="150" fill="none" stroke="#D4A84B" stroke-width="3" stroke-opacity=".75"/>
+<text x="200" y="220" fill="#D4A84B" font-family="Inter,Arial,sans-serif" font-size="82" letter-spacing="6" text-anchor="middle">GW</text>
+<text x="200" y="275" fill="#7EB8DA" font-family="Inter,Arial,sans-serif" font-size="16" letter-spacing="4" text-anchor="middle">PALE BLUE NEXUS</text>
+</svg>

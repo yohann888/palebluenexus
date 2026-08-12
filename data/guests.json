@@ -346,6 +346,26 @@
       "episodeTitle": "The Neuroscientist Investor Who Says AI Isn't Intelligent | Victor Lugli",
       "duration": "59:28",
       "needsPhoto": true
+    },
+    {
+      "slug": "greg-whalen",
+      "name": "Greg Whalen",
+      "role": "",
+      "photo": "images/guest-greg-whalen.svg",
+      "linkedin": "",
+      "website": "",
+      "status": "upcoming",
+      "episode": "Coming Soon",
+      "episodeSlug": "",
+      "youtubeId": "glDhnwRe96Q",
+      "tiktokIds": [],
+      "x": "",
+      "quote": "",
+      "bio": "",
+      "date": "2026-08-12",
+      "needsReview": true,
+      "needsPhoto": true,
+      "duration": "40:25"
     }
   ]
 }
