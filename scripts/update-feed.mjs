@@ -37,8 +37,8 @@ const TOP_COUNT = 10;
 const YOUTUBE_FETCH_DEPTH = 6;
 const TIKTOK_FETCH_DEPTH = 10;
 const EPISODE_DETECTION_COUNT = 30;
-// The channel predates the podcast; keep legacy uploads out of the podcast feed.
-const PODCAST_START_DATE = "2026-02-24";
+// Slack era boundary for approximate YouTube relative-date parsing; the channel predates the podcast.
+const PODCAST_ERA_START_DATE = "2024-01-01";
 const SHOW_LINKS = {
   youtube: "https://www.youtube.com/@palebluenexus",
   apple: "https://podcasts.apple.com/ca/podcast/pale-blue-nexus/id1529530113",
@@ -1973,7 +1973,7 @@ async function main() {
     let ttPosts = [];
     try {
       yt = await fetchYouTube();
-      yt = yt.filter((item) => !item.publishedAt || item.publishedAt >= PODCAST_START_DATE);
+      yt = yt.filter((item) => !item.publishedAt || item.publishedAt >= PODCAST_ERA_START_DATE);
       const episodeDetectionIds = new Set(yt.slice(0, EPISODE_DETECTION_COUNT).map((item) => item.id));
       const audioIds = new Set();
       for (const item of yt) {
