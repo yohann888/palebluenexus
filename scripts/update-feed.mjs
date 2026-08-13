@@ -1971,6 +1971,7 @@ async function main() {
     let yt = [];
     let tt = [];
     let ttPosts = [];
+    let tiktokPostsFetched = false;
     try {
       yt = await fetchYouTube();
       yt = yt.filter((item) => !item.publishedAt || item.publishedAt >= PODCAST_ERA_START_DATE);
@@ -2025,14 +2026,19 @@ async function main() {
     }
     try {
       ttPosts = await fetchTikTokPosts();
+      tiktokPostsFetched = true;
       tt = await fetchTikTok(imagesDir, ttPosts);
       log(`tiktok: ${tt.length} clips`);
     } catch (e) {
       log("tiktok fetch failed:", e.message);
     }
     try {
-      stats = await fetchChannelStats(ttPosts);
-      log(`channel stats: ${fmtViews(stats.totalViews)} combined views`);
+      if (tiktokPostsFetched) {
+        stats = await fetchChannelStats(ttPosts);
+        log(`channel stats: ${fmtViews(stats.totalViews)} combined views`);
+      } else {
+        log("tiktok fetch failed; keeping existing stats from data/feed.json");
+      }
     } catch (e) {
       log("channel stats fetch failed:", e.message);
     }
