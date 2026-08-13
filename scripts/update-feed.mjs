@@ -485,7 +485,7 @@ function podcastKey(t = "") {
 function guestNameKey(name = "") {
   const stripped = String(name)
     .replace(/^\s*(?:dr|mr|mrs|ms|prof)\.?\s+/i, "")
-    .replace(/\s*,\s*(?:phd|cfa|md|jd|esq|mba)\s*$/i, "")
+    .replace(/\s*,?\s*(?:phd|cfa|md|jd|esq|mba)\s*$/i, "")
     .trim();
   const tokens = stripped.split(/\s+/).filter(Boolean);
   return tokens.length >= 2 ? `${tokens[0]} ${tokens.at(-1)}` : "";
@@ -1099,11 +1099,9 @@ function uniqueGuestNameMatch(item, publishedGuests, transcriptDocs) {
   const title = item.title || "";
   const matches = new Set();
   for (const guest of publishedGuests) {
-    const parts = String(guest.name || "")
-      .replace(/,\s*(?:CFA|PhD)\b/gi, "")
-      .split(/\s+/)
-      .filter(Boolean);
-    const tokens = [...new Set([parts[0], parts.at(-1)].filter(Boolean))];
+    const nameKey = guestNameKey(guest.name);
+    if (!nameKey) continue;
+    const tokens = [...new Set(nameKey.split(/\s+/))];
     if (tokens.some((token) => new RegExp(`\\b${escapeRegExp(token)}\\b`, "i").test(title || ""))) {
       matches.add(guest.slug);
     }
@@ -1117,11 +1115,7 @@ function uniqueGuestNameMatch(item, publishedGuests, transcriptDocs) {
 
 function fullGuestNameMatch(title, publishedGuests) {
   const matches = publishedGuests.filter((guest) => {
-    const parts = String(guest.name || "")
-      .replace(/,\s*(?:CFA|PhD)\b/gi, "")
-      .split(/\s+/)
-      .filter(Boolean)
-      .map(escapeRegExp);
+    const parts = guestNameKey(guest.name).split(/\s+/).filter(Boolean).map(escapeRegExp);
     if (!parts.length) return false;
     return new RegExp(`\\b${parts.join("\\s+")}\\b`, "i").test(title || "");
   });
@@ -1141,11 +1135,12 @@ function directYoutubeGuestMatch(title, publishedGuests) {
 }
 
 function explicitMentionGuestMatch(item, publishedGuests) {
-  const mentions = new Set((item._tiktokMentions || []).map((mention) => mention.toLowerCase()));
+  const normalizeMention = (value) => String(value).toLowerCase().replace(/[^a-z0-9]/g, "");
+  const mentions = new Set((item._tiktokMentions || []).map(normalizeMention));
   if (!mentions.size) return null;
   const matches = publishedGuests.filter((guest) => {
-    const compactName = guest.name.toLowerCase().replace(/[^a-z0-9]/g, "");
-    return mentions.has(guest.slug.toLowerCase()) || mentions.has(compactName);
+    const compactName = normalizeMention(guestNameKey(guest.name));
+    return mentions.has(normalizeMention(guest.slug)) || (compactName && mentions.has(compactName));
   });
   return matches.length === 1 ? matches[0].slug : null;
 }
@@ -1187,12 +1182,7 @@ function parseJsonArray(text) {
 
 async function classifyUnattributedWithClaude(items, publishedGuests, cache) {
   const pending = items.filter((item) => item.platform === "tiktok" && !item.guestSlug);
-  if (!pending.length || !process.env.ANTHROPIC_API_KEY) {
-    if (pending.length && !process.env.ANTHROPIC_API_KEY) {
-      log("skipping TikTok Claude attribution: ANTHROPIC_API_KEY is not set");
-    }
-    return;
-  }
+  if (!pending.length) return;
   const roster = publishedGuests.map((guest) => ({
     slug: guest.slug,
     name: guest.name,
@@ -1223,6 +1213,10 @@ async function classifyUnattributedWithClaude(items, publishedGuests, cache) {
   }
   if (!needsClassifying.length) {
     if (cached.length) log(`reused cached TikTok attributions: ${cached.length}`);
+    return;
+  }
+  if (!process.env.ANTHROPIC_API_KEY) {
+    log("skipping TikTok Claude attribution: ANTHROPIC_API_KEY is not set");
     return;
   }
   const prompt = `Classify each podcast TikTok caption to the single most likely guest from the roster. Return ONLY a JSON array with {"id":"...","guestSlug":"roster slug or null","confidence":"high|medium|low","evidence":"brief evidence"}. Use null unless the evidence is specific; never guess from generic AI or startup language. Accept a guest only when confidence is high.\n\nROSTER:\n${JSON.stringify(roster)}\n\nCLIPS:\n${JSON.stringify(needsClassifying.map((item) => ({ id: item.id, caption: item.title })))}`
