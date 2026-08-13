@@ -41,8 +41,8 @@ const EPISODE_DETECTION_COUNT = 30;
 // Slack era boundary for approximate YouTube relative-date parsing; the channel predates the podcast.
 const PODCAST_ERA_START_DATE = "2024-01-01";
 const TIKTOK_ATTRIBUTION_PROMPT_VERSION = "2026-08-attribute-clips-v1";
-const TIKTOK_TRANSCRIPT_COVERAGE_MIN = 0.60;
-const TIKTOK_TRANSCRIPT_MARGIN_MIN = 0.25;
+const TIKTOK_TRANSCRIPT_SCORE_MIN = 12;
+const TIKTOK_TRANSCRIPT_MARGIN_MIN = 2;
 const SHOW_LINKS = {
   youtube: "https://www.youtube.com/@palebluenexus",
   apple: "https://podcasts.apple.com/ca/podcast/pale-blue-nexus/id1529530113",
@@ -1012,16 +1012,32 @@ const ATTRIBUTION_STOPWORDS = new Set(
   ],
 );
 
-function attributionTokens(text) {
-  return new Set(
+function attributionTokenCounts(text) {
+  const counts = new Map();
+  for (const token of (
     String(text || "")
       .toLowerCase()
+      .replace(/\bwebpage\b/g, "web page")
       .replace(/https?:\/\/\S+/g, " ")
       .match(/[a-z][a-z0-9'-]{2,}/g)
       ?.filter((token) => !ATTRIBUTION_STOPWORDS.has(token))
       .map((token) => token.replace(/^['-]+|['-]+$/g, ""))
-      .filter(Boolean) || [],
-  );
+      .filter(Boolean) || []
+  )) {
+    counts.set(token, (counts.get(token) || 0) + 1);
+  }
+  return counts;
+}
+
+function attributionTokenSequence(text) {
+  return String(text || "")
+    .toLowerCase()
+    .replace(/\bwebpage\b/g, "web page")
+    .replace(/https?:\/\/\S+/g, " ")
+    .match(/[a-z][a-z0-9'-]{2,}/g)
+    ?.filter((token) => !ATTRIBUTION_STOPWORDS.has(token))
+    .map((token) => token.replace(/^['-]+|['-]+$/g, ""))
+    .filter(Boolean) || [];
 }
 
 function transcriptDocuments(publishedGuests) {
@@ -1029,41 +1045,55 @@ function transcriptDocuments(publishedGuests) {
     .map((guest) => {
       const segments = parseTranscriptSegments(guest.episodeSlug);
       if (!segments.length) return null;
+      const tokens = attributionTokenSequence(segments.map((segment) => segment.text).join(" "));
       return {
         guest,
-        tokens: attributionTokens(segments.map((segment) => segment.text).join(" ")),
+        passages: Array.from(
+          { length: Math.ceil(tokens.length / 50) },
+          (_, index) => tokens.slice(index * 50, index * 50 + 100),
+        ).filter((passage) => passage.length),
       };
     })
     .filter(Boolean);
 }
 
 function transcriptAttributionScores(title, documents) {
-  const captionTokens = attributionTokens(title);
-  if (!captionTokens.size || !documents.length) return [];
+  const captionCounts = attributionTokenCounts(title);
+  if (!captionCounts.size || !documents.length) return [];
+  const passageDocuments = documents.flatMap((document) => document.passages);
   const documentFrequency = new Map();
-  for (const document of documents) {
-    for (const token of document.tokens) {
+  for (const passage of passageDocuments) {
+    for (const token of new Set(passage)) {
       documentFrequency.set(token, (documentFrequency.get(token) || 0) + 1);
     }
   }
-  const totalDocuments = documents.length;
-  const weightedTerms = [...captionTokens].map((token) => ({
-    token,
-    weight: Math.log((totalDocuments + 1) / ((documentFrequency.get(token) || 0) + 1)) + 1,
-  }));
-  const denominator = weightedTerms.reduce((sum, term) => sum + term.weight, 0);
-  if (!denominator) return [];
+  const totalPassages = passageDocuments.length;
+  const averageLength = passageDocuments.reduce((sum, passage) => sum + passage.length, 0) / totalPassages;
+  const k1 = 1.2;
+  const b = 0.75;
   return documents
     .map((document) => {
-      const numerator = weightedTerms
-        .filter((term) => document.tokens.has(term.token))
-        .reduce((sum, term) => sum + term.weight, 0);
+      const score = Math.max(...document.passages.map((passage) => {
+        const counts = new Map();
+        for (const token of passage) counts.set(token, (counts.get(token) || 0) + 1);
+        return [...captionCounts].reduce((sum, [token]) => {
+          const count = counts.get(token) || 0;
+          if (!count) return sum;
+          const idf = Math.log(
+            1 + (totalPassages - (documentFrequency.get(token) || 0) + 0.5)
+              / ((documentFrequency.get(token) || 0) + 0.5),
+          );
+          return sum + idf * ((count * (k1 + 1)) / (
+            count + k1 * (1 - b + b * passage.length / averageLength)
+          ));
+        }, 0);
+      }));
       return {
         guest: document.guest,
-        coverage: numerator / denominator,
+        score,
       };
     })
-    .sort((a, b) => b.coverage - a.coverage);
+    .sort((a, b) => b.score - a.score);
 }
 
 function episodeDateWithinWindow(item, guest) {
@@ -1117,30 +1147,6 @@ function directYoutubeGuestMatch(title, publishedGuests) {
   )].map((match) => match[1]);
   const matches = publishedGuests.filter((guest) => ids.includes(String(guest.youtubeId)));
   return matches.length === 1 ? matches[0].slug : null;
-}
-
-function nearestEpisodeGuest(item, publishedGuests) {
-  const publishedAt = Date.parse(item.publishedAt || "");
-  if (!Number.isFinite(publishedAt)) return null;
-  const ranked = publishedGuests
-    .filter((guest) => /^\d{4}-\d{2}-\d{2}$/.test(String(guest.date || "")))
-    .map((guest) => ({
-      guest,
-      days: Math.abs(publishedAt - Date.parse(`${guest.date}T00:00:00Z`)) / 86400000,
-    }))
-    .sort((a, b) => a.days - b.days);
-  const [nearest, second] = ranked;
-  if (!nearest || nearest.days > 6 || (second && second.days - nearest.days < 5)) return null;
-  return nearest;
-}
-
-function isLatestPublishedEpisode(guest, publishedGuests) {
-  const latestDate = publishedGuests
-    .map((candidate) => candidate.date)
-    .filter((date) => /^\d{4}-\d{2}-\d{2}$/.test(String(date || "")))
-    .sort()
-    .at(-1);
-  return Boolean(latestDate && guest.date === latestDate);
 }
 
 function explicitMentionGuestMatch(item, publishedGuests) {
@@ -1315,15 +1321,11 @@ async function attributeTikTokGuests(items, guests) {
     const [best, second] = scores;
     if (
       best
-      && best.coverage >= TIKTOK_TRANSCRIPT_COVERAGE_MIN
-      && best.coverage - (second?.coverage || 0) >= TIKTOK_TRANSCRIPT_MARGIN_MIN
+      && best.score >= TIKTOK_TRANSCRIPT_SCORE_MIN
+      && best.score - (second?.score || 0) >= TIKTOK_TRANSCRIPT_MARGIN_MIN
     ) {
       item.guestSlug = best.guest.slug;
       continue;
-    }
-    const nearby = nearestEpisodeGuest(item, publishedGuests);
-    if (nearby && isLatestPublishedEpisode(nearby.guest, publishedGuests)) {
-      item.guestSlug = nearby.guest.slug;
     }
   }
   await classifyUnattributedWithClaude(items, publishedGuests, cache);

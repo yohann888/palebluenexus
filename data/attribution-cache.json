@@ -241,5 +241,14 @@
     "inputHash": "01a9f76be3fd1c2226b95f9ce502fa81861d3aac8744dce62b1dd5e274ce1ab0",
     "promptVersion": "2026-08-attribute-clips-v1",
     "updatedAt": "2026-08-13T19:14:54.829Z"
+  },
+  "7673335314563484946": {
+    "guestSlug": null,
+    "confidence": "low",
+    "evidence": "Generic caption with no specific identifying details matching any roster guest",
+    "model": "claude-sonnet-5",
+    "inputHash": "8c1d01e64577a7a4c940f4911e5232bdcecfdf64c8e5cac9b4008b27bf03d3e8",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T19:20:04.477Z"
   }
 }
