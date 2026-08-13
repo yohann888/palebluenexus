@@ -42,7 +42,7 @@ const EPISODE_DETECTION_COUNT = 30;
 const PODCAST_ERA_START_DATE = "2024-01-01";
 const TIKTOK_ATTRIBUTION_PROMPT_VERSION = "2026-08-attribute-clips-v1";
 const TIKTOK_TRANSCRIPT_COVERAGE_MIN = 0.60;
-const TIKTOK_TRANSCRIPT_MARGIN_MIN = 0.20;
+const TIKTOK_TRANSCRIPT_MARGIN_MIN = 0.25;
 const SHOW_LINKS = {
   youtube: "https://www.youtube.com/@palebluenexus",
   apple: "https://podcasts.apple.com/ca/podcast/pale-blue-nexus/id1529530113",
@@ -1066,7 +1066,16 @@ function transcriptAttributionScores(title, documents) {
     .sort((a, b) => b.coverage - a.coverage);
 }
 
-function uniqueGuestNameMatch(title, publishedGuests) {
+function episodeDateWithinWindow(item, guest) {
+  const publishedAt = Date.parse(item.publishedAt || "");
+  if (!Number.isFinite(publishedAt) || !/^\d{4}-\d{2}-\d{2}$/.test(String(guest.date || ""))) {
+    return false;
+  }
+  return Math.abs(publishedAt - Date.parse(`${guest.date}T00:00:00Z`)) / 86400000 <= 6;
+}
+
+function uniqueGuestNameMatch(item, publishedGuests, transcriptDocs) {
+  const title = item.title || "";
   const matches = new Set();
   for (const guest of publishedGuests) {
     const parts = String(guest.name || "")
@@ -1078,7 +1087,11 @@ function uniqueGuestNameMatch(title, publishedGuests) {
       matches.add(guest.slug);
     }
   }
-  return matches.size === 1 ? [...matches][0] : null;
+  if (matches.size !== 1) return null;
+  const slug = [...matches][0];
+  const [best] = transcriptAttributionScores(title, transcriptDocs);
+  const guest = publishedGuests.find((candidate) => candidate.slug === slug);
+  return best?.guest.slug === slug || episodeDateWithinWindow(item, guest) ? slug : null;
 }
 
 function fullGuestNameMatch(title, publishedGuests) {
@@ -1119,6 +1132,15 @@ function nearestEpisodeGuest(item, publishedGuests) {
   const [nearest, second] = ranked;
   if (!nearest || nearest.days > 6 || (second && second.days - nearest.days < 5)) return null;
   return nearest;
+}
+
+function isLatestPublishedEpisode(guest, publishedGuests) {
+  const latestDate = publishedGuests
+    .map((candidate) => candidate.date)
+    .filter((date) => /^\d{4}-\d{2}-\d{2}$/.test(String(date || "")))
+    .sort()
+    .at(-1);
+  return Boolean(latestDate && guest.date === latestDate);
 }
 
 function explicitMentionGuestMatch(item, publishedGuests) {
@@ -1277,7 +1299,7 @@ async function attributeTikTokGuests(items, guests) {
       item.guestSlug = fullNameSlug;
       continue;
     }
-    const nameSlug = uniqueGuestNameMatch(item.title, publishedGuests);
+    const nameSlug = uniqueGuestNameMatch(item, publishedGuests, transcriptDocs);
     if (nameSlug) {
       item.guestSlug = nameSlug;
       continue;
@@ -1291,20 +1313,17 @@ async function attributeTikTokGuests(items, guests) {
     }
     const scores = transcriptAttributionScores(item.title, transcriptDocs);
     const [best, second] = scores;
-    const nearby = nearestEpisodeGuest(item, publishedGuests);
-    const bestDays = best
-      ? Math.abs(Date.parse(item.publishedAt || "") - Date.parse(`${best.guest.date}T00:00:00Z`)) / 86400000
-      : Infinity;
-    if (nearby && bestDays > 14) {
-      item.guestSlug = nearby.guest.slug;
-      continue;
-    }
     if (
       best
       && best.coverage >= TIKTOK_TRANSCRIPT_COVERAGE_MIN
       && best.coverage - (second?.coverage || 0) >= TIKTOK_TRANSCRIPT_MARGIN_MIN
     ) {
       item.guestSlug = best.guest.slug;
+      continue;
+    }
+    const nearby = nearestEpisodeGuest(item, publishedGuests);
+    if (nearby && isLatestPublishedEpisode(nearby.guest, publishedGuests)) {
+      item.guestSlug = nearby.guest.slug;
     }
   }
   await classifyUnattributedWithClaude(items, publishedGuests, cache);

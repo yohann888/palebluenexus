@@ -214,5 +214,32 @@
     "inputHash": "3fabb746e5bd805abf720aa9b0ba770b60d150fd4247d539f1b539748abc1e04",
     "promptVersion": "2026-08-attribute-clips-v1",
     "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7639360314919619856": {
+    "guestSlug": null,
+    "confidence": "low",
+    "evidence": "No guest-specific evidence matches roster",
+    "model": "claude-sonnet-5",
+    "inputHash": "3dba2509f2bef89c0f09cfeceabd7fbeb07e93c8a69f961b102ec9eead4ac17b",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T19:11:15.372Z"
+  },
+  "7662886131704368392": {
+    "guestSlug": "steve-gullans",
+    "confidence": "high",
+    "evidence": "Harvard Med faculty, co-founder of venture management firm with multiple company experience",
+    "model": "claude-sonnet-5",
+    "inputHash": "49ff1e17eab918051c573042745f9a21771066dcc7be6037f216a73e711adbc0",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T19:14:54.829Z"
+  },
+  "7662213620008373512": {
+    "guestSlug": "eliza-blank",
+    "confidence": "high",
+    "evidence": "Farmlink Project focuses on rescued produce and food waste from farms",
+    "model": "claude-sonnet-5",
+    "inputHash": "01a9f76be3fd1c2226b95f9ce502fa81861d3aac8744dce62b1dd5e274ce1ab0",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T19:14:54.829Z"
   }
 }
