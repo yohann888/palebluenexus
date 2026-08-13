@@ -1,0 +1,218 @@
+{
+  "7673210695676218642": {
+    "guestSlug": null,
+    "confidence": "low",
+    "evidence": "generic cloud/AI comment",
+    "model": "claude-sonnet-5",
+    "inputHash": "506dc4e79525aefd0dc866426aae12797312bee37db7f3b44060dc0d3eae5622",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7672574336003329287": {
+    "guestSlug": "steve-gullans",
+    "confidence": "medium",
+    "evidence": "brain/neuroscience topic matches Gullans' cognitive training focus",
+    "model": "claude-sonnet-5",
+    "inputHash": "34198462207f837f6683fce7d66019765d284d4b6a193d837c5c81a5c0290f8f",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7672478575848705288": {
+    "guestSlug": null,
+    "confidence": "low",
+    "evidence": "generic founder/webpage comment",
+    "model": "claude-sonnet-5",
+    "inputHash": "e319ed431ae62d0b1030160d810508b5e84344fb1c3b8a135c017faf4383d6c0",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7668489128450854145": {
+    "guestSlug": null,
+    "confidence": "low",
+    "evidence": "generic AI automation claim",
+    "model": "claude-sonnet-5",
+    "inputHash": "bef9074768c5ae898b0a1c24c4d46179f689d2502e51ac12415de2380ffc8c46",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7668393482377104661": {
+    "guestSlug": null,
+    "confidence": "low",
+    "evidence": "generic fundraising stat, no specific match",
+    "model": "claude-sonnet-5",
+    "inputHash": "e914c3a033fd420e63b69fcbbbd1148f38911e822e93019f9a3f8846740e61be",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7663238759256788225": {
+    "guestSlug": "steve-gullans",
+    "confidence": "medium",
+    "evidence": "brainwave headset/athlete flow theory matches Gullans' cognitive training work",
+    "model": "claude-sonnet-5",
+    "inputHash": "bbb5282c87161a7880d2808ddd69bf0d1139a62f0cf6bf18af53349c8f7c4c50",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7662921800166247697": {
+    "guestSlug": null,
+    "confidence": "low",
+    "evidence": "'focus tech CEO' too generic, no direct roster match",
+    "model": "claude-sonnet-5",
+    "inputHash": "01192eca6aba3ffeb789fe76a4eb2d1ee00756face244c7ed0ad7b0bf2c08853",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7662254278060297473": {
+    "guestSlug": "eliza-blank",
+    "confidence": "high",
+    "evidence": "plants for apartment, left brand strategy, founded in 2012 matches The Sill founder Eliza Blank",
+    "model": "claude-sonnet-5",
+    "inputHash": "c9d4ed327cef2dc4fc59a37dbf6496a6ccf0345bb75ff5c363a0153720ebb8da",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7662223526576835847": {
+    "guestSlug": null,
+    "confidence": "low",
+    "evidence": "generic logistics/food comment",
+    "model": "claude-sonnet-5",
+    "inputHash": "7ce1f998fbe4af56ec86b839533ee7638bb900af8dc482044944a851f7c421f0",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7661486204130544914": {
+    "guestSlug": "eliza-blank",
+    "confidence": "medium",
+    "evidence": "food recovery organization matches Farmlink Project CEO Eliza Blank",
+    "model": "claude-sonnet-5",
+    "inputHash": "41a9d98974ee823e501d68dc37538bb754087d124936e2d95de41bde5e4c4919",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7659988634136825095": {
+    "guestSlug": "haren-bhakta",
+    "confidence": "high",
+    "evidence": "insider ownership stock research matches Haren Bhakta's Inside Ownership Index",
+    "model": "claude-sonnet-5",
+    "inputHash": "4801ee0b873da04cef45042afca9c2927b61277dc69811157def7cc8600fcdac",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7659581662187080977": {
+    "guestSlug": "haren-bhakta",
+    "confidence": "high",
+    "evidence": "Berkshire/Buffett/insider ownership thesis matches Haren Bhakta's fund thesis",
+    "model": "claude-sonnet-5",
+    "inputHash": "4c49a40687ad0e749e23ef90d26eba4fce373f95d093ca89c8c1faa8b422819e",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7656417757222817025": {
+    "guestSlug": "eliza-blank",
+    "confidence": "high",
+    "evidence": "150M lbs of food moved matches Farmlink Project stat for Eliza Blank",
+    "model": "claude-sonnet-5",
+    "inputHash": "dae4c3085a945b1296d926ee6bf963ebb4211e0473a4b6755fcbef62589d6cca",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7655297314592017672": {
+    "guestSlug": "eliza-blank",
+    "confidence": "high",
+    "evidence": "houseplant founder now running food recovery nonprofit directly matches Eliza Blank",
+    "model": "claude-sonnet-5",
+    "inputHash": "46bb828917bb364e90dbe57de196669b004669b79324dbd0b4d9e604a182a2fb",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7650248074366913793": {
+    "guestSlug": "austin-armstrong",
+    "confidence": "low",
+    "evidence": "agency reference could relate to Austin Armstrong's agency background",
+    "model": "claude-sonnet-5",
+    "inputHash": "221e5f17e81bdd69da36db868eda7c3e41e01f072ab61153c6ecfd0459f19e67",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7650246052779478292": {
+    "guestSlug": null,
+    "confidence": "low",
+    "evidence": "no specific evidence",
+    "model": "claude-sonnet-5",
+    "inputHash": "31507311a82e48756c7462b5d73fa7303109138d9788606e9335f775ed63ebbc",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7649799839106075924": {
+    "guestSlug": null,
+    "confidence": "low",
+    "evidence": "generic entrepreneurial quote",
+    "model": "claude-sonnet-5",
+    "inputHash": "c3634666f406a3ecf15843e9b1212dc2660118b2db722826b531510995621880",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7640166785148275969": {
+    "guestSlug": null,
+    "confidence": "low",
+    "evidence": "Durham/Bull House founder story doesn't match roster slugs directly",
+    "model": "claude-sonnet-5",
+    "inputHash": "ddb99f2f73a9b4afc7899d18ffaf2e9c8a970989ad33eb54043ecf09e6c6e769",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7639916325070048530": {
+    "guestSlug": "nikola-borisov",
+    "confidence": "high",
+    "evidence": "$107M Series B pricing matches DeepInfra funding round",
+    "model": "claude-sonnet-5",
+    "inputHash": "4d2e73e8008581210ce23bd50915dbf42d4658283cb1022d8436738b270b1209",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7639421605352852743": {
+    "guestSlug": null,
+    "confidence": "low",
+    "evidence": "generic AI vendor/China comment",
+    "model": "claude-sonnet-5",
+    "inputHash": "7bf49766fbb2db21f1b4325bd29e70eff120be30e91ba5a4b2d2bf1297745780",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7636127091913805073": {
+    "guestSlug": "jack-couch",
+    "confidence": "high",
+    "evidence": "podcasting as sales channel matches Jack Couch's episode thesis",
+    "model": "claude-sonnet-5",
+    "inputHash": "220dd0ac06085e36600b8ef2fd5ef75f02b111e5e0e4d641af2458e0222e4888",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7624247816696892689": {
+    "guestSlug": "jim-rogers",
+    "confidence": "medium",
+    "evidence": "learning by living/experience matches Jim Rogers' world traveler ethos",
+    "model": "claude-sonnet-5",
+    "inputHash": "b840011b915c2e3900effcfd913bd0dbf31d99f8c61f22016f6b112e8a121f3e",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7621739561277820167": {
+    "guestSlug": "eliza-blank",
+    "confidence": "medium",
+    "evidence": "gardening/plants reference matches The Sill founder Eliza Blank",
+    "model": "claude-sonnet-5",
+    "inputHash": "e097afc0df9c03d7fd6e6c28531a5fd46d1c71494f0f2308b94104fb4ba1f34a",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  },
+  "7612793706940271890": {
+    "guestSlug": "jim-rogers",
+    "confidence": "medium",
+    "evidence": "backwoods Alabama to Yale then Oxford matches Jim Rogers' well-known biography",
+    "model": "claude-sonnet-5",
+    "inputHash": "3fabb746e5bd805abf720aa9b0ba770b60d150fd4247d539f1b539748abc1e04",
+    "promptVersion": "2026-08-attribute-clips-v1",
+    "updatedAt": "2026-08-13T18:50:19.606Z"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "generatedAt": "2026-08-13T18:50:28.132Z",
+  "model": "claude-sonnet-5",
+  "youtubeId": "v5ZquyIrNWU",
+  "moments": [
+    {
+      "t": 225,
+      "title": "The Huge Gap in Brain Science Nobody Talks About",
+      "insight": "Victor argues science understands the brain deeply, but that knowledge rarely reaches the public."
+    },
+    {
+      "t": 731,
+      "title": "Born From Rome: How Rhetoric Became a Business Framework",
+      "insight": "He traces his 'neuroinductive practice' framework back to political science, psychology, and cognitive neuroscience."
+    },
+    {
+      "t": 1044,
+      "title": "The Paradigm Shift That Defines Successful CEOs",
+      "insight": "Victor says success isn't about what you have, but the benefit-link you create for your interlocutor."
+    },
+    {
+      "t": 1275,
+      "title": "Why AI Isn't Really Intelligence",
+      "insight": "He claims AI only parameterizes data into averages, lacking the specificity true human intelligence provides in persuasion."
+    },
+    {
+      "t": 2477,
+      "title": "Betting Big on Brain-Machine Interfaces",
+      "insight": "Victor reveals he's been investing in BMI since its inception, predicting brain-tech integration will become 'the new normal.'"
+    },
+    {
+      "t": 3327,
+      "title": "Inside EVIS: The RNA Biotech Bet",
+      "insight": "He describes investing in EVIS, a company loading RNA into extracellular vesicles as the body's natural messengers."
+    }
+  ]
+}

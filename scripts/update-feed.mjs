@@ -20,6 +20,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, unlinkSync } from "node:fs";
 import { deflateRawSync } from "node:zlib";
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -39,6 +40,9 @@ const TIKTOK_FETCH_DEPTH = 10;
 const EPISODE_DETECTION_COUNT = 30;
 // Slack era boundary for approximate YouTube relative-date parsing; the channel predates the podcast.
 const PODCAST_ERA_START_DATE = "2024-01-01";
+const TIKTOK_ATTRIBUTION_PROMPT_VERSION = "2026-08-attribute-clips-v1";
+const TIKTOK_TRANSCRIPT_COVERAGE_MIN = 0.60;
+const TIKTOK_TRANSCRIPT_MARGIN_MIN = 0.20;
 const SHOW_LINKS = {
   youtube: "https://www.youtube.com/@palebluenexus",
   apple: "https://podcasts.apple.com/ca/podcast/pale-blue-nexus/id1529530113",
@@ -453,6 +457,10 @@ async function fetchTikTok(imagesDir, posts) {
       views: st.play_count || 0,
       likes: st.digg_count || 0,
       comments: st.comment_count || 0,
+      _tiktokMentions: (p.text_extra || [])
+        .filter((entry) => entry?.type === 0)
+        .map((entry) => String(entry.user_unique_id || entry.nickname || "").trim())
+        .filter(Boolean),
     });
   }
   return items;
@@ -991,6 +999,320 @@ function parseTranscriptSegments(slug) {
   return segments;
 }
 
+const ATTRIBUTION_STOPWORDS = new Set(
+  [
+    "a", "about", "after", "all", "also", "an", "and", "are", "as", "at", "be",
+    "because", "been", "being", "but", "by", "can", "did", "do", "does", "for",
+    "from", "get", "got", "had", "has", "have", "he", "her", "here", "him", "his",
+    "how", "i", "if", "in", "into", "is", "it", "its", "just", "like", "make",
+    "more", "most", "my", "no", "not", "now", "of", "on", "one", "or", "our",
+    "out", "said", "she", "so", "some", "that", "the", "their", "them", "there",
+    "they", "this", "to", "up", "us", "was", "we", "were", "what", "when", "where",
+    "which", "who", "will", "with", "would", "you", "your",
+  ],
+);
+
+function attributionTokens(text) {
+  return new Set(
+    String(text || "")
+      .toLowerCase()
+      .replace(/https?:\/\/\S+/g, " ")
+      .match(/[a-z][a-z0-9'-]{2,}/g)
+      ?.filter((token) => !ATTRIBUTION_STOPWORDS.has(token))
+      .map((token) => token.replace(/^['-]+|['-]+$/g, ""))
+      .filter(Boolean) || [],
+  );
+}
+
+function transcriptDocuments(publishedGuests) {
+  return publishedGuests
+    .map((guest) => {
+      const segments = parseTranscriptSegments(guest.episodeSlug);
+      if (!segments.length) return null;
+      return {
+        guest,
+        tokens: attributionTokens(segments.map((segment) => segment.text).join(" ")),
+      };
+    })
+    .filter(Boolean);
+}
+
+function transcriptAttributionScores(title, documents) {
+  const captionTokens = attributionTokens(title);
+  if (!captionTokens.size || !documents.length) return [];
+  const documentFrequency = new Map();
+  for (const document of documents) {
+    for (const token of document.tokens) {
+      documentFrequency.set(token, (documentFrequency.get(token) || 0) + 1);
+    }
+  }
+  const totalDocuments = documents.length;
+  const weightedTerms = [...captionTokens].map((token) => ({
+    token,
+    weight: Math.log((totalDocuments + 1) / ((documentFrequency.get(token) || 0) + 1)) + 1,
+  }));
+  const denominator = weightedTerms.reduce((sum, term) => sum + term.weight, 0);
+  if (!denominator) return [];
+  return documents
+    .map((document) => {
+      const numerator = weightedTerms
+        .filter((term) => document.tokens.has(term.token))
+        .reduce((sum, term) => sum + term.weight, 0);
+      return {
+        guest: document.guest,
+        coverage: numerator / denominator,
+      };
+    })
+    .sort((a, b) => b.coverage - a.coverage);
+}
+
+function uniqueGuestNameMatch(title, publishedGuests) {
+  const matches = new Set();
+  for (const guest of publishedGuests) {
+    const parts = String(guest.name || "")
+      .replace(/,\s*(?:CFA|PhD)\b/gi, "")
+      .split(/\s+/)
+      .filter(Boolean);
+    const tokens = [...new Set([parts[0], parts.at(-1)].filter(Boolean))];
+    if (tokens.some((token) => new RegExp(`\\b${escapeRegExp(token)}\\b`, "i").test(title || ""))) {
+      matches.add(guest.slug);
+    }
+  }
+  return matches.size === 1 ? [...matches][0] : null;
+}
+
+function fullGuestNameMatch(title, publishedGuests) {
+  const matches = publishedGuests.filter((guest) => {
+    const parts = String(guest.name || "")
+      .replace(/,\s*(?:CFA|PhD)\b/gi, "")
+      .split(/\s+/)
+      .filter(Boolean)
+      .map(escapeRegExp);
+    if (!parts.length) return false;
+    return new RegExp(`\\b${parts.join("\\s+")}\\b`, "i").test(title || "");
+  });
+  return matches.length === 1 ? matches[0].slug : null;
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function directYoutubeGuestMatch(title, publishedGuests) {
+  const ids = [...String(title || "").matchAll(
+    /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([A-Za-z0-9_-]{11})/gi,
+  )].map((match) => match[1]);
+  const matches = publishedGuests.filter((guest) => ids.includes(String(guest.youtubeId)));
+  return matches.length === 1 ? matches[0].slug : null;
+}
+
+function nearestEpisodeGuest(item, publishedGuests) {
+  const publishedAt = Date.parse(item.publishedAt || "");
+  if (!Number.isFinite(publishedAt)) return null;
+  const ranked = publishedGuests
+    .filter((guest) => /^\d{4}-\d{2}-\d{2}$/.test(String(guest.date || "")))
+    .map((guest) => ({
+      guest,
+      days: Math.abs(publishedAt - Date.parse(`${guest.date}T00:00:00Z`)) / 86400000,
+    }))
+    .sort((a, b) => a.days - b.days);
+  const [nearest, second] = ranked;
+  if (!nearest || nearest.days > 6 || (second && second.days - nearest.days < 5)) return null;
+  return nearest;
+}
+
+function explicitMentionGuestMatch(item, publishedGuests) {
+  const mentions = new Set((item._tiktokMentions || []).map((mention) => mention.toLowerCase()));
+  if (!mentions.size) return null;
+  const matches = publishedGuests.filter((guest) => {
+    const compactName = guest.name.toLowerCase().replace(/[^a-z0-9]/g, "");
+    return mentions.has(guest.slug.toLowerCase()) || mentions.has(compactName);
+  });
+  return matches.length === 1 ? matches[0].slug : null;
+}
+
+function attributionHash(value) {
+  return createHash("sha256").update(JSON.stringify(value)).digest("hex");
+}
+
+function readAttributionCache() {
+  const path = join(ROOT, "data", "attribution-cache.json");
+  if (!existsSync(path)) return {};
+  try {
+    const data = JSON.parse(readFileSync(path, "utf8"));
+    return data && typeof data === "object" ? data : {};
+  } catch {
+    return {};
+  }
+}
+
+function writeAttributionCache(cache) {
+  mkdirSync(join(ROOT, "data"), { recursive: true });
+  writeFileSync(
+    join(ROOT, "data", "attribution-cache.json"),
+    JSON.stringify(cache, null, 2) + "\n",
+  );
+}
+
+function parseJsonArray(text) {
+  const start = text.indexOf("[");
+  const end = text.lastIndexOf("]");
+  if (start < 0 || end <= start) return null;
+  try {
+    const parsed = JSON.parse(text.slice(start, end + 1));
+    return Array.isArray(parsed) ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
+async function classifyUnattributedWithClaude(items, publishedGuests, cache) {
+  const pending = items.filter((item) => item.platform === "tiktok" && !item.guestSlug);
+  if (!pending.length || !process.env.ANTHROPIC_API_KEY) {
+    if (pending.length && !process.env.ANTHROPIC_API_KEY) {
+      log("skipping TikTok Claude attribution: ANTHROPIC_API_KEY is not set");
+    }
+    return;
+  }
+  const roster = publishedGuests.map((guest) => ({
+    slug: guest.slug,
+    name: guest.name,
+    episodeTitle: guest.episodeTitle || "",
+    role: guest.role || "",
+    summary: guest.bio || "",
+  }));
+  const rosterHash = attributionHash({
+    promptVersion: TIKTOK_ATTRIBUTION_PROMPT_VERSION,
+    roster,
+  });
+  const cached = [];
+  const needsClassifying = [];
+  for (const item of pending) {
+    const inputHash = attributionHash({
+      rosterHash,
+      id: item.id,
+      caption: item.title,
+      create_time: item.publishedAt || null,
+    });
+    const entry = cache[item.id];
+    if (entry?.inputHash === inputHash && entry.confidence === "high" && entry.guestSlug) {
+      item.guestSlug = entry.guestSlug;
+      cached.push(item.id);
+    } else if (entry?.inputHash !== inputHash) {
+      needsClassifying.push(item);
+    }
+  }
+  if (!needsClassifying.length) {
+    if (cached.length) log(`reused cached TikTok attributions: ${cached.length}`);
+    return;
+  }
+  const prompt = `Classify each podcast TikTok caption to the single most likely guest from the roster. Return ONLY a JSON array with {"id":"...","guestSlug":"roster slug or null","confidence":"high|medium|low","evidence":"brief evidence"}. Use null unless the evidence is specific; never guess from generic AI or startup language. Accept a guest only when confidence is high.\n\nROSTER:\n${JSON.stringify(roster)}\n\nCLIPS:\n${JSON.stringify(needsClassifying.map((item) => ({ id: item.id, caption: item.title })))}`
+    .trim();
+  try {
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": process.env.ANTHROPIC_API_KEY,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "claude-sonnet-5",
+        max_tokens: 3500,
+        thinking: { type: "disabled" },
+        messages: [{ role: "user", content: prompt }],
+      }),
+    });
+    if (!response.ok) {
+      log(`TikTok Claude attribution failed -> HTTP ${response.status}`);
+      return;
+    }
+    const data = await response.json();
+    const text = Array.isArray(data?.content)
+      ? data.content.filter((block) => block?.type === "text").map((block) => block.text).join("\n")
+      : "";
+    const predictions = parseJsonArray(text);
+    if (!predictions) {
+      log("TikTok Claude attribution returned malformed JSON; leaving clips unattributed");
+      return;
+    }
+    const validSlugs = new Set(publishedGuests.map((guest) => guest.slug));
+    for (const prediction of predictions) {
+      const item = needsClassifying.find((candidate) => candidate.id === String(prediction?.id || ""));
+      if (!item) continue;
+      const inputHash = attributionHash({
+        rosterHash,
+        id: item.id,
+        caption: item.title,
+        create_time: item.publishedAt || null,
+      });
+      const guestSlug = validSlugs.has(prediction.guestSlug) ? prediction.guestSlug : null;
+      const confidence = String(prediction.confidence || "low").toLowerCase();
+      cache[item.id] = {
+        guestSlug,
+        confidence,
+        evidence: String(prediction.evidence || "").slice(0, 240),
+        model: "claude-sonnet-5",
+        inputHash,
+        promptVersion: TIKTOK_ATTRIBUTION_PROMPT_VERSION,
+        updatedAt: new Date().toISOString(),
+      };
+      if (confidence === "high" && guestSlug) item.guestSlug = guestSlug;
+    }
+    writeAttributionCache(cache);
+    log(`classified TikTok clips with Claude: ${needsClassifying.length}`);
+  } catch (error) {
+    log(`TikTok Claude attribution failed: ${error.message}; leaving clips unattributed`);
+  }
+}
+
+async function attributeTikTokGuests(items, guests) {
+  const publishedGuests = guests.filter((guest) => guest.status === "published");
+  const transcriptDocs = transcriptDocuments(publishedGuests);
+  const cache = readAttributionCache();
+  for (const item of items) {
+    if (item.platform !== "tiktok" || item.guestSlug) continue;
+    const fullNameSlug = fullGuestNameMatch(item.title, publishedGuests);
+    if (fullNameSlug) {
+      item.guestSlug = fullNameSlug;
+      continue;
+    }
+    const nameSlug = uniqueGuestNameMatch(item.title, publishedGuests);
+    if (nameSlug) {
+      item.guestSlug = nameSlug;
+      continue;
+    }
+    const directYoutubeSlug = directYoutubeGuestMatch(item.title, publishedGuests);
+    const mentionSlug = explicitMentionGuestMatch(item, publishedGuests);
+    const deterministic = [directYoutubeSlug, mentionSlug].filter(Boolean);
+    if (new Set(deterministic).size === 1) {
+      item.guestSlug = deterministic[0];
+      continue;
+    }
+    const scores = transcriptAttributionScores(item.title, transcriptDocs);
+    const [best, second] = scores;
+    const nearby = nearestEpisodeGuest(item, publishedGuests);
+    const bestDays = best
+      ? Math.abs(Date.parse(item.publishedAt || "") - Date.parse(`${best.guest.date}T00:00:00Z`)) / 86400000
+      : Infinity;
+    if (nearby && bestDays > 14) {
+      item.guestSlug = nearby.guest.slug;
+      continue;
+    }
+    if (
+      best
+      && best.coverage >= TIKTOK_TRANSCRIPT_COVERAGE_MIN
+      && best.coverage - (second?.coverage || 0) >= TIKTOK_TRANSCRIPT_MARGIN_MIN
+    ) {
+      item.guestSlug = best.guest.slug;
+    }
+  }
+  await classifyUnattributedWithClaude(items, publishedGuests, cache);
+  for (const item of items) {
+    if (item._tiktokMentions) delete item._tiktokMentions;
+  }
+}
+
 function secToClock(t) {
   const total = Math.max(0, Math.floor(Number(t) || 0));
   const seconds = total % 60;
@@ -1275,6 +1597,31 @@ async function fetchTranscriptSrt(youtubeId) {
       return `${index + 1}\n${msToSrtTime(start)} --> ${msToSrtTime(end)}\n${String(segment?.text || "")}\n`;
     })
     .join("\n");
+}
+
+async function backfillMissingTranscripts(guests) {
+  if (!process.env.SUPADATA_API_KEY) {
+    log("skipping transcript backfill: SUPADATA_API_KEY is not set");
+    return;
+  }
+  const episodeGuests = guests.filter(
+    (guest) => guest.status === "published" && guest.episodeSlug && guest.youtubeId && isPublicGuest(guest),
+  );
+  const fetched = [];
+  for (const guest of episodeGuests) {
+    if (transcriptHrefForSlug(guest.episodeSlug)) continue;
+    try {
+      const srt = await fetchTranscriptSrt(guest.youtubeId);
+      if (!srt) continue;
+      mkdirSync(join(ROOT, "transcripts"), { recursive: true });
+      writeFileSync(join(ROOT, "transcripts", `${guest.episodeSlug}.en.srt`), srt);
+      fetched.push(guest.episodeSlug);
+      log(`fetched transcript for ${guest.slug}`);
+    } catch (error) {
+      log(`transcript fetch failed for ${guest.slug}: ${error.message}`);
+    }
+  }
+  log(fetched.length ? `fetched transcripts: ${fetched.join(", ")}` : "no new transcripts fetched");
 }
 
 function episodeKitHtml(g, { item, reach = {}, clips = [], insights = [] } = {}) {
@@ -2099,17 +2446,8 @@ async function main() {
     log(`backfilled guest social links: ${socialBackfilled.join(", ")}`);
   }
 
-  const publishedGuests = guests.filter((g) => g.status === "published");
-  for (const it of items) {
-    if (it.platform !== "tiktok" || it.guestSlug) continue;
-    const matches = publishedGuests.filter((g) => {
-      const name = guestNameKey(g.name);
-      if (!name) return false;
-      const escaped = name.split(" ").map((part) => part.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("\\s+");
-      return new RegExp(`\\b${escaped}\\b`, "i").test(it.title || "");
-    });
-    if (matches.length === 1) it.guestSlug = matches[0].slug;
-  }
+  await backfillMissingTranscripts(guests);
+  await attributeTikTokGuests(items, guests);
   items.sort((a, b) => b.score - a.score);
 
   // best-performing item per guest (their episode video if present)

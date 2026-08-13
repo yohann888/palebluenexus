@@ -1,0 +1,4327 @@
+1
+00:00:03,274 --> 00:00:05,294
+[music]
+
+2
+00:00:11,790 --> 00:00:13,810
+[music]
+
+3
+00:00:14,719 --> 00:00:19,600
+Welcome to the show and I appreciate you
+
+4
+00:00:17,359 --> 00:00:23,119
+coming on today, sir. Uh this is one of
+
+5
+00:00:19,600 --> 00:00:25,840
+the episodes of Pale Blue Nexus and uh
+
+6
+00:00:23,119 --> 00:00:27,920
+we'll go with Victor for now and I
+
+7
+00:00:25,840 --> 00:00:30,640
+welcome and thank you and please give
+
+8
+00:00:27,920 --> 00:00:32,719
+yourself an introduction and uh let us
+
+9
+00:00:30,640 --> 00:00:35,920
+know about your practice and your
+
+10
+00:00:32,719 --> 00:00:38,559
+project and basically about yourself.
+
+11
+00:00:35,920 --> 00:00:42,320
+Oh, thank you. Thank you. First of all,
+
+12
+00:00:38,559 --> 00:00:45,760
+thank you for uh this invitation and uh
+
+13
+00:00:42,320 --> 00:00:49,920
+I know your uh channel, your podcast. I
+
+14
+00:00:45,760 --> 00:00:52,239
+know it quite uh well now and uh it's
+
+15
+00:00:49,920 --> 00:00:55,440
+you know I know about you as well. I
+
+16
+00:00:52,239 --> 00:00:58,800
+don't know how many people uh uh know
+
+17
+00:00:55,440 --> 00:01:01,840
+you but uh and your uh business history
+
+18
+00:00:58,800 --> 00:01:04,479
+but it's quite impressive there. So
+
+19
+00:01:01,840 --> 00:01:07,840
+thank you very much for this invitation.
+
+20
+00:01:04,479 --> 00:01:12,479
+you are former IBM, you are former uh uh
+
+21
+00:01:07,840 --> 00:01:16,080
+JP Morgan, you you invented uh uh ways
+
+22
+00:01:12,479 --> 00:01:18,320
+of business and so this is quite quite a
+
+23
+00:01:16,080 --> 00:01:22,400
+privilege for me. So thank you very much
+
+24
+00:01:18,320 --> 00:01:27,040
+for uh this talk between us uh uh today.
+
+25
+00:01:22,400 --> 00:01:30,080
+As I uh have already told you before
+
+26
+00:01:27,040 --> 00:01:33,520
+this and you have already uh suggested
+
+27
+00:01:30,080 --> 00:01:36,640
+as well this is a talk and so there's no
+
+28
+00:01:33,520 --> 00:01:40,000
+media training involved in it and so I
+
+29
+00:01:36,640 --> 00:01:42,720
+don't know what your uh specific uh uh
+
+30
+00:01:40,000 --> 00:01:45,920
+questions will be and so this is quite
+
+31
+00:01:42,720 --> 00:01:49,040
+uh spontaneous uh as a conversation and
+
+32
+00:01:45,920 --> 00:01:53,280
+so it's it's very good uh for once it's
+
+33
+00:01:49,040 --> 00:01:56,880
+very good to to have a a a good talk uh
+
+34
+00:01:53,280 --> 00:01:59,439
+um recorded talk like this one. So,
+
+35
+00:01:56,880 --> 00:02:03,200
+thank you very much about myself as you
+
+36
+00:01:59,439 --> 00:02:06,320
+asked. My name is Victor Luli and and if
+
+37
+00:02:03,200 --> 00:02:09,039
+you cannot uh pronounce uh Luli, that's
+
+38
+00:02:06,320 --> 00:02:11,120
+that's okay as well. So, it's Luli, but
+
+39
+00:02:09,039 --> 00:02:14,720
+it's because it's Italian, you know. I
+
+40
+00:02:11,120 --> 00:02:18,800
+I'm uh uh I'm Italian and I'm talking to
+
+41
+00:02:14,720 --> 00:02:22,959
+you uh today from S. Paulo, Brazil, uh
+
+42
+00:02:18,800 --> 00:02:27,680
+from one of our offices. And uh as a as
+
+43
+00:02:22,959 --> 00:02:31,599
+um uh uh my business activity I I am
+
+44
+00:02:27,680 --> 00:02:34,640
+managing partner uh of Lulia the Lulia
+
+45
+00:02:31,599 --> 00:02:37,760
+group that is an organization that
+
+46
+00:02:34,640 --> 00:02:40,959
+operates uh globally within the scopes
+
+47
+00:02:37,760 --> 00:02:44,000
+of investments consultancy and corporate
+
+48
+00:02:40,959 --> 00:02:47,120
+or large large scale uh corporate
+
+49
+00:02:44,000 --> 00:02:48,640
+training. So this is this is me uh
+
+50
+00:02:47,120 --> 00:02:51,440
+Johan.
+
+51
+00:02:48,640 --> 00:02:54,480
+Anything you want to know uh more about
+
+52
+00:02:51,440 --> 00:02:56,879
+myself and my activities, I'm here to
+
+53
+00:02:54,480 --> 00:02:58,720
+answer to your questions.
+
+54
+00:02:56,879 --> 00:03:01,040
+>> Yeah, you're you're a fascinating guy
+
+55
+00:02:58,720 --> 00:03:04,560
+and um one of the things I'm I'm
+
+56
+00:03:01,040 --> 00:03:06,480
+fascinated about is your research and
+
+57
+00:03:04,560 --> 00:03:09,519
+your work in
+
+58
+00:03:06,480 --> 00:03:12,239
+>> sort of like the neuroscience.
+
+59
+00:03:09,519 --> 00:03:16,800
+Um, and we talked about that on our when
+
+60
+00:03:12,239 --> 00:03:19,360
+we first met and I find that quite um,
+
+61
+00:03:16,800 --> 00:03:22,400
+interesting. You know, the mammal brain
+
+62
+00:03:19,360 --> 00:03:24,560
+is just very complex and we don't know
+
+63
+00:03:22,400 --> 00:03:27,440
+much about it. Actually, we do know a
+
+64
+00:03:24,560 --> 00:03:31,040
+lot about it. I just don't think it's
+
+65
+00:03:27,440 --> 00:03:34,480
+much into the forefront of popular sort
+
+66
+00:03:31,040 --> 00:03:36,000
+of uh, knowledge. Uh,
+
+67
+00:03:34,480 --> 00:03:38,239
+what would you think about that? Like is
+
+68
+00:03:36,000 --> 00:03:42,000
+that a is that a true statement? Yes,
+
+69
+00:03:38,239 --> 00:03:45,040
+it's it's absolutely true. Actually, I I
+
+70
+00:03:42,000 --> 00:03:48,879
+like to mention it because there is a
+
+71
+00:03:45,040 --> 00:03:51,680
+huge gap between what we know uh from a
+
+72
+00:03:48,879 --> 00:03:55,360
+um you know in the in the scientific
+
+73
+00:03:51,680 --> 00:03:59,280
+realm and scientific context uh
+
+74
+00:03:55,360 --> 00:04:04,319
+academically speaking. We know very much
+
+75
+00:03:59,280 --> 00:04:06,959
+already about uh how our brain uh works
+
+76
+00:04:04,319 --> 00:04:09,599
+and uh it's you know it it gained
+
+77
+00:04:06,959 --> 00:04:13,840
+traction from the 70s actually because
+
+78
+00:04:09,599 --> 00:04:17,120
+there was a a certain uh uh growth from
+
+79
+00:04:13,840 --> 00:04:20,079
+the uh psychological uh studies and
+
+80
+00:04:17,120 --> 00:04:25,120
+psychological point of view um
+
+81
+00:04:20,079 --> 00:04:29,600
+technology as well. Um so we actually we
+
+82
+00:04:25,120 --> 00:04:33,600
+know uh a lot about how our brain works
+
+83
+00:04:29,600 --> 00:04:37,600
+and um but you know the the the so the
+
+84
+00:04:33,600 --> 00:04:41,520
+public let's call it this way the naive
+
+85
+00:04:37,600 --> 00:04:46,639
+public um doesn't know about it you know
+
+86
+00:04:41,520 --> 00:04:50,720
+does not know uh how they are they are I
+
+87
+00:04:46,639 --> 00:04:54,639
+think the the most complex uh uh part of
+
+88
+00:04:50,720 --> 00:04:56,720
+who they are works and uh so this is
+
+89
+00:04:54,639 --> 00:05:00,160
+quite interesting and I like to mention
+
+90
+00:04:56,720 --> 00:05:06,080
+it because you know we we we bridged
+
+91
+00:05:00,160 --> 00:05:09,440
+that gap. So as a company this I can say
+
+92
+00:05:06,080 --> 00:05:12,400
+it uh with quite calmly you know quite
+
+93
+00:05:09,440 --> 00:05:16,000
+uh specifically this is one of our
+
+94
+00:05:12,400 --> 00:05:19,280
+biggest uh uh competitive advantages
+
+95
+00:05:16,000 --> 00:05:24,639
+because we we we take something that is
+
+96
+00:05:19,280 --> 00:05:28,960
+uh uh very very uh specific and we we
+
+97
+00:05:24,639 --> 00:05:31,520
+create a link between our uh brain our
+
+98
+00:05:28,960 --> 00:05:35,360
+mental dynamics scientifically ally
+
+99
+00:05:31,520 --> 00:05:37,520
+speaking to a uh business practice
+
+100
+00:05:35,360 --> 00:05:40,639
+actually and so we apply it in
+
+101
+00:05:37,520 --> 00:05:44,960
+everything we do and everything we are.
+
+102
+00:05:40,639 --> 00:05:48,960
+But you asking me about my uh personal
+
+103
+00:05:44,960 --> 00:05:53,440
+uh research and what how how I arrived
+
+104
+00:05:48,960 --> 00:05:56,639
+here uh uh probably so about my history
+
+105
+00:05:53,440 --> 00:05:59,600
+from an academic point of view. I
+
+106
+00:05:56,639 --> 00:06:05,039
+started studying uh uh politics
+
+107
+00:05:59,600 --> 00:06:10,080
+sciences. you know, I I I have uh my so
+
+108
+00:06:05,039 --> 00:06:12,960
+Italian origin and Italian uh uh person
+
+109
+00:06:10,080 --> 00:06:17,360
+from from you know I have always studied
+
+110
+00:06:12,960 --> 00:06:21,039
+in Italy and so as a from as a kid and
+
+111
+00:06:17,360 --> 00:06:25,120
+so the first approach uh Italy gives you
+
+112
+00:06:21,039 --> 00:06:28,560
+to to knowledge is um and from this
+
+113
+00:06:25,120 --> 00:06:31,680
+specific knowledge is from philosophy
+
+114
+00:06:28,560 --> 00:06:35,600
+actually. And so I found myself very
+
+115
+00:06:31,680 --> 00:06:39,680
+very very uh um let's say in love maybe
+
+116
+00:06:35,600 --> 00:06:44,960
+with the rhetorical aspects of knowledge
+
+117
+00:06:39,680 --> 00:06:48,880
+and uh so from this on I I understood as
+
+118
+00:06:44,960 --> 00:06:53,120
+you know during my uh growth my my
+
+119
+00:06:48,880 --> 00:06:56,080
+personal uh intellectual also growth I I
+
+120
+00:06:53,120 --> 00:06:57,759
+understood the relationship between uh
+
+121
+00:06:56,080 --> 00:06:59,520
+um
+
+122
+00:06:57,759 --> 00:07:03,599
+you know rhetoric
+
+123
+00:06:59,520 --> 00:07:06,720
+and uh uh behavior etc. and the use of
+
+124
+00:07:03,599 --> 00:07:09,840
+it uh in a in a in the most practical
+
+125
+00:07:06,720 --> 00:07:13,199
+way. Let's I I remember I I was
+
+126
+00:07:09,840 --> 00:07:18,960
+fascinated for example with uh uh the
+
+127
+00:07:13,199 --> 00:07:20,720
+speech of uh Maneno agre who addressed a
+
+128
+00:07:18,960 --> 00:07:23,919
+crowd
+
+129
+00:07:20,720 --> 00:07:27,680
+was during a rebellion and he addressed
+
+130
+00:07:23,919 --> 00:07:31,440
+the crow a crowd from a a hill in Rome
+
+131
+00:07:27,680 --> 00:07:34,479
+and uh he managed to to to address them
+
+132
+00:07:31,440 --> 00:07:37,759
+in a strategic way. And so this is I
+
+133
+00:07:34,479 --> 00:07:42,800
+since I remember this is this was one of
+
+134
+00:07:37,759 --> 00:07:46,960
+my first uh you know visions about uh
+
+135
+00:07:42,800 --> 00:07:50,960
+how was the relationship between uh the
+
+136
+00:07:46,960 --> 00:07:54,879
+rhetorical knowledge and a practical uh
+
+137
+00:07:50,960 --> 00:07:57,360
+uh application was. And so this is just
+
+138
+00:07:54,879 --> 00:08:00,479
+you know I I went to uh uh ancient
+
+139
+00:07:57,360 --> 00:08:03,360
+history now uh uh ancient Rome now just
+
+140
+00:08:00,479 --> 00:08:06,319
+for you to understand I have always
+
+141
+00:08:03,360 --> 00:08:09,919
+pursued this you know I have always been
+
+142
+00:08:06,319 --> 00:08:13,039
+in love with with uh this kind of of
+
+143
+00:08:09,919 --> 00:08:16,560
+knowledge this type of knowledge and so
+
+144
+00:08:13,039 --> 00:08:19,919
+uh my first because of this my first uh
+
+145
+00:08:16,560 --> 00:08:22,800
+uh field of study was uh political
+
+146
+00:08:19,919 --> 00:08:26,960
+sciences and began
+
+147
+00:08:22,800 --> 00:08:30,800
+with a uh during a a huge series of
+
+148
+00:08:26,960 --> 00:08:35,680
+personal events as well as as anyone uh
+
+149
+00:08:30,800 --> 00:08:39,200
+I decided to study uh psychology as well
+
+150
+00:08:35,680 --> 00:08:43,200
+and uh from psychology I went directly
+
+151
+00:08:39,200 --> 00:08:44,800
+to neurossychology and cognitive uh
+
+152
+00:08:43,200 --> 00:08:49,680
+neuroscience
+
+153
+00:08:44,800 --> 00:08:55,600
+and so and maybe uh um many people do
+
+154
+00:08:49,680 --> 00:08:59,279
+not know this But uh uh there are very
+
+155
+00:08:55,600 --> 00:09:02,399
+many levels of uh neuroscientific
+
+156
+00:08:59,279 --> 00:09:04,000
+uh knowledge and the the cognitive
+
+157
+00:09:02,399 --> 00:09:07,440
+neuroscientific
+
+158
+00:09:04,000 --> 00:09:10,080
+the cognitive uh neuroscience one is
+
+159
+00:09:07,440 --> 00:09:13,200
+about the way is as hierarch
+
+160
+00:09:10,080 --> 00:09:14,720
+hierarchically speaking is the most
+
+161
+00:09:13,200 --> 00:09:18,000
+advanced one.
+
+162
+00:09:14,720 --> 00:09:22,240
+>> Mhm. because it studies the way our
+
+163
+00:09:18,000 --> 00:09:25,120
+brain creates our uh mind uh uh
+
+164
+00:09:22,240 --> 00:09:28,560
+experience let's say and so I got
+
+165
+00:09:25,120 --> 00:09:32,560
+fascinated by this this uh uh kind of
+
+166
+00:09:28,560 --> 00:09:35,279
+study and um and when I started it I was
+
+167
+00:09:32,560 --> 00:09:40,000
+already a an entrepreneur you know I was
+
+168
+00:09:35,279 --> 00:09:43,600
+a already a businessman and uh but you
+
+169
+00:09:40,000 --> 00:09:46,720
+know I got I think that period that
+
+170
+00:09:43,600 --> 00:09:51,519
+period of time in my life was the one
+
+171
+00:09:46,720 --> 00:09:54,560
+where when I maybe it's just arrogantly
+
+172
+00:09:51,519 --> 00:09:58,240
+speaking but it was my my intelligence
+
+173
+00:09:54,560 --> 00:10:00,160
+speak uh uh uh in in my life you know
+
+174
+00:09:58,240 --> 00:10:02,880
+and so
+
+175
+00:10:00,160 --> 00:10:05,519
+I felt like this because it was very
+
+176
+00:10:02,880 --> 00:10:08,959
+stimulating for me and so I had the
+
+177
+00:10:05,519 --> 00:10:13,440
+privilege to to to perceive this and to
+
+178
+00:10:08,959 --> 00:10:18,079
+to make the most of it and um and so I I
+
+179
+00:10:13,440 --> 00:10:22,240
+had uh uh privileged uh access uh to
+
+180
+00:10:18,079 --> 00:10:26,320
+something that was my passion and and
+
+181
+00:10:22,240 --> 00:10:29,440
+have always been since then. And um so
+
+182
+00:10:26,320 --> 00:10:33,200
+the research came uh from this from this
+
+183
+00:10:29,440 --> 00:10:36,240
+period of time. And I think the the most
+
+184
+00:10:33,200 --> 00:10:39,360
+uh important line of research of that
+
+185
+00:10:36,240 --> 00:10:43,120
+period that that I faced and I had
+
+186
+00:10:39,360 --> 00:10:46,720
+access to uh was the the relation
+
+187
+00:10:43,120 --> 00:10:47,279
+between the brain and consciousness.
+
+188
+00:10:46,720 --> 00:10:51,519
+>> Mhm.
+
+189
+00:10:47,279 --> 00:10:54,959
+>> And so I studied it uh uh with
+
+190
+00:10:51,519 --> 00:10:58,399
+proper lines of uh research
+
+191
+00:10:54,959 --> 00:11:01,040
+um from a scientific point of view. So
+
+192
+00:10:58,399 --> 00:11:03,920
+using a scientical approach, we we
+
+193
+00:11:01,040 --> 00:11:08,880
+studied uh we studied uh um
+
+194
+00:11:03,920 --> 00:11:13,440
+consciousness through uh specific fMRI
+
+195
+00:11:08,880 --> 00:11:17,040
+uh uh protocols, MEG, MEG, MEG uh
+
+196
+00:11:13,440 --> 00:11:20,560
+protocols etc. So it was absolutely
+
+197
+00:11:17,040 --> 00:11:22,800
+interesting and uh fascinating for me
+
+198
+00:11:20,560 --> 00:11:27,920
+and from that
+
+199
+00:11:22,800 --> 00:11:32,720
+I created uh uh our lines of uh research
+
+200
+00:11:27,920 --> 00:11:34,240
+in the in in in through uh LUI group and
+
+201
+00:11:32,720 --> 00:11:37,200
+neuromarketing
+
+202
+00:11:34,240 --> 00:11:40,079
+uh etc. everything we do uh from that
+
+203
+00:11:37,200 --> 00:11:42,480
+point of view and so from this you know
+
+204
+00:11:40,079 --> 00:11:47,120
+I I have a a third line of study that
+
+205
+00:11:42,480 --> 00:11:50,399
+that came after was finance and so I had
+
+206
+00:11:47,120 --> 00:11:53,200
+these these three uh fields uh covered
+
+207
+00:11:50,399 --> 00:11:57,760
+let's say academically speaking and uh
+
+208
+00:11:53,200 --> 00:12:02,399
+but you know from uh neuroscience I I
+
+209
+00:11:57,760 --> 00:12:05,920
+applied it into neuromarketing and from
+
+210
+00:12:02,399 --> 00:12:11,120
+this specifically and my personal uh
+
+211
+00:12:05,920 --> 00:12:14,160
+business experience. I I created a a a
+
+212
+00:12:11,120 --> 00:12:16,800
+conceptual framework. It's a I think
+
+213
+00:12:14,160 --> 00:12:19,760
+it's the conceptual framework of
+
+214
+00:12:16,800 --> 00:12:24,079
+everything uh we do at Lully Group that
+
+215
+00:12:19,760 --> 00:12:26,160
+is named commercially speaking is named
+
+216
+00:12:24,079 --> 00:12:29,279
+u neuroinductive
+
+217
+00:12:26,160 --> 00:12:32,480
+practice. And so this is this is somehow
+
+218
+00:12:29,279 --> 00:12:35,200
+the the story and where where it comes
+
+219
+00:12:32,480 --> 00:12:39,200
+from. I think I wanted to explain this
+
+220
+00:12:35,200 --> 00:12:42,880
+in a in a the simplest way possible uh
+
+221
+00:12:39,200 --> 00:12:46,000
+because of you know the people uh I
+
+222
+00:12:42,880 --> 00:12:48,079
+don't know how much uh they could uh uh
+
+223
+00:12:46,000 --> 00:12:52,320
+understand the the neuroscientific
+
+224
+00:12:48,079 --> 00:12:54,800
+principles but the way we we we
+
+225
+00:12:52,320 --> 00:12:58,959
+apply it to business you know it's quite
+
+226
+00:12:54,800 --> 00:13:03,360
+it's quite explicit and um so this this
+
+227
+00:12:58,959 --> 00:13:07,279
+is this is uh what I do and um what
+
+228
+00:13:03,360 --> 00:13:10,160
+where this knowledge uh comes from. I I
+
+229
+00:13:07,279 --> 00:13:10,800
+think it's was was it clear? Was it
+
+230
+00:13:10,160 --> 00:13:14,000
+understandable?
+
+231
+00:13:10,800 --> 00:13:16,880
+>> Yeah, absolutely. And I think like my
+
+232
+00:13:14,000 --> 00:13:21,680
+audience and myself would be interested
+
+233
+00:13:16,880 --> 00:13:24,480
+in knowing how can we in your academic
+
+234
+00:13:21,680 --> 00:13:26,720
+background and your research and and
+
+235
+00:13:24,480 --> 00:13:30,240
+your experience
+
+236
+00:13:26,720 --> 00:13:33,360
+dealing with founders and CEOs
+
+237
+00:13:30,240 --> 00:13:36,000
+um and seeing how businesses play out.
+
+238
+00:13:33,360 --> 00:13:39,279
+What are some of the things that you
+
+239
+00:13:36,000 --> 00:13:43,440
+would recommend or you would see like a
+
+240
+00:13:39,279 --> 00:13:46,560
+lot of these business owners and CEOs
+
+241
+00:13:43,440 --> 00:13:49,680
+don't apply on a regular basis that you
+
+242
+00:13:46,560 --> 00:13:51,200
+would like them to apply? Like
+
+243
+00:13:49,680 --> 00:13:53,200
+are is there something that you can see
+
+244
+00:13:51,200 --> 00:13:54,880
+in a CEO and says, "Okay, that guy's
+
+245
+00:13:53,200 --> 00:13:56,639
+going to be successful. He's going to
+
+246
+00:13:54,880 --> 00:14:00,160
+have a successful company." Is there a
+
+247
+00:13:56,639 --> 00:14:03,279
+pattern there or is it largely based on
+
+248
+00:14:00,160 --> 00:14:06,639
+an individual by-individual basis?
+
+249
+00:14:03,279 --> 00:14:09,680
+You know it's there is a pattern
+
+250
+00:14:06,639 --> 00:14:12,800
+actually and uh if you ask me to
+
+251
+00:14:09,680 --> 00:14:16,959
+identify it to make it explicit to your
+
+252
+00:14:12,800 --> 00:14:19,680
+audience we have to start from the the
+
+253
+00:14:16,959 --> 00:14:23,839
+let's say conceptually speaking we have
+
+254
+00:14:19,680 --> 00:14:26,959
+in everything we do if we apply this uh
+
+255
+00:14:23,839 --> 00:14:30,480
+concepts I I'm telling you about
+
+256
+00:14:26,959 --> 00:14:33,680
+uh um to for example we apply to
+
+257
+00:14:30,480 --> 00:14:36,800
+leadership we apply to sales we apply to
+
+258
+00:14:33,680 --> 00:14:40,320
+negotiation etc etc. We understand that
+
+259
+00:14:36,800 --> 00:14:43,519
+we have elements
+
+260
+00:14:40,320 --> 00:14:47,279
+that we begin from. And so element for
+
+261
+00:14:43,519 --> 00:14:49,680
+example uh in sales is your product you
+
+262
+00:14:47,279 --> 00:14:53,120
+know and I think the the the most
+
+263
+00:14:49,680 --> 00:14:55,279
+important ability we have in from from
+
+264
+00:14:53,120 --> 00:14:57,680
+this specific point of view and in
+
+265
+00:14:55,279 --> 00:15:00,000
+general in business is the ability to
+
+266
+00:14:57,680 --> 00:15:04,000
+create
+
+267
+00:15:00,000 --> 00:15:07,279
+a a link between and a a a proper and
+
+268
+00:15:04,000 --> 00:15:11,760
+instrumental link between what we have
+
+269
+00:15:07,279 --> 00:15:15,839
+as an element and the benefits
+
+270
+00:15:11,760 --> 00:15:20,160
+that that element uh uh create.
+
+271
+00:15:15,839 --> 00:15:22,959
+Okay. So uh um this this what does it
+
+272
+00:15:20,160 --> 00:15:28,000
+mean that we have uh uh uh something
+
+273
+00:15:22,959 --> 00:15:31,199
+that by itself is just uh a a material
+
+274
+00:15:28,000 --> 00:15:34,399
+uh um you know element. So something
+
+275
+00:15:31,199 --> 00:15:38,160
+that we have also abstract one like in
+
+276
+00:15:34,399 --> 00:15:41,760
+leadership. So the the concept of uh
+
+277
+00:15:38,160 --> 00:15:46,399
+what we do etc. and to transform all
+
+278
+00:15:41,760 --> 00:15:50,480
+this into a a a benefit. But the benefit
+
+279
+00:15:46,399 --> 00:15:53,680
+and now uh we have a a um you know an
+
+280
+00:15:50,480 --> 00:15:58,160
+upgrade uh of what I'm telling you about
+
+281
+00:15:53,680 --> 00:16:01,600
+the the the benefit must be appliable to
+
+282
+00:15:58,160 --> 00:16:03,920
+our interlocutor
+
+283
+00:16:01,600 --> 00:16:08,560
+that can be a business partner that can
+
+284
+00:16:03,920 --> 00:16:13,120
+be uh uh you know um to whom you are
+
+285
+00:16:08,560 --> 00:16:16,720
+addressing your uh elevator speak speech
+
+286
+00:16:13,120 --> 00:16:20,560
+uh for example. It's it's your pitch uh
+
+287
+00:16:16,720 --> 00:16:23,040
+and um and or your customer, you know,
+
+288
+00:16:20,560 --> 00:16:25,519
+it's it's the same principle there. is a
+
+289
+00:16:23,040 --> 00:16:29,279
+principle of influence
+
+290
+00:16:25,519 --> 00:16:32,480
+but le let's say uh uh funnily speaking
+
+291
+00:16:29,279 --> 00:16:35,440
+it's uh uh um business
+
+292
+00:16:32,480 --> 00:16:38,320
+you know uh uh on steroids let's say
+
+293
+00:16:35,440 --> 00:16:40,480
+because yes it's it's funny to say but
+
+294
+00:16:38,320 --> 00:16:44,880
+to to tell you like this but you know
+
+295
+00:16:40,480 --> 00:16:47,519
+you what what is the the main uh feature
+
+296
+00:16:44,880 --> 00:16:52,160
+there that you understand your
+
+297
+00:16:47,519 --> 00:16:56,320
+interlocutor and you apply what you have
+
+298
+00:16:52,160 --> 00:16:58,079
+into his priorities. So I I think the
+
+299
+00:16:56,320 --> 00:17:02,320
+proper way to address it is to
+
+300
+00:16:58,079 --> 00:17:07,600
+understand that uh the characteristic
+
+301
+00:17:02,320 --> 00:17:11,199
+that defines successful uh business uh
+
+302
+00:17:07,600 --> 00:17:13,760
+uh men or business people uh like the
+
+303
+00:17:11,199 --> 00:17:16,640
+ones you mentioned before is this
+
+304
+00:17:13,760 --> 00:17:21,439
+paradigm shift. You know what you are
+
+305
+00:17:16,640 --> 00:17:24,480
+and what you have does not uh uh is not
+
+306
+00:17:21,439 --> 00:17:27,600
+that important.
+
+307
+00:17:24,480 --> 00:17:30,640
+But what you create from the and the
+
+308
+00:17:27,600 --> 00:17:34,400
+link you you can create from what you
+
+309
+00:17:30,640 --> 00:17:38,960
+have at your disposal and the beneficial
+
+310
+00:17:34,400 --> 00:17:40,559
+aspect of it to your interlocutor is
+
+311
+00:17:38,960 --> 00:17:43,919
+fundamental
+
+312
+00:17:40,559 --> 00:17:47,520
+and it is the basis for anything we do
+
+313
+00:17:43,919 --> 00:17:51,440
+from a business point of view and so I
+
+314
+00:17:47,520 --> 00:17:55,280
+identify uh uh this importance let's say
+
+315
+00:17:51,440 --> 00:17:58,640
+uh this successful uh pattern
+
+316
+00:17:55,280 --> 00:18:03,919
+from specifically this. So uh uh this
+
+317
+00:17:58,640 --> 00:18:07,120
+ability and uh okay it can be uh taught
+
+318
+00:18:03,919 --> 00:18:10,720
+it can be uh you know learned let's say
+
+319
+00:18:07,120 --> 00:18:15,360
+but but um you know many people don't
+
+320
+00:18:10,720 --> 00:18:18,559
+understand that this is the the the the
+
+321
+00:18:15,360 --> 00:18:21,280
+main framework from which uh start
+
+322
+00:18:18,559 --> 00:18:26,080
+anything you do in business and this is
+
+323
+00:18:21,280 --> 00:18:29,679
+also what uh uh I do is daily on a daily
+
+324
+00:18:26,080 --> 00:18:34,320
+basis you know the the ability I think
+
+325
+00:18:29,679 --> 00:18:38,640
+if if you asked me if I have superpowers
+
+326
+00:18:34,320 --> 00:18:42,559
+uh uh I would answer they are not super
+
+327
+00:18:38,640 --> 00:18:44,880
+they are very very human uh uh human
+
+328
+00:18:42,559 --> 00:18:48,480
+powers and
+
+329
+00:18:44,880 --> 00:18:51,200
+that's it you know that that's these I'm
+
+330
+00:18:48,480 --> 00:18:54,640
+telling you about now
+
+331
+00:18:51,200 --> 00:19:00,559
+there's something that I've noticed
+
+332
+00:18:54,640 --> 00:19:05,360
+uh call it just an instinct. But today
+
+333
+00:19:00,559 --> 00:19:08,000
+with the rise of AI, there is a lack of
+
+334
+00:19:05,360 --> 00:19:11,440
+there's there's an explosion of product.
+
+335
+00:19:08,000 --> 00:19:15,280
+There's an explosion of content.
+
+336
+00:19:11,440 --> 00:19:19,440
+And the one thing that's lessened
+
+337
+00:19:15,280 --> 00:19:21,039
+because of that is trust between
+
+338
+00:19:19,440 --> 00:19:25,200
+customer
+
+339
+00:19:21,039 --> 00:19:27,120
+and the vendor. So there's a lack of
+
+340
+00:19:25,200 --> 00:19:30,400
+trust. There's a recession in trust
+
+341
+00:19:27,120 --> 00:19:32,799
+happening right now and that's very
+
+342
+00:19:30,400 --> 00:19:34,640
+interesting. There's a lot of people
+
+343
+00:19:32,799 --> 00:19:37,039
+creating different types of products.
+
+344
+00:19:34,640 --> 00:19:39,280
+They're great products,
+
+345
+00:19:37,039 --> 00:19:41,120
+but there's a lack of trust happening
+
+346
+00:19:39,280 --> 00:19:43,280
+and it it's one of the reasons that I
+
+347
+00:19:41,120 --> 00:19:46,080
+produce this podcast and I've always
+
+348
+00:19:43,280 --> 00:19:48,799
+done authentic sort of conversations
+
+349
+00:19:46,080 --> 00:19:53,200
+like this. Do you notice that too as
+
+350
+00:19:48,799 --> 00:19:54,559
+well? Uh like have you noticed people
+
+351
+00:19:53,200 --> 00:19:58,320
+are a little bit more skeptical?
+
+352
+00:19:54,559 --> 00:20:01,200
+Customers are skeptical. Cold emails are
+
+353
+00:19:58,320 --> 00:20:03,440
+not as effective. Certain certain things
+
+354
+00:20:01,200 --> 00:20:05,440
+that you've done in the past may not
+
+355
+00:20:03,440 --> 00:20:09,039
+work today
+
+356
+00:20:05,440 --> 00:20:13,120
+is um you know I I completely agree with
+
+357
+00:20:09,039 --> 00:20:17,440
+your point of view actually uh it can be
+
+358
+00:20:13,120 --> 00:20:20,320
+uh directly linked to what uh uh I told
+
+359
+00:20:17,440 --> 00:20:24,559
+you before. uh I have just uh uh told
+
+360
+00:20:20,320 --> 00:20:27,919
+you about uh the the necessity
+
+361
+00:20:24,559 --> 00:20:31,760
+of the creation of this link between
+
+362
+00:20:27,919 --> 00:20:34,880
+what you have at your disposal and the
+
+363
+00:20:31,760 --> 00:20:38,240
+beneficial aspect uh uh to your
+
+364
+00:20:34,880 --> 00:20:40,720
+interlocutor. And so
+
+365
+00:20:38,240 --> 00:20:44,159
+something like this
+
+366
+00:20:40,720 --> 00:20:48,159
+demands a level of specificity
+
+367
+00:20:44,159 --> 00:20:52,320
+that is huge, that is very very high.
+
+368
+00:20:48,159 --> 00:20:55,760
+And so this is why AI
+
+369
+00:20:52,320 --> 00:20:58,640
+does not uh uh apply perfectly to the
+
+370
+00:20:55,760 --> 00:21:03,600
+level of specificity
+
+371
+00:20:58,640 --> 00:21:05,919
+you have to to gain in terms of dialogue
+
+372
+00:21:03,600 --> 00:21:08,480
+in terms of everything you have and the
+
+373
+00:21:05,919 --> 00:21:11,360
+way you propose it. And and there's a
+
+374
+00:21:08,480 --> 00:21:15,840
+reason why because AI first of all the
+
+375
+00:21:11,360 --> 00:21:18,640
+the the eye part in AI is not a proper
+
+376
+00:21:15,840 --> 00:21:22,960
+you know it's not intelligence
+
+377
+00:21:18,640 --> 00:21:26,720
+okay it's a very effective way to manage
+
+378
+00:21:22,960 --> 00:21:29,200
+and to uh uh elaborate data okay but
+
+379
+00:21:26,720 --> 00:21:33,280
+it's not an intelligence the level of
+
+380
+00:21:29,200 --> 00:21:36,880
+intelligence uh human uh uh humans have
+
+381
+00:21:33,280 --> 00:21:37,360
+is absolutely uh superior to that.
+
+382
+00:21:36,880 --> 00:21:40,320
+>> Mhm.
+
+383
+00:21:37,360 --> 00:21:44,880
+>> Okay. And so this is something there's a
+
+384
+00:21:40,320 --> 00:21:47,600
+only who who understand uh human beings
+
+385
+00:21:44,880 --> 00:21:51,360
+can understand this and so properly I
+
+386
+00:21:47,600 --> 00:21:54,240
+mean so uh neuroscience tells you this
+
+387
+00:21:51,360 --> 00:21:58,880
+there there's no way it it it cannot
+
+388
+00:21:54,240 --> 00:22:02,960
+tell you this and so uh um the the level
+
+389
+00:21:58,880 --> 00:22:07,039
+of specificity in the link between who
+
+390
+00:22:02,960 --> 00:22:10,640
+you are and your interlocutor
+
+391
+00:22:07,039 --> 00:22:13,360
+cannot not be determined by a system
+
+392
+00:22:10,640 --> 00:22:16,080
+that works on average
+
+393
+00:22:13,360 --> 00:22:22,320
+or averages. Okay? And that's that's
+
+394
+00:22:16,080 --> 00:22:28,159
+exactly what AI uh does. you know uh uh
+
+395
+00:22:22,320 --> 00:22:30,960
+AI takes a huge amount of of data.
+
+396
+00:22:28,159 --> 00:22:34,000
+it par parameterize
+
+397
+00:22:30,960 --> 00:22:38,080
+uh parameterizes it
+
+398
+00:22:34,000 --> 00:22:41,520
+um and creates averages from it and so
+
+399
+00:22:38,080 --> 00:22:44,720
+you have huge huge batches of data
+
+400
+00:22:41,520 --> 00:22:48,000
+regarding a a topic regarding anything
+
+401
+00:22:44,720 --> 00:22:52,159
+you want to and from the internet and
+
+402
+00:22:48,000 --> 00:22:55,440
+create something that is based on a huge
+
+403
+00:22:52,159 --> 00:22:58,480
+average of it this absolutely makes
+
+404
+00:22:55,440 --> 00:23:00,720
+sense because what I see AI companies
+
+405
+00:22:58,480 --> 00:23:03,840
+doing large language models and such.
+
+406
+00:23:00,720 --> 00:23:07,760
+It's like they're trying to put more
+
+407
+00:23:03,840 --> 00:23:10,559
+data and specificity inside their models
+
+408
+00:23:07,760 --> 00:23:13,360
+in order to mimic the the average level
+
+409
+00:23:10,559 --> 00:23:14,400
+of intelligence that that goes up. But I
+
+410
+00:23:13,360 --> 00:23:16,799
+don't think
+
+411
+00:23:14,400 --> 00:23:19,600
+>> it's the contrary.
+
+412
+00:23:16,799 --> 00:23:21,200
+>> Yeah, it is the contrary because it's
+
+413
+00:23:19,600 --> 00:23:22,720
+things are always shifting and things
+
+414
+00:23:21,200 --> 00:23:24,720
+are always moving. There's different
+
+415
+00:23:22,720 --> 00:23:28,400
+things in the world that would shift.
+
+416
+00:23:24,720 --> 00:23:30,159
+there's uh narratives that will change
+
+417
+00:23:28,400 --> 00:23:30,559
+and it's hard to keep up with that.
+
+418
+00:23:30,159 --> 00:23:35,280
+Yeah.
+
+419
+00:23:30,559 --> 00:23:38,080
+>> Yes. Actually uh you know if you use uh
+
+420
+00:23:35,280 --> 00:23:41,039
+uh artificial intelligence as a as a
+
+421
+00:23:38,080 --> 00:23:44,480
+specific tool I mean you have a
+
+422
+00:23:41,039 --> 00:23:50,000
+framework you have a a paradigm
+
+423
+00:23:44,480 --> 00:23:52,159
+that you want to uh work upon through
+
+424
+00:23:50,000 --> 00:23:55,200
+artificial intelligence. Okay, let's
+
+425
+00:23:52,159 --> 00:23:59,039
+see. For example, in Formula 1, I talk
+
+426
+00:23:55,200 --> 00:24:02,640
+uh to uh Formula 1 uh managers, for
+
+427
+00:23:59,039 --> 00:24:05,600
+example, and uh the way they use
+
+428
+00:24:02,640 --> 00:24:09,600
+artificial intelligence is through uh
+
+429
+00:24:05,600 --> 00:24:12,799
+something they that they uh uh start
+
+430
+00:24:09,600 --> 00:24:15,679
+from that is theirs that's you know
+
+431
+00:24:12,799 --> 00:24:19,600
+that's that's specifically uh determined
+
+432
+00:24:15,679 --> 00:24:22,400
+by them and use AI as a tool. It's just
+
+433
+00:24:19,600 --> 00:24:24,640
+an example, you know, because uh um
+
+434
+00:24:22,400 --> 00:24:27,679
+Formula 1, for example, as as any
+
+435
+00:24:24,640 --> 00:24:31,279
+business uh uh is determined by the
+
+436
+00:24:27,679 --> 00:24:33,360
+level of of efficiency uh uh of what
+
+437
+00:24:31,279 --> 00:24:37,919
+they do. But if you if you have a
+
+438
+00:24:33,360 --> 00:24:39,919
+company and you work on huge amounts of
+
+439
+00:24:37,919 --> 00:24:44,640
+of data,
+
+440
+00:24:39,919 --> 00:24:48,320
+you cannot expect uh uh but to to create
+
+441
+00:24:44,640 --> 00:24:53,120
+uh averages. And so the the the the
+
+442
+00:24:48,320 --> 00:24:56,159
+moment you address to a customer or to
+
+443
+00:24:53,120 --> 00:25:00,400
+you know a business partner etc is based
+
+444
+00:24:56,159 --> 00:25:04,400
+on average. And so this is this is quite
+
+445
+00:25:00,400 --> 00:25:08,159
+uh uh dangerous from a specificity and
+
+446
+00:25:04,400 --> 00:25:09,840
+uh uh uh efficiency point of view that
+
+447
+00:25:08,159 --> 00:25:11,360
+business demands.
+
+448
+00:25:09,840 --> 00:25:16,400
+>> Yeah.
+
+449
+00:25:11,360 --> 00:25:18,559
+Yeah. And absolutely I I think there is
+
+450
+00:25:16,400 --> 00:25:20,640
+a a level of specificity that it's
+
+451
+00:25:18,559 --> 00:25:23,360
+always changing
+
+452
+00:25:20,640 --> 00:25:25,840
+and it's getting harder and harder to
+
+453
+00:25:23,360 --> 00:25:29,039
+persuade and
+
+454
+00:25:25,840 --> 00:25:31,120
+>> persuasion is is is ahead of the curve
+
+455
+00:25:29,039 --> 00:25:33,440
+when it comes to maybe they should come
+
+456
+00:25:31,120 --> 00:25:35,120
+up with artificial persuasion. I don't
+
+457
+00:25:33,440 --> 00:25:37,679
+think it can happen
+
+458
+00:25:35,120 --> 00:25:40,240
+>> you know uh uh just okay let's let's
+
+459
+00:25:37,679 --> 00:25:43,039
+make an example about this specifically
+
+460
+00:25:40,240 --> 00:25:44,720
+you start from a knowledge that is based
+
+461
+00:25:43,039 --> 00:25:47,200
+for example marketing
+
+462
+00:25:44,720 --> 00:25:49,840
+>> okay you start from something that
+
+463
+00:25:47,200 --> 00:25:52,320
+conceptually speaking is the uh uh
+
+464
+00:25:49,840 --> 00:25:55,679
+unique selling proposal
+
+465
+00:25:52,320 --> 00:25:58,640
+okay that is something that you and only
+
+466
+00:25:55,679 --> 00:26:01,679
+you uh can deliver
+
+467
+00:25:58,640 --> 00:26:05,840
+okay to the public to the to your market
+
+468
+00:26:01,679 --> 00:26:10,720
+etc and you uh uh are aware of it and
+
+469
+00:26:05,840 --> 00:26:13,600
+you use it etc strategically
+
+470
+00:26:10,720 --> 00:26:17,520
+in your sales use etc etc the way you
+
+471
+00:26:13,600 --> 00:26:22,559
+address uh your public now you have this
+
+472
+00:26:17,520 --> 00:26:26,320
+and every founder today I know that uses
+
+473
+00:26:22,559 --> 00:26:29,200
+something that that is merely informatic
+
+474
+00:26:26,320 --> 00:26:32,320
+uh says we use artificial intelligence
+
+475
+00:26:29,200 --> 00:26:36,720
+to do this this this this everyone one
+
+476
+00:26:32,320 --> 00:26:38,400
+is telling me the same. So how do I
+
+477
+00:26:36,720 --> 00:26:41,520
+perceive
+
+478
+00:26:38,400 --> 00:26:44,720
+your uniqueness? How how do I perceive
+
+479
+00:26:41,520 --> 00:26:48,240
+your unique selling proposal there?
+
+480
+00:26:44,720 --> 00:26:51,520
+Okay, so we have a proprietary
+
+481
+00:26:48,240 --> 00:26:54,240
+uh uh way of addressing AI. Okay, this
+
+482
+00:26:51,520 --> 00:26:59,200
+is another uh uh way to address it and
+
+483
+00:26:54,240 --> 00:27:03,760
+this is proper but you know uh uh um not
+
+484
+00:26:59,200 --> 00:27:06,799
+not many uh do this uh these days and
+
+485
+00:27:03,760 --> 00:27:08,240
+and it's also it's always the same
+
+486
+00:27:06,799 --> 00:27:08,720
+speech now.
+
+487
+00:27:08,240 --> 00:27:11,679
+>> Yeah,
+
+488
+00:27:08,720 --> 00:27:13,679
+>> this is wrong. This is specifically
+
+489
+00:27:11,679 --> 00:27:17,760
+wrong. No, we started from something
+
+490
+00:27:13,679 --> 00:27:21,760
+that was uh specifically determined
+
+491
+00:27:17,760 --> 00:27:24,880
+that is the the the the marketing uh um
+
+492
+00:27:21,760 --> 00:27:28,400
+concept unique selling proposal etc. And
+
+493
+00:27:24,880 --> 00:27:31,679
+you come today uh with your pitch and
+
+494
+00:27:28,400 --> 00:27:35,279
+then you you put your effort on etc and
+
+495
+00:27:31,679 --> 00:27:38,080
+say something that every everybody is
+
+496
+00:27:35,279 --> 00:27:43,200
+saying. So this is just wrong you know.
+
+497
+00:27:38,080 --> 00:27:48,320
+So what do you have uh uh of uniquely uh
+
+498
+00:27:43,200 --> 00:27:52,559
+determined and what is the effect
+
+499
+00:27:48,320 --> 00:27:55,679
+that this uh uniqueness you have on what
+
+500
+00:27:52,559 --> 00:27:58,640
+is the effect of this to you know your
+
+501
+00:27:55,679 --> 00:28:01,200
+public to your market etc. And and so
+
+502
+00:27:58,640 --> 00:28:03,919
+this is this is the the the simple basis
+
+503
+00:28:01,200 --> 00:28:07,840
+you know of business but we are losing
+
+504
+00:28:03,919 --> 00:28:10,480
+it somehow because of the averages
+
+505
+00:28:07,840 --> 00:28:14,559
+that we are creating. So and more and
+
+506
+00:28:10,480 --> 00:28:19,600
+more and this will uh become
+
+507
+00:28:14,559 --> 00:28:23,120
+uh um more specific average. So it's it
+
+508
+00:28:19,600 --> 00:28:24,320
+seems to me like the business community,
+
+509
+00:28:23,120 --> 00:28:26,720
+the founder community, the
+
+510
+00:28:24,320 --> 00:28:29,039
+entrepreneurial community is undergoing
+
+511
+00:28:26,720 --> 00:28:31,440
+a shift from
+
+512
+00:28:29,039 --> 00:28:33,360
+hey I can make a web page. No well now
+
+513
+00:28:31,440 --> 00:28:37,520
+everyone can make a web page. There's
+
+514
+00:28:33,360 --> 00:28:40,559
+just a level of averess that has sort of
+
+515
+00:28:37,520 --> 00:28:45,039
+up the bar. So now everybody needs to go
+
+516
+00:28:40,559 --> 00:28:48,000
+above that and to the next level of
+
+517
+00:28:45,039 --> 00:28:49,919
+>> let's raise the bar right in terms of
+
+518
+00:28:48,000 --> 00:28:52,080
+your unique selling proposition.
+
+519
+00:28:49,919 --> 00:28:55,600
+>> But I mean it has always been like this
+
+520
+00:28:52,080 --> 00:28:58,240
+but now today you have an explosion of
+
+521
+00:28:55,600 --> 00:29:00,960
+this but it has always been like this.
+
+522
+00:28:58,240 --> 00:29:02,480
+Why? Because it's called uh uh
+
+523
+00:29:00,960 --> 00:29:02,799
+competitiveness.
+
+524
+00:29:02,480 --> 00:29:06,480
+Yeah.
+
+525
+00:29:02,799 --> 00:29:09,039
+>> You know uh uh you have to set the bar
+
+526
+00:29:06,480 --> 00:29:11,120
+higher than your competitor.
+
+527
+00:29:09,039 --> 00:29:13,279
+But you have to understand what your
+
+528
+00:29:11,120 --> 00:29:16,720
+competitor is and you have to understand
+
+529
+00:29:13,279 --> 00:29:19,039
+as well. You have to comp to understand
+
+530
+00:29:16,720 --> 00:29:20,640
+what you have of you know your
+
+531
+00:29:19,039 --> 00:29:23,600
+uniqueness
+
+532
+00:29:20,640 --> 00:29:28,480
+and the paradigm shift I was telling you
+
+533
+00:29:23,600 --> 00:29:30,080
+about uh the the beneficial aspect of it
+
+534
+00:29:28,480 --> 00:29:33,679
+precisely
+
+535
+00:29:30,080 --> 00:29:37,039
+for your interlocutor. Interruptor can
+
+536
+00:29:33,679 --> 00:29:41,120
+be for example an investor that you are
+
+537
+00:29:37,039 --> 00:29:43,840
+talking to during a pitch or uh your
+
+538
+00:29:41,120 --> 00:29:46,000
+large market etc etc. So the more
+
+539
+00:29:43,840 --> 00:29:48,480
+precise you have this clear in your
+
+540
+00:29:46,000 --> 00:29:53,440
+mind,
+
+541
+00:29:48,480 --> 00:29:56,240
+the more uh uh you can gain uh um
+
+542
+00:29:53,440 --> 00:30:00,159
+anything you you desire from it, you
+
+543
+00:29:56,240 --> 00:30:03,919
+know. And uh so now the behavioral part
+
+544
+00:30:00,159 --> 00:30:08,000
+the behavioral aspect of it is mainly
+
+545
+00:30:03,919 --> 00:30:12,159
+the ability to determine to determine
+
+546
+00:30:08,000 --> 00:30:17,279
+uh who your interrogator are and the way
+
+547
+00:30:12,159 --> 00:30:21,039
+he moves what are his uh what his pre
+
+548
+00:30:17,279 --> 00:30:24,159
+priorities are etc etc etc. So just for
+
+549
+00:30:21,039 --> 00:30:26,799
+you to understand this is quite specific
+
+550
+00:30:24,159 --> 00:30:30,080
+and it must be
+
+551
+00:30:26,799 --> 00:30:33,120
+so now just you know everybody is doing
+
+552
+00:30:30,080 --> 00:30:36,640
+uh something they are not getting
+
+553
+00:30:33,120 --> 00:30:39,919
+specific uh and uh of about what they're
+
+554
+00:30:36,640 --> 00:30:43,360
+doing and they are not getting specific
+
+555
+00:30:39,919 --> 00:30:45,440
+of the bene the benefits that they are
+
+556
+00:30:43,360 --> 00:30:49,279
+promoting and they are not being
+
+557
+00:30:45,440 --> 00:30:51,360
+specific on about the the their
+
+558
+00:30:49,279 --> 00:30:55,760
+interlocator the definition of it. So,
+
+559
+00:30:51,360 --> 00:30:57,279
+we have more tools at your uh at our uh
+
+560
+00:30:55,760 --> 00:30:59,919
+disposal,
+
+561
+00:30:57,279 --> 00:31:03,120
+but you are you're not using the proper
+
+562
+00:30:59,919 --> 00:31:06,480
+way, you know. So, we have to understand
+
+563
+00:31:03,120 --> 00:31:09,440
+this because you cannot be blind on it.
+
+564
+00:31:06,480 --> 00:31:13,760
+I I just had a image in my head. I don't
+
+565
+00:31:09,440 --> 00:31:15,919
+know if F1 is the is the uh analogy
+
+566
+00:31:13,760 --> 00:31:18,880
+here, but maybe it's NASCAR, but that
+
+567
+00:31:15,919 --> 00:31:21,600
+everybody has the same engine in the
+
+568
+00:31:18,880 --> 00:31:26,799
+car. It's just the driver now needs to
+
+569
+00:31:21,600 --> 00:31:29,120
+know uh where to steer if it's a not a a
+
+570
+00:31:26,799 --> 00:31:32,480
+straightforward track, but the track is
+
+571
+00:31:29,120 --> 00:31:34,720
+open and everybody has the same power in
+
+572
+00:31:32,480 --> 00:31:37,360
+a way with these models.
+
+573
+00:31:34,720 --> 00:31:40,799
+>> Yes, it it it does not apply to Formula
+
+574
+00:31:37,360 --> 00:31:44,080
+1 specifically, but yes, your example is
+
+575
+00:31:40,799 --> 00:31:48,000
+correct, you know. So what uh uh what
+
+576
+00:31:44,080 --> 00:31:50,880
+makes you uh different
+
+577
+00:31:48,000 --> 00:31:54,720
+you know and so this is the this is uh
+
+578
+00:31:50,880 --> 00:31:58,480
+uh the starting point of of any business
+
+579
+00:31:54,720 --> 00:32:02,399
+and uh so we are losing it somehow and I
+
+580
+00:31:58,480 --> 00:32:06,640
+perceive it also uh uh I I you know I
+
+581
+00:32:02,399 --> 00:32:09,679
+talk uh to many people from different uh
+
+582
+00:32:06,640 --> 00:32:13,919
+uh perspectives and in different I have
+
+583
+00:32:09,679 --> 00:32:16,320
+three operations uh um uh going on uh
+
+584
+00:32:13,919 --> 00:32:18,399
+through Luri group. And so we we have
+
+585
+00:32:16,320 --> 00:32:23,760
+different ways to approach each one of
+
+586
+00:32:18,399 --> 00:32:27,039
+them and uh each each uh demand uh of
+
+587
+00:32:23,760 --> 00:32:30,480
+those. And so uh we understand this from
+
+588
+00:32:27,039 --> 00:32:33,919
+many points of view and from each one of
+
+589
+00:32:30,480 --> 00:32:37,279
+these points of view we perceive the
+
+590
+00:32:33,919 --> 00:32:41,600
+exact uh same thing. So you have to go
+
+591
+00:32:37,279 --> 00:32:46,640
+very very high in in terms of uh
+
+592
+00:32:41,600 --> 00:32:49,600
+specificity uh um efficiency uh demand
+
+593
+00:32:46,640 --> 00:32:52,159
+to understand that people are acting the
+
+594
+00:32:49,600 --> 00:32:54,399
+proper way from this point of view and
+
+595
+00:32:52,159 --> 00:32:59,039
+the the the formula one example is
+
+596
+00:32:54,399 --> 00:33:02,480
+exactly this you know so how do you uh
+
+597
+00:32:59,039 --> 00:33:05,760
+turn yourself to be uh uh relevant and
+
+598
+00:33:02,480 --> 00:33:10,240
+they they use it they use their tools
+
+599
+00:33:05,760 --> 00:33:12,320
+in the proper way. If I if you know just
+
+600
+00:33:10,240 --> 00:33:12,640
+imagine if they didn't
+
+601
+00:33:12,320 --> 00:33:14,960
+>> Yeah.
+
+602
+00:33:12,640 --> 00:33:17,440
+>> it would lose everything. And so you
+
+603
+00:33:14,960 --> 00:33:19,919
+have founders, you have entrepreneurs
+
+604
+00:33:17,440 --> 00:33:22,080
+etc. that you know you you must
+
+605
+00:33:19,919 --> 00:33:25,279
+understand that if you don't do it the
+
+606
+00:33:22,080 --> 00:33:27,440
+proper way, you're just losing money and
+
+607
+00:33:25,279 --> 00:33:30,960
+possibilities.
+
+608
+00:33:27,440 --> 00:33:34,720
+That is the the main the main reason why
+
+609
+00:33:30,960 --> 00:33:36,880
+you should be getting up in the morning.
+
+610
+00:33:34,720 --> 00:33:39,919
+create possibilities, create uh uh
+
+611
+00:33:36,880 --> 00:33:42,159
+things, etc. Please.
+
+612
+00:33:39,919 --> 00:33:45,519
+>> I think it's you're absolutely right.
+
+613
+00:33:42,159 --> 00:33:47,279
+It's like we have such great tools now
+
+614
+00:33:45,519 --> 00:33:49,679
+and a lot of people don't know what to
+
+615
+00:33:47,279 --> 00:33:52,000
+build. They don't know where to steer.
+
+616
+00:33:49,679 --> 00:33:54,559
+They don't know what to focus on. And I
+
+617
+00:33:52,000 --> 00:33:57,919
+think it's a it's an interesting time
+
+618
+00:33:54,559 --> 00:34:00,799
+that even myself, it's like I can build
+
+619
+00:33:57,919 --> 00:34:03,360
+so many things. I can open up my my dev
+
+620
+00:34:00,799 --> 00:34:05,760
+tools and they're quite powerful and
+
+621
+00:34:03,360 --> 00:34:07,279
+amazing. It's just what do you want to
+
+622
+00:34:05,760 --> 00:34:09,040
+build? What do you what what do you
+
+623
+00:34:07,279 --> 00:34:10,720
+want? Where's the unique selling
+
+624
+00:34:09,040 --> 00:34:12,079
+proposition? Where's the value that's
+
+625
+00:34:10,720 --> 00:34:14,320
+create being created? Where's the
+
+626
+00:34:12,079 --> 00:34:15,839
+benefits that are being created? And I
+
+627
+00:34:14,320 --> 00:34:19,280
+guess you're seeing this on a larger
+
+628
+00:34:15,839 --> 00:34:22,960
+level. But the one uh thing I'm also
+
+629
+00:34:19,280 --> 00:34:26,159
+interested in is there are organizations
+
+630
+00:34:22,960 --> 00:34:28,320
+that are a lot slower to move.
+
+631
+00:34:26,159 --> 00:34:31,599
+There are huge organizations that are
+
+632
+00:34:28,320 --> 00:34:33,520
+possibly being disrupted. Um, and
+
+633
+00:34:31,599 --> 00:34:36,320
+acquisitions
+
+634
+00:34:33,520 --> 00:34:38,159
+are happening quite fast because big
+
+635
+00:34:36,320 --> 00:34:40,720
+organizations are seeing smaller
+
+636
+00:34:38,159 --> 00:34:41,679
+organizations meet that product market
+
+637
+00:34:40,720 --> 00:34:44,560
+fit
+
+638
+00:34:41,679 --> 00:34:46,320
+>> quite quickly and they're just let let's
+
+639
+00:34:44,560 --> 00:34:49,359
+bring you in house type of thing, right?
+
+640
+00:34:46,320 --> 00:34:53,599
+Like are you seeing a lot of that?
+
+641
+00:34:49,359 --> 00:34:57,119
+>> Yes. uh um you know about speed. Yes,
+
+642
+00:34:53,599 --> 00:35:01,920
+everything is moving uh quite faster and
+
+643
+00:34:57,119 --> 00:35:05,760
+you have uh finance that is uh moving
+
+644
+00:35:01,920 --> 00:35:10,960
+quite fast as well and um you have more
+
+645
+00:35:05,760 --> 00:35:13,920
+access nowadays and uh you you have you
+
+646
+00:35:10,960 --> 00:35:16,160
+know when you start to operate
+
+647
+00:35:13,920 --> 00:35:18,000
+uh bigger and bigger you start to
+
+648
+00:35:16,160 --> 00:35:21,839
+operate globally.
+
+649
+00:35:18,000 --> 00:35:23,760
+>> Mhm. And so you have a global scope and
+
+650
+00:35:21,839 --> 00:35:26,079
+in everything you do. It's not
+
+651
+00:35:23,760 --> 00:35:29,680
+international anymore. You know, you
+
+652
+00:35:26,079 --> 00:35:34,480
+have a a global scope. We we we work in
+
+653
+00:35:29,680 --> 00:35:37,119
+with uh 28 countries uh today. And so we
+
+654
+00:35:34,480 --> 00:35:39,280
+have different cultures. We have uh
+
+655
+00:35:37,119 --> 00:35:43,119
+different ways of approaching things
+
+656
+00:35:39,280 --> 00:35:47,839
+etc. And you know it's it's it's the way
+
+657
+00:35:43,119 --> 00:35:52,000
+uh things are moving now. And so um
+
+658
+00:35:47,839 --> 00:35:54,800
+you you must be more efficient.
+
+659
+00:35:52,000 --> 00:35:57,599
+>> So you must be more competitive in
+
+660
+00:35:54,800 --> 00:36:03,040
+anything you do and you must use your
+
+661
+00:35:57,599 --> 00:36:06,000
+tools in the most proper uh way possible
+
+662
+00:36:03,040 --> 00:36:09,200
+you know that's just it you know so you
+
+663
+00:36:06,000 --> 00:36:14,160
+have bigger companies etc. Yes, you have
+
+664
+00:36:09,200 --> 00:36:17,040
+damn uh uh fagositating uh eating uh um
+
+665
+00:36:14,160 --> 00:36:19,760
+but but it has always been like this.
+
+666
+00:36:17,040 --> 00:36:22,960
+But now we have more access and more
+
+667
+00:36:19,760 --> 00:36:27,040
+visibility uh to these uh dynamic to
+
+668
+00:36:22,960 --> 00:36:30,720
+these uh dynamics. And uh also just for
+
+669
+00:36:27,040 --> 00:36:35,599
+you to understand a a perspective of
+
+670
+00:36:30,720 --> 00:36:39,040
+ours and how do we manage it and again
+
+671
+00:36:35,599 --> 00:36:42,880
+it starts from uh neuroscience as well.
+
+672
+00:36:39,040 --> 00:36:45,839
+No, because one of uh the assumptions
+
+673
+00:36:42,880 --> 00:36:48,800
+let's say the premises uh that we have
+
+674
+00:36:45,839 --> 00:36:50,320
+from a neuroscientific uh uh point of
+
+675
+00:36:48,800 --> 00:36:55,680
+view
+
+676
+00:36:50,320 --> 00:36:59,440
+uh is conceptually speaking is uh each
+
+677
+00:36:55,680 --> 00:37:03,920
+uh each brain works the same way. So we
+
+678
+00:36:59,440 --> 00:37:07,839
+do not consider uh the person from as
+
+679
+00:37:03,920 --> 00:37:09,920
+culturally determined but biologically
+
+680
+00:37:07,839 --> 00:37:13,599
+determined.
+
+681
+00:37:09,920 --> 00:37:17,839
+And so just just uh um we we we start
+
+682
+00:37:13,599 --> 00:37:20,960
+from the origins of behavior of anyone
+
+683
+00:37:17,839 --> 00:37:24,000
+uh we are uh talking to. And so this is
+
+684
+00:37:20,960 --> 00:37:26,160
+a huge advant advantage also
+
+685
+00:37:24,000 --> 00:37:30,240
+scientifically speaking uh is a huge
+
+686
+00:37:26,160 --> 00:37:34,640
+advantage uh for our businesses and uh
+
+687
+00:37:30,240 --> 00:37:38,320
+for each and every uh uh dynamic uh we
+
+688
+00:37:34,640 --> 00:37:42,720
+operate in and we create in a in a in
+
+689
+00:37:38,320 --> 00:37:45,680
+this scale let's say the global scale as
+
+690
+00:37:42,720 --> 00:37:47,599
+well. So this is a huge advantage. And
+
+691
+00:37:45,680 --> 00:37:52,800
+so
+
+692
+00:37:47,599 --> 00:37:55,200
+if I uh should if I could evaluate our
+
+693
+00:37:52,800 --> 00:37:57,040
+competitiveness, our competitive
+
+694
+00:37:55,200 --> 00:38:00,240
+advantage
+
+695
+00:37:57,040 --> 00:38:02,640
+inside this scale say it's working. You
+
+696
+00:38:00,240 --> 00:38:04,480
+know, for this uh specific point of
+
+697
+00:38:02,640 --> 00:38:07,599
+view,
+
+698
+00:38:04,480 --> 00:38:11,280
+I've heard and with the people I'm
+
+699
+00:38:07,599 --> 00:38:14,320
+talking to, AI is one technology.
+
+700
+00:38:11,280 --> 00:38:18,160
+There are other technologies that AI
+
+701
+00:38:14,320 --> 00:38:22,240
+will enable but they are as
+
+702
+00:38:18,160 --> 00:38:26,240
+I guess transforming as AI. You you talk
+
+703
+00:38:22,240 --> 00:38:29,520
+about robotics. You talk about quantum
+
+704
+00:38:26,240 --> 00:38:31,599
+and quantum computing.
+
+705
+00:38:29,520 --> 00:38:33,839
+These are all coming around at the same
+
+706
+00:38:31,599 --> 00:38:36,240
+time. Has there ever been a time like
+
+707
+00:38:33,839 --> 00:38:38,400
+this in history? Like is this
+
+708
+00:38:36,240 --> 00:38:40,320
+>> what what is the next 10 years going to
+
+709
+00:38:38,400 --> 00:38:42,880
+look like? And which of those
+
+710
+00:38:40,320 --> 00:38:47,200
+technologies are you excited about?
+
+711
+00:38:42,880 --> 00:38:50,320
+>> Uh uh you know Johan uh we have this uh
+
+712
+00:38:47,200 --> 00:38:52,880
+I don't want to to say uh uh it is an
+
+713
+00:38:50,320 --> 00:38:58,880
+illusion let's say but let's remember
+
+714
+00:38:52,880 --> 00:39:02,320
+that uh men humankind started to fly
+
+715
+00:38:58,880 --> 00:39:04,480
+and just a few years later he went to
+
+716
+00:39:02,320 --> 00:39:06,880
+the moon.
+
+717
+00:39:04,480 --> 00:39:10,000
+It's it's it's it's not that far, you
+
+718
+00:39:06,880 --> 00:39:14,480
+know. It's we're talking about uh uh not
+
+719
+00:39:10,000 --> 00:39:18,000
+that many years. Uh uh so things have
+
+720
+00:39:14,480 --> 00:39:21,680
+always moved very very fast in in
+
+721
+00:39:18,000 --> 00:39:24,800
+everything uh uh we made for just for
+
+722
+00:39:21,680 --> 00:39:29,440
+you uh uh to to understand my point of
+
+723
+00:39:24,800 --> 00:39:33,839
+view. you had uh illuminism
+
+724
+00:39:29,440 --> 00:39:37,119
+that gave us access to the human being
+
+725
+00:39:33,839 --> 00:39:41,200
+as biologically determined
+
+726
+00:39:37,119 --> 00:39:43,839
+and so from from it's not uh uh far from
+
+727
+00:39:41,200 --> 00:39:48,240
+from uh where we are now. So just
+
+728
+00:39:43,839 --> 00:39:52,480
+imagine what what it uh represented
+
+729
+00:39:48,240 --> 00:39:56,160
+from illuminism to uh uh our present
+
+730
+00:39:52,480 --> 00:39:59,119
+day. And so this is a huge explosion of
+
+731
+00:39:56,160 --> 00:40:02,480
+knowledge from that because of you know
+
+732
+00:39:59,119 --> 00:40:06,320
+religion and the divine access to human
+
+733
+00:40:02,480 --> 00:40:09,359
+beings etc. So before that we couldn't
+
+734
+00:40:06,320 --> 00:40:11,200
+access uh to human beings as as
+
+735
+00:40:09,359 --> 00:40:14,640
+biologically determined. It's just an
+
+736
+00:40:11,200 --> 00:40:17,760
+example. So uh uh from that period of
+
+737
+00:40:14,640 --> 00:40:20,640
+time to today we have a uh we are
+
+738
+00:40:17,760 --> 00:40:23,599
+talking about neuromarketing now between
+
+739
+00:40:20,640 --> 00:40:26,720
+us you know we are talking about the the
+
+740
+00:40:23,599 --> 00:40:30,720
+the specificity of [snorts] uh brain
+
+741
+00:40:26,720 --> 00:40:34,880
+activity and so from this specifically
+
+742
+00:40:30,720 --> 00:40:37,839
+from this you ask me about uh the future
+
+743
+00:40:34,880 --> 00:40:40,400
+and maybe priorities from a a business
+
+744
+00:40:37,839 --> 00:40:43,680
+point of view you know you have all the
+
+745
+00:40:40,400 --> 00:40:46,800
+the the biological
+
+746
+00:40:43,680 --> 00:40:51,599
+uh advances. Okay. But uh you know just
+
+747
+00:40:46,800 --> 00:40:55,040
+imagine what uh uh can represent
+
+748
+00:40:51,599 --> 00:40:59,200
+the union between everything we know
+
+749
+00:40:55,040 --> 00:41:03,280
+from a neuroscientific point of view and
+
+750
+00:40:59,200 --> 00:41:05,040
+robotics and everything is informatic.
+
+751
+00:41:03,280 --> 00:41:08,000
+So
+
+752
+00:41:05,040 --> 00:41:11,920
+you know uh the first uh uh the first
+
+753
+00:41:08,000 --> 00:41:14,400
+things uh come to my mind is BMI so
+
+754
+00:41:11,920 --> 00:41:17,440
+brain machine interface.
+
+755
+00:41:14,400 --> 00:41:20,480
+Okay. So this is something we have uh uh
+
+756
+00:41:17,440 --> 00:41:23,839
+invested in uh since its its inception
+
+757
+00:41:20,480 --> 00:41:27,440
+since its beginning and we are uh uh
+
+758
+00:41:23,839 --> 00:41:30,640
+quite pioneers in that just you know so
+
+759
+00:41:27,440 --> 00:41:34,400
+this is something I believe in uh very
+
+760
+00:41:30,640 --> 00:41:37,440
+very much and I am actually I am
+
+761
+00:41:34,400 --> 00:41:41,680
+available to to put my money in it you
+
+762
+00:41:37,440 --> 00:41:45,040
+know like like I have already uh done
+
+763
+00:41:41,680 --> 00:41:48,640
+and been doing uh uh since you know it's
+
+764
+00:41:45,040 --> 00:41:51,680
+years already and so and so just imagine
+
+765
+00:41:48,640 --> 00:41:56,480
+what uh
+
+766
+00:41:51,680 --> 00:41:59,520
+you know what future will become
+
+767
+00:41:56,480 --> 00:42:01,520
+you know putting together in the same uh
+
+768
+00:41:59,520 --> 00:42:03,040
+batch
+
+769
+00:42:01,520 --> 00:42:05,520
+biological
+
+770
+00:42:03,040 --> 00:42:10,319
+uh advancement
+
+771
+00:42:05,520 --> 00:42:13,200
+uh AI and brain machine interfaces. So
+
+772
+00:42:10,319 --> 00:42:14,720
+just just imagine that what can become
+
+773
+00:42:13,200 --> 00:42:17,440
+for
+
+774
+00:42:14,720 --> 00:42:22,000
+you know uh military
+
+775
+00:42:17,440 --> 00:42:24,400
+u efficiency in in business, efficiency
+
+776
+00:42:22,000 --> 00:42:27,359
+in knowledge etc etc. So access to
+
+777
+00:42:24,400 --> 00:42:30,319
+knowledge. So we we will have an
+
+778
+00:42:27,359 --> 00:42:33,200
+exponential uh growth uh from this point
+
+779
+00:42:30,319 --> 00:42:36,880
+of view also. This is a a huge
+
+780
+00:42:33,200 --> 00:42:40,079
+advancement in um cognition,
+
+781
+00:42:36,880 --> 00:42:42,880
+>> right? Okay. And uh from many points of
+
+782
+00:42:40,079 --> 00:42:45,280
+view and also the therapeutic
+
+783
+00:42:42,880 --> 00:42:48,160
+uh uh uh of it, you know, the
+
+784
+00:42:45,280 --> 00:42:50,319
+therapeutical approach of it, what can
+
+785
+00:42:48,160 --> 00:42:53,920
+become?
+
+786
+00:42:50,319 --> 00:42:56,160
+So what you're saying is that LLMs by
+
+787
+00:42:53,920 --> 00:43:01,040
+themselves
+
+788
+00:42:56,160 --> 00:43:05,040
+and is is is not the way but the com
+
+789
+00:43:01,040 --> 00:43:07,760
+combination between the human brain
+
+790
+00:43:05,040 --> 00:43:10,319
+and this is what's going to cause an
+
+791
+00:43:07,760 --> 00:43:12,079
+exponential growth in things and and how
+
+792
+00:43:10,319 --> 00:43:15,760
+far do you see that? Like I already
+
+793
+00:43:12,079 --> 00:43:18,560
+carry my smartphone. Uh people they're
+
+794
+00:43:15,760 --> 00:43:21,040
+tied to their smartphone. Um, and but
+
+795
+00:43:18,560 --> 00:43:22,800
+you're saying there's a link there that
+
+796
+00:43:21,040 --> 00:43:27,680
+it can be a lot faster and more
+
+797
+00:43:22,800 --> 00:43:29,280
+efficient with a human uh brain machine
+
+798
+00:43:27,680 --> 00:43:32,560
+interface.
+
+799
+00:43:29,280 --> 00:43:36,960
+How how and you're investing into it.
+
+800
+00:43:32,560 --> 00:43:40,480
+So, how tight do you see that
+
+801
+00:43:36,960 --> 00:43:43,599
+integration being and what are your
+
+802
+00:43:40,480 --> 00:43:44,880
+thoughts on that and predictions about
+
+803
+00:43:43,599 --> 00:43:50,000
+that?
+
+804
+00:43:44,880 --> 00:43:53,280
+>> Okay. uh um how tight 100%. Just imagine
+
+805
+00:43:50,000 --> 00:43:55,440
+I I think if if I have to to you are
+
+806
+00:43:53,280 --> 00:43:58,880
+asking me something that is very
+
+807
+00:43:55,440 --> 00:44:02,319
+difficult to determine of course so uh
+
+808
+00:43:58,880 --> 00:44:06,640
+uh we don't have our we can imagine how
+
+809
+00:44:02,319 --> 00:44:10,400
+things will be okay and um if you know
+
+810
+00:44:06,640 --> 00:44:13,839
+asking me to imagine it I think uh every
+
+811
+00:44:10,400 --> 00:44:16,720
+one of us will have an interface applied
+
+812
+00:44:13,839 --> 00:44:18,800
+to our brains okay because it will be
+
+813
+00:44:16,720 --> 00:44:24,000
+the the the new normal
+
+814
+00:44:18,800 --> 00:44:26,319
+the new regular uh way of uh living just
+
+815
+00:44:24,000 --> 00:44:30,079
+like our smartphone, you know, because
+
+816
+00:44:26,319 --> 00:44:32,480
+you will reach a level from from uh
+
+817
+00:44:30,079 --> 00:44:35,200
+example from
+
+818
+00:44:32,480 --> 00:44:38,079
+uh um
+
+819
+00:44:35,200 --> 00:44:41,760
+you know operational point of view, from
+
+820
+00:44:38,079 --> 00:44:46,319
+a u medical point of view etc etc. You
+
+821
+00:44:41,760 --> 00:44:49,040
+will have the the the the most advanced
+
+822
+00:44:46,319 --> 00:44:52,640
+piece of matter we know about in the
+
+823
+00:44:49,040 --> 00:44:57,040
+universe that is our brain
+
+824
+00:44:52,640 --> 00:44:59,680
+applied to the most advanced
+
+825
+00:44:57,040 --> 00:45:03,040
+technology we have at your at our
+
+826
+00:44:59,680 --> 00:45:07,760
+disposal. Now there is AI and machine
+
+827
+00:45:03,040 --> 00:45:10,880
+learning uh uh context of of uh uh
+
+828
+00:45:07,760 --> 00:45:15,280
+operating etc. And so we have the union
+
+829
+00:45:10,880 --> 00:45:17,200
+of this. I think in this union resides
+
+830
+00:45:15,280 --> 00:45:22,480
+our future
+
+831
+00:45:17,200 --> 00:45:25,119
+from any point of view diagnosis uh um
+
+832
+00:45:22,480 --> 00:45:27,839
+you know oper anything is operation
+
+833
+00:45:25,119 --> 00:45:30,800
+because we we have to understand that uh
+
+834
+00:45:27,839 --> 00:45:34,160
+um you have millions of years of
+
+835
+00:45:30,800 --> 00:45:39,200
+evolution that
+
+836
+00:45:34,160 --> 00:45:44,400
+guided us and make us be what we are.
+
+837
+00:45:39,200 --> 00:45:47,760
+And we have uh uh our nervous systems
+
+838
+00:45:44,400 --> 00:45:53,599
+that are the most advanced uh part of of
+
+839
+00:45:47,760 --> 00:45:58,240
+what we are and our brain is uh the most
+
+840
+00:45:53,599 --> 00:46:02,079
+advanced part of a new nervous system.
+
+841
+00:45:58,240 --> 00:46:06,000
+Okay. And so this is uh I I think it's
+
+842
+00:46:02,079 --> 00:46:09,760
+inevitable to see the union of of this
+
+843
+00:46:06,000 --> 00:46:13,440
+all and the the the
+
+844
+00:46:09,760 --> 00:46:18,240
+you know the the growth of our cognitive
+
+845
+00:46:13,440 --> 00:46:22,400
+ability because of it and as as anything
+
+846
+00:46:18,240 --> 00:46:25,440
+that comes to us at at our disposal you
+
+847
+00:46:22,400 --> 00:46:28,800
+have uh uh you have to choose how let's
+
+848
+00:46:25,440 --> 00:46:32,480
+say choose how to use it. Okay. if use
+
+849
+00:46:28,800 --> 00:46:35,680
+it as a tool in order to to improve what
+
+850
+00:46:32,480 --> 00:46:40,640
+you are and what you do etc. just like
+
+851
+00:46:35,680 --> 00:46:45,680
+normal regular AI now. And the the the
+
+852
+00:46:40,640 --> 00:46:49,359
+most smart the smartest uh way to to to
+
+853
+00:46:45,680 --> 00:46:52,000
+use it just like it was and it is the
+
+854
+00:46:49,359 --> 00:46:54,720
+internet and everything we have. I can
+
+855
+00:46:52,000 --> 00:46:59,359
+use YouTube
+
+856
+00:46:54,720 --> 00:47:01,280
+to see something very very use as as as
+
+857
+00:46:59,359 --> 00:47:05,040
+your podcast for example. I can choose
+
+858
+00:47:01,280 --> 00:47:07,680
+to see it or I can choose uh uh not to
+
+859
+00:47:05,040 --> 00:47:09,200
+to you know I don't mean no lack of
+
+860
+00:47:07,680 --> 00:47:12,000
+disrespect
+
+861
+00:47:09,200 --> 00:47:17,839
+about it but I can see so I can choose
+
+862
+00:47:12,000 --> 00:47:21,760
+to see uh a duck you know uh uh you know
+
+863
+00:47:17,839 --> 00:47:24,160
+just circling around you know a pot you
+
+864
+00:47:21,760 --> 00:47:27,920
+know you can choose it let's say you can
+
+865
+00:47:24,160 --> 00:47:31,839
+choose it but today I choose to uh uh
+
+866
+00:47:27,920 --> 00:47:34,319
+watch something very useful and of the
+
+867
+00:47:31,839 --> 00:47:36,880
+highest level possible like your podcast
+
+868
+00:47:34,319 --> 00:47:39,440
+and specifically our interview of
+
+869
+00:47:36,880 --> 00:47:45,280
+course. [laughter]
+
+870
+00:47:39,440 --> 00:47:49,440
+Is there a downside to human machine
+
+871
+00:47:45,280 --> 00:47:54,640
+interaction? Yes. Yes. Of course. as any
+
+872
+00:47:49,440 --> 00:47:58,720
+uh technology uh the manipulative side
+
+873
+00:47:54,640 --> 00:48:02,880
+of it you know because
+
+874
+00:47:58,720 --> 00:48:05,599
+that that's where uh regulation reside I
+
+875
+00:48:02,880 --> 00:48:11,040
+see okay and so just like the internet
+
+876
+00:48:05,599 --> 00:48:15,359
+as I told you if if you you know
+
+877
+00:48:11,040 --> 00:48:18,240
+you if you use these tools
+
+878
+00:48:15,359 --> 00:48:23,119
+or everything we have at at our disposal
+
+879
+00:48:18,240 --> 00:48:26,480
+proposal in a manipulative way it
+
+880
+00:48:23,119 --> 00:48:29,119
+becomes negative for humankind.
+
+881
+00:48:26,480 --> 00:48:33,440
+Okay. But so it's it's something ethical
+
+882
+00:48:29,119 --> 00:48:36,079
+here that we have to to address. I can
+
+883
+00:48:33,440 --> 00:48:38,559
+use it just like neuroscience just like
+
+884
+00:48:36,079 --> 00:48:42,640
+everything we have at our disposal. You
+
+885
+00:48:38,559 --> 00:48:45,280
+can uh use it in a destructive way and
+
+886
+00:48:42,640 --> 00:48:48,720
+you can use it in a constructive way.
+
+887
+00:48:45,280 --> 00:48:52,800
+Okay. So everything we are and so if if
+
+888
+00:48:48,720 --> 00:48:55,839
+you apply greed to this for example it
+
+889
+00:48:52,800 --> 00:49:00,559
+depends greed for money
+
+890
+00:48:55,839 --> 00:49:04,559
+>> it's one thing greed for knowledge
+
+891
+00:49:00,559 --> 00:49:06,640
+let's let's uh uh let's accept it you
+
+892
+00:49:04,559 --> 00:49:08,319
+know and uh just it's not it's not
+
+893
+00:49:06,640 --> 00:49:12,480
+called greed but just for you to
+
+894
+00:49:08,319 --> 00:49:16,880
+understand uh uh the the the hunger for
+
+895
+00:49:12,480 --> 00:49:19,119
+uh beautiful things the hunger for uh um
+
+896
+00:49:16,880 --> 00:49:24,079
+you know possibilities etc knowledge
+
+897
+00:49:19,119 --> 00:49:28,720
+etc. And so there are uh uh downsizes of
+
+898
+00:49:24,079 --> 00:49:31,200
+it and this is a huge one for example
+
+899
+00:49:28,720 --> 00:49:34,319
+>> uh it's a it's like it seems like this
+
+900
+00:49:31,200 --> 00:49:38,240
+may be the conversation that happens in
+
+901
+00:49:34,319 --> 00:49:40,240
+the next 5 to 10 years. It's like
+
+902
+00:49:38,240 --> 00:49:43,359
+>> where does this go? And it's going to
+
+903
+00:49:40,240 --> 00:49:45,599
+play out you know day by day and and
+
+904
+00:49:43,359 --> 00:49:48,640
+month by month and quarter by quarter.
+
+905
+00:49:45,599 --> 00:49:52,000
+Uh we are still very
+
+906
+00:49:48,640 --> 00:49:55,359
+uh to your point very greed driven very
+
+907
+00:49:52,000 --> 00:49:57,359
+profit driven which is a good thing. Um
+
+908
+00:49:55,359 --> 00:49:59,839
+however we do need to sort of balance
+
+909
+00:49:57,359 --> 00:50:00,480
+that out with the ethical side of things
+
+910
+00:49:59,839 --> 00:50:03,920
+and uh
+
+911
+00:50:00,480 --> 00:50:06,880
+>> yes yes is anything uh from my point of
+
+912
+00:50:03,920 --> 00:50:10,079
+view is is anything Johan. So you have
+
+913
+00:50:06,880 --> 00:50:14,400
+uh Europe now nowadays
+
+914
+00:50:10,079 --> 00:50:18,720
+uh there are willing to that is Europe
+
+915
+00:50:14,400 --> 00:50:21,440
+as a government is willing to regulate
+
+916
+00:50:18,720 --> 00:50:26,240
+what we do. you have Australia that is
+
+917
+00:50:21,440 --> 00:50:29,599
+uh preventing uh the the the youngest to
+
+918
+00:50:26,240 --> 00:50:33,200
+access for example uh social media et
+
+919
+00:50:29,599 --> 00:50:37,520
+and so you have different realities uh
+
+920
+00:50:33,200 --> 00:50:42,559
+nowadays or in terms of how you uh uh
+
+921
+00:50:37,520 --> 00:50:45,760
+approach these new uh frontiers you know
+
+922
+00:50:42,559 --> 00:50:49,359
+and um so it's it's it's
+
+923
+00:50:45,760 --> 00:50:51,760
+the way things go. Now how do I do
+
+924
+00:50:49,359 --> 00:50:56,400
+there? There is one premise here that is
+
+925
+00:50:51,760 --> 00:51:01,280
+very very important and that is
+
+926
+00:50:56,400 --> 00:51:04,800
+um you know ethically speaking
+
+927
+00:51:01,280 --> 00:51:09,280
+uh we have human beings that are quite
+
+928
+00:51:04,800 --> 00:51:12,319
+fragile from a cognitive point of view.
+
+929
+00:51:09,280 --> 00:51:15,200
+Okay. And so uh we have extreme
+
+930
+00:51:12,319 --> 00:51:19,280
+difficulties
+
+931
+00:51:15,200 --> 00:51:22,160
+between our present action and our
+
+932
+00:51:19,280 --> 00:51:25,040
+long-term goals. This is one of the
+
+933
+00:51:22,160 --> 00:51:28,480
+fundamentals, one of the premises we
+
+934
+00:51:25,040 --> 00:51:32,240
+have at our disposal. For example, uh in
+
+935
+00:51:28,480 --> 00:51:35,200
+in behavioral economics, the reason why
+
+936
+00:51:32,240 --> 00:51:37,200
+behavioral economics are very important
+
+937
+00:51:35,200 --> 00:51:39,280
+nowadays,
+
+938
+00:51:37,200 --> 00:51:42,319
+extremely important. So and this is the
+
+939
+00:51:39,280 --> 00:51:47,040
+basis of of what we do uh as well and
+
+940
+00:51:42,319 --> 00:51:50,800
+basis of successes uh u you have to be
+
+941
+00:51:47,040 --> 00:51:55,040
+uh very clear about it. You have to uh
+
+942
+00:51:50,800 --> 00:51:58,640
+reach a certain level of clarity between
+
+943
+00:51:55,040 --> 00:52:02,319
+your present action and your long-term
+
+944
+00:51:58,640 --> 00:52:04,480
+uh goal. And so this is this requires an
+
+945
+00:52:02,319 --> 00:52:08,880
+enormous effort from a cognitive point
+
+946
+00:52:04,480 --> 00:52:14,000
+of view, you know. And so um yes we are
+
+947
+00:52:08,880 --> 00:52:17,599
+facing this but with a with um you know
+
+948
+00:52:14,000 --> 00:52:21,440
+with quite a a fragile human being there
+
+949
+00:52:17,599 --> 00:52:23,599
+that is being approached by these
+
+950
+00:52:21,440 --> 00:52:27,520
+technologies. So this is this is
+
+951
+00:52:23,599 --> 00:52:32,240
+something to to look at very very uh in
+
+952
+00:52:27,520 --> 00:52:34,400
+in a robust act ethic ethical uh uh um
+
+953
+00:52:32,240 --> 00:52:37,520
+approach.
+
+954
+00:52:34,400 --> 00:52:39,599
+You know, I we've already hit 50 minutes
+
+955
+00:52:37,520 --> 00:52:43,119
+and it's fascinating that it time went
+
+956
+00:52:39,599 --> 00:52:46,079
+that fast, but um I think I love your
+
+957
+00:52:43,119 --> 00:52:47,440
+web page. It's it's the it's a brain and
+
+958
+00:52:46,079 --> 00:52:50,720
+it's gold
+
+959
+00:52:47,440 --> 00:52:53,680
+>> and it's it's just
+
+960
+00:52:50,720 --> 00:52:57,359
+>> um Thank you very much for it.
+
+961
+00:52:53,680 --> 00:53:01,359
+>> Yeah, it it really shows what you feel
+
+962
+00:52:57,359 --> 00:53:03,520
+about the human brain and how important
+
+963
+00:53:01,359 --> 00:53:05,200
+it is. And that's the one takeaway I
+
+964
+00:53:03,520 --> 00:53:08,400
+would I I want to take from this
+
+965
+00:53:05,200 --> 00:53:11,040
+interview for myself is that there is so
+
+966
+00:53:08,400 --> 00:53:13,760
+much power there in our brain. It's a
+
+967
+00:53:11,040 --> 00:53:17,760
+golden device and it's to be cherished
+
+968
+00:53:13,760 --> 00:53:19,599
+and it's to be used uh there is a lot of
+
+969
+00:53:17,760 --> 00:53:21,280
+potential in it, right? And I think
+
+970
+00:53:19,599 --> 00:53:22,800
+that's
+
+971
+00:53:21,280 --> 00:53:24,800
+>> Yeah. Where can we keep up with you,
+
+972
+00:53:22,800 --> 00:53:29,599
+Victor? And uh where can we know more
+
+973
+00:53:24,800 --> 00:53:32,960
+about uh what you're up to?
+
+974
+00:53:29,599 --> 00:53:37,280
+>> You know, just first step would be ask
+
+975
+00:53:32,960 --> 00:53:41,119
+me just just everything is is open.
+
+976
+00:53:37,280 --> 00:53:45,200
+uh you know we are expanding a lot and
+
+977
+00:53:41,119 --> 00:53:48,640
+um we are working with very strictly
+
+978
+00:53:45,200 --> 00:53:52,160
+with uh the Middle East specifically we
+
+979
+00:53:48,640 --> 00:53:55,920
+are embracing for example vision 2030 in
+
+980
+00:53:52,160 --> 00:54:00,000
+Saudi Arabia so we are making you are
+
+981
+00:53:55,920 --> 00:54:03,680
+making it we are making it ours and um
+
+982
+00:54:00,000 --> 00:54:07,200
+so it's everything we do is long-termed
+
+983
+00:54:03,680 --> 00:54:09,599
+and um from also from a a legacy point
+
+984
+00:54:07,200 --> 00:54:12,960
+of view. So it's very important for us
+
+985
+00:54:09,599 --> 00:54:17,119
+to understand uh uh that everything we
+
+986
+00:54:12,960 --> 00:54:19,680
+do means legacy as well because of the
+
+987
+00:54:17,119 --> 00:54:22,960
+origin of our capital. This family
+
+988
+00:54:19,680 --> 00:54:25,760
+capital because of uh uh you know the
+
+989
+00:54:22,960 --> 00:54:27,680
+scientific approach of what we do and
+
+990
+00:54:25,760 --> 00:54:31,839
+actually
+
+991
+00:54:27,680 --> 00:54:36,800
+this is we are moving uh fast. We are
+
+992
+00:54:31,839 --> 00:54:39,680
+always uh willing to uh follow
+
+993
+00:54:36,800 --> 00:54:42,800
+uh the the the the all the possibilities
+
+994
+00:54:39,680 --> 00:54:45,920
+that that we have at our uh disposal
+
+995
+00:54:42,800 --> 00:54:48,079
+from uh technologies
+
+996
+00:54:45,920 --> 00:54:50,960
+uh from you know many points of view
+
+997
+00:54:48,079 --> 00:54:53,920
+from finance etc point of view and so
+
+998
+00:54:50,960 --> 00:54:56,720
+and also we have many many uh
+
+999
+00:54:53,920 --> 00:55:00,079
+possibilities nowadays with uh gene
+
+1000
+00:54:56,720 --> 00:55:03,040
+therapy for therapy for example and uh
+
+1001
+00:55:00,079 --> 00:55:06,400
+from, you know, the biological aspects
+
+1002
+00:55:03,040 --> 00:55:10,319
+of uh uh what we are and [snorts]
+
+1003
+00:55:06,400 --> 00:55:14,079
+um you know
+
+1004
+00:55:10,319 --> 00:55:17,839
+everything that that uh biology itself
+
+1005
+00:55:14,079 --> 00:55:23,760
+can offer us and uh something that that
+
+1006
+00:55:17,839 --> 00:55:27,119
+we are uh approaching uh these days is
+
+1007
+00:55:23,760 --> 00:55:29,440
+uh a company it it it can be public.
+
+1008
+00:55:27,119 --> 00:55:33,280
+because since you asked me about it,
+
+1009
+00:55:29,440 --> 00:55:36,160
+it's EVIS the the name of the company
+
+1010
+00:55:33,280 --> 00:55:39,839
+and we are already discussing we are
+
+1011
+00:55:36,160 --> 00:55:41,440
+very very impressed by what they are
+
+1012
+00:55:39,839 --> 00:55:45,280
+achieving
+
+1013
+00:55:41,440 --> 00:55:47,359
+they they you know
+
+1014
+00:55:45,280 --> 00:55:52,480
+it's it's it's interesting because we
+
+1015
+00:55:47,359 --> 00:55:56,319
+are talking about uh uh RNA
+
+1016
+00:55:52,480 --> 00:55:59,359
+and so we have their proprietary
+
+1017
+00:55:56,319 --> 00:56:02,720
+platform form to load ex extracellular
+
+1018
+00:55:59,359 --> 00:56:06,000
+vesicles the are the the natural
+
+1019
+00:56:02,720 --> 00:56:10,400
+messengers of the bay of the of our
+
+1020
+00:56:06,000 --> 00:56:14,319
+bodies and they are able to load these
+
+1021
+00:56:10,400 --> 00:56:17,760
+extracellular vesicles with RNAs
+
+1022
+00:56:14,319 --> 00:56:20,559
+which is a uh something extremely
+
+1023
+00:56:17,760 --> 00:56:23,200
+difficult that that they managed to to
+
+1024
+00:56:20,559 --> 00:56:28,079
+achieve and this is also uh something
+
+1025
+00:56:23,200 --> 00:56:30,880
+that I uh I am following in very very uh
+
+1026
+00:56:28,079 --> 00:56:33,520
+strictly and very very uh with
+
+1027
+00:56:30,880 --> 00:56:36,000
+proximity, you know, because we think
+
+1028
+00:56:33,520 --> 00:56:41,040
+this is this is something that that has
+
+1029
+00:56:36,000 --> 00:56:45,119
+a an immense and very very um
+
+1030
+00:56:41,040 --> 00:56:47,359
+potential future there. So this is only
+
+1031
+00:56:45,119 --> 00:56:50,960
+an example of course but it's a valid
+
+1032
+00:56:47,359 --> 00:56:53,760
+one and also it it reveals
+
+1033
+00:56:50,960 --> 00:56:57,359
+from a financial and investment point of
+
+1034
+00:56:53,760 --> 00:57:00,160
+view what means all that legacy and
+
+1035
+00:56:57,359 --> 00:57:02,640
+long-term vision that we have. It's not
+
+1036
+00:57:00,160 --> 00:57:05,760
+only real estate for example real estate
+
+1037
+00:57:02,640 --> 00:57:09,680
+vision 2030 is it is something that it's
+
+1038
+00:57:05,760 --> 00:57:13,280
+immense as an approach and it's it's for
+
+1039
+00:57:09,680 --> 00:57:16,640
+long term because of the size of it.
+
+1040
+00:57:13,280 --> 00:57:20,160
+Okay. And uh but
+
+1041
+00:57:16,640 --> 00:57:24,720
+from relationship between technology
+
+1042
+00:57:20,160 --> 00:57:28,000
+and AI and brains etc. as we discussed
+
+1043
+00:57:24,720 --> 00:57:32,319
+before we have BMI we have brain machine
+
+1044
+00:57:28,000 --> 00:57:35,920
+interfaces and also why not from a
+
+1045
+00:57:32,319 --> 00:57:40,240
+specifically uh determined biological
+
+1046
+00:57:35,920 --> 00:57:42,880
+approach to life so biotechnology etc.
+
+1047
+00:57:40,240 --> 00:57:47,280
+we have this kind of of examples. So
+
+1048
+00:57:42,880 --> 00:57:51,040
+from the projects to brains to uh
+
+1049
+00:57:47,280 --> 00:57:54,240
+uh biology itself etc. And the example
+
+1050
+00:57:51,040 --> 00:57:58,000
+is is is evis
+
+1051
+00:57:54,240 --> 00:58:01,680
+that we are uh uh approaching right now.
+
+1052
+00:57:58,000 --> 00:58:06,240
+So this is quite a a interesting uh
+
+1053
+00:58:01,680 --> 00:58:10,000
+period of of our uh time for us I mean
+
+1054
+00:58:06,240 --> 00:58:13,280
+for our company. Yeah. I I bet it's it's
+
+1055
+00:58:10,000 --> 00:58:16,319
+every every investor and capital
+
+1056
+00:58:13,280 --> 00:58:18,880
+allocator is just like very excited
+
+1057
+00:58:16,319 --> 00:58:20,319
+right now. I think like they they see a
+
+1058
+00:58:18,880 --> 00:58:23,119
+potential to
+
+1059
+00:58:20,319 --> 00:58:25,599
+>> shape the future which is what this
+
+1060
+00:58:23,119 --> 00:58:27,520
+podcast discusses as well. I wanted to
+
+1061
+00:58:25,599 --> 00:58:29,599
+say thank you Victor for coming on the
+
+1062
+00:58:27,520 --> 00:58:32,960
+show. It's been quite fascinating and
+
+1063
+00:58:29,599 --> 00:58:36,480
+this will be clipped up and delivered to
+
+1064
+00:58:32,960 --> 00:58:38,160
+the my mass audiences and it across all
+
+1065
+00:58:36,480 --> 00:58:39,920
+channels and I just wanted to say thank
+
+1066
+00:58:38,160 --> 00:58:41,599
+you for taking the time today uh and
+
+1067
+00:58:39,920 --> 00:58:44,799
+coming on and explaining
+
+1068
+00:58:41,599 --> 00:58:47,440
+>> you know I I loved the possibility and
+
+1069
+00:58:44,799 --> 00:58:50,000
+the perspective of uh this interview
+
+1070
+00:58:47,440 --> 00:58:52,799
+since I knew you for the first time.
+
+1071
+00:58:50,000 --> 00:58:55,359
+Well, it's it's uh for me it's it was
+
+1072
+00:58:52,799 --> 00:58:58,559
+very interesting. You delivered uh
+
+1073
+00:58:55,359 --> 00:59:00,880
+absolutely that interest that I that I
+
+1074
+00:58:58,559 --> 00:59:04,240
+had perceived from the first time
+
+1075
+00:59:00,880 --> 00:59:07,920
+talking to you and with you and uh so it
+
+1076
+00:59:04,240 --> 00:59:11,040
+was a privilege for me not just you know
+
+1077
+00:59:07,920 --> 00:59:13,680
+not because uh many people will will see
+
+1078
+00:59:11,040 --> 00:59:16,319
+it etc. Not just that you know but
+
+1079
+00:59:13,680 --> 00:59:18,240
+because I I found it very interesting
+
+1080
+00:59:16,319 --> 00:59:22,799
+and I thank you for that. Absolutely.
+
+1081
+00:59:18,240 --> 00:59:26,079
+So, it was my uh privilege for it.
+
+1082
+00:59:22,799 --> 00:59:26,079
+>> Thank you so much for saying that.
