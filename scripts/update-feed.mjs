@@ -34,6 +34,9 @@ const TT_USERNAME = "palebluenexus";
 
 const LATEST_COUNT = 6;
 const TOP_COUNT = 10;
+const YOUTUBE_FETCH_DEPTH = 6;
+const TIKTOK_FETCH_DEPTH = 10;
+const EPISODE_DETECTION_COUNT = 30;
 const SHOW_LINKS = {
   youtube: "https://www.youtube.com/@palebluenexus",
   apple: "https://podcasts.apple.com/ca/podcast/pale-blue-nexus/id1529530113",
@@ -312,7 +315,7 @@ async function edFetch(path, params) {
 /* ---------------------------------------------------------------- sources */
 
 async function fetchYouTube() {
-  const json = await edFetch("/youtube/channel/videos", { browseId: YT_CHANNEL_ID, depth: 1 });
+  const json = await edFetch("/youtube/channel/videos", { browseId: YT_CHANNEL_ID, depth: YOUTUBE_FETCH_DEPTH });
   const vids = json?.data?.videos || [];
   const items = [];
   for (const v of vids) {
@@ -404,9 +407,16 @@ async function isAudioOnlyThumb(id) {
   }
 }
 
-async function fetchTikTok(imagesDir) {
-  const json = await edFetch("/tt/user/posts", { username: TT_USERNAME, depth: 1, oldest_createtime: 0 });
-  const posts = json?.data || [];
+async function fetchTikTokPosts() {
+  const json = await edFetch("/tt/user/posts", {
+    username: TT_USERNAME,
+    depth: TIKTOK_FETCH_DEPTH,
+    oldest_createtime: 0,
+  });
+  return json?.data || [];
+}
+
+async function fetchTikTok(imagesDir, posts) {
   const items = [];
   for (const p of posts) {
     if (!p?.aweme_id) continue;
@@ -420,8 +430,10 @@ async function fetchTikTok(imagesDir) {
         const res = await fetch(coverUrl);
         if (res.ok) {
           const buf = Buffer.from(await res.arrayBuffer());
-          writeFileSync(localPath, buf);
-          thumb = local;
+          if (buf.length) {
+            writeFileSync(localPath, buf);
+            thumb = local;
+          }
         }
       } catch (e) {
         log("tiktok thumb download failed", p.aweme_id, e.message);
@@ -888,12 +900,14 @@ function cardHtml(item, { rank } = {}) {
   }
   const badge = PLATFORM_LABEL[item.platform] || item.platform;
   const rankHtml = rank ? `<span class="feed-rank">#${rank}</span>` : "";
-  const thumb = item.thumb || `https://i.ytimg.com/vi/${item.id}/hqdefault.jpg`;
+  const thumb = item.thumb || (item.platform === "youtube" ? `https://i.ytimg.com/vi/${item.id}/hqdefault.jpg` : "");
   const thumbUrl = /^https?:\/\//i.test(thumb) || thumb.startsWith("/")
     ? thumb
     : `/${thumb.replace(/^\.?\//, "")}`;
   const portrait = item.platform === "tiktok";
-  const thumbInner = portrait
+  const thumbInner = !thumb
+    ? `<span class="feed-thumb-placeholder">Thumbnail unavailable</span>`
+    : portrait
     ? `<span class="feed-thumb-bg" style="background-image:url('${esc(thumbUrl)}')"></span>
             <img class="feed-thumb-portrait" src="${esc(thumbUrl)}" alt="${esc(item.title)}" loading="lazy" />`
     : `<img src="${esc(thumbUrl)}" alt="${esc(item.title)}" loading="lazy" />`;
@@ -1404,7 +1418,7 @@ function topPerformingItems(items, count) {
 }
 
 // Channel-level totals across YouTube (regular + Shorts) and TikTok.
-async function fetchChannelStats() {
+async function fetchChannelStats(ttPosts = []) {
   const stats = { generatedAt: new Date().toISOString() };
 
   const yt = await edFetch("/youtube/channel/detailed-info", { browseId: YT_CHANNEL_ID });
@@ -1420,13 +1434,12 @@ async function fetchChannelStats() {
 
   const info = await edFetch("/tt/user/info", { username: TT_USERNAME });
   const s = info?.data?.stats || {};
-  const posts = (await edFetch("/tt/user/posts", { username: TT_USERNAME, depth: 5, oldest_createtime: 0 }))?.data || [];
   let ttViews = 0;
-  for (const p of posts) ttViews += p?.statistics?.play_count || 0;
+  for (const p of ttPosts) ttViews += p?.statistics?.play_count || 0;
   stats.tiktok = {
     views: ttViews,
     followers: s.followerCount || 0,
-    videos: s.videoCount || posts.length || 0,
+    videos: s.videoCount || ttPosts.length || 0,
   };
 
   stats.totalViews = stats.youtube.views + stats.tiktok.views;
@@ -1955,8 +1968,10 @@ async function main() {
   if (ED_TOKEN) {
     let yt = [];
     let tt = [];
+    let ttPosts = [];
     try {
       yt = await fetchYouTube();
+      const episodeDetectionIds = new Set(yt.slice(0, EPISODE_DETECTION_COUNT).map((item) => item.id));
       const audioIds = new Set();
       for (const item of yt) {
         if (await isAudioOnlyThumb(item.id)) audioIds.add(item.id);
@@ -1994,7 +2009,11 @@ async function main() {
       if (remappedGuests) log(`remapped ${remappedGuests} guest audio references to video twins`);
       if (removedDuplicateGuests) log(`removed ${removedDuplicateGuests} duplicate auto-detected guest records`);
       try {
-        await syncUnrecognizedEpisodes(yt, guests, guestsCfg);
+        await syncUnrecognizedEpisodes(
+          yt.filter((item) => episodeDetectionIds.has(item.id)),
+          guests,
+          guestsCfg,
+        );
       } catch (e) {
         log("warning: episode draft sync failed:", e.message);
       }
@@ -2002,13 +2021,14 @@ async function main() {
       log("youtube fetch failed:", e.message);
     }
     try {
-      tt = await fetchTikTok(imagesDir);
+      ttPosts = await fetchTikTokPosts();
+      tt = await fetchTikTok(imagesDir, ttPosts);
       log(`tiktok: ${tt.length} clips`);
     } catch (e) {
       log("tiktok fetch failed:", e.message);
     }
     try {
-      stats = await fetchChannelStats();
+      stats = await fetchChannelStats(ttPosts);
       log(`channel stats: ${fmtViews(stats.totalViews)} combined views`);
     } catch (e) {
       log("channel stats fetch failed:", e.message);
