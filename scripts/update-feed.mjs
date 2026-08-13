@@ -1014,16 +1014,8 @@ const ATTRIBUTION_STOPWORDS = new Set(
 
 function attributionTokenCounts(text) {
   const counts = new Map();
-  for (const token of (
-    String(text || "")
-      .toLowerCase()
-      .replace(/\bwebpage\b/g, "web page")
-      .replace(/https?:\/\/\S+/g, " ")
-      .match(/[a-z][a-z0-9'-]{2,}/g)
-      ?.filter((token) => !ATTRIBUTION_STOPWORDS.has(token))
-      .map((token) => token.replace(/^['-]+|['-]+$/g, ""))
-      .filter(Boolean) || []
-  )) {
+  const tokens = attributionTokenSequence(text);
+  for (const token of tokens) {
     counts.set(token, (counts.get(token) || 0) + 1);
   }
   return counts;
@@ -1032,7 +1024,6 @@ function attributionTokenCounts(text) {
 function attributionTokenSequence(text) {
   return String(text || "")
     .toLowerCase()
-    .replace(/\bwebpage\b/g, "web page")
     .replace(/https?:\/\/\S+/g, " ")
     .match(/[a-z][a-z0-9'-]{2,}/g)
     ?.filter((token) => !ATTRIBUTION_STOPWORDS.has(token))
