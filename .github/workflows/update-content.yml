@@ -36,7 +36,7 @@ jobs:
         run: |
           git config user.name "pbn-content-bot"
           git config user.email "bot@palebluenexus.com"
-          git add data/feed.json data/guests.json data/attribution-cache.json index.html book/index.html partner/index.html episodes images/feed images/promo share/guest sitemap.xml sitemap-video.xml robots.txt llms.txt agent-card transcripts data/insights
+          git add data/feed.json data/guests.json data/attribution-cache.json index.html book/index.html partner/index.html episodes images/feed images/promo share/guest sitemap.xml sitemap-video.xml robots.txt llms.txt .well-known/agent-card.json transcripts data/insights
           for guest_image in images/guest-*.jpg images/guest-*.svg; do
             [ -e "$guest_image" ] && git add "$guest_image"
           done
