@@ -20,6 +20,7 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, unlinkSync } from "node:fs";
 import { deflateRawSync } from "node:zlib";
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -39,6 +40,9 @@ const TIKTOK_FETCH_DEPTH = 10;
 const EPISODE_DETECTION_COUNT = 30;
 // Slack era boundary for approximate YouTube relative-date parsing; the channel predates the podcast.
 const PODCAST_ERA_START_DATE = "2024-01-01";
+const TIKTOK_ATTRIBUTION_PROMPT_VERSION = "2026-08-attribute-clips-v1";
+const TIKTOK_TRANSCRIPT_SCORE_MIN = 12;
+const TIKTOK_TRANSCRIPT_MARGIN_MIN = 2;
 const SHOW_LINKS = {
   youtube: "https://www.youtube.com/@palebluenexus",
   apple: "https://podcasts.apple.com/ca/podcast/pale-blue-nexus/id1529530113",
@@ -453,6 +457,10 @@ async function fetchTikTok(imagesDir, posts) {
       views: st.play_count || 0,
       likes: st.digg_count || 0,
       comments: st.comment_count || 0,
+      _tiktokMentions: (p.text_extra || [])
+        .filter((entry) => entry?.type === 0)
+        .map((entry) => String(entry.user_unique_id || entry.nickname || "").trim())
+        .filter(Boolean),
     });
   }
   return items;
@@ -477,7 +485,7 @@ function podcastKey(t = "") {
 function guestNameKey(name = "") {
   const stripped = String(name)
     .replace(/^\s*(?:dr|mr|mrs|ms|prof)\.?\s+/i, "")
-    .replace(/\s*,\s*(?:phd|cfa|md|jd|esq|mba)\s*$/i, "")
+    .replace(/\s*,?\s*(?:phd|cfa|md|jd|esq|mba)\s*$/i, "")
     .trim();
   const tokens = stripped.split(/\s+/).filter(Boolean);
   return tokens.length >= 2 ? `${tokens[0]} ${tokens.at(-1)}` : "";
@@ -991,6 +999,326 @@ function parseTranscriptSegments(slug) {
   return segments;
 }
 
+const ATTRIBUTION_STOPWORDS = new Set(
+  [
+    "a", "about", "after", "all", "also", "an", "and", "are", "as", "at", "be",
+    "because", "been", "being", "but", "by", "can", "did", "do", "does", "for",
+    "from", "get", "got", "had", "has", "have", "he", "her", "here", "him", "his",
+    "how", "i", "if", "in", "into", "is", "it", "its", "just", "like", "make",
+    "more", "most", "my", "no", "not", "now", "of", "on", "one", "or", "our",
+    "out", "said", "she", "so", "some", "that", "the", "their", "them", "there",
+    "they", "this", "to", "up", "us", "was", "we", "were", "what", "when", "where",
+    "which", "who", "will", "with", "would", "you", "your",
+  ],
+);
+
+function attributionTokenCounts(text) {
+  const counts = new Map();
+  const tokens = attributionTokenSequence(text);
+  for (const token of tokens) {
+    counts.set(token, (counts.get(token) || 0) + 1);
+  }
+  return counts;
+}
+
+function attributionTokenSequence(text) {
+  return String(text || "")
+    .toLowerCase()
+    .replace(/https?:\/\/\S+/g, " ")
+    .match(/[a-z][a-z0-9'-]{2,}/g)
+    ?.filter((token) => !ATTRIBUTION_STOPWORDS.has(token))
+    .map((token) => token.replace(/^['-]+|['-]+$/g, ""))
+    .filter(Boolean) || [];
+}
+
+function transcriptDocuments(publishedGuests) {
+  return publishedGuests
+    .map((guest) => {
+      const segments = parseTranscriptSegments(guest.episodeSlug);
+      if (!segments.length) return null;
+      const tokens = attributionTokenSequence(segments.map((segment) => segment.text).join(" "));
+      return {
+        guest,
+        passages: Array.from(
+          { length: Math.ceil(tokens.length / 50) },
+          (_, index) => tokens.slice(index * 50, index * 50 + 100),
+        ).filter((passage) => passage.length),
+      };
+    })
+    .filter(Boolean);
+}
+
+function transcriptAttributionScores(title, documents) {
+  const captionCounts = attributionTokenCounts(title);
+  if (!captionCounts.size || !documents.length) return [];
+  const passageDocuments = documents.flatMap((document) => document.passages);
+  const documentFrequency = new Map();
+  for (const passage of passageDocuments) {
+    for (const token of new Set(passage)) {
+      documentFrequency.set(token, (documentFrequency.get(token) || 0) + 1);
+    }
+  }
+  const totalPassages = passageDocuments.length;
+  const averageLength = passageDocuments.reduce((sum, passage) => sum + passage.length, 0) / totalPassages;
+  const k1 = 1.2;
+  const b = 0.75;
+  return documents
+    .map((document) => {
+      const score = Math.max(...document.passages.map((passage) => {
+        const counts = new Map();
+        for (const token of passage) counts.set(token, (counts.get(token) || 0) + 1);
+        return [...captionCounts].reduce((sum, [token]) => {
+          const count = counts.get(token) || 0;
+          if (!count) return sum;
+          const idf = Math.log(
+            1 + (totalPassages - (documentFrequency.get(token) || 0) + 0.5)
+              / ((documentFrequency.get(token) || 0) + 0.5),
+          );
+          return sum + idf * ((count * (k1 + 1)) / (
+            count + k1 * (1 - b + b * passage.length / averageLength)
+          ));
+        }, 0);
+      }));
+      return {
+        guest: document.guest,
+        score,
+      };
+    })
+    .sort((a, b) => b.score - a.score);
+}
+
+function episodeDateWithinWindow(item, guest) {
+  const publishedAt = Date.parse(item.publishedAt || "");
+  if (!Number.isFinite(publishedAt) || !/^\d{4}-\d{2}-\d{2}$/.test(String(guest.date || ""))) {
+    return false;
+  }
+  return Math.abs(publishedAt - Date.parse(`${guest.date}T00:00:00Z`)) / 86400000 <= 6;
+}
+
+function uniqueGuestNameMatch(item, publishedGuests, transcriptDocs) {
+  const title = item.title || "";
+  const matches = new Set();
+  for (const guest of publishedGuests) {
+    const nameKey = guestNameKey(guest.name);
+    if (!nameKey) continue;
+    const tokens = [...new Set(nameKey.split(/\s+/))];
+    if (tokens.some((token) => new RegExp(`\\b${escapeRegExp(token)}\\b`, "i").test(title || ""))) {
+      matches.add(guest.slug);
+    }
+  }
+  if (matches.size !== 1) return null;
+  const slug = [...matches][0];
+  const [best] = transcriptAttributionScores(title, transcriptDocs);
+  const guest = publishedGuests.find((candidate) => candidate.slug === slug);
+  return best?.guest.slug === slug || episodeDateWithinWindow(item, guest) ? slug : null;
+}
+
+function fullGuestNameMatch(title, publishedGuests) {
+  const matches = publishedGuests.filter((guest) => {
+    const parts = guestNameKey(guest.name).split(/\s+/).filter(Boolean).map(escapeRegExp);
+    if (!parts.length) return false;
+    return new RegExp(`\\b${parts.join("\\s+")}\\b`, "i").test(title || "");
+  });
+  return matches.length === 1 ? matches[0].slug : null;
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function directYoutubeGuestMatch(title, publishedGuests) {
+  const ids = [...String(title || "").matchAll(
+    /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/))([A-Za-z0-9_-]{11})/gi,
+  )].map((match) => match[1]);
+  const matches = publishedGuests.filter((guest) => ids.includes(String(guest.youtubeId)));
+  return matches.length === 1 ? matches[0].slug : null;
+}
+
+function explicitMentionGuestMatch(item, publishedGuests) {
+  const normalizeMention = (value) => String(value).toLowerCase().replace(/[^a-z0-9]/g, "");
+  const mentions = new Set((item._tiktokMentions || []).map(normalizeMention));
+  if (!mentions.size) return null;
+  const matches = publishedGuests.filter((guest) => {
+    const compactName = normalizeMention(guestNameKey(guest.name));
+    return mentions.has(normalizeMention(guest.slug)) || (compactName && mentions.has(compactName));
+  });
+  return matches.length === 1 ? matches[0].slug : null;
+}
+
+function attributionHash(value) {
+  return createHash("sha256").update(JSON.stringify(value)).digest("hex");
+}
+
+function readAttributionCache() {
+  const path = join(ROOT, "data", "attribution-cache.json");
+  if (!existsSync(path)) return {};
+  try {
+    const data = JSON.parse(readFileSync(path, "utf8"));
+    return data && typeof data === "object" ? data : {};
+  } catch {
+    return {};
+  }
+}
+
+function writeAttributionCache(cache) {
+  mkdirSync(join(ROOT, "data"), { recursive: true });
+  writeFileSync(
+    join(ROOT, "data", "attribution-cache.json"),
+    JSON.stringify(cache, null, 2) + "\n",
+  );
+}
+
+function parseJsonArray(text) {
+  const start = text.indexOf("[");
+  const end = text.lastIndexOf("]");
+  if (start < 0 || end <= start) return null;
+  try {
+    const parsed = JSON.parse(text.slice(start, end + 1));
+    return Array.isArray(parsed) ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
+async function classifyUnattributedWithClaude(items, publishedGuests, cache) {
+  const pending = items.filter((item) => item.platform === "tiktok" && !item.guestSlug);
+  if (!pending.length) return;
+  const roster = publishedGuests.map((guest) => ({
+    slug: guest.slug,
+    name: guest.name,
+    episodeTitle: guest.episodeTitle || "",
+    role: guest.role || "",
+    summary: guest.bio || "",
+  }));
+  const rosterHash = attributionHash({
+    promptVersion: TIKTOK_ATTRIBUTION_PROMPT_VERSION,
+    roster,
+  });
+  const cached = [];
+  const needsClassifying = [];
+  for (const item of pending) {
+    const inputHash = attributionHash({
+      rosterHash,
+      id: item.id,
+      caption: item.title,
+      create_time: item.publishedAt || null,
+    });
+    const entry = cache[item.id];
+    if (entry?.inputHash === inputHash && entry.confidence === "high" && entry.guestSlug) {
+      item.guestSlug = entry.guestSlug;
+      cached.push(item.id);
+    } else if (entry?.inputHash !== inputHash) {
+      needsClassifying.push(item);
+    }
+  }
+  if (!needsClassifying.length) {
+    if (cached.length) log(`reused cached TikTok attributions: ${cached.length}`);
+    return;
+  }
+  if (!process.env.ANTHROPIC_API_KEY) {
+    log("skipping TikTok Claude attribution: ANTHROPIC_API_KEY is not set");
+    return;
+  }
+  const prompt = `Classify each podcast TikTok caption to the single most likely guest from the roster. Return ONLY a JSON array with {"id":"...","guestSlug":"roster slug or null","confidence":"high|medium|low","evidence":"brief evidence"}. Use null unless the evidence is specific; never guess from generic AI or startup language. Accept a guest only when confidence is high.\n\nROSTER:\n${JSON.stringify(roster)}\n\nCLIPS:\n${JSON.stringify(needsClassifying.map((item) => ({ id: item.id, caption: item.title })))}`
+    .trim();
+  try {
+    const response = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "x-api-key": process.env.ANTHROPIC_API_KEY,
+        "anthropic-version": "2023-06-01",
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "claude-sonnet-5",
+        max_tokens: 3500,
+        thinking: { type: "disabled" },
+        messages: [{ role: "user", content: prompt }],
+      }),
+    });
+    if (!response.ok) {
+      log(`TikTok Claude attribution failed -> HTTP ${response.status}`);
+      return;
+    }
+    const data = await response.json();
+    const text = Array.isArray(data?.content)
+      ? data.content.filter((block) => block?.type === "text").map((block) => block.text).join("\n")
+      : "";
+    const predictions = parseJsonArray(text);
+    if (!predictions) {
+      log("TikTok Claude attribution returned malformed JSON; leaving clips unattributed");
+      return;
+    }
+    const validSlugs = new Set(publishedGuests.map((guest) => guest.slug));
+    for (const prediction of predictions) {
+      const item = needsClassifying.find((candidate) => candidate.id === String(prediction?.id || ""));
+      if (!item) continue;
+      const inputHash = attributionHash({
+        rosterHash,
+        id: item.id,
+        caption: item.title,
+        create_time: item.publishedAt || null,
+      });
+      const guestSlug = validSlugs.has(prediction.guestSlug) ? prediction.guestSlug : null;
+      const confidence = String(prediction.confidence || "low").toLowerCase();
+      cache[item.id] = {
+        guestSlug,
+        confidence,
+        evidence: String(prediction.evidence || "").slice(0, 240),
+        model: "claude-sonnet-5",
+        inputHash,
+        promptVersion: TIKTOK_ATTRIBUTION_PROMPT_VERSION,
+        updatedAt: new Date().toISOString(),
+      };
+      if (confidence === "high" && guestSlug) item.guestSlug = guestSlug;
+    }
+    writeAttributionCache(cache);
+    log(`classified TikTok clips with Claude: ${needsClassifying.length}`);
+  } catch (error) {
+    log(`TikTok Claude attribution failed: ${error.message}; leaving clips unattributed`);
+  }
+}
+
+async function attributeTikTokGuests(items, guests) {
+  const publishedGuests = guests.filter((guest) => guest.status === "published");
+  const transcriptDocs = transcriptDocuments(publishedGuests);
+  const cache = readAttributionCache();
+  for (const item of items) {
+    if (item.platform !== "tiktok" || item.guestSlug) continue;
+    const fullNameSlug = fullGuestNameMatch(item.title, publishedGuests);
+    if (fullNameSlug) {
+      item.guestSlug = fullNameSlug;
+      continue;
+    }
+    const nameSlug = uniqueGuestNameMatch(item, publishedGuests, transcriptDocs);
+    if (nameSlug) {
+      item.guestSlug = nameSlug;
+      continue;
+    }
+    const directYoutubeSlug = directYoutubeGuestMatch(item.title, publishedGuests);
+    const mentionSlug = explicitMentionGuestMatch(item, publishedGuests);
+    const deterministic = [directYoutubeSlug, mentionSlug].filter(Boolean);
+    if (new Set(deterministic).size === 1) {
+      item.guestSlug = deterministic[0];
+      continue;
+    }
+    const scores = transcriptAttributionScores(item.title, transcriptDocs);
+    const [best, second] = scores;
+    if (
+      best
+      && best.score >= TIKTOK_TRANSCRIPT_SCORE_MIN
+      && best.score - (second?.score || 0) >= TIKTOK_TRANSCRIPT_MARGIN_MIN
+    ) {
+      item.guestSlug = best.guest.slug;
+      continue;
+    }
+  }
+  await classifyUnattributedWithClaude(items, publishedGuests, cache);
+  for (const item of items) {
+    if (item._tiktokMentions) delete item._tiktokMentions;
+  }
+}
+
 function secToClock(t) {
   const total = Math.max(0, Math.floor(Number(t) || 0));
   const seconds = total % 60;
@@ -1277,6 +1605,31 @@ async function fetchTranscriptSrt(youtubeId) {
     .join("\n");
 }
 
+async function backfillMissingTranscripts(guests) {
+  if (!process.env.SUPADATA_API_KEY) {
+    log("skipping transcript backfill: SUPADATA_API_KEY is not set");
+    return;
+  }
+  const episodeGuests = guests.filter(
+    (guest) => guest.status === "published" && guest.episodeSlug && guest.youtubeId && isPublicGuest(guest),
+  );
+  const fetched = [];
+  for (const guest of episodeGuests) {
+    if (transcriptHrefForSlug(guest.episodeSlug)) continue;
+    try {
+      const srt = await fetchTranscriptSrt(guest.youtubeId);
+      if (!srt) continue;
+      mkdirSync(join(ROOT, "transcripts"), { recursive: true });
+      writeFileSync(join(ROOT, "transcripts", `${guest.episodeSlug}.en.srt`), srt);
+      fetched.push(guest.episodeSlug);
+      log(`fetched transcript for ${guest.slug}`);
+    } catch (error) {
+      log(`transcript fetch failed for ${guest.slug}: ${error.message}`);
+    }
+  }
+  log(fetched.length ? `fetched transcripts: ${fetched.join(", ")}` : "no new transcripts fetched");
+}
+
 function episodeKitHtml(g, { item, reach = {}, clips = [], insights = [] } = {}) {
   const total = (reach.views || 0) + (reach.listens || 0);
   const combinedStat = total > 0 ? `${fmtViews(total)} ${reach.listens > 0 ? "views & listens" : "views"}` : "";
@@ -1335,7 +1688,7 @@ ${clips.map((clip) => {
     : "";
   return `
   <style>
-    .ep-kit{padding:0 0 2rem}.ep-kit-shell{background:linear-gradient(180deg,rgba(10,14,28,1) 0%,#04060e 100%);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)}.ep-kit-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}.ep-kit-stat{color:#A6D2E6;font-size:1rem}.ep-kit-links,.ep-kit-guest-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}.ep-kit-transcripts{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1rem}.ep-kit-tx-label{color:#A6D2E6;font-size:.8rem;letter-spacing:.02em}.ep-kit-guest-links--top{margin-top:0;margin-bottom:1.5rem;align-items:center}.ep-kit-links-label{flex-basis:100%;color:#A6D2E6;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.1rem}.ep-kit-guest-link{border-color:rgba(212,168,75,.55)}.ep-kit-moments{margin-top:2rem}.ep-kit-moment-list{display:flex;flex-direction:column;gap:.5rem;margin-top:1rem}.ep-kit-moment{display:flex;gap:.9rem;align-items:baseline;color:inherit;text-decoration:none;padding:.7rem .9rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;transition:border-color .3s,transform .3s}.ep-kit-moment:hover{border-color:rgba(212,168,75,.5);transform:translateX(3px)}.ep-kit-ts{color:#D4A84B;font-variant-numeric:tabular-nums;font-size:.85rem;white-space:nowrap;min-width:3.2rem}.ep-kit-moment-text{display:flex;flex-direction:column;gap:.2rem}.ep-kit-moment-title{color:#fff;font-size:.9rem;font-weight:500}.ep-kit-moment-insight{color:rgba(166,210,230,0.75);font-size:.8rem;line-height:1.4}.ep-kit-heading{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;line-height:1.15;margin-bottom:1rem}.ep-kit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,190px));justify-content:center;gap:1rem;margin-top:1rem}.ep-kit-card{display:block;color:inherit;text-decoration:none;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;transition:transform .3s,border-color .3s}.ep-kit-card:hover{transform:translateY(-3px);border-color:rgba(212,168,75,.5)}.ep-kit-thumb{aspect-ratio:3/4;position:relative;background:#0a0f1e}.ep-kit-thumb img{width:100%;height:100%;object-fit:cover;object-position:center top}.ep-kit-badge{position:absolute;left:.65rem;bottom:.65rem;background:rgba(4,6,14,.85);color:#7EB8DA;padding:.2rem .45rem;border-radius:999px;font-size:.65rem}.ep-kit-body{padding:.9rem}.ep-kit-clip-title{font-size:.82rem;line-height:1.4;color:#fff}.ep-kit-clip-meta{font-size:.75rem;color:rgba(166,210,230,0.6);margin-top:.35rem}
+    .ep-kit{padding:0 0 2rem}.ep-kit-shell{background:linear-gradient(180deg,rgba(10,14,28,1) 0%,#04060e 100%);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08)}.ep-kit-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}.ep-kit-stat{color:#A6D2E6;font-size:1rem}.ep-kit-links,.ep-kit-guest-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.25rem}.ep-kit-transcripts{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1rem}.ep-kit-tx-label{color:#A6D2E6;font-size:.8rem;letter-spacing:.02em}.ep-kit-guest-links--top{margin-top:0;margin-bottom:1.5rem;align-items:center}.ep-kit-links-label{flex-basis:100%;color:#A6D2E6;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.1rem}.ep-kit-guest-link{border-color:rgba(212,168,75,.55)}.ep-kit-moments{margin-top:2rem}.ep-kit-moment-list{display:flex;flex-direction:column;gap:.5rem;margin-top:1rem}.ep-kit-moment{display:flex;gap:.9rem;align-items:baseline;color:inherit;text-decoration:none;padding:.7rem .9rem;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;transition:border-color .3s,transform .3s}.ep-kit-moment:hover{border-color:rgba(212,168,75,.5);transform:translateX(3px)}.ep-kit-ts{color:#D4A84B;font-variant-numeric:tabular-nums;font-size:.85rem;white-space:nowrap;min-width:3.2rem}.ep-kit-moment-text{display:flex;flex-direction:column;gap:.2rem}.ep-kit-moment-title{color:#fff;font-size:.9rem;font-weight:500}.ep-kit-moment-insight{color:rgba(166,210,230,0.75);font-size:.8rem;line-height:1.4}.ep-kit-heading{font-family:'Cormorant Garamond',Georgia,serif;font-size:2rem;line-height:1.15;margin-bottom:1rem}.ep-kit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,190px));justify-content:center;gap:1rem;margin-top:1rem}.ep-kit-card{display:block;color:inherit;text-decoration:none;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;transition:transform .3s,border-color .3s}.ep-kit-card:hover{transform:translateY(-3px);border-color:rgba(212,168,75,.5)}.ep-kit-thumb{aspect-ratio:3/4;position:relative;background:#0a0f1e}.ep-kit-thumb img{width:100%;height:100%;object-fit:cover;object-position:center top}.ep-kit-badge{position:absolute;left:.65rem;bottom:.65rem;background:rgba(4,6,14,.85);color:#7EB8DA;padding:.2rem .45rem;border-radius:999px;font-size:.65rem}.ep-kit-body{padding:.9rem .9rem 0}.ep-kit-clip-title{font-size:.82rem;line-height:1.4;color:#fff;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;max-height:2.8em;overflow:hidden}.ep-kit-clip-meta{font-size:.75rem;color:rgba(166,210,230,0.6);margin-top:.25rem;padding:.25rem 0 .9rem}
   </style>
   <section class="ep-kit ep-kit-shell">
     <div class="section-container">
@@ -2099,17 +2452,8 @@ async function main() {
     log(`backfilled guest social links: ${socialBackfilled.join(", ")}`);
   }
 
-  const publishedGuests = guests.filter((g) => g.status === "published");
-  for (const it of items) {
-    if (it.platform !== "tiktok" || it.guestSlug) continue;
-    const matches = publishedGuests.filter((g) => {
-      const name = guestNameKey(g.name);
-      if (!name) return false;
-      const escaped = name.split(" ").map((part) => part.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("\\s+");
-      return new RegExp(`\\b${escaped}\\b`, "i").test(it.title || "");
-    });
-    if (matches.length === 1) it.guestSlug = matches[0].slug;
-  }
+  await backfillMissingTranscripts(guests);
+  await attributeTikTokGuests(items, guests);
   items.sort((a, b) => b.score - a.score);
 
   // best-performing item per guest (their episode video if present)

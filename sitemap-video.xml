@@ -143,4 +143,15 @@
       <video:publication_date>2026-08-01</video:publication_date>
     </video:video>
   </url>
+  <url>
+    <loc>https://palebluenexus.com/episodes/victor-lugli/</loc>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/v5ZquyIrNWU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Victor Lugli - Pale Blue Nexus Episode 14</video:title>
+      <video:description>The Neuroscientist Investor Who Says AI Isn't Intelligent | Victor Lugli. Investor</video:description>
+      <video:player_loc allow_embed="yes">https://www.youtube.com/embed/v5ZquyIrNWU</video:player_loc>
+      <video:duration>3568</video:duration>
+      <video:publication_date>2026-08-08</video:publication_date>
+    </video:video>
+  </url>
 </urlset>
