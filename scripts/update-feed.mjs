@@ -64,6 +64,25 @@ function esc(s = "") {
     .replace(/'/g, "&#39;");
 }
 
+function collapseWs(value = "") {
+  return String(value).replace(/\s+/g, " ").trim();
+}
+
+function bioParagraphsHtml(bio) {
+  const paragraphs = String(bio || "")
+    .split(/\n\s*\n/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
+  if (!paragraphs.length) paragraphs.push("");
+  return paragraphs
+    .map((paragraph, index) => `<p class="guest-bio bio fade"${index ? ' style="margin-top:1rem"' : ""}>${esc(paragraph)}</p>`)
+    .join("");
+}
+
+function firstBioParagraph(bio) {
+  return String(bio || "").split(/\n\s*\n/)[0].trim();
+}
+
 function fmtViews(n) {
   if (n == null) return "";
   if (n >= 1_000_000) return (n / 1_000_000).toFixed(n >= 10_000_000 ? 0 : 1).replace(/\.0$/, "") + "M";
@@ -268,7 +287,13 @@ function updateEpisodeVideo(html, g) {
   return html.replace("<footer", () => `${video}\n  <footer`);
 }
 
+function updateEpisodeBio(html, g) {
+  const aboutRe = /(<section style="background:linear-gradient\(180deg,rgba\(10,14,28,1\) 0%,var\(--bg\) 100%\)"><div class="section-container"><span class="section-eyebrow eyebrow fade">About the Guest<\/span><h2 class="fade">[^<]*<\/h2>)(?:<p class="guest-bio bio fade"[^>]*>[\s\S]*?<\/p>)+(<\/div><\/section>)/;
+  return html.replace(aboutRe, (_, prefix, suffix) => `${prefix}${bioParagraphsHtml(g.bio)}${suffix}`);
+}
+
 function updateEpisodeSeo(html, g, { item = null, insights = [] } = {}) {
+  html = updateEpisodeBio(html, g);
   const schema = JSON.stringify(episodeStructuredData(g, {
     item,
     insights,
@@ -847,7 +872,7 @@ function newEpisodePageHtml(g) {
 </head>
 <body><nav id="nav"><a href="/" class="nav-logo"><img src="/images/pbn-logo.png" alt="Pale Blue Nexus" /></a></nav>
   <section class="hero"><div class="section-container"><div class="fade"><div role="navigation" aria-label="Breadcrumb" class="ep-breadcrumb" style="margin-bottom:1.25rem;font-size:.8rem;letter-spacing:.05em"><a href="/guests/" style="color:#D4A84B;text-decoration:none">Guests</a><span style="color:rgba(166,210,230,.5);margin:0 .5rem">/</span><span style="color:#A6D2E6">${esc(g.name)}</span></div><span class="section-eyebrow eyebrow">${esc(g.episode)}</span><img class="guest-photo photo" src="../../${esc(g.photo)}" alt="${esc(g.name)}" /><h1>${esc(g.name)}</h1><p style="font-size:1.1rem;color:var(--secondary);max-width:600px">${esc(episodeTitle)}</p><div class="episode-meta meta"><span>${esc(g.episode)}</span></div><a class="share-btn share" href="https://www.youtube.com/watch?v=${esc(g.youtubeId)}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></div></div></section>
-  <section style="background:linear-gradient(180deg,rgba(10,14,28,1) 0%,var(--bg) 100%)"><div class="section-container"><span class="section-eyebrow eyebrow fade">About the Guest</span><h2 class="fade">${esc(g.name)}.</h2><p class="guest-bio bio fade">${esc(g.bio || "")}</p></div></section>
+  <section style="background:linear-gradient(180deg,rgba(10,14,28,1) 0%,var(--bg) 100%)"><div class="section-container"><span class="section-eyebrow eyebrow fade">About the Guest</span><h2 class="fade">${esc(g.name)}.</h2>${bioParagraphsHtml(g.bio)}</div></section>
   <!-- AUTO-EP-KIT:start --><!-- AUTO-EP-KIT:end -->
   ${episodeVideoHtml(g)}
   <footer><p>Pale Blue Nexus. Making sense of the future, from right here.</p></footer><script>window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50));</script>
@@ -1996,7 +2021,7 @@ function promoPageHtml(g, item) {
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(g.name)}, ${esc(g.role)}. On the Pale Blue Nexus podcast. Share kit and promo card." />
   <meta property="og:title" content="${esc(title)}" />
-  <meta property="og:description" content="${esc(g.quote || g.bio)}" />
+  <meta property="og:description" content="${esc(collapseWs(g.quote || g.bio))}" />
   <meta property="og:image" content="${ogUrl}" />
   <meta property="og:url" content="https://palebluenexus.com/share/guest/${esc(g.slug)}.html" />
   <meta property="og:type" content="article" />
@@ -2036,7 +2061,7 @@ function promoPageHtml(g, item) {
     <img class="promo-photo" src="../../${esc(g.photo)}" alt="${esc(g.name)}" />
     <h1>${esc(g.name)}</h1>
     <p class="promo-role">${esc(g.role)}</p>
-    ${g.quote ? `<p class="promo-quote">&ldquo;${esc(g.quote)}&rdquo;</p>` : `<p class="promo-quote">${esc(g.bio)}</p>`}
+    ${g.quote ? `<p class="promo-quote">&ldquo;${esc(g.quote)}&rdquo;</p>` : `<p class="promo-quote">${esc(collapseWs(firstBioParagraph(g.bio)))}</p>`}
     ${viewsLine ? `<p class="promo-views">${esc(viewsLine)}</p>` : ""}
     ${embed}
     <img class="promo-card-img" id="promo-card" src="${ogImg}" alt="${esc(g.name)} promo card" crossorigin="anonymous" />
