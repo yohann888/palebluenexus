@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T10:09:10.912Z",
+  "generatedAt": "2026-09-08T15:25:00.708Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -49,7 +49,7 @@
       "likes": 4,
       "comments": 0,
       "guestSlug": null,
-      "score": 36
+      "score": 35
     },
     {
       "id": "DS2-iheW6pI",
@@ -156,7 +156,7 @@
       "likes": 5,
       "comments": 0,
       "guestSlug": "victor-lugli",
-      "score": 20
+      "score": 19
     },
     {
       "id": "7671349535423122709",
@@ -234,21 +234,6 @@
       "score": 13
     },
     {
-      "id": "7673210695676218642",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "The cloud already taught us this lesson and we skipped it",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7673210695676218642?_r=1&u_code=0&region=US&mid=7673210744309140232&preview_pb=0&sharer_language=en&_d=f018ce4l26h9bl&share_item_id=7673210695676218642&source=h5_t",
-      "thumb": "images/feed/tt-7673210695676218642.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-12T18:16:24.000Z",
-      "views": 332,
-      "likes": 4,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 13
-    },
-    {
       "id": "7663238759256788225",
       "platform": "tiktok",
       "type": "clip",
@@ -277,6 +262,21 @@
       "comments": 0,
       "guestSlug": "jack-couch",
       "score": 13
+    },
+    {
+      "id": "7673210695676218642",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "The cloud already taught us this lesson and we skipped it",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7673210695676218642?_r=1&u_code=0&region=US&mid=7673210744309140232&preview_pb=0&sharer_language=en&_d=f018ce4l26h9bl&share_item_id=7673210695676218642&source=h5_t",
+      "thumb": "images/feed/tt-7673210695676218642.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-12T18:16:24.000Z",
+      "views": 332,
+      "likes": 4,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 12
     },
     {
       "id": "7662213620008373512",
@@ -322,21 +322,6 @@
       "comments": 0,
       "guestSlug": "eliza-blank",
       "score": 12
-    },
-    {
-      "id": "7676675325195029761",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "he could've let everyone believe his team saved the day. he didn't 👀",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7676675325195029761?_r=1&u_code=0&region=US&mid=7676675513809259282&preview_pb=0&sharer_language=en&_d=f018ce4l26h9bl&share_item_id=7676675325195029761&source=h5_t",
-      "thumb": "images/feed/tt-7676675325195029761.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-22T02:21:02.000Z",
-      "views": 183,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 11
     },
     {
       "id": "7676596820717391121",
@@ -444,6 +429,21 @@
       "score": 11
     },
     {
+      "id": "7676675325195029761",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "he could've let everyone believe his team saved the day. he didn't 👀",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7676675325195029761?_r=1&u_code=0&region=US&mid=7676675513809259282&preview_pb=0&sharer_language=en&_d=f018ce4l26h9bl&share_item_id=7676675325195029761&source=h5_t",
+      "thumb": "images/feed/tt-7676675325195029761.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-22T02:21:02.000Z",
+      "views": 183,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 10
+    },
+    {
       "id": "7660342217424325906",
       "platform": "tiktok",
       "type": "clip",
@@ -457,21 +457,6 @@
       "comments": 0,
       "guestSlug": "haren-bhakta",
       "score": 10
-    },
-    {
-      "id": "7668489128450854145",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "He talks to a client. The proposal writes itself. The contract preps itself. The tasks send themselves. He just approves. And he says you can build this TODAY.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668489128450854145?_r=1&u_code=0&region=US&mid=7668489212031519509&preview_pb=0&sharer_language=en&_d=f01f2g3a9fl4h9&share_item_id=7668489128450854145&source=h5_t",
-      "thumb": "images/feed/tt-7668489128450854145.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-31T00:54:25.000Z",
-      "views": 334,
-      "likes": 2,
-      "comments": 0,
-      "guestSlug": "vadim-peskov",
-      "score": 9
     },
     {
       "id": "7668120385975487761",
@@ -517,6 +502,21 @@
       "comments": 1,
       "guestSlug": "jim-rogers",
       "score": 9
+    },
+    {
+      "id": "7668489128450854145",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "He talks to a client. The proposal writes itself. The contract preps itself. The tasks send themselves. He just approves. And he says you can build this TODAY.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668489128450854145?_r=1&u_code=0&region=US&mid=7668489212031519509&preview_pb=0&sharer_language=en&_d=f01f2g3a9fl4h9&share_item_id=7668489128450854145&source=h5_t",
+      "thumb": "images/feed/tt-7668489128450854145.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-31T00:54:25.000Z",
+      "views": 334,
+      "likes": 2,
+      "comments": 0,
+      "guestSlug": "vadim-peskov",
+      "score": 8
     },
     {
       "id": "7665190322183425287",
