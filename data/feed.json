@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T15:25:00.708Z",
+  "generatedAt": "2026-09-08T20:21:36.947Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -34,7 +34,7 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "listens": 400,
-      "score": 128
+      "score": 127
     },
     {
       "id": "7679134235579485461",
@@ -49,7 +49,7 @@
       "likes": 4,
       "comments": 0,
       "guestSlug": null,
-      "score": 35
+      "score": 34
     },
     {
       "id": "DS2-iheW6pI",
@@ -111,7 +111,7 @@
       "likes": 1,
       "comments": 0,
       "guestSlug": null,
-      "score": 24
+      "score": 23
     },
     {
       "id": "7655297314592017672",
@@ -324,21 +324,6 @@
       "score": 12
     },
     {
-      "id": "7676596820717391121",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "you're not choosing a chain, you're betting on which one outlives you 👀",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7676596820717391121?_r=1&u_code=0&region=US&mid=7676597018021694216&preview_pb=0&sharer_language=en&_d=f018ce4l26h9bl&share_item_id=7676596820717391121&source=h5_t",
-      "thumb": "images/feed/tt-7676596820717391121.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-21T21:16:36.000Z",
-      "views": 186,
-      "likes": 1,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 11
-    },
-    {
       "id": "7673335314563484946",
       "platform": "tiktok",
       "type": "clip",
@@ -427,6 +412,21 @@
       "comments": 0,
       "guestSlug": "haren-bhakta",
       "score": 11
+    },
+    {
+      "id": "7676596820717391121",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "you're not choosing a chain, you're betting on which one outlives you 👀",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7676596820717391121?_r=1&u_code=0&region=US&mid=7676597018021694216&preview_pb=0&sharer_language=en&_d=f018ce4l26h9bl&share_item_id=7676596820717391121&source=h5_t",
+      "thumb": "images/feed/tt-7676596820717391121.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-21T21:16:36.000Z",
+      "views": 186,
+      "likes": 1,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 10
     },
     {
       "id": "7676675325195029761",
