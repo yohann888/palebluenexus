@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T09:39:46.225Z",
+  "generatedAt": "2026-09-12T14:25:57.881Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -594,21 +594,6 @@
       "score": 7
     },
     {
-      "id": "7639421605352852743",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "your AI prompts might be ending up in china and your vendor isn't telling you 🇨🇳",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7639421605352852743?_r=1&u_code=0&region=US&mid=7639421634680425224&preview_pb=0&sharer_language=en&_d=f01g39gb6af26f&share_item_id=7639421605352852743&source=h5_t",
-      "thumb": "images/feed/tt-7639421605352852743.jpg",
-      "duration": "",
-      "publishedAt": "2026-05-13T16:57:29.000Z",
-      "views": 667,
-      "likes": 3,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 6
-    },
-    {
       "id": "7638711028502514961",
       "platform": "tiktok",
       "type": "clip",
@@ -622,6 +607,21 @@
       "comments": 0,
       "guestSlug": "austin-armstrong",
       "score": 6
+    },
+    {
+      "id": "7639421605352852743",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "your AI prompts might be ending up in china and your vendor isn't telling you 🇨🇳",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7639421605352852743?_r=1&u_code=0&region=US&mid=7639421634680425224&preview_pb=0&sharer_language=en&_d=f01g39gb6af26f&share_item_id=7639421605352852743&source=h5_t",
+      "thumb": "images/feed/tt-7639421605352852743.jpg",
+      "duration": "",
+      "publishedAt": "2026-05-13T16:57:29.000Z",
+      "views": 667,
+      "likes": 3,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 5
     },
     {
       "id": "7668138602328640785",
