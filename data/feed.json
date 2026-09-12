@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-12T14:25:57.881Z",
+  "generatedAt": "2026-09-12T19:42:21.914Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -34,7 +34,7 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "listens": 400,
-      "score": 128
+      "score": 127
     },
     {
       "id": "DS2-iheW6pI",
@@ -65,7 +65,7 @@
       "likes": 4,
       "comments": 0,
       "guestSlug": null,
-      "score": 26
+      "score": 25
     },
     {
       "id": "7655297314592017672",
@@ -83,22 +83,6 @@
       "score": 22
     },
     {
-      "id": "0KlF5RR8WXg",
-      "platform": "youtube",
-      "type": "video",
-      "title": "He Minted Fake Tokens, Drained the Pool, and Bragged in the Wrong Group Chat",
-      "url": "https://www.youtube.com/watch?v=0KlF5RR8WXg",
-      "thumb": "https://i.ytimg.com/vi/0KlF5RR8WXg/hqdefault.jpg",
-      "duration": "52:57",
-      "publishedAt": "2026-08-22T09:39:18.346Z",
-      "views": 436,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
-      "listens": 0,
-      "score": 21
-    },
-    {
       "id": "7675133703957368065",
       "platform": "tiktok",
       "type": "clip",
@@ -112,6 +96,22 @@
       "comments": 0,
       "guestSlug": "austin-armstrong",
       "score": 21
+    },
+    {
+      "id": "0KlF5RR8WXg",
+      "platform": "youtube",
+      "type": "video",
+      "title": "He Minted Fake Tokens, Drained the Pool, and Bragged in the Wrong Group Chat",
+      "url": "https://www.youtube.com/watch?v=0KlF5RR8WXg",
+      "thumb": "https://i.ytimg.com/vi/0KlF5RR8WXg/hqdefault.jpg",
+      "duration": "52:57",
+      "publishedAt": "2026-08-22T09:39:18.346Z",
+      "views": 436,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
+      "listens": 0,
+      "score": 20
     },
     {
       "id": "7672574336003329287",
@@ -174,21 +174,6 @@
       "score": 17
     },
     {
-      "id": "7669260082256825617",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "One of Matt Blumberg's clients fired her entire writing team and went all in on AI. Now her remaining team spends 80% of its time fixing what the AI writes. Markup AI's CEO breaks down what that shift actually looks like.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7669260082256825617?_r=1&u_code=0&region=US&mid=7669260148338199316&preview_pb=0&sharer_language=en&_d=f01k12jhlc1kl0&share_item_id=7669260082256825617&source=h5_t",
-      "thumb": "images/feed/tt-7669260082256825617.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-02T02:46:02.000Z",
-      "views": 642,
-      "likes": 3,
-      "comments": 0,
-      "guestSlug": "matt-blumberg",
-      "score": 16
-    },
-    {
       "id": "7669130833411788040",
       "platform": "tiktok",
       "type": "clip",
@@ -217,6 +202,21 @@
       "comments": 0,
       "guestSlug": "nectarios-economakis",
       "score": 16
+    },
+    {
+      "id": "7669260082256825617",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "One of Matt Blumberg's clients fired her entire writing team and went all in on AI. Now her remaining team spends 80% of its time fixing what the AI writes. Markup AI's CEO breaks down what that shift actually looks like.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7669260082256825617?_r=1&u_code=0&region=US&mid=7669260148338199316&preview_pb=0&sharer_language=en&_d=f01k12jhlc1kl0&share_item_id=7669260082256825617&source=h5_t",
+      "thumb": "images/feed/tt-7669260082256825617.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-02T02:46:02.000Z",
+      "views": 642,
+      "likes": 3,
+      "comments": 0,
+      "guestSlug": "matt-blumberg",
+      "score": 15
     },
     {
       "id": "7634164931818016016",
@@ -414,21 +414,6 @@
       "score": 10
     },
     {
-      "id": "7676675325195029761",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "he could've let everyone believe his team saved the day. he didn't 👀",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7676675325195029761?_r=1&u_code=0&region=MD&mid=7676675513809259282&preview_pb=0&sharer_language=en&_d=f01lghab6b58de&share_item_id=7676675325195029761&source=h5_t",
-      "thumb": "images/feed/tt-7676675325195029761.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-22T02:21:02.000Z",
-      "views": 183,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 9
-    },
-    {
       "id": "7676596820717391121",
       "platform": "tiktok",
       "type": "clip",
@@ -472,6 +457,21 @@
       "comments": 1,
       "guestSlug": "jim-rogers",
       "score": 9
+    },
+    {
+      "id": "7676675325195029761",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "he could've let everyone believe his team saved the day. he didn't 👀",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7676675325195029761?_r=1&u_code=0&region=MD&mid=7676675513809259282&preview_pb=0&sharer_language=en&_d=f01lghab6b58de&share_item_id=7676675325195029761&source=h5_t",
+      "thumb": "images/feed/tt-7676675325195029761.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-22T02:21:02.000Z",
+      "views": 183,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 8
     },
     {
       "id": "7668489128450854145",
