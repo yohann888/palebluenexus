@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T15:07:45.656Z",
+  "generatedAt": "2026-09-13T19:54:26.634Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -156,7 +156,7 @@
       "likes": 4,
       "comments": 0,
       "guestSlug": "matt-blumberg",
-      "score": 17
+      "score": 16
     },
     {
       "id": "7679292017691594005",
@@ -249,21 +249,6 @@
       "score": 12
     },
     {
-      "id": "7673210695676218642",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "The cloud already taught us this lesson and we skipped it",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7673210695676218642?_r=1&u_code=0&region=GB&mid=7673210744309140232&preview_pb=0&sharer_language=en&_d=f020c7i20m5k67&share_item_id=7673210695676218642&source=h5_t",
-      "thumb": "images/feed/tt-7673210695676218642.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-12T18:16:24.000Z",
-      "views": 332,
-      "likes": 4,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 11
-    },
-    {
       "id": "7662213620008373512",
       "platform": "tiktok",
       "type": "clip",
@@ -307,6 +292,21 @@
       "comments": 0,
       "guestSlug": "eliza-blank",
       "score": 11
+    },
+    {
+      "id": "7673210695676218642",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "The cloud already taught us this lesson and we skipped it",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7673210695676218642?_r=1&u_code=0&region=GB&mid=7673210744309140232&preview_pb=0&sharer_language=en&_d=f020c7i20m5k67&share_item_id=7673210695676218642&source=h5_t",
+      "thumb": "images/feed/tt-7673210695676218642.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-12T18:16:24.000Z",
+      "views": 332,
+      "likes": 4,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 10
     },
     {
       "id": "7675037796507208977",
@@ -504,21 +504,6 @@
       "score": 8
     },
     {
-      "id": "7659991142372494609",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "The winners aren't companies. They're people... Index funds win because they never sell the winners. But the real outliers aren't the companies, they're the leaders running them. The power law is steeper across people than businesses. Full episode: https://youtu.be/XjHigKgY_78?si=vT6UxnDCRsHqoQDf",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7659991142372494609?_r=1&u_code=0&region=US&mid=7659991202000046869&preview_pb=0&sharer_language=en&_d=f01le8j244jdff&share_item_id=7659991142372494609&source=h5_t",
-      "thumb": "images/feed/tt-7659991142372494609.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-08T03:17:56.000Z",
-      "views": 505,
-      "likes": 2,
-      "comments": 0,
-      "guestSlug": "haren-bhakta",
-      "score": 8
-    },
-    {
       "id": "7656417757222817025",
       "platform": "tiktok",
       "type": "clip",
@@ -532,6 +517,21 @@
       "comments": 0,
       "guestSlug": "eliza-blank",
       "score": 8
+    },
+    {
+      "id": "7659991142372494609",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "The winners aren't companies. They're people... Index funds win because they never sell the winners. But the real outliers aren't the companies, they're the leaders running them. The power law is steeper across people than businesses. Full episode: https://youtu.be/XjHigKgY_78?si=vT6UxnDCRsHqoQDf",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7659991142372494609?_r=1&u_code=0&region=US&mid=7659991202000046869&preview_pb=0&sharer_language=en&_d=f01le8j244jdff&share_item_id=7659991142372494609&source=h5_t",
+      "thumb": "images/feed/tt-7659991142372494609.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-08T03:17:56.000Z",
+      "views": 505,
+      "likes": 2,
+      "comments": 0,
+      "guestSlug": "haren-bhakta",
+      "score": 7
     },
     {
       "id": "7665190322183425287",
