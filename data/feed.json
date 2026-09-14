@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T11:01:30.488Z",
+  "generatedAt": "2026-09-14T17:04:55.348Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -52,22 +52,6 @@
       "score": 23
     },
     {
-      "id": "0KlF5RR8WXg",
-      "platform": "youtube",
-      "type": "video",
-      "title": "He Minted Fake Tokens, Drained the Pool, and Bragged in the Wrong Group Chat",
-      "url": "https://www.youtube.com/watch?v=0KlF5RR8WXg",
-      "thumb": "https://i.ytimg.com/vi/0KlF5RR8WXg/hqdefault.jpg",
-      "duration": "52:57",
-      "publishedAt": "2026-08-24T11:00:57.083Z",
-      "views": 454,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
-      "listens": 0,
-      "score": 22
-    },
-    {
       "id": "DS2-iheW6pI",
       "platform": "youtube",
       "type": "video",
@@ -82,6 +66,22 @@
       "guestSlug": "nikola-borisov",
       "listens": 131,
       "score": 22
+    },
+    {
+      "id": "0KlF5RR8WXg",
+      "platform": "youtube",
+      "type": "video",
+      "title": "He Minted Fake Tokens, Drained the Pool, and Bragged in the Wrong Group Chat",
+      "url": "https://www.youtube.com/watch?v=0KlF5RR8WXg",
+      "thumb": "https://i.ytimg.com/vi/0KlF5RR8WXg/hqdefault.jpg",
+      "duration": "52:57",
+      "publishedAt": "2026-08-24T11:00:57.083Z",
+      "views": 454,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
+      "listens": 0,
+      "score": 21
     },
     {
       "id": "7655297314592017672",
@@ -111,7 +111,7 @@
       "likes": 5,
       "comments": 0,
       "guestSlug": "austin-armstrong",
-      "score": 20
+      "score": 19
     },
     {
       "id": "7672574336003329287",
