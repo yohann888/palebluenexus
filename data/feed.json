@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T10:31:55.154Z",
+  "generatedAt": "2026-09-15T15:44:42.629Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -81,7 +81,7 @@
       "likes": 4,
       "comments": 0,
       "guestSlug": null,
-      "score": 22
+      "score": 21
     },
     {
       "id": "7655297314592017672",
@@ -159,21 +159,6 @@
       "score": 16
     },
     {
-      "id": "7669260082256825617",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "One of Matt Blumberg's clients fired her entire writing team and went all in on AI. Now her remaining team spends 80% of its time fixing what the AI writes. Markup AI's CEO breaks down what that shift actually looks like.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7669260082256825617?_r=1&u_code=0&region=US&mid=7669260148338199316&preview_pb=0&sharer_language=en&_d=f017j1hm46ai63&share_item_id=7669260082256825617&source=h5_t",
-      "thumb": "images/feed/tt-7669260082256825617.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-02T02:46:02.000Z",
-      "views": 642,
-      "likes": 3,
-      "comments": 0,
-      "guestSlug": "matt-blumberg",
-      "score": 15
-    },
-    {
       "id": "7669130833411788040",
       "platform": "tiktok",
       "type": "clip",
@@ -202,6 +187,21 @@
       "comments": 0,
       "guestSlug": "nectarios-economakis",
       "score": 15
+    },
+    {
+      "id": "7669260082256825617",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "One of Matt Blumberg's clients fired her entire writing team and went all in on AI. Now her remaining team spends 80% of its time fixing what the AI writes. Markup AI's CEO breaks down what that shift actually looks like.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7669260082256825617?_r=1&u_code=0&region=US&mid=7669260148338199316&preview_pb=0&sharer_language=en&_d=f017j1hm46ai63&share_item_id=7669260082256825617&source=h5_t",
+      "thumb": "images/feed/tt-7669260082256825617.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-02T02:46:02.000Z",
+      "views": 642,
+      "likes": 3,
+      "comments": 0,
+      "guestSlug": "matt-blumberg",
+      "score": 14
     },
     {
       "id": "7679292017691594005",
@@ -444,21 +444,6 @@
       "score": 9
     },
     {
-      "id": "7676675325195029761",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "he could've let everyone believe his team saved the day. he didn't 👀",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7676675325195029761?_r=1&u_code=0&region=GB&mid=7676675513809259282&preview_pb=0&sharer_language=en&_d=f0211h7kfifli4&share_item_id=7676675325195029761&source=h5_t",
-      "thumb": "images/feed/tt-7676675325195029761.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-22T02:21:02.000Z",
-      "views": 183,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 8
-    },
-    {
       "id": "7676596820717391121",
       "platform": "tiktok",
       "type": "clip",
@@ -502,6 +487,21 @@
       "comments": 0,
       "guestSlug": "eliza-blank",
       "score": 8
+    },
+    {
+      "id": "7676675325195029761",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "he could've let everyone believe his team saved the day. he didn't 👀",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7676675325195029761?_r=1&u_code=0&region=GB&mid=7676675513809259282&preview_pb=0&sharer_language=en&_d=f0211h7kfifli4&share_item_id=7676675325195029761&source=h5_t",
+      "thumb": "images/feed/tt-7676675325195029761.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-22T02:21:02.000Z",
+      "views": 183,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 7
     },
     {
       "id": "7668489128450854145",
