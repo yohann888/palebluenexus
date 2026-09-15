@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T15:44:42.629Z",
+  "generatedAt": "2026-09-15T20:29:51.966Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -34,23 +34,7 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "listens": 400,
-      "score": 128
-    },
-    {
-      "id": "0KlF5RR8WXg",
-      "platform": "youtube",
-      "type": "video",
-      "title": "He Minted Fake Tokens, Drained the Pool, and Bragged in the Wrong Group Chat",
-      "url": "https://www.youtube.com/watch?v=0KlF5RR8WXg",
-      "thumb": "https://i.ytimg.com/vi/0KlF5RR8WXg/hqdefault.jpg",
-      "duration": "52:57",
-      "publishedAt": "2026-08-25T10:31:20.512Z",
-      "views": 458,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
-      "listens": 0,
-      "score": 22
+      "score": 127
     },
     {
       "id": "DS2-iheW6pI",
@@ -67,6 +51,22 @@
       "guestSlug": "nikola-borisov",
       "listens": 131,
       "score": 22
+    },
+    {
+      "id": "0KlF5RR8WXg",
+      "platform": "youtube",
+      "type": "video",
+      "title": "He Minted Fake Tokens, Drained the Pool, and Bragged in the Wrong Group Chat",
+      "url": "https://www.youtube.com/watch?v=0KlF5RR8WXg",
+      "thumb": "https://i.ytimg.com/vi/0KlF5RR8WXg/hqdefault.jpg",
+      "duration": "52:57",
+      "publishedAt": "2026-08-25T10:31:20.512Z",
+      "views": 458,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
+      "listens": 0,
+      "score": 21
     },
     {
       "id": "7679134235579485461",
@@ -444,21 +444,6 @@
       "score": 9
     },
     {
-      "id": "7676596820717391121",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "you're not choosing a chain, you're betting on which one outlives you 👀",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7676596820717391121?_r=1&u_code=0&region=GB&mid=7676597018021694216&preview_pb=0&sharer_language=en&_d=f0211h7kfifli4&share_item_id=7676596820717391121&source=h5_t",
-      "thumb": "images/feed/tt-7676596820717391121.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-21T21:16:36.000Z",
-      "views": 186,
-      "likes": 1,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 8
-    },
-    {
       "id": "7668120385975487761",
       "platform": "tiktok",
       "type": "clip",
@@ -487,6 +472,21 @@
       "comments": 0,
       "guestSlug": "eliza-blank",
       "score": 8
+    },
+    {
+      "id": "7676596820717391121",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "you're not choosing a chain, you're betting on which one outlives you 👀",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7676596820717391121?_r=1&u_code=0&region=GB&mid=7676597018021694216&preview_pb=0&sharer_language=en&_d=f0211h7kfifli4&share_item_id=7676596820717391121&source=h5_t",
+      "thumb": "images/feed/tt-7676596820717391121.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-21T21:16:36.000Z",
+      "views": 186,
+      "likes": 1,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 7
     },
     {
       "id": "7676675325195029761",
