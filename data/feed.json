@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T10:30:25.455Z",
+  "generatedAt": "2026-09-17T15:43:05.308Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -126,7 +126,7 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": "victor-lugli",
-      "score": 16
+      "score": 15
     },
     {
       "id": "7672478575848705288",
@@ -549,21 +549,6 @@
       "score": 7
     },
     {
-      "id": "7650248074366913793",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "The agency rollercoaster nobody warns you about 🎢",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7650248074366913793?_r=1&u_code=0&region=US&mid=7650248136447855377&preview_pb=0&sharer_language=en&_d=f01i7jf035g918&share_item_id=7650248074366913793&source=h5_t",
-      "thumb": "images/feed/tt-7650248074366913793.jpg",
-      "duration": "",
-      "publishedAt": "2026-06-11T21:09:40.000Z",
-      "views": 635,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 7
-    },
-    {
       "id": "7649799839106075924",
       "platform": "tiktok",
       "type": "clip",
@@ -577,6 +562,21 @@
       "comments": 0,
       "guestSlug": null,
       "score": 7
+    },
+    {
+      "id": "7650248074366913793",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "The agency rollercoaster nobody warns you about 🎢",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7650248074366913793?_r=1&u_code=0&region=US&mid=7650248136447855377&preview_pb=0&sharer_language=en&_d=f01i7jf035g918&share_item_id=7650248074366913793&source=h5_t",
+      "thumb": "images/feed/tt-7650248074366913793.jpg",
+      "duration": "",
+      "publishedAt": "2026-06-11T21:09:40.000Z",
+      "views": 635,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 6
     },
     {
       "id": "7650246052779478292",
