@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T09:48:06.437Z",
+  "generatedAt": "2026-09-19T14:52:03.803Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -80,7 +80,7 @@
       "likes": 4,
       "comments": 0,
       "guestSlug": null,
-      "score": 18
+      "score": 17
     },
     {
       "id": "7675133703957368065",
@@ -504,21 +504,6 @@
       "score": 7
     },
     {
-      "id": "7665190322183425287",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "His dad had Parkinson's. His cousin had ALS. So he recruited high school kids to grind up every drug in the pharmacy and build the first library of its kind. The NIH wouldn't fund it. He did it anyway.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7665190322183425287?_r=1&u_code=0&region=US&mid=7665190353377921810&preview_pb=0&sharer_language=en&_d=f01l7ldf8i2mi0&share_item_id=7665190322183425287&source=h5_t",
-      "thumb": "images/feed/tt-7665190322183425287.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-22T03:33:10.000Z",
-      "views": 384,
-      "likes": 2,
-      "comments": 0,
-      "guestSlug": "steve-gullans",
-      "score": 7
-    },
-    {
       "id": "7659991142372494609",
       "platform": "tiktok",
       "type": "clip",
@@ -547,6 +532,21 @@
       "comments": 0,
       "guestSlug": null,
       "score": 7
+    },
+    {
+      "id": "7665190322183425287",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "His dad had Parkinson's. His cousin had ALS. So he recruited high school kids to grind up every drug in the pharmacy and build the first library of its kind. The NIH wouldn't fund it. He did it anyway.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7665190322183425287?_r=1&u_code=0&region=US&mid=7665190353377921810&preview_pb=0&sharer_language=en&_d=f01l7ldf8i2mi0&share_item_id=7665190322183425287&source=h5_t",
+      "thumb": "images/feed/tt-7665190322183425287.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-22T03:33:10.000Z",
+      "views": 384,
+      "likes": 2,
+      "comments": 0,
+      "guestSlug": "steve-gullans",
+      "score": 6
     },
     {
       "id": "7676675325195029761",
@@ -592,21 +592,6 @@
       "comments": 1,
       "guestSlug": null,
       "score": 6
-    },
-    {
-      "id": "7668138602328640785",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Age doesn't predict founder success. Neither does experience. Vadim says the real variable is how often you're willing to bet.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668138602328640785?_r=1&u_code=0&region=US&mid=7668138906823707412&preview_pb=0&sharer_language=en&_d=f01l7ldf8i2mi0&share_item_id=7668138602328640785&source=h5_t",
-      "thumb": "images/feed/tt-7668138602328640785.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-30T02:15:02.000Z",
-      "views": 228,
-      "likes": 3,
-      "comments": 0,
-      "guestSlug": "vadim-peskov",
-      "score": 5
     },
     {
       "id": "7640166785148275969",
@@ -742,6 +727,21 @@
       "comments": 0,
       "guestSlug": "jack-couch",
       "score": 5
+    },
+    {
+      "id": "7668138602328640785",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Age doesn't predict founder success. Neither does experience. Vadim says the real variable is how often you're willing to bet.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668138602328640785?_r=1&u_code=0&region=US&mid=7668138906823707412&preview_pb=0&sharer_language=en&_d=f01l7ldf8i2mi0&share_item_id=7668138602328640785&source=h5_t",
+      "thumb": "images/feed/tt-7668138602328640785.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-30T02:15:02.000Z",
+      "views": 228,
+      "likes": 3,
+      "comments": 0,
+      "guestSlug": "vadim-peskov",
+      "score": 4
     },
     {
       "id": "CgWRHHS7A_g",
