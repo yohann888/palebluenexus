@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T15:47:06.364Z",
+  "generatedAt": "2026-09-22T20:31:18.762Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -34,7 +34,7 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "listens": 400,
-      "score": 128
+      "score": 127
     },
     {
       "id": "DS2-iheW6pI",
@@ -174,21 +174,6 @@
       "score": 13
     },
     {
-      "id": "7669260082256825617",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "One of Matt Blumberg's clients fired her entire writing team and went all in on AI. Now her remaining team spends 80% of its time fixing what the AI writes. Markup AI's CEO breaks down what that shift actually looks like.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7669260082256825617?_r=1&u_code=0&region=GB&mid=7669260148338199316&preview_pb=0&sharer_language=en&_d=f01gajc0m67981&share_item_id=7669260082256825617&source=h5_t",
-      "thumb": "images/feed/tt-7669260082256825617.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-02T02:46:02.000Z",
-      "views": 643,
-      "likes": 3,
-      "comments": 0,
-      "guestSlug": "matt-blumberg",
-      "score": 13
-    },
-    {
       "id": "7669130833411788040",
       "platform": "tiktok",
       "type": "clip",
@@ -202,6 +187,21 @@
       "comments": 0,
       "guestSlug": "matt-blumberg",
       "score": 13
+    },
+    {
+      "id": "7669260082256825617",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "One of Matt Blumberg's clients fired her entire writing team and went all in on AI. Now her remaining team spends 80% of its time fixing what the AI writes. Markup AI's CEO breaks down what that shift actually looks like.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7669260082256825617?_r=1&u_code=0&region=GB&mid=7669260148338199316&preview_pb=0&sharer_language=en&_d=f01gajc0m67981&share_item_id=7669260082256825617&source=h5_t",
+      "thumb": "images/feed/tt-7669260082256825617.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-02T02:46:02.000Z",
+      "views": 643,
+      "likes": 3,
+      "comments": 0,
+      "guestSlug": "matt-blumberg",
+      "score": 12
     },
     {
       "id": "7634164931818016016",
