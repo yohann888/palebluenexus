@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T15:36:51.336Z",
+  "generatedAt": "2026-09-23T20:43:57.301Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -34,7 +34,7 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "listens": 400,
-      "score": 128
+      "score": 127
     },
     {
       "id": "DS2-iheW6pI",
@@ -354,21 +354,6 @@
       "score": 9
     },
     {
-      "id": "7675037796507208977",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "He agreed the pain was real. Then he told me it was the wrong thing to focus on.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7675037796507208977?_r=1&u_code=0&region=US&mid=7675037851934919442&preview_pb=0&sharer_language=en&_d=f01f6l7m21ljhg&share_item_id=7675037796507208977&source=h5_t",
-      "thumb": "images/feed/tt-7675037796507208977.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-17T16:26:30.000Z",
-      "views": 278,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 8
-    },
-    {
       "id": "7673210695676218642",
       "platform": "tiktok",
       "type": "clip",
@@ -414,6 +399,21 @@
       "score": 8
     },
     {
+      "id": "7675037796507208977",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "He agreed the pain was real. Then he told me it was the wrong thing to focus on.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7675037796507208977?_r=1&u_code=0&region=US&mid=7675037851934919442&preview_pb=0&sharer_language=en&_d=f01f6l7m21ljhg&share_item_id=7675037796507208977&source=h5_t",
+      "thumb": "images/feed/tt-7675037796507208977.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-17T16:26:30.000Z",
+      "views": 278,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 7
+    },
+    {
       "id": "7673335314563484946",
       "platform": "tiktok",
       "type": "clip",
@@ -441,21 +441,6 @@
       "likes": 0,
       "comments": 0,
       "guestSlug": "matt-blumberg",
-      "score": 7
-    },
-    {
-      "id": "7668120385975487761",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Vadim explains where the time actually goes now: not code, decisions.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668120385975487761?_r=1&u_code=0&region=US&mid=7668120697385847572&preview_pb=0&sharer_language=en&_d=f01lg8kd11e94b&share_item_id=7668120385975487761&source=h5_t",
-      "thumb": "images/feed/tt-7668120385975487761.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-30T01:04:23.000Z",
-      "views": 356,
-      "likes": 5,
-      "comments": 1,
-      "guestSlug": "vadim-peskov",
       "score": 7
     },
     {
@@ -502,6 +487,21 @@
       "comments": 0,
       "guestSlug": null,
       "score": 7
+    },
+    {
+      "id": "7668120385975487761",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Vadim explains where the time actually goes now: not code, decisions.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668120385975487761?_r=1&u_code=0&region=US&mid=7668120697385847572&preview_pb=0&sharer_language=en&_d=f01lg8kd11e94b&share_item_id=7668120385975487761&source=h5_t",
+      "thumb": "images/feed/tt-7668120385975487761.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-30T01:04:23.000Z",
+      "views": 356,
+      "likes": 5,
+      "comments": 1,
+      "guestSlug": "vadim-peskov",
+      "score": 6
     },
     {
       "id": "7676675325195029761",
