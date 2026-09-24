@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T10:34:12.997Z",
+  "generatedAt": "2026-09-24T15:57:38.107Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -81,7 +81,7 @@
       "comments": 0,
       "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
       "listens": 0,
-      "score": 16
+      "score": 15
     },
     {
       "id": "7679134235579485461",
@@ -261,7 +261,7 @@
       "likes": 23,
       "comments": 0,
       "guestSlug": "eliza-blank",
-      "score": 10
+      "score": 9
     },
     {
       "id": "7679292017691594005",
@@ -639,21 +639,6 @@
       "score": 5
     },
     {
-      "id": "7639360314919619856",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Three Moves, One Home: Why Durham, NC",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7639360314919619856?_r=1&u_code=0&region=GB&mid=7639360364903140112&preview_pb=0&sharer_language=en&_d=f01jhk0ak9j042&share_item_id=7639360314919619856&source=h5_t",
-      "thumb": "images/feed/tt-7639360314919619856.jpg",
-      "duration": "",
-      "publishedAt": "2026-05-13T12:59:40.000Z",
-      "views": 602,
-      "likes": 1,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 5
-    },
-    {
       "id": "7638993004690263304",
       "platform": "tiktok",
       "type": "clip",
@@ -727,6 +712,21 @@
       "comments": 0,
       "guestSlug": "jack-couch",
       "score": 5
+    },
+    {
+      "id": "7639360314919619856",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Three Moves, One Home: Why Durham, NC",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7639360314919619856?_r=1&u_code=0&region=GB&mid=7639360364903140112&preview_pb=0&sharer_language=en&_d=f01jhk0ak9j042&share_item_id=7639360314919619856&source=h5_t",
+      "thumb": "images/feed/tt-7639360314919619856.jpg",
+      "duration": "",
+      "publishedAt": "2026-05-13T12:59:40.000Z",
+      "views": 602,
+      "likes": 1,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 4
     },
     {
       "id": "CgWRHHS7A_g",
