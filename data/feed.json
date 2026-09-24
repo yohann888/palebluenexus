@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T15:57:38.107Z",
+  "generatedAt": "2026-09-24T20:49:21.104Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -34,7 +34,7 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "listens": 400,
-      "score": 128
+      "score": 127
     },
     {
       "id": "DS2-iheW6pI",
@@ -144,21 +144,6 @@
       "score": 13
     },
     {
-      "id": "7672478575848705288",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Everyone can build a webpage now. That's exactly the problem. The floor came up and most founders didn't notice.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7672478575848705288?_r=1&u_code=0&region=US&mid=7672478620514044690&preview_pb=0&sharer_language=en&_d=f0229k9abf5379&share_item_id=7672478575848705288&source=h5_t",
-      "thumb": "images/feed/tt-7672478575848705288.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-10T18:55:21.000Z",
-      "views": 557,
-      "likes": 5,
-      "comments": 0,
-      "guestSlug": "victor-lugli",
-      "score": 13
-    },
-    {
       "id": "7671349535423122709",
       "platform": "tiktok",
       "type": "clip",
@@ -174,6 +159,21 @@
       "score": 13
     },
     {
+      "id": "7672478575848705288",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Everyone can build a webpage now. That's exactly the problem. The floor came up and most founders didn't notice.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7672478575848705288?_r=1&u_code=0&region=US&mid=7672478620514044690&preview_pb=0&sharer_language=en&_d=f0229k9abf5379&share_item_id=7672478575848705288&source=h5_t",
+      "thumb": "images/feed/tt-7672478575848705288.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-10T18:55:21.000Z",
+      "views": 557,
+      "likes": 5,
+      "comments": 0,
+      "guestSlug": "victor-lugli",
+      "score": 12
+    },
+    {
       "id": "7669130833411788040",
       "platform": "tiktok",
       "type": "clip",
@@ -186,7 +186,7 @@
       "likes": 4,
       "comments": 0,
       "guestSlug": "matt-blumberg",
-      "score": 13
+      "score": 12
     },
     {
       "id": "7669260082256825617",
@@ -324,21 +324,6 @@
       "score": 9
     },
     {
-      "id": "7659581662187080977",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "He flew to Omaha every year for the Berkshire meeting. Then Munger passed, and at the first meeting without him he caught himself thinking: what do I do with my shares when Buffett's gone? He didn't buy the company. He bought his trust in one person. That question became a whole thesis. Full ep on Pale Blue Nexus. Hashtags:",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7659581662187080977?_r=1&u_code=0&region=US&mid=7659581857110231828&preview_pb=0&sharer_language=en&_d=f01f3cgekd5d2c&share_item_id=7659581662187080977&source=h5_t",
-      "thumb": "images/feed/tt-7659581662187080977.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-07T00:49:29.000Z",
-      "views": 670,
-      "likes": 8,
-      "comments": 0,
-      "guestSlug": "haren-bhakta",
-      "score": 9
-    },
-    {
       "id": "7620875580254293269",
       "platform": "tiktok",
       "type": "clip",
@@ -352,6 +337,21 @@
       "comments": 1,
       "guestSlug": "jim-rogers",
       "score": 9
+    },
+    {
+      "id": "7659581662187080977",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "He flew to Omaha every year for the Berkshire meeting. Then Munger passed, and at the first meeting without him he caught himself thinking: what do I do with my shares when Buffett's gone? He didn't buy the company. He bought his trust in one person. That question became a whole thesis. Full ep on Pale Blue Nexus. Hashtags:",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7659581662187080977?_r=1&u_code=0&region=US&mid=7659581857110231828&preview_pb=0&sharer_language=en&_d=f01f3cgekd5d2c&share_item_id=7659581662187080977&source=h5_t",
+      "thumb": "images/feed/tt-7659581662187080977.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-07T00:49:29.000Z",
+      "views": 670,
+      "likes": 8,
+      "comments": 0,
+      "guestSlug": "haren-bhakta",
+      "score": 8
     },
     {
       "id": "7673210695676218642",
@@ -471,7 +471,7 @@
       "likes": 8,
       "comments": 0,
       "guestSlug": null,
-      "score": 7
+      "score": 6
     },
     {
       "id": "7676596820717391121",
