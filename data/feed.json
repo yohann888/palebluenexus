@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T15:59:14.575Z",
+  "generatedAt": "2026-09-25T20:47:09.643Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -81,7 +81,7 @@
       "comments": 0,
       "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
       "listens": 0,
-      "score": 16
+      "score": 15
     },
     {
       "id": "7679134235579485461",
@@ -246,7 +246,7 @@
       "likes": 20,
       "comments": 2,
       "guestSlug": "eliza-blank",
-      "score": 10
+      "score": 9
     },
     {
       "id": "7679292017691594005",
@@ -259,21 +259,6 @@
       "publishedAt": "2026-08-29T03:35:02.000Z",
       "views": 247,
       "likes": 1,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 9
-    },
-    {
-      "id": "7662921800166247697",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Every productivity video tells you to add something. This CEO's entire system is one question: what can I remove? He builds focus tech, and he runs his company the same way. Full episode on YouTube, Spotify and Apple.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7662921800166247697?_r=1&u_code=0&region=US&mid=7662921869793708820&preview_pb=0&sharer_language=en&_d=f01e130eada1jb&share_item_id=7662921800166247697&source=h5_t",
-      "thumb": "images/feed/tt-7662921800166247697.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-16T00:50:24.000Z",
-      "views": 605,
-      "likes": 5,
       "comments": 0,
       "guestSlug": null,
       "score": 9
@@ -337,6 +322,21 @@
       "comments": 1,
       "guestSlug": "jim-rogers",
       "score": 9
+    },
+    {
+      "id": "7662921800166247697",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Every productivity video tells you to add something. This CEO's entire system is one question: what can I remove? He builds focus tech, and he runs his company the same way. Full episode on YouTube, Spotify and Apple.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7662921800166247697?_r=1&u_code=0&region=US&mid=7662921869793708820&preview_pb=0&sharer_language=en&_d=f01e130eada1jb&share_item_id=7662921800166247697&source=h5_t",
+      "thumb": "images/feed/tt-7662921800166247697.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-16T00:50:24.000Z",
+      "views": 605,
+      "likes": 5,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 8
     },
     {
       "id": "7673210695676218642",
