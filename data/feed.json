@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T15:10:12.911Z",
+  "generatedAt": "2026-09-26T20:14:37.184Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -34,7 +34,7 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "listens": 400,
-      "score": 128
+      "score": 127
     },
     {
       "id": "DS2-iheW6pI",
@@ -942,21 +942,6 @@
       "score": 2
     },
     {
-      "id": "7662223526576835847",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Everything you touch came on a truck. Nobody thinks about it. Your food works the same way, and it's the one thing we can't afford to get wrong.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7662223526576835847?_r=1&u_code=0&region=US&mid=7662223555203877640&preview_pb=0&sharer_language=en&_d=f01ii42l72374e&share_item_id=7662223526576835847&source=h5_t",
-      "thumb": "images/feed/tt-7662223526576835847.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-14T03:40:34.000Z",
-      "views": 112,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": "eliza-blank",
-      "score": 2
-    },
-    {
       "id": "7661477434092555538",
       "platform": "tiktok",
       "type": "clip",
@@ -970,6 +955,21 @@
       "comments": 0,
       "guestSlug": "eliza-blank",
       "score": 2
+    },
+    {
+      "id": "7662223526576835847",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Everything you touch came on a truck. Nobody thinks about it. Your food works the same way, and it's the one thing we can't afford to get wrong.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7662223526576835847?_r=1&u_code=0&region=US&mid=7662223555203877640&preview_pb=0&sharer_language=en&_d=f01ii42l72374e&share_item_id=7662223526576835847&source=h5_t",
+      "thumb": "images/feed/tt-7662223526576835847.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-14T03:40:34.000Z",
+      "views": 112,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": "eliza-blank",
+      "score": 1
     },
     {
       "id": "glDhnwRe96Q",
