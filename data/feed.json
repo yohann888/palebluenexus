@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T10:21:19.514Z",
+  "generatedAt": "2026-09-26T15:10:12.911Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -81,7 +81,7 @@
       "comments": 0,
       "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
       "listens": 0,
-      "score": 16
+      "score": 15
     },
     {
       "id": "7675133703957368065",
@@ -141,7 +141,7 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": "victor-lugli",
-      "score": 13
+      "score": 12
     },
     {
       "id": "7672478575848705288",
@@ -324,21 +324,6 @@
       "score": 9
     },
     {
-      "id": "7673210695676218642",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "The cloud already taught us this lesson and we skipped it",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7673210695676218642?_r=1&u_code=0&region=US&mid=7673210744309140232&preview_pb=0&sharer_language=en&_d=f01ichj8l8j3f1&share_item_id=7673210695676218642&source=h5_t",
-      "thumb": "images/feed/tt-7673210695676218642.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-12T18:16:24.000Z",
-      "views": 332,
-      "likes": 4,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 8
-    },
-    {
       "id": "7662921800166247697",
       "platform": "tiktok",
       "type": "clip",
@@ -397,6 +382,21 @@
       "comments": 0,
       "guestSlug": "haren-bhakta",
       "score": 8
+    },
+    {
+      "id": "7673210695676218642",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "The cloud already taught us this lesson and we skipped it",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7673210695676218642?_r=1&u_code=0&region=US&mid=7673210744309140232&preview_pb=0&sharer_language=en&_d=f01ichj8l8j3f1&share_item_id=7673210695676218642&source=h5_t",
+      "thumb": "images/feed/tt-7673210695676218642.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-12T18:16:24.000Z",
+      "views": 332,
+      "likes": 4,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 7
     },
     {
       "id": "7675037796507208977",
