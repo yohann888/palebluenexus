@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T10:53:09.867Z",
+  "generatedAt": "2026-09-27T15:51:06.399Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -81,7 +81,7 @@
       "comments": 0,
       "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
       "listens": 0,
-      "score": 16
+      "score": 15
     },
     {
       "id": "7644043006500228369",
@@ -399,21 +399,6 @@
       "score": 7
     },
     {
-      "id": "7673335314563484946",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "He builds this stuff for a living and said the honest answer is nobody knows",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7673335314563484946?_r=1&u_code=0&region=US&mid=7673335366951176968&preview_pb=0&sharer_language=en&_d=f01bcc54kmhej2&share_item_id=7673335314563484946&source=h5_t",
-      "thumb": "images/feed/tt-7673335314563484946.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-13T02:20:02.000Z",
-      "views": 295,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 7
-    },
-    {
       "id": "7673210695676218642",
       "platform": "tiktok",
       "type": "clip",
@@ -457,6 +442,21 @@
       "comments": 0,
       "guestSlug": "eliza-blank",
       "score": 7
+    },
+    {
+      "id": "7673335314563484946",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "He builds this stuff for a living and said the honest answer is nobody knows",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7673335314563484946?_r=1&u_code=0&region=US&mid=7673335366951176968&preview_pb=0&sharer_language=en&_d=f01bcc54kmhej2&share_item_id=7673335314563484946&source=h5_t",
+      "thumb": "images/feed/tt-7673335314563484946.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-13T02:20:02.000Z",
+      "views": 295,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 6
     },
     {
       "id": "7668489128450854145",
