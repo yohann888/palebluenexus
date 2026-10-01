@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T17:37:37.229Z",
+  "generatedAt": "2026-10-01T22:02:41.665Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -34,7 +34,7 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "listens": 400,
-      "score": 128
+      "score": 127
     },
     {
       "id": "DS2-iheW6pI",
@@ -81,7 +81,7 @@
       "comments": 0,
       "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
       "listens": 0,
-      "score": 16
+      "score": 15
     },
     {
       "id": "7644043006500228369",
@@ -534,21 +534,6 @@
       "score": 6
     },
     {
-      "id": "7676675325195029761",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "he could've let everyone believe his team saved the day. he didn't 👀",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7676675325195029761?_r=1&u_code=0&region=GB&mid=7676675513809259282&preview_pb=0&sharer_language=en&_d=f020mde4h7akjf&share_item_id=7676675325195029761&source=h5_t",
-      "thumb": "images/feed/tt-7676675325195029761.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-22T02:21:02.000Z",
-      "views": 183,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 5
-    },
-    {
       "id": "7676596820717391121",
       "platform": "tiktok",
       "type": "clip",
@@ -652,6 +637,21 @@
       "comments": 0,
       "guestSlug": "austin-armstrong",
       "score": 5
+    },
+    {
+      "id": "7676675325195029761",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "he could've let everyone believe his team saved the day. he didn't 👀",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7676675325195029761?_r=1&u_code=0&region=GB&mid=7676675513809259282&preview_pb=0&sharer_language=en&_d=f020mde4h7akjf&share_item_id=7676675325195029761&source=h5_t",
+      "thumb": "images/feed/tt-7676675325195029761.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-22T02:21:02.000Z",
+      "views": 183,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 4
     },
     {
       "id": "CgWRHHS7A_g",
