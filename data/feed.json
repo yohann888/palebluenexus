@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T10:42:23.390Z",
+  "generatedAt": "2026-10-03T15:16:17.991Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -34,7 +34,7 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "listens": 400,
-      "score": 110
+      "score": 109
     },
     {
       "id": "DS2-iheW6pI",
@@ -261,7 +261,7 @@
       "likes": 23,
       "comments": 0,
       "guestSlug": "eliza-blank",
-      "score": 9
+      "score": 8
     },
     {
       "id": "7662921800166247697",
@@ -354,21 +354,6 @@
       "score": 7
     },
     {
-      "id": "7673210695676218642",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "The cloud already taught us this lesson and we skipped it",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7673210695676218642?_r=1&u_code=0&region=GB&mid=7673210744309140232&preview_pb=0&sharer_language=en&_d=f01mkbc0fml5bb&share_item_id=7673210695676218642&source=h5_t",
-      "thumb": "images/feed/tt-7673210695676218642.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-12T18:16:24.000Z",
-      "views": 332,
-      "likes": 4,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 7
-    },
-    {
       "id": "7662254278060297473",
       "platform": "tiktok",
       "type": "clip",
@@ -412,6 +397,21 @@
       "comments": 0,
       "guestSlug": "eliza-blank",
       "score": 7
+    },
+    {
+      "id": "7673210695676218642",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "The cloud already taught us this lesson and we skipped it",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7673210695676218642?_r=1&u_code=0&region=GB&mid=7673210744309140232&preview_pb=0&sharer_language=en&_d=f01mkbc0fml5bb&share_item_id=7673210695676218642&source=h5_t",
+      "thumb": "images/feed/tt-7673210695676218642.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-12T18:16:24.000Z",
+      "views": 332,
+      "likes": 4,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 6
     },
     {
       "id": "7675037796507208977",
