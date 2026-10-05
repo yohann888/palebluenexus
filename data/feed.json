@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T12:45:40.131Z",
+  "generatedAt": "2026-10-05T23:23:06.541Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -34,7 +34,7 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "listens": 400,
-      "score": 110
+      "score": 109
     },
     {
       "id": "DS2-iheW6pI",
@@ -231,7 +231,7 @@
       "likes": 13,
       "comments": 0,
       "guestSlug": "steve-gullans",
-      "score": 9
+      "score": 8
     },
     {
       "id": "7662213620008373512",
@@ -399,21 +399,6 @@
       "score": 6
     },
     {
-      "id": "7673335314563484946",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "He builds this stuff for a living and said the honest answer is nobody knows",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7673335314563484946?_r=1&u_code=0&region=US&mid=7673335366951176968&preview_pb=0&sharer_language=en&_d=f01bmf247d83ab&share_item_id=7673335314563484946&source=h5_t",
-      "thumb": "images/feed/tt-7673335314563484946.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-13T02:20:02.000Z",
-      "views": 295,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 6
-    },
-    {
       "id": "7673210695676218642",
       "platform": "tiktok",
       "type": "clip",
@@ -474,21 +459,6 @@
       "score": 6
     },
     {
-      "id": "7650248074366913793",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "The agency rollercoaster nobody warns you about 🎢",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7650248074366913793?_r=1&u_code=0&region=US&mid=7650248136447855377&preview_pb=0&sharer_language=en&_d=f0224jfbbd2j34&share_item_id=7650248074366913793&source=h5_t",
-      "thumb": "images/feed/tt-7650248074366913793.jpg",
-      "duration": "",
-      "publishedAt": "2026-06-11T21:09:40.000Z",
-      "views": 638,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 6
-    },
-    {
       "id": "7649799839106075924",
       "platform": "tiktok",
       "type": "clip",
@@ -502,6 +472,36 @@
       "comments": 0,
       "guestSlug": null,
       "score": 6
+    },
+    {
+      "id": "7673335314563484946",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "He builds this stuff for a living and said the honest answer is nobody knows",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7673335314563484946?_r=1&u_code=0&region=US&mid=7673335366951176968&preview_pb=0&sharer_language=en&_d=f01bmf247d83ab&share_item_id=7673335314563484946&source=h5_t",
+      "thumb": "images/feed/tt-7673335314563484946.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-13T02:20:02.000Z",
+      "views": 295,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 5
+    },
+    {
+      "id": "7650248074366913793",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "The agency rollercoaster nobody warns you about 🎢",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7650248074366913793?_r=1&u_code=0&region=US&mid=7650248136447855377&preview_pb=0&sharer_language=en&_d=f0224jfbbd2j34&share_item_id=7650248074366913793&source=h5_t",
+      "thumb": "images/feed/tt-7650248074366913793.jpg",
+      "duration": "",
+      "publishedAt": "2026-06-11T21:09:40.000Z",
+      "views": 638,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 5
     },
     {
       "id": "7668489128450854145",
