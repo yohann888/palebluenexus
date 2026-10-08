@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T12:17:45.166Z",
+  "generatedAt": "2026-10-08T22:31:23.885Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -34,7 +34,7 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "listens": 400,
-      "score": 110
+      "score": 109
     },
     {
       "id": "DS2-iheW6pI",
@@ -279,21 +279,6 @@
       "score": 8
     },
     {
-      "id": "7659988634136825095",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "He found every stock from 2000 to 2025 that turned $10,000 into over a million. 19 of the 21 had insiders owning 5%+ of the company. Skin in the game shows up in the returns. Full episode in bio.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7659988634136825095?_r=1&u_code=0&region=GB&mid=7659988673418693384&preview_pb=0&sharer_language=en&_d=f01d63ha1mljeg&share_item_id=7659988634136825095&source=h5_t",
-      "thumb": "images/feed/tt-7659988634136825095.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-08T03:08:09.000Z",
-      "views": 691,
-      "likes": 3,
-      "comments": 1,
-      "guestSlug": "haren-bhakta",
-      "score": 8
-    },
-    {
       "id": "7620875580254293269",
       "platform": "tiktok",
       "type": "clip",
@@ -307,6 +292,21 @@
       "comments": 1,
       "guestSlug": "jim-rogers",
       "score": 8
+    },
+    {
+      "id": "7659988634136825095",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "He found every stock from 2000 to 2025 that turned $10,000 into over a million. 19 of the 21 had insiders owning 5%+ of the company. Skin in the game shows up in the returns. Full episode in bio.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7659988634136825095?_r=1&u_code=0&region=GB&mid=7659988673418693384&preview_pb=0&sharer_language=en&_d=f01d63ha1mljeg&share_item_id=7659988634136825095&source=h5_t",
+      "thumb": "images/feed/tt-7659988634136825095.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-08T03:08:09.000Z",
+      "views": 691,
+      "likes": 3,
+      "comments": 1,
+      "guestSlug": "haren-bhakta",
+      "score": 7
     },
     {
       "id": "7662921800166247697",
