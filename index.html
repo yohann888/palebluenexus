@@ -971,6 +971,22 @@
       margin-left: 0;
       margin-right: 0;
     }
+    .below-hero-newsletter .newsletter-box > .cta-btn {
+      display: inline-block;
+      padding: 0.85rem 1.8rem;
+      background: var(--accent-blue);
+      color: #fff;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .below-hero-newsletter .newsletter-box > .cta-btn:hover,
+    .below-hero-newsletter .newsletter-box > .cta-btn:focus-visible {
+      background: #A8DADC;
+      transform: translateY(-1px);
+    }
     .below-hero-newsletter .newsletter-form {
       flex-direction: column;
       gap: 0.6rem;
@@ -2055,7 +2071,7 @@
           <p>Yohann Calpu has been making podcasts for nine years, across five shows. The operating principle is genuine curiosity. He sent Jim Rogers his first cold email seventeen years before they recorded together. That is how Pale Blue Nexus is built.</p>
           <p>He is a father of two. Off the mic, he mountain bikes, hikes, gardens, and adds to a growing collection of Magic: The Gathering cards, comics, and video games. He hosts from Caledonia, Ontario, in the Grand River corridor.</p>
           <p>The show explores AI, space, physics, and the technologies reshaping our species, through long-form conversations with the founders, investors, and operators actually doing the work. The frame is Carl Sagan's. Everything we cover happens here, on the pale blue dot, while everything around us changes.</p>
-          <p>Yohann is also the co-founder of Aloomii, an AI operations company building agent fleets for relationship-driven businesses.</p>
+          <p>Yohann is also the co-founder of Aloomii, which builds software, media and events for teams anywhere.</p>
           <a href="https://www.linkedin.com/in/yohanncalpu/" target="_blank" rel="noopener noreferrer" class="host-linkedin">Connect on LinkedIn &rarr;</a>
         </div>
       </div>
@@ -2233,18 +2249,13 @@
     <div class="below-hero-grid">
       <!-- Aloomii Newsletter -->
       <div class="below-hero-newsletter fade-up" id="subscribe">
-        <p class="section-label">Subscribe to <span style="color: #FFFFFF;">Treats from Aloomii</span></p>
+        <p class="section-label">Subscribe to The Last 20%</p>
         <p class="section-subtitle">
-          Newsletter highlighting new PBN episodes, and signals we are seeing, delivered to your inbox.
+          AI handles 80% of the work. The Last 20% is where deals are won or lost. Real lessons from the field.
         </p>
         <div class="newsletter-box">
-          <form class="newsletter-form" id="newsletter-form">
-            <input type="email" id="newsletter-email" placeholder="your@email.com" required />
-            <button type="submit" id="newsletter-btn">Subscribe</button>
-          </form>
-          <p class="newsletter-note" id="newsletter-note">No spam, no hype. Unsubscribe anytime.</p>
+          <a class="cta-btn" href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7445126674708451328" target="_blank" rel="noopener">Subscribe on LinkedIn</a>
         </div>
-        <iframe name="beehiiv-hidden" src="https://subscribe-forms.beehiiv.com/b86bf838-de7c-428d-b89f-be9dec65cc3e" style="display:none" tabindex="-1" aria-hidden="true"></iframe>
       </div>
     </div>
   </div>
@@ -2346,6 +2357,7 @@
         <p class="section-subtitle" style="margin: 1rem auto 0;">
           In a world flooded with algorithmic feeds and AI-generated noise, we offer something different, real humans exploring the technologies shaping our future with honesty and wonder.
         </p>
+        <p class="section-subtitle" style="margin: .4rem auto 1.5rem; font-size: .9rem;">Produced by <a href="https://aloomii.com/studio" target="_blank" rel="noopener" style="color: var(--accent-warm); text-decoration: none;">Aloomii</a>, the studio behind the show.</p>
       </div>
       <div class="about-grid fade-up">
         <div class="about-card">
@@ -2414,7 +2426,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      &copy; 2026 Pale Blue Nexus. All rights reserved.
+      &copy; 2026 Pale Blue Nexus. All rights reserved. &middot; Produced by <a href="https://aloomii.com/studio" target="_blank" rel="noopener">Aloomii</a>
     </div>
   </footer>
   <!-- ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê UNICORN STUDIO ‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê‚ïê -->
@@ -2456,53 +2468,6 @@
     }, { passive: true });
     window.addEventListener('load', revealInView);
     revealInView();
-    // Newsletter ‚Üí Beehiiv
-    // Submits to your Beehiiv list via a hidden form POST targeting a hidden iframe.
-    // Your custom form styling stays exactly the same ‚Äî Beehiiv handles the subscription.
-    const BEEHIIV_FORM_ID = 'b86bf838-de7c-428d-b89f-be9dec65cc3e';
-    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const emailInput = document.getElementById('newsletter-email');
-      const btn = document.getElementById('newsletter-btn');
-      const note = document.getElementById('newsletter-note');
-      const email = emailInput.value;
-      if (!email) return;
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-      // Create a dynamic form that POSTs to Beehiiv, targeting the hidden iframe
-      const beehiivForm = document.createElement('form');
-      beehiivForm.method = 'POST';
-      beehiivForm.action = 'https://subscribe-forms.beehiiv.com/api/submit';
-      beehiivForm.target = 'beehiiv-hidden';
-      beehiivForm.style.display = 'none';
-      // Add form_id
-      const formIdField = document.createElement('input');
-      formIdField.type = 'hidden';
-      formIdField.name = 'form_id';
-      formIdField.value = BEEHIIV_FORM_ID;
-      beehiivForm.appendChild(formIdField);
-      // Add email
-      const emailField = document.createElement('input');
-      emailField.type = 'hidden';
-      emailField.name = 'form[email]';
-      emailField.value = email;
-      beehiivForm.appendChild(emailField);
-      // Submit the form into the hidden iframe
-      document.body.appendChild(beehiivForm);
-      beehiivForm.submit();
-      document.body.removeChild(beehiivForm);
-      // Show success
-      btn.textContent = 'Subscribed!';
-      btn.style.background = '#D4A84B';
-      note.textContent = 'You\'re in! We\'ll be in touch.';
-      emailInput.value = '';
-      setTimeout(() => {
-        btn.textContent = 'Subscribe';
-        btn.style.background = '';
-        btn.disabled = false;
-        note.textContent = 'No spam, no hype. Unsubscribe anytime.';
-      }, 3000);
-    });
   </script>
 </body>
 </html<a href="/episodes/jack-couch/" class="episode-card-new fade-up">
