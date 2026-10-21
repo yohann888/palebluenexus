@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T10:39:42.074Z",
+  "generatedAt": "2026-10-21T16:09:33.621Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -66,7 +66,7 @@
       "comments": 0,
       "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
       "listens": 0,
-      "score": 16
+      "score": 15
     },
     {
       "id": "7655297314592017672",
@@ -81,7 +81,7 @@
       "likes": 15,
       "comments": 1,
       "guestSlug": "eliza-blank",
-      "score": 15
+      "score": 14
     },
     {
       "id": "7644043006500228369",
@@ -414,21 +414,6 @@
       "score": 5
     },
     {
-      "id": "7671444882254302472",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Who checks the AI that's checking your content? Matt Blumberg of Markup AI says every agent scores its findings into low, medium, and high risk. High risk goes to a human, the rest gets fixed automatically, and they run agents that check their own agents.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7671444882254302472?_r=1&u_code=0&region=US&mid=7671444911276739346&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7671444882254302472&source=h5_t",
-      "thumb": "images/feed/tt-7671444882254302472.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-08T00:04:04.000Z",
-      "views": 336,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": "matt-blumberg",
-      "score": 5
-    },
-    {
       "id": "7659991142372494609",
       "platform": "tiktok",
       "type": "clip",
@@ -487,6 +472,21 @@
       "comments": 0,
       "guestSlug": null,
       "score": 5
+    },
+    {
+      "id": "7671444882254302472",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Who checks the AI that's checking your content? Matt Blumberg of Markup AI says every agent scores its findings into low, medium, and high risk. High risk goes to a human, the rest gets fixed automatically, and they run agents that check their own agents.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7671444882254302472?_r=1&u_code=0&region=US&mid=7671444911276739346&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7671444882254302472&source=h5_t",
+      "thumb": "images/feed/tt-7671444882254302472.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-08T00:04:04.000Z",
+      "views": 336,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": "matt-blumberg",
+      "score": 4
     },
     {
       "id": "7675037796507208977",
