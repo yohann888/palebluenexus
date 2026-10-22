@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T02:00:47.784Z",
+  "generatedAt": "2026-10-22T10:42:27.972Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -50,7 +50,7 @@
       "comments": 0,
       "guestSlug": "nikola-borisov",
       "listens": 131,
-      "score": 19
+      "score": 18
     },
     {
       "id": "0KlF5RR8WXg",
@@ -96,7 +96,7 @@
       "likes": 12,
       "comments": 0,
       "guestSlug": "nectarios-economakis",
-      "score": 12
+      "score": 11
     },
     {
       "id": "7634164931818016016",
@@ -790,21 +790,6 @@
       "score": 3
     },
     {
-      "id": "7628082901275397397",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Jim Rogers has drove through US and across Canada multiple times. He says it changed how he sees the world, not because of the data, but because of the exposure. Different regions, different economies, different ways of thinking about North America, all compressed into one country. I've lived this. Growing up in an immigrant family in Ontario, then working inside IBM, Motorola, Ministry of Transportation Ontario, and JP Morgan. Moving from the Caribbean to Canada then the USA, Europe and then coming back to Canada to grow some roots. Every shift in geography forced a shift in perspective. You see people's attitude towards work and life in Norway vs North Carolina. I used to go on jogs in Copehagen and walk to work long enough that the unfamiliarity becomes insight. So many of them.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7628082901275397397?_r=1&u_code=0&region=GB&mid=7628082933651344148&preview_pb=0&sharer_language=en&_d=f66k6e5ec5bea1&share_item_id=7628082901275397397&source=h5_t",
-      "thumb": "images/feed/tt-7628082901275397397.jpg",
-      "duration": "",
-      "publishedAt": "2026-04-13T03:37:34.000Z",
-      "views": 475,
-      "likes": 5,
-      "comments": 0,
-      "guestSlug": "jim-rogers",
-      "score": 3
-    },
-    {
       "id": "7621739561277820167",
       "platform": "tiktok",
       "type": "clip",
@@ -818,6 +803,21 @@
       "comments": 1,
       "guestSlug": "jim-rogers",
       "score": 3
+    },
+    {
+      "id": "7628082901275397397",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Jim Rogers has drove through US and across Canada multiple times. He says it changed how he sees the world, not because of the data, but because of the exposure. Different regions, different economies, different ways of thinking about North America, all compressed into one country. I've lived this. Growing up in an immigrant family in Ontario, then working inside IBM, Motorola, Ministry of Transportation Ontario, and JP Morgan. Moving from the Caribbean to Canada then the USA, Europe and then coming back to Canada to grow some roots. Every shift in geography forced a shift in perspective. You see people's attitude towards work and life in Norway vs North Carolina. I used to go on jogs in Copehagen and walk to work long enough that the unfamiliarity becomes insight. So many of them.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7628082901275397397?_r=1&u_code=0&region=GB&mid=7628082933651344148&preview_pb=0&sharer_language=en&_d=f66k6e5ec5bea1&share_item_id=7628082901275397397&source=h5_t",
+      "thumb": "images/feed/tt-7628082901275397397.jpg",
+      "duration": "",
+      "publishedAt": "2026-04-13T03:37:34.000Z",
+      "views": 475,
+      "likes": 5,
+      "comments": 0,
+      "guestSlug": "jim-rogers",
+      "score": 2
     },
     {
       "id": "7612793706940271890",
