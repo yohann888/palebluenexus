@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T10:34:43.351Z",
+  "generatedAt": "2026-10-23T16:10:26.796Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -66,7 +66,7 @@
       "comments": 0,
       "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
       "listens": 0,
-      "score": 15
+      "score": 14
     },
     {
       "id": "7655297314592017672",
@@ -384,21 +384,6 @@
       "score": 5
     },
     {
-      "id": "7679292017691594005",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Your Bitcoin won’t “move” like you think. Bitcoin activity is shifting from simple transfers to protocol-level movement—here’s how Subfrost frames it. • A huge chunk of BTC exposure isn’t moving as “BTC” • ETFs, perps, and leveraged products change the game • Subfrost locks BTC and routes it as sats • So the contracts see a lighter-weight Bitcoin version (FRBTC-style) Would you rather track on-chain transfers or protocol usage?",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7679292017691594005?_r=1&u_code=0&region=US&mid=7679292062026861332&preview_pb=0&sharer_language=en&_d=f66h85fb0ke0b2&share_item_id=7679292017691594005&source=h5_t",
-      "thumb": "images/feed/tt-7679292017691594005.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-29T03:35:02.000Z",
-      "views": 248,
-      "likes": 1,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 5
-    },
-    {
       "id": "7673210695676218642",
       "platform": "tiktok",
       "type": "clip",
@@ -472,6 +457,21 @@
       "comments": 0,
       "guestSlug": null,
       "score": 5
+    },
+    {
+      "id": "7679292017691594005",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Your Bitcoin won’t “move” like you think. Bitcoin activity is shifting from simple transfers to protocol-level movement—here’s how Subfrost frames it. • A huge chunk of BTC exposure isn’t moving as “BTC” • ETFs, perps, and leveraged products change the game • Subfrost locks BTC and routes it as sats • So the contracts see a lighter-weight Bitcoin version (FRBTC-style) Would you rather track on-chain transfers or protocol usage?",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7679292017691594005?_r=1&u_code=0&region=US&mid=7679292062026861332&preview_pb=0&sharer_language=en&_d=f66h85fb0ke0b2&share_item_id=7679292017691594005&source=h5_t",
+      "thumb": "images/feed/tt-7679292017691594005.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-29T03:35:02.000Z",
+      "views": 248,
+      "likes": 1,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 4
     },
     {
       "id": "7671444882254302472",
