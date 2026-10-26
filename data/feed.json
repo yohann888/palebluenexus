@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T20:02:27.059Z",
+  "generatedAt": "2026-10-26T01:52:45.218Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -53,22 +53,6 @@
       "score": 18
     },
     {
-      "id": "0KlF5RR8WXg",
-      "platform": "youtube",
-      "type": "video",
-      "title": "He Minted Fake Tokens, Drained the Pool, and Bragged in the Wrong Group Chat",
-      "url": "https://www.youtube.com/watch?v=0KlF5RR8WXg",
-      "thumb": "https://i.ytimg.com/vi/0KlF5RR8WXg/hqdefault.jpg",
-      "duration": "52:57",
-      "publishedAt": "2026-09-20T20:55:54.109Z",
-      "views": 474,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
-      "listens": 0,
-      "score": 14
-    },
-    {
       "id": "7655297314592017672",
       "platform": "tiktok",
       "type": "clip",
@@ -82,6 +66,22 @@
       "comments": 1,
       "guestSlug": "eliza-blank",
       "score": 14
+    },
+    {
+      "id": "0KlF5RR8WXg",
+      "platform": "youtube",
+      "type": "video",
+      "title": "He Minted Fake Tokens, Drained the Pool, and Bragged in the Wrong Group Chat",
+      "url": "https://www.youtube.com/watch?v=0KlF5RR8WXg",
+      "thumb": "https://i.ytimg.com/vi/0KlF5RR8WXg/hqdefault.jpg",
+      "duration": "52:57",
+      "publishedAt": "2026-09-20T20:55:54.109Z",
+      "views": 474,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
+      "listens": 0,
+      "score": 13
     },
     {
       "id": "7644043006500228369",
@@ -775,21 +775,6 @@
       "score": 3
     },
     {
-      "id": "7629918527104797959",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Jim Rogers on crossing territory where people don't always make it home, and the street-level logic that kept him alive. His read: you don't need to know the threat. You need to read the room. → Locals telegraph danger before it arrives — watch them, not the horizon → Excitement and apprehension live in the same moment → \"It'll be fine\" is a thought, not a plan → Survival is awareness stacked on decisions → If you come back, use the moment to reset what matters What's a risk that taught you to pay closer attention?",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7629918527104797959?_r=1&u_code=0&region=GB&mid=7629918563767274248&preview_pb=0&sharer_language=en&_d=f66k6e5ec5bea1&share_item_id=7629918527104797959&source=h5_t",
-      "thumb": "images/feed/tt-7629918527104797959.jpg",
-      "duration": "",
-      "publishedAt": "2026-04-18T02:20:40.000Z",
-      "views": 471,
-      "likes": 6,
-      "comments": 0,
-      "guestSlug": "jim-rogers",
-      "score": 3
-    },
-    {
       "id": "7621739561277820167",
       "platform": "tiktok",
       "type": "clip",
@@ -803,6 +788,21 @@
       "comments": 1,
       "guestSlug": "jim-rogers",
       "score": 3
+    },
+    {
+      "id": "7629918527104797959",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Jim Rogers on crossing territory where people don't always make it home, and the street-level logic that kept him alive. His read: you don't need to know the threat. You need to read the room. → Locals telegraph danger before it arrives — watch them, not the horizon → Excitement and apprehension live in the same moment → \"It'll be fine\" is a thought, not a plan → Survival is awareness stacked on decisions → If you come back, use the moment to reset what matters What's a risk that taught you to pay closer attention?",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7629918527104797959?_r=1&u_code=0&region=GB&mid=7629918563767274248&preview_pb=0&sharer_language=en&_d=f66k6e5ec5bea1&share_item_id=7629918527104797959&source=h5_t",
+      "thumb": "images/feed/tt-7629918527104797959.jpg",
+      "duration": "",
+      "publishedAt": "2026-04-18T02:20:40.000Z",
+      "views": 471,
+      "likes": 6,
+      "comments": 0,
+      "guestSlug": "jim-rogers",
+      "score": 2
     },
     {
       "id": "7628082901275397397",
