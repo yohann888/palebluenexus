@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T17:41:30.281Z",
+  "generatedAt": "2026-10-26T22:02:18.556Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -34,7 +34,7 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "listens": 400,
-      "score": 107
+      "score": 106
     },
     {
       "id": "DS2-iheW6pI",
@@ -219,21 +219,6 @@
       "score": 7
     },
     {
-      "id": "7679134235579485461",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "His roadmap starts with a principle, not a product 🧵 What comes first when you're building on Bitcoin",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7679134235579485461?_r=1&u_code=0&region=US&mid=7679134269352692488&preview_pb=0&sharer_language=en&_d=f66h85fb0ke0b2&share_item_id=7679134235579485461&source=h5_t",
-      "thumb": "images/feed/tt-7679134235579485461.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-28T17:22:44.000Z",
-      "views": 380,
-      "likes": 4,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 7
-    },
-    {
       "id": "7663238759256788225",
       "platform": "tiktok",
       "type": "clip",
@@ -277,6 +262,21 @@
       "comments": 0,
       "guestSlug": "eliza-blank",
       "score": 7
+    },
+    {
+      "id": "7679134235579485461",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "His roadmap starts with a principle, not a product 🧵 What comes first when you're building on Bitcoin",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7679134235579485461?_r=1&u_code=0&region=US&mid=7679134269352692488&preview_pb=0&sharer_language=en&_d=f66h85fb0ke0b2&share_item_id=7679134235579485461&source=h5_t",
+      "thumb": "images/feed/tt-7679134235579485461.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-28T17:22:44.000Z",
+      "views": 380,
+      "likes": 4,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 6
     },
     {
       "id": "7661083700817382676",
