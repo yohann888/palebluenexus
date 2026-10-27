@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T02:31:07.177Z",
+  "generatedAt": "2026-10-27T11:06:57.351Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -129,21 +129,6 @@
       "score": 8
     },
     {
-      "id": "7672574336003329287",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "We know a LOT about the brain… but most We know way more about the brain than you'd guess from the public conversation. The gap is the story.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7672574336003329287?_r=1&u_code=0&region=US&mid=7672574400608865042&preview_pb=0&sharer_language=en&_d=f66h85fb0ke0b2&share_item_id=7672574336003329287&source=h5_t",
-      "thumb": "images/feed/tt-7672574336003329287.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-11T01:07:04.000Z",
-      "views": 578,
-      "likes": 2,
-      "comments": 0,
-      "guestSlug": "victor-lugli",
-      "score": 8
-    },
-    {
       "id": "7671349535423122709",
       "platform": "tiktok",
       "type": "clip",
@@ -154,21 +139,6 @@
       "publishedAt": "2026-08-07T17:54:05.000Z",
       "views": 607,
       "likes": 4,
-      "comments": 0,
-      "guestSlug": "matt-blumberg",
-      "score": 8
-    },
-    {
-      "id": "7669260082256825617",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "One of Matt Blumberg's clients fired her entire writing team and went all in on AI. Now her remaining team spends 80% of its time fixing what the AI writes. Markup AI's CEO breaks down what that shift actually looks like.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7669260082256825617?_r=1&u_code=0&region=US&mid=7669260148338199316&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7669260082256825617&source=h5_t",
-      "thumb": "images/feed/tt-7669260082256825617.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-02T02:46:02.000Z",
-      "views": 643,
-      "likes": 3,
       "comments": 0,
       "guestSlug": "matt-blumberg",
       "score": 8
@@ -187,6 +157,36 @@
       "comments": 0,
       "guestSlug": "matt-blumberg",
       "score": 8
+    },
+    {
+      "id": "7672574336003329287",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "We know a LOT about the brain… but most We know way more about the brain than you'd guess from the public conversation. The gap is the story.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7672574336003329287?_r=1&u_code=0&region=US&mid=7672574400608865042&preview_pb=0&sharer_language=en&_d=f66h85fb0ke0b2&share_item_id=7672574336003329287&source=h5_t",
+      "thumb": "images/feed/tt-7672574336003329287.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-11T01:07:04.000Z",
+      "views": 578,
+      "likes": 2,
+      "comments": 0,
+      "guestSlug": "victor-lugli",
+      "score": 7
+    },
+    {
+      "id": "7669260082256825617",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "One of Matt Blumberg's clients fired her entire writing team and went all in on AI. Now her remaining team spends 80% of its time fixing what the AI writes. Markup AI's CEO breaks down what that shift actually looks like.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7669260082256825617?_r=1&u_code=0&region=US&mid=7669260148338199316&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7669260082256825617&source=h5_t",
+      "thumb": "images/feed/tt-7669260082256825617.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-02T02:46:02.000Z",
+      "views": 643,
+      "likes": 3,
+      "comments": 0,
+      "guestSlug": "matt-blumberg",
+      "score": 7
     },
     {
       "id": "7672478575848705288",
@@ -414,21 +414,6 @@
       "score": 5
     },
     {
-      "id": "7650246052779478292",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "The reminder you needed today 🙏",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7650246052779478292?_r=1&u_code=0&region=US&mid=7650246093058034452&preview_pb=0&sharer_language=en&_d=f66cb7c2h8k51b&share_item_id=7650246052779478292&source=h5_t",
-      "thumb": "images/feed/tt-7650246052779478292.jpg",
-      "duration": "",
-      "publishedAt": "2026-06-11T21:01:55.000Z",
-      "views": 612,
-      "likes": 6,
-      "comments": 1,
-      "guestSlug": null,
-      "score": 5
-    },
-    {
       "id": "7649799839106075924",
       "platform": "tiktok",
       "type": "clip",
@@ -442,6 +427,21 @@
       "comments": 0,
       "guestSlug": null,
       "score": 5
+    },
+    {
+      "id": "7650246052779478292",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "The reminder you needed today 🙏",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7650246052779478292?_r=1&u_code=0&region=US&mid=7650246093058034452&preview_pb=0&sharer_language=en&_d=f66cb7c2h8k51b&share_item_id=7650246052779478292&source=h5_t",
+      "thumb": "images/feed/tt-7650246052779478292.jpg",
+      "duration": "",
+      "publishedAt": "2026-06-11T21:01:55.000Z",
+      "views": 612,
+      "likes": 6,
+      "comments": 1,
+      "guestSlug": null,
+      "score": 4
     },
     {
       "id": "7673210695676218642",
