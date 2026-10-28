@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T02:39:57.628Z",
+  "generatedAt": "2026-10-28T11:42:33.175Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -129,21 +129,6 @@
       "score": 8
     },
     {
-      "id": "7671349535423122709",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Your company's style guide is hundreds of pages long, and nobody is checking content against it. Matt Blumberg of Markup AI breaks down how every content pass comes back scored: errors caught, errors fixed, and anything uncertain flagged for a human to review.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7671349535423122709?_r=1&u_code=0&region=US&mid=7671349561562123029&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7671349535423122709&source=h5_t",
-      "thumb": "images/feed/tt-7671349535423122709.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-07T17:54:05.000Z",
-      "views": 607,
-      "likes": 4,
-      "comments": 0,
-      "guestSlug": "matt-blumberg",
-      "score": 8
-    },
-    {
       "id": "7669130833411788040",
       "platform": "tiktok",
       "type": "clip",
@@ -157,6 +142,21 @@
       "comments": 0,
       "guestSlug": "matt-blumberg",
       "score": 8
+    },
+    {
+      "id": "7671349535423122709",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Your company's style guide is hundreds of pages long, and nobody is checking content against it. Matt Blumberg of Markup AI breaks down how every content pass comes back scored: errors caught, errors fixed, and anything uncertain flagged for a human to review.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7671349535423122709?_r=1&u_code=0&region=US&mid=7671349561562123029&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7671349535423122709&source=h5_t",
+      "thumb": "images/feed/tt-7671349535423122709.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-07T17:54:05.000Z",
+      "views": 607,
+      "likes": 4,
+      "comments": 0,
+      "guestSlug": "matt-blumberg",
+      "score": 7
     },
     {
       "id": "7672574336003329287",
@@ -669,21 +669,6 @@
       "score": 4
     },
     {
-      "id": "7636127091913805073",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Hear me out: podcasting is sales (and it’s way smarter). Not “go viral.” Just connect consistently, because buyers need time. • Podcast = intermediary, not interruption • Door-knocking fades. Connection compounds. • Long-term > short-term events • You don’t need to quit your job, you need a new channel Are you using podcasts to sell yet? Yes or no?",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7636127091913805073?_r=1&u_code=0&region=US&mid=7636127532487592725&preview_pb=0&sharer_language=en&_d=f66gj2e4al6c2c&share_item_id=7636127091913805073&source=h5_t",
-      "thumb": "images/feed/tt-7636127091913805073.jpg",
-      "duration": "",
-      "publishedAt": "2026-05-04T19:54:42.000Z",
-      "views": 613,
-      "likes": 4,
-      "comments": 0,
-      "guestSlug": "jack-couch",
-      "score": 4
-    },
-    {
       "id": "7636046824763051271",
       "platform": "tiktok",
       "type": "clip",
@@ -712,6 +697,21 @@
       "comments": 0,
       "guestSlug": "jack-couch",
       "score": 4
+    },
+    {
+      "id": "7636127091913805073",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Hear me out: podcasting is sales (and it’s way smarter). Not “go viral.” Just connect consistently, because buyers need time. • Podcast = intermediary, not interruption • Door-knocking fades. Connection compounds. • Long-term > short-term events • You don’t need to quit your job, you need a new channel Are you using podcasts to sell yet? Yes or no?",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7636127091913805073?_r=1&u_code=0&region=US&mid=7636127532487592725&preview_pb=0&sharer_language=en&_d=f66gj2e4al6c2c&share_item_id=7636127091913805073&source=h5_t",
+      "thumb": "images/feed/tt-7636127091913805073.jpg",
+      "duration": "",
+      "publishedAt": "2026-05-04T19:54:42.000Z",
+      "views": 613,
+      "likes": 4,
+      "comments": 0,
+      "guestSlug": "jack-couch",
+      "score": 3
     },
     {
       "id": "CgWRHHS7A_g",
