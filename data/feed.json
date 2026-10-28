@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T17:27:46.202Z",
+  "generatedAt": "2026-10-28T21:55:24.544Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -34,7 +34,7 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "listens": 400,
-      "score": 106
+      "score": 105
     },
     {
       "id": "DS2-iheW6pI",
@@ -81,7 +81,7 @@
       "comments": 0,
       "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
       "listens": 0,
-      "score": 13
+      "score": 12
     },
     {
       "id": "7644043006500228369",
@@ -384,21 +384,6 @@
       "score": 5
     },
     {
-      "id": "7659991142372494609",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "The winners aren't companies. They're people... Index funds win because they never sell the winners. But the real outliers aren't the companies, they're the leaders running them. The power law is steeper across people than businesses. Full episode: https://youtu.be/XjHigKgY_78?si=vT6UxnDCRsHqoQDf",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7659991142372494609?_r=1&u_code=0&region=US&mid=7659991202000046869&preview_pb=0&sharer_language=en&_d=f66cb7c2h8k51b&share_item_id=7659991142372494609&source=h5_t",
-      "thumb": "images/feed/tt-7659991142372494609.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-08T03:17:56.000Z",
-      "views": 505,
-      "likes": 2,
-      "comments": 0,
-      "guestSlug": "haren-bhakta",
-      "score": 5
-    },
-    {
       "id": "7650248074366913793",
       "platform": "tiktok",
       "type": "clip",
@@ -427,6 +412,21 @@
       "comments": 0,
       "guestSlug": null,
       "score": 5
+    },
+    {
+      "id": "7659991142372494609",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "The winners aren't companies. They're people... Index funds win because they never sell the winners. But the real outliers aren't the companies, they're the leaders running them. The power law is steeper across people than businesses. Full episode: https://youtu.be/XjHigKgY_78?si=vT6UxnDCRsHqoQDf",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7659991142372494609?_r=1&u_code=0&region=US&mid=7659991202000046869&preview_pb=0&sharer_language=en&_d=f66cb7c2h8k51b&share_item_id=7659991142372494609&source=h5_t",
+      "thumb": "images/feed/tt-7659991142372494609.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-08T03:17:56.000Z",
+      "views": 505,
+      "likes": 2,
+      "comments": 0,
+      "guestSlug": "haren-bhakta",
+      "score": 4
     },
     {
       "id": "7650246052779478292",
