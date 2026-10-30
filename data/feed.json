@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T11:42:54.191Z",
+  "generatedAt": "2026-10-30T17:16:19.277Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -760,21 +760,6 @@
       "score": 3
     },
     {
-      "id": "7668138602328640785",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Age doesn't predict founder success. Neither does experience. Vadim says the real variable is how often you're willing to bet.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668138602328640785?_r=1&u_code=0&region=US&mid=7668138906823707412&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7668138602328640785&source=h5_t",
-      "thumb": "images/feed/tt-7668138602328640785.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-30T02:15:02.000Z",
-      "views": 228,
-      "likes": 3,
-      "comments": 0,
-      "guestSlug": "vadim-peskov",
-      "score": 3
-    },
-    {
       "id": "7621739561277820167",
       "platform": "tiktok",
       "type": "clip",
@@ -788,6 +773,21 @@
       "comments": 1,
       "guestSlug": "jim-rogers",
       "score": 3
+    },
+    {
+      "id": "7668138602328640785",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Age doesn't predict founder success. Neither does experience. Vadim says the real variable is how often you're willing to bet.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668138602328640785?_r=1&u_code=0&region=US&mid=7668138906823707412&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7668138602328640785&source=h5_t",
+      "thumb": "images/feed/tt-7668138602328640785.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-30T02:15:02.000Z",
+      "views": 228,
+      "likes": 3,
+      "comments": 0,
+      "guestSlug": "vadim-peskov",
+      "score": 2
     },
     {
       "id": "7629918527104797959",
