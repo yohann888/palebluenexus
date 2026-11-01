@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T02:42:32.893Z",
+  "generatedAt": "2026-11-01T12:06:00.911Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -324,21 +324,6 @@
       "score": 6
     },
     {
-      "id": "7662254278060297473",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "She wanted plants for her first apartment and found nowhere good to buy them. So she left brand strategy and built it herself. That was 2012.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7662254278060297473?_r=1&u_code=0&region=MD&mid=7662254441966062353&preview_pb=0&sharer_language=en&_d=f66bj0c00cdh7a&share_item_id=7662254278060297473&source=h5_t",
-      "thumb": "images/feed/tt-7662254278060297473.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-14T05:40:26.000Z",
-      "views": 605,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": "eliza-blank",
-      "score": 6
-    },
-    {
       "id": "7659581662187080977",
       "platform": "tiktok",
       "type": "clip",
@@ -352,6 +337,21 @@
       "comments": 0,
       "guestSlug": "haren-bhakta",
       "score": 6
+    },
+    {
+      "id": "7662254278060297473",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "She wanted plants for her first apartment and found nowhere good to buy them. So she left brand strategy and built it herself. That was 2012.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7662254278060297473?_r=1&u_code=0&region=MD&mid=7662254441966062353&preview_pb=0&sharer_language=en&_d=f66bj0c00cdh7a&share_item_id=7662254278060297473&source=h5_t",
+      "thumb": "images/feed/tt-7662254278060297473.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-14T05:40:26.000Z",
+      "views": 605,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": "eliza-blank",
+      "score": 5
     },
     {
       "id": "7660342217424325906",
