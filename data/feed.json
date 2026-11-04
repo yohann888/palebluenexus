@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T22:36:39.771Z",
+  "generatedAt": "2026-11-04T03:26:23.822Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -309,21 +309,6 @@
       "score": 6
     },
     {
-      "id": "7662921800166247697",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Every productivity video tells you to add something. This CEO's entire system is one question: what can I remove? He builds focus tech, and he runs his company the same way. Full episode on YouTube, Spotify and Apple.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7662921800166247697?_r=1&u_code=0&region=MD&mid=7662921869793708820&preview_pb=0&sharer_language=en&_d=f66bj0c00cdh7a&share_item_id=7662921800166247697&source=h5_t",
-      "thumb": "images/feed/tt-7662921800166247697.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-16T00:50:24.000Z",
-      "views": 605,
-      "likes": 5,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 6
-    },
-    {
       "id": "7659581662187080977",
       "platform": "tiktok",
       "type": "clip",
@@ -337,6 +322,21 @@
       "comments": 0,
       "guestSlug": "haren-bhakta",
       "score": 6
+    },
+    {
+      "id": "7662921800166247697",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Every productivity video tells you to add something. This CEO's entire system is one question: what can I remove? He builds focus tech, and he runs his company the same way. Full episode on YouTube, Spotify and Apple.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7662921800166247697?_r=1&u_code=0&region=MD&mid=7662921869793708820&preview_pb=0&sharer_language=en&_d=f66bj0c00cdh7a&share_item_id=7662921800166247697&source=h5_t",
+      "thumb": "images/feed/tt-7662921800166247697.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-16T00:50:24.000Z",
+      "views": 605,
+      "likes": 5,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 5
     },
     {
       "id": "7662254278060297473",
