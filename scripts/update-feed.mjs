@@ -2512,12 +2512,18 @@ async function main() {
   }
 
   // inject homepage sections
-  let html = readFileSync(join(ROOT, "index.html"), "utf8");
+  const originalHtml = readFileSync(join(ROOT, "index.html"), "utf8");
+  let html = originalHtml;
   html = injectBetween(html, "AUTO-LATEST", latestDropsHtml(items));
   html = injectBetween(html, "AUTO-TOP", topPerformingHtml(items));
   html = injectBetween(html, "AUTO-GUESTS", guestsSectionHtml(guests, byGuest, guestReach));
   if (stats) html = injectBetween(html, "AUTO-STATS", statsBandHtml(stats, Number(podcast.totalStreams) || 0));
   html = updateHomepageSeo(html);
+  if (html !== originalHtml) {
+    const modified = new Date().toISOString();
+    html = html.replace(/(<meta property="article:modified_time" content=")[^"]*(")/, `$1${modified}$2`);
+    html = html.replace(/("dateModified": ")[^"]*(")/g, `$1${modified}$2`);
+  }
   writeFileSync(join(ROOT, "index.html"), html);
   log("updated index.html sections");
 
