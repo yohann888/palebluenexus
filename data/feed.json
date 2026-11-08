@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T02:48:34.028Z",
+  "generatedAt": "2026-11-08T12:16:01.743Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -159,21 +159,6 @@
       "score": 7
     },
     {
-      "id": "7672574336003329287",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "We know a LOT about the brain… but most We know way more about the brain than you'd guess from the public conversation. The gap is the story.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7672574336003329287?_r=1&u_code=0&region=US&mid=7672574400608865042&preview_pb=0&sharer_language=en&_d=f66h85fb0ke0b2&share_item_id=7672574336003329287&source=h5_t",
-      "thumb": "images/feed/tt-7672574336003329287.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-11T01:07:04.000Z",
-      "views": 578,
-      "likes": 2,
-      "comments": 0,
-      "guestSlug": "victor-lugli",
-      "score": 7
-    },
-    {
       "id": "7669260082256825617",
       "platform": "tiktok",
       "type": "clip",
@@ -202,6 +187,21 @@
       "comments": 1,
       "guestSlug": "jim-rogers",
       "score": 7
+    },
+    {
+      "id": "7672574336003329287",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "We know a LOT about the brain… but most We know way more about the brain than you'd guess from the public conversation. The gap is the story.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7672574336003329287?_r=1&u_code=0&region=US&mid=7672574400608865042&preview_pb=0&sharer_language=en&_d=f66h85fb0ke0b2&share_item_id=7672574336003329287&source=h5_t",
+      "thumb": "images/feed/tt-7672574336003329287.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-11T01:07:04.000Z",
+      "views": 578,
+      "likes": 2,
+      "comments": 0,
+      "guestSlug": "victor-lugli",
+      "score": 6
     },
     {
       "id": "7672478575848705288",
@@ -459,21 +459,6 @@
       "score": 4
     },
     {
-      "id": "7679292017691594005",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Your Bitcoin won’t “move” like you think. Bitcoin activity is shifting from simple transfers to protocol-level movement—here’s how Subfrost frames it. • A huge chunk of BTC exposure isn’t moving as “BTC” • ETFs, perps, and leveraged products change the game • Subfrost locks BTC and routes it as sats • So the contracts see a lighter-weight Bitcoin version (FRBTC-style) Would you rather track on-chain transfers or protocol usage?",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7679292017691594005?_r=1&u_code=0&region=US&mid=7679292062026861332&preview_pb=0&sharer_language=en&_d=f66h85fb0ke0b2&share_item_id=7679292017691594005&source=h5_t",
-      "thumb": "images/feed/tt-7679292017691594005.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-29T03:35:02.000Z",
-      "views": 248,
-      "likes": 1,
-      "comments": 0,
-      "guestSlug": null,
-      "score": 4
-    },
-    {
       "id": "7671444882254302472",
       "platform": "tiktok",
       "type": "clip",
@@ -607,6 +592,21 @@
       "comments": 0,
       "guestSlug": "jack-couch",
       "score": 4
+    },
+    {
+      "id": "7679292017691594005",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Your Bitcoin won’t “move” like you think. Bitcoin activity is shifting from simple transfers to protocol-level movement—here’s how Subfrost frames it. • A huge chunk of BTC exposure isn’t moving as “BTC” • ETFs, perps, and leveraged products change the game • Subfrost locks BTC and routes it as sats • So the contracts see a lighter-weight Bitcoin version (FRBTC-style) Would you rather track on-chain transfers or protocol usage?",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7679292017691594005?_r=1&u_code=0&region=US&mid=7679292062026861332&preview_pb=0&sharer_language=en&_d=f66h85fb0ke0b2&share_item_id=7679292017691594005&source=h5_t",
+      "thumb": "images/feed/tt-7679292017691594005.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-29T03:35:02.000Z",
+      "views": 248,
+      "likes": 1,
+      "comments": 0,
+      "guestSlug": null,
+      "score": 3
     },
     {
       "id": "7636046824763051271",
