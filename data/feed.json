@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T21:06:46.473Z",
+  "generatedAt": "2026-11-08T02:48:34.028Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -594,21 +594,6 @@
       "score": 4
     },
     {
-      "id": "7636046824763051271",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "jim rogers has been around the world twice. asked him where he'd go today and he basically said it doesn't matter, just go and be close to the ground 🌍",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7636046824763051271?_r=1&u_code=0&region=US&mid=7636046863749090056&preview_pb=0&sharer_language=en&_d=f66gj2e4al6c2c&share_item_id=7636046824763051271&source=h5_t",
-      "thumb": "images/feed/tt-7636046824763051271.jpg",
-      "duration": "",
-      "publishedAt": "2026-05-04T14:41:35.000Z",
-      "views": 652,
-      "likes": 3,
-      "comments": 1,
-      "guestSlug": "jim-rogers",
-      "score": 4
-    },
-    {
       "id": "7635423483131940104",
       "platform": "tiktok",
       "type": "clip",
@@ -622,6 +607,21 @@
       "comments": 0,
       "guestSlug": "jack-couch",
       "score": 4
+    },
+    {
+      "id": "7636046824763051271",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "jim rogers has been around the world twice. asked him where he'd go today and he basically said it doesn't matter, just go and be close to the ground 🌍",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7636046824763051271?_r=1&u_code=0&region=US&mid=7636046863749090056&preview_pb=0&sharer_language=en&_d=f66gj2e4al6c2c&share_item_id=7636046824763051271&source=h5_t",
+      "thumb": "images/feed/tt-7636046824763051271.jpg",
+      "duration": "",
+      "publishedAt": "2026-05-04T14:41:35.000Z",
+      "views": 652,
+      "likes": 3,
+      "comments": 1,
+      "guestSlug": "jim-rogers",
+      "score": 3
     },
     {
       "id": "7638993004690263304",
