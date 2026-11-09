@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T03:06:46.315Z",
+  "generatedAt": "2026-11-09T14:26:26.806Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -50,7 +50,7 @@
       "comments": 0,
       "guestSlug": "nikola-borisov",
       "listens": 131,
-      "score": 17
+      "score": 16
     },
     {
       "id": "7655297314592017672",
@@ -65,7 +65,7 @@
       "likes": 15,
       "comments": 1,
       "guestSlug": "eliza-blank",
-      "score": 13
+      "score": 12
     },
     {
       "id": "7644043006500228369",
@@ -129,21 +129,6 @@
       "score": 7
     },
     {
-      "id": "7675133703957368065",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Software used to look broken until it worked. Now it looks finished when it's barely started.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7675133703957368065?_r=1&u_code=0&region=US&mid=7675133795217017620&preview_pb=0&sharer_language=en&_d=f66h85fb0ke0b2&share_item_id=7675133703957368065&source=h5_t",
-      "thumb": "images/feed/tt-7675133703957368065.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-17T22:38:24.000Z",
-      "views": 538,
-      "likes": 5,
-      "comments": 0,
-      "guestSlug": "austin-armstrong",
-      "score": 7
-    },
-    {
       "id": "7671349535423122709",
       "platform": "tiktok",
       "type": "clip",
@@ -154,21 +139,6 @@
       "publishedAt": "2026-08-07T17:54:05.000Z",
       "views": 607,
       "likes": 4,
-      "comments": 0,
-      "guestSlug": "matt-blumberg",
-      "score": 7
-    },
-    {
-      "id": "7669260082256825617",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "One of Matt Blumberg's clients fired her entire writing team and went all in on AI. Now her remaining team spends 80% of its time fixing what the AI writes. Markup AI's CEO breaks down what that shift actually looks like.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7669260082256825617?_r=1&u_code=0&region=US&mid=7669260148338199316&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7669260082256825617&source=h5_t",
-      "thumb": "images/feed/tt-7669260082256825617.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-02T02:46:02.000Z",
-      "views": 643,
-      "likes": 3,
       "comments": 0,
       "guestSlug": "matt-blumberg",
       "score": 7
@@ -187,6 +157,36 @@
       "comments": 1,
       "guestSlug": "jim-rogers",
       "score": 7
+    },
+    {
+      "id": "7675133703957368065",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Software used to look broken until it worked. Now it looks finished when it's barely started.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7675133703957368065?_r=1&u_code=0&region=US&mid=7675133795217017620&preview_pb=0&sharer_language=en&_d=f66h85fb0ke0b2&share_item_id=7675133703957368065&source=h5_t",
+      "thumb": "images/feed/tt-7675133703957368065.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-17T22:38:24.000Z",
+      "views": 538,
+      "likes": 5,
+      "comments": 0,
+      "guestSlug": "austin-armstrong",
+      "score": 6
+    },
+    {
+      "id": "7669260082256825617",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "One of Matt Blumberg's clients fired her entire writing team and went all in on AI. Now her remaining team spends 80% of its time fixing what the AI writes. Markup AI's CEO breaks down what that shift actually looks like.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7669260082256825617?_r=1&u_code=0&region=US&mid=7669260148338199316&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7669260082256825617&source=h5_t",
+      "thumb": "images/feed/tt-7669260082256825617.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-02T02:46:02.000Z",
+      "views": 643,
+      "likes": 3,
+      "comments": 0,
+      "guestSlug": "matt-blumberg",
+      "score": 6
     },
     {
       "id": "7672574336003329287",
@@ -591,7 +591,7 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": "jack-couch",
-      "score": 4
+      "score": 3
     },
     {
       "id": "7679292017691594005",
