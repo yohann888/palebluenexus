@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T00:53:08.144Z",
+  "generatedAt": "2026-11-10T13:49:16.577Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -474,21 +474,6 @@
       "score": 4
     },
     {
-      "id": "7668120385975487761",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Vadim explains where the time actually goes now: not code, decisions.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7668120385975487761?_r=1&u_code=0&region=US&mid=7668120697385847572&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7668120385975487761&source=h5_t",
-      "thumb": "images/feed/tt-7668120385975487761.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-30T01:04:23.000Z",
-      "views": 356,
-      "likes": 5,
-      "comments": 1,
-      "guestSlug": "vadim-peskov",
-      "score": 4
-    },
-    {
       "id": "7640166785148275969",
       "platform": "tiktok",
       "type": "clip",
@@ -562,6 +547,21 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "score": 4
+    },
+    {
+      "id": "7668120385975487761",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Vadim explains where the time actually goes now: not code, decisions.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7668120385975487761?_r=1&u_code=0&region=US&mid=7668120697385847572&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7668120385975487761&source=h5_t",
+      "thumb": "images/feed/tt-7668120385975487761.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-30T01:04:23.000Z",
+      "views": 356,
+      "likes": 5,
+      "comments": 1,
+      "guestSlug": "vadim-peskov",
+      "score": 3
     },
     {
       "id": "7665190322183425287",
