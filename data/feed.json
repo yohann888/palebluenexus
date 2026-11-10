@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T14:26:26.806Z",
+  "generatedAt": "2026-11-10T00:53:08.144Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -96,7 +96,7 @@
       "comments": 0,
       "guestSlug": "episode-he-minted-fake-tokens-drained-the-pool-and",
       "listens": 0,
-      "score": 10
+      "score": 9
     },
     {
       "id": "7634164931818016016",
@@ -129,21 +129,6 @@
       "score": 7
     },
     {
-      "id": "7671349535423122709",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Your company's style guide is hundreds of pages long, and nobody is checking content against it. Matt Blumberg of Markup AI breaks down how every content pass comes back scored: errors caught, errors fixed, and anything uncertain flagged for a human to review.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7671349535423122709?_r=1&u_code=0&region=US&mid=7671349561562123029&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7671349535423122709&source=h5_t",
-      "thumb": "images/feed/tt-7671349535423122709.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-07T17:54:05.000Z",
-      "views": 607,
-      "likes": 4,
-      "comments": 0,
-      "guestSlug": "matt-blumberg",
-      "score": 7
-    },
-    {
       "id": "7620875580254293269",
       "platform": "tiktok",
       "type": "clip",
@@ -157,6 +142,21 @@
       "comments": 1,
       "guestSlug": "jim-rogers",
       "score": 7
+    },
+    {
+      "id": "7671349535423122709",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Your company's style guide is hundreds of pages long, and nobody is checking content against it. Matt Blumberg of Markup AI breaks down how every content pass comes back scored: errors caught, errors fixed, and anything uncertain flagged for a human to review.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7671349535423122709?_r=1&u_code=0&region=US&mid=7671349561562123029&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7671349535423122709&source=h5_t",
+      "thumb": "images/feed/tt-7671349535423122709.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-07T17:54:05.000Z",
+      "views": 607,
+      "likes": 4,
+      "comments": 0,
+      "guestSlug": "matt-blumberg",
+      "score": 6
     },
     {
       "id": "7675133703957368065",
@@ -489,21 +489,6 @@
       "score": 4
     },
     {
-      "id": "7665190322183425287",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "His dad had Parkinson's. His cousin had ALS. So he recruited high school kids to grind up every drug in the pharmacy and build the first library of its kind. The NIH wouldn't fund it. He did it anyway.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7665190322183425287?_r=1&u_code=0&region=US&mid=7665190353377921810&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7665190322183425287&source=h5_t",
-      "thumb": "images/feed/tt-7665190322183425287.jpg",
-      "duration": "",
-      "publishedAt": "2026-07-22T03:33:10.000Z",
-      "views": 385,
-      "likes": 2,
-      "comments": 0,
-      "guestSlug": "steve-gullans",
-      "score": 4
-    },
-    {
       "id": "7640166785148275969",
       "platform": "tiktok",
       "type": "clip",
@@ -577,6 +562,21 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "score": 4
+    },
+    {
+      "id": "7665190322183425287",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "His dad had Parkinson's. His cousin had ALS. So he recruited high school kids to grind up every drug in the pharmacy and build the first library of its kind. The NIH wouldn't fund it. He did it anyway.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7665190322183425287?_r=1&u_code=0&region=US&mid=7665190353377921810&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7665190322183425287&source=h5_t",
+      "thumb": "images/feed/tt-7665190322183425287.jpg",
+      "duration": "",
+      "publishedAt": "2026-07-22T03:33:10.000Z",
+      "views": 385,
+      "likes": 2,
+      "comments": 0,
+      "guestSlug": "steve-gullans",
+      "score": 3
     },
     {
       "id": "7635423483131940104",
