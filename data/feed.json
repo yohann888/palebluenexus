@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T23:44:48.205Z",
+  "generatedAt": "2026-11-12T04:26:32.048Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -459,21 +459,6 @@
       "score": 4
     },
     {
-      "id": "7671444882254302472",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Who checks the AI that's checking your content? Matt Blumberg of Markup AI says every agent scores its findings into low, medium, and high risk. High risk goes to a human, the rest gets fixed automatically, and they run agents that check their own agents.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7671444882254302472?_r=1&u_code=0&region=US&mid=7671444911276739346&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7671444882254302472&source=h5_t",
-      "thumb": "images/feed/tt-7671444882254302472.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-08T00:04:04.000Z",
-      "views": 336,
-      "likes": 0,
-      "comments": 0,
-      "guestSlug": "matt-blumberg",
-      "score": 4
-    },
-    {
       "id": "7640166785148275969",
       "platform": "tiktok",
       "type": "clip",
@@ -547,6 +532,21 @@
       "comments": 0,
       "guestSlug": "jim-rogers",
       "score": 4
+    },
+    {
+      "id": "7671444882254302472",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Who checks the AI that's checking your content? Matt Blumberg of Markup AI says every agent scores its findings into low, medium, and high risk. High risk goes to a human, the rest gets fixed automatically, and they run agents that check their own agents.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7671444882254302472?_r=1&u_code=0&region=US&mid=7671444911276739346&preview_pb=0&sharer_language=en&_d=f66bfgkbg0h739&share_item_id=7671444882254302472&source=h5_t",
+      "thumb": "images/feed/tt-7671444882254302472.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-08T00:04:04.000Z",
+      "views": 336,
+      "likes": 0,
+      "comments": 0,
+      "guestSlug": "matt-blumberg",
+      "score": 3
     },
     {
       "id": "7668120385975487761",
