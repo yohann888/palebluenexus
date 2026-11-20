@@ -7,7 +7,7 @@
  * data/feed.json with a cross-platform performance score, then regenerates:
  *   - the "Latest Drops" + "Top Performing" homepage sections (index.html)
  *   - the "Guests" showcase section (index.html)
- *   - per-guest branded promo share pages (share/guest/<slug>.html)
+ *   - per-guest branded promo share pages (share/guest/<slug>.html, served at /share/guest/<slug>)
  *
  * It only rewrites content between HTML markers, so hand-written copy elsewhere
  * is never touched. Run on a schedule (GitHub Action); the commit it produces
@@ -2023,11 +2023,11 @@ function promoPageHtml(g, item) {
   <meta property="og:title" content="${esc(title)}" />
   <meta property="og:description" content="${esc(collapseWs(g.quote || g.bio))}" />
   <meta property="og:image" content="${ogUrl}" />
-  <meta property="og:url" content="https://palebluenexus.com/share/guest/${esc(g.slug)}.html" />
+  <meta property="og:url" content="https://palebluenexus.com/share/guest/${esc(g.slug)}" />
   <meta property="og:type" content="article" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="${ogUrl}" />
-  <link rel="canonical" href="https://palebluenexus.com/share/guest/${esc(g.slug)}.html" />
+  <link rel="canonical" href="https://palebluenexus.com/share/guest/${esc(g.slug)}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -2177,6 +2177,14 @@ function episodeSitemapBlock(guests) {
   return lines;
 }
 
+function promoSitemapLines(guests) {
+  return guests
+    .filter(isPublicGuest)
+    .map((g) => g.slug)
+    .sort()
+    .map((slug) => `  <url><loc>https://palebluenexus.com/share/guest/${esc(slug)}</loc></url>`);
+}
+
 function updateSitemap(sitemap, guests) {
   const lines = sitemap.replace(/\r\n/g, "\n").split("\n");
   const cleaned = [];
@@ -2192,11 +2200,14 @@ function updateSitemap(sitemap, guests) {
     }
     if (inAutoBlock) continue;
     if (/<loc>https:\/\/palebluenexus\.com\/episodes\/[^/]+\/<\/loc>/.test(line)) continue;
+    if (/<loc>https:\/\/palebluenexus\.com\/share\/guest\/[^<]+<\/loc>/.test(line)) continue;
     cleaned.push(line);
   }
   const indexLine = cleaned.findIndex((line) => line.includes("<loc>https://palebluenexus.com/episodes/</loc>"));
   const insertAt = indexLine >= 0 ? indexLine + 1 : cleaned.length - 1;
   cleaned.splice(insertAt, 0, ...episodeSitemapBlock(guests));
+  const shareLine = cleaned.findIndex((line) => line.includes("<loc>https://palebluenexus.com/share/</loc>"));
+  if (shareLine >= 0) cleaned.splice(shareLine + 1, 0, ...promoSitemapLines(guests));
   return `${cleaned.join("\n").replace(/\n+$/, "")}\n`;
 }
 
