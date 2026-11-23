@@ -373,5 +373,18 @@
       </ul>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll('.episode-clip').forEach((clip) => {
+      const iframe = clip.querySelector('iframe');
+      const src = iframe.getAttribute('src');
+      clip.addEventListener('toggle', () => {
+        if (!clip.open) {
+          iframe.removeAttribute('src');
+        } else if (!iframe.hasAttribute('src')) {
+          iframe.setAttribute('src', src);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
