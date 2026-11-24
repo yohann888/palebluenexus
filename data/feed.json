@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T03:29:47.212Z",
+  "generatedAt": "2026-11-24T16:31:59.749Z",
   "source": {
     "youtube": "@palebluenexus",
     "tiktok": "@palebluenexus"
@@ -159,21 +159,6 @@
       "score": 6
     },
     {
-      "id": "7675133703957368065",
-      "platform": "tiktok",
-      "type": "clip",
-      "title": "Software used to look broken until it worked. Now it looks finished when it's barely started.",
-      "url": "https://www.tiktok.com/@palebluenexus/video/7675133703957368065?_r=1&u_code=0&region=US&mid=7675133795217017620&preview_pb=0&sharer_language=en&_d=f66h85fb0ke0b2&share_item_id=7675133703957368065&source=h5_t",
-      "thumb": "images/feed/tt-7675133703957368065.jpg",
-      "duration": "",
-      "publishedAt": "2026-08-17T22:38:24.000Z",
-      "views": 538,
-      "likes": 5,
-      "comments": 0,
-      "guestSlug": "austin-armstrong",
-      "score": 6
-    },
-    {
       "id": "7669260082256825617",
       "platform": "tiktok",
       "type": "clip",
@@ -189,6 +174,21 @@
       "score": 6
     },
     {
+      "id": "7675133703957368065",
+      "platform": "tiktok",
+      "type": "clip",
+      "title": "Software used to look broken until it worked. Now it looks finished when it's barely started.",
+      "url": "https://www.tiktok.com/@palebluenexus/video/7675133703957368065?_r=1&u_code=0&region=US&mid=7675133795217017620&preview_pb=0&sharer_language=en&_d=f66h85fb0ke0b2&share_item_id=7675133703957368065&source=h5_t",
+      "thumb": "images/feed/tt-7675133703957368065.jpg",
+      "duration": "",
+      "publishedAt": "2026-08-17T22:38:24.000Z",
+      "views": 538,
+      "likes": 5,
+      "comments": 0,
+      "guestSlug": "austin-armstrong",
+      "score": 5
+    },
+    {
       "id": "7672574336003329287",
       "platform": "tiktok",
       "type": "clip",
@@ -201,7 +201,7 @@
       "likes": 2,
       "comments": 0,
       "guestSlug": "victor-lugli",
-      "score": 6
+      "score": 5
     },
     {
       "id": "7672478575848705288",
